@@ -1,4 +1,9 @@
-# religion-map — agent notes
+# scripture-science — agent notes
+
+Repository history: this site was built under the name "religion-map" and
+squash-published here on 2026-09-27, replacing this repository's prior,
+unrelated content (owner decision). The unsquashed development history
+remains in the original local checkout.
 
 Repository visibility: **PUBLIC** (owner, 2026-09-27: published to GitHub Pages).
 
@@ -16,7 +21,7 @@ direction. Then return to this repository.
 
 ## Project
 
-- Name: religion-map
+- Name: scripture-science (site content and internal docs still say "religion-map" in places; not renamed throughout)
 - kind: personal
 - Skill profile: core
 - Marker: `.agents/project-context.yaml` (local)
@@ -28,7 +33,7 @@ direction. Then return to this repository.
   (a timeline with the tree of separations between traditions, and comparisons
   in which every tradition speaks for itself), with a verified source for every
   claim. Built with Astro (static output), MDX and content collections; served
-  by GitHub Pages under the `/religion-map` base path.
+  by GitHub Pages under the `/scripture-science` base path.
 - Rules for content: `docs/EDITORIAL.md` (editorial principles) and
   `docs/SOURCES.md` (source tiers and what "verified" means). Research notes and
   the verification log live in `docs/research/`.
