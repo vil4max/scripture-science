@@ -1,0 +1,9 @@
+---
+import type { Citation } from '../lib/citations';
+interface Props {
+  proof: (Citation & { tier: NonNullable<Citation['tier']>; excerpt: string; accessed: string })[];
+  exclude?: string[];
+  inline?: boolean;
+}
+// Evidence stays attached to its claim in data; /sources owns its presentation.
+---

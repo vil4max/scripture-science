@@ -1,0 +1,22 @@
+# Bible translations quoted by traditions on the site, each in its own voice
+# (EDITORIAL.md principle 3). Keyed by id; the file loader uses the key as
+# each entry's collection id.
+#
+# Wording is verbatim from source/orthodoxy-jw.html's abbreviations note
+# ("Сокращения: ПНМ — «Перевод нового мира» ...; Синод. — Синодальный
+# перевод (1876)") where it exists; "csl" has no abbreviation in that note,
+# so its short code is the value given directly by docs/tasks/site-m1-migration.md.
+# `home` is intentionally omitted for all three: no source in this slice
+# gives a translation home URL (see src/content.config.ts and "Conflicts
+# found" in the Writer's final report).
+syno:
+  name: "Синодальный перевод"
+  short: "Синод."
+  year: 1876
+csl:
+  name: "Церковнославянский текст"
+  short: "ЦС"
+nwt:
+  name: "Перевод нового мира"
+  short: "ПНМ"
+  year: 2021

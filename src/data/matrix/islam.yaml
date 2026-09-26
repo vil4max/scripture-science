@@ -1,0 +1,560 @@
+id: islam
+name: Ислам
+full_name: Ислам (охватывает суннитское и шиитское, в частности имамитское/джафаритское, направления)
+family: islam
+
+since:
+  year: 622
+  label: "622 г. н.э. · Хиджра — переселение пророка Мухаммада из Мекки в Медину"
+  note: "Ислам не рассматривает себя как новую религию, основанную Мухаммадом, а как восстановление изначального единобожия, проповеданного всеми пророками до него; хиджра 622 года — переселение в Медину — стала эпохой мусульманского (хиджри) календаря."
+  proof:
+    - url: "https://ru.wikishia.net/view/%D0%9C%D1%83%D1%85%D0%B0%D0%BC%D0%BC%D0%B0%D0%B4"
+      title: "Мухаммад | Wikishia"
+      tier: official
+      excerpt: "вторая присяга 'Акабы (бейа'туль харб) 622 - эмиграция мусульман в Ясриб (Мадина)"
+      accessed: "2026-09-25"
+    - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=33:40"
+      title: "Коран 33:40, перевод Э. Кулиева | Quran.com Content API"
+      tier: official
+      excerpt: "Мухаммад - не отец кого-либо из ваших мужей, а Посланник Аллаха и печать пророков"
+      accessed: "2026-09-25"
+
+scripture:
+  name: "Коран в переводе смыслов Эльмира Кулиева (наиболее распространённый современный русский «перевод смыслов»; официальный API Quran.com/Quran Foundation отдаёт его под номером 45)"
+  url: "https://quran.com/2?translations=45"
+  proof:
+    - url: "https://www.koranika.ru/2026/08/02/%D0%BA%D0%BE%D1%80%D0%B0%D0%BD-%D0%B8-%D0%B5%D0%B3%D0%BE-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/"
+      title: "Коран и его перевод | Кораника"
+      tier: official
+      excerpt: "ни один смысловой перевод, каким бы совершенным он ни был, не может сравниться с оригиналом Корана"
+      accessed: "2026-09-25"
+
+adherents:
+  value: "≈ 2,0 млрд"
+  year: 2020
+  method: "демографическая оценка Pew Research Center на основе переписей, опросов и демографических регистров по странам"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2025/06/09/muslim-population-change/"
+      title: "Countries with the most Muslims & global Muslim population change, 2010-2020 | Pew Research Center"
+      tier: reference
+      excerpt: "The number of Muslims around the world grew 21% between 2010 and 2020, from 1.7 billion to 2.0 billion"
+      accessed: "2026-09-25"
+
+self_view:
+  summary: "Ислам видит себя восстановлением изначального единобожия, которое проповедовали все пророки от Нуха (Ноя) до Мусы (Моисея) и Исы (Иисуса); Ибрахим (Авраам) почитается как ханиф — чистый монотеист, не бывший ни иудеем, ни христианином, а Мухаммад — «печать пророков», последний в этой цепи."
+  proof:
+    - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:67"
+      title: "Коран 3:67, перевод Э. Кулиева | Quran.com Content API"
+      tier: official
+      excerpt: "Ибрахим (Авраам) не был ни иудеем, ни христианином. Он был ханифом, мусульманином и не был из числа многобожников"
+      accessed: "2026-09-25"
+    - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=42:13"
+      title: "Коран 42:13, перевод Э. Кулиева | Quran.com Content API"
+      tier: official
+      excerpt: "и то, что Мы заповедали Ибрахиму (Аврааму), Мусе (Моисею) и Исе (Иисусу): «Исповедуйте религию и не расходитесь во мнениях относительно нее»"
+      accessed: "2026-09-25"
+
+positions:
+  - topic: god
+    summary: "Абсолютное, неделимое единобожие (таухид) — основа ислама: у Аллаха нет ни сотоварища, ни детей, ни равных Ему."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 112:1-4"
+      text: "Скажи: «Он - Аллах Единый, Аллах Самодостаточный. Он не родил и не был рожден, и нет никого равного Ему»."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=112:1"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=112:1"
+        title: "Коран 112:1, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Скажи: «Он - Аллах Единый,"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=112:4"
+        title: "Коран 112:4, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "и нет никого равного Ему»."
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: name-of-god
+    summary: "Бог описывается через «99 прекраснейших имён» (аль-асма аль-хусна), каждое из которых называет одно из Его свойств."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 7:180"
+      text: "У Аллаха - самые прекрасные имена. Посему взывайте к Нему посредством их и оставьте тех, которые уклоняются от истины в отношении Его имен."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=7:180"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=7:180"
+        title: "Коран 7:180, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "У Аллаха - самые прекрасные имена. Посему взывайте к Нему посредством их"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: jesus
+    summary: "Иса (Иисус) — один из великих пророков и Мессия (аль-Масих), рождённый Девой Марьям по слову Бога, но не Бог и не Сын Божий. Согласно Корану, Ису не распяли — это лишь представилось людям."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 4:157"
+      text: "мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха. Однако они не убили его и не распяли, а это только показалось им."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:157"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:157"
+        title: "Коран 4:157, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха. Однако они не убили его и не распяли"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171"
+        title: "Коран 4:171, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Мессия Иса (Иисус), сын Марьям (Марии), является посланником Аллаха, Его Словом, которое Он послал Марьям (Марии), и духом от Него"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: spirit
+    summary: "О духе Коран говорит, что его природа в полноте известна только Богу."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 17:85"
+      text: "Они станут спрашивать тебя о духе (душе или Джибриле). Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:85"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:85"
+        title: "Коран 17:85, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Они станут спрашивать тебя о духе. Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: scripture
+    summary: "Коран — заключительное откровение; ислам признаёт более ранние Писания — Таурат (Тору), данный Мусе, и Забур (Псалтирь), данный Дауду, — как прежде ниспосланные Богом. Любой перевод Корана на другой язык мусульманские источники называют лишь «переводом смыслов»: сам Коран как откровение существует только на арабском языке, и ни один перевод, сколь угодно совершенный, не тождествен оригиналу."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 5:44"
+      text: "Мы ниспослали Таурат (Тору), в котором содержится верное руководство и свет."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:44"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:44"
+        title: "Коран 5:44, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Мы ниспослали Таурат (Тору), в котором содержится верное руководство и свет"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:55"
+        title: "Коран 17:55, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "А Давуду (Давиду) Мы даровали Забур (Псалтирь)"
+        accessed: "2026-09-25"
+      - url: "https://www.koranika.ru/2026/08/02/%D0%BA%D0%BE%D1%80%D0%B0%D0%BD-%D0%B8-%D0%B5%D0%B3%D0%BE-%D0%BF%D0%B5%D1%80%D0%B5%D0%B2%D0%BE%D0%B4/"
+        title: "Коран и его перевод | Кораника"
+        tier: official
+        excerpt: "ни один смысловой перевод, каким бы совершенным он ни был, не может сравниться с оригиналом Корана"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: authority
+    summary: "В суннитском исламе нет рукоположенного духовенства: авторитет принадлежит коллективно улемам (богословам-правоведам) в рамках одной из четырёх правовых школ (мазхабов) — ханафитской, маликитской, шафиитской и ханбалитской, сложившихся в VIII-IX веках. В шиитском (имамитском/джафаритском) исламе руководство общиной, по этому учению, возлагается на имама, назначаемого Богом; после сокрытия двенадцатого имама верующие следуют ныне живущим богословам."
+    unity:
+      kind: divided
+      note: "сунниты следуют одной из четырёх правовых школ (мазхабов), шииты-имамиты — последователи Джафара ас-Садика — учат, что руководство общиной возлагается на имама, назначенного Богом."
+      proof:
+        - url: "https://cyberleninka.ru/article/n/mazhaby-v-islame"
+          title: "Мазхабы в исламе | КиберЛенинка"
+          tier: "reference"
+          excerpt: "последователей Джафара Ас-Садика"
+          accessed: "2026-09-26"
+        - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+          title: "Имамия | Wikishia"
+          tier: "official"
+          excerpt: "руководство мусульманской общиной возлагается на имама, а имам назначается Богом"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 4:59"
+      text: "О те, которые уверовали! Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59"
+    proof:
+      - url: "https://cyberleninka.ru/article/n/mazhaby-v-islame"
+        title: "Мазхабы в исламе | КиберЛенинка"
+        tier: reference
+        excerpt: "последователей Джафара Ас-Садика (иногда Джафар ас-Садик - «Джафар правдивый»)"
+        accessed: "2026-09-25"
+      - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+        title: "Имамия | Wikishia"
+        tier: official
+        excerpt: "руководство мусульманской общиной возлагается на имама, а имам назначается Богом"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59"
+        title: "Коран 4:59, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: salvation
+    summary: "Вход в Рай понимается как следствие искренней веры (иман) вместе с праведными делами по милости Бога."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 2:82"
+      text: "А те, которые уверовали и совершали праведные деяния, окажутся обитателями Рая. Они пребудут там вечно."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:82"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:82"
+        title: "Коран 2:82, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "те, которые уверовали и совершали праведные деяния, окажутся обитателями Рая. Они пребудут там вечно"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: afterlife
+    summary: "После смерти душа пребывает в промежуточном состоянии («преграда», барзах) вплоть до дня всеобщего воскресения, когда дела людей будут взвешены и каждый направлен в Рай или в Ад."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 23:100"
+      text: "Позади них будет преграда вплоть до того дня, когда они будут воскрешены."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=23:100"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=23:100"
+        title: "Коран 23:100, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Позади них будет преграда вплоть до того дня, когда они будут воскрешены"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: end-times
+    summary: "Знамения Часа (конца времён) включают возвращение Исы (Иисуса), названного в Коране «признаком Часа». В шиитском (имамитском) исламе конец времён также связан с возвращением двенадцатого имама — Махди, который, по этому учению, жив и пребывает в сокрытии."
+    unity:
+      kind: divided
+      note: "о знамении Часа говорит Коран; учение о двенадцатом имаме Махди, который жив и пребывает в сокрытии, — шиитское (имамитское)."
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=43:61"
+          title: "Коран 43:61, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "он (Иса, или Коран, или Мухаммад) является признаком Часа"
+          accessed: "2026-09-26"
+        - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+          title: "Имамия | Wikishia"
+          tier: "official"
+          excerpt: "верят, что двенадцатый имам, Махди (а) жив и находится в сокрытии"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 43:61"
+      text: "Воистину, он (Иса, или Коран, или Мухаммад) является признаком Часа. Нисколько не препирайтесь по поводу него (Часа) и следуйте за Мной!"
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=43:61"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=43:61"
+        title: "Коран 43:61, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "он (Иса, или Коран, или Мухаммад) является признаком Часа. Нисколько не препирайтесь по поводу него"
+        accessed: "2026-09-25"
+      - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+        title: "Имамия | Wikishia"
+        tier: official
+        excerpt: "верят, что двенадцатый имам, Махди (а) жив и находится в сокрытии"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: worship
+    summary: "Ислам основан на пяти столпах: свидетельство веры (шахада), пятикратная ежедневная молитва (салят), обязательная милостыня закят (2,5% от имущества), пост в месяц Рамадан (саум) и паломничество в Мекку (хадж) — для тех, кто способен совершить его материально и физически."
+    unity:
+      kind: shared
+      note: "обязанности, предписанные Кораном; перечень пяти столпов дан по изложению Московской Соборной мечети."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+        - url: "https://mosmechet.ru/5stolpov"
+          title: "5 столпов ислама | Московская Соборная мечеть"
+          tier: "official"
+          excerpt: "Свидетельствую, что нет божества, кроме Аллаха"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://mosmechet.ru/5stolpov"
+        title: "5 столпов ислама | Московская Соборная мечеть"
+        tier: official
+        excerpt: "Свидетельствую, что нет божества, кроме Аллаха и свидетельствую, что Мухаммад — посланник Аллаха"
+        accessed: "2026-09-26"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183"
+        title: "Коран 2:183, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: images
+    summary: "Вопрос об изображении живых существ в исламском праве остаётся предметом дискуссии среди мусульманских богословов и исследователей ислама и сохраняет свою актуальность и в наши дни."
+    unity:
+      kind: divided
+      note: "муфтий Египта Мухаммад Абдо (1849–1905) полагал, что хадис о наказании художников, «по всей вероятности, появился в эпоху язычества»."
+      proof:
+        - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+          title: "Наврузов А. Р. Мухаммад Абдо о запрете изображений человека в исламе // Исламоведение, 2010, № 2 | КиберЛенинка"
+          tier: "reference"
+          excerpt: "этот хадис, по всей вероятности, появился в эпоху язычества"
+          accessed: "2026-09-26"
+        - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+          title: "Наврузов А. Р. Мухаммад Абдо о запрете изображений человека в исламе // Исламоведение, 2010, № 2 | КиберЛенинка"
+          tier: "reference"
+          excerpt: "С 1899 г. муфтий Египта"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+        title: "Мухаммад Абдо о запрете изображений человека в исламе | КиберЛенинка"
+        tier: reference
+        excerpt: "вопрос о пользе и смысле изображения человека в виде рисунков, портретов и памятников в исламе"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: holy-days
+    summary: "Два главных исламских праздника — Ид аль-Фитр (Ураза-байрам), завершающий пост Рамадана, и Ид аль-Адха (Курбан-байрам), связанный с преданием о пророке Ибрахиме, которому было велено принести в жертву сына Исмаила."
+    unity:
+      kind: shared
+      note: "Ид аль-Фитр — «один из 2 главных дней исламского календаря», второй — Ид аль-Адха."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%A3%D1%80%D0%B0%D0%B7%D0%B0-%D0%B1%D0%B0%D0%B9%D1%80%D0%B0%D0%BC"
+          title: "Ураза-байрам — Википедия (русская)"
+          tier: "reference"
+          excerpt: "Ид аль-Фитр — один из 2 главных дней исламского календаря"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://web.archive.org/web/20230530185010/https://mosmechet.ru/ramadan"
+        title: "Рамадан и Ураза-байрам | Московская Соборная мечеть"
+        tier: official
+        excerpt: "из двух главных исламских праздников - Ураза-байрам ( Ид аль-фитр), праздник разговения"
+        accessed: "2026-09-26"
+      - url: "https://mosmechet.ru/fetvakurban2026"
+        title: "Фетва по Курбану 2026 | Московская Соборная мечеть"
+        tier: official
+        excerpt: "связан с событием, произошедшим с пророком Ибрахимом (Авраамом). Божественным Откровением ему было велено принести в жертву своего сына Исмаила"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: fasting
+    summary: "Пост (саум) в месяц Рамадан — один из пяти столпов ислама: «Вам предписан пост» (Коран 2:183). Весь месяц от рассвета до захода солнца верующие воздерживаются от пищи, питья и половой близости; есть и пить можно ночью, «пока вы не сможете отличить белую нитку рассвета от черной». Больной или путник постится «столько же дней в другое время»; очень пожилым немощным людям разрешено не поститься, выплатив за каждый пропущенный день искупительную милостыню (фидья). Кроме обязательного поста есть желательные и добровольные: 9 и 10 мухаррама, понедельник и четверг, шесть дней шавваля после Рамадана, первые десять дней зуль-хиджи; поститься в Ураза-байрам и в дни Курбан-байрама, а также по 2–3 дня без разговения крайне порицается. Коран велит не запрещать себе блага, дозволенные Аллахом; аскетизм (зухд) — отказ от роскоши ради простой благочестивой жизни — поощряется, но крайний аскетизм, по данным справочных изданий, ислам запрещает. С монашеством в исламе часто сравнивают суфиев, однако большинство суфийских орденов не призывают к безбрачию."
+    unity:
+      kind: shared
+      note: "Коран — священная книга мусульман."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+          title: "Коран — Википедия (русская)"
+          tier: "reference"
+          excerpt: "священная книга мусульман, написанная на арабском языке"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 2:183"
+      text: "О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам, - быть может, вы устрашитесь."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183"
+        title: "Коран 2:183, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20230530185010/https://mosmechet.ru/ramadan"
+        title: "Рамадан и Ураза-байрам | Московская Соборная мечеть"
+        tier: official
+        excerpt: "Рамадан — месяц обязательного для мусульман поста (саум), является одним из пяти столпов ислама"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "Пост – это воздержание от пищи, питья и половой близости от рассвета до захода солнца"
+        accessed: "2026-09-26"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:187"
+        title: "Коран 2:187, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Ешьте и пейте, пока вы не сможете отличить белую нитку рассвета от черной, а затем поститесь до ночи"
+        accessed: "2026-09-26"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185"
+        title: "Коран 2:185, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "А если кто болен или находится в пути, то пусть постится столько же дней в другое время"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "Очень пожилым немощным людям, не имеющим сил соблюдать пост, разрешено не поститься"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "им следует выплатить искупительную милостыню – «фидья» за каждый пропущенный день поста месяца Рамадан"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "Желательный (сунна) пост – это, например, пост в 9 и 10 день месяца Мухаррам"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "понедельник и четверг каждой недели, шесть дней в месяце Шавваль после Рамадана, первые 10 дней месяца Зуль-хиджа"
+        accessed: "2026-09-26"
+      - url: "https://dummo.ru/islam/osnovy-islama/316-post"
+        title: "Пост | Духовное управление мусульман Московской области"
+        tier: official
+        excerpt: "Крайне порицаемый (тахриман-макрух) пост – это пост в день праздника Ураза-байрам и в четыре дня праздника Курбан-байрам, а также соблюдение поста 2-3 дня без разговения"
+        accessed: "2026-09-26"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:87"
+        title: "Коран 5:87, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Не запрещайте блага, которые Аллах сделал дозволенными для вас, и не преступайте границы дозволенного"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260815120834/https://www.britannica.com/topic/zuhd"
+        title: "Zuhd | Encyclopaedia Britannica (архивная копия)"
+        tier: reference
+        excerpt: "zuhd, (Arabic: “detachment”), in Islam, asceticism"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260815120834/https://www.britannica.com/topic/zuhd"
+        title: "Zuhd | Encyclopaedia Britannica (архивная копия)"
+        tier: reference
+        excerpt: "Islam nevertheless encourages and praises those who shun luxury in favour of a simple and pious life"
+        accessed: "2026-09-26"
+      - url: "https://ru.wikipedia.org/wiki/%D0%97%D1%83%D1%85%D0%B4"
+        title: "Зухд — Википедия"
+        tier: reference
+        excerpt: "Ислам запрещает крайний аскетизм и призывает к умеренности в нём"
+        accessed: "2026-09-26"
+      - url: "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%BE"
+        title: "Монашество — Википедия"
+        tier: reference
+        excerpt: "В исламе с монашеством часто сравнивают последователей суфизма"
+        accessed: "2026-09-26"
+      - url: "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%BE"
+        title: "Монашество — Википедия"
+        tier: reference
+        excerpt: "большинство суфийских орденов не призывают к безбрачию, а их последователи имеют семьи и детей"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: organisation
+    summary: "В суннитском исламе нет централизованного духовенства и иерархии: религиозный авторитет коллективно принадлежит улемам в рамках четырёх правовых школ (мазхабов): ханафитской, маликитской, шафиитской и ханбалитской. В шиитском (имамитском) исламе, по этому учению, авторитет восходит к имамам, а в их отсутствие — к признанным богословам, которым следуют верующие."
+    unity:
+      kind: divided
+      note: "у суннитов нет единой иерархии, авторитет у богословов четырёх правовых школ; у шиитов-имамитов руководство общиной принадлежит имаму."
+      proof:
+        - url: "https://cyberleninka.ru/article/n/mazhaby-v-islame"
+          title: "Мазхабы в исламе | КиберЛенинка"
+          tier: "reference"
+          excerpt: "Ханафитский (ханифитский) мазхаб оценивается исследователями как наиболее гибкий и либеральный"
+          accessed: "2026-09-26"
+        - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+          title: "Имамия | Wikishia"
+          tier: "official"
+          excerpt: "руководство мусульманской общиной возлагается на имама, а имам назначается Богом"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://cyberleninka.ru/article/n/mazhaby-v-islame"
+        title: "Мазхабы в исламе | КиберЛенинка"
+        tier: reference
+        excerpt: "Ханафитский (ханифитский) мазхаб оценивается исследователями как наиболее гибкий и либеральный"
+        accessed: "2026-09-25"
+      - url: "https://ru.wikishia.net/view/%D0%98%D0%BC%D0%B0%D0%BC%D0%B8%D1%8F"
+        title: "Имамия | Wikishia"
+        tier: official
+        excerpt: "руководство мусульманской общиной возлагается на имама, а имам назначается Богом"
+        accessed: "2026-09-25"
+      - url: "https://cyberleninka.ru/article/n/mazhaby-v-islame"
+        title: "Мазхабы в исламе | КиберЛенинка"
+        tier: "reference"
+        excerpt: "маликитский, ханифитский, шафиитский и ханба-литский."
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: rules
+    summary: "В пищу запрещены мертвечина, кровь, свинина и мясо животных, зарезанных без упоминания имени Бога, а также опьяняющие напитки и азартные игры. Об отношении к власти Коран говорит как о повиновении Аллаху, Его Посланнику и «обладающим влиянием» среди верующих; академические источники отмечают, что ханафитская школа допускает войну с «неверными» шире, чем остальные суннитские школы, считающие правомерной только войну оборонительную, в ответ на нападение."
+    unity:
+      kind: divided
+      note: "пищевые запреты общие по Корану (5:3); о войне правовые школы расходятся: ханафитская допускает войну с «неверными», остальные — только оборонительную."
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3"
+          title: "Коран 5:3, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "Вам запрещены мертвечина, кровь, мясо свиньи"
+          accessed: "2026-09-26"
+        - url: "https://cyberleninka.ru/article/n/uchenie-islama-o-voyne-i-mire-1"
+          title: "Учение ислама о войне и мире | КиберЛенинка"
+          tier: "reference"
+          excerpt: "войну с «неверными» (ханафитская школа) или только войну оборонительную, когда сами «неверные» нападают на мусульман"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Коран 5:3"
+      text: "Вам запрещены мертвечина, кровь, мясо свиньи и то, над чем не было произнесено имя Аллаха..."
+      url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3"
+    proof:
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3"
+        title: "Коран 5:3, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Вам запрещены мертвечина, кровь, мясо свиньи и то, над чем не было произнесено имя Аллаха"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:90"
+        title: "Коран 5:90, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "опьяняющие напитки, азартные игры, каменные жертвенники (или идолы) и гадальные стрелы являются скверной из деяний дьявола"
+        accessed: "2026-09-25"
+      - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59"
+        title: "Коран 4:59, перевод Э. Кулиева | Quran.com Content API"
+        tier: official
+        excerpt: "Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас"
+        accessed: "2026-09-25"
+      - url: "https://cyberleninka.ru/article/n/uchenie-islama-o-voyne-i-mire-1"
+        title: "Учение ислама о войне и мире | КиберЛенинка"
+        tier: reference
+        excerpt: "войну с «неверными» (ханафитская школа) или только войну оборонительную, когда сами «неверные» нападают на мусульман"
+        accessed: "2026-09-25"
+    status: verified

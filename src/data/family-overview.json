@@ -1,0 +1,120 @@
+{
+  "introduction": {
+    "text": "Иудаизм, христианство и ислам называют авраамическими религиями: все три традиции связывают свою историю веры с праотцем Авраамом. Его история рассказана в Библии и Коране; христианский Новый Завет обращается к нему как к образцу веры. Общая фигура праотца соединяет эти традиции, хотя они по-разному понимают Бога и откровение.",
+    "proof": [
+      {
+        "url": "https://pluralism.org/abraham",
+        "title": "The Pluralism Project — Abraham",
+        "excerpt": "Abraham is the patriarch, acknowledged as the father of the lineage of faith by the Jewish, Christian, and Islamic traditions.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  "judaism": {
+    "text": "Иудаизм соединяет веру в единого Бога, священные тексты и многовековую историю еврейского народа. Это не только вероучение, но и общинная жизнь, культурная память и передача традиции между поколениями.",
+    "proof": [
+      {
+        "url": "https://pluralism.org/introduction-to-judaism",
+        "title": "The Pluralism Project — Introduction to Judaism",
+        "excerpt": "commitments to monotheistic belief, sacred texts, and the social and cultural histories and traditions of Jewish people.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  "islam": {
+    "text": "В центре ислама — вера в единого Бога и следование Его воле. Мусульмане считают Мухаммада последним посланником, а Коран — Божьим откровением. Эта вера определяет и богослужение, и повседневную жизнь.",
+    "proof": [
+      {
+        "url": "https://pluralism.org/introduction-to-islam",
+        "title": "The Pluralism Project — Introduction to Islam",
+        "excerpt": "Islam recognizes God the Creator; Muhammad, the final messenger; and the Qur’an, God’s final word.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  "groups": [
+    {
+      "id": "trinitarian",
+      "title": "Традиции, исповедующие Троицу",
+      "ids": [
+        "orthodoxy",
+        "catholicism",
+        "protestantism",
+        "adventism"
+      ],
+      "text": "Православие, католичество, основные протестантские церкви и адвентисты седьмого дня исповедуют единого Бога — Отца, Сына и Святого Духа. Адвентисты признают божественность Христа и относятся к протестантской традиции.",
+      "proof": [
+        {
+          "url": "https://adventist.org/beliefs/official/trinity",
+          "title": "Seventh-day Adventists — The Trinity",
+          "excerpt": "There is one God: Father, Son, and Holy Spirit, a unity of three coeternal Persons.",
+          "tier": "official",
+          "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+          "title": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+          "tier": "official",
+          "excerpt": "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная",
+          "accessed": "2026-09-25"
+        },
+        {
+          "url": "http://web.archive.org/web/20260422005102/https://ccconline.ru/",
+          "title": "Катехизис Католической Церкви (ccconline.ru, архивная копия), §253",
+          "tier": "official",
+          "excerpt": "Мы не исповедуем трех богов, но единого Бога в трех лицах: «Троицу единосущную»",
+          "accessed": "2026-09-25"
+        },
+        {
+          "url": "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx",
+          "title": "Аугсбургское вероисповедание, артикул I",
+          "tier": "official",
+          "excerpt": "существует одно Божественное Существо, именуемое Богом, Которое во истину и есть Бог; и все же, в этом Едином Божественном Существе суть три Ипостаси",
+          "accessed": "2026-09-25"
+        },
+        {
+          "url": "https://baptist-volga.ru/verouchenie-baptistov",
+          "title": "Вероучение ЕХБ 1985 года, раздел «О триединстве Бога»",
+          "tier": "official",
+          "excerpt": "Мы веруем в триединого, единосущного Бога Отца, Сына и Святого Духа",
+          "accessed": "2026-09-25"
+        },
+        {
+          "url": "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve",
+          "title": "Исповедание веры РЦХВЕ, раздел 2 «Бог»",
+          "tier": "official",
+          "excerpt": "есть один Бог, особым образом вечно существующий в Трех Лицах – Отец, Сын и Святой Дух",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "nontrinitarian",
+      "title": "Движения с иным учением о Боге",
+      "ids": [
+        "lds",
+        "jw"
+      ],
+      "text": "Эти движения связаны с христианством, но их учение отличается от традиционного понимания Троицы. Святые последних дней считают Отца, Иисуса Христа и Святого Духа тремя отдельными божественными существами. Свидетели Иеговы не считают Иисуса равным Всемогущему Богу.",
+      "proof": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead-study-guide?lang=eng",
+          "title": "The Church of Jesus Christ of Latter-day Saints — Godhead",
+          "excerpt": "The Godhead consists of three divine beings: Heavenly Father, Jesus Christ, and the Holy Ghost.",
+          "tier": "official",
+          "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://www.jw.org/en/bible-teachings/questions/is-jesus-almighty/",
+          "title": "Jehovah’s Witnesses — Is Jesus Almighty God?",
+          "excerpt": "Jesus never claimed to be on the same level as Almighty God.",
+          "tier": "official",
+          "accessed": "2026-09-26"
+        }
+      ]
+    }
+  ]
+}

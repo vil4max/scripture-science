@@ -1,0 +1,31 @@
+---
+import FamilyOverview from '../components/FamilyOverview.astro';
+import OtherTraditions from '../components/OtherTraditions.astro';
+import WorldHierarchy from '../components/WorldHierarchy.astro';
+import WorldAtlas from '../components/WorldAtlas.astro';
+import SectionPage from '../layouts/SectionPage.astro';
+---
+
+<SectionPage
+  title="Религиозная картина мира"
+  lead="Сколько людей принадлежит к разным религиям, где они живут и во что верят."
+>
+  <div class="overview-nav" role="navigation" aria-label="На этой странице">
+    <a href="#world">Масштабы</a>
+    <a href="#geography">География</a>
+    <a href="#traditions">Авраамические религии</a>
+    <a href="#other-traditions">Другие религии</a>
+  </div>
+  <div id="world"><WorldHierarchy /></div>
+  <div id="geography"><WorldAtlas /></div>
+
+  <FamilyOverview />
+  <OtherTraditions />
+</SectionPage>
+
+<style>
+  .overview-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
+  .overview-nav a { color: var(--muted); text-underline-offset: 4px; }
+  #world, #geography { min-width: 0; scroll-margin-top: 24px; }
+  #geography { border-top: 1px solid var(--line); padding-top: 32px; }
+</style>

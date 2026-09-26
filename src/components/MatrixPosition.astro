@@ -1,0 +1,143 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import SharedPositions from './SharedPositions.astro';
+import SourceLink from './SourceLink.astro';
+import ProofLink from './ProofLink.astro';
+import { UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
+
+interface Props {
+  briefAvailable?: boolean;
+  tradition?: string;
+  position: CollectionEntry<'matrix'>['data']['positions'][number];
+}
+
+const { position, briefAvailable = false, tradition } = Astro.props;
+const summary = positionSummaryText(position);
+---
+
+<div class="body">
+  {summary ? (
+    <p class="summary">{summary}</p>
+  ) : (
+    <p class="todo-flag">Источник уточняется</p>
+  )}
+  {briefAvailable && <span data-reading-brief hidden><ProofLink proof={position.proof}/></span>}
+  {summary && position.unity && (
+    <p class={`unity ${position.unity.kind}`}>
+      <span class="unity-label">{UNITY_LABEL_RU[position.unity.kind]}</span><span data-reading-detail={briefAvailable || undefined}>: {position.unity.note}</span>
+      <ProofLink
+        proof={position.unity.proof}
+        exclude={[position.quote?.url, position.scripture?.url, ...position.proof.map((item) => item.url)].filter(
+          (u): u is string => Boolean(u),
+        )}
+        inline
+      />
+    </p>
+  )}
+  {/* Detailed reading keeps quotes open, set apart by style; the attribution is the link to
+  the source (owner, 2026-09-26). */}
+  {position.quote && (
+    <blockquote class="quote" data-reading-detail={briefAvailable || undefined}>
+      <p>«{position.quote.text}»</p>
+      <cite>
+        —{' '}
+        <SourceLink url={position.quote.url} title={position.quote.source} />
+        <ProofLink
+          proof={position.proof}
+          exclude={[position.quote.url, position.scripture?.url].filter((u): u is string => Boolean(u))}
+          inline
+        />
+      </cite>
+    </blockquote>
+  )}
+  {position.scripture && (
+    <blockquote class="quote scripture" data-reading-detail={briefAvailable || undefined}>
+      <p>«{position.scripture.text}»</p>
+      <cite>
+        —{' '}
+        <SourceLink url={position.scripture.url} title={position.scripture.ref} />
+      </cite>
+    </blockquote>
+  )}
+  {!position.quote && (
+    <span data-reading-detail={briefAvailable || undefined}>
+    <ProofLink
+      proof={position.proof}
+      exclude={[position.scripture?.url].filter((u): u is string => Boolean(u))}
+    />
+    </span>
+  )}
+  {tradition && <SharedPositions tradition={tradition} topic={position.topic} />}
+</div>
+
+<style>
+  .body {
+    display: grid;
+    gap: 8px;
+    align-content: start;
+  }
+
+  .summary {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .todo-flag {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--focus);
+  }
+
+  .unity {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .unity-label {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .unity.divided .unity-label {
+    color: var(--focus);
+  }
+
+  .unity :global(.proof-inline a) {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  /* An open quote: set apart by a rule and italics, attributed with a link
+  to its source. */
+  .quote {
+    margin: 10px 0 0;
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  }
+
+  .quote p {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .quote cite {
+    display: block;
+    margin-top: 4px;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .quote cite a {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  .quote cite a:hover {
+    text-decoration: underline;
+  }
+</style>

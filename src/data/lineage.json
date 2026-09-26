@@ -1,0 +1,1152 @@
+{
+  "nodes": [
+    {
+      "id": "israelite-second-temple",
+      "label": "Древний Израиль",
+      "kind": "trunk",
+      "start": {
+        "year": -1200,
+        "approx": true,
+        "label": "ок. 1200 г. до н.э. (приблизительно)",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/israelite-religion",
+            "title": "Israelite Religion — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "Israelite religion, like Israel's language and culture, is a child of the Canaanite or West Semitic world.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "rabbinic-judaism",
+      "label": "Раввинистический иудаизм",
+      "tradition": "judaism",
+      "parent": "israelite-second-temple",
+      "kind": "branch",
+      "start": {
+        "year": 70,
+        "label": "70 г. н.э. · школа в Явне",
+        "proof": [
+          {
+            "url": "https://jewishvirtuallibrary.org/yochanan-ben-zakkai",
+            "title": "Yochanan ben Zakkai — Jewish Virtual Library",
+            "tier": "reference",
+            "excerpt": "The school ben Zakkai established at Yavneh became the center of Jewish learning for centuries and replaced Jerusalem as the seat of the Sanhedrin.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Разрушение Иерусалима и Второго Храма; перенос центра в Явне",
+        "proof": [
+          {
+            "url": "https://jewishvirtuallibrary.org/yochanan-ben-zakkai",
+            "title": "Yochanan ben Zakkai — Jewish Virtual Library",
+            "tier": "reference",
+            "excerpt": "The school ben Zakkai established at Yavneh became the center of Jewish learning for centuries and replaced Jerusalem as the seat of the Sanhedrin.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "early-christianity",
+      "label": "Раннее христианство (неразделённая Церковь)",
+      "parent": "israelite-second-temple",
+      "kind": "branch",
+      "start": {
+        "year": 33,
+        "approx": true,
+        "label": "ок. 33 г. н.э. · Пятидесятница",
+        "proof": [
+          {
+            "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
+            "title": "Деяния 2:1–4 (King James Version)",
+            "tier": "official",
+            "excerpt": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Пятидесятница",
+        "proof": [
+          {
+            "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
+            "title": "Деяния 2:1–4 (King James Version)",
+            "tier": "official",
+            "excerpt": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "church-of-the-east",
+      "label": "Церковь Востока",
+      "parent": "early-christianity",
+      "kind": "branch",
+      "start": {
+        "year": 431,
+        "label": "431 г. · Эфесский собор",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/05491a.htm",
+            "title": "Council of Ephesus — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "The third ecumenical council, held in 431.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Осуждение учения Нестория на Эфесском соборе",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/05491a.htm",
+            "title": "Council of Ephesus — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "The third ecumenical council, held in 431.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "chalcedonian-christianity",
+      "label": "Халкидонское христианство",
+      "parent": "early-christianity",
+      "kind": "branch",
+      "start": {
+        "year": 451,
+        "label": "451 г. · Халкидонский собор",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/03555a.htm",
+            "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Халкидонский собор",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/03555a.htm",
+            "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "oriental-orthodoxy",
+      "label": "Древневосточные (дохалкидонские) церкви",
+      "parent": "early-christianity",
+      "kind": "branch",
+      "start": {
+        "year": 451,
+        "label": "451 г. · непринятие Халкидонского собора",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/03555a.htm",
+            "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "непринятие Халкидонского собора. К этой семье относятся, например, Армянская, Коптская и Сирийская церкви. Спор касался понимания божественного и человеческого во Христе; он закрепил отдельную ветвь христианства задолго до разделения 1054 года",
+        "proof": [
+          {
+            "url": "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+            "title": "World Council of Churches — Orthodox churches (Oriental)",
+            "tier": "official",
+            "excerpt": "Ethiopian, Coptic, Armenian, Syrian, Indian and Eritrean Churches.",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.oikoumene.org/node/6097",
+            "title": "World Council of Churches — Oriental Orthodox Churches",
+            "tier": "official",
+            "excerpt": "but do not accept the fourth, Chalcedon",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.oikoumene.org/church-families/orthodox-churches-oriental",
+            "title": "World Council of Churches — Orthodox churches (Oriental)",
+            "tier": "official",
+            "excerpt": "Christological teaching of the Council of Chalcedon.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "orthodoxy",
+      "label": "Православие",
+      "tradition": "orthodoxy",
+      "parent": "chalcedonian-christianity",
+      "kind": "branch",
+      "start": {
+        "year": 1054,
+        "label": "1054 г. · раскол с Западной церковью",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/13535a.htm",
+            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Великая схизма",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/13535a.htm",
+            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "old-believers",
+      "label": "Старообрядчество",
+      "parent": "orthodoxy",
+      "kind": "branch",
+      "start": {
+        "year": 1666,
+        "label": "1666–1667 гг. · Большой Московский собор",
+        "proof": [
+          {
+            "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4",
+            "title": "Church History: Seventeenth Century, Russia — Orthodox Church in America",
+            "tier": "official",
+            "excerpt": "in the Spring of 1666, Tsar Alexis summoned a major council of all the Russian bishops, which reaffirmed the new service books",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Большой Московский собор 1666–1667 годов утвердил изменения богослужебных книг и обрядов, начатые патриархом Никоном. Сторонники прежних обрядов, включая двуперстное крестное знамение, отвергли реформы; соборное осуждение закрепило раскол.",
+        "proof": [
+          {
+            "url": "https://www.oca.org/orthodoxy/the-orthodox-faith/church-history/seventeenth-century/russia4",
+            "title": "Church History: Seventeenth Century, Russia — Orthodox Church in America",
+            "tier": "official",
+            "excerpt": "the old Russian practices in disagreement with the Greek usages were condemned as heretical.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "catholicism",
+      "label": "Католицизм",
+      "tradition": "catholicism",
+      "parent": "chalcedonian-christianity",
+      "kind": "branch",
+      "start": {
+        "year": 1054,
+        "label": "1054 г. · раскол с Восточной церковью",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/13535a.htm",
+            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Великая схизма",
+        "proof": [
+          {
+            "url": "https://www.newadvent.org/cathen/13535a.htm",
+            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
+            "tier": "reference",
+            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reformation",
+      "label": "Реформация",
+      "tradition": "protestantism",
+      "parent": "catholicism",
+      "kind": "branch",
+      "start": {
+        "year": 1517,
+        "label": "1517 г. · 95 тезисов Лютера",
+        "proof": [
+          {
+            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
+            "title": "Martin Luther posts 95 theses — HISTORY",
+            "tier": "news",
+            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "95 тезисов Лютера",
+        "proof": [
+          {
+            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
+            "title": "Martin Luther posts 95 theses — HISTORY",
+            "tier": "news",
+            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lutheran",
+      "label": "Лютеранство",
+      "tradition": "protestantism",
+      "parent": "reformation",
+      "kind": "branch",
+      "start": {
+        "year": 1517,
+        "label": "1517 г. · выступление Лютера",
+        "proof": [
+          {
+            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
+            "title": "Martin Luther posts 95 theses — HISTORY",
+            "tier": "news",
+            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "выступление Лютера: его 95 тезисов оспаривали практику продажи индульгенций — освобождения от временного наказания за грехи. Подготовленный для богословского обсуждения текст быстро распространился далеко за пределы Виттенберга.",
+        "proof": [
+          {
+            "url": "https://gruber.lstc.edu/luthers_works/1517.php",
+            "title": "Luther’s Works, 1517 — Lutheran School of Theology at Chicago",
+            "tier": "reference",
+            "excerpt": "Luther's 95 theses on indulgences, prepared for academic debate",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "reformed",
+      "label": "Реформатство (кальвинизм)",
+      "tradition": "protestantism",
+      "parent": "reformation",
+      "kind": "branch",
+      "start": {
+        "year": 1519,
+        "label": "1519 г. · реформация Цвингли в Цюрихе",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/huldrych-zwingli",
+            "title": "Huldrych Zwingli — Encyclopedia.com",
+            "tier": "reference",
+            "excerpt": "the main church in Zurich, in 1519 when he began a series of lectures on the book of Matthew in the New Testament",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "реформация Цвингли в Цюрихе: проповедник Ульрих Цвингли начал последовательное толкование Евангелия от Матфея и выступил за пересмотр церковных обычаев на основании Писания. Его программа стала основой реформ в городе.",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/history/encyclopedias-almanacs-transcripts-and-maps/huldrych-zwingli",
+            "title": "Huldrych Zwingli — Encyclopedia.com",
+            "tier": "reference",
+            "excerpt": "Zwingli's sixty-seven theses therefore became an outline for religious reform in Zurich.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "anglican",
+      "label": "Англиканство",
+      "tradition": "protestantism",
+      "parent": "reformation",
+      "kind": "branch",
+      "start": {
+        "year": 1534,
+        "label": "1534 г. · Акт о супрематии",
+        "proof": [
+          {
+            "url": "https://www.ebsco.com/research-starters/history/act-supremacy",
+            "title": "Act of Supremacy — EBSCO Research Starters",
+            "tier": "reference",
+            "excerpt": "enacted by the English Parliament in 1534, marked a pivotal moment in the English Reformation, establishing King Henry VIII as the Supreme Head",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Акт о супрематии: английский парламент признал короля Генриха VIII верховным главой Церкви Англии. Это закрепило её независимость от власти папы и стало важной вехой английской Реформации.",
+        "proof": [
+          {
+            "url": "https://www.ebsco.com/research-starters/history/act-supremacy",
+            "title": "Act of Supremacy — EBSCO Research Starters",
+            "tier": "reference",
+            "excerpt": "The Act of Supremacy declared Henry VIII the head of the Church in England",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "anabaptist",
+      "label": "Анабаптизм",
+      "tradition": "protestantism",
+      "parent": "reformation",
+      "kind": "branch",
+      "start": {
+        "year": 1525,
+        "label": "1525 г. · швейцарские братья в Цюрихе",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/anabaptists",
+            "title": "Anabaptists — Encyclopedia.com",
+            "tier": "reference",
+            "excerpt": "baptisms began in Swiss territories in early 1525. The Swiss Brethren included many of Huldrych Zwingli's early supporters",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "швейцарские братья в Цюрихе: в 1525 году группа верующих крестила друг друга по личному исповеданию веры. Они считали, что крещение требует сознательного решения следовать Христу, и отвергали крещение младенцев. Меннонитская традиция связывает с этим событием начало анабаптистского движения.",
+        "proof": [
+          {
+            "url": "https://mwc-cmm.org/en/stories/how-mennonites-came-be/",
+            "title": "How Mennonites came to be — Mennonite World Conference",
+            "tier": "official",
+            "excerpt": "true Christian baptism assumed a conscious commitment to follow Jesus",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "pentecostalism",
+      "label": "Пятидесятничество",
+      "tradition": "protestantism",
+      "parent": "reformation",
+      "kind": "branch",
+      "start": {
+        "year": 1906,
+        "label": "1906 г. · возрождение на Азуза-стрит",
+        "proof": [
+          {
+            "url": "https://www.ebsco.com/research-starters/history/azusa-street-revival",
+            "title": "Azusa Street Revival — EBSCO Research Starters",
+            "tier": "reference",
+            "excerpt": "The Azusa Street Revival, which began in February 1906 in Los Angeles, is a significant event in the history of Pentecostalism.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "возрождение на Азуза-стрит: молитвенные собрания под руководством Уильяма Сеймура в Лос-Анджелесе. Участники свидетельствовали о действии Святого Духа и говорении на иных языках; проповедники и миссионеры распространяли этот опыт, способствуя росту пятидесятнического движения.",
+        "proof": [
+          {
+            "url": "https://www.ebsco.com/research-starters/history/azusa-street-revival",
+            "title": "Azusa Street Revival — EBSCO Research Starters",
+            "tier": "reference",
+            "excerpt": "Missionaries were also sent out from Azusa to spread the word and start new congregations.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    },
+    {
+      "id": "second-great-awakening",
+      "label": "Второе великое пробуждение (религиозная среда в США, не прямое происхождение)",
+      "parent": "reformation",
+      "kind": "other",
+      "start": {
+        "year": 1830,
+        "approx": true,
+        "label": "1830-е гг. (приблизительно) · религиозный подъём в США",
+        "proof": [
+          {
+            "url": "https://dissertation.jeriwieringa.com/essays/chapter-1/",
+            "title": "The Emergence of Seventh-day Adventism, ch. 1 — Jeri Wieringa (dissertation)",
+            "tier": "reference",
+            "excerpt": "Coming at the end of the period known as the Second Great Awakening, Miller's predictions and the responses to them shaped American",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "lds",
+      "label": "Церковь Иисуса Христа Святых последних дней",
+      "tradition": "lds",
+      "parent": "second-great-awakening",
+      "kind": "branch",
+      "start": {
+        "year": 1830,
+        "label": "апрель 1830 г. · организация Церкви",
+        "proof": [
+          {
+            "url": "https://newsroom.churchofjesuschrist.org/facts-and-statistics",
+            "title": "Facts and Statistics — Newsroom, The Church of Jesus Christ of Latter-day Saints",
+            "tier": "official",
+            "excerpt": "The Church of Jesus Christ of Latter-day Saints was organized in April 1830, when Joseph Smith met with a small group of believers",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Организация Церкви Джозефом Смитом",
+        "proof": [
+          {
+            "url": "https://newsroom.churchofjesuschrist.org/facts-and-statistics",
+            "title": "Facts and Statistics — Newsroom, The Church of Jesus Christ of Latter-day Saints",
+            "tier": "official",
+            "excerpt": "The Church of Jesus Christ of Latter-day Saints was organized in April 1830, when Joseph Smith met with a small group of believers",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "adventism",
+      "label": "Адвентисты седьмого дня",
+      "tradition": "adventism",
+      "parent": "second-great-awakening",
+      "kind": "branch",
+      "start": {
+        "year": 1863,
+        "label": "1863 г. · организация Генеральной конференции",
+        "proof": [
+          {
+            "url": "https://whiteestate.org/about/egwbio/",
+            "title": "Ellen G. White — a Brief Biography — Ellen G. White Estate",
+            "tier": "official",
+            "excerpt": "The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Организация Генеральной конференции",
+        "proof": [
+          {
+            "url": "https://whiteestate.org/about/egwbio/",
+            "title": "Ellen G. White — a Brief Biography — Ellen G. White Estate",
+            "tier": "official",
+            "excerpt": "The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863.",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "jw",
+      "label": "Свидетели Иеговы",
+      "tradition": "jw",
+      "parent": "second-great-awakening",
+      "kind": "branch",
+      "start": {
+        "year": 1870,
+        "approx": true,
+        "label": "1870 г. (приблизительно) · библейский кружок в Питтсбурге",
+        "proof": [
+          {
+            "url": "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/You-Are-My-Witnesses-Says-Jehovah/Proclaiming-the-Lords-Return-1870-1914/",
+            "title": "Proclaiming the Lord's Return (1870-1914) — Jehovah's Witnesses—Proclaimers of God's Kingdom (jw.org)",
+            "tier": "official",
+            "excerpt": "in 1870, fired by enthusiasm, he and a few acquaintances in Pittsburgh and nearby Allegheny got together and formed a class for Bible study",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Начало библейского кружка Чарльза Тейза Расселла",
+        "proof": [
+          {
+            "url": "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/You-Are-My-Witnesses-Says-Jehovah/Proclaiming-the-Lords-Return-1870-1914/",
+            "title": "Proclaiming the Lord's Return (1870-1914) — Jehovah's Witnesses—Proclaimers of God's Kingdom (jw.org)",
+            "tier": "official",
+            "excerpt": "in 1870, fired by enthusiasm, he and a few acquaintances in Pittsburgh and nearby Allegheny got together and formed a class for Bible study",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "islam",
+      "label": "Ислам",
+      "tradition": "islam",
+      "kind": "trunk",
+      "start": {
+        "year": 610,
+        "label": "610 г. · первое откровение",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/muhammad",
+            "title": "Muhammad — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "It was in this cave that on 17 Ramaḍān 610 Muḥammad woke to find himself overwhelmed by a devastating presence",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Первое откровение в пещере Хира",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/muhammad",
+            "title": "Muhammad — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "It was in this cave that on 17 Ramaḍān 610 Muḥammad woke to find himself overwhelmed by a devastating presence",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "sunni",
+      "label": "Суннизм",
+      "tradition": "islam",
+      "parent": "islam",
+      "kind": "branch",
+      "start": {
+        "year": 632,
+        "label": "632 г. · избрание Абу Бакра халифом",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/shiism",
+            "title": "Shi'ism — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "Abu Bakr, Umar, and Uthman—who ruled successively (632–656)",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    },
+    {
+      "id": "shia",
+      "label": "Шиизм",
+      "tradition": "islam",
+      "parent": "islam",
+      "kind": "branch",
+      "start": {
+        "year": 632,
+        "label": "632 г. · утверждение права Али на руководство общиной",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/shiism",
+            "title": "Shi'ism — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "the right of succession to political and religious leadership of the community belongs solely to the prophet Muhammad's cousin, Ali ibn Abi Talib",
+            "accessed": "2026-09-25"
+          }
+        ]
+      },
+      "event": {
+        "label": "Битва при Кербеле, 680 г.",
+        "proof": [
+          {
+            "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/shiism",
+            "title": "Shi'ism — Encyclopedia of Religion (Encyclopedia.com)",
+            "tier": "reference",
+            "excerpt": "Husayn's death in battle at Karbala became symbolic of the hostility between them and those linked with Sunni Islam",
+            "accessed": "2026-09-25"
+          }
+        ]
+      }
+    }
+  ],
+  "unions": [
+    {
+      "id": "union-of-brest",
+      "from": "orthodoxy",
+      "to": "catholicism",
+      "year": 1596,
+      "label": "Брестская уния, 1596 г.",
+      "proof": [
+        {
+          "url": "https://ugcc.ua/en/church/history/union-of-brest/",
+          "title": "Union of Brest 1596 — Ukrainian Greek-Catholic Church",
+          "tier": "official",
+          "excerpt": "not all bishops and faithful of the Kyivan Metropolia supported the model approved by the 1596 Council of Brest.",
+          "accessed": "2026-09-26"
+        }
+      ],
+      "description": "часть православных епископов Киевской митрополии в Речи Посполитой вошла в общение с Римом, сохранив византийский обряд. Другие епископы и верующие остались в Православной церкви."
+    }
+  ],
+  "others": [
+    {
+      "id": "mesopotamian",
+      "label": "Месопотамская религия",
+      "from": -4100,
+      "to": -3100,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.worldhistory.org/Mesopotamian_Religion/",
+          "title": "Mesopotamian Religion — World History Encyclopedia",
+          "tier": "reference",
+          "excerpt": "already firmly in place by the time of the Uruk period (circa 4100-3100 BCE)",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "egyptian",
+      "label": "Древнеегипетская религия",
+      "from": -3200,
+      "approx": true,
+      "proof": [
+        {
+          "url": "http://www.encyclopedia.com/reference/encyclopedias-almanacs-transcripts-and-maps/egyptian-religion",
+          "title": "Egyptian Religion — The Columbia Encyclopedia (Encyclopedia.com)",
+          "tier": "reference",
+          "excerpt": "At the end of the predynastic period (c.3200 BC), when a combined state was created, a national religion apparently grew out of the various",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "zoroastrianism",
+      "label": "Зороастризм",
+      "from": -588,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/zoroastrianism",
+          "title": "Zoroastrianism — Encyclopedia of Religion (Encyclopedia.com)",
+          "tier": "reference",
+          "excerpt": "that is, 588 bce",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "roman",
+      "label": "Древнеримская религия",
+      "from": -500,
+      "to": 380,
+      "approx": true,
+      "proof": [
+        {
+          "url": "http://www.encyclopedia.com/religion/encyclopedias-almanacs-transcripts-and-maps/roman-religion",
+          "title": "Roman Religion — New Catholic Encyclopedia (Encyclopedia.com)",
+          "tier": "reference",
+          "excerpt": "The history of Roman religion before the 5th century b.c. is obscure, and it is likewise complex, because Roman religion from an early",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "greek",
+      "label": "Древнегреческая религия",
+      "from": -800,
+      "to": 363,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Greek-religion",
+          "title": "Greek religion — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "from the time of Homer (probably 9th or 8th century bce) to the reign of the emperor Julian (4th century ce)",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "germanic-norse",
+      "label": "Германо-скандинавское язычество",
+      "from": -100,
+      "to": 1100,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Germanic-religion-and-mythology",
+          "title": "Germanic religion and mythology — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "the gory sacrifice of Roman prisoners by the Cimbri at the end of the 2nd century bce",
+          "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://www.worldhistory.org/Norse_Mythology/",
+          "title": "Norse Mythology — World History Encyclopedia",
+          "tier": "reference",
+          "excerpt": "the Scandinavian mythological framework that was upheld during and around the time of the Viking Age (c. 790- c. 1100 CE)",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "celtic",
+      "label": "Кельтская религия",
+      "from": -700,
+      "to": 400,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.worldhistory.org/article/1707/death-burial--the-afterlife-in-the-ancient-celtic/",
+          "title": "Death, Burial & the Afterlife in the Ancient Celtic Religion — World History Encyclopedia",
+          "tier": "reference",
+          "excerpt": "The ancient Celts who occupied large parts of Europe from 700 BCE to 400 CE displayed a clear belief in an afterlife",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "slavic",
+      "label": "Славянское язычество",
+      "from": 500,
+      "to": 1168,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Slavic-religion",
+          "title": "Slavic religion — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "The very late date at which they came into the light of recorded history (even their name does not appear before the 6th century ce)",
+          "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://www.britannica.com/topic/Arkona",
+          "title": "Arkona — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "West Slavic citadel-temple of the god Svantovit, dating from the 9th–10th century ad and destroyed in 1168/69 by Christian Danes",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "hinduism",
+      "label": "Индуизм",
+      "from": -2000,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Hinduism",
+          "title": "Hinduism — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "it refers to a rich cumulative tradition of texts and practices, some of which date to the 2nd millennium bce or possibly earlier",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "buddhism",
+      "label": "Буддизм",
+      "from": -563,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Buddhism",
+          "title": "Buddhism — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "Many modern scholars believe that the historical Buddha lived from about 563 to about 483 bce",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "jainism",
+      "label": "Джайнизм",
+      "from": -700,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Jainism",
+          "title": "Jainism — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "Scholars of religion generally hold that Jainism originated in the 7th–5th century bce in the Ganges basin of eastern India",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "confucianism",
+      "label": "Конфуцианство",
+      "from": -551,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.encyclopedia.com/humanities/encyclopedias-almanacs-transcripts-and-maps/confucius-551-479-bce",
+          "title": "Confucius (551–479 BCE) — Encyclopedia of Philosophy (Encyclopedia.com)",
+          "tier": "reference",
+          "excerpt": "CONFUCIUS (551 – 479 BCE) Confucius (Kong Qiu) is one of the early Chinese philosophers and the founder of the ethical teaching known as Confucianism",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "daoism",
+      "label": "Даосизм",
+      "from": -400,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Taoism",
+          "title": "Taoism — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "The first mention of Laozi is found in another early classic of Taoist speculation, the Zhuangzi (4th–3rd century bce)",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "shinto",
+      "label": "Синто",
+      "from": -300,
+      "approx": true,
+      "proof": [
+        {
+          "url": "https://www.britannica.com/topic/Shinto",
+          "title": "Shinto — Encyclopaedia Britannica",
+          "tier": "reference",
+          "excerpt": "in about the 3rd or 2nd century bce, is directly related to later Japanese culture and hence to Shintō",
+          "accessed": "2026-09-26"
+        }
+      ]
+    }
+  ],
+  "epochs": [
+    {
+      "id": "byzantine-era",
+      "tradition": "orthodoxy",
+      "year": -5508,
+      "label": "Сотворение мира по византийской эре (православная традиция) — 5508 г. до н.э.",
+      "proof": [
+        {
+          "url": "https://orthodoxwiki.org/Byzantine_Creation_Era",
+          "title": "Byzantine Creation Era — OrthodoxWiki",
+          "tier": "reference",
+          "excerpt": "fixed at September 1 5509 BC since the mid-7th century",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "jewish-anno-mundi",
+      "tradition": "judaism",
+      "year": -3761,
+      "label": "Сотворение мира по еврейскому летоисчислению (анно мунди) — 3761 г. до н.э.",
+      "proof": [
+        {
+          "url": "https://www.haaretz.com/jewish/2015-10-07/ty-article/3761-bce-the-world-is-created/0000017f-e4be-d7b2-a77f-e7bf482b0000",
+          "title": "3761 BCE: The World Is Created, According to the Hebrew Calendar — Haaretz",
+          "tier": "news",
+          "excerpt": "October 7, 3761 B.C.E., is the date on which the world was created – according to the Hebrew calendar",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "ussher-chronology",
+      "year": -4004,
+      "label": "Сотворение мира по хронологии архиепископа Ашера (англиканская традиция, XVII в.) — 4004 г. до н.э.",
+      "proof": [
+        {
+          "url": "https://www.encyclopedia.com/people/philosophy-and-religion/protestant-christianity-biographies/james-ussher",
+          "title": "James Ussher — Encyclopedia of Irish History and Culture (Encyclopedia.com)",
+          "tier": "reference",
+          "excerpt": "world to 23 October 4004 b.c.e.",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "jw-adam-created",
+      "tradition": "jw",
+      "year": -4026,
+      "label": "Сотворение Адама по хронологии Свидетелей Иеговы — 4026 г. до н.э.",
+      "proof": [
+        {
+          "url": "https://wol.jw.org/en/wol/d/r1/lp-e/1102013279",
+          "title": "Time Line — Watchtower ONLINE LIBRARY (jw.org)",
+          "tier": "official",
+          "excerpt": "Adam created: 4026 B.C.E.",
+          "accessed": "2026-09-25"
+        }
+      ]
+    }
+  ],
+  "selfViews": [
+    {
+      "tradition": "judaism",
+      "from": {
+        "year": -1300,
+        "label": "Синайское откровение"
+      },
+      "summary": "Иудаизм описывает себя как непрерывную традицию, восходящую к откровению на горе Синай, а не как религию, основанную в каком-либо более позднем веке.",
+      "proof": [
+        {
+          "url": "https://www.ou.org/judaism-101/torah/",
+          "title": "Torah — Orthodox Union (OU.org)",
+          "tier": "official",
+          "excerpt": "given to them by G-d at Mt. Sinai, some thirty three hundred years ago",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "orthodoxy",
+      "from": {
+        "node": "early-christianity",
+        "label": "Апостольская Церковь"
+      },
+      "summary": "Православная Церковь описывает себя как единую непрерывную линию верующих от воскресения Христа и Пятидесятницы до наших дней, без разрыва апостольского преемства.",
+      "proof": [
+        {
+          "url": "https://www.monasterevmc.org/en-us/pages/orthodox-church",
+          "title": "Orthodox Church — Monastery of the Virgin Mary the Consolatory",
+          "tier": "official",
+          "excerpt": "the Church of the Apostles of Christ, the only continual, unbroken line of believers in our Lord and Savior Jesus Christ",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "catholicism",
+      "from": {
+        "node": "early-christianity",
+        "label": "Апостольская Церковь"
+      },
+      "summary": "Католическая Церковь описывает себя как ту же Церковь, которую Христос доверил попечению апостола Петра и апостолов, в непрерывном апостольском преемстве епископов.",
+      "proof": [
+        {
+          "url": "https://www.vatican.va/content/catechism/en/part_one/section_two/chapter_three/article_9/paragraph_3_the_church_is_one,_holy,_catholic,_and_apostolic.html",
+          "title": "Catechism of the Catholic Church, §3 The Church Is One, Holy, Catholic, and Apostolic — vatican.va",
+          "tier": "official",
+          "excerpt": "after his Resurrection, entrusted to Peter's pastoral care, commissioning him and the other apostles to extend and rule it",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "islam",
+      "from": {
+        "node": "islam",
+        "label": "Ислам"
+      },
+      "summary": "Ислам описывает себя не как новую религию, а как завершение и восстановление единобожия, возвещавшегося более ранними пророками, в откровении, данном Мухаммаду.",
+      "proof": [
+        {
+          "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3",
+          "title": "Коран 5:3, перевод Эльмира Кулиева (Quran.com API)",
+          "tier": "official",
+          "excerpt": "Сегодня Я ради вас усовершенствовал вашу религию, довел до конца Мою милость к вам и одобрил для вас в качестве религии ислам.",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "protestantism",
+      "from": {
+        "node": "early-christianity",
+        "label": "Апостольская Церковь"
+      },
+      "gaps": [
+        {
+          "from": 100,
+          "to": 1517,
+          "label": "по мнению протестантов, искажения средневековой Церкви были исправлены Реформацией"
+        }
+      ],
+      "summary": "Протестантские церкви описывают Реформацию не как основание новой церкви, а как восстановление и очищение древней; общим для семьи признаётся принцип «только Писанием, только верой, только благодатью».",
+      "proof": [
+        {
+          "url": "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx",
+          "title": "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)",
+          "tier": "official",
+          "excerpt": "Лютеране подчеркивают непрерывность развития христианства и убеждены, что в лютеранской Реформации не создана новая церковь, а восстановлена древняя",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "lds",
+      "from": {
+        "year": 33,
+        "label": "Апостольская Церковь"
+      },
+      "gaps": [
+        {
+          "from": 100,
+          "to": 1830,
+          "label": "Великое отступничество"
+        }
+      ],
+      "summary": "Церковь СПД учит, что после смерти апостолов люди исказили принципы Евангелия, и что полнота Евангелия была восстановлена в 1830 году через пророка Джозефа Смита.",
+      "proof": [
+        {
+          "url": "https://www.churchofjesuschrist.org/study/manual/gospel-topics/apostasy?lang=eng",
+          "title": "Apostasy — Gospel Topics, The Church of Jesus Christ of Latter-day Saints",
+          "tier": "official",
+          "excerpt": "men corrupted the principles of the gospel and made unauthorized changes in Church organization and priesthood ordinances",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "tradition": "adventism",
+      "from": {
+        "node": "adventism",
+        "label": "Церковь адвентистов седьмого дня"
+      },
+      "summary": "Церковь описывает себя как «Церковь Остатка», призванную в последнее время хранить заповеди Божьи и веру в Иисуса Христа, а не как новую религию.",
+      "proof": [
+        {
+          "url": "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin",
+          "title": "Полное изложение доктрин, п. 13 «Церковь Остатка и ее миссия» — Московское объединение Церкви ХАСД",
+          "tier": "official",
+          "excerpt": "Бог при звал Церковь Остатка к соблюдению заповедей Божьих и сохранению веры в Иисуса",
+          "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "tradition": "jw",
+      "from": {
+        "year": 33,
+        "label": "Апостольская Церковь I века"
+      },
+      "gaps": [
+        {
+          "from": 100,
+          "to": 1870,
+          "label": "отступничество, предсказанное апостолами"
+        }
+      ],
+      "summary": "Свидетели Иеговы учат, что после смерти апостолов в христианстве возникло предсказанное отступничество, и что истинное поклонение было восстановлено начиная с библейского кружка 1870-х годов.",
+      "proof": [
+        {
+          "url": "https://bible-api.com/2%20peter%202:1?translation=kjv",
+          "title": "2-е Петра 2:1 (King James Version)",
+          "tier": "reference",
+          "excerpt": "there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them",
+          "accessed": "2026-09-25"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,479 @@
+[
+  {
+    "id": "evidence",
+    "period": "Около 40 000 лет назад",
+    "title": "Следы воображаемого мира",
+    "text": "«Человеколев» из бивня мамонта соединяет черты человека и льва. Музей Ульма датирует его примерно 40 тысячами лет назад. Это отправная точка для вопроса о духовном мире древних людей, а не установленная дата рождения религии.",
+    "kind": "Археологический предмет",
+    "proof": [
+      {
+        "url": "https://museumulm.de/en/collections/archaeology/",
+        "title": "Museum Ulm — Archaeology",
+        "excerpt": "The Lion Man statuette was masterfully carved from the tusk of a mammoth 40,000 years ago.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "cities",
+    "period": "Древние цивилизации",
+    "title": "Религия и общество",
+    "text": "В Месопотамии религия влияла на поведение, политические решения и материальную культуру. Историю верований можно читать не только по текстам, но и по изображениям, храмам и ритуальным предметам.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/essays/mesopotamian-deities",
+        "title": "The Met — Mesopotamian Deities",
+        "excerpt": "During this period, religion was a major factor influencing behavior, political decision making, and material culture.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "mesopotamian",
+    "timelineText": "В Месопотамии религия влияла на общественную жизнь, политические решения и культуру. О верованиях свидетельствуют тексты, изображения, храмы и ритуальные предметы."
+  },
+  {
+    "id": "india",
+    "period": "Древняя Индия",
+    "title": "Не у каждой традиции есть один основатель",
+    "text": "Индуизм складывался из разных источников и традиций: у него нет единственного основателя. Поэтому здесь нет одной даты, сопоставимой с датой регистрации современной религиозной организации.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/essays/hinduism-and-hindu-art",
+        "title": "The Met — Hinduism and Hindu Art",
+        "excerpt": "Hinduism is a religion that had no single founder, no single spokesman, no single prophet.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "hinduism",
+    "timelineText": "У индуизма нет единственного основателя: он складывался из разных источников и традиций. Дата на шкале — приблизительный ориентир, а не момент основания."
+  },
+  {
+    "id": "jainism",
+    "period": "Древняя Индия",
+    "title": "Джайнизм",
+    "text": "Традиция Древней Индии, связанная с учителем Махавирой. Он проповедовал ненасилие по отношению ко всем живым существам и путь освобождения души от круговорота перерождений.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/mahavira",
+        "title": "The Pluralism Project — Mahavira",
+        "excerpt": "the importance of nonviolence, or ahimsa, to overcoming karma.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/mahavira",
+        "title": "The Pluralism Project — Mahavira",
+        "excerpt": "The freedom from rebirth that he is said to have achieved is called moksha or nirvana.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "jainism",
+    "timelineText": "Традиция Древней Индии, связанная с учителем Махавирой. Он проповедовал ненасилие по отношению ко всем живым существам и путь освобождения души от круговорота перерождений."
+  },
+  {
+    "id": "zoroastrianism",
+    "period": "Древний Иран",
+    "title": "Зороастризм",
+    "text": "Религия древних иранцев, связанная с пророком Заратуштрой (Зороастром). Последователи почитают Ахура-Мазду — «Господа мудрости» — и подчёркивают свободный выбор добра и личную ответственность за поступки.",
+    "kind": "История и вероучение",
+    "proof": [
+      {
+        "url": "https://pluralism.org/zoroastrianism",
+        "title": "The Pluralism Project — Zoroastrianism",
+        "excerpt": "based upon the teachings of the ancient Persian prophet Zarathushtra.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://fezana.org/wp-content/uploads/FEZANA-Zoroastrianism-at-a-Glance.pdf",
+        "title": "FEZANA — Zoroastrianism at a Glance",
+        "excerpt": "There is one God named Ahura Mazda whose name translates as Lord of Wisdom.",
+        "tier": "official",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://fezana.org/wp-content/uploads/FEZANA-Zoroastrianism-at-a-Glance.pdf",
+        "title": "FEZANA — Zoroastrianism at a Glance",
+        "excerpt": "Our decisions come with personal responsibility.",
+        "tier": "official",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "zoroastrianism",
+    "timelineText": "Религия древних иранцев, связанная с пророком Заратуштрой (Зороастром). Последователи почитают Ахура-Мазду — «Господа мудрости» — и подчёркивают свободный выбор добра и личную ответственность за поступки."
+  },
+  {
+    "id": "buddhism",
+    "period": "V–IV века до н. э.",
+    "title": "Будда и новая традиция",
+    "text": "Исторический обзор The Met помещает эпоху Будды в V–IV века до н. э. в Индии. После его смерти развилась религия, распространившаяся далеко за пределы родины. Эта обзорная датировка не задаёт точных лет его жизни.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/essays/buddhism-and-buddhist-art",
+        "title": "The Met — Buddhism and Buddhist Art",
+        "excerpt": "The fifth and fourth centuries B.C.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.metmuseum.org/essays/buddhism-and-buddhist-art",
+        "title": "The Met — Buddhism and Buddhist Art",
+        "excerpt": "it was the age of the Buddha",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.metmuseum.org/essays/buddhism-and-buddhist-art",
+        "title": "The Met — Buddhism and Buddhist Art",
+        "excerpt": "a religion developed that eventually spread far beyond its homeland.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "buddhism",
+    "timelineText": "После смерти Будды его учение распространилось далеко за пределы Индии. Точные годы его жизни остаются предметом обсуждения."
+  },
+  {
+    "id": "israel",
+    "period": "Древний Ближний Восток",
+    "title": "Иудаизм: вера, тексты и народ",
+    "text": "В университетском обзоре Pluralism Project иудаизм рассматривается через связь единобожия, священных текстов и истории еврейского народа. Его собственный рассказ о завете и Синае приведён отдельно в профиле традиции.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/introduction-to-judaism",
+        "title": "The Pluralism Project — Introduction to Judaism",
+        "excerpt": "commitments to monotheistic belief, sacred texts, and the social and cultural histories and traditions of Jewish people.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "link": "traditions/judaism/",
+    "timelineRow": "israelite-second-temple",
+    "timelineText": "Иудаизм связывает веру в единого Бога, священные тексты и историю еврейского народа. Его рассказ о начале уже показан на библейской линии: Авраам, Моисей, Исход и Синай. Эта историческая отметка не означает, что иудаизм возник в один момент около 1200 года до н. э."
+  },
+  {
+    "id": "nativity",
+    "period": "Рубеж эр",
+    "title": "Рождество Христа и начало нашей эры",
+    "text": "Летосчисление от Рождества Христова связывает начало отсчёта с рождением Иисуса. Первый год нашей эры — 1 год от Рождества Христова; перед ним идёт 1 год до н. э., без нулевого года. Этот календарный отсчёт был предложен Дионисием Малым в VI веке. Он не устанавливает точную историческую дату рождения Иисуса: большинство исследователей Нового Завета относят её к 4 году до н. э. или ранее.",
+    "kind": "Событие и календарный отсчёт",
+    "proof": [
+      {
+        "url": "https://eclipse.gsfc.nasa.gov/help/dates.html",
+        "title": "NASA — Year Dating Conventions",
+        "excerpt": "year in which Jesus Christ was born",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://eclipse.gsfc.nasa.gov/help/dates.html",
+        "title": "NASA — Year Dating Conventions",
+        "excerpt": "the year 1 BC was followed by the year AD 1.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.biblicalarchaeology.org/daily/people-cultures-in-the-bible/jesus-historical-jesus/when-was-jesus-born-bc-or-ad/",
+        "title": "Biblical Archaeology Society — When Was Jesus Born—B.C. or A.D.?",
+        "excerpt": "the majority of New Testament scholars place Jesus’ birth in 4 B.C. or before.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "biblical-nativity",
+    "timelineText": "Летосчисление от Рождества Христова связывает начало отсчёта с рождением Иисуса. Первый год нашей эры — 1 год от Рождества Христова; перед ним идёт 1 год до н. э., без нулевого года. Этот календарный отсчёт был предложен Дионисием Малым в VI веке. Он не устанавливает точную историческую дату рождения Иисуса: большинство исследователей Нового Завета относят её к 4 году до н. э. или ранее."
+  },
+  {
+    "id": "christianity",
+    "period": "I век н. э.",
+    "title": "Ранние христианские общины",
+    "text": "Письма Павла к общинам относятся к середине I века. Они позволяют увидеть раннее христианство Средиземноморья. Рассказ о Пятидесятнице и апостольском преемстве — собственное понимание Церкви; его следует читать рядом с исторической датировкой, различая эти два вида свидетельств.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity timeline",
+        "excerpt": "50-60 CE Paul’s Letters to Churches",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity timeline",
+        "excerpt": "He nurtured small communities of Christians throughout the Mediterranean world.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "link": "traditions/orthodoxy/",
+    "timelineRow": "early-christianity",
+    "timelineText": "К середине I века относятся письма Павла, свидетельствующие о христианских общинах Средиземноморья. Пятидесятница — начало Церкви в её собственном понимании."
+  },
+  {
+    "id": "islam",
+    "period": "VII век",
+    "title": "Ислам и расширение религиозной карты",
+    "text": "Ислам возник в Мекке и Медине в VII веке. Обзор The Met прослеживает его распространение к западу, в южные провинции Византии. Коран и понимание пророчества раскрыты в отдельном профиле.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/exhibitions/listings/2012/byzantium-and-islam",
+        "title": "The Met — Byzantium and Islam",
+        "excerpt": "the newly established faith of Islam emerged from Mecca and Medina along the Red Sea trade route",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "link": "traditions/islam/",
+    "timelineRow": "islam",
+    "timelineText": "Ислам возник в Мекке и Медине в VII веке и затем распространился за пределы Аравии."
+  },
+  {
+    "id": "reformation",
+    "period": "XVI век",
+    "title": "Реформация",
+    "text": "95 тезисов Мартина Лютера относятся к 1517 году. Для подробного сравнения сайт использует конкретные вероисповедные документы: например, Аугсбургское исповедание 1530 года. Дата документа и начало движения — разные точки отсчёта.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity timeline",
+        "excerpt": "1517 CE Martin Luther’s Ninety-Five Theses",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "link": "traditions/protestantism/",
+    "timelineRow": "reformation",
+    "timelineText": "95 тезисов Лютера относятся к 1517 году. Аугсбургское исповедание 1530 года — более поздний вероисповедный документ, используемый в сравнении на сайте."
+  },
+  {
+    "id": "today",
+    "period": "Что известно к 2026 году",
+    "title": "Картина меняется, но данные запаздывают",
+    "text": "В сопоставимых оценках Pew за 2020 год Африка к югу от Сахары опередила Европу по числу христиан. Карта на главной странице показывает тот же год наблюдения. Обновление таблицы в 2026 году не превращает эти оценки в перепись населения 2026 года.",
+    "kind": "Демографическое исследование",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "Pew — How the Global Religious Landscape Changed",
+        "excerpt": "Sub-Saharan Africa is now home to the largest number of Christians, surpassing Europe.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "link": "#world"
+  },
+  {
+    "id": "roman",
+    "period": "Древний Рим",
+    "title": "Древнеримская религия",
+    "text": "В Древнем Риме почитали многих богов, а общественные жертвоприношения были тесно связаны с государственной жизнью. Дома семьи обращались к ларам — божествам-покровителям дома и семьи, от которых ожидали здоровья и благополучия.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://openstax.org/books/world-history-volume-1/pages/7-4-religion-in-the-roman-empire",
+        "title": "OpenStax — Religion in the Roman Empire",
+        "excerpt": "its public rituals often intertwined faith with politics.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.metmuseum.org/art/collection/search/250737",
+        "title": "The Met — Bronze statuette of a Lar",
+        "excerpt": "The lar familiaris was a household deity that protected the members of the family, ensuring their health and prosperity.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "roman",
+    "timelineText": "В Древнем Риме почитали многих богов, а общественные жертвоприношения были тесно связаны с государственной жизнью. Дома семьи обращались к ларам — божествам-покровителям дома и семьи, от которых ожидали здоровья и благополучия."
+  },
+  {
+    "id": "egyptian",
+    "period": "Древний Египет",
+    "title": "Древнеегипетская религия",
+    "text": "В Древнем Египте почитали множество богов, среди них Осириса, Гора и Сехмет. Их изображения в храмах, гробницах и домашних святилищах служили связью с божественным миром; к богам обращались через обряды и подношения.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/exhibitions/divine-egypt",
+        "title": "The Met — Divine Egypt",
+        "excerpt": "people without such access found ways to connect with their gods through rituals, offerings, and objects of private devotion.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "egyptian",
+    "timelineText": "В Древнем Египте почитали множество богов, среди них Осириса, Гора и Сехмет. Их изображения в храмах, гробницах и домашних святилищах служили связью с божественным миром; к богам обращались через обряды и подношения."
+  },
+  {
+    "id": "greek",
+    "period": "Древняя Греция",
+    "title": "Древнегреческая религия",
+    "text": "Древние греки почитали Зевса, Афину, Аполлона и других богов, каждому из которых приписывали свою область власти. В святилищах приносили дары и жертвы, а религиозные праздники объединяли жителей городов и всего греческого мира.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.metmuseum.org/essays/greek-gods-and-religious-practices",
+        "title": "The Met — Greek Gods and Religious Practices",
+        "excerpt": "The ancient Greeks worshipped many gods, each with a distinct personality and domain.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "greek",
+    "timelineText": "Древние греки почитали Зевса, Афину, Аполлона и других богов, каждому из которых приписывали свою область власти. В святилищах приносили дары и жертвы, а религиозные праздники объединяли жителей городов и всего греческого мира."
+  },
+  {
+    "id": "celtic",
+    "period": "Западная и Центральная Европа",
+    "title": "Кельтская религия",
+    "text": "Верования кельтских народов Западной и Центральной Европы различались от области к области. Обрядами руководили друиды; умершим оставляли пищу, оружие и украшения для пути в иной мир. Эти представления восстанавливают по погребениям и сообщениям античных авторов.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.worldhistory.org/article/1707/death-burial--the-afterlife-in-the-ancient-celtic/",
+        "title": "World History Encyclopedia — Death, Burial & the Afterlife in the Ancient Celtic Religion",
+        "excerpt": "druids, the religious leaders of Celtic communities.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.worldhistory.org/article/1707/death-burial--the-afterlife-in-the-ancient-celtic/",
+        "title": "World History Encyclopedia — Death, Burial & the Afterlife in the Ancient Celtic Religion",
+        "excerpt": "their religious beliefs from secondhand classical authors.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "celtic",
+    "timelineText": "Верования кельтских народов Западной и Центральной Европы различались от области к области. Обрядами руководили друиды; умершим оставляли пищу, оружие и украшения для пути в иной мир. Эти представления восстанавливают по погребениям и сообщениям античных авторов."
+  },
+  {
+    "id": "confucianism",
+    "period": "Древний Китай",
+    "title": "Конфуцианство",
+    "text": "Китайская традиция, связанная с учителем Конфуцием. Он учил человечности, нравственному воспитанию и соблюдению обрядов, связывая благополучие общества с ответственностью человека перед семьёй и общиной. Его ученики сохранили и распространили это учение.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/confucianism",
+        "title": "The Pluralism Project — Confucianism",
+        "excerpt": "Alongside the preservation of traditional rituals, he taught humaneness, moral and spiritual reformation, and cultivation of good virtues.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "confucianism",
+    "timelineText": "Китайская традиция, связанная с учителем Конфуцием. Он учил человечности, нравственному воспитанию и соблюдению обрядов, связывая благополучие общества с ответственностью человека перед семьёй и общиной. Его ученики сохранили и распространили это учение."
+  },
+  {
+    "id": "daoism",
+    "period": "Древний Китай",
+    "title": "Даосизм",
+    "text": "Китайская традиция, у истоков которой стоят тексты, связанные с Лао-цзы и Чжуан-цзы. Они описывают Дао — «Путь», естественный ход мира — и жизнь в согласии с ним. Позднее возникли даосские религиозные общины со своими обрядами и священнослужителями.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/daoism",
+        "title": "The Pluralism Project — Daoism",
+        "excerpt": "the natural flow of the Dao, or “the Way” - the natural process of the Universe.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/daoism",
+        "title": "The Pluralism Project — Daoism",
+        "excerpt": "comprising rituals, priesthood, and a universalist message",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "daoism",
+    "timelineText": "Китайская традиция, у истоков которой стоят тексты, связанные с Лао-цзы и Чжуан-цзы. Они описывают Дао — «Путь», естественный ход мира — и жизнь в согласии с ним. Позднее возникли даосские религиозные общины со своими обрядами и священнослужителями."
+  },
+  {
+    "id": "shinto",
+    "period": "Япония",
+    "title": "Синто",
+    "text": "Традиция Японии, выросшая из древних местных верований и обрядов. Синто связывает священное с природой: животными, растениями, скалами и водопадами. Эти обычаи складывались в местных общинах задолго до оформления храмовых традиций.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://internationalshintofoundation.org/shinto/",
+        "title": "International Shinto Foundation — What is Shinto?",
+        "excerpt": "the presence of deities or of ‘the sacred’ in animals, in plants",
+        "tier": "official",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/shinto",
+        "title": "The Pluralism Project — Shintō",
+        "excerpt": "These ancient Shintō forms, rituals, and beliefs were not formalized or centralized, but were highly local, diverse, and community-based.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "shinto",
+    "timelineText": "Традиция Японии, выросшая из древних местных верований и обрядов. Синто связывает священное с природой: животными, растениями, скалами и водопадами. Эти обычаи складывались в местных общинах задолго до оформления храмовых традиций."
+  },
+  {
+    "id": "germanic-norse",
+    "period": "Северная Европа",
+    "title": "Германо-скандинавское язычество",
+    "text": "Дохристианские верования германских народов и скандинавов. В скандинавских преданиях Один связан с войной и погибшими воинами, а Тор — с громом и защитой людей. Богов почитали через жертвенные обряды; рассказы о них сохранились в сагах и изображениях.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/religion-magic-death-and-rituals/the-viking-gods/",
+        "title": "National Museum of Denmark — The Viking gods",
+        "excerpt": "The Vikings worshipped many gods.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://en.natmus.dk/historical-knowledge/denmark/prehistoric-period-until-1050-ad/the-viking-age/religion-magic-death-and-rituals/the-viking-gods/",
+        "title": "National Museum of Denmark — The Viking gods",
+        "excerpt": "Odin is the god of war and of the dead.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "germanic-norse",
+    "timelineText": "Дохристианские верования германских народов и скандинавов. В скандинавских преданиях Один связан с войной и погибшими воинами, а Тор — с громом и защитой людей. Богов почитали через жертвенные обряды; рассказы о них сохранились в сагах и изображениях."
+  },
+  {
+    "id": "slavic",
+    "period": "Центральная и Восточная Европа",
+    "title": "Славянское язычество",
+    "text": "Дохристианские верования славянских народов. Среди почитаемых божеств был Перун, связанный с громом; обряды проходили у идолов, в святилищах и священных рощах. Историю этих верований восстанавливают по археологии, фольклору и нередко пристрастным христианским описаниям.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/slavic-religion",
+        "title": "Encyclopedia of Religion — Slavic Religion",
+        "excerpt": "Perun, the name of the Slavic thunder god.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/slavic-religion",
+        "title": "Encyclopedia of Religion — Slavic Religion",
+        "excerpt": "come from the writings of the very people who destroyed them.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "slavic",
+    "timelineText": "Дохристианские верования славянских народов. Среди почитаемых божеств был Перун, связанный с громом; обряды проходили у идолов, в святилищах и священных рощах. Историю этих верований восстанавливают по археологии, фольклору и нередко пристрастным христианским описаниям."
+  }
+]

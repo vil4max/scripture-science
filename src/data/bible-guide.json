@@ -1,0 +1,77 @@
+{
+  "proofs": {
+    "collection": [
+      {
+        "url": "https://bibleodyssey.scholasticahq.com/for-authors",
+        "title": "Bible Odyssey — guidance for authors, Society of Biblical Literature",
+        "tier": "reference",
+        "excerpt": "The Bible is not one book but many: a compilation of poetry, law codes, novellas, proverbs, gospels, and letters",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "codex": [
+      {
+        "url": "https://codexsinaiticus.org/en/",
+        "title": "Codex Sinaiticus Project — overview",
+        "tier": "reference",
+        "excerpt": "Handwritten well over 1600 years ago, the manuscript contains the Christian Bible in Greek, including the oldest complete copy of the New Testament.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://codexsinaiticus.org/en/codex/content.aspx",
+        "title": "Codex Sinaiticus Project — content",
+        "tier": "reference",
+        "excerpt": "the whole of the New Testament, and two early Christian texts not found in modern Bibles",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "synodal": [
+      {
+        "url": "https://biblia.ru/AboutUs/AboutUs-GoalsAndHistory/AboutUs-HistoryOfRBO.html",
+        "title": "История Российского Библейского Общества",
+        "tier": "reference",
+        "excerpt": "Перевод, начатый Российским Библейским Обществом в 1816 г.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://biblia.ru/AboutUs/AboutUs-GoalsAndHistory/AboutUs-HistoryOfRBO.html",
+        "title": "История Российского Библейского Общества",
+        "tier": "reference",
+        "excerpt": "завершен и опубликован в 1876 г., получил благословение Святейшего Синода",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.bsr.ru/AboutBible/BibleTranslations/art201804.html",
+        "title": "История Синодального перевода Библии — Российское Библейское Общество",
+        "tier": "reference",
+        "excerpt": "за основу которого был принят древнееврейский текст, т.н. «масоретский»",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.bsr.ru/AboutBible/BibleTranslations/art201804.html",
+        "title": "История Синодального перевода Библии — Российское Библейское Общество",
+        "tier": "reference",
+        "excerpt": "слова, отсутствовавшие в еврейском оригинале, но наличествовавшие в древнегреческой и церковнославянской версиях",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "orthodoxCanon": [
+      {
+        "url": "https://www.oca.org/questions/scripture/canon-of-scripture",
+        "title": "Canon of Scripture — Orthodox Church in America",
+        "tier": "official",
+        "excerpt": "known in the Orthodox Church as the “longer canon” rather than the “Apocrypha”",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "catholicCanon": [
+      {
+        "url": "https://www.vatican.va/content/catechism/en/part_one/section_one/chapter_two/article_3/iv_the_canon_of_scripture.html",
+        "title": "Catechism of the Catholic Church, §120 — The Canon of Scripture",
+        "tier": "official",
+        "excerpt": "It includes 46 books for the Old Testament (45 if we count Jeremiah and Lamentations as one) and 27 for the New.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  }
+}

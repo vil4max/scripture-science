@@ -1,0 +1,418 @@
+---
+// /sources/: every proof used by the site, de-duplicated by URL, grouped by
+// tier and by tradition, with access dates, and a coverage summary
+// (docs/tasks/site-m2-main-page.md W4).
+import { getFamilies } from '../lib/families';
+import { collectProofs, collectTextSources } from '../lib/sourceCatalog';
+import { citationTitle } from '../lib/citations';
+import countries from '../data/world-countries.json';
+import hierarchy from '../data/world-hierarchy-2026.json';
+import history from '../data/history-overview.json';
+import biblical from '../data/biblical-timeline.json';
+import otherTraditions from '../data/other-traditions.json';
+import world from '../data/world-composition.json';
+import lineage from '../data/lineage.json';
+import media from '../data/media.json';
+import bible from '../data/bible-guide.json';
+import CreationTraditions from '../components/timeline/CreationTraditions.astro';
+import WorldComposition from '../components/WorldComposition.astro';
+import WorldMethodology from '../components/WorldMethodology.astro';
+import { JW_NOTE_TEXT } from '../lib/jwNote';
+import overview from '../data/family-overview.json';
+import Base from '../layouts/Base.astro';
+import { getDisputes, getOrderedMatrix, getOrderedViews, getTerms } from '../lib/content';
+import { TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../lib/rules';
+
+interface Proof {
+  url: string;
+  title: string;
+  tier: 'official' | 'reference' | 'news';
+  excerpt: string;
+  accessed: string;
+}
+
+interface Usage {
+  traditionId?: string;
+  traditionName?: string;
+  section: string;
+}
+
+interface ProofEntry {
+  proof: Proof;
+  proofs: Proof[];
+  usages: Usage[];
+}
+
+const traditions = await getOrderedMatrix();
+// src/lib/rules.ts TRADITION_COLOR_TOKEN: same shared --t-* palette as the
+// home page (docs/tasks/site-m5-reading-polish.md W3 "Colours").
+const colorById = new Map(
+  traditions.map((t) => [t.id, TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN]]),
+);
+const views = await getOrderedViews();
+const terms = await getTerms();
+const disputes = await getDisputes();
+const textSources = [...new Map(
+  collectTextSources([...traditions, ...views, ...disputes]).map((item) => [item.url, item]),
+).values()].sort((a, b) => a.title.localeCompare(b.title, 'ru'));
+
+// One flat list of every proof used anywhere on the site, each tagged with
+// where it backs a claim, before de-duplication by URL.
+const raw: { proof: Proof; usage: Usage }[] = [];
+
+for (const tradition of traditions) {
+  const t = tradition.data;
+  const traditionName = t.name;
+  for (const p of t.since.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'с …' } });
+  for (const p of t.scripture.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Писание' } });
+  for (const p of t.adherents.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Численность' } });
+  for (const p of t.self_view.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Сама о себе' } });
+  for (const position of t.positions) {
+    for (const p of collectProofs(position)) {
+      raw.push({
+        proof: p,
+        usage: { traditionId: tradition.id, traditionName, section: TOPIC_TITLES_RU[position.topic] },
+      });
+    }
+  }
+}
+
+for (const view of views) {
+  for (const doc of view.data.documents) {
+    for (const p of collectProofs(doc)) {
+      raw.push({
+        proof: p,
+        usage: { traditionId: view.id, traditionName: view.data.tradition, section: `взгляд на: ${doc.about.join(', ')}` },
+      });
+    }
+  }
+}
+
+for (const dispute of disputes) {
+  for (const part of [...dispute.data.challenges, ...dispute.data.answers]) {
+    const traditionName = traditions.find((t) => t.id === part.tradition)?.data.name;
+    for (const p of collectProofs(part)) {
+      raw.push({
+        proof: p,
+        usage: { traditionId: part.tradition, traditionName, section: `спорный вопрос «${dispute.data.title}»` },
+      });
+    }
+  }
+}
+
+for (const term of terms) {
+  for (const p of term.data.proof) {
+    raw.push({ proof: p, usage: { section: `термин «${term.data.term}»` } });
+  }
+}
+
+for (const family of getFamilies()) {
+  for (const proof of family.proof) raw.push({ proof, usage: {
+    traditionId: family.tradition,
+    traditionName: traditions.find((t) => t.id === family.tradition)?.data.name,
+    section: 'Классификация',
+  } });
+}
+for (const [section, data] of [
+  ['Библейская линия: выбранная хронология', biblical], ['Авраамические религии', overview], ['Вводная история', history], ['Другие традиции', otherTraditions],
+  ['Библия', bible],
+  ['Население мира', world], ['Религии и конфессии, оценка 2026', hierarchy], ['Подробная хронология', lineage],
+] as const) {
+  for (const proof of collectProofs(data)) raw.push({ proof, usage: { section } });
+}
+
+// De-duplicate by URL: the same page can back several claims.
+const byUrl = new Map<string, ProofEntry>();
+for (const { proof, usage } of raw) {
+  const existing = byUrl.get(proof.url);
+  if (existing) {
+    if (!existing.usages.some((u) => JSON.stringify(u) === JSON.stringify(usage))) existing.usages.push(usage);
+    if (!existing.proofs.some((p) => JSON.stringify(p) === JSON.stringify(proof))) existing.proofs.push(proof);
+  } else {
+    byUrl.set(proof.url, { proof, proofs: [proof], usages: [usage] });
+  }
+}
+const entries = [...byUrl.values()].sort((a, b) => a.proof.title.localeCompare(b.proof.title, 'ru'));
+
+const tierOrder = ['official', 'reference', 'news'] as const;
+const tierLabel: Record<(typeof tierOrder)[number], string> = {
+  official: 'Официальные источники',
+  reference: 'Справочные источники',
+  news: 'СМИ и НКО',
+};
+const byTier = new Map(tierOrder.map((tier) => [tier, entries.filter((e) => e.proof.tier === tier)]));
+
+const byTradition = new Map(
+  traditions.map((tradition) => [
+    tradition.id,
+    entries.filter((e) => e.usages.some((u) => u.traditionId === tradition.id)),
+  ]),
+);
+
+// Coverage: verified vs todo per tradition, and per topic across traditions
+// (docs/tasks/site-m2-main-page.md W4).
+const coverageByTradition = traditions.map((tradition) => {
+  const verified = tradition.data.positions.filter((p) => p.status === 'verified').length;
+  const todo = tradition.data.positions.filter((p) => p.status === 'todo').length;
+  return { id: tradition.id, name: tradition.data.name, verified, todo, total: tradition.data.positions.length };
+});
+
+const coverageByTopic = TOPIC_ORDER.map((topicId) => {
+  let verified = 0;
+  let todo = 0;
+  for (const tradition of traditions) {
+    const position = tradition.data.positions.find((p) => p.topic === topicId);
+    if (!position) continue;
+    if (position.status === 'verified') verified += 1;
+    else todo += 1;
+  }
+  return { topicId, title: TOPIC_TITLES_RU[topicId], verified, todo };
+});
+
+const title = 'Источники';
+const description = 'Источники, тексты и пояснения к материалам сайта: по традициям, темам и уровню источника.';
+---
+
+<Base title={title} description={description}>
+  <main class="page">
+    <header>
+      <h1>{title}</h1>
+      <p class="lead">{description}</p>
+    </header>
+
+    <section id="adherents">
+      <h2>Численность: даты и способы подсчёта</h2>
+      <p>На страницах показаны округлённые оценки. Годы и способы подсчёта различаются: членство в организации не всегда означает то же, что религиозная самоидентификация.</p>
+      {traditions.map(({ data }) => <article>
+        <h3>{data.name}: {data.adherents.value} ({data.adherents.year})</h3>
+        <p>{data.adherents.method}</p>
+        <ul>{data.adherents.proof.map((proof) => <li><a href={proof.url}>{proof.title}</a></li>)}</ul>
+      </article>)}
+    </section>
+
+    <section id="map-method">
+      <h2>Карта религиозной принадлежности</h2>
+      <p>Оценки за 2020 год, опубликованы Pew в 2025 году; таблица дополнена в 2026 году. Это религиозная принадлежность, а не измерение личной веры. Округлённые доли могут не давать ровно 100 %.</p>
+      <p>Границы и названия не выражают позиции о статусе территорий; подложка и единицы статистики могут различаться.</p>
+      <p><a href={countries.url}>Pew Research Center — состав населения 201 страны и территории</a>. Подложка: Natural Earth.</p>
+    </section>
+    <section id="history-evidence">
+      <h2>Археологические свидетельства</h2>
+      <p>{history.find((chapter) => chapter.id === 'evidence')!.text}</p>
+    </section>
+    <CreationTraditions />
+    <WorldComposition />
+    <WorldMethodology />
+    <section id="overview-notes"><h2>Авраамические религии: пояснения к группировке</h2><p>{overview.introduction.text}</p>{overview.groups.map((group) => <article><h3>{group.title}</h3><p>{group.text}</p></article>)}</section>
+    <section id="legal-context"><h2>Правовая справка</h2><p>{JW_NOTE_TEXT}</p></section>
+
+    <section id="coverage">
+      <h2>Покрытие</h2>
+      {
+        coverageByTradition.length > 0 ? (
+          <table class="coverage">
+            <caption>По традиции (из {TOPIC_ORDER.length} тем)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Традиция</th>
+                <th scope="col">Подтверждено</th>
+                <th scope="col">Уточняется</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coverageByTradition.map((row) => (
+                <tr>
+                  <th scope="row">
+                    <span class="chip" style={`background:var(${colorById.get(row.id) ?? '--t-other'})`} aria-hidden="true" />
+                    {row.name}
+                  </th>
+                  <td>{row.verified} / {row.total}</td>
+                  <td>{row.todo} / {row.total}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        ) : (
+          <p class="empty">Данные ещё готовятся.</p>
+        )
+      }
+      {
+        coverageByTradition.length > 0 && (
+          <table class="coverage">
+            <caption>По теме (среди готовых традиций)</caption>
+            <thead>
+              <tr>
+                <th scope="col">Тема</th>
+                <th scope="col">Подтверждено</th>
+                <th scope="col">Уточняется</th>
+              </tr>
+            </thead>
+            <tbody>
+              {coverageByTopic.map((row) => (
+                <tr>
+                  <th scope="row">{row.title}</th>
+                  <td>{row.verified}</td>
+                  <td>{row.todo}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )
+      }
+    </section>
+
+    <section id="by-tier">
+      <h2>По уровню источника</h2>
+      {
+        tierOrder.map((tier) => {
+          const tierEntries = byTier.get(tier) ?? [];
+          return (
+            tierEntries.length > 0 && (
+              <div class="tier-group">
+                <h3>{tierLabel[tier]}</h3>
+                <ul>
+                  {tierEntries.map((entry) => (
+                    <li>
+                      <a href={entry.proof.url} target="_blank" rel="noopener noreferrer">
+                        {citationTitle(entry.proofs)}
+                      </a>
+                      <span class="meta"> · обращение {entry.proof.accessed}</span>
+                      <details><summary>Проверочные выдержки ({entry.proofs.length})</summary>{entry.proofs.map((proof) => <p class="excerpt">«{proof.excerpt}» <span class="meta">· {proof.accessed}</span></p>)}</details>
+                      <p class="usages">
+                        {entry.usages.map((u) => [u.traditionName, u.section].filter(Boolean).join(' — ')).join('; ')}
+                      </p>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          );
+        })
+      }
+    </section>
+
+    <section id="texts">
+      <h2>Цитируемые тексты и переводы</h2>
+      <ul>{textSources.map((item) => <li><a href={item.url}>{item.title}</a></li>)}</ul>
+    </section>
+
+    <section id="data-and-media">
+      <h2>Данные карты и фотографии</h2>
+      <p>Статистика: <a href="https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/">Pew — Religious Composition by Country, 2010–2020</a> (201 страна и территория; обращение 2026-09-26).</p>
+      <p>Географическая подложка: <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/">Natural Earth, 1:110m</a>, <a href="https://www.naturalearthdata.com/about/terms-of-use/">public domain</a>. Подписи и границы схематические.</p>
+      <ul>{media.map((item) => <li id={`media-${item.id}`}><a href={item.source}>{item.caption}</a> — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (обращение {item.accessed}). {item.changes === 'No edits; Wikimedia thumbnail.' ? 'Без изменений; уменьшенная копия Wikimedia.' : item.changes}</li>)}</ul>
+    </section>
+
+    <section id="by-tradition">
+      <h2>По традиции</h2>
+      {
+        traditions.map((tradition) => {
+          const traditionEntries = byTradition.get(tradition.id) ?? [];
+          return (
+            traditionEntries.length > 0 && (
+              <div class="tradition-group">
+                <h3>
+                  <span class="chip" style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`} aria-hidden="true" />
+                  {tradition.data.name}
+                </h3>
+                <ul>
+                  {traditionEntries.map((entry) => (
+                    <li>
+                      <a href={entry.proof.url} target="_blank" rel="noopener noreferrer">
+                        {citationTitle(entry.proofs)}
+                      </a>
+                      <span class="meta"> · обращение {entry.proof.accessed}</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            )
+          );
+        })
+      }
+    </section>
+  </main>
+</Base>
+
+<style>
+  .page {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 48px 24px 64px;
+    display: grid;
+    gap: 48px;
+  }
+
+  .lead {
+    max-width: var(--measure);
+    color: var(--muted);
+  }
+
+  h2 {
+    margin: 0 0 16px;
+  }
+
+  table.coverage {
+    border-collapse: collapse;
+    margin-bottom: 24px;
+    width: 100%;
+    max-width: 640px;
+  }
+
+  table.coverage caption {
+    text-align: left;
+    font-weight: 700;
+    margin-bottom: 8px;
+  }
+
+  table.coverage th,
+  table.coverage td {
+    text-align: left;
+    padding: 6px 10px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .chip {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+  .tier-group,
+  .tradition-group {
+    margin-bottom: 28px;
+  }
+
+  .tier-group ul,
+  .tradition-group ul {
+    list-style: none;
+    margin: 12px 0 0;
+    padding: 0;
+    display: grid;
+    gap: 14px;
+  }
+
+  .meta {
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  .excerpt {
+    margin: 4px 0 0;
+    font-style: italic;
+    color: var(--muted);
+  }
+
+  .usages {
+    margin: 2px 0 0;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .empty {
+    color: var(--muted);
+    font-style: italic;
+  }
+</style>

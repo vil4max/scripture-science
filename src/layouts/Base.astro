@@ -1,0 +1,214 @@
+---
+// The site frame (docs/tasks/site-m2-main-page.md W2; sidebar since
+// docs/tasks/site-m13-sidebar-sections.md): sidebar, footer and theme switch
+// wrap every page that uses this layout, including the pair
+// page (src/pages/pairs/orthodoxy-jw.astro), so there is exactly one place
+// that assembles them.
+import SelectionBar from '../components/SelectionBar.astro';
+import SiteHeader from '../components/SiteHeader.astro';
+
+interface Props {
+  title: string;
+  description?: string;
+  // Pages that follow the reader's choice of traditions show the pinned
+  // selection bar (docs/tasks/site-m14-selection.md).
+  selectionBar?: boolean;
+}
+
+const { title, description, selectionBar = false } = Astro.props;
+const pageContent = await Astro.slots.render('default');
+---
+
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
+    />
+    <script is:inline>
+      // Applies a stored explicit theme before first paint, so a returning
+      // visitor's light/dark choice never flashes the system theme first.
+      // src/components/ThemeSwitch.astro reads/writes the same key and
+      // re-applies it (and its own button state) once it mounts.
+      (function () {
+        try {
+          var theme = localStorage.getItem('theme');
+          if (theme === 'light' || theme === 'dark') {
+            document.documentElement.setAttribute('data-theme', theme);
+          }
+        } catch (error) {
+          // localStorage unavailable (private mode, disabled storage, ...) -
+          // the page just renders in the system theme.
+        }
+      })();
+    </script>
+  </head>
+  <body>
+    <div class="shell">
+      <SiteHeader />
+      <div class="content">
+        {selectionBar && <SelectionBar />}
+        <Fragment set:html={pageContent} />
+      </div>
+    </div>
+  </body>
+</html>
+
+<style is:global>
+  :root {
+    color-scheme: light;
+    --bg: #f3f3ef;
+    --surface: #ffffff;
+    --ink: #1b2230;
+    --muted: #5a6272;
+    --line: #dcdcd4;
+    --focus: #7d5616;
+    /* docs/tasks/site-m5-reading-polish.md W2: running text stays under
+       about 70ch. */
+    --measure: 70ch;
+    --page: 1200px;
+    /* Tradition identity colours, in age order. The set passes the dataviz
+       palette validator on #ffffff (light) and #1a2029 (dark); its CVD and
+       contrast warnings oblige direct text labels next to every coloured mark. */
+    --t-judaism: #2a78d6;
+    --t-orthodoxy: #eda100;
+    --t-catholicism: #e87ba4;
+    --t-islam: #008300;
+    --t-protestantism: #e34948;
+    --t-lds: #1baf7a;
+    --t-adventism: #eb6834;
+    --t-jw: #4a3aa7;
+    --t-other: #898781;
+    /* The home page pie chart of the world by religion
+       (src/components/WorldComposition.astro). Muslims and Jews keep
+       --t-islam and --t-judaism; every other group gets a --world-* colour
+       that stands for no tradition. All Christians as one group: none of the
+       six Christian tradition colours may stand for them all (OKLCH h 320,
+       stepped per theme). Hindus (rust h 45), Buddhists (teal h 215) and
+       other religions (olive h 100) take the hue gaps between the tradition
+       colours on the same page, >= 10.8 OKLab dE from each, one value for
+       both themes (docs/tasks/site-m12-pie-colors.md). The unaffiliated stay
+       neutral grey: no religion, so no identity hue.
+       dataviz validator, the seven in pie order with the circle closed, on
+       --bg: worst adjacent CVD dE 8.3 light / 8.1 dark (Jews-Christians),
+       normal-vision dE 16.1 (unaffiliated-Hindus), every mark >= 3:1 and in
+       the lightness band; the chroma floor fails only the grey, by design.
+       Other religions touch Christians across the 0.2 % Jewish slice: CVD
+       dE 20.0 light / 22.6 dark. */
+    --world-christians: #9a53aa;
+    --world-unaffiliated: #898781;
+    --world-hindus: #9c4c23;
+    --world-buddhists: #048ea6;
+    --world-other-religions: #87780d;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme='light']) {
+      color-scheme: dark;
+      --bg: #11151b;
+      --surface: #1a2029;
+      --ink: #e8e5de;
+      --muted: #a3abb8;
+      --line: #2c3440;
+      --focus: #e0b766;
+      --t-judaism: #3987e5;
+      --t-orthodoxy: #c98500;
+      --t-catholicism: #d55181;
+      --t-islam: #008300;
+      --t-protestantism: #e66767;
+      --t-lds: #199e70;
+      --t-adventism: #d95926;
+      --t-jw: #9085e9;
+      --t-other: #898781;
+      --world-christians: #a041b5;
+      --world-unaffiliated: #898781;
+      --world-hindus: #9c4c23;
+      --world-buddhists: #048ea6;
+      --world-other-religions: #87780d;
+    }
+  }
+
+  :root[data-theme='dark'] {
+    color-scheme: dark;
+    --bg: #11151b;
+    --surface: #1a2029;
+    --ink: #e8e5de;
+    --muted: #a3abb8;
+    --line: #2c3440;
+    --focus: #e0b766;
+    --t-judaism: #3987e5;
+    --t-orthodoxy: #c98500;
+    --t-catholicism: #d55181;
+    --t-islam: #008300;
+    --t-protestantism: #e66767;
+    --t-lds: #199e70;
+    --t-adventism: #d95926;
+    --t-jw: #9085e9;
+    --t-other: #898781;
+    --world-christians: #a041b5;
+    --world-unaffiliated: #898781;
+    --world-hindus: #9c4c23;
+    --world-buddhists: #048ea6;
+    --world-other-religions: #87780d;
+  }
+
+  *,
+  *::before,
+  *::after {
+    box-sizing: border-box;
+  }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'PT Sans', -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 18px;
+    line-height: 1.55;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* The sidebar beside the page on a desktop (docs/tasks/site-m13-sidebar-sections.md);
+  below 1000px it becomes a top bar. */
+  @media (min-width: 1000px) {
+    .shell {
+      display: grid;
+      grid-template-columns: 260px minmax(0, 1fr);
+      min-height: 100vh;
+    }
+  }
+
+  .content {
+    min-width: 0;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-family: 'PT Serif', Georgia, serif;
+    line-height: 1.2;
+    text-wrap: balance;
+  }
+
+  a {
+    color: inherit;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--focus);
+    outline-offset: 2px;
+  }
+
+  @media (prefers-reduced-motion: no-preference) {
+    html {
+      scroll-behavior: smooth;
+    }
+  }
+</style>

@@ -1,0 +1,93 @@
+---
+// Theme switch: system / light / dark, persisted in localStorage inside
+// try/catch (docs/tasks/site-m2-main-page.md W2). The choice is applied via
+// `data-theme` on <html>; src/layouts/Base.astro runs the same read before
+// paint so a returning visitor's explicit choice never flashes the system
+// theme first.
+---
+
+<div class="theme-switch" role="group" aria-label="Тема оформления">
+  <button type="button" data-theme-choice="system">Системная</button>
+  <button type="button" data-theme-choice="light">Светлая</button>
+  <button type="button" data-theme-choice="dark">Тёмная</button>
+</div>
+
+<script>
+  const STORAGE_KEY = 'theme';
+
+  function readStoredTheme(): string {
+    try {
+      const stored = localStorage.getItem(STORAGE_KEY);
+      return stored === 'light' || stored === 'dark' ? stored : 'system';
+    } catch {
+      // localStorage unavailable (private mode, disabled storage, ...) -
+      // the switch still works for this page load, it just can't remember.
+      return 'system';
+    }
+  }
+
+  function storeTheme(theme: string): void {
+    try {
+      if (theme === 'system') {
+        localStorage.removeItem(STORAGE_KEY);
+      } else {
+        localStorage.setItem(STORAGE_KEY, theme);
+      }
+    } catch {
+      // Same as above: persistence is best-effort.
+    }
+  }
+
+  function applyTheme(theme: string): void {
+    if (theme === 'light' || theme === 'dark') {
+      document.documentElement.setAttribute('data-theme', theme);
+    } else {
+      document.documentElement.removeAttribute('data-theme');
+    }
+    document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.themeChoice === theme));
+    });
+  }
+
+  applyTheme(readStoredTheme());
+
+  document.querySelectorAll<HTMLButtonElement>('[data-theme-choice]').forEach((button) => {
+    button.addEventListener('click', () => {
+      const theme = button.dataset.themeChoice ?? 'system';
+      storeTheme(theme);
+      applyTheme(theme);
+    });
+  });
+</script>
+
+<style>
+  .theme-switch {
+    display: flex;
+    gap: 4px;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 2px;
+  }
+
+  .theme-switch button {
+    appearance: none;
+    border: none;
+    background: transparent;
+    color: var(--muted);
+    font: inherit;
+    font-size: 14px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+
+  .theme-switch button:hover {
+    color: var(--ink);
+  }
+
+  .theme-switch button[aria-pressed='true'] {
+    background: var(--bg);
+    color: var(--ink);
+    font-weight: 700;
+  }
+</style>

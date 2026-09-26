@@ -1,0 +1,37 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import guide from '../data/bible-guide.json';
+import type { Citation } from '../lib/citations';
+import ProofLink from './ProofLink.astro';
+
+interface Props { traditions: CollectionEntry<'matrix'>[]; }
+const { traditions } = Astro.props;
+const byId = new Map(traditions.map((tradition) => [tradition.id, tradition]));
+const position = (id: string, topic: 'scripture' | 'authority') => byId.get(id)?.data.positions.find((item) => item.topic === topic);
+type VerifiedProof = Citation & Required<Pick<Citation, 'tier' | 'excerpt' | 'accessed'>>;
+const proofs = guide.proofs as Record<keyof typeof guide.proofs, VerifiedProof[]>;
+const { orthodoxCanon: orthodoxProof, catholicCanon: catholicProof } = proofs;
+---
+
+<section aria-labelledby="canon-title">
+  <h2 id="canon-title">Почему списки книг различаются</h2>
+  <p class="section-lead">«Канон» — признанный традицией список священных книг. Одно число может вводить в заблуждение: одни и те же тексты иногда объединяют или делят по-разному.</p>
+  <div class="canon-table" role="table" aria-label="Как традиции называют дополнительную группу книг Ветхого Завета">
+    <div class="head" role="row"><span role="columnheader">Группа книг</span><span role="columnheader">Православие</span><span role="columnheader">Католичество</span><span role="columnheader">Протестантизм и СИ</span></div>
+    <div role="row"><strong role="rowheader">Товит, Иудифь, Премудрость Соломона, Сирах, Варух, 1–2 Маккавейские и греческие добавления к Есфири и Даниилу</strong><span role="cell"><b>Часть более широкого Ветхого Завета.</b> Использованный источник OCA называет эту группу «более широким каноном», а не «апокрифами».<ProofLink proof={orthodoxProof} /></span><span role="cell"><b>Девтероканонические.</b> Входят в канон; Катехизис перечисляет их среди книг Ветхого Завета.<ProofLink proof={catholicProof} /></span><span role="cell"><b>Не входят в 66-книжный канон.</b> В протестантских изданиях могут называться апокрифами; Свидетели Иеговы их не включают.<ProofLink proof={[...(position('protestantism', 'scripture')?.proof ?? []), ...(position('jw', 'scripture')?.proof ?? [])]} /></span></div>
+    <div role="row"><strong role="rowheader">27 книг Нового Завета</strong><span role="cell">Признаются каноническими.<ProofLink proof={position('orthodoxy', 'scripture')?.proof ?? []} /></span><span role="cell">Признаются каноническими.<ProofLink proof={catholicProof} /></span><span role="cell">Признаются каноническими.<ProofLink proof={[...(position('protestantism', 'scripture')?.proof ?? []), ...(position('jw', 'scripture')?.proof ?? [])]} /></span></div>
+  </div>
+  <p class="boundary"><strong>Граница формулировки:</strong> таблица показывает ключевое различие, а не выдаёт один исчерпывающий православный список за общий для всех поместных Церквей. Использованный источник OCA отдельно называет также Молитву Манассии.<ProofLink proof={orthodoxProof} inline /></p>
+</section>
+
+<style>
+  section { display: grid; gap: 16px; }
+  .canon-table { border: 1px solid var(--line); border-radius: 10px; overflow: hidden; background: var(--surface); }
+  [role='row'] { display: grid; grid-template-columns: 1.25fr repeat(3, minmax(0, 1fr)); }
+  [role='row'] + [role='row'] { border-top: 1px solid var(--line); }
+  [role='cell'], [role='rowheader'], [role='columnheader'] { padding: 16px; border-left: 1px solid var(--line); }
+  [role='rowheader'], [role='columnheader']:first-child { border-left: 0; }
+  .head { background: color-mix(in srgb, var(--ink) 7%, var(--surface)); font-weight: 700; }
+  [role='cell'] b { display: block; margin-bottom: 6px; }
+  .boundary { margin: 0; color: var(--muted); font-size: 15px; }
+</style>

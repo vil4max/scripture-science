@@ -1,0 +1,567 @@
+id: judaism
+name: Иудаизм
+full_name: Иудаизм (ортодоксальное, консервативное/масорти и реформистское/прогрессивное течения)
+family: judaism
+
+since:
+  year: -1312
+  label: "6 сивана 2448 г. от Сотворения мира · Дарование Торы на Синае"
+  note: "Иудаизм ведёт свою историю от завета Бога с Авраамом и, в первую очередь, от дарования Торы Моисею на горе Синай. Традиционная еврейская хронология относит откровение к 6 сивана 2448 года от Сотворения мира; на официальном сайте Толдот.ру этот год соотнесён с 1312 годом до н.э."
+  proof:
+    - url: "https://toldot.com/Tanah.html"
+      title: "Танах — Еврейская Библия | Толдот.ру"
+      tier: official
+      excerpt: "6 сивана 2448 г. по еврейскому летоисчислению (соответствует 1312 году до н.э.)"
+      accessed: "2026-09-25"
+    - url: "https://www.ou.org/judaism-101/glossary/torah/"
+      title: "Torah | Judaism 101 Glossary, Orthodox Union"
+      tier: official
+      excerpt: "given to them by G-d at Mt. Sinai, some thirty three hundred years ago"
+      accessed: "2026-09-25"
+
+scripture:
+  name: "Танах в переводе рабби Давида Йосифона (изд-во «Мосад арав Кук»); движение Хабад публикует собственный перевод Танаха онлайн"
+  url: "https://toldot.com/store/books/tanah/tanah_1795.html"
+  proof:
+    - url: "https://toldot.com/store/books/tanah/tanah_1795.html"
+      title: "Танах в переводе рабби Д. Йосифона | Толдот.ру"
+      tier: official
+      excerpt: "Возглавляющий эту группу рабби Давид Йосифон и работающие с ним рабби Авраам Меламед и сотрудники-специалисты выполнили эту работу"
+      accessed: "2026-09-25"
+
+adherents:
+  value: "≈ 15,8 млн"
+  year: 2024
+  method: "оценка демографа С. Делла Перголы для American Jewish Year Book (AJYB 2024) по данным Jewish Agency; учитывается «основное» (core) еврейское население"
+  proof:
+    - url: "https://www.jpost.com/judaism/article-823226"
+      title: "Jewish population hits 15.8 million globally | The Jerusalem Post"
+      tier: news
+      excerpt: "The Jewish population worldwide currently stands at 15.8 million, an increase of about 100,000 compared to 15.7 million in 5784"
+      accessed: "2026-09-25"
+
+self_view:
+  summary: "Иудаизм понимает себя не как основанную, а как дарованную традицию: завет Бога с патриархами и Синайское откровение Моисею, включающее Письменную и Устную Тору, передаваемые от поколения к поколению без перерыва."
+  proof:
+    - url: "https://www.ou.org/judaism-101/glossary/torah/"
+      title: "Torah | Judaism 101 Glossary, Orthodox Union"
+      tier: official
+      excerpt: "given to them by G-d at Mt. Sinai, some thirty three hundred years ago"
+      accessed: "2026-09-25"
+    - url: "https://toldot.com/talmud.html"
+      title: "Талмуд — Устная Тора | Толдот.ру"
+      tier: official
+      excerpt: "упорядоченной записью Устной Торы (часть Торы, которая была дана еврейскому народу в устной форме и передавалась устно из поколения в поколение)"
+      accessed: "2026-09-25"
+
+positions:
+  - topic: god
+    summary: "Иудаизм исповедует строгий монотеизм: единственный, бестелесный и вечный Творец, не имеющий подобия. Эта вера ежедневно провозглашается в молитве «Шма Исраэль» (Втор 6:4)."
+    unity:
+      kind: shared
+      note: "единство Бога — первый принцип веры в изложении Маймонида; реформистский иудаизм тоже сохраняет веру в Завет между Богом и Израилем."
+      proof:
+        - url: "https://toldot.com/13PrintsipovVery.html"
+          title: "13 принципов веры | Толдот.ру"
+          tier: "official"
+          excerpt: "Творец, благословенно имя Его, — Один, и нет в мире цельности, подобной абсолютной цельности Его"
+          accessed: "2026-09-26"
+        - url: "https://urj.org/what-we-believe/what-is-reform-judaism"
+          title: "What is Reform Judaism? | Union for Reform Judaism"
+          tier: "official"
+          excerpt: "Reform Judaism maintains faith in the Covenant between God and Israel"
+          accessed: "2026-09-26"
+    quote:
+      text: "Безоговорочно верю в то, что Творец, благословенно имя Его, — Один, и нет в мире цельности, подобной абсолютной цельности Его"
+      source: "13 принципов веры Рамбама | Толдот.ру"
+      url: "https://toldot.com/13PrintsipovVery.html"
+    proof:
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "Творец, благословенно имя Его, — Один, и нет в мире цельности, подобной абсолютной цельности Его"
+        accessed: "2026-09-25"
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "благословенно имя Его, нематериален и ему несвойственны присущие материи состояния, и что у Него вообще нет никакого подобия"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: name-of-god
+    summary: "Тетраграмматон (собственное Имя Бога) традиционно не произносится так, как пишется; в молитве и при чтении Торы его заменяют словом «Адонай» («Господь»), а вне молитвы используют почтительные эпитеты, например «Всевышний»."
+    unity:
+      kind: shared
+      note: "традиция не произносить имя вслух «как при богослужении, так и в обыденной жизни» восходит к персидскому периоду (VI–IV века до н. э.)."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%A2%D0%B5%D1%82%D1%80%D0%B0%D0%B3%D1%80%D0%B0%D0%BC%D0%BC%D0%B0%D1%82%D0%BE%D0%BD"
+          title: "Тетраграмматон — Википедия (русская)"
+          tier: "reference"
+          excerpt: "Традиция не произносить имя Яхве вслух как при богослужении, так и в обыденной жизни появилась с периода персидского владычества над Иудеей"
+          accessed: "2026-09-26"
+    quote:
+      text: "Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
+      source: "Как зовут Б-га? | Толдот.ру"
+      url: "https://toldot.com/urava/ask/urava_5809.html"
+    proof:
+      - url: "https://toldot.com/urava/ask/urava_5809.html"
+        title: "Как зовут Б-га? | Толдот.ру"
+        tier: official
+        excerpt: "Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: jesus
+    summary: "Иудаизм ожидает ещё не пришедшего Машиаха (Мессию) и признаёт Моше (Моисея) величайшим из пророков. Иудейские авторитетные источники не признают Иисуса из Назарета Мессией или божеством; идея воплощения Бога в человеке считается несовместимой с единством Бога."
+    unity:
+      kind: shared
+      note: "даже евреи, которые в последнее время видят в Иисусе еврейского учителя, не верят, как христиане, что он воскрес из мёртвых или был Мессией."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Other Jews, recently, have come to regard him as a Jewish teacher"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: "reference"
+          excerpt: "This does not mean, however, that they believe, as Christians do, that he was raised from the dead or was the messiah"
+          accessed: "2026-09-26"
+    quote:
+      text: "Безоговорочно верю в приход Машиаха, и, хотя он задерживается, я всё же каждый день буду ждать его"
+      source: "13 принципов веры | Толдот.ру"
+      url: "https://toldot.com/13PrintsipovVery.html"
+    proof:
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "пророчество Моше-Рабейну, пусть душа его покоится в мире, — истина и что он — величайший из всех пророков, бывших до него и пришедших после него"
+        accessed: "2026-09-25"
+      - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+        title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+        tier: reference
+        excerpt: "a belief hard to reconcile with Judaism’s insistence on God’s oneness"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: spirit
+    summary: "«Дух Божий» (руах Элохим) упоминается уже в рассказе о сотворении мира, но не развивается в иудаизме в отдельную ипостась, сопоставимую с христианским учением о Святом Духе."
+    unity:
+      kind: shared
+      note: "справочные издания говорят о настойчивом утверждении иудаизма в целом о единстве Бога; учения о Духе как отдельном Лице в нём нет."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: "reference"
+          excerpt: "a belief hard to reconcile with Judaism’s insistence on God’s oneness"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Быт 1:2"
+      text: "a wind from God sweeping over the water"
+      url: "https://www.sefaria.org/api/texts/Genesis.1.2?context=0"
+    proof:
+      - url: "https://www.sefaria.org/api/texts/Genesis.1.2?context=0"
+        title: "Genesis 1:2 | Sefaria (JPS 2023 translation)"
+        tier: reference
+        excerpt: "a wind from God sweeping over the water"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: scripture
+    summary: "Канон иудаизма — Танах: аббревиатура трёх разделов — Тора (Пятикнижие Моисея), Невиим (Пророки) и Ктувим (Писания), всего 24 книги, составляющие Письменную Тору. Все течения признают один и тот же канон Танаха; расходятся они в статусе Устной Торы (см. «Предание и толкование»)."
+    unity:
+      kind: shared
+      note: "Танах — Тора, Невиим и Ктувим — общий для всех течений; расходятся они в статусе Устной Торы: реформисты говорят о постоянно развивающейся Торе."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%BD%D0%B0%D1%85"
+          title: "Танах — Википедия (русская)"
+          tier: "reference"
+          excerpt: "По содержанию c Танахом совпадает Ветхий Завет христианской Библии"
+          accessed: "2026-09-26"
+        - url: "https://urj.org/what-we-believe/what-is-reform-judaism"
+          title: "What is Reform Judaism? | Union for Reform Judaism"
+          tier: "official"
+          excerpt: "in the teachings of an ever-evolving Torah and tradition"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://toldot.com/Tanah.html"
+        title: "Танах — Еврейская Библия | Толдот.ру"
+        tier: official
+        excerpt: "Само слово «Танах» — это аббревиатура трех слов: Тора (Пятикнижие Моисея, Хумаш), Невиим (Пророки), Ктувим (Писания)"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: authority
+    summary: "Письменную Тору дополняет Устная Тора, кодифицированная в Талмуде. Течения иудаизма расходятся в том, кто и как её толкует: ортодоксия следует традиционному раввинистическому процессу и менее склонна считать, что предписания меняются вместе с обществом; консервативный (масорти) иудаизм признаёт галаху обязательной, но допускающей историческое развитие, причём раввины движения коллективно определяют направление через Раввинскую ассамблею; реформистский иудаизм видит источник авторитета в осознанном, вдумчивом выборе каждого еврея в рамках развивающегося завета."
+    unity:
+      kind: divided
+      note: "ортодоксия менее склонна считать, что предписания меняются вместе с обществом; в консервативном иудаизме раввины коллективно определяют направление через Раввинскую ассамблею; реформисты делают осознанный личный выбор."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/orthodox-judaism/"
+          title: "Orthodox Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Orthodox Judaism is more resistant than its liberal counterparts to the idea that biblical mandates can change in response to changing social"
+          accessed: "2026-09-26"
+        - url: "https://www.rabbinicalassembly.org/about-us/conservative-masorti"
+          title: "Conservative/Masorti | The Rabbinical Assembly"
+          tier: "official"
+          excerpt: "our rabbis collectively give direction through the Rabbinical Assembly"
+          accessed: "2026-09-26"
+        - url: "https://urj.org/what-we-believe/what-is-reform-judaism"
+          title: "What is Reform Judaism? | Union for Reform Judaism"
+          tier: "official"
+          excerpt: "strive to make thoughtful choices about how we put our values into action"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://toldot.com/talmud.html"
+        title: "Талмуд — Устная Тора | Толдот.ру"
+        tier: official
+        excerpt: "упорядоченной записью Устной Торы (часть Торы, которая была дана еврейскому народу в устной форме и передавалась устно из поколения в поколение)"
+        accessed: "2026-09-25"
+      - url: "https://www.myjewishlearning.com/article/orthodox-judaism/"
+        title: "Orthodox Judaism | My Jewish Learning"
+        tier: reference
+        excerpt: "Orthodox Judaism is more resistant than its liberal counterparts to the idea that biblical mandates can change in response to changing social circumstances"
+        accessed: "2026-09-25"
+      - url: "https://www.rabbinicalassembly.org/about-us/conservative-masorti"
+        title: "Conservative/Masorti | The Rabbinical Assembly"
+        tier: official
+        excerpt: "Each rabbi serves as halakhic authority for his or her community, and our rabbis collectively give direction through the Rabbinical Assembly"
+        accessed: "2026-09-25"
+      - url: "https://urj.org/what-we-believe/what-is-reform-judaism"
+        title: "What is Reform Judaism? | Union for Reform Judaism"
+        tier: official
+        excerpt: "strive to make thoughtful choices about how we put our values into action"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: salvation
+    summary: "Согласно традиции, Бог воздаёт добром соблюдающим заповеди и карает нарушающих их; путь к этому — жизнь по Торе и галахе (в ортодоксальном и консервативном понимании) или по её этическому ядру, как его самостоятельно принимает верующий (в реформистском иудаизме), а не спасение одной лишь верой."
+    unity:
+      kind: divided
+      note: "ортодоксальный и консервативный иудаизм требуют соблюдения галахи; реформистский иудаизм исторически ставит этическое в традиции выше обрядовых требований."
+      proof:
+        - url: "https://www.rabbinicalassembly.org/about-us/conservative-masorti"
+          title: "Conservative/Masorti | The Rabbinical Assembly"
+          tier: "official"
+          excerpt: "Conservative Judaism insists on observance of tradition"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements"
+          accessed: "2026-09-26"
+    quote:
+      text: "Творец, благословенно имя Его, отвечает добром соблюдающим Его заповеди и карает тех, кто их нарушает"
+      source: "13 принципов веры | Толдот.ру"
+      url: "https://toldot.com/13PrintsipovVery.html"
+    proof:
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "Творец, благословенно имя Его, отвечает добром соблюдающим Его заповеди и карает тех, кто их нарушает"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: afterlife
+    summary: "Классическая еврейская эсхатология включает веру в воскресение мёртвых и «олам ха-ба» (грядущий мир). Реформистское движение в 1885 году в Питтсбургской платформе официально отказалось от учений о телесном воскресении, рае и аде."
+    unity:
+      kind: divided
+      note: "воскресение мёртвых — один из 13 принципов веры, но реформистская Питтсбургская платформа (1885) официально отказалась от учения о телесном воскресении, рае и аде."
+      proof:
+        - url: "https://toldot.com/13PrintsipovVery.html"
+          title: "13 принципов веры | Толдот.ру"
+          tier: "official"
+          excerpt: "Безоговорочно верю в то, что мёртвые вернутся к жизни"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell"
+          accessed: "2026-09-26"
+    quote:
+      text: "Безоговорочно верю в то, что мёртвые вернутся к жизни"
+      source: "13 принципов веры | Толдот.ру"
+      url: "https://toldot.com/13PrintsipovVery.html"
+    proof:
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "Безоговорочно верю в то, что мёртвые вернутся к жизни"
+        accessed: "2026-09-25"
+      - url: "https://eleven.co.il/judaism/theology/13061/"
+        title: "Олам ха-ба | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "олам ха-ба в иудаизме состоит в вере в воскресение из мертвых"
+        accessed: "2026-09-25"
+      - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+        title: "Reform Judaism | My Jewish Learning"
+        tier: reference
+        excerpt: "formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: end-times
+    summary: "Иудейские источники связывают конец времён с приходом Машиаха и «олам ха-ба»; мудрецы расходятся в том, является ли мессианская эпоха лишь преддверием грядущего мира, отличным от него по своей природе, или новым порядком."
+    unity:
+      kind: divided
+      note: "приход Машиаха — принцип веры в изложении Маймонида; Питтсбургская платформа реформистов (1885) официально отказалась от надежды на возвращение в Землю Израиля."
+      proof:
+        - url: "https://toldot.com/13PrintsipovVery.html"
+          title: "13 принципов веры | Толдот.ру"
+          tier: "official"
+          excerpt: "Безоговорочно верю в приход Машиаха"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "formally renounced the wish for a return to Israel"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "Безоговорочно верю в приход Машиаха, и, хотя он задерживается, я всё же каждый день буду ждать его"
+        accessed: "2026-09-25"
+      - url: "https://eleven.co.il/judaism/theology/13061/"
+        title: "Олам ха-ба | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "будущий золотой век, о котором говорили библейские пророки, — это только время Мессии, а об олам ха-ба сказано «никакое око не видело»"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: worship
+    summary: "Из 613 заповедей Торы около пятидесяти касаются законов питания. Молитва, согласно традиции, обращена только к Богу, без посредников."
+    unity:
+      kind: divided
+      note: "ортодоксальный и консервативный иудаизм требуют соблюдения предписаний; реформистский иудаизм исторически ставит этическое в традиции выше обрядовых требований."
+      proof:
+        - url: "https://www.rabbinicalassembly.org/about-us/conservative-masorti"
+          title: "Conservative/Masorti | The Rabbinical Assembly"
+          tier: "official"
+          excerpt: "Conservative Judaism insists on observance of tradition"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements"
+          accessed: "2026-09-26"
+    quote:
+      text: "Творцу, благословенно имя Его, следует молиться, — Ему, и никому другому"
+      source: "13 принципов веры | Толдот.ру"
+      url: "https://toldot.com/13PrintsipovVery.html"
+    proof:
+      - url: "https://toldot.com/kashrut.html"
+        title: "Кашрут — кошерное и некошерное | Толдот.ру"
+        tier: official
+        excerpt: "Из 613 заповедей, данных нашему народу Творцом, около пятидесяти посвящены вопросам питания"
+        accessed: "2026-09-25"
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "Творцу, благословенно имя Его, следует молиться, — Ему, и никому другому"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: images
+    summary: "Тора запрещает изготовление изваяний и изображений для поклонения; эта заповедь связана с верой в бестелесность Бога, которую иудаизм исповедует как один из принципов веры."
+    unity:
+      kind: shared
+      note: "запрет Моисеева Закона на поклонение идолам общий для иудаизма."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B8%D0%BA%D0%BE%D0%BD%D0%B8%D0%B7%D0%BC"
+          title: "Аниконизм — Википедия (русская), раздел «Аниконизм в иудаизме»"
+          tier: "reference"
+          excerpt: "Моисеев Закон налагает строжайший запрет на поклонение идолам, считая идолопоклонничество одним из самых тяжких грехов для евреев"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Исх 20:4"
+      text: "You shall not make for yourself a sculptured image, or any likeness of what is in the heavens above, or on the earth below, or in the waters under the earth."
+      url: "https://www.sefaria.org/api/texts/Exodus.20.4?context=0"
+    proof:
+      - url: "https://www.sefaria.org/api/texts/Exodus.20.4?context=0"
+        title: "Exodus 20:4 | Sefaria (JPS 2023 translation)"
+        tier: reference
+        excerpt: "You shall not make for yourself a sculptured image, or any likeness of what is in the heavens above"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/13PrintsipovVery.html"
+        title: "13 принципов веры | Толдот.ру"
+        tier: official
+        excerpt: "благословенно имя Его, нематериален и ему несвойственны присущие материи состояния, и что у Него вообще нет никакого подобия"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: holy-days
+    summary: "Еврейский год отмечен циклом субботы (Шаббат) и годовых праздников, среди которых Рош а-Шана и Йом Кипур (дни Суда), три паломнических праздника — Песах, Шавуот и Суккот — а также Ханука, Пурим и другие даты."
+    unity:
+      kind: shared
+      note: "праздничный цикл общий, различается мера соблюдения обрядов: реформистский иудаизм исторически ставит этическое в традиции выше обрядовых требований."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://toldot.com/holidays.html"
+        title: "Еврейские праздники | Энциклопедия иудаизма онлайн на Толдот.ру"
+        tier: official
+        excerpt: "Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: fasting
+    summary: "Главный пост — Йом Кипур, День Искупления (10 тишрея): «тяжелый пост, который длится чуть больше суток»; Мишна запрещает в этот день есть и пить, мыться, умащаться, носить обувь (запрет касается обуви из кожи) и вступать в супружескую близость. С захода солнца накануне до темноты следующего дня длится и пост 9 ава — в память о разрушении Первого и Второго храмов. Мудрецы установили и другие общие для всего народа посты — пост Гедальи (3 тишрея), 10 тевета, 17 тамуза и пост Эстер (13 адара): от рассвета до появления звёзд запрещено есть и пить, но беременным, кормящим и больным в эти дни есть разрешено. Дни поста предназначены для раскаяния. Монашеский идеал безбрачия и аскетизма иудаизм не поощряет: аскетизм, по оценке Электронной еврейской энциклопедии, «никогда не занимал существенного места в еврейской религии», талмудические авторитеты считали аскетизм и отшельничество противоречащими стремлению Бога дать людям наслаждаться земной жизнью, а Маймонид называет отказ от мяса, вина, удобного жилья и хорошей одежды дурным путём, по которому запрещено идти."
+    unity:
+      kind: shared
+      note: "пост Йом Кипура общий, различается мера соблюдения обрядов: реформистский иудаизм исторически ставит этическое в традиции выше обрядовых требований."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements"
+          accessed: "2026-09-26"
+    quote:
+      text: "Дни поста предназначены для раскаяния, раздумий о своём духовном состоянии и необходимости исправить свои деяния."
+      source: "Толдот.ру, «Еврейские посты. Законы и обычаи»"
+      url: "https://toldot.com/post.html"
+    proof:
+      - url: "https://toldot.com/iomkipur.html"
+        title: "Йом Кипур — День Искупления | Толдот.ру"
+        tier: official
+        excerpt: "Йом Кипур выпадает на 10-е число еврейского месяца Тишрей"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/iomkipur.html"
+        title: "Йом Кипур — День Искупления | Толдот.ру"
+        tier: official
+        excerpt: "Хотя Йом Кипур — это тяжелый пост, который длится чуть больше суток и в который обязаны поститься все евреи"
+        accessed: "2026-09-26"
+      - url: "https://www.sefaria.org/api/texts/Mishnah_Yoma.8.1?context=0"
+        title: "Mishnah Yoma 8:1, William Davidson Edition (English) — Sefaria"
+        tier: official
+        excerpt: "in eating and in drinking, and in bathing, and in smearing oil on one’s body, and in wearing shoes, and in conjugal relations"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/iomkipur.html"
+        title: "Йом Кипур — День Искупления | Толдот.ру"
+        tier: official
+        excerpt: "Обувь из кожи запрещена, даже если кожа в ней присутствует только выше подошвы"
+        accessed: "2026-09-26"
+      - url: "https://eleven.co.il/judaism/cult/13291/"
+        title: "Пост | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "Пост Иом-Киппура и Девятого ава длится с захода солнца накануне и до наступления темноты на следующий день"
+        accessed: "2026-09-26"
+      - url: "https://eleven.co.il/judaism/cult/13291/"
+        title: "Пост | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "Девятое ава — в память о разрушении Первого (II Ц. 25:8–9; Иер. 52:12–13) и Второго храмов"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "Мудрецы установили следующие даты как общие для всего еврейского народа посты"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "3-е тишрея (пост Гедальи), 10-е тевета (Асара бетевет), 17-е тамуза (Шваэсре бетамуз), 9 ава (Тиша беав)"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "13-е адара — день «Таанит Эстер» («пост Эстер»)"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "Все посты (кроме Тиша Беав) начинаются с самым началом рассвета и продолжаются до появления звёзд"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "В дни общественных постов запрещено есть и пить"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "В дни таанит цибур (кроме Тиша Беав и Йом Кипур) разрешается пить и есть беременным или кормящим женщинам и больным"
+        accessed: "2026-09-26"
+      - url: "https://toldot.com/post.html"
+        title: "Еврейские посты. Законы и обычаи | Толдот.ру"
+        tier: official
+        excerpt: "Дни поста предназначены для раскаяния, раздумий о своём духовном состоянии и необходимости исправить свои деяния"
+        accessed: "2026-09-26"
+      - url: "https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%BE"
+        title: "Монашество — Википедия"
+        tier: reference
+        excerpt: "Иудаизм не поощряет монашеский идеал безбрачия и аскетизма"
+        accessed: "2026-09-26"
+      - url: "https://eleven.co.il/judaism/religious-ethics/10308/"
+        title: "Аскетизм | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "Аскетизм никогда не занимал существенного места в еврейской религии"
+        accessed: "2026-09-26"
+      - url: "https://eleven.co.il/judaism/religious-ethics/10308/"
+        title: "Аскетизм | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "они рассматривают аскетизм и отшельничество как противоречащие стремлению Бога дать людям возможность наслаждаться дарованной им земной жизнью"
+        accessed: "2026-09-26"
+      - url: "https://www.sefaria.org/api/texts/Mishneh_Torah,_Human_Dispositions.3.1?context=0"
+        title: "Mishneh Torah, Human Dispositions (Hilchot De'ot) 3:1, trans. Eliyahu Touger — Sefaria"
+        tier: official
+        excerpt: "he will not eat meat, nor drink wine, nor live in a pleasant home, nor wear fine clothing"
+        accessed: "2026-09-26"
+      - url: "https://www.sefaria.org/api/texts/Mishneh_Torah,_Human_Dispositions.3.1?context=0"
+        title: "Mishneh Torah, Human Dispositions (Hilchot De'ot) 3:1, trans. Eliyahu Touger — Sefaria"
+        tier: official
+        excerpt: "This, too, is a bad path and it is forbidden to walk upon it"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: organisation
+    summary: "У иудаизма нет единого духовенства: раввин — учитель и галахический авторитет, получающий «смиху» (посвящение) в виде документа, а не через возложение рук, как в древности. Ортодоксальные раввины получают смиху в ортодоксальных ешивах; консервативное, реформистское и реконструктивистское движения рукополагают через собственные семинарии, в том числе женщин, тогда как основное течение ортодоксии этого не делает."
+    unity:
+      kind: divided
+      note: "ортодоксальные раввины получают смиху в ешивах, а консервативное, реформистское и реконструктивистское движения рукополагают через свои семинарии, в том числе женщин."
+      proof:
+        - url: "https://jewishvirtuallibrary.org/rabbinic-ordination-semikha"
+          title: "Rabbinic Ordination (Semikha) | Jewish Virtual Library"
+          tier: "reference"
+          excerpt: "The Reconstructionist, Reform, and Conservative movements all ordain women for the Rabbinate"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://jewishvirtuallibrary.org/rabbinic-ordination-semikha"
+        title: "Rabbinic Ordination (Semikha) | Jewish Virtual Library"
+        tier: reference
+        excerpt: "the practice of rabbinic ordination does not include any \"laying of the hands,\" but a written document"
+        accessed: "2026-09-25"
+      - url: "https://jewishvirtuallibrary.org/rabbinic-ordination-semikha"
+        title: "Rabbinic Ordination (Semikha) | Jewish Virtual Library"
+        tier: reference
+        excerpt: "The Reconstructionist, Reform, and Conservative movements all ordain women for the Rabbinate"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: rules
+    summary: "Кашрут — законы дозволенной и недозволенной пищи, включая запрет крови, — регулирует около пятидесяти из 613 заповедей Торы. В делах, не относящихся к религиозной и семейной жизни (коммерция, налоги, гражданские обязанности перед государством), действует принцип «дина де-малхута дина»: закон страны проживания обязателен для евреев, а в некоторых вопросах даже предпочитается еврейскому закону."
+    unity:
+      kind: divided
+      note: "кашрут обязателен в ортодоксальном иудаизме, а многие евреи реформистского направления от него отказались."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "many Jews decided to jettison kashrut [Jewish dietary laws]"
+          accessed: "2026-09-26"
+    proof:
+      - url: "https://toldot.com/kashrut.html"
+        title: "Кашрут — кошерное и некошерное | Толдот.ру"
+        tier: official
+        excerpt: "Из 613 заповедей, данных нашему народу Творцом, около пятидесяти посвящены вопросам питания"
+        accessed: "2026-09-25"
+      - url: "https://eleven.co.il/judaism/religious-law/11435/"
+        title: "Дина де-малхута дина | Электронная еврейская энциклопедия"
+        tier: reference
+        excerpt: "закон страны, в которой проживают евреи, обязателен для них, а в некоторых случаях даже предпочитается еврейскому закону"
+        accessed: "2026-09-25"
+    status: verified

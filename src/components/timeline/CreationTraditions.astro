@@ -1,0 +1,14 @@
+---
+import lineage from '../../data/lineage.json';
+---
+<section aria-labelledby="creation-traditions-title">
+  <h2 id="creation-traditions-title">Начало мира в религиозных традициях</h2>
+  <p>Эти даты относятся к религиозным хронологиям, а не к археологической датировке возраста Земли. Здесь собраны представленные на сайте варианты; это не общий календарь для всех религий.</p>
+  <ul>{lineage.epochs.map((epoch) => <li>{epoch.label}</li>)}</ul>
+  <p>Византийская эра начинается 1 сентября 5509 г. до н. э.; указанный выше 5508 год соответствует январю–августу её первого года.</p>
+</section>
+<style>
+  section { max-width: 80ch; }
+  p { color: var(--muted); }
+  ul { padding-left: 24px; display: grid; gap: 12px; }
+</style>

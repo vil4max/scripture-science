@@ -1,0 +1,38 @@
+---
+// One tradition's column within a comparison topic's duo: label, thesis and
+// scripture points. The rendered structure matches the source's .pos blocks
+// exactly (span.who, p.thesis, ul > li), so src/styles/orthodoxy-jw.css
+// applies unchanged.
+interface Point {
+  ref?: string;
+  html: string;
+}
+
+interface Position {
+  label: string;
+  thesis: string;
+  points: Point[];
+}
+
+interface Props {
+  position: Position;
+  colorClass: string;
+}
+
+const { position, colorClass } = Astro.props;
+---
+
+<div class={`pos ${colorClass}`}>
+  <span class="who">{position.label}</span>
+  <p class="thesis">{position.thesis}</p>
+  <ul>
+    {
+      position.points.map((point) => (
+        <li>
+          {point.ref && <span class="ref">{point.ref}</span>}
+          <Fragment set:html={point.html} />
+        </li>
+      ))
+    }
+  </ul>
+</div>

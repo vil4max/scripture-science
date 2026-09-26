@@ -1,0 +1,829 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#faf9f5;color:#141413}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Православие и Свидетели Иеговы</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap">
+<style>
+:root{
+  --bg:#f3f3ef; --surface:#ffffff; --ink:#1b2230; --muted:#5a6272; --line:#dcdcd4;
+  --o:#7d5616; --o-bg:#f4ecdc; --j:#4a3f6b; --j-bg:#ece9f4; --c:#2f6b5a; --c-bg:#e3efe9;
+  --chip:#e7e7e0; --shadow:0 1px 2px rgba(20,30,40,.06); --ju:#2d5a8c; --ea:#a0462f; --we:#a4506e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#11151b; --surface:#1a2029; --ink:#e8e5de; --muted:#a3abb8; --line:#2c3440;
+    --o:#e0b766; --o-bg:#2a2317; --j:#bcb0e8; --j-bg:#231f33; --c:#86c9b2; --c-bg:#17291f;
+    --chip:#232a35; --shadow:none; --ju:#8fb6e6; --ea:#e59a82; --we:#eaa3bd;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#11151b; --surface:#1a2029; --ink:#e8e5de; --muted:#a3abb8; --line:#2c3440;
+  --o:#e0b766; --o-bg:#2a2317; --j:#bcb0e8; --j-bg:#231f33; --c:#86c9b2; --c-bg:#17291f;
+  --chip:#232a35; --shadow:none; --ju:#8fb6e6; --ea:#e59a82; --we:#eaa3bd;
+}
+*{box-sizing:border-box}
+body{background:var(--bg); color:var(--ink); font-family:'PT Sans', -apple-system, 'Segoe UI', Arial, sans-serif; font-size:17px; line-height:1.5; -webkit-text-size-adjust:100%}
+.wrap{max-width:720px; margin:0 auto; padding-inline:16px; padding-block:0 48px; display:flex; flex-direction:column; gap:40px}
+h1,h2,h3{font-family:'PT Serif', Georgia, serif; text-wrap:balance; margin:0; line-height:1.2}
+h1{font-size:32px}
+h2{font-size:26px}
+h3{font-size:20px}
+p{margin:0}
+a{color:inherit}
+.eyebrow{font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--muted); font-weight:700}
+
+/* nav */
+nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; background:var(--bg); border-bottom:1px solid var(--line)}
+nav .chips{display:flex; gap:8px; overflow-x:auto; padding:10px 16px; max-width:720px; margin:0 auto; scrollbar-width:none}
+nav .chips::-webkit-scrollbar{display:none}
+nav a{flex:none; text-decoration:none; font-size:15px; padding:7px 12px; border-radius:999px; background:var(--chip); white-space:nowrap}
+nav a:focus-visible, summary:focus-visible{outline:2px solid var(--o); outline-offset:2px}
+
+/* hero */
+header{display:flex; flex-direction:column; gap:14px; padding-top:28px}
+header .lead{font-size:19px; color:var(--muted)}
+.scale{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.scale div{padding:14px; border-radius:12px; display:flex; flex-direction:column; gap:2px}
+.scale .o{background:var(--o-bg)} .scale .j{background:var(--j-bg)}
+.scale b{font-family:'PT Serif', Georgia, serif; font-size:28px; line-height:1.1; font-variant-numeric:tabular-nums}
+.scale .o b{color:var(--o)} .scale .j b{color:var(--j)}
+.scale span{font-size:14px; color:var(--muted)}
+.scale .tag{font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700}
+.scale .o .tag{color:var(--o)} .scale .j .tag{color:var(--j)}
+
+section{display:flex; flex-direction:column; gap:16px; scroll-margin-top:64px}
+section > .intro{color:var(--muted)}
+
+/* comparison */
+.topic{background:var(--surface); border-radius:14px; box-shadow:var(--shadow); border:1px solid var(--line)}
+.topic > summary{list-style:none; cursor:pointer; padding:16px; display:flex; justify-content:space-between; align-items:center; gap:12px}
+.topic > summary::-webkit-details-marker{display:none}
+.topic > summary::after{content:"–"; font-size:22px; color:var(--muted); flex:none}
+.topic:not([open]) > summary::after{content:"+"}
+.topic .body{padding:0 16px 16px; display:flex; flex-direction:column; gap:10px}
+.pos{border-radius:10px; padding:12px 14px; display:flex; flex-direction:column; gap:6px}
+.pos.o{background:var(--o-bg)} .pos.j{background:var(--j-bg)} .pos.c{background:var(--c-bg)}
+.pos .who{font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700}
+.pos.o .who{color:var(--o)} .pos.j .who{color:var(--j)} .pos.c .who{color:var(--c)}
+.pos .thesis{font-family:'PT Serif', Georgia, serif; font-weight:700; font-size:18px; line-height:1.3}
+.pos ul{margin:0; padding-left:18px; display:flex; flex-direction:column; gap:4px}
+.ref{font-weight:700; white-space:nowrap}
+.crux{font-size:16px; color:var(--muted); padding:2px 2px 0}
+.crux b{color:var(--ink)}
+
+/* rows (short comparisons) */
+.rows{display:flex; flex-direction:column; background:var(--surface); border:1px solid var(--line); border-radius:14px; overflow:hidden}
+.row{padding:14px 16px; display:flex; flex-direction:column; gap:8px}
+.row + .row{border-top:1px solid var(--line)}
+.row h3{font-size:18px}
+.pair{display:grid; grid-template-columns:1fr; gap:6px}
+.pair p{padding-left:12px; position:relative}
+.pair p::before{content:""; position:absolute; left:0; top:.55em; width:7px; height:7px; border-radius:50%}
+.pair .o::before{background:var(--o)} .pair .j::before{background:var(--j)} .pair .c::before{background:var(--c)}
+.pair .lbl{font-weight:700}
+.pair .o .lbl{color:var(--o)} .pair .j .lbl{color:var(--j)} .pair .c .lbl{color:var(--c)}
+
+.timeline{display:flex; flex-direction:column; gap:0; border-left:2px solid var(--line); margin-left:6px}
+.timeline li{list-style:none; padding:0 0 12px 16px; position:relative}
+.timeline li::before{content:""; position:absolute; left:-6px; top:.45em; width:10px; height:10px; border-radius:50%; background:var(--dot)}
+.timeline b{font-variant-numeric:tabular-nums}
+.tl-o{--dot:var(--o)} .tl-j{--dot:var(--j)}
+.timeline ul{margin:0; padding:0}
+
+.facts{display:grid; grid-template-columns:1fr 1fr; gap:10px}
+.facts div{background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:14px; display:flex; flex-direction:column; gap:4px}
+.facts b{font-family:'PT Serif', Georgia, serif; font-size:26px; line-height:1.1; color:var(--o); font-variant-numeric:tabular-nums}
+.facts span{font-size:15px; color:var(--muted)}
+.facts small{font-size:13px; color:var(--muted); text-transform:uppercase; letter-spacing:.08em; font-weight:700}
+
+blockquote{margin:0; padding:16px; border-radius:12px; background:var(--o-bg); font-family:'PT Serif', Georgia, serif; font-style:italic; font-size:19px; line-height:1.4; display:flex; flex-direction:column; gap:8px}
+blockquote cite{font-style:normal; font-family:'PT Sans', Arial, sans-serif; font-size:14px; color:var(--muted)}
+.note{font-size:15px; color:var(--muted)}
+.photo{margin:0; display:flex; flex-direction:column; gap:8px}
+.photo img{width:100%; height:auto; border-radius:12px; display:block}
+.photo figcaption{font-size:14px; color:var(--muted)}
+.duo{display:grid; grid-template-columns:1fr 1fr; gap:8px; align-items:stretch}
+.duo .pos{padding:10px 10px; gap:6px; font-size:15px; line-height:1.4; min-width:0}
+.duo .pos .thesis{font-size:16px}
+.duo .pos ul{padding-left:14px; gap:6px}
+.duo .ref{white-space:normal; display:block}
+.pair{grid-template-columns:1fr 1fr !important}
+@media (min-width:560px){ .duo{gap:12px} .duo .pos{padding:14px 16px; font-size:16px} .duo .pos .thesis{font-size:18px} .duo .ref{display:inline} }
+.card{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:16px; display:flex; flex-direction:column; gap:12px}
+.svgwrap{width:100%}
+.tl-svg{display:block; width:100%; max-width:560px; height:auto; margin:0 auto; font-family:'PT Sans', Arial, sans-serif}
+.tl-svg .grid{stroke:var(--line); stroke-width:1}
+.tl-svg .axis{stroke:var(--muted); stroke-width:1}
+.tl-svg .axis.strong{stroke:var(--ink); stroke-width:1.5}
+.tl-svg .guide{stroke:var(--j); stroke-width:1; stroke-dasharray:3 3}
+.tl-svg .tick{fill:var(--muted); font-size:11px}
+.tl-svg .tick.b{fill:var(--ink); font-weight:700}
+.tl-svg .lab{font-size:13px; font-weight:700}
+.tl-svg .lab.o{fill:var(--o)} .tl-svg .lab.j{fill:var(--j)}
+.tl-svg .bar-o{fill:var(--o)} .tl-svg .bar-j{fill:var(--j)}
+.tl-svg .dot{fill:var(--surface)}
+.tl-svg .lead{fill:none; stroke:var(--line); stroke-width:1}
+.tl-svg .mdot{fill:var(--muted); stroke:var(--surface); stroke-width:1.5}
+.tl-svg .mdot.o{fill:var(--o)} .tl-svg .mdot.j{fill:var(--j)} .tl-svg .mdot.n{fill:var(--ink)}
+.tl-svg .mname{fill:var(--ink); font-size:13px; font-weight:700}
+.tl-svg .mname.o{fill:var(--o)} .tl-svg .mname.j{fill:var(--j)}
+.tl-svg .msub{fill:var(--muted); font-size:11px}
+.duo .timeline{margin-left:4px}
+.duo .timeline li{padding:0 0 8px 12px}
+.dgwrap{margin:0; background:var(--surface); border:1px solid var(--line); border-radius:12px; padding:12px 8px 8px; display:flex; flex-direction:column; gap:6px}
+.dgwrap figcaption{font-size:13px; color:var(--muted); text-align:center}
+.dg{display:block; width:100%; max-width:520px; height:auto; margin:0 auto; font-family:'PT Sans', Arial, sans-serif}
+.dg .div{stroke:var(--line); stroke-width:1; stroke-dasharray:2 4}
+.dg .hd{font-size:12px; font-weight:700; letter-spacing:.06em; text-transform:uppercase}
+.dg .hd.o{fill:var(--o)} .dg .hd.j{fill:var(--j)}
+.dg .t{fill:var(--ink)} .dg .t.b{font-weight:700} .dg .t.sm{font-size:10px; fill:var(--muted)} .dg .t.inv{fill:var(--surface)}
+.dg .cap{fill:var(--muted); font-size:11px}
+.dg .bo{fill:var(--o-bg); stroke:var(--o); stroke-width:1.2}
+.dg .bj{fill:var(--j-bg); stroke:var(--j); stroke-width:1.2}
+.dg .so{fill:var(--o); stroke:var(--o)}
+.dg .sj{fill:var(--j-bg); stroke:var(--j); stroke-width:2.4}
+.dg .so_t{fill:var(--o-bg); stroke:var(--o); stroke-width:2.4}
+.dg .sj_fill{fill:var(--j); stroke:var(--j)}
+.dg .sj_t{fill:var(--j-bg); stroke:var(--j); stroke-width:2.4}
+.dg .ln-o{stroke:var(--o); stroke-width:1.6} .dg .ln-o.thin{stroke-width:.8; opacity:.6}
+.dg .ar{stroke:var(--muted); stroke-width:1.3} .dg .ar.dash{stroke-dasharray:4 3}
+.dg .ah{fill:var(--muted)}
+.textdiff{display:flex; flex-direction:column; gap:8px; border:1px dashed var(--line); border-radius:12px; padding:12px}
+mark{background:var(--o-bg); color:var(--o); font-weight:700; padding:0 2px; border-radius:3px; box-decoration-break:clone; -webkit-box-decoration-break:clone}
+.pos.o mark{background:var(--surface)}
+.rows.cmp .row{padding:12px}
+.rows.cmp .row h3{font-size:17px}
+.rows.cmp .pair{gap:8px}
+.rows.cmp .pair p{padding:10px 10px; border-radius:8px; font-size:15px; line-height:1.4}
+.rows.cmp .pair p::before{display:none}
+.rows.cmp .pair .c{background:var(--c-bg)} .rows.cmp .pair .j{background:var(--j-bg)} .rows.cmp .pair .o{background:var(--o-bg)}
+.rows.cmp .row.head{position:sticky; top:calc(env(safe-area-inset-top,0px) + 52px); z-index:2; background:var(--surface); padding:10px 12px; border-bottom:1px solid var(--line)}
+.rows.cmp .row.head > span{display:none}
+.rows.cmp .row.head .pair p{background:none; padding:0 2px; font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700}
+.rows.cmp .row.head .c{color:var(--c)} .rows.cmp .row.head .j{color:var(--j)} .rows.cmp .row.head .o{color:var(--o)}
+.rows.cmp{overflow:visible}
+@media (min-width:560px){ .rows.cmp .pair p{font-size:16px} }
+.tl-svg .brk{fill:none; stroke:var(--muted); stroke-width:1.2}
+.tl-svg .brk.nz{stroke:var(--o)}
+.tl-svg .era{fill:var(--muted); font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase}
+.tl-svg .era.nz{fill:var(--o)}
+.flow{margin:0; background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:14px 12px; display:flex; flex-direction:column; gap:12px}
+.fl-title{font-family:'PT Serif', Georgia, serif; font-weight:700; font-size:17px; line-height:1.3}
+.fl-grid{display:grid; grid-template-columns:1fr 1fr; gap:8px 8px; position:relative}
+.fl-head{font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; padding:0 2px}
+.fl-head.o{color:var(--o)} .fl-head.j{color:var(--j)}
+.fl-step{display:flex; gap:8px; align-items:flex-start; border-radius:10px; padding:10px 8px; position:relative; font-size:14px; line-height:1.35}
+.fl-step.o{background:var(--o-bg)} .fl-step.j{background:var(--j-bg)}
+.fl-step b{display:block; font-size:14px}
+.fl-step p{margin-top:2px; color:var(--ink)}
+.fl-step + .fl-step + .fl-step::before{content:"↓"; position:absolute; top:-15px; left:16px; font-size:13px; line-height:1; color:var(--muted)}
+.fl-n{flex:none; width:20px; height:20px; border-radius:50%; display:inline-flex; align-items:center; justify-content:center; font-size:12px; font-weight:700; color:var(--surface)}
+.fl-step.o .fl-n{background:var(--o)} .fl-step.j .fl-n{background:var(--j)}
+.fl-out{border-radius:10px; padding:10px; display:flex; flex-direction:column; gap:2px; border:2px solid}
+.fl-out.o{border-color:var(--o)} .fl-out.j{border-color:var(--j)}
+.fl-out b{font-family:'PT Serif', Georgia, serif; font-size:16px; line-height:1.25}
+.fl-out.o b{color:var(--o)} .fl-out.j b{color:var(--j)}
+.fl-out p{font-size:13px; color:var(--muted)}
+@media (min-width:560px){ .fl-step, .fl-step b{font-size:15px} .fl-grid{gap:10px 14px} }
+.cm-ratio{display:flex; flex-direction:column; gap:6px}
+.cm-bar{display:flex; height:12px; border-radius:6px; overflow:hidden}
+.cm-bar .s{background:var(--c)} .cm-bar .d{background:var(--muted); opacity:.55}
+.cm-legend{display:flex; justify-content:space-between; font-size:14px; color:var(--muted)}
+.cm-legend b{color:var(--ink)}
+.cm{background:var(--surface); border:1px solid var(--line); border-radius:14px; padding:0 10px 12px; display:flex; flex-direction:column; gap:10px}
+.cm-head{position:sticky; top:calc(env(safe-area-inset-top,0px) + 52px); z-index:2; background:var(--surface); display:grid; grid-template-columns:1fr 1fr; gap:8px; padding:12px 0 8px; border-bottom:1px solid var(--line)}
+.cm-head span{font-size:12px; letter-spacing:.1em; text-transform:uppercase; font-weight:700; padding:0 4px}
+.cm-head .o{color:var(--o)} .cm-head .j{color:var(--j)}
+.cm-group{font-family:'PT Sans', Arial, sans-serif; font-size:13px; letter-spacing:.1em; text-transform:uppercase; margin-top:6px}
+.cm-group.s{color:var(--c)} .cm-group.d{color:var(--ink)}
+.cm-sub{font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); font-weight:700; margin-top:4px; border-top:1px dashed var(--line); padding-top:8px}
+.cm-row{display:flex; flex-direction:column; gap:4px}
+.cm-topic{font-size:13px; font-weight:700; color:var(--muted); padding:0 2px}
+.cm-same{background:var(--c-bg); border-radius:8px; padding:9px 10px; font-size:15px; line-height:1.35; display:flex; gap:8px; align-items:baseline}
+.cm-ico{color:var(--c); font-weight:700; flex:none}
+.cm-pair{display:grid; grid-template-columns:1fr 1fr; gap:8px}
+.cm-o,.cm-j{border-radius:8px; padding:9px 10px; font-size:15px; line-height:1.35}
+.cm-o{background:var(--o-bg); box-shadow:inset 3px 0 0 var(--o)} .cm-j{background:var(--j-bg); box-shadow:inset 3px 0 0 var(--j)}
+@media (min-width:560px){ .cm{padding:0 16px 16px} .cm-same,.cm-o,.cm-j{font-size:16px} }
+.greek{font-family:'PT Serif', Georgia, serif; font-size:16px; line-height:1.4; padding:4px 2px}
+.greek span{display:block; font-family:'PT Sans', Arial, sans-serif; font-size:13px; color:var(--muted); margin-top:4px}
+.pos p.small{font-size:13px; color:var(--muted)}
+.lit{display:flex; flex-direction:column; gap:1px; padding:6px 0; border-top:1px solid color-mix(in srgb, currentColor 12%, transparent)}
+.lit b{font-family:'PT Serif', Georgia, serif; font-size:20px; line-height:1.1}
+.pos.o .lit b{color:var(--o)} .pos.j .lit b{color:var(--j)}
+.lit span{font-size:13px; line-height:1.35; color:var(--muted)}
+.qhead{font-size:20px; margin-top:4px}
+.tl-svg .chip{stroke:none}
+.tl-svg .cname{font-size:13px; font-weight:700}
+.tl-svg .chip.o{fill:var(--o)} .tl-svg .chip.j{fill:var(--j)} .tl-svg .chip.ju{fill:var(--ju)} .tl-svg .chip.is{fill:var(--c)} .tl-svg .chip.e{fill:var(--ea)} .tl-svg .chip.w{fill:var(--we)}
+.tl-svg .cname{fill:var(--surface)}
+.tl-svg .cf-dot{stroke:var(--surface); stroke-width:1.5; fill:var(--ink)}
+.tl-svg .cf-dot.o{fill:var(--o)} .tl-svg .cf-dot.j{fill:var(--j)} .tl-svg .cf-dot.ju{fill:var(--ju)} .tl-svg .cf-dot.is{fill:var(--c)} .tl-svg .cf-dot.e{fill:var(--ea)} .tl-svg .cf-dot.w{fill:var(--we)}
+.fathers{border-left:3px solid var(--o); background:var(--surface); border-radius:0 10px 10px 0; padding:8px 12px; display:flex; flex-direction:column; gap:6px}
+.fathers ul{margin:0; padding-left:16px; display:flex; flex-direction:column; gap:6px; font-size:15px; line-height:1.4}
+.fathers b{color:var(--o)}
+.tl-svg .dash-o{stroke:var(--o); stroke-width:2; stroke-dasharray:3 4; opacity:.8}
+.tl-svg .dash-j{stroke:var(--j); stroke-width:2; stroke-dasharray:3 4; opacity:.9}
+.voices .vq{margin:0; display:flex; flex-direction:column; gap:6px}
+.voices .vq-t{font-size:12px; letter-spacing:.08em; text-transform:uppercase; font-weight:700; color:var(--muted)}
+.voices blockquote{background:var(--surface); font-size:16px; padding:10px 12px}
+.voices blockquote cite{font-size:12px}
+.gl{margin:0; display:flex; flex-direction:column; gap:2px; font-size:14px; line-height:1.35}
+.gl dt{font-weight:700; margin-top:6px}
+.pos.o .gl dt{color:var(--o)} .pos.j .gl dt{color:var(--j)}
+.gl dd{margin:0}
+.sources{display:flex; flex-direction:column; gap:6px; padding-left:18px; margin:0; font-size:15px}
+.sources a{word-break:break-word}
+@media (min-width:640px){
+  .pair{grid-template-columns:1fr 1fr; gap:14px}
+  .scale div{padding:16px}
+}
+@media (prefers-reduced-motion: reduce){ html{scroll-behavior:auto} }
+@media (prefers-reduced-motion: no-preference){ html{scroll-behavior:smooth} }
+</style>
+
+<nav aria-label="Разделы">
+  <div class="chips">
+    <a href="#history">История</a>
+    <a href="#sources">Источники</a>
+    <a href="#common">Сравнение</a>
+    <a href="#theology">Богословие</a>
+        <a href="#literature">Литература</a>
+    <a href="#structure">Устройство</a>
+    <a href="#dynamics">Развитие</a>
+    <a href="#summary">Итог</a>
+    <a href="#glossary">Словарь</a>
+    <a href="#refs">Источники</a>
+  </div>
+</nav>
+
+<main class="wrap">
+  <header>
+    <p class="eyebrow">Сравнительный обзор</p>
+    <h1>Православие и Свидетели Иеговы</h1>
+    <p class="lead">Одна Библия, два прочтения. Позиции изложены так, как их описывают сами стороны: по материалам jw.org, wol.jw.org и православных источников. Во всех сравнениях слева — более старшая традиция, справа — более молодая; у каждой стороны — цитаты из её собственного перевода Библии.</p>
+    <p class="note"><b>Сокращения:</b> ПНМ — «Перевод нового мира» (Библия Свидетелей Иеговы, 2021); Синод. — Синодальный перевод (1876); С. М. — год от сотворения мира; Р. Х. — Рождество Христово. Счёт возвещателей и верующих ведётся по-разному, поэтому числа не сравниваются напрямую.</p>
+    <div class="scale">
+      <div class="o"><span class="tag">Православие</span><b>≈ 2000 лет</b><span>от Пятидесятницы; себя возводят к «Церкви от Авеля праведного»</span></div>
+      <div class="j"><span class="tag">Свидетели Иеговы</span><b>≈ 150 лет</b><span>как организация, с 1870-х; себя возводят к «свидетелям» от Авеля</span></div>
+      <div class="o"><b>≈ 260 млн</b><span>крещёных и считающих себя православными (Pew, 2017)</span></div>
+      <div class="j"><b>≈ 9,2 млн</b><span>возвещателей; на Вечере воспоминания — 20,6 млн (отчёт 2025)</span></div>
+    </div>
+  </header>
+
+  <section id="history">
+    <p class="eyebrow">1 · История</p>
+    <h2>Исторический масштаб</h2>
+    <div class="card">
+      <h3>От сотворения мира: религии на одной шкале</h3>
+      <p class="note">Счёт лет по византийской эре, принятой в православной традиции: сотворение мира — 5508 год до н. э., сейчас идёт 7535 год. Шкала слева — годы от сотворения мира (С. М.). <b>Сплошные полосы</b> — история православной Церкви (с Пятидесятницы) и организации Свидетелей Иеговы (с 1870-х). <b>Пунктир</b> — преемственность, которую каждая сторона видит за собой: православные говорят о «Церкви от Авеля праведного», Свидетели — об «облаке свидетелей», начиная с Авеля (Евр 11:4; 12:1).</p>
+      <div class="svgwrap"><svg class="tl-svg tall" viewBox="0 0 360 1139" role="img" aria-label="Шкала от сотворения мира по византийской эре (5508 до н. э.) до 2026 года с религиями и конфессиями. Сплошные полосы — история православной Церкви и организации Свидетелей Иеговы, пунктир — преемственность, которую каждая сторона возводит к Авелю. До Рождества Христова — Ветхий Завет, после — Новый Завет"><path d="M22 24.0 L16 24.0 L16 751.1 L22 751.1" class="brk"/><text x="11" y="387.5" text-anchor="middle" class="era" transform="rotate(-90 11 387.5)">Ветхий Завет</text><path d="M22 759.1 L16 759.1 L16 1024.0 L22 1024.0" class="brk nz"/><text x="11" y="891.5" text-anchor="middle" class="era nz" transform="rotate(-90 11 891.5)">Новый Завет</text><line x1="67" y1="156.6" x2="77" y2="156.6" class="axis"/><text x="62" y="160.6" class="tick" text-anchor="end">1000</text><line x1="67" y1="289.3" x2="77" y2="289.3" class="axis"/><text x="62" y="293.3" class="tick" text-anchor="end">2000</text><line x1="67" y1="422.1" x2="77" y2="422.1" class="axis"/><text x="62" y="426.1" class="tick" text-anchor="end">3000</text><line x1="67" y1="554.8" x2="77" y2="554.8" class="axis"/><text x="62" y="558.8" class="tick" text-anchor="end">4000</text><line x1="67" y1="687.5" x2="77" y2="687.5" class="axis"/><text x="62" y="691.5" class="tick" text-anchor="end">5000</text><line x1="67" y1="820.3" x2="77" y2="820.3" class="axis"/><text x="62" y="824.3" class="tick" text-anchor="end">6000</text><line x1="67" y1="953.0" x2="77" y2="953.0" class="axis"/><text x="62" y="957.0" class="tick" text-anchor="end">7000</text><text x="62" y="16" class="tick" text-anchor="end">от С. М.</text><line x1="58" y1="755.1" x2="77" y2="755.1" class="axis strong"/><text x="54" y="771.1" class="tick b" text-anchor="end">Р. Х.</text><line x1="72" y1="24" x2="72" y2="1024.0" class="axis"/><line x1="66" y1="41.1" x2="66" y2="759.3" class="dash-o"/><line x1="78" y1="41.1" x2="78" y2="1004.4" class="dash-j"/><rect x="63" y="759.3" width="6" height="264.7" rx="3" class="bar-o"/><rect x="75" y="1004.4" width="6" height="19.6" rx="3" class="bar-j"/><path d="M76 24.0 L94 24.0 L106 23.0 L114 23.0" class="lead"/><circle cx="72" cy="24.0" r="4" class="cf-dot n"/><text x="116" y="28.0" class="mname">Сотворение мира</text><text x="116" y="43.0" class="msub">5508 до н. э. · 1 год от С. М.</text><path d="M76 41.1 L94 41.1 L106 59.0 L114 59.0" class="lead"/><circle cx="72" cy="41.1" r="4" class="cf-dot n"/><text x="116" y="64.0" class="mname">Авель</text><text x="116" y="79.0" class="msub">начало преемственности для обеих сторон</text><path d="M76 321.5 L94 321.5 L106 320.5 L114 320.5" class="lead"/><circle cx="72" cy="321.5" r="4" class="cf-dot n"/><text x="116" y="325.5" class="mname">Всемирный потоп</text><text x="116" y="340.5" class="msub">2242 от С. М. (по Септуагинте)</text><path d="M76 489.6 L94 489.6 L106 488.6 L114 488.6" class="lead"/><circle cx="72" cy="489.6" r="4" class="cf-dot n"/><text x="116" y="493.6" class="mname">Авраам</text><text x="116" y="508.6" class="msub">ок. 2000 до н. э.</text><path d="M76 556.0 L94 556.0 L106 555.0 L114 555.0" class="lead"/><circle cx="72" cy="556.0" r="5" class="cf-dot e"/><rect x="112" y="545.0" width="74" height="20" rx="10" class="chip e"/><text x="119" y="560.0" class="cname e">Индуизм</text><text x="116" y="575.0" class="msub">ок. 1500 до н. э. · ведийская религия</text><path d="M76 589.2 L94 589.2 L106 591.0 L114 591.0" class="lead"/><circle cx="72" cy="589.2" r="5" class="cf-dot ju"/><rect x="112" y="581.0" width="74" height="20" rx="10" class="chip ju"/><text x="119" y="596.0" class="cname ju">Иудаизм</text><text x="116" y="611.0" class="msub">ок. XIII в. до н. э. · Моисей, Синай</text><path d="M76 688.7 L94 688.7 L106 687.7 L114 687.7" class="lead"/><circle cx="72" cy="688.7" r="5" class="cf-dot e"/><rect x="112" y="677.7" width="207" height="20" rx="10" class="chip e"/><text x="119" y="692.7" class="cname e">Буддизм · конфуцианство</text><text x="116" y="707.7" class="msub">ок. V в. до н. э.</text><path d="M76 759.3 L94 759.3 L106 758.3 L114 758.3" class="lead"/><circle cx="72" cy="759.3" r="5" class="cf-dot o"/><rect x="112" y="748.3" width="116" height="20" rx="10" class="chip o"/><text x="119" y="763.3" class="cname o">Христианство</text><text x="116" y="778.3" class="msub">ок. 33 г. · Пятидесятница</text><path d="M76 835.9 L94 835.9 L106 834.9 L114 834.9" class="lead"/><circle cx="72" cy="835.9" r="5" class="cf-dot is"/><rect x="112" y="824.9" width="58" height="20" rx="10" class="chip is"/><text x="119" y="839.9" class="cname is">Ислам</text><text x="116" y="854.9" class="msub">610 г.</text><path d="M76 894.9 L94 894.9 L106 893.9 L114 893.9" class="lead"/><circle cx="72" cy="894.9" r="5" class="cf-dot o"/><rect x="112" y="883.9" width="215" height="20" rx="10" class="chip o"/><text x="119" y="898.9" class="cname o">Православие · Католицизм</text><text x="116" y="913.9" class="msub">1054 г. · разделение Церквей</text><path d="M76 956.3 L94 956.3 L106 955.3 L114 955.3" class="lead"/><circle cx="72" cy="956.3" r="5" class="cf-dot w"/><rect x="112" y="945.3" width="124" height="20" rx="10" class="chip w"/><text x="119" y="960.3" class="cname w">Протестантизм</text><text x="116" y="975.3" class="msub">1517 г. · Реформация</text><path d="M76 997.9 L94 997.9 L106 996.9 L114 996.9" class="lead"/><circle cx="72" cy="997.9" r="5" class="cf-dot w"/><rect x="112" y="986.9" width="74" height="20" rx="10" class="chip w"/><text x="119" y="1001.9" class="cname w">Мормоны</text><text x="116" y="1016.9" class="msub">1830 г.</text><path d="M76 1002.2 L94 1002.2 L106 1032.9 L114 1032.9" class="lead"/><circle cx="72" cy="1002.2" r="5" class="cf-dot w"/><rect x="112" y="1022.9" width="99" height="20" rx="10" class="chip w"/><text x="119" y="1037.9" class="cname w">Адвентисты</text><text x="116" y="1052.9" class="msub">1863 г.</text><path d="M76 1004.4 L94 1004.4 L106 1068.9 L114 1068.9" class="lead"/><circle cx="72" cy="1004.4" r="5" class="cf-dot j"/><rect x="112" y="1058.9" width="149" height="20" rx="10" class="chip j"/><text x="119" y="1073.9" class="cname j">Свидетели Иеговы</text><text x="116" y="1088.9" class="msub">1870-е · имя с 1931 г.</text><path d="M76 1024.0 L94 1024.0 L106 1104.9 L114 1104.9" class="lead"/><circle cx="72" cy="1024.0" r="4" class="cf-dot n"/><text x="116" y="1109.9" class="mname">Сегодня</text><text x="116" y="1124.9" class="msub">2026 г. · 7535 от С. М.</text></svg></div>
+      <p class="note"><b>Два Завета.</b> Слева на шкале — два периода священной истории. <b>Ветхий Завет</b> — от сотворения мира до Рождества Христова: заветы Бога с Ноем, Авраамом и через Моисея на Синае. <b>Новый Завет</b> начинается с пришествия Христа: «сия чаша есть Новый Завет в Моей крови» (Лк 22:20). Само слово «завет» (евр. <i>берит</i>, греч. <i>диатеке</i>) означает и союз Бога с человеком, и завещание.</p>
+      <p class="note"><b>Здесь тоже есть различие.</b> Для православных Новый Завет заключён со всеми, кто во Христе, поэтому Причастие открыто всем верным. Свидетели Иеговы учат, что участники нового завета — только 144 000 помазанников; поэтому на Вечере воспоминания хлеб и вино вкушают лишь они. Свидетели также называют части Библии «Еврейскими» и «Христианскими Греческими Писаниями».</p>
+      <p class="note">Это церковная хронология по Септуагинте, а не научная датировка; даты ранних событий условны. У Свидетелей своя хронология: сотворение Адама они относят к 4026 году до н. э. Ч. Т. Расселл в юности общался с адвентистами, но разошёлся с ними в ряде учений.</p>
+    </div>
+    <div class="card">
+      <h3>Приближение: последние 2000 лет</h3>
+      <p class="note">Та же шкала, увеличенная на участке от Пятидесятницы до наших дней. Обе полосы — в одном масштабе: вехи православия растянуты на двадцать веков, вехи Свидетелей Иеговы умещаются в последние 7% линии. Коричневая полоса — православие, фиолетовая — Свидетели Иеговы. Фиолетовый пунктир — как Свидетели понимают свою связь с христианами I века.</p>
+      <div class="svgwrap"><svg class="tl-svg tall" viewBox="0 0 360 814" role="img" aria-label="Последние 2000 лет в одном масштабе: полоса православия с I века и полоса Свидетелей Иеговы с 1879 года, с основными вехами"><line x1="42" y1="34.0" x2="78" y2="34.0" class="grid"/><text x="38" y="38.0" text-anchor="end" class="tick">0</text><line x1="42" y1="199.0" x2="78" y2="199.0" class="grid"/><text x="38" y="203.0" text-anchor="end" class="tick">500</text><line x1="42" y1="364.0" x2="78" y2="364.0" class="grid"/><text x="38" y="368.0" text-anchor="end" class="tick">1000</text><line x1="42" y1="529.0" x2="78" y2="529.0" class="grid"/><text x="38" y="533.0" text-anchor="end" class="tick">1500</text><line x1="42" y1="694.0" x2="78" y2="694.0" class="grid"/><text x="38" y="698.0" text-anchor="end" class="tick">2000</text><rect x="47" y="44.9" width="10" height="657.7" rx="5" class="bar-o"/><rect x="65" y="654.1" width="10" height="48.5" rx="5" class="bar-j"/><line x1="70" y1="44.9" x2="70" y2="654.1" class="dash-j"/><path d="M58 44.9 L86 44.9 L98 44.9 L104 44.9" class="lead"/><circle cx="52" cy="44.9" r="3" class="dot"/><text x="108" y="48.9" class="mname o">Пятидесятница</text><text x="108" y="61.9" class="msub">ок. 33 · рождение Церкви</text><path d="M58 141.2 L86 141.2 L98 141.2 L104 141.2" class="lead"/><circle cx="52" cy="141.2" r="3" class="dot"/><text x="108" y="145.2" class="mname o">I Вселенский собор</text><text x="108" y="158.2" class="msub">325 · Никейский Символ веры</text><path d="M58 293.7 L86 293.7 L98 293.7 L104 293.7" class="lead"/><circle cx="52" cy="293.7" r="3" class="dot"/><text x="108" y="297.7" class="mname o">VII Вселенский собор</text><text x="108" y="310.7" class="msub">787 · иконопочитание</text><path d="M58 360.0 L86 360.0 L98 360.0 L104 360.0" class="lead"/><circle cx="52" cy="360.0" r="3" class="dot"/><text x="108" y="364.0" class="mname o">Крещение Руси</text><text x="108" y="377.0" class="msub">988</text><path d="M58 381.8 L86 381.8 L98 392.0 L104 392.0" class="lead"/><circle cx="52" cy="381.8" r="3" class="dot"/><text x="108" y="396.0" class="mname o">Разделение с Римом</text><text x="108" y="409.0" class="msub">1054</text><path d="M58 513.5 L86 513.5 L98 513.5 L104 513.5" class="lead"/><circle cx="52" cy="513.5" r="3" class="dot"/><text x="108" y="517.5" class="mname o">Падение Константинополя</text><text x="108" y="530.5" class="msub">1453</text><path d="M76 654.1 L86 654.1 L98 654.1 L104 654.1" class="lead"/><circle cx="70" cy="654.1" r="3" class="dot"/><text x="108" y="658.1" class="mname j">«Сторожевая башня»</text><text x="108" y="671.1" class="msub">1879 · Ч. Т. Расселл</text><path d="M76 665.6 L86 665.6 L98 686.1 L104 686.1" class="lead"/><circle cx="70" cy="665.6" r="3" class="dot"/><text x="108" y="690.1" class="mname j">Ключевая дата СИ</text><text x="108" y="703.1" class="msub">1914 · «невидимое воцарение»</text><path d="M76 671.2 L86 671.2 L98 718.1 L104 718.1" class="lead"/><circle cx="70" cy="671.2" r="3" class="dot"/><text x="108" y="722.1" class="mname j">Имя «Свидетели Иеговы»</text><text x="108" y="735.1" class="msub">1931</text><path d="M76 681.1 L86 681.1 L98 750.1 L104 750.1" class="lead"/><circle cx="70" cy="681.1" r="3" class="dot"/><text x="108" y="754.1" class="mname j">Полный «Перевод нового мира»</text><text x="108" y="767.1" class="msub">1961</text><path d="M76 702.6 L86 702.6 L98 782.1 L104 782.1" class="lead"/><circle cx="70" cy="702.6" r="3" class="dot"/><text x="108" y="786.1" class="mname n">Сегодня</text><text x="108" y="799.1" class="msub">2026</text></svg></div>
+    </div>
+    <div class="card">
+      <h3>Как Свидетели называют себя христианами, если появились недавно?</h3>
+      <p class="note">Обе стороны считают себя продолжением веры I века, но понимают преемственность по-разному.</p>
+      <div class="duo">
+        <div class="pos o"><span class="who">Православие</span><p class="thesis">Преемственность общины</p><ul>
+          <li>Церковь — одно живое тело, которое не прерывалось с Пятидесятницы: «врата ада не одолеют её» (Мф 16:18)</li>
+          <li>Вера передаётся вместе с рукоположением от апостолов к епископам: «возложив на них руки» (Деян 13:3; 1 Тим 4:14)</li>
+          <li>Праведники Ветхого Завета — тоже члены Церкви: «Церковь от Авеля праведного» (блж. Августин)</li>
+          <li>Отсюда вывод: община, возникшая в XIX веке, не может быть той же Церковью</li></ul></div>
+        <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Преемственность учения</p><ul>
+          <li><span class="ref">Ис 43:10</span> «Вы мои свидетели, — говорит Иегова»: служители Бога были всегда</li>
+          <li><span class="ref">Евр 12:1</span> «нас окружает такое большое облако свидетелей» — начиная с Авеля (Евр 11:4)</li>
+          <li><span class="ref">Откр 3:14</span> сам Иисус — «преданный и надёжный свидетель»</li>
+          <li><span class="ref">Мф 13:30</span> «Пусть растут вместе до жатвы»: истинные христиане веками жили среди «сорняков», а в 1870-х их учение было восстановлено</li></ul></div>
+      </div>
+      <p class="crux"><b>Суть:</b> для православных христианство проверяется непрерывностью Церкви от апостолов. Для Свидетелей — соответствием учения Библии, а не возрастом организации. Поэтому одни видят на шкале 150 лет, другие — продолжение веры христиан I века.</p>
+    </div>
+    <p class="note">Свидетели не считают себя «новой» традицией: по их взгляду, они восстанавливают веру христиан I века. Православие видит в непрерывной преемственности главный признак истинности.</p>
+  </section>
+
+  <section id="sources">
+    <p class="eyebrow">2 · Источники авторитета</p>
+    <h2>Писание, Предание и толкование</h2>
+    <div class="duo"><div class="pos o">
+      <span class="who">Православие</span>
+      <p class="thesis">Священное Писание + Священное Предание</p>
+      <ul><li>Библия (Ветхий Завет по Септуагинте)</li><li>Постановления Вселенских соборов</li><li>Труды Отцов Церкви</li><li>Литургия, гимнография, каноны, иконы</li></ul>
+    </div><div class="pos j">
+      <span class="who">Свидетели Иеговы</span>
+      <p class="thesis">Только Библия — в толковании организации</p>
+      <ul><li>Библия, «Перевод нового мира»</li><li>Разъяснения Руководящего совета</li><li>«Сторожевая башня», «Пробудитесь!», книги и брошюры</li><li>Церковное Предание не признаётся</li></ul>
+    </div></div>
+    <figure class="flow">
+      <figcaption class="fl-title">Как стих становится учением: на примере Ин 1:1</figcaption>
+      <div class="fl-grid">
+        <div class="fl-head o">Православие</div><div class="fl-head j">Свидетели Иеговы</div>
+        <div class="fl-step o"><span class="fl-n">1</span><div><b>Писание</b><p>Ин 1:1 — «и Слово было Бог»</p></div></div>
+        <div class="fl-step j"><span class="fl-n">1</span><div><b>Писание</b><p>Ин 1:1 (ПНМ) — «Слово… было богом»</p></div></div>
+<div class="fl-step o"><span class="fl-n">2</span><div><b>Святые Отцы</b><p>Свт. Афанасий Великий (IV в.): Сын не сотворён, Он единосущен Отцу</p></div></div>
+        <div class="fl-step j"><span class="fl-n">2</span><div><b>Руководящий совет</b><p>«Верный и благоразумный раб», поставленный «давать пищу вовремя» (Мф 24:45), готовит толкование</p></div></div>
+<div class="fl-step o"><span class="fl-n">3</span><div><b>Собор</b><p>Никея, 325: «Бога истинна от Бога истинна… несотворенна, единосущна Отцу»</p></div></div>
+        <div class="fl-step j"><span class="fl-n">3</span><div><b>Публикации</b><p>«Сторожевая башня» и книги для изучения излагают это толкование</p></div></div>
+<div class="fl-step o"><span class="fl-n">4</span><div><b>Литургия</b><p>Символ веры поют всей церковью на каждой литургии</p></div></div>
+        <div class="fl-step j"><span class="fl-n">4</span><div><b>Собрание</b><p>Одна и та же тема изучается во всех собраниях мира в одну неделю</p></div></div>
+        <div class="fl-out o"><span class="eyebrow">Итог</span><b>Христос — Бог</b><p>Проверка: вера Церкви «повсюду, всегда и все»</p></div>
+        <div class="fl-out j"><span class="eyebrow">Итог</span><b>Иисус — «бог», первое творение</b><p>Проверка: соответствие Писанию — «проверяя, верно ли то, что им говорят» (Деян 17:11); совет не считается непогрешимым</p></div>
+      </div>
+      <p class="note">Один и тот же стих проходит разный путь. В православии толкование складывается веками и много раз подтверждается: Отцами, соборами, молитвой всей Церкви. У Свидетелей оно готовится одним центром, одинаково для всех, и может уточняться по мере того, как понимание становится «всё ярче» (Притч 4:18).</p>
+    </figure>
+    <details class="topic" open>
+      <summary><h3>Что такое Священное Предание</h3></summary>
+      <div class="body">
+        <p>Живая вера Церкви, передаваемая от апостолов из поколения в поколение. Писание — её записанная часть, а не отдельный источник.</p>
+        <blockquote>«Итак, братия, стойте и держите предания, которым вы научены или словом, или посланием нашим».<cite>2 Фессалоникийцам 2:15</cite></blockquote>
+        <p><b>Только ли устное?</b> Начиналось Предание как устная проповедь апостолов: Евангелия и послания записали не сразу, а общины уже жили верой, крещением и Евхаристией. Но это не «тайные устные легенды»: со временем Предание зафиксировано письменно — в Символе веры, решениях соборов, трудах Отцов, текстах богослужения — и живёт в практике Церкви.</p>
+        <p><b>Из чего состоит:</b> Символ веры (325 и 381 гг.), догматы и правила соборов, творения святых Отцов, литургия, иконы и жития святых. Сам состав Нового Завета из 27 книг впервые перечислил свт. Афанасий Великий в 367 году.</p>
+        <p><b>Критерий подлинности</b> (Викентий Лиринский, V век): то, во что верили «повсюду, всегда и все».</p>
+        <p><b style="color:var(--j)">Взгляд Свидетелей:</b> Предание — это «человеческие традиции», о которых Иисус сказал: «Вы строго соблюдаете человеческие традиции, а заповеди Бога отвергаете» (Мк 7:8, ПНМ); авторитетно только Писание.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="common">
+    <p class="eyebrow">3 · Сравнение</p>
+    <h2>Что совпадает и что различается</h2>
+    <div class="cm-ratio" role="img" aria-label="10 совпадений и 25 различий">
+      <div class="cm-bar"><span class="s" style="width:29%"></span><span class="d" style="width:71%"></span></div>
+      <div class="cm-legend"><span><b>10</b> совпадает</span><span><b>25</b> различается</span></div>
+    </div>
+    <div class="cm">
+      <div class="cm-head"><span class="o">Православие</span><span class="j">Свидетели Иеговы</span></div>
+      <h3 class="cm-group s">✓ Совпадает</h3>
+      <div class="cm-row"><span class="cm-topic">Библия</span><div class="cm-same"><span class="cm-ico">✓</span>Богодухновенное Слово Божие (2 Тим 3:16)</div></div>
+<div class="cm-row"><span class="cm-topic">Бог</span><div class="cm-same"><span class="cm-ico">✓</span>Один Бог — Творец неба и земли</div></div>
+<div class="cm-row"><span class="cm-topic">Иисус</span><div class="cm-same"><span class="cm-ico">✓</span>Мессия, Сын Божий, Спаситель, рождён от Девы Марии</div></div>
+<div class="cm-row"><span class="cm-topic">Жертва</span><div class="cm-same"><span class="cm-ico">✓</span>Смерть Христа — выкуп, искупление грехов</div></div>
+<div class="cm-row"><span class="cm-topic">Воскресение</span><div class="cm-same"><span class="cm-ico">✓</span>Христос воскрес; будет воскресение мёртвых</div></div>
+<div class="cm-row"><span class="cm-topic">Будущее</span><div class="cm-same"><span class="cm-ico">✓</span>Суд, Царство Божие и конец нынешнего зла</div></div>
+<div class="cm-row"><span class="cm-topic">Крещение</span><div class="cm-same"><span class="cm-ico">✓</span>Через погружение в воду</div></div>
+<div class="cm-row"><span class="cm-topic">Молитва</span><div class="cm-same"><span class="cm-ico">✓</span>«Отче наш» как образец молитвы</div></div>
+<div class="cm-row"><span class="cm-topic">Мораль</span><div class="cm-same"><span class="cm-ico">✓</span>Десять заповедей, верность в браке, честность</div></div>
+<div class="cm-row"><span class="cm-topic">Проповедь</span><div class="cm-same"><span class="cm-ico">✓</span>Долг нести Евангелие всем народам (Мф 28:19–20)</div></div>
+      <h3 class="cm-group d">≠ Различается</h3>
+      <p class="cm-sub">Учение</p>
+<div class="cm-row"><span class="cm-topic">Бог</span><div class="cm-pair"><div class="cm-o">Троица: Отец, Сын и Святой Дух — один Бог</div><div class="cm-j">Одна Личность — Иегова; Троицы нет</div></div></div>
+<div class="cm-row"><span class="cm-topic">Имя Бога</span><div class="cm-pair"><div class="cm-o">«Господь», «Сущий»</div><div class="cm-j">«Иегова» — имя, которое важно знать и прославлять (Мф 6:9)</div></div></div>
+<div class="cm-row"><span class="cm-topic">Иисус</span><div class="cm-pair"><div class="cm-o">Истинный Бог, не сотворён</div><div class="cm-j">Первое творение Бога, архангел Михаил</div></div></div>
+<div class="cm-row"><span class="cm-topic">Святой Дух</span><div class="cm-pair"><div class="cm-o">Лицо Троицы, Бог</div><div class="cm-j">Действующая сила Бога</div></div></div>
+<div class="cm-row"><span class="cm-topic">Молитва Христу</span><div class="cm-pair"><div class="cm-o">Да, Христу молятся как Богу</div><div class="cm-j">Нет, молятся только Иегове</div></div></div>
+<div class="cm-row"><span class="cm-topic">Воскресение Христа</span><div class="cm-pair"><div class="cm-o">В том же, прославленном теле</div><div class="cm-j">Воскрешён как дух</div></div></div>
+<div class="cm-row"><span class="cm-topic">Орудие казни</span><div class="cm-pair"><div class="cm-o">Крест</div><div class="cm-j">Столб</div></div></div>
+<div class="cm-row"><span class="cm-topic">Душа</span><div class="cm-pair"><div class="cm-o">Бессмертна по благодати</div><div class="cm-j">Смертна; мёртвые не существуют</div></div></div>
+<div class="cm-row"><span class="cm-topic">Ад</span><div class="cm-pair"><div class="cm-o">Вечная мука для нераскаянных</div><div class="cm-j">Нет; нераскаянные уничтожаются</div></div></div>
+<div class="cm-row"><span class="cm-topic">Небо и земля</span><div class="cm-pair"><div class="cm-o">Одно Царство для всех спасённых; небо и земля обновятся и соединятся</div><div class="cm-j">144 000 — на небе, остальные — на этой Земле, ставшей раем</div></div></div>
+<div class="cm-row"><span class="cm-topic">Второе пришествие</span><div class="cm-pair"><div class="cm-o">Видимое, в будущем; сроки не открыты</div><div class="cm-j">Невидимо началось в 1914 году</div></div></div>
+<p class="cm-sub">Авторитет</p>
+<div class="cm-row"><span class="cm-topic">Канон</span><div class="cm-pair"><div class="cm-o">66 книг + неканонические книги ВЗ</div><div class="cm-j">66 книг</div></div></div>
+<div class="cm-row"><span class="cm-topic">Перевод</span><div class="cm-pair"><div class="cm-o">Церковнославянский, Синодальный</div><div class="cm-j">«Перевод нового мира»</div></div></div>
+<div class="cm-row"><span class="cm-topic">Предание</span><div class="cm-pair"><div class="cm-o">Авторитетно вместе с Писанием</div><div class="cm-j">Отвергается как «человеческие традиции» (Мк 7:8)</div></div></div>
+<div class="cm-row"><span class="cm-topic">Толкует</span><div class="cm-pair"><div class="cm-o">Церковь: Отцы и соборы</div><div class="cm-j">Руководящий совет</div></div></div>
+<div class="cm-row"><span class="cm-topic">Учение со временем</span><div class="cm-pair"><div class="cm-o">Догматы неизменны</div><div class="cm-j">Уточняется («новый свет»)</div></div></div>
+<p class="cm-sub">Практика</p>
+<div class="cm-row"><span class="cm-topic">Крещение младенцев</span><div class="cm-pair"><div class="cm-o">Да</div><div class="cm-j">Нет — только сознательно, после изучения Библии</div></div></div>
+<div class="cm-row"><span class="cm-topic">Причастие</span><div class="cm-pair"><div class="cm-o">На каждой литургии, для всех верных</div><div class="cm-j">Раз в год; вкушают только 144 000</div></div></div>
+<div class="cm-row"><span class="cm-topic">Таинства</span><div class="cm-pair"><div class="cm-o">Семь Таинств</div><div class="cm-j">Только крещение и Вечеря</div></div></div>
+<div class="cm-row"><span class="cm-topic">Иконы и крест</span><div class="cm-pair"><div class="cm-o">Почитаются</div><div class="cm-j">Отвергаются как идолопоклонство</div></div></div>
+<div class="cm-row"><span class="cm-topic">Праздники</span><div class="cm-pair"><div class="cm-o">Пасха, Рождество, годовой круг</div><div class="cm-j">Не отмечают из-за языческих корней, как и дни рождения; отмечают воспоминание смерти Христа</div></div></div>
+<div class="cm-row"><span class="cm-topic">Пост</span><div class="cm-pair"><div class="cm-o">Многодневные посты, среда и пятница</div><div class="cm-j">Нет</div></div></div>
+<div class="cm-row"><span class="cm-topic">Духовенство</span><div class="cm-pair"><div class="cm-o">Епископы, священники, монашество</div><div class="cm-j">Нет; собрания ведут старейшины</div></div></div>
+<div class="cm-row"><span class="cm-topic">Кровь</span><div class="cm-pair"><div class="cm-o">Переливание допускается</div><div class="cm-j">Отказ от переливания; бескровное лечение, фракции крови — по совести</div></div></div>
+<div class="cm-row"><span class="cm-topic">Государство</span><div class="cm-pair"><div class="cm-o">Армия и присяга допустимы</div><div class="cm-j">Нейтралитет: без армии и выборов; налоги и уважение к власти (Рим 13:1)</div></div></div>
+    </div>
+    <p class="note">Общий словарь есть, но за одними словами часто стоит разное содержание. Подробные аргументы по учению — в разделе «Богословие».</p>
+  </section>
+
+  <section id="theology">
+    <p class="eyebrow">4 · Богословские расхождения</p>
+    <h2>Аргументы обеих сторон</h2>
+    <p class="intro">Двенадцать главных вопросов. Слева — православная позиция, справа — позиция Свидетелей Иеговы, с местами Писания, на которые ссылается каждая сторона. Под ними — где именно проходит спор.</p>
+
+    <details class="topic" open>
+      <summary><h3>1. Бог: Троица или одна Личность</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Один Бог в трёх Лицах: Отец, Сын и Святой Дух</p>
+          <ul><li><span class="ref">Мф 28:19</span> «во имя Отца и Сына и Святаго Духа» — одно имя</li><li><span class="ref">Мф 3:16–17</span> Крещение: глас Отца, Сын в воде, Дух в виде голубя</li><li><span class="ref">Быт 1:26</span> «сотворим… по образу Нашему»</li><li><span class="ref">Ин 10:30</span> «Я и Отец — одно»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Бог — одна Личность, Иегова; Троица — позднее учение</p>
+          <ul><li><span class="ref">Пс 83:18</span> «Пусть люди знают, что твоё имя — Иегова, что только ты Всевышний» (в Синод. — 82:19)</li><li><span class="ref">1 Кор 8:6</span> «для нас существует только один Бог, Отец… и один Господь, Иисус Христос»</li><li><span class="ref">Ин 14:28</span> «Отец больше меня»</li><li>Слова «Троица» в Библии нет; учение оформилось в IV веке</li></ul></div></div>
+        <figure class="dgwrap"><svg class="dg" viewBox="0 0 360 196" role="img" aria-label="Схема: у православных один Бог в трёх равных Лицах; у Свидетелей Иеговы — Иегова, сотворённый Им Иисус и остальное творение, а дух — сила Бога"><defs><marker id="ah0" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker></defs><line x1="180" y1="6" x2="180" y2="190" class="div"/><text x="90" y="18" text-anchor="middle" class="hd o">Православие</text><text x="270" y="18" text-anchor="middle" class="hd j">Свидетели Иеговы</text><line x1="90" y1="60" x2="46" y2="132" class="ln-o"/><line x1="46" y1="132" x2="134" y2="132" class="ln-o"/><line x1="90" y1="60" x2="134" y2="132" class="ln-o"/><text x="90" y="112" text-anchor="middle" class="t b" font-size="11">один Бог</text><circle cx="90" cy="60" r="25" class="bo"/><text x="90" y="64" text-anchor="middle" class="t b" font-size="12">Отец</text><circle cx="46" cy="132" r="25" class="bo"/><text x="46" y="136" text-anchor="middle" class="t b" font-size="12">Сын</text><circle cx="134" cy="132" r="25" class="bo"/><text x="134" y="136" text-anchor="middle" class="t b" font-size="12">Дух</text><text x="90" y="186" text-anchor="middle" class="cap">три Лица, одна сущность</text><rect x="212" y="32" width="116" height="28" rx="7" class="sj"/><text x="270.0" y="50.2" text-anchor="middle" class="t b" font-size="12">Иегова</text><line x1="270" y1="60" x2="270" y2="84" class="ar" marker-end="url(#ah0)"/><text x="276" y="77" class="t sm">сотворил</text><rect x="206" y="86" width="128" height="34" rx="7" class="bj"/><text x="270.0" y="100.3" text-anchor="middle" class="t" font-size="11">Иисус (Михаил)</text><text x="270.0" y="113.3" text-anchor="middle" class="t" font-size="11">первое творение</text><line x1="270" y1="120" x2="270" y2="142" class="ar" marker-end="url(#ah0)"/><rect x="212" y="144" width="116" height="24" rx="7" class="bj"/><text x="270.0" y="159.8" text-anchor="middle" class="t" font-size="11">ангелы, люди, мир</text><path d="M328 46 C352 46 352 150 330 156" class="ar dash" fill="none" marker-end="url(#ah0)"/><text x="346" y="104" class="t sm" text-anchor="middle" transform="rotate(90 346 104)">дух — сила</text><text x="270" y="186" text-anchor="middle" class="cap">одна Личность и Её творения</text></svg><figcaption>Схема: как устроено учение о Боге</figcaption></figure>
+        <div class="textdiff">
+          <p class="eyebrow">Разница в самом тексте Библии · 1 Ин 5:7–8</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Синодальный перевод</span><p>«Ибо три свидетельствуют <mark>на небе: Отец, Слово и Святый Дух; и Сии три суть едино. И три свидетельствуют на земле:</mark> дух, вода и кровь; и сии три об одном».</p></div>
+            <div class="pos j"><span class="who">«Перевод нового мира»</span><p>«Ведь есть три свидетеля: дух, вода и кровь, и они свидетельствуют в согласии друг с другом».</p></div>
+          </div>
+          <p class="crux"><b>Выделенных слов нет</b> в греческих рукописях до позднего Средневековья и у греческих Отцов. Они появились в латинской традиции (IV–V века), попали в печатный греческий текст Эразма (1522) и оттуда — в Синодальный и церковнославянский переводы. Православные полемисты (энциклопедия «Азбука веры», еп. Александр Милеант) приводят стих как свидетельство Троицы; Свидетели указывают на него как на позднюю вставку. Большинство библеистов, в том числе православных, считают вставку поздней; учение о Троице опирается и на другие места (Мф 28:19, 2 Кор 13:13).</p>
+        </div>
+        <p class="crux"><b>Где спор:</b> православные относят Ин 14:28 к человеческой природе Христа, а «Троицу» считают поздним названием того, что уже есть в Писании. В «Сотворим» (Быт 1:26) они видят совет равных Лиц; Свидетели — обращение Бога к Сыну как к первому творению.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>2. Кто такой Иисус Христос</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Истинный Бог, рождённый, а не сотворённый</p>
+          <ul><li><span class="ref">Ин 1:1</span> «и Слово было Бог»</li><li><span class="ref">Ин 20:28</span> Фома: «Господь мой и Бог мой!»</li><li><span class="ref">Ин 8:58</span> «прежде нежели был Авраам, Я есмь»</li><li><span class="ref">Кол 2:9</span> «в Нём обитает вся полнота Божества телесно»</li><li><span class="ref">Рим 9:5</span> Христос — «сущий над всем Бог»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Первое творение Бога; «бог», но не Всемогущий</p>
+          <ul><li><span class="ref">Ин 1:1 (ПНМ)</span> Слово «было богом»</li><li><span class="ref">Кол 1:15</span> «первый из всех творений»</li><li><span class="ref">Откр 3:14</span> «первое творение Бога»</li><li><span class="ref">Мк 13:32</span> «не знает никто: ни ангелы на небе, ни Сын — это знает только Отец»</li><li><span class="ref">Притч 8:22</span> Мудрость (по их пониманию — Сын): «Я была первой, кого создал Иегова»</li></ul></div></div>
+        <div class="fathers"><p class="eyebrow">Как толкуют Отцы · по ekzeget.ru</p><ul><li><b>Кол 1:15 — свт. Иоанн Златоуст (IV в.):</b> «не сказал: первозданный, а — перворожденный»</li><li><b>Кол 1:15 — свт. Афанасий Великий (IV в.):</b> «перворожден всея твари назван по тому, что Он виновник приведения твари из небытия в бытие»</li><li><b>Кол 1:15 — блж. Феодорит Кирский (V в.):</b> образ живой и ничем не отличающийся «имеет одно естество с первообразом»</li><li><b>Ин 1:1 — архиеп. Аверкий (Таушев, XX в.):</b> отсутствие артикля при θεός показывает Божественное достоинство Слова, но и то, что Сын — не та же Ипостась, что Отец</li><li><b>Ин 1:1 — свт. Василий Великий (IV в.):</b> «в начале бе Слово» отсекает мысль ариан о том, что было время, когда Сына не было</li></ul></div>
+        <p class="crux"><b>Где спор:</b> в Ин 1:1 слово θεός стоит без артикля — «Бог» по природе или «бог» как качество? Православные: «первенец» (πρωτότοκος) означает первенство — так «первенцем» назван младший Давид (Пс 88:28), а «начало» (ἀρχή) в Откр 3:14 — источник творения. «Я есмь» перекликается с именем Бога в Исх 3:14, поэтому слушатели и взяли камни. Незнание часа относят к человеческой природе. <b>Свидетели</b> (пояснения к ПНМ): в Ин 1:1 θεός с артиклем обозначает Всемогущего Бога, а без артикля — свойство Слова («богоподобный», «божественный»), к тому же Слово было «с Богом»; так же поняли стих древние коптские переводы. Слово <i>прототокос</i> обычно значит «рождённый первым», и Откр 3:14 прямо называет Иисуса «первым творением Бога».</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>3. Христос и архангел Михаил</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Сын выше ангелов; Михаил — сотворённый ангел</p>
+          <ul><li><span class="ref">Евр 1:6</span> «и да поклонятся Ему все Ангелы Божии»</li><li><span class="ref">Евр 1:5</span> «кому когда из Ангелов сказал Бог: Ты Сын Мой?»</li><li><span class="ref">Иуд 9</span> Михаил «не смел произнести укоризненного суда»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Михаил — имя Иисуса до и после земной жизни</p>
+          <ul><li><span class="ref">1 Фес 4:16</span> «Раздастся его громкий призыв — призыв архангела»</li><li><span class="ref">Откр 12:7</span> «Михаил и его ангелы сражались с драконом»</li><li>Библия называет архангелом только одного</li></ul></div></div>
+        <p class="crux"><b>Где спор:</b> в Дан 10:13 Михаил — «один из первых князей», то есть один из нескольких. Свидетели подчёркивают, что Иисус для них не «просто ангел», а первое и высшее творение.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>4. Можно ли молиться Христу</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Да: Христу молятся и поклоняются как Богу</p>
+          <ul><li><span class="ref">Деян 7:59</span> Стефан: «Господи Иисусе! приими дух мой»</li><li><span class="ref">2 Кор 12:8</span> Павел «трижды молил Господа»</li><li><span class="ref">Откр 5:8</span> старцы падают перед Агнцем</li><li><span class="ref">Ин 5:23</span> «да все чтут Сына, как чтут Отца»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Молятся только Иегове — через Иисуса</p>
+          <ul><li><span class="ref">Мф 6:9</span> «Наш небесный Отец, пусть святится твоё имя» — молитва обращена к Отцу</li><li><span class="ref">Ин 16:23</span> «о чём бы вы ни попросили Отца во имя моё, он даст вам»</li><li>Иисус — посредник, а не адресат молитвы</li></ul></div></div>
+        <div class="textdiff">
+          <p class="eyebrow">Как это объясняют Свидетели · Деян 7:59</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Синодальный перевод</span><p>«И побивали камнями Стефана, который молился и говорил: <mark>Господи Иисусе! приими дух мой</mark>».</p></div>
+            <div class="pos j"><span class="who">«Перевод нового мира»</span><p>«…он <mark>обратился к Иисусу</mark>: «Господь Иисус, прими мой дух»».</p></div>
+          </div>
+          <p class="crux"><b>Объяснение Свидетелей</b> (пояснение к стиху на wol.jw.org): греческое слово <i>эпикалео</i> значит «призывать, обращаться», а не обязательно «молиться». Стефан только что видел Иисуса в видении (Деян 7:55–56) и обратился к Нему напрямую — это не молитва и не поклонение. Он знал, что Иегова дал Иисусу власть воскрешать, но не считал Их одним лицом. Похожим образом Свидетели понимают и «поклонение» Иисусу (греч. <i>проскинео</i>): как почтительный поклон, который оказывают и царю, а не как служение Богу.</p>
+          <p class="crux"><b>Ответ православных:</b> в Синодальном переводе прямо сказано «молился», а в греческом тексте то же слово <i>эпикалео</i> описывает призывание имени Господа, от которого зависит спасение (Деян 2:21; Рим 10:13). Умирающий вручает свой дух тому, кого считает Богом, — так Сам Христос на кресте вручил дух Отцу (Лк 23:46).</p>
+        </div>
+        <p class="crux"><b>Где спор:</b> православные: поклонение, которое Христос принимает (прокажённый-самарянин, Лк 17:15–16), подобает только Богу. Свидетели понимают такое «поклонение» как почтительный поклон царю.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>5. Воскресение Христа</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Христос воскрес в том же, но прославленном теле</p>
+          <ul><li><span class="ref">Лк 24:39</span> «осяжите Меня… ибо дух плоти и костей не имеет»</li><li><span class="ref">Ин 20:27</span> Фоме: «подай руку твою и вложи в рёбра Мои»</li><li><span class="ref">1 Кор 15:14</span> «если Христос не воскрес, то… тщетна и вера ваша»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Воскрешён как дух; тело принимал лишь на время явлений</p>
+          <ul><li><span class="ref">1 Пет 3:18</span> «Он был убит как человек, но оживлён как дух»</li><li><span class="ref">1 Кор 15:45</span> «Последний Адам стал духом, дающим жизнь»</li><li><span class="ref">1 Кор 15:50</span> «плоть и кровь не могут наследовать Царство Бога»</li></ul></div></div>
+        <p class="crux"><b>Где спор:</b> пустая гробница и раны на теле — знак того же тела (православные) или временно принятое тело для явлений ученикам (СИ)?</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>6. Святой Дух: Лицо или сила</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Святой Дух — Лицо Троицы, Бог</p>
+          <ul><li><span class="ref">Деян 5:3–4</span> солгать Духу — «солгал не человекам, а Богу»</li><li><span class="ref">Деян 13:2</span> «Дух Святый сказал: отделите Мне…»</li><li><span class="ref">1 Кор 12:11</span> дары — «как Ему угодно»</li><li><span class="ref">Рим 8:26</span> Дух «ходатайствует за нас»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Действующая сила Бога, а не личность</p>
+          <ul><li><span class="ref">Быт 1:2</span> «над водой действовал дух Бога» — сила в действии</li><li><span class="ref">Деян 2:17</span> «я изолью свой дух на самых разных людей» — дух «изливают», как силу</li><li><span class="ref">Притч 1:20</span> «Истинная мудрость громко говорит на улице» — олицетворение</li></ul></div></div>
+        <p class="crux"><b>Где спор:</b> безличную силу нельзя оскорбить (Еф 4:30) и ей нельзя солгать, говорят православные. Свидетели отвечают: личные глаголы — это олицетворение, как «говорит» кровь или мудрость.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>7. Душа, смерть и ад</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Душа бессмертна по благодати; после смерти — суд</p>
+          <ul><li><span class="ref">Мф 10:28</span> «души же не могущих убить»</li><li><span class="ref">Еккл 12:7</span> «дух возвратится к Богу, Который дал его»</li><li><span class="ref">Лк 20:38</span> «у Него все живы»</li><li><span class="ref">Лк 23:43</span> «ныне же будешь со Мною в раю»</li><li><span class="ref">Мф 25:46</span> «пойдут сии в муку вечную»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Душа — сам человек; мёртвые не существуют до воскресения</p>
+          <ul><li><span class="ref">Иез 18:4</span> «Умрёт та душа, которая грешит»</li><li><span class="ref">Еккл 9:5</span> «мёртвые ничего не знают»</li><li><span class="ref">Быт 3:19</span> «из земли ты создан и в землю возвратишься»</li><li><span class="ref">Лк 23:43 (ПНМ)</span> «Обещаю тебе сегодня: ты будешь со мной в раю»</li><li>Ада-мучения нет: нераскаянных ждёт уничтожение</li></ul></div></div>
+        <figure class="dgwrap"><svg class="dg" viewBox="0 0 360 210" role="img" aria-label="Схема: у православных после смерти душа живёт и проходит частный суд, затем воскресение и Страшный суд; у Свидетелей Иеговы после смерти небытие, затем воскресение как воссоздание и суд по делам"><defs><marker id="ah3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker></defs><line x1="180" y1="6" x2="180" y2="204" class="div"/><text x="90" y="18" text-anchor="middle" class="hd o">Православие</text><text x="270" y="18" text-anchor="middle" class="hd j">Свидетели Иеговы</text><rect x="26" y="30" width="128" height="34" rx="7" class="bo"/><text x="90.0" y="50.9" text-anchor="middle" class="t" font-size="11">смерть тела</text><line x1="90" y1="64" x2="90" y2="74" class="ar" marker-end="url(#ah3)"/><rect x="26" y="76" width="128" height="34" rx="7" class="bo"/><text x="90.0" y="90.3" text-anchor="middle" class="t b" font-size="11">душа живёт,</text><text x="90.0" y="103.3" text-anchor="middle" class="t b" font-size="11">частный суд</text><line x1="90" y1="110" x2="90" y2="120" class="ar" marker-end="url(#ah3)"/><rect x="26" y="122" width="128" height="34" rx="7" class="bo"/><text x="90.0" y="136.3" text-anchor="middle" class="t" font-size="11">воскресение:</text><text x="90.0" y="149.3" text-anchor="middle" class="t" font-size="11">душа + тело</text><line x1="90" y1="156" x2="90" y2="166" class="ar" marker-end="url(#ah3)"/><rect x="26" y="168" width="128" height="34" rx="7" class="bo"/><text x="90.0" y="188.8" text-anchor="middle" class="t" font-size="11">Страшный суд</text><rect x="206" y="30" width="128" height="34" rx="7" class="bj"/><text x="270.0" y="50.9" text-anchor="middle" class="t" font-size="11">смерть</text><line x1="270" y1="64" x2="270" y2="74" class="ar" marker-end="url(#ah3)"/><rect x="206" y="76" width="128" height="34" rx="7" class="bj"/><text x="270.0" y="90.3" text-anchor="middle" class="t b" font-size="11">небытие,</text><text x="270.0" y="103.3" text-anchor="middle" class="t b" font-size="11">«как сон»</text><line x1="270" y1="110" x2="270" y2="120" class="ar" marker-end="url(#ah3)"/><rect x="206" y="122" width="128" height="34" rx="7" class="bj"/><text x="270.0" y="136.3" text-anchor="middle" class="t" font-size="11">воскресение:</text><text x="270.0" y="149.3" text-anchor="middle" class="t" font-size="11">воссоздание</text><line x1="270" y1="156" x2="270" y2="166" class="ar" marker-end="url(#ah3)"/><rect x="206" y="168" width="128" height="34" rx="7" class="bj"/><text x="270.0" y="182.3" text-anchor="middle" class="t" font-size="11">суд по делам</text><text x="270.0" y="195.3" text-anchor="middle" class="t" font-size="11">после воскресения</text></svg><figcaption>Схема: что происходит после смерти</figcaption></figure>
+        <div class="textdiff">
+          <p class="eyebrow">Спор 1 · Лк 23:43 — где поставить запятую</p>
+          <p class="greek">Ἀμήν σοι λέγω σήμερον μετ᾽ ἐμοῦ ἔσῃ ἐν τῷ παραδείσῳ<br><span>«Аминь тебе говорю сегодня со Мной будешь в раю» — в рукописях нет знаков препинания</span></p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Синодальный перевод</span><p>«Истинно говорю тебе<mark>, ныне же</mark> будешь со Мною в раю».</p><p class="small">Разбойник будет в раю в тот же день.</p></div>
+            <div class="pos j"><span class="who">«Перевод нового мира»</span><p>«Обещаю тебе <mark>сегодня:</mark> ты будешь со мной в раю».</p><p class="small">Обещание дано сегодня, рай наступит в будущем.</p></div>
+          </div>
+          <div class="duo">
+            <div class="pos o"><span class="who">Доводы православных</span><ul>
+              <li>Формула «Истинно говорю тебе (вам)» встречается в Евангелиях десятки раз и нигде больше не соединяется со словом «сегодня»</li>
+              <li>Разбойник просит о будущем: «помяни меня, когда приидешь» (23:42), — Христос отвечает: «ныне»</li>
+              <li>Богослужение: «Во гробе плотски, во аде же с душею яко Бог, в раи же с разбойником…» (Пасхальные часы)</li></ul></div>
+            <div class="pos j"><span class="who">Доводы Свидетелей</span><ul>
+              <li>«Обещаю тебе сегодня» — торжественный оборот, как во Втор 30:15: «Я предлагаю вам сегодня жизнь и добро»</li>
+              <li>В тот день Иисус не был в раю: «Сын человеческий будет в сердце земли три дня и три ночи» (Мф 12:40)</li>
+              <li>После воскресения сказал: «я ещё не поднялся к Отцу» (Ин 20:17)</li>
+              <li>Пояснение к ПНМ: грамматика допускает оба прочтения; «рай» — райская земля, где разбойник воскреснет среди «неправедных» (Деян 24:15)</li></ul></div>
+          </div>
+        </div>
+        <div class="fathers"><p class="eyebrow">Как толкуют Отцы Лк 23:43 · по ekzeget.ru</p><ul><li><b>Прп. Ефрем Сирин (IV в.):</b> «Господь ускорил отдаленные дары Свои и дал близкое обетование, говоря: „сегодня“»</li><li><b>Блж. Иероним (IV–V вв.):</b> «Крест Христа есть ключ от рая; крест Христа отверз рай разбойнику»</li><li><b>Свт. Игнатий (Брянчанинов, XIX в.):</b> «в рай помещается душа разбойника, исповедавшего Христа Господом на кресте»</li></ul></div>
+        <div class="textdiff">
+          <p class="eyebrow">Спор 2 · Что такое «душа»</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Православие</span><ul>
+              <li>Душа отлична от тела и переживает его: «не бойтесь убивающих тело, души же не могущих убить» (Мф 10:28)</li>
+              <li>Души убиенных взывают к Богу (Откр 6:9–10) — они в сознании</li>
+              <li>Притча о богаче и Лазаре (Лк 16:19–31) описывает сознательную жизнь после смерти</li></ul></div>
+            <div class="pos j"><span class="who">Свидетели Иеговы</span><ul>
+              <li>Евр. <i>нефеш</i> — живое существо: человек «стал живым человеком» (Быт 2:7, ПНМ; в Синод. — «душою живою»), а не «получил душу»</li>
+              <li>Смерть — как сон: «Наш друг Лазарь уснул, но я иду его разбудить» (Ин 11:11)</li>
+              <li>Откр 6:9 и Лк 16 — образы: так и «кровь твоего брата взывает ко мне с земли» (Быт 4:10)</li></ul></div>
+          </div>
+          <p class="crux"><b>Суть:</b> православные читают эти места буквально и видят в них учение о бессмертной душе; Свидетели считают их образными и опираются на ветхозаветное понимание души как самого живого человека. Слова «бессмертная душа» в Библии нет — с этим согласны обе стороны; спор о том, есть ли само учение.</p>
+        </div>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>8. Спасение, 144 000, тысячелетие и 1914 год</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Одно Царство для всех спасённых; сроки не открыты</p>
+          <ul><li><span class="ref">Откр 7:4</span> 144 000 — символ полноты (12 × 12 × 1000)</li><li><span class="ref">Откр 7:9</span> «великое множество» — «пред престолом»</li><li><span class="ref">Ин 5:28–29</span> воскреснут все, кто в гробах</li><li><span class="ref">Откр 20</span> тысячелетие — символ эпохи Церкви</li><li><span class="ref">Мф 24:27, 30</span> пришествие видимо, «как молния»</li><li><span class="ref">Деян 1:7</span> «не ваше дело знать времена»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">144 000 — на небе, остальные спасённые — вечно на земле</p>
+          <ul><li><span class="ref">Откр 14:3</span> «никто не мог выучить эту песню, кроме 144 000, купленных с земли» — число буквальное</li><li><span class="ref">Пс 37:29</span> «Праведные унаследуют землю и будут жить на ней вечно» (в Синод. — 36:29)</li><li><span class="ref">Деян 24:15</span> «будет воскресение праведных и неправедных» — на земле</li><li><span class="ref">Откр 20</span> буквальное тысячелетнее правление Христа</li><li><span class="ref">Дан 4:16</span> «Пусть так пройдёт семь времён» — отсчёт до 1914 года, когда Христос невидимо воцарился</li><li>Спасение — по незаслуженной доброте Бога, через выкуп, при вере, перемене жизни и крещении</li></ul></div></div>
+        <figure class="dgwrap"><svg class="dg" viewBox="0 0 360 184" role="img" aria-label="Схема: у православных после Страшного суда — Царство Небесное или вечная мука; у Свидетелей Иеговы — 144 000 на небе, остальные спасённые вечно на земле, нераскаянные гибнут навсегда"><defs><marker id="ah2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0 L10 5 L0 10 z" class="ah"/></marker></defs><line x1="180" y1="6" x2="180" y2="178" class="div"/><text x="90" y="18" text-anchor="middle" class="hd o">Православие</text><text x="270" y="18" text-anchor="middle" class="hd j">Свидетели Иеговы</text><rect x="30" y="30" width="120" height="28" rx="7" class="bo"/><text x="90.0" y="47.9" text-anchor="middle" class="t b" font-size="11">Страшный суд — все</text><line x1="70" y1="58" x2="52" y2="92" class="ar" marker-end="url(#ah2)"/><line x1="110" y1="58" x2="128" y2="92" class="ar" marker-end="url(#ah2)"/><rect x="6" y="94" width="88" height="40" rx="7" class="so_t"/><text x="50.0" y="111.3" text-anchor="middle" class="t b" font-size="11">Царство</text><text x="50.0" y="124.3" text-anchor="middle" class="t b" font-size="11">Небесное</text><rect x="100" y="94" width="74" height="40" rx="7" class="bo"/><text x="137.0" y="111.3" text-anchor="middle" class="t" font-size="11">вечная</text><text x="137.0" y="124.3" text-anchor="middle" class="t" font-size="11">мука</text><text x="90" y="160" text-anchor="middle" class="cap">одно Царство для всех</text><text x="90" y="174" text-anchor="middle" class="cap">спасённых</text><rect x="206" y="30" width="128" height="28" rx="7" class="bj"/><text x="270.0" y="47.9" text-anchor="middle" class="t b" font-size="11">суд, Армагеддон</text><line x1="240" y1="58" x2="214" y2="92" class="ar" marker-end="url(#ah2)"/><line x1="270" y1="58" x2="270" y2="92" class="ar" marker-end="url(#ah2)"/><line x1="300" y1="58" x2="326" y2="92" class="ar" marker-end="url(#ah2)"/><rect x="186" y="94" width="56" height="48" rx="7" class="sj_t"/><text x="214.0" y="115.5" text-anchor="middle" class="t b" font-size="10">144 000</text><text x="214.0" y="127.5" text-anchor="middle" class="t b" font-size="10">на небе</text><rect x="246" y="94" width="48" height="48" rx="7" class="bj"/><text x="270.0" y="109.5" text-anchor="middle" class="t" font-size="10">рай на</text><text x="270.0" y="121.5" text-anchor="middle" class="t" font-size="10">этой</text><text x="270.0" y="133.5" text-anchor="middle" class="t" font-size="10">Земле</text><rect x="298" y="94" width="56" height="48" rx="7" class="bj"/><text x="326.0" y="115.5" text-anchor="middle" class="t" font-size="10">гибель</text><text x="326.0" y="127.5" text-anchor="middle" class="t" font-size="10">навсегда</text><text x="270" y="160" text-anchor="middle" class="cap">небо для 144 000,</text><text x="270" y="174" text-anchor="middle" class="cap">земля для остальных</text></svg><figcaption>Схема: итог истории — одно Царство или два назначения</figcaption></figure>
+        <div class="textdiff">
+          <p class="eyebrow">Какая земля? Что будет с миром</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Православие</span><p class="thesis">Мир не исчезнет, а преобразится</p><ul>
+              <li>«Новое небо и новая земля» (Откр 21:1; 2 Пет 3:13) — то же творение, обновлённое и освобождённое от тления (Рим 8:21)</li>
+              <li>Небо и земля соединятся: Бог будет «всё во всём» (1 Кор 15:28)</li>
+              <li>Солнце станет не нужно: «слава Божия осветила его» (Откр 21:23)</li>
+              <li>Спасённые — в воскресших телах, все вместе; подробности — тайна: «не видел того глаз» (1 Кор 2:9)</li></ul></div>
+            <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Эта самая планета станет раем</p><ul>
+              <li>Земля не будет уничтожена: «земля остаётся навечно» (Еккл 1:4); «она никогда не сдвинется с места» (Пс 104:5)</li>
+              <li>Армагеддон уничтожит злую систему и нечестивых, а не планету</li>
+              <li>«Новое небо» — небесное правительство Христа и 144 000; «новая земля» — праведное человечество</li>
+              <li>«Бог вытрет слёзы с их глаз, и смерти больше не будет» (Откр 21:4); «люди будут строить дома и жить в них» (Ис 65:21)</li></ul></div>
+          </div>
+          <div class="fathers"><p class="eyebrow">Как толкуют Откр 7:4 · по ekzeget.ru</p><ul><li><b>Прп. Беда Достопочтенный (VIII в.):</b> «этим конечным числом обозначается неисчислимое множество всей Церкви»</li><li><b>Иером. Иов (Гумеров):</b> «данная цифра является символической и выражает высшую степень полноты: 12 × 12 × 1000»</li><li><b>Архиеп. Аверкий (Таушев):</b> «сыны Израилевы» — духовный Израиль, то есть Церковь, а не счёт по коленам</li></ul></div>
+        <p class="crux"><b>Суть:</b> обе стороны ждут обновлённую землю, а не исчезновение мира. Различие — в том, соединены ли небо и земля для всех спасённых.</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Православие: все вместе с Богом</span><ul>
+              <li><span class="ref">Откр 21:3</span> «се, скиния Бога с человеками, и Он будет обитать с ними; они будут Его народом»</li>
+              <li><span class="ref">Еф 1:10</span> «дабы всё небесное и земное соединить под главою Христом»</li>
+              <li><span class="ref">Ин 17:24</span> «хочу, чтобы там, где Я, и они были со Мною»</li>
+              <li><span class="ref">1 Фес 4:17</span> «и так всегда с Господом будем»</li>
+              <li><span class="ref">Ин 10:16</span> «другие овцы» — язычники, и итог: «будет одно стадо и один Пастырь»</li>
+              <li><span class="ref">Символ веры</span> «Чаю воскресения мертвых и жизни будущаго века»</li></ul></div>
+            <div class="pos j"><span class="who">Свидетели: небо и земля раздельно</span><ul>
+              <li><span class="ref">Откр 14:3</span> песню не мог выучить никто, «кроме 144 000, купленных с земли»</li>
+              <li><span class="ref">Откр 5:10 (ПНМ)</span> «они будут править землёй» — с неба, а не живя на ней</li>
+              <li><span class="ref">Ин 10:16</span> «У меня есть и другие овцы, не из этого загона» — земной класс, не входящий в 144 000</li>
+              <li><span class="ref">Мф 5:5</span> «Счастливы кроткие, потому что они унаследуют землю»</li>
+              <li><span class="ref">Пс 37:29</span> «Праведные унаследуют землю и будут жить на ней вечно» (в Синод. — 36:29)</li></ul></div>
+          </div>
+          <p class="crux"><b>Где спор:</b> православные замечают, что в тех же заповедях блаженства «наследуют землю» (Мф 5:5) стоит рядом с «их есть Царство Небесное» (Мф 5:3, 10) — это одно обетование, а не два класса. В Синодальном переводе Откр 5:10 — «будем царствовать на земле», в «Переводе нового мира» — «будут править землёй». Свидетели отвечают, что греческий предлог <i>эпи</i> здесь значит «над», а обетования земли и неба относятся к разным группам.</p>
+        </div>
+        <p class="crux"><b>Спасение как обожение.</b> В православии спасение — не только прощение грехов, но <b>обожение</b> (теосис): соединение с Богом по благодати, «причастие Божеского естества» (2 Пет 1:4), без превращения в Бога по сущности. Свт. Афанасий Великий: Бог стал человеком, чтобы человек стал богом — по благодати. Православные замечают: если Христос не Бог, соединить человека с Богом Он не может. <b>Свидетели</b> понимают спасение через выкуп: Христос — «человек… который отдал себя как соответствующий выкуп за всех» (1 Тим 2:5–6, ПНМ), то есть совершенная жизнь за совершенную жизнь Адама; для этого Иисусу не нужно быть Всемогущим Богом.</p>
+        <p class="crux"><b>Расчёт 1914:</b> 2520 лет от разрушения Иерусалима, которое СИ датируют 607 г. до н. э.; историки — 587/586 г. до н. э.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>9. Кто толкует Писание</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Писание — книга Церкви и читается вместе с Отцами</p>
+          <ul><li><span class="ref">1 Тим 3:15</span> Церковь — «столп и утверждение истины»</li><li><span class="ref">Мф 4:6</span> и сатана цитировал Писание — важен дух, а не буква</li><li>Уже Игнатий Антиохийский (II век) называет Христа «Богом нашим»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Понимание даёт «верный и благоразумный раб»</p>
+          <ul><li><span class="ref">Мф 24:45</span> «Кто же верный и благоразумный раб, которого господин поставил над слугами… чтобы давать им пищу вовремя?» — Руководящий совет</li><li><span class="ref">Притч 4:18</span> «путь праведных — как свет утренней зари, который становится всё ярче и ярче»</li><li>Ранние тексты (Дидахе) не содержат учения о Троице</li></ul></div></div>
+        <div class="textdiff">
+          <p class="eyebrow">Кто такие Отцы Церкви</p>
+          <p><b>Отцы Церкви</b> (святые отцы) — богословы и учители, чьё учение Церковь признала верным выражением своей веры. Их узнают по четырём признакам: святость жизни, верность учению, признание Церковью и, для ранних, древность. «Отцами» их называют потому, что они «родили» верующих в вере (ср. 1 Кор 4:15: «я родил вас во Христе Иисусе благовествованием»).</p>
+          <ul class="timeline tl-o">
+            <li><b>I–II века · мужи апостольские</b> — ученики апостолов: Климент Римский, Игнатий Антиохийский, Поликарп Смирнский</li>
+            <li><b>II–III века · апологеты</b> — защищали веру перед язычниками: Иустин Философ, Ириней Лионский</li>
+            <li><b>IV–V века · «золотой век»</b> — Афанасий Великий, Василий Великий, Григорий Богослов, Иоанн Златоуст, Григорий Нисский</li>
+            <li><b>VII–XIV века</b> — Максим Исповедник, Иоанн Дамаскин, Симеон Новый Богослов, Григорий Палама</li>
+          </ul>
+          <p class="crux"><b>Взгляд Свидетелей:</b> после смерти апостолов началось отступничество, о котором предупреждал Павел: «к вам придут свирепые волки» (Деян 20:29–30, ПНМ; 2 Фес 2:3). Поэтому труды Отцов для них не авторитет, а пример того, как в христианство проникла греческая философия.</p>
+        </div>
+        <div class="textdiff">
+          <p class="eyebrow">Спор о непрерывности Церкви · диспут прот. Олега Стеняева (pravoslavie.ru)</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Православие</span><p class="thesis">Церковь не прерывалась ни на день</p><ul>
+              <li><span class="ref">Мф 16:18</span> «создам Церковь Мою, и врата ада не одолеют её»</li>
+              <li><span class="ref">Мф 28:20</span> «Я с вами во все дни до скончания века»</li>
+              <li><span class="ref">1 Кор 11:2</span> «храните предания так, как я передал вам»; <span class="ref">2 Пет 3:16</span> в посланиях «есть нечто неудобовразумительное»</li>
+              <li>Реформаторы, которых Свидетели считают предшественниками (Уиклиф, Тиндейл), исповедовали Троицу и Божество Христа</li></ul></div>
+            <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">После апостолов — отступничество</p><ul>
+              <li><span class="ref">Мф 13:30</span> «Пусть растут вместе до жатвы»: истинные христиане веками были рассеяны среди «сорняков»</li>
+              <li><span class="ref">Деян 20:29–30</span> «когда я уйду, к вам придут свирепые волки… и среди вас самих появятся люди, которые будут искажать истину»</li>
+              <li>К IV веку (Никея, 325) церковь соединилась с империей и языческой философией</li>
+              <li>Истинное поклонение восстановлено в конце XIX — начале XX века</li></ul></div>
+          </div>
+        </div>
+        <div class="textdiff">
+          <p class="eyebrow">Кто такие Руководящий совет и почему именно они</p>
+          <p><b>Кто это.</b> Небольшая группа мужчин-помазанников, то есть из тех, кто считает себя одним из 144 000. На jw.org перечислены 11 человек, штаб-квартира в Уорике (США). Себя они посланниками или пророками не называют.</p>
+          <div class="duo">
+            <div class="pos o"><span class="who">Ответ православных</span><ul>
+              <li>Притча Мф 24:45 обращена ко всем служителям Церкви — апостолам и их преемникам, а не к организации XX века</li>
+              <li>Если «раб» поставлен только в 1919 году, кто кормил верных восемнадцать веков до этого?</li>
+              <li>Иерусалимский собор — прообраз Вселенских соборов: решает собрание епископов всей Церкви, преемников апостолов, а не постоянная группа в одном центре</li>
+              <li>Признание, что совет может ошибаться, при обязательности его разъяснений для всех, православные считают противоречием</li></ul></div>
+            <div class="pos j"><span class="who">Как объясняют Свидетели</span><ul>
+              <li><span class="ref">Мф 24:45</span> «верный и благоразумный раб», поставленный «давать им пищу вовремя», — это Руководящий совет (так понимают с 2013 года)</li>
+              <li><span class="ref">Мал 3:1</span> «Я пошлю своего вестника, и он расчистит путь передо мной»: в 1914–1919 годах Иисус «проверил» религии и в 1919 году поставил этого «раба» над Своими последователями</li>
+              <li><span class="ref">Деян 15:28</span> образец — Иерусалимский совет: «Святой дух помог нам прийти к выводу…»</li>
+              <li><span class="ref">Еф 5:23</span> «Христос — глава собрания»; совет не вдохновлён и не непогрешим, может ошибаться и исправлять понимание</li>
+              <li>Решения принимают, обсуждая Писание и стремясь к единогласию</li></ul></div>
+          </div>
+        </div>
+        <p class="crux"><b>Где спор:</b> православные: Дидахе не излагает Троицу, но предполагает её (крещение «во имя Отца и Сына и Святаго Духа»). Свидетели: позднейшие соборы добавили к Писанию философские понятия.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>10. Библия: «Перевод нового мира»</h3></summary>
+      <div class="body">
+        <div class="duo"><div class="pos o"><span class="who">Взгляд православных на ПНМ</span><p class="thesis">Перевод подстроен под учение организации</p>
+          <ul><li>Ни одна рукопись Нового Завета не содержит имени «Иегова»</li><li><span class="ref">Ин 1:1</span> «было богом» вместо «было Бог»</li><li><span class="ref">Кол 1:16–17</span> добавлено слово «остальное»</li><li>Переводчики анонимны — проверить квалификацию нельзя</li></ul></div><div class="pos j"><span class="who">Взгляд Свидетелей</span><p class="thesis">Точный перевод, возвращающий имя Бога</p>
+          <ul><li>Новый Завет — 1950, вся Библия — 1961</li><li>«Иегова» восстановлено в Новом Завете 237 раз</li><li>Анонимность — чтобы слава была Богу, а не людям</li><li>Цель — ясный современный язык и верность оригиналу</li>
+            <li>Критика традиционных переводов: имя Бога, стоящее в Еврейских Писаниях почти 7 000 раз, заменено на «Господь»; 1 Ин 5:7 содержит позднюю вставку</li></ul></div></div>
+        <p class="crux"><b>Где спор:</b> СИ считают, что переписчики заменили тетраграмматон на «Господь»; православные и большинство библеистов называют это предположением: апостолы цитировали Септуагинту с «Господь». В православном богослужении — церковнославянский текст, для чтения — Синодальный перевод (1876). Свидетели указывают на дохристианские списки Септуагинты, где тетраграмматон сохранился, и на переводы Нового Завета на иврит, где имя восстановлено.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>11. Иконы, святые и Богородица</h3></summary>
+      <div class="body">
+        <div class="duo">
+          <div class="pos o"><span class="who">Православие</span><p class="thesis">Образ указывает на первообраз; святые живы у Бога</p><ul>
+            <li><span class="ref">Исх 25:18–22</span> Бог Сам велел сделать золотых херувимов на ковчеге: «там Я буду открываться тебе»</li>
+            <li><span class="ref">Кол 1:15</span> Христос — «образ Бога невидимого»: Боговоплощение сделало Бога изобразимым</li>
+            <li><span class="ref">Мф 22:32</span> «Бог не есть Бог мёртвых, но живых» — поэтому святых просят о молитве</li>
+            <li><span class="ref">Лк 1:43, 48</span> Мария — «Матерь Господа моего»; «отныне будут ублажать Меня все роды»</li></ul></div>
+          <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Поклонение — только Иегове, без изображений</p><ul>
+            <li><span class="ref">Исх 20:4–5</span> «Не делай себе никаких идолов, изображений… Не кланяйся и не служи им»</li>
+            <li><span class="ref">1 Ин 5:21</span> «Мои любимые дети, держитесь в стороне от идолов»</li>
+            <li><span class="ref">Еккл 9:5</span> «мёртвые ничего не знают»; «есть… один посредник между Богом и людьми» (1 Тим 2:5)</li>
+            <li><span class="ref">Мф 13:55–56</span> «его братья — Иаков, Иосиф, Симон и Иуда, и все его сёстры»: у Марии были и другие дети; её уважают, но не почитают как Богородицу</li></ul></div>
+        </div>
+        <p class="crux"><b>Где спор:</b> православные различают идол, за которым не стоит никакой реальности, и икону, которая «всегда предполагает первообраз», а также поклонение Богу и почитание образа (VII Вселенский собор, 787). «Братьев Господа» Церковь считает детьми Иосифа от первого брака или родственниками. Свидетели видят в любом поклоне перед изображением нарушение второй заповеди.</p>
+      </div>
+    </details>
+
+    <details class="topic" open>
+      <summary><h3>12. Праздники и дни рождения</h3></summary>
+      <div class="body">
+        <div class="duo">
+          <div class="pos o"><span class="who">Православие</span><p class="thesis">Праздники освящают время</p><ul>
+            <li><span class="ref">Быт 2:3</span> Бог Сам «благословил седьмой день и освятил его»</li>
+            <li><span class="ref">Деян 20:7</span> христиане собирались «в первый день недели» для преломления хлеба</li>
+            <li><span class="ref">Деян 2:1</span> апостолы праздновали Пятидесятницу</li>
+            <li><span class="ref">1 Кор 5:7</span> «Пасха наша, Христос, заклан за нас» — новозаветная Пасха празднует Воскресение</li></ul></div>
+          <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Отмечают только смерть Христа</p><ul>
+            <li><span class="ref">Лк 22:19</span> «Делайте это в память обо мне» — Вечеря раз в год, 14 нисана</li>
+            <li><span class="ref">Быт 40:20; Мф 14:6</span> «был день рождения фараона»; «когда праздновали день рождения Ирода» — в Библии их отмечают только эти двое</li>
+            <li>Рождество и многие обычаи Пасхи — языческого происхождения</li>
+            <li><span class="ref">2 Кор 6:17</span> «Поэтому покиньте их и отделитесь»</li></ul></div>
+        </div>
+        <p class="crux"><b>Где спор:</b> православные отвечают, что формы богослужения развивались и в Ветхом Завете (Давид добавил к установлениям Моисея псалмы и музыку), а праздник — не обычай ради обычая, а воспоминание событий спасения (иером. Иов Гумеров, pravoslavie.ru). Свидетели считают, что заповедано только одно воспоминание — смерти Христа.</p>
+      </div>
+    </details>
+  </section>
+
+  <section id="literature">
+    <p class="eyebrow">5 · Литература</p>
+    <h2>Литература двух традиций</h2>
+    <p class="intro">Две разные модели. Православная библиотека копится веками: старые тексты не отменяются, к ним добавляются новые. У Свидетелей — единый корпус материалов, который обновляется и переводится на языки всего мира.</p>
+    <div class="duo">
+      <div class="pos o"><span class="who">Православие</span><p class="thesis">Накопленное наследие</p>
+        <div class="lit"><b>7 000+</b><span>сочинений греческих Отцов I–VIII веков (каталог Clavis Patrum Graecorum)</span></div>
+        <div class="lit"><b>378 томов</b><span>патрологии Миня (XIX век): 161 греческий и 217 латинских</span></div>
+        <div class="lit"><b>75 томов</b><span>«Православной энциклопедии» (2000–2025)</span></div>
+        <div class="lit"><b>25 800+</b><span>трудов в онлайн-библиотеке «Азбука веры»</span></div>
+        <p class="small">Всего — десятки тысяч сочинений на греческом, латыни, сирийском, славянском и других языках. Для чтения многих нужны знание языков и истории.</p>
+      </div>
+      <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Единые и доступные материалы</p>
+        <div class="lit"><b>1 000+</b><span>языков на jw.org (с 2019 года)</span></div>
+        <div class="lit"><b>1 издатель</b><span>одинаковые материалы для собраний всего мира</span></div>
+        <div class="lit"><b>Бесплатно</b><span>публикации и приложение JW Library, издаются на пожертвования</span></div>
+        <div class="lit"><b>Просто</b><span>современный язык, практические темы: изучение Библии, семья, проповедь</span></div>
+        <p class="small">Материалы обновляются по мере уточнения понимания; авторы публикаций не указываются.</p>
+      </div>
+    </div>
+    <p class="note">Объём здесь — не мера истины. Традиции решают разные задачи: одна хранит многовековое наследие, другая стремится сделать своё учение понятным каждому на его родном языке.</p>
+  </section>
+
+  <section id="structure">
+    <p class="eyebrow">6 · Устройство</p>
+    <h2>Соборность и централизация</h2>
+    <div class="duo"><div class="pos o"><span class="who">Православие</span><ul><li>Семья самостоятельных поместных Церквей</li><li>Епископат и апостольское преемство</li><li>Решения — через Синоды и Соборы</li><li>Патриарх Константинопольский — «первый среди равных», без власти над другими Церквами. Титул «Вселенский» исторический, византийский (с VI века): «вселенной» (греч. <i>ойкумена</i>) тогда называли Римскую империю, а Константинополь был её столицей. В том же смысле и соборы названы «Вселенскими»</li></ul></div><div class="pos j"><span class="who">Свидетели Иеговы</span><ul><li>Руководящий совет — единый центр учения</li><li>Штаб-квартира в Уорике (США), до 2017 года — Бруклин</li><li>Единые материалы для всех собраний мира</li><li>Единое понимание для всех собраний (1 Кор 1:10); глава собрания — Христос (Еф 5:23)</li><li>За серьёзные проступки без раскаяния и отход от учения — исключение из собрания</li></ul></div></div>
+    <figure class="dgwrap"><svg class="dg" viewBox="0 0 360 228" role="img" aria-label="Схема: православие — сеть равных поместных Церквей без главной, решающих вопросы на Соборах, глава Церкви — Христос; Свидетели Иеговы — пирамида: Руководящий совет, филиалы, собрания, возвещатели"><line x1="180" y1="6" x2="180" y2="222" class="div"/><text x="90" y="18" text-anchor="middle" class="hd o">Православие</text><text x="270" y="18" text-anchor="middle" class="hd j">Свидетели Иеговы</text><line x1="90.0" y1="54.0" x2="138.5" y2="82.0" class="ln-o thin"/><line x1="90.0" y1="54.0" x2="138.5" y2="138.0" class="ln-o thin"/><line x1="90.0" y1="54.0" x2="90.0" y2="166.0" class="ln-o thin"/><line x1="90.0" y1="54.0" x2="41.5" y2="138.0" class="ln-o thin"/><line x1="90.0" y1="54.0" x2="41.5" y2="82.0" class="ln-o thin"/><line x1="138.5" y1="82.0" x2="138.5" y2="138.0" class="ln-o thin"/><line x1="138.5" y1="82.0" x2="90.0" y2="166.0" class="ln-o thin"/><line x1="138.5" y1="82.0" x2="41.5" y2="138.0" class="ln-o thin"/><line x1="138.5" y1="82.0" x2="41.5" y2="82.0" class="ln-o thin"/><line x1="138.5" y1="138.0" x2="90.0" y2="166.0" class="ln-o thin"/><line x1="138.5" y1="138.0" x2="41.5" y2="138.0" class="ln-o thin"/><line x1="138.5" y1="138.0" x2="41.5" y2="82.0" class="ln-o thin"/><line x1="90.0" y1="166.0" x2="41.5" y2="138.0" class="ln-o thin"/><line x1="90.0" y1="166.0" x2="41.5" y2="82.0" class="ln-o thin"/><line x1="41.5" y1="138.0" x2="41.5" y2="82.0" class="ln-o thin"/><circle cx="90.0" cy="54.0" r="13" class="bo"/><circle cx="138.5" cy="82.0" r="13" class="bo"/><circle cx="138.5" cy="138.0" r="13" class="bo"/><circle cx="90.0" cy="166.0" r="13" class="bo"/><circle cx="41.5" cy="138.0" r="13" class="bo"/><circle cx="41.5" cy="82.0" r="13" class="bo"/><text x="90" y="114" text-anchor="middle" class="t b" font-size="11">Собор</text><text x="90" y="200" text-anchor="middle" class="cap">все Церкви равны, главной нет;</text><text x="90" y="214" text-anchor="middle" class="cap">Глава Церкви — Христос</text><polygon points="270.0,48 270.0,48 290.5,82 249.5,82" class="sj_fill"/><polygon points="249.5,82 290.5,82 311.0,116 229.0,116" class="bj"/><text x="270" y="103.0" text-anchor="middle" class="t b" font-size="11">филиалы</text><polygon points="229.0,116 311.0,116 331.5,150 208.5,150" class="bj"/><text x="270" y="137.0" text-anchor="middle" class="t" font-size="11">собрания</text><polygon points="208.5,150 331.5,150 352.0,184 188.0,184" class="bj"/><text x="270" y="171.0" text-anchor="middle" class="t" font-size="11">возвещатели</text><text x="270" y="40" text-anchor="middle" class="t b" font-size="11">Руководящий совет (11)</text><text x="270" y="200" text-anchor="middle" class="cap">единый центр,</text><text x="270" y="214" text-anchor="middle" class="cap">указания сверху вниз</text></svg><figcaption>Схема: соборность и централизация</figcaption></figure>
+  </section>
+
+  <section id="dynamics">
+    <p class="eyebrow">7 · Развитие учения</p>
+    <h2>Неизменность и «новый свет»</h2>
+    <div class="duo"><div class="pos o"><span class="who">Православие</span><p class="thesis">Догматы окончательны</p><p>Догматы Вселенских соборов не пересматриваются. Но вера не «застыла»: когда возникает новый вопрос или спор, Церковь находит для той же веры более точные слова. Принцип Викентия Лиринского (V век): «говоря по-новому, не говори нового».</p>
+        <ul class="timeline tl-o">
+          <li><b>325</b> — спор с Арием: Сын «единосущен» Отцу</li>
+          <li><b>451</b> — Халкидон: во Христе две природы, Бог и человек</li>
+          <li><b>681</b> — две воли во Христе (Максим Исповедник)</li>
+          <li><b>787</b> — иконопочитание как следствие Боговоплощения</li>
+          <li><b>XIV век</b> — Григорий Палама: сущность и энергии Бога, основа учения об обожении</li>
+          <li><b>XX век</b> — богословие русской эмиграции: Флоровский, Лосский, Шмеман</li>
+        </ul>
+        <p class="small">Каждое новое определение не отменяет прежнее, а объясняет его. Поэтому древние труды остаются авторитетными и сегодня.</p></div><div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Понимание уточняется</p><p>Понимание становится «всё ярче и ярче» (Притч 4:18, ПНМ), поэтому прежние толкования заменяются новыми, а старые публикации выходят из употребления.</p></div></div>
+    <div class="rows">
+      <div class="row"><h3>Что пересматривалось</h3>
+        <ul class="timeline tl-j">
+          <li><b>1874</b> — по расчётам Расселла, началось «невидимое присутствие» Христа; позже эту дату заменил 1914 год</li>
+          <li><b>1914</b> — ожидался конец нынешнего мира; позже — дата невидимого воцарения Христа</li>
+          <li><b>1925</b> — «Миллионы ныне живущих никогда не умрут» (Рутерфорд): ожидалось воскресение патриархов</li>
+          <li><b>1945</b> — запрет на переливание крови; позднее допущены фракции крови по совести</li>
+          <li><b>1952</b> — отменено осуждение прививок</li>
+          <li><b>1975</b> — ожидания, связанные с концом 6000 лет истории</li>
+        </ul>
+      </div>
+    </div>
+    <div class="textdiff">
+      <p class="eyebrow">Как оценивают эти пересмотры</p>
+      <div class="duo">
+        <div class="pos o"><span class="who">Православные полемисты</span><p class="thesis">Несбывшиеся предсказания</p><ul>
+          <li><span class="ref">Втор 18:22</span> «если пророк скажет именем Господа, но слово то не сбудется… то не Господь говорил сие»</li>
+          <li><span class="ref">Мф 24:36</span> «о дне же том и часе никто не знает» — даты вообще не стоило называть</li>
+          <li>Организация называет себя каналом, через который Бог даёт понимание, поэтому её ошибки — не частное мнение отдельных людей</li>
+          <li>Каждое новое толкование обязательно для всех, а прежнее при этом отменяется</li></ul></div>
+        <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Уточнение понимания</p><ul>
+          <li><span class="ref">Притч 4:18</span> «путь праведных — как свет утренней зари, который становится всё ярче и ярче»</li>
+          <li><span class="ref">Деян 1:6</span> и апостолы ошибались в сроках: «Господь, не теперь ли ты восстановишь Израильское царство?»</li>
+          <li>Руководящий совет не называет себя вдохновлёнными пророками: ошибались люди, а не Бог</li>
+          <li><span class="ref">Мф 24:42</span> ожидание конца — исполнение призыва «Итак, бодрствуйте, потому что не знаете, в какой день придёт ваш Господь», а готовность исправляться — признак смирения</li></ul></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="summary">
+    <p class="eyebrow">Итог</p>
+    <h2>Два подхода к одной Книге</h2>
+    <div class="duo">
+      <div class="pos o"><span class="who">Православие</span><p class="thesis">Преемственность</p><p>Вера читается через Предание, соборы и Отцов — наследие двадцати веков, общее для всей Церкви. Главное — непрерывность от апостолов.</p></div>
+      <div class="pos j"><span class="who">Свидетели Иеговы</span><p class="thesis">Возвращение к Библии</p><p>Опора только на Писание, единое учение для собраний всего мира и личная проповедь каждого. Главное — восстановить веру христиан I века.</p></div>
+    </div>
+    <h3 class="qhead">Голоса двух традиций</h3>
+    <div class="duo voices">
+      <div class="pos o"><span class="who">Православие</span>
+        <figure class="vq"><p class="vq-t">О непостижимости Бога</p><blockquote>«…как некое море сущности, неопределимое и бесконечное, простирающееся за пределы всякого представления о времени и естестве».<cite>Свт. Григорий Богослов, Слово 38</cite></blockquote></figure>
+        <figure class="vq"><p class="vq-t">О встрече с реальностью</p><blockquote>«Ни один человек в мире не обогатился обсуждениями. Только встречей с реальностью, с правдой, добром, красотой».<cite>Прот. Александр Шмеман (1921–1983)</cite></blockquote></figure>
+      </div>
+      <div class="pos j"><span class="who">Свидетели Иеговы</span>
+        <figure class="vq"><p class="vq-t">О свидетельстве</p><blockquote>«Вы мои свидетели, — говорит Иегова, — мой служитель, которого я избрал, чтобы вы знали меня, верили в меня и понимали, что я тот же».<cite>Ис 43:10, «Перевод нового мира»</cite></blockquote></figure>
+        <figure class="vq"><p class="vq-t">О познании Бога</p><blockquote>«Чтобы обрести вечную жизнь, необходимо узнавать тебя, единственного истинного Бога, и посланного тобой Иисуса Христа».<cite>Ин 17:3, «Перевод нового мира»</cite></blockquote></figure>
+      </div>
+    </div>
+  </section>
+
+  <section id="glossary">
+    <p class="eyebrow">Словарь</p>
+    <h2>Термины двух традиций</h2>
+    <div class="duo">
+      <div class="pos o"><span class="who">Православие</span><dl class="gl">
+        <dt>Литургия</dt><dd>главное богослужение, на котором совершается Причастие</dd>
+        <dt>Таинство</dt><dd>священнодействие, в котором человек получает благодать: крещение, Причастие, исповедь и др.</dd>
+        <dt>Символ веры</dt><dd>краткое изложение веры, принятое соборами 325 и 381 годов</dd>
+        <dt>Единосущный</dt><dd>одной сущности, одной природы: так Сын соотносится с Отцом</dd>
+        <dt>Предание</dt><dd>живая вера Церкви от апостолов; Писание — его записанная часть</dd>
+        <dt>Отцы Церкви</dt><dd>святые учители, чьё учение Церковь признала верным</dd>
+        <dt>Поместная Церковь</dt><dd>самостоятельная Церковь страны или региона; все равны между собой</dd>
+        <dt>Септуагинта</dt><dd>греческий перевод Ветхого Завета III–I вв. до н. э.</dd>
+        <dt>Обожение</dt><dd>соединение человека с Богом по благодати</dd></dl></div>
+      <div class="pos j"><span class="who">Свидетели Иеговы</span><dl class="gl">
+        <dt>Возвещатель</dt><dd>член собрания, который участвует в проповеди</dd>
+        <dt>Зал Царства</dt><dd>место встреч собрания</dd>
+        <dt>Собрание</dt><dd>местная община; ведут старейшины</dd>
+        <dt>Руководящий совет</dt><dd>группа помазанников, которая готовит духовную пищу для всех собраний</dd>
+        <dt>Помазанники</dt><dd>те, кто считает себя одним из 144 000 и надеется жить на небе</dd>
+        <dt>Другие овцы</dt><dd>верные, надеющиеся на вечную жизнь на земле (Ин 10:16)</dd>
+        <dt>Вечеря воспоминания</dt><dd>ежегодное воспоминание смерти Христа, 14 нисана</dd>
+        <dt>Выкуп</dt><dd>жизнь совершенного человека Иисуса, отданная за потомков Адама</dd>
+        <dt>«Новый свет»</dt><dd>уточнённое понимание Писания (Притч 4:18)</dd></dl></div>
+    </div>
+  </section>
+
+  <section id="refs">
+    <p class="eyebrow">Откуда информация</p>
+    <ol class="sources">
+      <li><a href="https://www.jw.org/en/jehovahs-witnesses/faq/jehovah-witness-beliefs/">Во что верят Свидетели Иеговы — jw.org</a></li>
+      <li><a href="https://wol.jw.org/ru/wol/b/r2/lp-u/nwtsty/43/1">«Перевод нового мира», Ин 1 — wol.jw.org</a></li>
+      <li><a href="https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/">Годовой отчёт Свидетелей Иеговы за 2025 год</a></li>
+      <li><a href="https://azbyka.ru/svideteli-iegovy">Свидетели Иеговы — энциклопедия «Азбука веры»</a></li>
+      <li><a href="https://azbyka.ru/otechnik/sekty/spetsifika-hristologii-sekty-svideteli-iegovy/">Игумен Герасим (Дьячков). Специфика христологии — azbyka.ru</a></li>
+      <li><a href="https://azbyka.ru/otechnik/sekty/imja-boga-v-perevode-novogo-mira/">Имя Бога в «Переводе нового мира» — azbyka.ru</a></li>
+      <li><a href="https://azbyka.ru/otechnik/Aleksandr_Mileant/lzheuchenie-svidetelej-iegovy/">Еп. Александр (Милеант). Лжеучение Свидетелей Иеговы — azbyka.ru</a></li>
+      <li><a href="https://azbyka.ru/otechnik/sekty/opasnost-s-bibliej-v-rukah-o-sekte-svidetelej-iegovy/5">Свящ. Николай Дубинин. Опасность с Библией в руках — azbyka.ru</a></li>
+      <li><a href="https://azbyka.ru/otechnik/sekty/lozhnye-svidetelstva-svidetelej-iegovy/2">Свящ. Игорь Ефимов. Ложные свидетельства Свидетелей Иеговы — azbyka.ru</a></li>
+      <li><a href="https://pravoslavie.ru/106146.html">Прот. Олег Стеняев. Диспут со «Свидетелями Иеговы» — pravoslavie.ru</a> (<a href="https://pravoslavie.ru/106353.html">продолжение</a>, <a href="https://pravoslavie.ru/107051.html">окончание</a>)</li>
+      <li><a href="https://pravoslavie.ru/6744.html">Иером. Иов (Гумеров). О Пресвятой Троице — pravoslavie.ru</a></li>
+      <li><a href="https://pravoslavie.ru/30614.html">Иером. Иов (Гумеров). О праздновании Пасхи — pravoslavie.ru</a></li>
+      <li><a href="https://pravoslavie.ru/87038.html">Этот бесконечный конец света — pravoslavie.ru</a></li>
+      <li><a href="https://ekzeget.ru/bible/k-kolossanam-poslanie-ap-pavla/glava-1/stih-15/">Толкования на Кол 1:15 — ekzeget.ru</a>; <a href="https://ekzeget.ru/bible/evangelie-ot-ioanna/glava-1/stih-1/">Ин 1:1</a>; <a href="https://ekzeget.ru/bible/evangelie-ot-luki/glava-23/stih-43/">Лк 23:43</a>; <a href="https://ekzeget.ru/bible/otkrovenie-ap-ioanna-bogoslova/glava-7/stih-4/">Откр 7:4</a></li>
+      <li><a href="https://azbyka.ru/otechnik/Grigorij_Bogoslov/slovo/38">Григорий Богослов. Слово 38 — azbyka.ru</a></li>
+      <li><a href="https://www.jw.org/en/news/region/global/Jehovahs-Witnesses-Reach-New-Preaching-Milestone-JWORG-Now-Features-Content-in-1000-Languages/">JW.ORG — контент на 1000 языках — jw.org</a></li>
+      <li><a href="https://www.pewresearch.org/short-reads/2017/11/08/key-takeaways-about-orthodox-christians/">Pew Research Center, 2017</a></li>
+      <li><a href="https://en.wikipedia.org/wiki/Clavis_Patrum_Graecorum">Clavis Patrum Graecorum</a></li>
+      <li><a href="https://www.pravmir.ru/vypusk-75-tomnoj-pravoslavnoj-encziklopedii-zavershitsya-v-2025-godu/">«Православная энциклопедия», 75 томов — Правмир</a></li>
+    </ol>
+    <p class="note">Цифры о численности и объёме литературы — оценки; перед публичным использованием их стоит сверить с актуальными отчётами.</p>
+  </section>
+</main>
+
+</body></html>

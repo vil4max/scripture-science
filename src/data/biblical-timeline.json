@@ -1,0 +1,124 @@
+[
+  {
+    "id": "biblical-creation",
+    "year": -5508,
+    "title": "Сотворение мира",
+    "ref": "Быт. 1–2",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Сотворение мира",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "description": "Начало библейской истории и отправная точка этой временной линии."
+  },
+  {
+    "id": "biblical-flood",
+    "year": -3246,
+    "title": "Ной и Потоп",
+    "ref": "Быт. 6–9",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Всемирный потоп",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "biblical-abraham",
+    "year": -2039,
+    "title": "Призвание Авраама",
+    "ref": "Быт. 12",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Призвание Авраама",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/abraham",
+        "title": "The Pluralism Project — Abraham",
+        "excerpt": "Abraham is the patriarch, acknowledged as the father of the lineage of faith by the Jewish, Christian, and Islamic traditions.",
+        "tier": "reference",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "description": "Авраам — общая фигура для иудаизма, христианства и ислама: все три традиции признают в нём праотца веры. Поэтому их называют авраамическими. Здесь показан общий исток их рассказа о вере, а не одновременное возникновение трёх религий."
+  },
+  {
+    "id": "biblical-exodus",
+    "year": -1609,
+    "title": "Моисей: исход из Египта",
+    "ref": "Исх. 12",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Исход из Египта",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.mechon-mamre.org/e/et/et0219.htm",
+        "title": "Exodus 19 — Mechon Mamre",
+        "tier": "official",
+        "excerpt": "All that the LORD hath spoken we will do.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "description": "После выхода из Египта библейский рассказ приводит народ Израиля к Синаю: Бог предлагает ему завет, а народ принимает обязательство следовать Его словам. Так линия от праотцев переходит к истории народа и его завета с Богом (Исх. 19)."
+  },
+  {
+    "id": "biblical-temple",
+    "year": -973,
+    "title": "Соломон: начало строительства Храма",
+    "ref": "3 Цар. 6",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Основание Храма",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "biblical-second-temple",
+    "year": -516,
+    "title": "Завершение Второго Храма",
+    "ref": "1 Езд. 6",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Окончание Второго Храма",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "biblical-nativity",
+    "year": -4,
+    "title": "Рождество Христово",
+    "ref": "Мф. 2; Лк. 2",
+    "proof": [
+      {
+        "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
+        "title": "Азбука веры — Хронология Септуагинты",
+        "tier": "reference",
+        "excerpt": "Рождество Христово",
+        "accessed": "2026-09-26"
+      }
+    ]
+  }
+]

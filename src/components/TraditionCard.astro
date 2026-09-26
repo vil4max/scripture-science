@@ -1,0 +1,266 @@
+---
+// One tradition card in the "one picture of the religious world" grid
+// (docs/tasks/site-m2-main-page.md W3): colour chip with the name as text
+// (EDITORIAL.md's palette warnings require a direct text label next to
+// every coloured mark, never colour alone), "с ..." since label, scripture
+// translation, adherents, self-view, family (where sourced) and a footnote,
+// each backed by its own source links.
+// docs/tasks/site-m5-reading-polish.md W2: fields stack label-above-value
+// (Problems seen #2: a side label column squeezed the values) and every
+// source list collapses behind ProofLink's own "Источники" disclosure.
+// docs/tasks/site-m9-desktop-cards.md: on a desktop a card is a full-width
+// row with its fields in two columns, short facts paired with short ones
+// (since/adherents) and long with long (scripture/self-view); narrow
+// screens keep one stacked column.
+import type { CollectionEntry } from 'astro:content';
+import TraditionImage from './TraditionImage.astro';
+import ProofLink from './ProofLink.astro';
+import { getFamilyByTradition } from '../lib/families';
+import { JW_NOTE_ID } from '../lib/jwNote';
+import { sinceLines } from '../lib/rules';
+import { withBase } from '../lib/paths';
+
+interface Props {
+  tradition: CollectionEntry<'matrix'>;
+  // CSS custom property name for this tradition's colour chip
+  // (src/lib/rules.ts TRADITION_COLOR_TOKEN), e.g. "--t-orthodoxy".
+  color: string;
+  headingLevel?: 3 | 4 | 5;
+  // True for the first Jehovah's Witnesses mention on the page
+  // (docs/DECISIONS.md): renders a footnote marker linking to the note.
+  withJwFootnote?: boolean;
+}
+
+const { tradition, color, withJwFootnote = false, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h3' | 'h4' | 'h5';
+const { name, full_name, since, scripture, adherents, self_view } = tradition.data;
+const family = getFamilyByTradition(tradition.id);
+---
+
+<article class="card">
+  <Heading class="card-title">
+    <span class="chip" style={`background:var(${color})`} aria-hidden="true"></span>
+    <a class="profile-link" href={withBase(`traditions/${tradition.id}/`)}>{name}</a>
+    {withJwFootnote && (
+      <sup>
+        <a href={`#${JW_NOTE_ID}`}>*</a>
+      </sup>
+    )}
+    <button type="button" class="add" data-add-compare={tradition.id} aria-pressed="false">
+      + В сравнение
+    </button>
+  </Heading>
+  {full_name !== name && <p class="full-name">{full_name}</p>}
+
+  <div class="card-body">
+  <TraditionImage id={tradition.id} compact />
+  <dl>
+    <div class="fact">
+      <dt>Возникновение</dt>
+      <dd>
+        {sinceLines(since.label).map((line) => (
+          <p class="line">{line}</p>
+        ))}
+        <ProofLink proof={since.proof} />
+      </dd>
+    </div>
+    <div class="fact">
+      <dt>Численность</dt>
+      <dd>
+        {adherents.value}
+        <ProofLink proof={adherents.proof} />
+      </dd>
+    </div>
+    <div class="fact">
+      <dt>Писание</dt>
+      <dd>
+        <p class="line">
+          {scripture.name}
+        </p>
+        <ProofLink proof={scripture.proof} />
+      </dd>
+    </div>
+    <div class="fact">
+      <dt>Сама о себе</dt>
+      <dd>
+        {self_view.summary}
+        <ProofLink proof={self_view.proof} />
+      </dd>
+    </div>
+    {family && (
+      <div class="fact">
+        <dt>Классификация</dt>
+        <dd>
+          {family.family}
+          <ProofLink proof={family.proof} />
+        </dd>
+      </div>
+    )}
+  </dl>
+  </div>
+</article>
+
+<style>
+  .card-body { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; margin-top: 20px; align-items: start; }
+  .card-body dl { margin-top: 0; }
+  .card {
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 20px;
+    background: var(--surface);
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 4px;
+    font-size: 21px;
+  }
+
+  .profile-link {
+    min-width: 0;
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+    overflow-wrap: anywhere;
+  }
+
+  /* «Add to comparison», as on a shop's product card
+  (docs/tasks/site-m14-selection.md). */
+  .add {
+    margin-left: auto;
+    font: inherit;
+    font-size: 14px;
+    font-weight: 400;
+    padding: 5px 12px;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    background: var(--bg);
+    color: var(--ink);
+    cursor: pointer;
+    white-space: nowrap;
+  }
+
+  .add[aria-pressed='true'] {
+    border-color: var(--focus);
+    font-weight: 700;
+  }
+
+  .chip {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .full-name {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 15px;
+    max-width: 70ch;
+  }
+
+  dl {
+    margin: 16px 0 0;
+    display: grid;
+    gap: 16px;
+  }
+
+  @media (min-width: 900px) {
+    .card {
+      padding: 24px 28px;
+    }
+
+    dl {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 20px 40px;
+    }
+
+    /* Side by side, the first row has nothing above it; later rows keep
+    the divider so each pair still reads as one band. */
+    .fact:nth-child(2) {
+      padding-top: 0;
+      border-top: none;
+    }
+  }
+
+  .fact {
+    display: grid;
+    /* Side by side, a short fact is stretched to its row's height; keep its
+    label and value together at the top instead of spreading them apart. */
+    align-content: start;
+    gap: 4px;
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .fact:first-child {
+    padding-top: 0;
+    border-top: none;
+  }
+
+  dt {
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  dd {
+    margin: 0;
+    max-width: 70ch;
+    line-height: 1.6;
+  }
+
+
+  .line {
+    margin: 0;
+  }
+
+
+  /* The name reads as text; the link to the translation stays small, so a
+  long name is not one underlined block (owner, 2026-09-26). */
+  .open {
+    font-size: 14px;
+    color: var(--focus);
+    white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .card-title {
+      flex-wrap: wrap;
+    }
+
+    .profile-link {
+      flex: 1;
+    }
+
+    .add {
+      margin-left: 0;
+    }
+  }
+
+</style>
+
+<script>
+  import { getSelection, onSelection, setSelection } from '../lib/selection-client';
+  import { toggleSelection } from '../lib/selection';
+
+  const buttons = Array.from(document.querySelectorAll<HTMLButtonElement>('[data-add-compare]'));
+  onSelection((ids) => {
+    for (const button of buttons) {
+      const on = ids.includes(button.dataset.addCompare ?? '');
+      button.setAttribute('aria-pressed', String(on));
+      button.textContent = on ? '✓ В сравнении' : '+ В сравнение';
+    }
+  });
+  for (const button of buttons) {
+    button.addEventListener('click', () => {
+      const { ids, refused } = toggleSelection(getSelection(), button.dataset.addCompare ?? '');
+      if (refused) {
+        button.textContent = 'Уже три — снимите одну';
+        window.setTimeout(() => (button.textContent = '+ В сравнение'), 2500);
+      } else setSelection(ids);
+    });
+  }
+</script>

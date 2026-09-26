@@ -1,0 +1,41 @@
+---
+import { getOrderedMatrix } from '../lib/content';
+import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+import overview from '../data/family-overview.json';
+import TraditionCard from './TraditionCard.astro';
+const traditions = await getOrderedMatrix();
+const card = (id: string) => traditions.find((tradition) => tradition.id === id)!;
+const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other';
+---
+<section id="traditions" aria-labelledby="families-title" class="families">
+  <h2 id="families-title">Авраамические религии</h2>
+  <p class="intro">{overview.introduction.text}</p>
+  <section class="family" aria-labelledby="judaism-title">
+    <h3 id="judaism-title">Иудаизм</h3>
+    <p class="intro">{overview.judaism.text}</p>
+    <TraditionCard tradition={card('judaism')} color={color('judaism')} headingLevel={4} />
+  </section>
+  <section class="family christian" aria-labelledby="christian-title">
+    <h3 id="christian-title">Христианство и связанные с ним движения</h3>
+    {overview.groups.map((group) => <section class="doctrine-group" data-doctrine-group={group.id} aria-labelledby={`${group.id}-title`}>
+      <h4 id={`${group.id}-title`}>{group.title}</h4>
+      <p class="intro">{group.text}</p>
+      <div class="cards">{group.ids.map((id) => <TraditionCard tradition={card(id)} color={color(id)} headingLevel={5} />)}</div>
+    </section>)}
+  </section>
+  <section class="family" aria-labelledby="islam-title">
+    <h3 id="islam-title">Ислам</h3>
+    <p class="intro">{overview.islam.text}</p>
+    <TraditionCard tradition={card('islam')} color={color('islam')} headingLevel={4} />
+  </section>
+</section>
+<style>
+  .intro { max-width: 80ch; }
+  .family { margin-top: 36px; }
+  .family > h3 { font-size: 30px; margin: 0 0 12px; }
+  .christian { padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--focus); border-radius: 12px; }
+  .doctrine-group { margin-top: 28px; }
+  .doctrine-group + .doctrine-group { border-top: 1px solid var(--line); padding-top: 28px; }
+  h4 { font-size: 23px; margin: 0 0 12px; }
+  .cards { display: grid; gap: 20px; }
+</style>

@@ -1,0 +1,242 @@
+{
+  "year": 2026,
+  "edition": 2026,
+  "population": 8300678000,
+  "branchWeightTotal": 2777624000,
+  "method": "World shares use 2026 population. Folk groups combine Chinese folk-religionists and ethnoreligionists; other religions are the population remainder. Christian branch counts exceed the Christian total, so the five displayed branch weights are normalized to 100%; these are schematic proportions, not disjoint population counts.",
+  "groups": [
+    {
+      "id": "christians",
+      "label": "Христиане",
+      "share": 32.21410347443908,
+      "color": "--world-christians",
+      "count": 2673989000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "2,673,989,000"
+        }
+      ]
+    },
+    {
+      "id": "muslims",
+      "label": "Мусульмане",
+      "share": 25.361084961975394,
+      "color": "--t-islam",
+      "count": 2105142000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "2,105,142,000"
+        }
+      ]
+    },
+    {
+      "id": "unaffiliated",
+      "label": "Без религиозной принадлежности",
+      "share": 10.986680847034423,
+      "color": "--world-unaffiliated",
+      "count": 911969000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "911,969,000"
+        }
+      ]
+    },
+    {
+      "id": "hindus",
+      "label": "Индуисты",
+      "share": 13.83226767741141,
+      "color": "--world-hindus",
+      "count": 1148172000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "1,148,172,000"
+        }
+      ]
+    },
+    {
+      "id": "buddhists",
+      "label": "Буддисты",
+      "share": 6.454002913978835,
+      "color": "--world-buddhists",
+      "count": 535726000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "535,726,000"
+        }
+      ]
+    },
+    {
+      "id": "folk",
+      "label": "Народные религии",
+      "share": 9.138157148126936,
+      "color": "--world-folk",
+      "count": 758529000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, row 17",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "449,231,000"
+        },
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, row 18",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "309,298,000"
+        }
+      ]
+    },
+    {
+      "id": "other-religions",
+      "label": "Другие религии",
+      "share": 1.8237787322915069,
+      "color": "--world-other-religions",
+      "count": 151386000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, row 1",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "8,300,678,000"
+        }
+      ]
+    },
+    {
+      "id": "jews",
+      "label": "Иудеи",
+      "share": 0.18992424474241743,
+      "color": "--t-judaism",
+      "count": 15765000,
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 column",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "15,765,000"
+        }
+      ]
+    }
+  ],
+  "branches": [
+    {
+      "id": "catholics",
+      "label": "Католики",
+      "count": 1278885000,
+      "share": 46.042408907757135,
+      "color": "--t-catholicism",
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 Christian traditions",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "1,278,885,000"
+        }
+      ]
+    },
+    {
+      "id": "protestants",
+      "label": "Протестанты",
+      "count": 637856000,
+      "share": 22.964087291872477,
+      "color": "--t-protestantism",
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 Christian traditions",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "637,856,000"
+        }
+      ]
+    },
+    {
+      "id": "independents",
+      "label": "Независимые церкви",
+      "count": 426370000,
+      "share": 15.35016978539932,
+      "color": "--world-independent",
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 Christian traditions",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "426,370,000"
+        }
+      ]
+    },
+    {
+      "id": "orthodox",
+      "label": "Православные",
+      "count": 292757000,
+      "share": 10.539835485292466,
+      "color": "--t-orthodoxy",
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 Christian traditions",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "292,757,000"
+        }
+      ]
+    },
+    {
+      "id": "unaffiliated-christians",
+      "label": "Вне церковных объединений",
+      "count": 141756000,
+      "share": 5.103498529678603,
+      "color": "--world-christians",
+      "proof": [
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, 2026 Christian traditions",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "141,756,000"
+        },
+        {
+          "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+          "title": "World Christian Database — Status of Global Christianity 2026, methodological notes",
+          "tier": "reference",
+          "accessed": "2026-09-26",
+          "excerpt": "Widest definition: professing Christians plus secret believers, which equals affiliated (church members) plus unaffiliated Christians."
+        }
+      ]
+    }
+  ],
+  "proof": [
+    {
+      "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+      "title": "World Christian Database — Status of Global Christianity 2026, row 1",
+      "tier": "reference",
+      "accessed": "2026-09-26",
+      "excerpt": "8,300,678,000"
+    }
+  ]
+}

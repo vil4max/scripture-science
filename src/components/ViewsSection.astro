@@ -1,0 +1,267 @@
+---
+// «Что думают друг о друге» on /compare/ (EDITORIAL.md principle 9). It works
+// only with the traditions the reader chose (owner, 2026-09-26: «оперируем
+// только выбранными для сравнения»):
+// - two or three chosen: one column per chosen tradition in the reader's
+//   order; in each, what it says about each of the other chosen ones, or a
+//   plain note that the section has no such document;
+// - one chosen: how it sees the other traditions, then how they see it;
+// - none chosen: every document, grouped by the issuing tradition.
+// Every arrangement is rendered at build time; the script only shows the one
+// the choice asks for.
+import type { CollectionEntry } from 'astro:content';
+import ViewTile from './ViewTile.astro';
+import type { TraditionId } from '../lib/rules';
+
+interface Props {
+  views: CollectionEntry<'views'>[];
+  colorById: Map<string, string>;
+  // Built from the age-ordered matrix (src/lib/content.ts getOrderedMatrix).
+  namesById: Map<string, string>;
+}
+
+const { views, colorById, namesById } = Astro.props;
+const order = [...namesById.keys()];
+const nameOf = (id: string) => namesById.get(id) ?? id;
+const colorOf = (id: string) => `var(${colorById.get(id) ?? '--t-other'})`;
+const docsBy = (author: string) => views.find((v) => v.id === author)?.data.documents ?? [];
+const mentions = (doc: { about: readonly string[] }, id: string) => doc.about.includes(id);
+
+// Russian forms for headings and notes: the name as a subject inside a
+// sentence (and its verb number), as an object, and after «о/об».
+const FORMS: Record<TraditionId, { subject: string; plural: boolean; object: string; about: string }> = {
+  judaism: { subject: 'иудаизм', plural: false, object: 'иудаизм', about: 'об иудаизме' },
+  orthodoxy: { subject: 'православие', plural: false, object: 'православие', about: 'о православии' },
+  catholicism: { subject: 'католичество', plural: false, object: 'католичество', about: 'о католичестве' },
+  islam: { subject: 'ислам', plural: false, object: 'ислам', about: 'об исламе' },
+  protestantism: { subject: 'протестантизм', plural: false, object: 'протестантизм', about: 'о протестантизме' },
+  lds: { subject: 'Святые последних дней', plural: true, object: 'Святых последних дней', about: 'о Святых последних дней' },
+  adventism: {
+    subject: 'адвентисты седьмого дня',
+    plural: true,
+    object: 'адвентистов седьмого дня',
+    about: 'об адвентистах седьмого дня',
+  },
+  jw: { subject: 'Свидетели Иеговы', plural: true, object: 'Свидетелей Иеговы', about: 'о Свидетелях Иеговы' },
+};
+const f = (id: string) => FORMS[id as TraditionId];
+const says = (id: string) => (f(id).plural ? 'высказываются' : 'высказывается');
+const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
+---
+
+{
+  views.length > 0 && (
+    <div class="views" data-views>
+      {/* Nothing chosen: every document by its author. */}
+      <div class="mode" data-mode="none">
+        {order.map((author) =>
+          docsBy(author).length > 0 ? (
+            <section class="group" style={`--chip:${colorOf(author)}`}>
+              <h3 class="group-head">
+                <span class="dot" aria-hidden="true" />
+                {nameOf(author)}
+              </h3>
+              <div class="tiles">
+                {docsBy(author).map((doc) => (
+                  <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+                ))}
+              </div>
+            </section>
+          ) : null,
+        )}
+      </div>
+
+      {/* One chosen: its view of the others, then theirs of it. */}
+      {order.map((id) => {
+        const seenBy = order.flatMap((author) =>
+          author === id ? [] : docsBy(author).filter((doc) => mentions(doc, id)).map((doc) => ({ author, doc })),
+        );
+        return (
+          <div class="mode" data-mode="one" data-for={id} hidden>
+            <section class="group" style={`--chip:${colorOf(id)}`}>
+              <h3 class="group-head">
+                <span class="dot" aria-hidden="true" />
+                Как {f(id).subject} {f(id).plural ? 'видят' : 'видит'} другие традиции
+              </h3>
+              {docsBy(id).length > 0 ? (
+                <div class="tiles">
+                  {docsBy(id).map((doc) => (
+                    <ViewTile author={id} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+                  ))}
+                </div>
+              ) : (
+                <p class="none">В разделе нет документа, где {f(id).subject} {says(id)} о других традициях.</p>
+              )}
+            </section>
+            <section class="group" style={`--chip:${colorOf(id)}`}>
+              <h3 class="group-head">
+                <span class="dot" aria-hidden="true" />
+                Как {f(id).object} видят другие традиции
+              </h3>
+              {seenBy.length > 0 ? (
+                <div class="tiles">
+                  {seenBy.map(({ author, doc }) => (
+                    <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+                  ))}
+                </div>
+              ) : (
+                <p class="none">В разделе нет документа другой традиции {f(id).about}.</p>
+              )}
+            </section>
+          </div>
+        );
+      })}
+
+      {/* Two or three chosen: each chosen tradition's column, about the other chosen ones. */}
+      <div class="mode cols" data-mode="many" hidden>
+        {order.map((author) => (
+          <div class="col" data-author={author} hidden>
+            {order
+              .filter((about) => about !== author)
+              .map((about) => {
+                const docs = docsBy(author).filter((doc) => mentions(doc, about));
+                return (
+                  <section class="pair" data-about={about} hidden style={`--chip:${colorOf(about)}`}>
+                    <h3 class="pair-head">
+                      <span class="dot" aria-hidden="true" />
+                      {capital(f(about).about)}
+                    </h3>
+                    {docs.length > 0 ? (
+                      <div class="tiles single">
+                        {docs.map((doc) => (
+                          <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+                        ))}
+                      </div>
+                    ) : (
+                      <p class="none">
+                        В разделе нет документа, где {f(author).subject} {says(author)} {f(about).about}.
+                      </p>
+                    )}
+                  </section>
+                );
+              })}
+          </div>
+        ))}
+      </div>
+    </div>
+  )
+}
+
+<script>
+  import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
+  import { onSelection } from '../lib/selection-client';
+
+  const root = document.querySelector<HTMLElement>('[data-views]');
+  if (root) {
+    const none = root.querySelector<HTMLElement>('[data-mode="none"]')!;
+    const ones = Array.from(root.querySelectorAll<HTMLElement>('[data-mode="one"]'));
+    const many = root.querySelector<HTMLElement>('[data-mode="many"]')!;
+    const cols = Array.from(many.querySelectorAll<HTMLElement>('[data-author]'));
+    onSelection((ids) => {
+      const slotMode = Boolean(document.querySelector('[data-comparison-slots]'));
+      const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
+      none.hidden = ids.length !== 0;
+      for (const one of ones) one.hidden = !(ids.length === 1 && one.dataset.for === ids[0]);
+      many.hidden = ids.length < 2;
+      many.style.setProperty('--cols', String(slotMode ? 3 : ids.length));
+      for (const col of cols) {
+        const index = (slotMode ? slots : ids).indexOf(col.dataset.author ?? '');
+        col.hidden = index === -1;
+        col.style.order = String(index);
+        col.style.gridColumn = slotMode && index >= 0 ? String(index + 1) : '';
+        col.style.gridRow = slotMode ? '1' : '';
+        for (const pair of col.querySelectorAll<HTMLElement>('[data-about]')) {
+          const at = ids.indexOf(pair.dataset.about ?? '');
+          pair.hidden = at === -1;
+          pair.style.order = String(at);
+        }
+      }
+    });
+  }
+</script>
+
+<style>
+  .views,
+  .mode {
+    display: grid;
+    gap: 40px;
+  }
+
+  .mode[hidden],
+  .col[hidden],
+  .pair[hidden] {
+    display: none;
+  }
+
+  .group,
+  .pair,
+  .col {
+    display: grid;
+    gap: 14px;
+    align-content: start;
+    min-width: 0;
+  }
+
+  .group-head,
+  .pair-head {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--chip);
+  }
+
+  .group-head {
+    font-size: 22px;
+  }
+
+  .pair-head {
+    font-size: 18px;
+  }
+
+  .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--chip);
+    flex: none;
+  }
+
+  .none {
+    margin: 0;
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  .tiles {
+    display: grid;
+    gap: 16px;
+    align-items: start;
+  }
+
+  /* Columns share the 20px gap of the rest of /compare/, so they sit under
+  the pinned column header like the topics above. */
+  .mode.cols {
+    gap: 28px 20px;
+    align-items: start;
+  }
+
+  .col {
+    gap: 28px;
+  }
+
+  @media (min-width: 900px) {
+    .tiles {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .tiles.single {
+      grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mode.cols {
+      grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr));
+    }
+  }
+</style>

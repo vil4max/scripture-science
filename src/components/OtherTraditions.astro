@@ -1,0 +1,22 @@
+---
+import other from '../data/other-traditions.json';
+import world from '../data/world-countries.json';
+import ProofLink from './ProofLink.astro';
+import TraditionImage from './TraditionImage.astro';
+const topCountries = (group: string) => {
+  const index = world.groups.indexOf(group);
+  return [...world.countries].sort((a,b) => b.counts[index] - a.counts[index]).slice(0,3).map((c) => c.name).join(', ');
+};
+---
+<section id="other-traditions" aria-labelledby="other-title">
+  <h2 id="other-title">Другие религии</h2>
+  <div class="other-grid">{other.map((item) => <article id={`overview-${item.id}`}>
+    <h3>{item.title}</h3><p class="origin">{item.origin}</p>
+    <TraditionImage id={item.id} compact/>
+    <p>{item.intro}</p><ProofLink proof={item.proof.map((p) => ({...p,tier:p.tier as 'official' | 'reference'}))}/>
+    {item.geographyGroup && <p class="geography">Больше всего последователей в 2020 году: {topCountries(item.geographyGroup)}. По числу людей, а не по доле населения.<ProofLink proof={[{url:world.url,title:'Pew — Country composition, 2020',tier:'reference',accessed:world.accessed,excerpt:'This interactive table shows the religious makeup of 201 countries and territories.'}]}/></p>}
+  </article>)}</div>
+</section>
+<style>
+  #other-traditions { scroll-margin-top: 100px; } .other-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; } article { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; } h3 { margin: 0; font-size: 24px; } p { font-size: 17px; } .origin,.geography { color: var(--muted); font-size: 15px; } .geography { border-top: 1px solid var(--line); padding-top: 12px; }
+</style>

@@ -1,0 +1,6 @@
+---
+interface Props { url: string; title: string; }
+const { title } = Astro.props;
+const label = title.length > 90 ? `${title.slice(0, 86).replace(/\s+\S*$/, '')}…` : title;
+---
+<span title={title}>{label}</span>

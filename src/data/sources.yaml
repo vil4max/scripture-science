@@ -1,0 +1,127 @@
+# Sources cited by the site's content, one entry per link in
+# source/orthodoxy-jw.html's "Откуда информация" list (section#refs).
+# title/url are verbatim from that list's link text and href; tier follows
+# docs/SOURCES.md. No `accessed` date: listed but not yet re-checked against
+# the live page (docs/SOURCES.md "What verified means").
+#
+# en.wikipedia.org/wiki/Clavis_Patrum_Graecorum is intentionally omitted:
+# docs/SOURCES.md lists Wikipedia under "Not a source" and gives it no tier -
+# see "Conflicts found" in the Writer's final report for this slice.
+jw-beliefs-faq:
+  title: "Во что верят Свидетели Иеговы — jw.org"
+  publisher: "jw.org"
+  url: "https://www.jw.org/en/jehovahs-witnesses/faq/jehovah-witness-beliefs/"
+  tier: official
+wol-nwt-john-1:
+  title: "«Перевод нового мира», Ин 1 — wol.jw.org"
+  publisher: "wol.jw.org"
+  url: "https://wol.jw.org/ru/wol/b/r2/lp-u/nwtsty/43/1"
+  tier: official
+jw-2025-service-year-report:
+  title: "Годовой отчёт Свидетелей Иеговы за 2025 год"
+  publisher: "jw.org"
+  url: "https://www.jw.org/en/library/books/2025-Service-Year-Report-of-Jehovahs-Witnesses-Worldwide/"
+  tier: official
+azbyka-svideteli-iegovy:
+  title: "Свидетели Иеговы — энциклопедия «Азбука веры»"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/svideteli-iegovy"
+  tier: official
+azbyka-hristologiya-si:
+  title: "Игумен Герасим (Дьячков). Специфика христологии — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/sekty/spetsifika-hristologii-sekty-svideteli-iegovy/"
+  tier: official
+azbyka-imya-boga-pnm:
+  title: "Имя Бога в «Переводе нового мира» — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/sekty/imja-boga-v-perevode-novogo-mira/"
+  tier: official
+azbyka-mileant-lzheuchenie:
+  title: "Еп. Александр (Милеант). Лжеучение Свидетелей Иеговы — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/Aleksandr_Mileant/lzheuchenie-svidetelej-iegovy/"
+  tier: official
+azbyka-opasnost-s-bibliej:
+  title: "Свящ. Николай Дубинин. Опасность с Библией в руках — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/sekty/opasnost-s-bibliej-v-rukah-o-sekte-svidetelej-iegovy/5"
+  tier: official
+azbyka-lozhnye-svidetelstva:
+  title: "Свящ. Игорь Ефимов. Ложные свидетельства Свидетелей Иеговы — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/sekty/lozhnye-svidetelstva-svidetelej-iegovy/2"
+  tier: official
+pravoslavie-stenyaev-disput-1:
+  title: "Прот. Олег Стеняев. Диспут со «Свидетелями Иеговы» — pravoslavie.ru"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/106146.html"
+  tier: official
+pravoslavie-stenyaev-disput-2:
+  title: "продолжение"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/106353.html"
+  tier: official
+pravoslavie-stenyaev-disput-3:
+  title: "окончание"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/107051.html"
+  tier: official
+pravoslavie-gumerov-troitsa:
+  title: "Иером. Иов (Гумеров). О Пресвятой Троице — pravoslavie.ru"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/6744.html"
+  tier: official
+pravoslavie-gumerov-pasha:
+  title: "Иером. Иов (Гумеров). О праздновании Пасхи — pravoslavie.ru"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/30614.html"
+  tier: official
+pravoslavie-konets-sveta:
+  title: "Этот бесконечный конец света — pravoslavie.ru"
+  publisher: "pravoslavie.ru"
+  url: "https://pravoslavie.ru/87038.html"
+  tier: official
+ekzeget-kol-1-15:
+  title: "Толкования на Кол 1:15 — ekzeget.ru"
+  publisher: "ekzeget.ru"
+  url: "https://ekzeget.ru/bible/k-kolossanam-poslanie-ap-pavla/glava-1/stih-15/"
+  tier: reference
+  archive: "https://web.archive.org/web/20250706003017/https://ekzeget.ru/bible/k-kolossanam-poslanie-ap-pavla/glava-1/stih-15/"
+ekzeget-in-1-1:
+  title: "Ин 1:1"
+  publisher: "ekzeget.ru"
+  url: "https://ekzeget.ru/bible/evangelie-ot-ioanna/glava-1/stih-1/"
+  tier: reference
+  archive: "https://web.archive.org/web/20260304102638/https://ekzeget.ru/bible/evangelie-ot-ioanna/glava-1/stih-1/"
+ekzeget-lk-23-43:
+  title: "Лк 23:43"
+  publisher: "ekzeget.ru"
+  url: "https://ekzeget.ru/bible/evangelie-ot-luki/glava-23/stih-43/"
+  tier: reference
+  archive: "https://web.archive.org/web/20251009045659/https://ekzeget.ru/bible/evangelie-ot-luki/glava-23/stih-43/"
+ekzeget-otkr-7-4:
+  title: "Откр 7:4"
+  publisher: "ekzeget.ru"
+  url: "https://ekzeget.ru/bible/otkrovenie-ap-ioanna-bogoslova/glava-7/stih-4/"
+  tier: reference
+azbyka-grigoriy-bogoslov-slovo-38:
+  title: "Григорий Богослов. Слово 38 — azbyka.ru"
+  publisher: "azbyka.ru"
+  url: "https://azbyka.ru/otechnik/Grigorij_Bogoslov/slovo/38"
+  tier: official
+jw-1000-languages:
+  title: "JW.ORG — контент на 1000 языках — jw.org"
+  publisher: "jw.org"
+  url: "https://www.jw.org/en/news/region/global/Jehovahs-Witnesses-Reach-New-Preaching-Milestone-JWORG-Now-Features-Content-in-1000-Languages/"
+  tier: official
+pew-orthodox-christians-2017:
+  title: "Pew Research Center, 2017"
+  publisher: "Pew Research Center"
+  url: "https://www.pewresearch.org/short-reads/2017/11/08/key-takeaways-about-orthodox-christians/"
+  tier: reference
+pravmir-encyclopedia-75-volumes:
+  title: "«Православная энциклопедия», 75 томов — Правмир"
+  publisher: "Правмир"
+  url: "https://www.pravmir.ru/vypusk-75-tomnoj-pravoslavnoj-encziklopedii-zavershitsya-v-2025-godu/"
+  tier: news

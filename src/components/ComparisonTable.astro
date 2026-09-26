@@ -1,0 +1,216 @@
+---
+// Fourteen topics x N traditions, as a wide table with a sticky header row
+// and sticky first column so a narrow screen can still scroll it
+// horizontally without losing track of the topic or the tradition
+// (docs/tasks/site-m2-main-page.md W3 and "Rules": "the comparison table
+// scrolls horizontally with a sticky first column").
+import type { CollectionEntry } from 'astro:content';
+import ProofLink from './ProofLink.astro';
+import { JW_NOTE_ID } from '../lib/jwNote';
+import { TOPIC_ORDER, TOPIC_TITLES_RU, UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
+
+interface Props {
+  traditions: CollectionEntry<'matrix'>[];
+  // CSS custom property name per tradition id (src/data/traditions.yaml).
+  colorById: Map<string, string>;
+  // True when Jehovah's Witnesses have not already been named earlier on
+  // the page (docs/DECISIONS.md), so this table adds the footnote marker
+  // on its own header instead of assuming the traditions grid did.
+  withJwFootnote?: boolean;
+}
+
+const { traditions, colorById, withJwFootnote = false } = Astro.props;
+const jwIndex = traditions.findIndex((t) => t.id === 'jw');
+---
+
+{
+  traditions.length > 0 && (
+    <div class="table-wrap">
+      <table class="comparison">
+        <thead>
+          <tr>
+            <th class="topic-col" scope="col">
+              Тема
+            </th>
+            {traditions.map((tradition, index) => (
+              <th scope="col">
+                <span
+                  class="chip"
+                  style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`}
+                  aria-hidden="true"
+                />
+                {tradition.data.name}
+                {withJwFootnote && index === jwIndex && (
+                  <sup>
+                    <a href={`#${JW_NOTE_ID}`}>*</a>
+                  </sup>
+                )}
+              </th>
+            ))}
+          </tr>
+        </thead>
+        <tbody>
+          {TOPIC_ORDER.map((topicId) => (
+            <tr>
+              <th class="topic-col" scope="row">
+                {TOPIC_TITLES_RU[topicId]}
+              </th>
+              {traditions.map((tradition) => {
+                const position = tradition.data.positions.find((p) => p.topic === topicId);
+                if (!position) return <td>—</td>;
+                const summary = positionSummaryText(position);
+                return (
+                  <td class={position.status === 'todo' ? 'todo' : ''}>
+                    {summary ? (
+                      <p class="summary">{summary}</p>
+                    ) : (
+                      <p class="todo-flag">Источник уточняется</p>
+                    )}
+                    {summary && position.unity && (
+                      <p class={`unity ${position.unity.kind}`} title={position.unity.note}>
+                        {UNITY_LABEL_RU[position.unity.kind]}
+                      </p>
+                    )}
+                    {(position.quote || position.scripture) && (
+                      <details>
+                        <summary>Цитата</summary>
+                        {position.quote && (
+                          <blockquote>
+                            «{position.quote.text}»
+                            <cite>
+                              {' — '}
+                              {position.quote.source}
+                            </cite>
+                          </blockquote>
+                        )}
+                        {position.scripture && (
+                          <blockquote class="scripture">
+                            «{position.scripture.text}»
+                            <cite>
+                              {' — '}
+                              {position.scripture.ref}
+                            </cite>
+                          </blockquote>
+                        )}
+                      </details>
+                    )}
+                    <ProofLink proof={position.proof} />
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  )
+}
+
+<style>
+  .unity {
+    margin: 6px 0 0;
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  .unity.divided {
+    color: var(--focus);
+  }
+
+  .table-wrap {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+  }
+
+  table.comparison {
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 720px;
+  }
+
+  th,
+  td {
+    text-align: left;
+    vertical-align: top;
+    padding: 12px 14px;
+    border-bottom: 1px solid var(--line);
+    font-weight: 400;
+  }
+
+  thead th {
+    position: sticky;
+    top: 0;
+    background: var(--surface);
+    z-index: 2;
+    font-size: 15px;
+    white-space: nowrap;
+  }
+
+  .topic-col {
+    position: sticky;
+    left: 0;
+    background: var(--surface);
+    z-index: 1;
+    min-width: 180px;
+    font-weight: 700;
+  }
+
+  thead .topic-col {
+    z-index: 3;
+  }
+
+  .chip {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 6px;
+  }
+
+  td {
+    min-width: 240px;
+  }
+
+  .summary {
+    margin: 0;
+  }
+
+  td.todo {
+    background: color-mix(in srgb, var(--focus) 10%, transparent);
+  }
+
+  .todo-flag {
+    margin: 6px 0 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--focus);
+  }
+
+  details {
+    margin-top: 8px;
+  }
+
+  details summary {
+    cursor: pointer;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  blockquote {
+    margin: 8px 0 0;
+    padding: 0;
+    font-style: italic;
+  }
+
+  blockquote cite {
+    display: block;
+    font-style: normal;
+    font-size: 14px;
+  }
+
+  blockquote cite a {
+    color: var(--focus);
+  }
+</style>

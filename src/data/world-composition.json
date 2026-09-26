@@ -1,0 +1,281 @@
+[
+  {
+    "id": "christians",
+    "label": "Христиане",
+    "share": 28.8,
+    "count": "2,3 млрд",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of Christians rose by 122 million, reaching 2.3 billion.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "Yet, as a share of the world’s population, Christians fell 1.8 percentage points, to 28.8%.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "breakdown": [
+      {
+        "id": "catholics",
+        "label": "Католики",
+        "share": 50.1,
+        "count": "1,1 млрд",
+        "proof": [
+          {
+            "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+            "title": "Pew: Global Christianity (2011), p. 21",
+            "tier": "reference",
+            "excerpt": "Catholic 1,094,610,000 15.9% 50.1%",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/",
+            "title": "Pew: Christian Traditions (2011)",
+            "tier": "reference",
+            "excerpt": "The Catholic Church has 1.1 billion adherents worldwide",
+            "accessed": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "protestants",
+        "label": "Протестанты",
+        "share": 36.7,
+        "count": "801 млн",
+        "proof": [
+          {
+            "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+            "title": "Pew: Global Christianity (2011), p. 21",
+            "tier": "reference",
+            "excerpt": "Protestant 800,640,000 11.6 36.7",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/",
+            "title": "Pew: Christian Traditions (2011)",
+            "tier": "reference",
+            "excerpt": "The world’s 801 million Protestants",
+            "accessed": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "orthodox",
+        "label": "Православные, включая древневосточные церкви",
+        "share": 11.9,
+        "count": "260 млн",
+        "proof": [
+          {
+            "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+            "title": "Pew: Global Christianity (2011), p. 21",
+            "tier": "reference",
+            "excerpt": "Orthodox 260,380,000 3.8 11.9",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/",
+            "title": "Pew: Christian Traditions (2011)",
+            "tier": "reference",
+            "excerpt": "There are about 260 million Orthodox Christians",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/",
+            "title": "Pew: Christian Traditions (2011)",
+            "tier": "reference",
+            "excerpt": "Orthodox Christianity has two main branches: Eastern Orthodox churches and Oriental Orthodox churches.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      },
+      {
+        "id": "other-christians",
+        "label": "Другие христианские традиции",
+        "share": 1.3,
+        "count": "28 млн",
+        "proof": [
+          {
+            "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+            "title": "Pew: Global Christianity (2011), p. 21",
+            "tier": "reference",
+            "excerpt": "Other Christian 28,430,000 0.4 1.3",
+            "accessed": "2026-09-26"
+          },
+          {
+            "url": "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/",
+            "title": "Pew: Christian Traditions (2011)",
+            "tier": "reference",
+            "excerpt": "There are about 28 million Christians in the world who do not belong to the three largest Christian traditions.",
+            "accessed": "2026-09-26"
+          }
+        ]
+      }
+    ],
+    "breakdownYear": 2010,
+    "breakdownShareBasis": "christians",
+    "breakdownNote": {
+      "text": "Исходный отчёт Pew (2011): доли от всех христиан мира за 2010 год. Это отдельная оценка, а не разбиение 28,8 % за 2020 год.",
+      "proof": [
+        {
+          "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+          "title": "Pew: Global Christianity (2011), p. 21",
+          "tier": "reference",
+          "excerpt": "ESTIMATED 2010 CHRISTIAN POPULATION PERCENTAGE OF WORLD POPULATION PERCENTAGE OF WORLD CHRISTIAN POPULATION",
+          "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://www.pewresearch.org/religion/wp-content/uploads/sites/7/2011/12/Christianity-fullreport-web.pdf",
+          "title": "Pew: Global Christianity (2011), p. 21",
+          "tier": "reference",
+          "excerpt": "Global Christianity, December 2011",
+          "accessed": "2026-09-26"
+        }
+      ]
+    }
+  },
+  {
+    "id": "muslims",
+    "label": "Мусульмане",
+    "share": 25.6,
+    "count": "2,0 млрд",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/muslim-population-change/",
+        "title": "Muslim population change — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of Muslims around the world grew 21% between 2010 and 2020, from 1.7 billion to 2.0 billion.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The share of the world’s population that is Muslim rose by 1.8 points, to 25.6%.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "unaffiliated",
+    "label": "Без религиозной принадлежности",
+    "share": 24.2,
+    "count": "1,9 млрд",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of religiously unaffiliated people rose by 270 million, reaching 1.9 billion.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The share of “nones” climbed nearly a full percentage point, to 24.2%.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "hindus",
+    "label": "Индуисты",
+    "share": 14.9,
+    "count": "1,2 млрд",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of Hindus rose by 126 million, reaching 1.2 billion.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "As a proportion of the global population, Hindus held steady at 14.9%.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "buddhists",
+    "label": "Буддисты",
+    "share": 4.1,
+    "count": "324 млн",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of Buddhists worldwide dropped by 19 million, declining to 324 million.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "As a share of the global population, Buddhists slipped by 0.8 points, to 4.1%.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "other-religions",
+    "label": "Другие религии",
+    "share": 2.2,
+    "count": "172 млн",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/other-religions-population-change/",
+        "title": "‘Other religions’ population change — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The estimated number of people in other religions grew worldwide by 12%, from 154 million to 172 million, between 2010 and 2020.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "Their share of the global population held steady at 2.2%.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/other-religions-population-change/",
+        "title": "‘Other religions’ population change — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "Baha’is, Jains, Shintoists, Sikhs, Daoists (also spelled Taoists), Wiccans, Zoroastrians and numerous others, some of which are commonly described as folk or traditional religions.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  },
+  {
+    "id": "jews",
+    "label": "Иудеи",
+    "share": 0.2,
+    "count": "14,8 млн",
+    "proof": [
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "The number of Jews worldwide grew by nearly 1 million, reaching 14.8 million.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/how-the-global-religious-landscape-changed-from-2010-to-2020/",
+        "title": "How the Global Religious Landscape Changed From 2010 to 2020 — Pew Research Center",
+        "tier": "reference",
+        "excerpt": "In percentage terms, Jews were the smallest group in the study, representing about 0.2% of the world’s population.",
+        "accessed": "2026-09-26"
+      }
+    ]
+  }
+]

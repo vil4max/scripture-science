@@ -1,0 +1,32 @@
+---
+// One section#theology comparison topic: heading, then each tradition's
+// position ordered by age (EDITORIAL.md principle 2 - never hard-code an
+// order), then the topic's verbatim extras.
+import type { CollectionEntry } from 'astro:content';
+import TopicPosition from './TopicPosition.astro';
+
+interface Props {
+  topic: CollectionEntry<'topics'>;
+  // Traditions to render, already ordered older-first by src/lib/content.ts.
+  traditions: CollectionEntry<'traditions'>[];
+}
+
+const { topic, traditions } = Astro.props;
+---
+
+<details class="topic" open id={topic.data.slug}>
+  <summary><h3>{topic.data.order}. {topic.data.title}</h3></summary>
+  <div class="body">
+    <div class="duo">
+      {
+        traditions.map((tradition) => (
+          <TopicPosition
+            position={topic.data.positions[tradition.id]}
+            colorClass={tradition.data.color.replace(/^--/, '')}
+          />
+        ))
+      }
+    </div>
+    <Fragment set:html={topic.data.extras} />
+  </div>
+</details>

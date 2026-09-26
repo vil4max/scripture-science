@@ -1,0 +1,8 @@
+.agents/project-context.yaml
+.cursor/project-context
+.cursor/project-context.yaml
+.cursor/plans/
+node_modules/
+dist/
+.astro/
+.DS_Store

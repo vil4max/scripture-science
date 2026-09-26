@@ -1,0 +1,207 @@
+---
+// The reader's choice of traditions as a bar pinned to the top of the page
+// (docs/tasks/site-m14-selection.md W1): the eight traditions in age order as
+// toggles, at most three at a time.
+import { getOrderedMatrix } from '../lib/content';
+import { withBase } from '../lib/paths';
+import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+
+const traditions = await getOrderedMatrix();
+// Outside «Сравнение» the bar offers the way there with the same choice.
+const onCompare = Astro.url.pathname.replace(/\/*$/, '/') === withBase('compare/');
+---
+
+<div class="selection-bar" data-selection-bar role="group" aria-describedby={onCompare ? 'dispute-selection-hint' : undefined} aria-label="Выбор традиций: одна, чтобы читать, или до трёх, чтобы сравнить">
+  <div class="chips">
+    {
+      traditions.map((t) => (
+        <button
+          type="button"
+          class="chip"
+          data-pick={t.id}
+          aria-pressed="false"
+          style={`--chip: var(${TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other'})`}
+        >
+          {t.data.name}
+        </button>
+      ))
+    }
+  </div>
+  <button type="button" class="reset" data-pick-reset hidden aria-label="Сбросить выбор" title="Сбросить выбор">×</button>
+  {!onCompare && (
+    <a class="go" href={withBase('compare/')} data-carry-selection data-pick-go hidden>
+      Сравнить →
+    </a>
+  )}
+  <span class="message" data-pick-message role="status" aria-live="polite"></span>
+</div>
+{onCompare && (
+  <p class="selection-hint" id="dispute-selection-hint">
+    Одна выбранная традиция — все стороны её споров; две или три — только выбранные стороны.
+  </p>
+)}
+
+<script>
+  import { getSelection, onSelection, setSelection } from '../lib/selection-client';
+  import { toggleSelection } from '../lib/selection';
+
+  const bar = document.querySelector<HTMLElement>('[data-selection-bar]');
+  if (bar) {
+    // Other sticky headers (the chronicle's year columns) sit just below the
+    // pinned bar, whose height changes when its chips wrap.
+    const publishHeight = () =>
+      document.documentElement.style.setProperty('--selection-bar-h', `${bar.offsetHeight}px`);
+    new ResizeObserver(publishHeight).observe(bar);
+    publishHeight();
+    const chips = Array.from(bar.querySelectorAll<HTMLButtonElement>('[data-pick]'));
+    const reset = bar.querySelector<HTMLButtonElement>('[data-pick-reset]')!;
+    const message = bar.querySelector<HTMLElement>('[data-pick-message]')!;
+    let timer: number | undefined;
+    const say = (text: string) => {
+      message.textContent = text;
+      window.clearTimeout(timer);
+      if (text) timer = window.setTimeout(() => (message.textContent = ''), 3000);
+    };
+    onSelection((ids) => {
+      for (const chip of chips) {
+        const index = ids.indexOf(chip.dataset.pick ?? '');
+        chip.setAttribute('aria-pressed', String(index !== -1));
+        chip.dataset.order = index === -1 ? '' : String(index + 1);
+      }
+      reset.hidden = ids.length === 0;
+      const go = bar.querySelector<HTMLElement>('[data-pick-go]');
+      if (go) go.hidden = ids.length === 0;
+    });
+    for (const chip of chips) {
+      chip.addEventListener('click', () => {
+        const { ids, refused } = toggleSelection(getSelection(), chip.dataset.pick ?? '');
+        if (refused) say('Можно сравнить не больше трёх традиций — снимите одну.');
+        else {
+          say('');
+          setSelection(ids);
+        }
+      });
+    }
+    reset.addEventListener('click', () => {
+      say('');
+      setSelection([]);
+    });
+  }
+</script>
+
+<style>
+  .selection-hint {
+    margin: 0;
+    padding: 8px 24px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  /* One line on a desktop: it is always on screen, so it stays short. */
+  .selection-bar {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 24px;
+    background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+
+  /* Never wraps: on a narrower window the chips scroll sideways instead of
+  doubling the bar's height. */
+  .chips {
+    display: flex;
+    gap: 5px;
+    min-width: 0;
+    overflow-x: auto;
+    scrollbar-width: none;
+  }
+
+  .chip,
+  .reset {
+    font: inherit;
+    font-size: 13px;
+    line-height: 20px;
+    border: 1px solid var(--line);
+    background: var(--bg);
+    color: var(--ink);
+    border-radius: 999px;
+    padding: 4px 8px 4px 20px;
+    flex: none;
+    cursor: pointer;
+    position: relative;
+    white-space: nowrap;
+  }
+
+  .chip::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--chip);
+  }
+
+  .chip[aria-pressed='true'] {
+    border-color: var(--chip);
+    background: color-mix(in srgb, var(--chip) 22%, var(--surface));
+    font-weight: 700;
+  }
+
+  /* The reader's order is the column order on the pages; show it. */
+  .chip[aria-pressed='true']::after {
+    content: attr(data-order);
+    margin-left: 6px;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .reset {
+    padding: 4px 10px;
+    color: var(--muted);
+    font-size: 16px;
+  }
+
+  .go {
+    margin-left: auto;
+    white-space: nowrap;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--focus);
+  }
+
+  /* A note under the bar, so a refused pick does not change the bar's height. */
+  .message {
+    position: absolute;
+    top: 100%;
+    right: 32px;
+    margin-top: 6px;
+    padding: 4px 10px;
+    border-radius: 6px;
+    background: var(--surface);
+    border: 1px solid var(--line);
+    color: var(--focus);
+    font-size: 14px;
+  }
+
+  .message:empty {
+    display: none;
+  }
+
+  @media (max-width: 760px) {
+    .selection-bar {
+      padding: 10px 16px;
+    }
+
+    .selection-hint {
+      padding-inline: 16px;
+    }
+  }
+</style>

@@ -1,0 +1,39 @@
+---
+import shared from '../data/shared-positions.json';
+import { getOrderedMatrix } from '../lib/content';
+import { withBase } from '../lib/paths';
+import ProofLink from './ProofLink.astro';
+interface Props { tradition: string; topic: string; }
+const { tradition, topic } = Astro.props;
+const matrix = await getOrderedMatrix();
+const matches = shared.filter((row) => row.topic === topic && row.members.some((member) => member.tradition === tradition));
+const rows = matches.map((match) => {
+  const members = match.members.map((member) => {
+    const entry = matrix.find((entry) => entry.id === member.tradition)!;
+    const position = entry.data.positions.find((p) => p.topic === member.evidenceTopic)!;
+    const proof = member.excerpts.map((excerpt) => {
+      const evidence = position.proof.find((p) => p.excerpt === excerpt);
+      if (!evidence) throw new Error(`Missing shared-position evidence: ${match.id}/${member.tradition}`);
+      return evidence;
+    });
+    return { ...member, name: entry.data.name, proof, divided: position.unity.kind === 'divided' };
+  });
+  return { ...match, members };
+});
+---
+{rows.length > 0 && <aside class="shared-positions" aria-label="Сходство по этой теме">
+  <strong>Сходная позиция</strong>
+  <ul>{rows.map((row) => <li>
+    <span>{row.members.filter((member) => member.tradition !== tradition).map((member, index) => <>
+      {index > 0 && ', '}
+      <a href={withBase(`compare/?t=${tradition},${member.tradition}&mode=brief&topic=${topic}#topic-${topic}`)}>{member.name}</a>{member.divided && ' (по указанным источникам; внутри традиции есть различия)'}
+    </>)}</span> — {row.label}.<ProofLink proof={row.members.flatMap((member) => member.proof)}/>
+    <small>{row.note}</small>
+  </li>)}</ul>
+  <small>Показаны подтверждённые совпадения отдельных положений; список не исчерпывающий.</small>
+</aside>}
+<style>
+  .shared-positions { border-top: 1px solid var(--line); margin-top: 8px; padding-top: 12px; font-size: 14px; line-height: 1.5; }
+  strong { font-weight: 700; } ul { list-style: none; padding: 0; margin: 6px 0; display: grid; gap: 10px; }
+  a { color: var(--focus); text-underline-offset: 3px; } small { display: block; color: var(--muted); font-size: 13px; margin-top: 3px; }
+</style>

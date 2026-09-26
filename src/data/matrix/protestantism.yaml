@@ -1,0 +1,772 @@
+id: protestantism
+name: Протестантизм
+full_name: "Протестантизм (семья конфессий: лютеранство, реформатство, англиканство, баптизм, пятидесятничество и другие)"
+family: christianity
+since:
+  year: 1530
+  label: "1530 г. · Аугсбургское вероисповедание"
+  note: "Дата первого общего вероисповедания, представленного протестантскими князьями и городами императору; отдельные течения (реформатство, англиканство, баптизм, пятидесятничество) сложились позднее и на других территориях (см. positions)."
+  proof:
+    - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+      title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+      tier: official
+      excerpt: "Оно было представлено на рейхстаге в Аугсбурге, созванном императором Карлом V в 1530 г."
+      accessed: "2026-09-25"
+scripture:
+  name: "Синодальный перевод (1876 г.); также используются Новый русский перевод и Современный русский перевод"
+  url: "https://azbyka.ru/biblia/"
+  proof:
+    - url: "https://bible150.ru/"
+      title: "150-летие русской Библии — Российский Союз Евангельских Христиан-Баптистов"
+      tier: official
+      excerpt: "Христиане России до сих продолжают читать Библию преимущественно в этом переводе"
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/biblia/?Jn.3:16"
+      title: "Евангелие от Иоанна 3:16 — Синодальный перевод (Азбука веры)"
+      tier: reference
+      excerpt: "Ибо так возлюбил Бог мир, что отдал Сына Своего Единородного, дабы всякий, верующий в Него, не погиб, но имел жизнь вечную"
+      accessed: "2026-09-25"
+adherents:
+  value: "≈801 млн (37% христиан мира)"
+  year: 2011
+  method: "оценка Pew Research Center на основе данных Center for the Study of Global Christianity; протестантизм в широком определении (включая независимые и внеденоминационные церкви)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/"
+      title: "Christian Traditions — Pew Research Center"
+      tier: reference
+      excerpt: "The world's 801 million Protestants, as broadly defined in this report, make up 37% of the global Christian population."
+      accessed: "2026-09-25"
+self_view:
+  summary: "Протестантские церкви описывают Реформацию не как основание новой церкви, а как восстановление и очищение древней; общим для семьи признаётся принцип «только Писанием, только верой, только благодатью». Лютеранство, реформатство/пресвитерианство, англиканство, баптизм (включая Российский Союз евангельских христиан-баптистов, РС ЕХБ) и пятидесятничество расходятся в понимании таинств, устройства церкви и роли Предания — эти различия отмечены в разделах ниже."
+  proof:
+    - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+      title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+      tier: official
+      excerpt: "Лютеране подчеркивают непрерывность развития христианства и убеждены, что в лютеранской Реформации не создана новая церковь, а восстановлена древняя"
+      accessed: "2026-09-25"
+    - url: "https://baptist-volga.ru/verouchenie-baptistov"
+      title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+      tier: official
+      excerpt: "Вероучение было принято на 43 съезде ЕХБ в 1985 году в качестве вспомогательного материала для духовного воспитания верующих"
+      accessed: "2026-09-25"
+positions:
+  - topic: god
+    summary: "Все течения признают одного Бога, вечно существующего в трёх равных Лицах — Отце, Сыне и Святом Духе (Никейское исповедание), против арианства и модализма. Лютеранское, баптистское, реформатское, англиканское и пятидесятническое вероучения формулируют это тождественно, каждое в своём тексте."
+    unity:
+      kind: shared
+      note: "совпадают вероучения лютеран (Аугсбургское исповедание), баптистов (РС ЕХБ) и пятидесятников (РЦХВЕ); общего для всех протестантов органа нет."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "существует одно Божественное Существо, именуемое Богом, Которое во истину и есть Бог"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Мы веруем в триединого, единосущного Бога Отца, Сына и Святого Духа"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+          title: "Исповедание веры РЦХВЕ (архив)"
+          tier: "official"
+          excerpt: "есть один Бог, особым образом вечно существующий в Трех Лицах – Отец, Сын и Святой Дух"
+          accessed: "2026-09-26"
+    quote:
+      text: "существует одно Божественное Существо, именуемое Богом, Которое во истину и есть Бог; и все же, в этом Едином Божественном Существе суть три Ипостаси"
+      source: "Аугсбургское вероисповедание, артикул I"
+      url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул I"
+        tier: official
+        excerpt: "существует одно Божественное Существо, именуемое Богом, Которое во истину и есть Бог; и все же, в этом Едином Божественном Существе суть три Ипостаси"
+        accessed: "2026-09-25"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О триединстве Бога»"
+        tier: official
+        excerpt: "Мы веруем в триединого, единосущного Бога Отца, Сына и Святого Духа"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 2 «Бог»"
+        tier: official
+        excerpt: "есть один Бог, особым образом вечно существующий в Трех Лицах – Отец, Сын и Святой Дух"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: name-of-god
+    summary: "Ни одно из рассмотренных течений не имеет отдельного учения о священном произносимом имени Бога. Основные русские переводы, которыми пользуются протестанты (Синодальный, Новый русский), передают библейский тетраграмматон словом «Господь», а не транслитерированным именем."
+    unity:
+      kind: shared
+      note: "ни одно из рассмотренных вероучений не учит о произносимом имени Бога; Синодальный перевод передаёт тетраграмматон словом «Господь» (Исх. 3:15)."
+      proof:
+        - url: "https://azbyka.ru/biblia/?Ex.3:15"
+          title: "Исход 3:15 — Синодальный перевод (Азбука веры)"
+          tier: "official"
+          excerpt: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам"
+          accessed: "2026-09-26"
+    scripture:
+      ref: "Исх 3:15"
+      text: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки"
+      url: "https://azbyka.ru/biblia/?Ex.3:15"
+    proof:
+      - url: "https://azbyka.ru/biblia/?Ex.3:15"
+        title: "Исход 3:15 — Синодальный перевод (Азбука веры)"
+        tier: reference
+        excerpt: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: jesus
+    summary: "Общее вероучение: Иисус Христос — истинный Бог и истинный человек, рождён от Девы Марии, умер за грехи людей и воскрес телесно; вернётся судить живых и мёртвых. Лютеранская, баптистская и пятидесятническая формулировки совпадают в этом по существу."
+    unity:
+      kind: shared
+      note: "совпадают вероучения лютеран (Аугсбургское исповедание) и баптистов (РС ЕХБ)."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Един Христос, истинный Бог и истинный человек, истинно рожденный, страдавший, распятый, умерший и погребенный"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Иисус Христос есть Сын Божий, от вечности сущий Бог"
+          accessed: "2026-09-26"
+    quote:
+      text: "Един Христос, истинный Бог и истинный человек, истинно рожденный, страдавший, распятый, умерший и погребенный, и воистину воскрес в третий день из мертвых"
+      source: "Аугсбургское вероисповедание, артикул III"
+      url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул III"
+        tier: official
+        excerpt: "Един Христос, истинный Бог и истинный человек, истинно рожденный, страдавший, распятый, умерший и погребенный"
+        accessed: "2026-09-25"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «Об Иисусе Христе — Сыне Божием»"
+        tier: official
+        excerpt: "Иисус Христос есть Сын Божий, от вечности сущий Бог"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: spirit
+    summary: "Все течения признают полное божество Святого Духа и Его действие в день Пятидесятницы. Пятидесятническое/харизматическое течение (РЦХВЕ) отдельно учит о «крещении Духом Святым» как о втором, отличном от возрождения опыте, засвидетельствованном говорением на иных языках; баптистское вероучение (РС ЕХБ) описывает роль Духа без такого учения о знамении."
+    unity:
+      kind: divided
+      note: "пятидесятники (РЦХВЕ) учат о крещении Духом Святым со знамением говорения на иных языках; в баптистском вероучении (РС ЕХБ) такого учения нет."
+      proof:
+        - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+          title: "Исповедание веры РЦХВЕ (архив)"
+          tier: "official"
+          excerpt: "физическим доказательством принятия крещения Духом Святым является знамение говорения на иных языках"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Дух Святой был ниспослан в день Пятидесятницы для свидетельства о Христе, для прославления Его и для созидания Церкви"
+          accessed: "2026-09-26"
+    quote:
+      text: "физическим доказательством принятия крещения Духом Святым является знамение говорения на иных языках"
+      source: "Исповедание веры РЦХВЕ, раздел 7 «Крещение Духом Святым»"
+      url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+    proof:
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 7 «Крещение Духом Святым»"
+        tier: official
+        excerpt: "физическим доказательством принятия крещения Духом Святым является знамение говорения на иных языках"
+        accessed: "2026-09-26"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О Духе Святом»"
+        tier: official
+        excerpt: "Дух Святой был ниспослан в день Пятидесятницы для свидетельства о Христе, для прославления Его и для созидания Церкви"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: scripture
+    summary: "Все течения признают один и тот же 66-книжный канон (39 книг Ветхого Завета и 27 — Нового), без второканонических книг (апокрифов). Основной русский текст — Синодальный перевод 1876 года."
+    unity:
+      kind: shared
+      note: "66 книг канона называют баптистское и пятидесятническое вероучения; реформатское Вестминстерское исповедание прямо исключает апокрифы."
+      proof:
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "состоит из 39 книг Ветхого Завета и 27 книг Нового Завета"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+          title: "Исповедание веры РЦХВЕ (архив)"
+          tier: "official"
+          excerpt: "Священное Писание, данное нам в 66 канонических книгах Ветхого и Нового Заветов"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры (ireformed.org)"
+          tier: "official"
+          excerpt: "Книги, именуемые Апокрифами, не являются богодухновенными и не входят в канон Священного Писания"
+          accessed: "2026-09-26"
+    quote:
+      text: "состоит из 39 книг Ветхого Завета и 27 книг Нового Завета"
+      source: "Вероучение ЕХБ 1985 года, раздел «О Слове Божием, или Священном Писании»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О Слове Божием, или Священном Писании»"
+        tier: official
+        excerpt: "состоит из 39 книг Ветхого Завета и 27 книг Нового Завета"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 1 «Священное Писание»"
+        tier: official
+        excerpt: "Священное Писание, данное нам в 66 канонических книгах Ветхого и Нового Заветов – дословно богодухновенное"
+        accessed: "2026-09-26"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 1 «О Священном Писании»"
+        tier: official
+        excerpt: "Книги, именуемые Апокрифами, не являются богодухновенными и не входят в канон Священного Писания"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: authority
+    summary: "Лютеранство и реформатство признают за Писанием единственный высший авторитет, а за собственными вероисповедными текстами (Книга Согласия, Вестминстерское исповедание) — лишь подчинённую, толковательную роль. Баптистское (РС ЕХБ) и пятидесятническое (РЦХВЕ) вероучения прямо называют свои исповедания не обязательным символом веры, а вспомогательным материалом; толкование Писания в них — дело поместной церкви. Англиканство (via media) сочетает высший авторитет Библии с ролью церковного предания и разума."
+    unity:
+      kind: shared
+      note: "высший авторитет Писания признают лютеране, реформаты и англикане; англикане при этом толкуют Библию с опорой на традиции и разум."
+      proof:
+        - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+          title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует... судить обо всех учениях»"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры (ireformed.org)"
+          tier: "official"
+          excerpt: "Дух Святой, говорящий в Писании, есть единственный высший Судия"
+          accessed: "2026-09-26"
+        - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+          title: "Англиканство — St Andrew's Anglican Church, Moscow"
+          tier: "official"
+          excerpt: "Библия, Слово Божье, является высшим авторитетом, но мы нуждаемся в традициях и разуме, чтобы интерпретировать Библию"
+          accessed: "2026-09-26"
+    quote:
+      text: "Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует... судить обо всех учениях»"
+      source: "Формула согласия, по изложению на странице «Лютеранство» (elkras.ru)"
+      url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+        title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+        tier: official
+        excerpt: "Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует... судить обо всех учениях»"
+        accessed: "2026-09-25"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года (заголовок страницы)"
+        tier: official
+        excerpt: "Вероучение было принято на 43 съезде ЕХБ в 1985 году в качестве вспомогательного материала для духовного воспитания верующих"
+        accessed: "2026-09-25"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 1 «О Священном Писании»"
+        tier: official
+        excerpt: "Дух Святой, говорящий в Писании, есть единственный высший Судия, к Которому должно обращаться за разрешением всех спорных вопросов"
+        accessed: "2026-09-25"
+      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+        tier: official
+        excerpt: "Библия, Слово Божье, является высшим авторитетом, но мы нуждаемся в традициях и разуме, чтобы интерпретировать Библию"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: salvation
+    summary: "Общее для семьи: спасение даётся по благодати через веру во Христа, а не делами или церковным обрядом («только благодатью, только верой»). Реформатское вероучение (Вестминстерское исповедание) отдельно учит о предопределении одних к жизни, а других — к смерти; баптистское и лютеранское вероучения говорят об оправдании верой, не формулируя учение о предопределении в этих терминах."
+    unity:
+      kind: shared
+      note: "спасение по благодати через веру исповедуют лютеране, реформаты и англикане; из рассмотренных исповеданий только реформатское учит о предопределении одних к вечной жизни, а других к вечной смерти."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "мы получаем прощение грехов и оправдание перед Богом ради Христа по благодати через веру"
+          accessed: "2026-09-26"
+        - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+          title: "Англиканство — St Andrew's Anglican Church, Moscow"
+          tier: "official"
+          excerpt: "мы спасены (оправданы) не нашими добрыми делами, но только благодатью Божией"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры (ireformed.org)"
+          tier: "official"
+          excerpt: "одни люди и ангелы предопределены к вечной жизни, а другие предназначены к вечной смерти"
+          accessed: "2026-09-26"
+    quote:
+      text: "мы получаем прощение грехов и оправдание перед Богом ради Христа по благодати через веру"
+      source: "Аугсбургское вероисповедание, артикул IV"
+      url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул IV"
+        tier: official
+        excerpt: "мы получаем прощение грехов и оправдание перед Богом ради Христа по благодати через веру"
+        accessed: "2026-09-25"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «Покаяние, обращение, возрождение и оправдание»"
+        tier: official
+        excerpt: "оправдание изменяет положение уверовавшего человека перед Богом, освобождает его от сознания виновности и страха осуждения за грех"
+        accessed: "2026-09-25"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 3 «О вечных Божьих установлениях»"
+        tier: official
+        excerpt: "одни люди и ангелы предопределены к вечной жизни, а другие предназначены к вечной смерти"
+        accessed: "2026-09-25"
+      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+        tier: official
+        excerpt: "мы спасены (оправданы) не нашими добрыми делами, но только благодатью Божией"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: afterlife
+    summary: "Все течения признают всеобщее воскресение мёртвых и Страшный суд; учение о чистилище отсутствует во всех рассмотренных вероучениях. Баптистское вероучение отдельно говорит о суде «перед Великим белым престолом»."
+    unity:
+      kind: shared
+      note: "воскресение и Страшный суд исповедуют лютеране и баптисты; учения о чистилище нет ни в одном из рассмотренных вероучений."
+      proof:
+        - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+          title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Лютеране верят в существование Троицы, наличие двух природ во Христе, воскресение, Страшный суд и жизнь после смерти"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "воскрешение всех умерших и в праведный суд Божий перед Великим белым престолом"
+          accessed: "2026-09-26"
+    quote:
+      text: "воскрешение всех умерших и в праведный суд Божий перед Великим белым престолом"
+      source: "Вероучение ЕХБ 1985 года, раздел «О втором пришествии Иисуса Христа и о суде»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О втором пришествии Иисуса Христа и о суде»"
+        tier: official
+        excerpt: "воскрешение всех умерших и в праведный суд Божий перед Великим белым престолом"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+        title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+        tier: official
+        excerpt: "Лютеране верят в существование Троицы, наличие двух природ во Христе, воскресение, Страшный суд и жизнь после смерти"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: end-times
+    summary: "Баптистское и пятидесятническое вероучения содержат почти тождественный язык о «восхищении Церкви» перед вторым пришествием — черта, отсутствующая в более ранних (XVI–XVII вв.) лютеранском и реформатском текстах, которые говорят о видимом возвращении Христа и суде без этой терминологии. Пятидесятническое (РЦХВЕ) вероучение отдельно называет целями пришествия установление тысячелетнего Царства на земле."
+    unity:
+      kind: divided
+      note: "о невидимом для мира восхищении Церкви учат баптисты и пятидесятники, пятидесятники — и о тысячелетнем Царстве на земле; Аугсбургское исповедание говорит о явлении Христа в день Страшного суда без этого учения."
+      proof:
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "невидимое для мира восхищение Церкви и встреча ее со Христом в облаках"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+          title: "Исповедание веры РЦХВЕ (архив)"
+          tier: "official"
+          excerpt: "установление Своего тысячелетнего Царствия на"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Господь наш Иисус Христос явится в день Страшного суда дабы судить и воскресить мертвых"
+          accessed: "2026-09-26"
+    quote:
+      text: "невидимое для мира восхищение Церкви и встреча ее со Христом в облаках"
+      source: "Вероучение ЕХБ 1985 года, раздел «О втором пришествии Иисуса Христа и о суде»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О втором пришествии Иисуса Христа и о суде»"
+        tier: official
+        excerpt: "невидимое для мира восхищение Церкви и встреча ее со Христом в облаках"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 12 «О будущем»"
+        tier: official
+        excerpt: "восхищение Церкви; - спасение остатка еврейской нации; - поражение антихриста; - суд над языческими народами; - установление Своего тысячелетнего Царствия на земле"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XVII"
+        tier: official
+        excerpt: "Господь наш Иисус Христос явится в день Страшного суда дабы судить и воскресить мертвых"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: worship
+    summary: "Главное практическое различие семьи — крещение и Вечеря Господня. Лютеранство сохраняет крещение младенцев и учит о реальном присутствии Тела и Крови Христа в Причастии; баптизм (РС ЕХБ) и пятидесятничество (РЦХВЕ) крестят по вере через погружение и понимают Вечерю как воспоминание; пятидесятничество добавляет отдельное «крещение Духом Святым». Англиканство признаёт Крещение и Святое Причастие таинствами при разных литургических стилях — от традиционного до менее формального."
+    unity:
+      kind: divided
+      note: "лютеране учат о реальном присутствии Тела и Крови Христа в Причастии; пятидесятники крестят полным погружением; у баптистов хлеб и вино «указывают на Тело и Кровь»."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "истинное Тело и истинная Кровь Христа воистину присутствуют во святом Причастии под видом хлеба и вина"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+          title: "Исповедание веры РЦХВЕ (архив)"
+          tier: "official"
+          excerpt: "должны быть крещены во имя Отца, Сына и Святого Духа посредством полного погружения в воду"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Хлеб и вино указывают на Тело и Кровь Иисуса Христа"
+          accessed: "2026-09-26"
+    quote:
+      text: "Крещение совершается служителями через единократное погружение в воду во имя Отца и Сына и Святого Духа"
+      source: "Вероучение ЕХБ 1985 года, раздел «О водном крещении»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, разделы «О водном крещении» и «О Вечере Господней»"
+        tier: official
+        excerpt: "Хлеб и вино указывают на Тело и Кровь Иисуса Христа"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикулы IX и X"
+        tier: official
+        excerpt: "истинное Тело и истинная Кровь Христа воистину присутствуют во святом Причастии под видом хлеба и вина"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 6 «Постановления Христа для Церкви»"
+        tier: official
+        excerpt: "должны быть крещены во имя Отца, Сына и Святого Духа посредством полного погружения в воду"
+        accessed: "2026-09-26"
+      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+        tier: official
+        excerpt: "Она может быть традиционной, с облачениями, процессиями, ладаном и упором на Евхаристие"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: images
+    summary: "Единого правила для всей семьи нет. В лютеранских церквах обычно есть алтарь, используются облачения, распятия и свечи. Реформатское Вестминстерское исповедание не допускает богослужения «с использованием зримых образов или другими способами, не указанными в Священном Писании»; Гейдельбергский катехизис учит, что Бога невозможно и недопустимо изображать видимым образом, допускает изображения творений, но не для поклонения, и не принимает изображений в церквях вместо книг для неграмотных. Баптизм, по «Новой философской энциклопедии» (Институт философии РАН), отвергает почитание икон и священнические облачения; по англоязычной Википедии, латинский крест — один из немногих духовных символов, которые обычно видны на здании баптистской церкви, а во многих баптистских церквях над баптистерием висит большой крест. Пятидесятническая традиция, как и методистская, по англоязычной Википедии, в отличие от реформатской охотнее использует большие кресты и другие изображения, хотя и не так обильно, как традиционное католичество или лютеранство."
+    unity:
+      kind: divided
+      note: "в лютеранских церквах обычно есть алтарь, облачения, распятия и свечи; реформатский Гейдельбергский катехизис не допускает изображений в церквях; методисты и пятидесятники, по англоязычной Википедии, охотнее используют кресты и изображения."
+      proof:
+        - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+          title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Обычно в лютеранских церквах имеется алтарь и кафедра для проповеди, используются традиционная церковная одежда и утварь – облачения, распятия, свечи"
+          accessed: "2026-09-26"
+        - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+          title: "Heidelberg Catechism — Christian Reformed Church in North America"
+          tier: "official"
+          excerpt: "may not images be permitted in churches in place of books for the unlearned? A. No, we should not try to be wiser than God."
+          accessed: "2026-09-26"
+        - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+          title: "Aniconism in Christianity — Wikipedia (English)"
+          tier: "reference"
+          excerpt: "are inspired by the Moravian rather than Calvinist tradition, and are therefore readier to use large crosses and other images"
+          accessed: "2026-09-26"
+    quote:
+      text: "Обычно в лютеранских церквах имеется алтарь и кафедра для проповеди, используются традиционная церковная одежда и утварь – облачения, распятия, свечи"
+      source: "Лютеранство — Евангелическо-Лютеранская Церковь России"
+      url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+        title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+        tier: official
+        excerpt: "Обычно в лютеранских церквах имеется алтарь и кафедра для проповеди, используются традиционная церковная одежда и утварь – облачения, распятия, свечи"
+        accessed: "2026-09-25"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 21 «О служении Богу и дне Субботнем»"
+        tier: official
+        excerpt: "совершать богослужение согласно представлениям и вымыслам человеческим, или по наущению сатаны, с использованием зримых образов или другими способами, не указанными в Священном Писании, нельзя"
+        accessed: "2026-09-26"
+      - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+        title: "Heidelberg Catechism, Q&A 97 — Christian Reformed Church in North America"
+        tier: official
+        excerpt: "God can not and may not be visibly portrayed in any way."
+        accessed: "2026-09-26"
+      - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+        title: "Heidelberg Catechism, Q&A 97 — Christian Reformed Church in North America"
+        tier: official
+        excerpt: "Although creatures may be portrayed, yet God forbids making or having such images if one’s intention is to worship them"
+        accessed: "2026-09-26"
+      - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+        title: "Heidelberg Catechism, Q&A 98 — Christian Reformed Church in North America"
+        tier: official
+        excerpt: "may not images be permitted in churches in place of books for the unlearned? A. No, we should not try to be wiser than God."
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20221203130203/https://iphlib.ru/library/collection/newphilenc/document/HASHd07c45269cbfc22c74c0d0"
+        title: "Баптизм (Л. Н. Митрохин) — Новая философская энциклопедия, Институт философии РАН (архив)"
+        tier: reference
+        excerpt: "отвергает церковные таинства, культ святых, монашество, почитание икон, священнические облачения и т.п."
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Baptists"
+        title: "Baptists — Wikipedia (English), section “Places of worship”"
+        tier: reference
+        excerpt: "the Latin cross is one of the only spiritual symbols that can usually be seen on the building of a Baptist church"
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Christian_cross"
+        title: "Christian cross — Wikipedia (English)"
+        tier: reference
+        excerpt: "In many Baptist churches, a large cross hangs above the baptistry."
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+        title: "Aniconism in Christianity — Wikipedia (English)"
+        tier: reference
+        excerpt: "The Methodist and Pentecostal traditions, as well as other Wesleyan-Arminian Evangelical churches,"
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+        title: "Aniconism in Christianity — Wikipedia (English)"
+        tier: reference
+        excerpt: "are inspired by the Moravian rather than Calvinist tradition, and are therefore readier to use large crosses and other images"
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+        title: "Aniconism in Christianity — Wikipedia (English)"
+        tier: reference
+        excerpt: "though not with the profusion of traditional Catholicism or Lutheranism."
+        accessed: "2026-09-26"
+    status: verified
+  - topic: holy-days
+    summary: "Баптистское вероучение (РС ЕХБ) даёт развёрнутое богословское обоснование воскресного, а не субботнего дня как дня поклонения, связывая его с воскресением Христа и днём Пятидесятницы. Англиканство и лютеранство сохраняют исторический литургический календарь и традиционные формы богослужения."
+    unity:
+      kind: divided
+      note: "воскресенье как день Господень чтят все течения, а церковный год различается: Церковь Англии соблюдает Великий пост и пятницы как дни дисциплины, лютеране — Пасху и Пятидесятницу как церковное установление, баптистское вероучение говорит о воскресном дне."
+      proof:
+        - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/common-worship/churchs-year/rules"
+          title: "Common Worship: The Church's Year, Rules — The Church of England"
+          tier: "official"
+          excerpt: "The weekdays of Lent and every Friday in the year are days of discipline and self denial"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "соблюдением воскресных дней, дней Пасхи и Пятидесятницы и иных подобных дней и праздников"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Воскресный день как день Господний должен быть днем святого труда для Господа"
+          accessed: "2026-09-26"
+    quote:
+      text: "первый день недели был днем, в который Иисус Христос воскрес для оправдания нашего"
+      source: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+        tier: official
+        excerpt: "первый день недели был днем, в который Иисус Христос воскрес для оправдания нашего"
+        accessed: "2026-09-25"
+      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+        tier: official
+        excerpt: "Она может быть традиционной, с облачениями, процессиями, ладаном и упором на Евхаристие"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: fasting
+    summary: "Лютеранское Аугсбургское вероисповедание называет предписания о постной пище и постных днях, которыми люди рассчитывают заслужить благодать, «бесполезными» и противоречащими Евангелию, но учит, что каждый обязан «с помощью телесных трудов, таких как пост», вести жизнь, неуязвимую для греха, — не ради заслуги и «не по определенным дням, а постоянно»; монашеские обеты оно считает ненужными. Реформатское Вестминстерское исповедание относит к служению Богу посты, «соблюдаемые ради духовных целей», а обеты пожизненного безбрачия, бедности и послушания называет «предрассудками и греховными тенетами». В англиканской Церкви Англии будни Великого поста и все пятницы года — дни дисциплины и самоотречения (кроме главных и других праздников вне Великого поста и пятниц от Пасхи до Пятидесятницы); монашеские ордены, распущенные при Генрихе VIII, начали возрождаться в 1840-х годах, и их члены часто дают обеты бедности, целомудрия и послушания. Баптистское вероучение (РС ЕХБ) учит, что молитвы «могут сопровождаться постами», а пост — не только воздержание от пищи и молитва, но и разрешение «оков неправды»."
+    unity:
+      kind: divided
+      note: "лютеране постятся «не по определенным дням, а постоянно»; Церковь Англии соблюдает будни Великого поста и пятницы; у баптистов молитвы «могут сопровождаться постами»."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Эти телесные труды должны совершаться не по определенным дням, а постоянно"
+          accessed: "2026-09-26"
+        - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/common-worship/churchs-year/rules"
+          title: "Common Worship: The Church's Year, Rules — The Church of England"
+          tier: "official"
+          excerpt: "The weekdays of Lent and every Friday in the year are days of discipline and self denial"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Молитвы могут сопровождаться постами"
+          accessed: "2026-09-26"
+    quote:
+      text: "каждый обязан с помощью телесных трудов, таких как пост и другие, вести такую жизнь, которая сделала бы его неуязвимым для греха"
+      source: "Аугсбургское вероисповедание, артикул XXVI «О церковных обычаях»"
+      url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+    proof:
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XV «О церковных порядках»"
+        tier: official
+        excerpt: "предписания относительно постной пищи, постных дней и т. д., с помощью соблюдения которых люди рассчитывают заслужить благодать и искупить свои грехи, бесполезны и противоречат Евангелию"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XXVI «О церковных обычаях»"
+        tier: official
+        excerpt: "каждый обязан с помощью телесных трудов, таких как пост и другие, вести такую жизнь, которая сделала бы его неуязвимым для греха"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XXVI «О церковных обычаях»"
+        tier: official
+        excerpt: "Но он должен делать эти дела не для того, чтобы заслужить себе благодать. Эти телесные труды должны совершаться не по определенным дням, а постоянно."
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XXVII «О монашеских обетах»"
+        tier: official
+        excerpt: "Поскольку все это ложно, бесполезно и выдумано от себя, монашеские обеты следует считать ненужными"
+        accessed: "2026-09-26"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 21 «О служении Богу и дне Субботнем»"
+        tier: official
+        excerpt: "в должное время, праведно и благоговейно следует прибегать к духовным клятвам и обетам, к постам, соблюдаемым ради духовных целей"
+        accessed: "2026-09-26"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 22 «О законных клятвах и обетах»"
+        tier: official
+        excerpt: "обеты пожизненного безбрачия, добровольной бедности и постоянного послушания не только не ведут к более высокой степени совершенства, но являются предрассудками и греховными тенетами"
+        accessed: "2026-09-26"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/common-worship/churchs-year/rules"
+        title: "Common Worship: The Church's Year, Rules, «Days of Discipline and Self Denial» — The Church of England"
+        tier: official
+        excerpt: "The weekdays of Lent and every Friday in the year are days of discipline and self denial"
+        accessed: "2026-09-26"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/common-worship/churchs-year/rules"
+        title: "Common Worship: The Church's Year, Rules, «Days of Discipline and Self Denial» — The Church of England"
+        tier: official
+        excerpt: "except all Principal Feasts and Festivals outside Lent and Fridays from Easter Day to Pentecost"
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Anglican_religious_order"
+        title: "Anglican religious order — Wikipedia"
+        tier: reference
+        excerpt: "Religious orders were dissolved by King Henry VIII when he separated the Church of England from papal primacy."
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Anglican_religious_order"
+        title: "Anglican religious order — Wikipedia"
+        tier: reference
+        excerpt: "Between 1841 and 1855, several religious orders for women were begun"
+        accessed: "2026-09-26"
+      - url: "https://en.wikipedia.org/wiki/Anglican_religious_order"
+        title: "Anglican religious order — Wikipedia"
+        tier: reference
+        excerpt: "The members of religious orders take vows which often include the traditional monastic vows of poverty, chastity and obedience"
+        accessed: "2026-09-26"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел 9 «Молитва»"
+        tier: official
+        excerpt: "Молитвы могут сопровождаться постами."
+        accessed: "2026-09-26"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел 9 «Молитва»"
+        tier: official
+        excerpt: "Пост заключается не только в воздержании от принятия пищи и пребывания в молитве, но и в разрешении «оков неправды»"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: organisation
+    summary: "Устройство церкви — ещё одна линия различий: у англикан — исторический трёхчинный строй (диаконы, священники, епископы); у пятидесятников (Ассамблеи Бога, США) — генеральный суперинтендант во главе союза при праве каждой общины на самоуправление; у реформатов — синодальное управление (Вестминстерское исповедание посвящает этому отдельную главу); у баптистов (РС ЕХБ) — конгрегационное устройство: пресвитеров и диаконов избирает и поставляет сама поместная церковь."
+    unity:
+      kind: divided
+      note: "у англикан — три чина (диаконы, священники, епископы), у реформатов — синоды и соборы, у баптистов служителей избирает поместная церковь."
+      proof:
+        - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+          title: "Англиканство — St Andrew's Anglican Church, Moscow"
+          tier: "official"
+          excerpt: "поддерживать тройственные чины церкви (диаконов, священников и епископов)"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры (ireformed.org)"
+          tier: "official"
+          excerpt: "Глава 31: О Синодах и Соборах"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение евангельских христиан-баптистов 1985 года (текст, воспроизведённый с сайта РС ЕХБ)"
+          tier: "official"
+          excerpt: "Господь поставляет служителей через призвание и избрание церковью. Право избрания принадлежит церкви"
+          accessed: "2026-09-26"
+    quote:
+      text: "Господь поставляет служителей через призвание и избрание церковью. Право избрания принадлежит церкви"
+      source: "Вероучение ЕХБ 1985 года, раздел «Устройство поместной церкви»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "https://web.archive.org/web/20240105140103/https://ag.org/-/media/AGORG/Downloads/Constitution-and-Bylaws/2023-Constitution-and-Bylaws.pdf"
+        title: "Constitution and Bylaws of The General Council of the Assemblies of God (2023) (архив)"
+        tier: official
+        excerpt: "Douglas E. Clay, General Superintendent"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20240105140103/https://ag.org/-/media/AGORG/Downloads/Constitution-and-Bylaws/2023-Constitution-and-Bylaws.pdf"
+        title: "Constitution and Bylaws of The General Council of the Assemblies of God (2023) (архив)"
+        tier: official
+        excerpt: "Each General Council affiliated assembly has the right of self-government under Jesus Christ"
+        accessed: "2026-09-26"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «Устройство поместной церкви»"
+        tier: official
+        excerpt: "Господь поставляет служителей через призвание и избрание церковью. Право избрания принадлежит церкви"
+        accessed: "2026-09-25"
+      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+        tier: official
+        excerpt: "поддерживать тройственные чины церкви (диаконов, священников и епископов)"
+        accessed: "2026-09-25"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры (оглавление, глава 31)"
+        tier: official
+        excerpt: "Глава 31: О Синодах и Соборах"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: rules
+    summary: "Аугсбургское вероисповедание (лютеране) разрешает христианам занимать государственные должности и «вести законные войны и сражаться в них». Реформатское Вестминстерское исповедание также допускает для христианина должность гражданского правителя, а для власти — войну, «когда того требует справедливость и когда это необходимо». Баптисты (РС ЕХБ) учат повиноваться власти «не только из страха наказания, но и по совести»; исповедание Южной баптистской конвенции (США, 2000) называет долгом христиан повиноваться гражданской власти во всём, что не противоречит воле Божией, и делать всё возможное, чтобы положить конец войне. Устав американских Ассамблей Бога (пятидесятники) закрепляет за каждым членом право выбрать статус комбатанта, некомбатанта или отказника по соображениям совести."
+    unity:
+      kind: divided
+      note: "лютеране и реформаты допускают справедливую войну; в Ассамблеях Божиих (пятидесятники, США) каждый член сам решает, служить с оружием, без оружия или отказаться по убеждениям."
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "наказывать преступников мечом, вести законные войны и сражаться в них"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры (ireformed.org)"
+          tier: "official"
+          excerpt: "вести военные действия, когда того требует справедливость и когда это необходимо"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20240105140103/https://ag.org/-/media/AGORG/Downloads/Constitution-and-Bylaws/2023-Constitution-and-Bylaws.pdf"
+          title: "Constitution and Bylaws of The General Council of the Assemblies of God (2023), Bylaws Article XVII «Military Service» (архив)"
+          tier: "official"
+          excerpt: "the right of each member to choose whether to declare their position as a combatant, a noncombatant, or a conscientious objector"
+          accessed: "2026-09-26"
+    quote:
+      text: "Христианин должен быть примерным гражданином своего отечества, он призван повиноваться власти «не только из страха наказания, но и по совести»"
+      source: "Вероучение ЕХБ 1985 года, раздел «Отношение к государству»"
+      url: "https://baptist-volga.ru/verouchenie-baptistov"
+    proof:
+      - url: "http://web.archive.org/web/20260915061913/https://bfm.sbc.net/bfm2000/"
+        title: "Baptist Faith and Message 2000, статьи XVI–XVII — Southern Baptist Convention (архив)"
+        tier: official
+        excerpt: "it is the duty of Christians to render loyal obedience thereto in all things not contrary to the revealed will of God"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260915061913/https://bfm.sbc.net/bfm2000/"
+        title: "Baptist Faith and Message 2000, статьи XVI–XVII — Southern Baptist Convention (архив)"
+        tier: official
+        excerpt: "they should do all in their power to put an end to war"
+        accessed: "2026-09-26"
+      - url: "https://baptist-volga.ru/verouchenie-baptistov"
+        title: "Вероучение ЕХБ 1985 года, раздел «Отношение к государству»"
+        tier: official
+        excerpt: "Христианин должен быть примерным гражданином своего отечества, он призван повиноваться власти «не только из страха наказания, но и по совести»"
+        accessed: "2026-09-25"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XVI «О государственном и общественном порядке»"
+        tier: official
+        excerpt: "Христиане могут без греха возлагать на себя государственную ответственность (в ориг.: власть), быть князьями и судьями"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул XVI «О государственном и общественном порядке»"
+        tier: official
+        excerpt: "наказывать преступников мечом, вести законные войны и сражаться в них"
+        accessed: "2026-09-26"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 23 «О гражданских властях»"
+        tier: official
+        excerpt: "Для христианина вполне законно принимать на себя и исполнять обязанности гражданского правителя, если он к тому призван"
+        accessed: "2026-09-26"
+      - url: "https://www.ireformed.org/westminster-confession-of-faith"
+        title: "Вестминстерское исповедание веры, глава 23 «О гражданских властях»"
+        tier: official
+        excerpt: "вести военные действия, когда того требует справедливость и когда это необходимо"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20240105140103/https://ag.org/-/media/AGORG/Downloads/Constitution-and-Bylaws/2023-Constitution-and-Bylaws.pdf"
+        title: "Constitution and Bylaws of The General Council of the Assemblies of God (2023), Bylaws Article XVII «Military Service» (архив)"
+        tier: official
+        excerpt: "the right of each member to choose whether to declare their position as a combatant, a noncombatant, or a conscientious objector"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20240105140103/https://ag.org/-/media/AGORG/Downloads/Constitution-and-Bylaws/2023-Constitution-and-Bylaws.pdf"
+        title: "Constitution and Bylaws of The General Council of the Assemblies of God (2023), Constitutional Declaration (архив)"
+        tier: official
+        excerpt: "a cooperative fellowship of Pentecostal, Spirit-baptized saints from local Pentecostal assemblies"
+        accessed: "2026-09-26"
+    status: verified

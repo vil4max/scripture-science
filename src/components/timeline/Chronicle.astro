@@ -1,0 +1,462 @@
+---
+// The biblical comparison line is explicitly distinguished from historical branches.
+import lineageData from '../../data/lineage.json';
+import biblical from '../../data/biblical-timeline.json';
+import chapters from '../../data/history-overview.json';
+const biblicalById = new Map(biblical.map((row) => [row.id, row]));
+const contextByRow = new Map(chapters.filter((chapter) => chapter.timelineRow).map((chapter) => [chapter.timelineRow, chapter]));
+import {
+  assignBranchColumns,
+  buildChronicleRows,
+  GAP_MARKER_YEARS,
+  parseLineage,
+  validateReferences,
+  type ChronicleRow,
+  type LineageNode,
+} from '../../lib/timeline';
+
+const lineage = parseLineage(lineageData);
+validateReferences(lineage);
+const rows = buildChronicleRows(lineage, biblical).filter((row) => row.kind !== 'epoch');
+const formatYear = (year: number) => year < 0 ? `${-year} г. до н. э.` : `${year} г. н. э.`;
+const branches = assignBranchColumns(lineage, rows);
+const nodeById = new Map(lineage.nodes.map((n) => [n.id, n]));
+
+// --- Highlight sets: a tradition's own nodes plus every ancestor line ----
+const ancestorsOf = (node: LineageNode): string[] => {
+  const ids: string[] = [];
+  for (let n: LineageNode | undefined = node; n; n = n.parent ? nodeById.get(n.parent) : undefined) ids.push(n.id);
+  return ids;
+};
+const highlightOf = new Map<string, Set<string>>(); // node id -> traditions
+for (const n of lineage.nodes) {
+  if (!n.tradition) continue;
+  for (const id of ancestorsOf(n)) {
+    highlightOf.set(id, (highlightOf.get(id) ?? new Set()).add(n.tradition));
+  }
+}
+function rowHighlight(row: ChronicleRow): string {
+  if (row.kind === 'node') return [...(highlightOf.get(row.id) ?? [])].join(' ');
+  if (row.kind === 'union') {
+    const u = lineage.unions.find((x) => x.id === row.id)!;
+    return [nodeById.get(u.from)?.tradition, nodeById.get(u.to)?.tradition].filter(Boolean).join(' ');
+  }
+  return row.tradition ?? '';
+}
+
+// --- Graph geometry (CSS pixels) -------------------------------------------
+const COL_W = 12;
+const GRAPH_PAD = 8;
+const GRAPH_W = GRAPH_PAD * 2 + (branches.columns + 1) * COL_W;
+// The dot sits on the first text line's centre: row padding 6 + half of the
+// 26px line height.
+const DOT_Y = 19;
+const colX = (c: number) => GRAPH_PAD + (c + 1) * COL_W + COL_W / 2;
+const colorOf = (tradition?: string) => `var(--t-${tradition ?? 'other'})`;
+const nativityIndex = rows.findIndex((row) => row.id === 'biblical-nativity');
+const bibleEnd = rows.findIndex((row) => row.id === 'early-christianity');
+const testamentOf = (row: ChronicleRow) => row.id === 'early-christianity' || row.id === 'biblical-nativity'
+  ? 'new' : row.kind === 'biblical' ? 'old' : undefined;
+const testamentColor = (testament: 'old' | 'new') => `var(--testament-${testament})`;
+
+interface Segment {
+  x: number;
+  from: 'top' | 'dot';
+  to: 'bottom' | 'dot';
+  color: string;
+  hl: string;
+}
+interface Connector {
+  x1: number;
+  x2: number;
+  color: string;
+  hl: string;
+  dashed?: boolean;
+}
+
+/** The vertical line pieces crossing row `r`; `between` draws a gap-marker row that sits just above row `r`. */
+function segmentsAt(r: number, between = false): Segment[] {
+  const out: Segment[] = [];
+  if (r <= bibleEnd) out.push({ x: GRAPH_PAD + COL_W / 2,
+    from: between || r > 0 ? 'top' : 'dot', to: !between && r === bibleEnd ? 'dot' : 'bottom',
+    color: testamentColor(r < nativityIndex || (between && r === nativityIndex) ? 'old' : 'new'), hl: 'biblical' });
+  for (const n of lineage.nodes) {
+    const [a, b] = branches.span.get(n.id)!;
+    const hl = [...(highlightOf.get(n.id) ?? [])].join(' ');
+    const base = { x: colX(branches.column.get(n.id)!), color: colorOf(n.tradition), hl };
+    if (between) {
+      if (a < r && b >= r) out.push({ ...base, from: 'top', to: 'bottom' });
+      continue;
+    }
+    if (r < a || r > b) continue;
+    // A living line runs on through the "now" row; a structural line ends
+    // on the dot of its last child's row (branches.living, src/lib/timeline.ts).
+    const living = branches.living.has(n.id);
+    if (r === a) {
+      if (living || b > a) out.push({ ...base, from: 'dot', to: 'bottom' });
+    } else if (r === b && !living) out.push({ ...base, from: 'top', to: 'dot' });
+    else out.push({ ...base, from: 'top', to: 'bottom' });
+  }
+  return out;
+}
+
+function connectorAt(row: ChronicleRow): Connector | undefined {
+  if (row.kind === 'node') {
+    const n = nodeById.get(row.id)!;
+    if (!n.parent) return undefined;
+    const x1 = colX(branches.column.get(n.parent)!);
+    const x2 = colX(branches.column.get(n.id)!);
+    if (x1 === x2) return undefined;
+    return { x1, x2, color: colorOf(n.tradition), hl: rowHighlight(row) };
+  }
+  if (row.kind === 'union') {
+    const u = lineage.unions.find((x) => x.id === row.id)!;
+    return {
+      x1: colX(branches.column.get(u.from)!),
+      x2: colX(branches.column.get(u.to)!),
+      color: 'var(--muted)',
+      hl: rowHighlight(row),
+      dashed: true,
+    };
+  }
+  return undefined;
+}
+
+function dotAt(row: ChronicleRow): { x: number; color: string } | undefined {
+  if (row.kind === 'biblical') return { x: GRAPH_PAD + COL_W / 2, color: testamentColor(testamentOf(row)!) };
+  if (row.kind === 'node') return { x: colX(branches.column.get(row.id)!), color: colorOf(row.tradition) };
+  if (row.kind === 'union') {
+    const u = lineage.unions.find((x) => x.id === row.id)!;
+    return { x: colX(branches.column.get(u.to)!), color: 'var(--muted)' };
+  }
+  return undefined;
+}
+
+// --- Rows with gap markers and the era divider -----------------------------
+const yearsWord = (n: number) => {
+  const mod10 = n % 10;
+  const mod100 = n % 100;
+  if (mod10 === 1 && mod100 !== 11) return 'год';
+  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'года';
+  return 'лет';
+};
+const formatNumber = (n: number) => n.toLocaleString('ru-RU');
+// Historical years skip 0: from 1 BC to AD 1 is one year.
+const yearsBetween = (a: number, b: number) => b - a - (a < 0 && b > 0 ? 1 : 0);
+
+type Item =
+  | { type: 'row'; row: ChronicleRow; index: number }
+  | { type: 'gap'; years: number; index: number }
+  | { type: 'era'; index: number };
+const items: Item[] = [];
+rows.forEach((row, index) => {
+  const prev = rows[index - 1];
+  if (prev && prev.year < 0 && row.year > 0) items.push({ type: 'era', index });
+  else if (prev && yearsBetween(prev.year, row.year) >= GAP_MARKER_YEARS) {
+    items.push({ type: 'gap', years: yearsBetween(prev.year, row.year), index });
+  }
+  items.push({ type: 'row', row, index });
+});
+
+// Living lines end on the "now" row's dot.
+const nowSegments: Segment[] = lineage.nodes
+  .filter((n) => branches.living.has(n.id))
+  .map((n) => ({
+    x: colX(branches.column.get(n.id)!),
+    from: 'top' as const,
+    to: 'dot' as const,
+    color: colorOf(n.tradition),
+    hl: [...(highlightOf.get(n.id) ?? [])].join(' '),
+  }));
+
+// A static site knows the current year at build time.
+const today = new Date();
+---
+
+<div class="chronicle" data-chronicle>
+  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Даты взяты из православной «Хронологии Септуагинты» на «Азбуке веры»: это выбранная религиозная реконструкция для сопоставления, а не общепринятая историческая датировка.</p>
+  <div class="testament-key" aria-label="Библейское повествование">
+    <span class="old">Ветхий Завет · от Сотворения мира</span>
+    <span class="new">Новый Завет · от Рождества Христова</span>
+  </div>
+  <ol class="rows" style={`--graph-w: ${GRAPH_W}px`}>
+    {
+      items.map((item) => {
+        if (item.type === 'era' || item.type === 'gap') {
+          return (
+            <li class={item.type === 'era' ? 'divider era' : 'divider gap'}>
+              {item.type === 'era' && <span class="ad">1 г. н. э.</span>}
+              <span class="graph" aria-hidden="true">
+                {segmentsAt(item.index, true).map((s) => (
+                  <span class="seg full" data-hl={s.hl} style={`left:${s.x - 1}px; background:${s.color}`} />
+                ))}
+              </span>
+              <span class={item.type === 'gap' ? 'gap-caption' : 'text'}>
+                {item.type === 'era' ? <>Начало нашей эры — отсчёт от Рождества Христова</> : <>Промежуток — {formatNumber(item.years)} {yearsWord(item.years)}</>}
+              </span>
+            </li>
+          );
+        }
+        const { row, index } = item;
+        const context = contextByRow.get(row.id);
+        const dot = dotAt(row);
+        const connector = connectorAt(row);
+        const about = row.approx ? 'ок. ' : '';
+        return (
+          <li class={`row ${row.kind}${index === 0 ? ' start' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
+            <span class="ad">
+              {about}
+              {formatYear(row.year)}
+            </span>
+            <span class="graph" aria-hidden="true">
+              {segmentsAt(index).map((s) => (
+                <span
+                  class={`seg ${s.from}-${s.to}`}
+                  data-hl={s.hl}
+                  style={`left:${s.x - 1}px; background:${s.color}; --dot-y:${DOT_Y}px`}
+                />
+              ))}
+              {connector && (
+                <span
+                  class={connector.dashed ? 'conn dashed' : 'conn'}
+                  data-hl={connector.hl}
+                  style={`left:${Math.min(connector.x1, connector.x2)}px; width:${Math.abs(connector.x2 - connector.x1)}px; top:${DOT_Y - 1}px; --c:${connector.color}`}
+                />
+              )}
+              {dot && (
+                <span class="dot" data-hl={rowHighlight(row)} style={`left:${dot.x - 5}px; top:${DOT_Y - 5}px; background:${dot.color}`} />
+              )}
+            </span>
+            <span class="text">
+              {testamentOf(row) && <span class="biblical-label">{testamentOf(row) === 'old' ? 'Ветхий Завет' : 'Новый Завет'}</span>}
+              {row.kind === 'node' && <span class="chip" style={`background:${colorOf(row.tradition)}`} aria-hidden="true" />}
+              <b class="title">{row.title}</b>
+              {row.text && <span class="event"> — {row.text.replaceAll('до Р.Х.', 'до н. э.')}</span>}
+              {row.todo && <span class="todo"> (уточняется)</span>}
+              {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
+              {context && <span class="context">{context.timelineText}</span>}
+            </span>
+          </li>
+        );
+      })
+    }
+    <li class="divider now" id="history-today">
+      <span class="ad">{formatYear(today.getFullYear())}</span>
+      <span class="graph" aria-hidden="true">
+        {nowSegments.map((s) => (
+          <span class="seg top-dot" data-hl={s.hl} style={`left:${s.x - 1}px; background:${s.color}; --dot-y:${DOT_Y}px`} />
+        ))}
+      </span>
+      <span class="text">Наши дни</span>
+    </li>
+  </ol>
+
+</div>
+
+<style>
+  .chronicle {
+    --testament-old: var(--focus);
+    --testament-new: light-dark(#245b94, #8bbef2);
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .rows {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    background: var(--surface);
+  }
+
+  .rows > li {
+    display: grid;
+    grid-template-columns: 170px var(--graph-w) minmax(0, 1fr);
+    column-gap: 12px;
+    padding: 6px 16px 6px 12px;
+    line-height: 26px;
+    font-size: 17px;
+    transition: opacity 0.15s ease;
+  }
+
+  .rows > li + li {
+    border-top: 1px solid color-mix(in srgb, var(--line) 50%, transparent);
+  }
+
+  .ad {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    white-space: nowrap;
+  }
+
+  .ad {
+    color: var(--muted);
+  }
+
+  .graph {
+    position: relative;
+    align-self: stretch;
+    margin: -6px 0;
+  }
+
+  .seg {
+    position: absolute;
+    width: 2px;
+  }
+
+  .seg.full,
+  .seg.top-bottom {
+    top: 0;
+    bottom: 0;
+  }
+
+  /* The graph cell spans the row's 6px vertical padding (negative margin
+  above), so y = 0 is the row's top edge and --dot-y the dot's centre. */
+  .seg.dot-bottom {
+    top: var(--dot-y);
+    bottom: 0;
+  }
+
+  .seg.top-dot {
+    top: 0;
+    height: var(--dot-y);
+  }
+
+  .conn {
+    position: absolute;
+    height: 2px;
+    background: var(--c);
+  }
+
+  .conn.dashed {
+    background: repeating-linear-gradient(90deg, var(--c) 0 4px, transparent 4px 7px);
+  }
+
+  .dot {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    box-shadow: 0 0 0 2px var(--surface);
+  }
+
+  .context { display: block; font-size: 16px; font-weight: 400; line-height: 1.55; margin-top: 8px; color: var(--ink); }
+  .rows > li[id] { scroll-margin-top: 60px; }
+
+  .text {
+    min-width: 0;
+  }
+
+  .chip {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 3px;
+    margin-right: 8px;
+    vertical-align: 1px;
+  }
+
+  .todo {
+    color: var(--focus);
+    font-size: 14px;
+  }
+
+  .row.other,
+  .row.epoch,
+  .row.union {
+    color: var(--muted);
+  }
+
+  .row.other .title {
+    font-family: Georgia, serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .row.union .title { color: var(--ink); }
+
+  .row.epoch .title {
+    font-weight: 400;
+    font-style: italic;
+  }
+
+  .row.start {
+    color: var(--ink);
+  }
+
+  .row.start .title {
+    color: var(--ink);
+    font-style: normal;
+    font-weight: 700;
+  }
+
+  .rows > li.divider {
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .rows > li.divider.era,
+  .rows > li.divider.now {
+    color: var(--ink);
+    font-weight: 700;
+    background: color-mix(in srgb, var(--ink) 5%, transparent);
+  }
+
+  .rows > li.divider.gap {
+    position: relative;
+    padding-block: 0;
+    min-height: 24px;
+    border-top: 0;
+    align-items: center;
+  }
+  .rows > li.divider.gap + li { border-top: 0; }
+  .divider.gap::before {
+    content: '';
+    position: absolute;
+    left: 12px;
+    right: 16px;
+    top: 50%;
+    border-top: 1px dashed var(--line);
+  }
+  .divider.gap .graph {
+    grid-column: 2;
+    grid-row: 1;
+    margin-block: 0;
+    z-index: 1;
+  }
+  .gap-caption {
+    grid-column: 1 / -1;
+    grid-row: 1;
+    justify-self: center;
+    position: relative;
+    padding-inline: 8px;
+    background: var(--surface);
+    color: var(--focus);
+    font-family: Georgia, serif;
+    font-style: italic;
+    font-size: 13px;
+    line-height: 24px;
+    white-space: nowrap;
+  }
+  [data-testament="old"] { --testament-color: var(--testament-old); }
+  [data-testament="new"] { --testament-color: var(--testament-new); }
+  .row[data-testament] { background: color-mix(in srgb, var(--testament-color) 7%, var(--surface)); }
+  .testament-key { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 14px; }
+  .testament-key span { display: flex; align-items: center; gap: 8px; }
+  .testament-key span::before { content: ''; width: 24px; height: 3px; background: currentColor; }
+  .testament-key .old { color: var(--testament-old); }
+  .testament-key .new { color: var(--testament-new); }
+  .biblical-label { display: block; color: var(--testament-color); font-size: 13px; line-height: 18px; }
+  .row.biblical .text { padding-top: 0; }
+  .biblical-key { margin: 0; max-width: 85ch; font-size: 15px; }
+
+
+  @media (prefers-reduced-motion: reduce) {
+    .rows > li {
+      transition: none;
+    }
+  }
+</style>

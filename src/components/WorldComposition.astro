@@ -1,0 +1,41 @@
+---
+import worldComposition from '../data/world-composition.json';
+import { WORLD_COLORS } from '../lib/worldAtlas';
+import ProofLink from './ProofLink.astro';
+
+const groups = [...worldComposition].sort((a, b) => b.share - a.share);
+const formatShare = (share: number) => `${share.toFixed(1).replace('.', ',')}\u00a0%`;
+const formatCount = (count: string) => count.replace(' ', '\u00a0');
+const sources = [...new Map(groups.flatMap((group) => group.proof).map((proof) => [proof.url, proof])).values()]
+  .map((proof) => ({ ...proof, tier: 'reference' as const }));
+const otherReligionsProof = groups.find((group) => group.id === 'other-religions')!.proof
+  .map((proof) => ({ ...proof, tier: 'reference' as const }));
+---
+<figure class="wc">
+  <h2 id="world-composition-title">Население мира · 2020 год</h2>
+  <table aria-labelledby="world-composition-title">
+    <thead><tr><th scope="col">Группа</th><th scope="col" class="num">Доля</th><th scope="col" class="num">Численность</th></tr></thead>
+    <tbody>
+      {groups.map((group) => <tr>
+        <th scope="row"><span class="swatch" style={`background:var(${WORLD_COLORS[group.id]})`} aria-hidden="true"/>{group.label}</th>
+        <td class="num">{formatShare(group.share)}</td>
+        <td class="num">{formatCount(group.count)}</td>
+      </tr>)}
+    </tbody>
+  </table>
+  <figcaption>
+    <p>Данные Pew Research Center (2025) на 2020 год. Доли округлены до десятых долей процента, численность — как в отчёте.<ProofLink proof={sources}/></p>
+    <p>«Другие религии» у Pew объединяют бахаи, джайнов, синтоистов, сикхов, даосов, викканов, зороастрийцев и другие немногочисленные группы, часть которых относят к народным или традиционным религиям.<ProofLink proof={otherReligionsProof}/></p>
+  </figcaption>
+</figure>
+<style>
+  .wc { margin: 0; }
+  h2 { margin: 0 0 16px; }
+  table { border-collapse: collapse; font-size: 16px; width: 100%; }
+  th, td { padding: 10px 0; border-bottom: 1px solid var(--line); text-align: left; vertical-align: baseline; }
+  thead th { color: var(--muted); font-weight: 400; font-size: 14px; }
+  tbody th { font-weight: 400; padding-right: 12px; }
+  .num { text-align: right; font-variant-numeric: tabular-nums; white-space: nowrap; padding-left: 16px; }
+  .swatch { display: inline-block; width: 10px; height: 10px; margin-right: 8px; border-radius: 2px; }
+  figcaption { color: var(--muted); font-size: 14px; }
+</style>

@@ -1,0 +1,564 @@
+- tradition: judaism
+  documents:
+    - title: Mishneh Torah, Hilkhot Melakhim u-Milkhamot ("Laws of Kings and Wars") 11:6–7
+      title_ru: Мишне Тора, Законы о царях и их войнах, 11:6–7
+      body: рабби Моше бен Маймон (Маймонид, Рамбам)
+      date: "1180"
+      unity:
+        kind: partial
+        note: "кодекс еврейского закона, написанный одним законоучителем — Маймонидом, а не решение общего органа; консервативное, реформистское и реконструктивистское движения рукополагают раввинов через собственные семинарии."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9C%D0%B8%D1%88%D0%BD%D0%B5_%D0%A2%D0%BE%D1%80%D0%B0"
+            title: "Мишне Тора — Википедия (русская)"
+            tier: "reference"
+            excerpt: "написанный Маймонидом первый полный кодекс еврейского закона"
+            accessed: "2026-09-26"
+          - url: "https://jewishvirtuallibrary.org/rabbinic-ordination-semikha"
+            title: "Rabbinic Ordination (Semikha) — Jewish Virtual Library"
+            tier: "reference"
+            excerpt: "The Reconstructionist, Reform, and Conservative movements all ordain women for the Rabbinate"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - orthodoxy
+        - protestantism
+        - islam
+      summary: Текст называет мессианские притязания, связанные с Иисусом из Назарета, величайшим «камнем преткновения», а деяния как Иисуса, так и «исмаильтянина, вставшего после него» (Мухаммада), описывает как то, что, по замыслу Творца, лишь подготавливает путь для прихода Мошиаха.
+      quote:
+        text: Can there be a greater stumbling block than Christianity? All the prophets spoke of Mashiach as the redeemer of Israel.
+        url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
+      proof:
+        - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
+          title: Mishneh Torah, Kings and Wars 11 (Touger translation) — Sefaria
+          tier: official
+          excerpt: all the deeds of Jesus of Nazareth and that Ishmaelite who arose after him will only serve to prepare the way for Mashiach's coming
+          accessed: 2026-09-26
+      status_check: verified
+    - title: "Dabru Emet: A Jewish Statement on Christians and Christianity"
+      title_ru: "Дабру эмет: еврейское заявление о христианах и христианстве"
+      body: группа еврейских учёных (свыше 220 подписавших из разных течений иудаизма)
+      date: 2000-09-10
+      unity:
+        kind: partial
+        note: "заявление межтечениевой группы еврейских учёных, которые подчёркивают, что говорят только от своего имени; не постановление религиозной институции."
+        proof:
+          - url: "https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet"
+            title: "Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations"
+            tier: "reference"
+            excerpt: "Speaking only for ourselves—an interdenominational group of Jewish scholars"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - orthodoxy
+        - protestantism
+      summary: Заявление утверждает, что евреи и христиане поклоняются одному Богу, и что христианское богослужение не является приемлемым религиозным выбором для евреев, хотя авторы рады тому, что через христианство сотни миллионов людей вступили в отношения с Богом Израиля. Христианство названо верой, возникшей внутри иудаизма, но не его продолжением.
+      quote:
+        text: Jews and Christians worship the same God.
+        url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+      proof:
+        - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+          title: "Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations"
+          tier: reference
+          excerpt: Christian worship is not a viable religious choice for Jews
+          accessed: 2026-09-25
+        - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+          title: "Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations"
+          tier: reference
+          excerpt: We respect Christianity as a faith that originated within Judaism and that still has significant contacts with it.
+          accessed: 2026-09-25
+      status_check: verified
+    - title: "To Do the Will of Our Father in Heaven: Toward a Partnership between Jews and Christians"
+      title_ru: "Исполнять волю Отца нашего Небесного: к партнёрству между иудеями и христианами"
+      body: международная группа ортодоксальных раввинов (свыше 95 подписавших)
+      date: 2015-12-03
+      unity:
+        kind: partial
+        note: "заявление международной группы ортодоксальных раввинов, а не постановление институции."
+        proof:
+          - url: "https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians"
+            title: "To Do the Will of Our Father in Heaven — Council of Centers on Jewish-Christian Relations"
+            tier: "reference"
+            excerpt: "we Orthodox Rabbis who lead communities, institutions and seminaries in Israel, the United States and Europe"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+      summary: Приуроченное к 50-летию декларации «Nostra Aetate», заявление называет возникновение христианства не случайностью и не ошибкой, а желанным Творцом итогом и даром народам, и связывает саму возможность партнёрства между иудеями и христианами сегодня с переменой, начатой этим католическим документом.
+      quote:
+        text: the emergence of Christianity in human history is neither an accident nor an error, but the willed divine outcome and gift to the nations.
+        url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians
+      proof:
+        - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians
+          title: To Do the Will of Our Father in Heaven — Council of Centers on Jewish-Christian Relations
+          tier: reference
+          excerpt: The promulgation of Nostra Aetate fifty years ago started the process of reconciliation between our two communities
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: orthodoxy
+  documents:
+    - title: St Basil the Great, Canon 1 (First Canonical Epistle to Amphilochius of Iconium)
+      title_ru: Правило 1 святителя Василия Великого (Первое каноническое послание к Амфилохию Иконийскому)
+      body: святитель Василий Великий; правило включено в канонический корпус Православной Церкви
+      date: "374"
+      unity:
+        kind: official
+        note: "правило входит в канонический корпус Православной Церкви: Трулльский Собор (691, правило 2) утвердил правила Василия Великого для всей Церкви."
+        proof:
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/"
+            title: "Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Утверждаем также правила Дионисия, архиепископа великого града Александрии"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/"
+            title: "Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Василия, архиепископа Кесарии Каппадокийской"
+            accessed: "2026-09-26"
+      about: []
+      summary: "Правило делит не отступающие от веры крещения на три категории по степени отпадения от церковного единства: ереси — при полном отторжении от самой веры; расколы — при разногласиях по разрешимым церковным вопросам; самочинные сборища — собрания, составленные вышедшими из послушания пресвитерами или епископами и невежественным народом. Текст не называет какие-либо более поздние конкретные конфессии или движения."
+      quote:
+        text: «…древние отцы рассудили принимать то крещение, которое ни в чем не отступает от веры. Потому иное они назвали ересями, иное – расколами, иное – самочинными сборищами. Ересями – в том случае, если некоторые совершенно отторглись и стали чуждыми по самой вере; расколами – если расходятся с другими во мнениях по неким церковным причинам и таким вопросам, которые можно разрешить; а самочинными сборищами назвали те собрания, которые составляют вышедшие из послушания пресвитеры или епископы и невежественный народ.»
+        url: https://azbyka.ru/pravo/vasiliya-velikogo-1/
+      proof:
+        - url: https://azbyka.ru/pravo/vasiliya-velikogo-1/
+          title: Правило 1 святителя Василия Великого — Азбука веры
+          tier: official
+          excerpt: иное они назвали ересями, иное – расколами, иное – самочинными сборищами
+          accessed: 2026-09-25
+      status_check: verified
+    - title: Основные принципы отношения Русской Православной Церкви к инославию
+      title_ru: Основные принципы отношения Русской Православной Церкви к инославию
+      body: Юбилейный Архиерейский Собор Русской Православной Церкви
+      date: "2000"
+      unity:
+        kind: partial
+        note: "документ одной Поместной Церкви — Русской Православной, принятый на Юбилейном Архиерейском Соборе 2000 года, а не общеправославное соборное решение."
+        proof:
+          - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+            title: "Основные принципы отношения Русской Православной Церкви к инославию — «Азбука веры»"
+            tier: "official"
+            excerpt: "Документ, принятый на Юбилейном Архиерейском Соборе 2000 года, отражает и определяет основные принципы отношения Русской Православной Церкви к инославию"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - protestantism
+      summary: Документ утверждает Православную Церковь единственной истинной Церковью Христовой, в которой неповреждённо сохраняется Священное Предание и полнота спасительной благодати Божией, и признаёт, что церковное положение отделившихся от неё общин не поддаётся однозначному определению. Отдельно описаны отношения с Римско-Католической Церковью — с учётом сохраняющегося в ней апостольского преемства рукоположений — и с экуменическим движением, возникшим, по тексту документа, «в недрах протестантизма на рубеже XIX–XX веков».
+      quote:
+        text: Православная Церковь есть истинная Церковь, в которой неповрежденно сохраняется Священное Предание и полнота спасительной благодати Божией.
+        url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+      proof:
+        - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+          title: Основные принципы отношения Русской Православной Церкви к инославию — Азбука веры
+          tier: official
+          excerpt: Церковное положение отделившихся не поддается однозначному определению.
+          accessed: 2026-09-25
+        - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+          title: Основные принципы отношения Русской Православной Церкви к инославию — Азбука веры
+          tier: official
+          excerpt: она является Церковью, в которой сохраняется апостольское преемство рукоположений
+          accessed: 2026-09-25
+      status_check: verified
+    - title: Проект отлучения и осуждения учения сектантов
+      title_ru: Проект отлучения и осуждения учения сектантов
+      body: VI отдел (о расколе и сектантстве) Предсоборного Присутствия
+      date: "1906"
+      unity:
+        kind: partial
+        note: "проект VI Отдела Предсоборного Присутствия, который готовил документы для Поместного Собора, а не соборное определение."
+        proof:
+          - url: "https://azbyka.ru/sekta"
+            title: "Секта — православная энциклопедия «Азбука веры»"
+            tier: "reference"
+            excerpt: "в рамках Предсоборного Присутствия был создан VI Отдел по вопросам раскола и сектантства. Этот отдел занимался подготовкой документов для Поместного Собора"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/sekta"
+            title: "Секта — православная энциклопедия «Азбука веры»"
+            tier: "reference"
+            excerpt: "в принятом Отделом «Проекте отлучения и осуждения учения сектантов»"
+            accessed: "2026-09-26"
+      about: []
+      summary: Проект из четырнадцати пунктов, каждый завершается словами «да будет анафема», осуждает утверждения о множественности «христов» и «богородиц», отрицание телесного воскресения Христа, почитание смертного человека «живым богом», празднование субботы «по еврейскому или ветхозаветному установлению» вместо воскресного дня и ряд иных положений, не называя при этом конкретных современных конфессий. Сам отдел, по свидетельству источника, считал догматический критерий — искажение веры Церкви — единственным признаком, по которому можно определить сектантство.
+      quote:
+        text: Не празднующие дня воскреснаго, воспоминанию Воскресения Господа посвященнаго, а празднующие субботу, по еврейскому или ветхозаветному установлению, и полагающие Ветхий Завет выше Новаго, – Христова Завета, да будут анафема.
+        url: https://azbyka.ru/sekta
+      proof:
+        - url: https://azbyka.ru/sekta
+          title: Секта — Азбука веры
+          tier: official
+          excerpt: единственный критерий, по которому можно определить сектантство, – это догматический критерий, искажение веры Церкви
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: catholicism
+  documents:
+    - title: Unitatis Redintegratio (Decree on Ecumenism)
+      title_ru: Об экуменизме (Unitatis Redintegratio)
+      body: Второй Ватиканский собор, обнародовано папой Павлом VI
+      date: 1964-11-21
+      unity:
+        kind: official
+        note: "декрет Второго Ватиканского Собора; папа Павел VI утвердил его апостольской властью вместе с отцами Собора."
+        proof:
+          - url: "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html"
+            title: "Unitatis Redintegratio — Decree on Ecumenism (vatican.va)"
+            tier: "official"
+            excerpt: "by the apostolic authority given Us by Christ and in union with the Fathers, approve, decree and establish them"
+            accessed: "2026-09-26"
+      about:
+        - orthodoxy
+        - protestantism
+      summary: Декрет говорит о восточных (православных) Церквах как о сохраняющих истинные таинства — прежде всего благодаря апостольскому преемству, священству и Евхаристии, — хотя и отделённых от полного общения с Католической Церковью. О разделениях, возникших на Западе более чем через четыре века после этого, в событиях, обычно именуемых Реформацией, декрет говорит отдельно, признавая всех оправданных верой в крещении членами Тела Христова.
+      quote:
+        text: These Churches, although separated from us, possess true sacraments, above all by apostolic succession, the priesthood and the Eucharist.
+        url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html
+      proof:
+        - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html
+          title: Unitatis Redintegratio — vatican.va
+          tier: official
+          excerpt: possess true sacraments, above all by apostolic succession, the priesthood and the Eucharist
+          accessed: 2026-09-25
+        - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html
+          title: Unitatis Redintegratio — vatican.va
+          tier: official
+          excerpt: divisions arose more than four centuries later in the West, stemming from the events which are usually referred to as 'The Reformation'
+          accessed: 2026-09-25
+      status_check: verified
+    - title: Nostra Aetate (Declaration on the Relation of the Church to Non-Christian Religions)
+      title_ru: Об отношении Церкви к нехристианским религиям (Nostra Aetate)
+      body: Второй Ватиканский собор, провозглашено папой Павлом VI
+      date: 1965-10-28
+      unity:
+        kind: official
+        note: "декларация Второго Ватиканского Собора, провозглашённая папой Павлом VI 28 октября 1965 года."
+        proof:
+          - url: "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
+            title: "Nostra Aetate — Declaration on the Relation of the Church to Non-Christian Religions (vatican.va)"
+            tier: "official"
+            excerpt: "DECLARATION ON THE RELATION OF THE CHURCH TO NON-CHRISTIAN RELIGIONS"
+            accessed: "2026-09-26"
+          - url: "https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html"
+            title: "Nostra Aetate — Declaration on the Relation of the Church to Non-Christian Religions (vatican.va)"
+            tier: "official"
+            excerpt: "PROCLAIMED BY HIS HOLINESS"
+            accessed: "2026-09-26"
+      about:
+        - judaism
+        - islam
+      summary: О мусульманах декларация говорит как о поклоняющихся единому Богу, живому и сущему, милосердному и всемогущему Творцу неба и земли, чтущих Иисуса Христа как пророка и почитающих Деву Марию. Об иудеях декларация утверждает, что их не следует представлять отверженными или проклятыми Богом, будто бы это следует из Священного Писания.
+      quote:
+        text: the Jews should not be presented as rejected or accursed by God, as if this followed from the Holy Scriptures.
+        url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html
+      proof:
+        - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html
+          title: Nostra Aetate — vatican.va
+          tier: official
+          excerpt: adore the one God, living and subsisting in Himself; merciful and all-powerful, the Creator of heaven and earth
+          accessed: 2026-09-25
+        - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html
+          title: Nostra Aetate — vatican.va
+          tier: official
+          excerpt: should not be presented as rejected or accursed by God, as if this followed from the Holy Scriptures
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: islam
+  documents:
+    - title: The Qur'an on Ahl al-Kitab ("People of the Book") — 3:64, 2:62, 5:5
+      title_ru: Коран о «людях Писания» — 3:64, 2:62, 5:5
+      body: текст Корана; перевод Saheeh International, платформа Quran.com Фонда Корана
+      date: "632"
+      unity:
+        kind: official
+        note: "текст Корана — священной книги мусульман."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+            title: "Коран — Википедия (русская)"
+            tier: "reference"
+            excerpt: "священная книга мусульман, написанная на арабском языке"
+            accessed: "2026-09-26"
+      about:
+        - judaism
+        - catholicism
+        - orthodoxy
+        - protestantism
+      summary: Аяты обращаются к «людям Писания» с призывом к общему поклонению единому Богу, называют пищу людей Писания дозволенной для мусульман и пищу мусульман — дозволенной для них, а верующим из иудеев, христиан и сабиев, творящим благое, обещают воздаяние у их Господа.
+      quote:
+        text: O People of the Scripture, come to a word that is equitable between us and you - that we will not worship except Allāh and not associate anything with Him and not take one another as lords instead of Allāh.
+        url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:64
+      proof:
+        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=5:5
+          title: Quran.com — перевод Saheeh International, 5:5
+          tier: official
+          excerpt: the food of those who were given the Scripture is lawful for you and your food is lawful for them
+          accessed: 2026-09-25
+        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=2:62
+          title: Quran.com — перевод Saheeh International, 2:62
+          tier: official
+          excerpt: those [among them] who believed in Allāh and the Last Day and did righteousness - will have their reward with their Lord
+          accessed: 2026-09-25
+      status_check: verified
+    - title: The Qur'an on Tahrif (alteration of earlier scripture) — 3:78
+      title_ru: Коран об искажении Писания (тахриф) — 3:78
+      body: текст Корана; перевод Saheeh International, платформа Quran.com Фонда Корана
+      date: "632"
+      unity:
+        kind: official
+        note: "текст Корана — священной книги мусульман."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+            title: "Коран — Википедия (русская)"
+            tier: "reference"
+            excerpt: "священная книга мусульман, написанная на арабском языке"
+            accessed: "2026-09-26"
+      about:
+        - judaism
+      summary: Аят говорит о группе среди людей Писания, искажающей Писание своими языками, чтобы это приняли за само Писание, хотя оно им не является.
+      quote:
+        text: there is among them a party who alter the Scripture with their tongues so you may think it is from the Scripture, but it is [not].
+        url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:78
+      proof:
+        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:78
+          title: Quran.com — перевод Saheeh International, 3:78
+          tier: official
+          excerpt: there is among them a party who alter the Scripture with their tongues so you may think it is from the Scripture
+          accessed: 2026-09-25
+      status_check: verified
+    - title: A Common Word Between Us and You
+      title_ru: Слово, общее для нас и для вас
+      body: коллективное открытое письмо мусульманских учёных, координировано Королевским институтом исламской мысли Аль аль-Бейт (Иордания)
+      date: 2007-10-13
+      unity:
+        kind: partial
+        note: "открытое письмо 138 мусульманских учёных, богословов и интеллектуалов, а не фетва и не доктринальное постановление."
+        proof:
+          - url: "https://www.acommonword.com/introduction-to-a-common-word-between-us-and-you/"
+            title: "Introduction to A Common Word Between Us and You — acommonword.com"
+            tier: "reference"
+            excerpt: "138 Muslim scholars, clerics and intellectuals have unanimously come together"
+            accessed: "2026-09-26"
+          - url: "https://www.acommonword.com/introduction-to-a-common-word-between-us-and-you/"
+            title: "Introduction to A Common Word Between Us and You — acommonword.com"
+            tier: "reference"
+            excerpt: "The appearance of the A Common Word [Open Letter] of 2007"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - orthodoxy
+        - protestantism
+      summary: Письмо, адресованное христианским лидерам, называет единство Бога, необходимость любви к Нему и необходимость любви к ближнему общим основанием между исламом и христианством, обращаясь к христианам словами Корана о «людях Писания».
+      quote:
+        text: The Unity of God, the necessity of love for Him, and the necessity of love of the neighbour is thus the common ground between Islam and Christianity.
+        url: https://www.acommonword.com/the-acw-document/
+      proof:
+        - url: https://www.acommonword.com/the-acw-document/
+          title: A Common Word Between Us and You — acommonword.com
+          tier: official
+          excerpt: common ground between Islam and Christianity
+          accessed: 2026-09-25
+        - url: https://www.acommonword.com/the-acw-document/
+          title: A Common Word Between Us and You — acommonword.com
+          tier: official
+          excerpt: "Come to a common word between us and you: that we shall worship none but God"
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: protestantism
+  documents:
+    - title: Smalcald Articles, Part II, Article IV, "Of the Papacy" (Lutheran)
+      title_ru: Шмалькальденские артикулы, часть II, артикул IV, «О папстве»
+      body: Мартин Лютер, для Шмалькальденского собрания германских лютеранских князей 1537 года; включены в лютеранскую Книгу согласия (1580)
+      date: "1537"
+      unity:
+        kind: partial
+        note: "символическая книга лютеран, часть Книги Согласия, а не общий документ всех протестантских церквей."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%A8%D0%BC%D0%B0%D0%BB%D1%8C%D0%BA%D0%B0%D0%BB%D1%8C%D0%B4%D0%B5%D0%BD%D1%81%D0%BA%D0%B8%D0%B5_%D0%B0%D1%80%D1%82%D0%B8%D0%BA%D1%83%D0%BB%D1%8B"
+            title: "Шмалькальденские артикулы — Википедия (русская)"
+            tier: "reference"
+            excerpt: "символическая книга лютеран, составная часть Книги Согласия"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+      summary: Текст называет папу истинным антихристом, превознесшим себя над Христом и противопоставившим себя Ему, и указывает, что святая Церковь существовала без папы «более пятисот лет» — как довод против того, что папство необходимо для Церкви.
+      quote:
+        text: This teaching shows forcefully that the Pope is the very Antichrist, who has exalted himself above, and opposed himself against Christ.
+        url: https://thebookofconcord.org/smalcald-articles/part-ii/article-iv/
+      proof:
+        - url: https://thebookofconcord.org/smalcald-articles/part-ii/article-iv/
+          title: Smalcald Articles, Part II, Article IV — Book of Concord
+          tier: official
+          excerpt: the Pope is the very Antichrist, who has exalted himself above, and opposed himself against Christ
+          accessed: 2026-09-25
+      status_check: verified
+    - title: Westminster Confession of Faith, Chapter 25, "Of the Church" (Reformed/Presbyterian)
+      title_ru: Вестминстерское исповедание веры, глава 25, «О Церкви»
+      body: Вестминстерская ассамблея; редакция 1788 года — Пресвитерианский синод Нью-Йорка и Филадельфии
+      date: "1647"
+      unity:
+        kind: partial
+        note: "вероисповедный стандарт реформатских и пресвитерианских церквей, а не общий документ всех протестантов; американские пресвитериане изменяли его текст начиная с 1788 года."
+        proof:
+          - url: "https://opc.org/documents/WCF_orig.html"
+            title: "Westminster Confession of Faith, original text with American revisions — Orthodox Presbyterian Church"
+            tier: "official"
+            excerpt: "some of which were ratified by the Synod of New York and Philadelphia as early as 1788"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+      summary: Первоначальный текст §6 называл римского папу «тем антихристом, человеком греха и сыном погибели, превозносящим себя в Церкви против Христа». Американская редакция 1788 года исключила эту формулировку, оставив лишь отрицание того, что папа может быть главою Церкви в каком бы то ни было смысле.
+      quote:
+        text: that Antichrist, that man of sin, and son of perdition, that exalteth himself, in the Church, against Christ and all that is called God.
+        url: https://opc.org/documents/WCF_orig.html
+      proof:
+        - url: https://opc.org/documents/WCF_orig.html
+          title: Westminster Confession of Faith, original text — Orthodox Presbyterian Church
+          tier: official
+          excerpt: that Antichrist, that man of sin, and son of perdition, that exalteth himself, in the Church, against Christ and all that is called God
+          accessed: 2026-09-25
+        - url: https://opc.org/documents/WCF_orig.html
+          title: Westminster Confession of Faith, original text — Orthodox Presbyterian Church
+          tier: official
+          excerpt: compared to the total length of the Confession, they are quite minor, involving 145 words out of 12,063
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: lds
+  documents:
+    - title: FAQ, "Are Mormons Christian?"
+      title_ru: "Вопросы и ответы: «Христиане ли мормоны?»"
+      body: Церковь Иисуса Христа Святых последних дней (официальная страница Newsroom/FAQ)
+      date: не указана
+      unity:
+        kind: official
+        note: "официальная страница Церкви Иисуса Христа Святых последних дней."
+        proof:
+          - url: "https://faq.churchofjesuschrist.org/are-mormons-christian"
+            title: "Are Mormons Christian? — FAQ, The Church of Jesus Christ of Latter-day Saints"
+            tier: "official"
+            excerpt: "FAQ—Are Mormons Christian?—The Church of Jesus Christ of Latter-day Saints"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - orthodoxy
+        - protestantism
+      summary: Страница безоговорочно утверждает, что святые последних дней — христиане. Она указывает, что Церковь, в отличие от католической, англиканской, восточно-православной и протестантской традиций, не произошла от какой-либо иной веры, а восходит к представлению о том, что после смерти Иисуса Христа и Его апостолов власть Господа и Его Церковь были утрачены на земле.
+      quote:
+        text: The Church of Jesus Christ of Latter-day Saints, however, did not descend from any other faith.
+        url: https://faq.churchofjesuschrist.org/are-mormons-christian
+      proof:
+        - url: https://faq.churchofjesuschrist.org/are-mormons-christian
+          title: Are Mormons Christian? — FAQ, churchofjesuschrist.org
+          tier: official
+          excerpt: Catholic, Anglican, Eastern Orthodox or Protestant
+          accessed: 2026-09-25
+        - url: https://faq.churchofjesuschrist.org/are-mormons-christian
+          title: Are Mormons Christian? — FAQ, churchofjesuschrist.org
+          tier: official
+          excerpt: did not descend from any other faith
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: adventism
+  documents:
+    - title: '"Ecumenical Movement"'
+      title_ru: «Экуменическое движение»
+      body: Генеральная конференция Церкви адвентистов седьмого дня (раздел «Official Statements» официального сайта)
+      date: 1985-06-27
+      unity:
+        kind: partial
+        note: "документ Генеральной конференции, но не проголосованное официальное заявление: по её же словам, Исполнительный комитет такого заявления об экуменическом движении не принимал."
+        proof:
+          - url: "http://web.archive.org/web/20250720163148/https://gc.adventist.org/documents/ecumenical-movement/"
+            title: "Ecumenical Movement — General Conference of Seventh-day Adventists (archived)"
+            tier: "official"
+            excerpt: "The General Conference Executive Committee has never voted an official statement regarding the Seventh-day Adventist relationship to the ecumenical movement as such"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - protestantism
+      summary: Документ описывает адвентистское самопонимание через образ «выхода» из «вавилонского разделения и смятения» и «вхождения» в единство в рамках Адвентистского движения, а также говорит об опасности, которую видит в «соединении рук» католицизма и протестантизма при осуществлении религиозно-политической власти. Итоговая оценка документа в отношении Всемирного совета Церквей — что «вред перевешивает пользу».
+      quote:
+        text: The General Conference Executive Committee has never voted an official statement regarding the Seventh-day Adventist relationship to the ecumenical movement as such.
+        url: https://gc.adventist.org/documents/ecumenical-movement/
+      proof:
+        - url: http://web.archive.org/web/20250720163148/https://gc.adventist.org/documents/ecumenical-movement/
+          title: Ecumenical Movement — General Conference of Seventh-day Adventists (архивная копия, gc.adventist.org защищён антибот-проверкой Cloudflare)
+          tier: official
+          excerpt: the accent is first on "coming out" of Babylonian disunity and confusion
+          accessed: 2026-09-25
+        - url: http://web.archive.org/web/20250720163148/https://gc.adventist.org/documents/ecumenical-movement/
+          title: Ecumenical Movement — General Conference of Seventh-day Adventists (архивная копия, gc.adventist.org защищён антибот-проверкой Cloudflare)
+          tier: official
+          excerpt: danger of Catholicism and Protestantism linking hands and exerting religiopolitical power
+          accessed: 2026-09-25
+      status_check: verified
+- tradition: jw
+  documents:
+    - title: "\"Is Christendom Truly Christ's Domain?\" (The Watchtower Announcing Jehovah's Kingdom)"
+      title_ru: «Является ли христианский мир поистине владением Христа?»
+      body: Watch Tower Bible and Tract Society (журнал The Watchtower)
+      date: 1966-05-01
+      unity:
+        kind: official
+        note: "статья официального журнала организации; «Во всех странах у Свидетелей Иеговы одни и те же верования»."
+        proof:
+          - url: "https://wol.jw.org/en/wol/d/r1/lp-e/1966325"
+            title: "Is Christendom Truly Christ’s Domain? — The Watchtower, 1966 (Watchtower Online Library)"
+            tier: "official"
+            excerpt: "The Watchtower Announcing Jehovah’s Kingdom—1966"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+      about:
+        - catholicism
+        - orthodoxy
+        - protestantism
+      summary: Статья прослеживает историю того, что называет «христианским миром», — церквей, восходящих к императорской римской церкви после Константина, включая католическую, восточно-православные церкви и протестантизм, — и заключает, что христианский мир «не является и никогда не был владением Христа». Учение о Троице статья описывает как одну из отличительных черт «религии Вавилона», принятую, по её изложению, после решения императора Константина в пользу тринитарного учения.
+      quote:
+        text: Christendom is not and never has been Christ's domain.
+        url: https://wol.jw.org/en/wol/d/r1/lp-e/1966325
+      proof:
+        - url: https://wol.jw.org/en/wol/d/r1/lp-e/1966325
+          title: Is Christendom Truly Christ's Domain? — Watchtower Online Library
+          tier: official
+          excerpt: Christianity's worst enemy and a part of the great worldwide Babylonish religious empire
+          accessed: 2026-09-25
+        - url: https://wol.jw.org/en/wol/d/r1/lp-e/1966325
+          title: Is Christendom Truly Christ's Domain? — Watchtower Online Library
+          tier: official
+          excerpt: the Eastern Orthodox Churches and ignored Protestantism
+          accessed: 2026-09-25
+      status_check: verified
+    - title: '"Babylon the Great" (Reasoning From the Scriptures)'
+      title_ru: «Вавилон Великий» (Рассуждение с помощью Писаний)
+      body: Watch Tower Bible and Tract Society (книга «Рассуждение с помощью Писаний»)
+      date: не указана
+      unity:
+        kind: official
+        note: "раздел книги организации «Рассуждение с помощью Писаний»; «Во всех странах у Свидетелей Иеговы одни и те же верования»."
+        proof:
+          - url: "https://wol.jw.org/en/wol/d/r1/lp-e/1101989211"
+            title: "Babylon the Great — Reasoning From the Scriptures (Watchtower Online Library)"
+            tier: "official"
+            excerpt: "rs pp. 49-53 Babylon the Great"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+      about: []
+      summary: >-
+        Статья даёт определение Вавилона Великого: «Мировая империя ложной религии». Она охватывает все религии, учения и практика которых не соответствуют истинному поклонению Иегове. Статья явно указывает, что это понятие не ограничено одной религиозной группой, а включает и религии, называющие себя христианскими.
+      quote:
+        text: The world empire of false religion, embracing all religions whose teachings and practices do not conform to the true worship of Jehovah, the only true God.
+        url: https://wol.jw.org/en/wol/d/r1/lp-e/1101989211
+      proof:
+        - url: https://wol.jw.org/ru/wol/d/r2/lp-u/1101989211
+          title: Вавилон Великий — Рассуждение с помощью Писаний (Онлайн-библиотека Сторожевой башни)
+          tier: official
+          excerpt: Мировая империя ложной религии
+          accessed: "2026-09-26"
+        - url: https://wol.jw.org/en/wol/d/r1/lp-e/1101989211
+          title: Babylon the Great — Watchtower Online Library
+          tier: official
+          excerpt: not limited to one religious group but includes all religions that are in opposition to Jehovah, the true God
+          accessed: 2026-09-25
+      status_check: verified

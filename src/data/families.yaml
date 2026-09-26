@@ -1,0 +1,84 @@
+# The classification of each of the eight traditions, for the family line on
+# the tradition cards and the «Классификация» row of the comparison. It began
+# with the three nineteenth-century movements and Protestantism
+# (docs/tasks/site-m5-reading-polish.md W3) and covers every tradition since
+# the owner asked for no empty cells in the comparison (2026-09-26). `family`
+# is a short Russian rendering of the classification a reference-tier source
+# actually uses for that tradition - not an invented label - each backed by a
+# verbatim excerpt of at most 25 words (docs/SOURCES.md "What verified
+# means"). No proof -> no line: a tradition without a sourced classification
+# stays out of this file rather than getting an invented one.
+- tradition: judaism
+  family: "монотеистическая традиция, одна из авраамических религий (наряду с христианством и исламом)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
+      title: "Asian Americans: A Mosaic of Faiths, Appendix 6: Glossary | Pew Research Center"
+      tier: reference
+      excerpt: "Christianity, Islam and Judaism are monotheistic traditions—that is, their theologies are built on belief in one God"
+      accessed: "2026-09-26"
+    - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
+      title: "Asian Americans: A Mosaic of Faiths, Appendix 6: Glossary | Pew Research Center"
+      tier: reference
+      excerpt: "that recognize Abraham as their first prophet; they are therefore known as the Abrahamic religions."
+      accessed: "2026-09-26"
+- tradition: orthodoxy
+  family: "одна из трёх основных ветвей христианства (наряду с католичеством и протестантизмом)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      title: "Orthodox Christianity in the 21st Century | Pew Research Center"
+      tier: reference
+      excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
+      accessed: "2026-09-26"
+- tradition: catholicism
+  family: "одна из трёх основных ветвей христианства (наряду с православием и протестантизмом)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      title: "Orthodox Christianity in the 21st Century | Pew Research Center"
+      tier: reference
+      excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
+      accessed: "2026-09-26"
+- tradition: islam
+  family: "монотеистическая традиция, одна из авраамических религий (наряду с иудаизмом и христианством)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
+      title: "Asian Americans: A Mosaic of Faiths, Appendix 6: Glossary | Pew Research Center"
+      tier: reference
+      excerpt: "Christianity, Islam and Judaism are monotheistic traditions—that is, their theologies are built on belief in one God"
+      accessed: "2026-09-26"
+    - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
+      title: "Asian Americans: A Mosaic of Faiths, Appendix 6: Glossary | Pew Research Center"
+      tier: reference
+      excerpt: "that recognize Abraham as their first prophet; they are therefore known as the Abrahamic religions."
+      accessed: "2026-09-26"
+- tradition: protestantism
+  family: "одна из трёх основных ветвей христианства (наряду с православием и католичеством)"
+  proof:
+    - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      title: "Orthodox Christianity in the 21st Century | Pew Research Center"
+      tier: reference
+      excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
+      accessed: "2026-09-25"
+- tradition: adventism
+  family: "протестантская деноминация"
+  proof:
+    - url: "https://www.oikoumene.org/church-families/seventh-day-adventist-church"
+      title: "Seventh-day Adventist Church — World Council of Churches"
+      tier: reference
+      excerpt: "the SDA Church is probably the most widespread Protestant denomination, with work in over 200 countries"
+      accessed: "2026-09-25"
+- tradition: lds
+  family: "реставрационизм"
+  proof:
+    - url: "https://wrldrels.org/2016/10/08/lds/"
+      title: "Church of Jesus Christ of Latter-Day Saints — World Religions and Spirituality Project"
+      tier: reference
+      excerpt: "Mormonism is a Restorationist church."
+      accessed: "2026-09-25"
+- tradition: jw
+  family: "реставрационизм"
+  proof:
+    - url: "https://wrldrels.org/2016/10/08/archive-jehovahs-witnesses/"
+      title: "Jehovah's Witnesses — World Religions and Spirituality Project"
+      tier: reference
+      excerpt: "Jehovah's Witness belief is non-Trinitarian, millenarian, apocalyptic, restorationist and biblically based."
+      accessed: "2026-09-25"

@@ -1,0 +1,103 @@
+---
+import data from '../data/world-hierarchy-2026.json';
+import { hierarchySlices, point, ringPath } from '../lib/worldHierarchy';
+
+const { parents, children } = hierarchySlices(data.groups, data.branches);
+const percent = (n: number) => `${n.toFixed(1).replace('.', ',')} %`;
+const christianShare = percent(parents.find((group) => group.id === 'christians')!.share);
+const labels = [
+  ...children.map((child) => ({ ...child, layer: 'branch' as const })),
+  ...parents.filter((parent) => parent.id !== 'christians').map((parent) => ({
+    ...parent,
+    worldShare: parent.share,
+    layer: 'world' as const,
+  })),
+].map((leaf) => {
+  const angle = (leaf.start + leaf.end) / 2;
+  const labelRadius = leaf.layer === 'branch' ? 218 : 123;
+  const [x, y] = point(angle, labelRadius);
+  const inside = leaf.layer === 'branch' ? leaf.worldShare >= 7 : leaf.worldShare >= 6;
+  return { ...leaf, angle, x, y, right: x >= 0, inside };
+});
+// Separate the small neighbouring sectors' labels without enlarging their areas.
+for (const right of [true, false]) {
+  const side = labels.filter((label) => label.right === right && !label.inside).sort((a, b) => a.y - b.y);
+  for (let i = 1; i < side.length; i++) side[i].y = Math.max(side[i].y, side[i - 1].y + 66);
+  if (!side.length) continue;
+  const shift = Math.max(0, side.at(-1)!.y - 250);
+  side.forEach((label) => { label.y -= shift; });
+}
+const all = [...parents, ...children.map((child) => ({ ...child, share: child.worldShare }))];
+const description = (id: string) => {
+  const leaf = children.find((child) => child.id === id);
+  const group = all.find((item) => item.id === id)!;
+  return `${group.label}: ${leaf ? 'около ' : ''}${percent(group.share)} населения мира${leaf ? `; ${percent(leaf.share)} христиан` : ''}. 2026 год, приблизительная оценка.`;
+};
+---
+<section class="world-hierarchy" aria-labelledby="hierarchy-title">
+  <h2 id="hierarchy-title">Сколько последователей у религий · ≈ 2026</h2>
+  <p>Доли населения мира. На внешней дуге — христианские конфессии.</p>
+  <figure>
+    <div class="chart-scroll">
+      <svg viewBox="-480 -320 960 640" role="group" aria-label="Религии мира и состав христианства, приблизительная оценка на 2026 год">
+        {parents.map((group) => <path d={ringPath(group.start, group.end, 68, 178)} fill={`var(${group.color})`} data-hierarchy-id={group.id} data-description={description(group.id)} role="button" tabindex="0" aria-pressed="false" aria-label={description(group.id)}><title>{description(group.id)}</title></path>)}
+        {children.map((group) => <path d={ringPath(group.start, group.end, 184, 252)} fill={`var(${group.color})`} data-hierarchy-id={group.id} data-description={description(group.id)} role="button" tabindex="0" aria-pressed="false" aria-label={description(group.id)}><title>{description(group.id)}</title></path>)}
+        <g class="centre" aria-hidden="true"><text y="-3">2026</text><text y="23" class="small">весь мир</text></g>
+        <text x="90" y="-70" class="parent-label" text-anchor="middle" aria-hidden="true">Христиане<tspan x="90" dy="18">≈ {christianShare}</tspan></text>
+        {labels.map((label) => {
+          const outerRadius = label.layer === 'branch' ? 258 : 184;
+          const [x, y] = point(label.angle, outerRadius);
+          const anchor = label.right ? 300 : -300;
+          const name = label.id === 'unaffiliated' ? ['Без религиозной', 'принадлежности']
+            : label.id === 'folk' ? ['Народные', 'религии'] : label.id === 'independents' ? ['Независимые', 'церкви'] : label.id === 'unaffiliated-christians' ? ['Вне церковных', 'объединений'] : [label.label];
+          const textX = label.inside ? label.x : anchor + (label.right ? 6 : -6);
+          const textY = label.y - (name.length - 1) * 18 - (label.inside ? 5 : 0);
+          return <g>
+            {!label.inside && <polyline points={`${x},${y} ${label.right ? 278 : -278},${label.y} ${anchor},${label.y}`} aria-hidden="true"/>}
+            <text class:list={{ inset: label.inside, orthodox: label.id === 'orthodox' }} x={textX} y={textY} text-anchor={label.inside ? 'middle' : label.right ? 'start' : 'end'} data-hierarchy-id={label.id} data-description={description(label.id)}>
+              {name.map((line, i) => <tspan x={textX} dy={i ? 18 : 0}>{line}</tspan>)}
+              <tspan class="value" x={textX} dy="21">≈ {percent(label.worldShare)}</tspan>
+            </text>
+          </g>;
+        })}
+      </svg>
+    </div>
+    <p class="selection" aria-live="polite" aria-atomic="true">Христиане — около {christianShare} населения мира. Внешние сектора показывают приблизительный состав христианства.</p>
+
+  </figure>
+</section>
+<script>
+  for (const root of document.querySelectorAll<HTMLElement>('.world-hierarchy')) {
+    const targets = [...root.querySelectorAll<SVGElement>('[data-hierarchy-id]')];
+    const controls = [...root.querySelectorAll<SVGElement>('[data-hierarchy-id][role="button"]')];
+    const select = (control: SVGElement) => {
+      controls.forEach((item) => item.setAttribute('aria-pressed', String(item.dataset.hierarchyId === control.dataset.hierarchyId)));
+      const status = root.querySelector<HTMLElement>('.selection');
+      if (status) status.textContent = control.dataset.description ?? '';
+    };
+    targets.forEach((target) => target.addEventListener('click', () => select(target)));
+    controls.forEach((control) => {
+      control.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); select(control); }
+      });
+    });
+  }
+</script>
+<style>
+  .world-hierarchy { grid-column: 1 / -1; --world-folk: #527c67; --world-independent: #3979a8; }
+  h2 { margin: 0 0 16px; } p { max-width: 90ch; } figure { margin: 0; }
+  .chart-scroll { overflow-x: auto; } svg { display: block; width: 100%; min-width: 760px; max-width: 1100px; margin: auto; }
+  path { stroke: var(--bg); stroke-width: .5; }
+  [data-hierarchy-id] { cursor: pointer; }
+  path[aria-pressed="true"], path:focus-visible, path:hover { stroke: var(--ink); stroke-width: 2; outline: none; }
+  text { fill: var(--ink); font: 18px 'PT Sans',sans-serif; }
+  text[aria-pressed="true"] { font-weight: 700; text-decoration: underline; }
+  text:focus-visible { outline: 2px solid var(--focus); }
+  .value { font-size: 16px; fill: var(--muted); } polyline { fill: none; stroke: var(--muted); stroke-width: 1; pointer-events: none; }
+  .centre { text-anchor: middle; } .centre text { font-size: 28px; font-weight: 700; } .centre .small { font-size: 16px; font-weight: 400; }
+  .inset { font-size: 16px; font-weight: 700; }
+  .inset, .inset .value, .parent-label { fill: white; stroke: #18202c; stroke-width: 2.5px; paint-order: stroke fill; stroke-linejoin: round; }
+  .inset.orthodox, .inset.orthodox .value { font-size: 13px; }
+  .parent-label { fill: white; font-size: 14px; font-weight: 700; pointer-events: none; }
+  .selection { min-height: 1.6em; padding: 12px 16px; background: var(--surface); border-left: 3px solid var(--focus); }
+</style>

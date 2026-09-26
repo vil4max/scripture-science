@@ -1,0 +1,195 @@
+---
+// The chosen traditions side by side (docs/tasks/site-m14-selection.md W3):
+// one column per chosen tradition in the reader's order, each fact on one
+// row across the columns so the same fact is read at the same height. The
+// columns share their template with the topics and the pinned column header
+// on /compare/, like a product comparison table. Every
+// tradition is rendered; the script shows the chosen ones. Without a choice
+// a hint asks for one.
+import type { CollectionEntry } from 'astro:content';
+import ProofLink from './ProofLink.astro';
+import { getFamilyByTradition } from '../lib/families';
+import { sinceLines } from '../lib/rules';
+
+interface Props {
+  traditions: CollectionEntry<'matrix'>[];
+}
+
+const { traditions } = Astro.props;
+const rows = ['since', 'adherents', 'scripture', 'self', 'family'] as const;
+const rowLabel: Record<(typeof rows)[number], string> = {
+  since: 'Возникновение',
+  adherents: 'Численность',
+  scripture: 'Писание',
+  self: 'Сама о себе',
+  family: 'Классификация',
+};
+---
+
+<section id="chosen" aria-labelledby="chosen-title">
+  <h2 id="chosen-title">Кратко</h2>
+  <p class="hint" data-tcompare-hint>
+    Выберите вверху одну традицию, чтобы читать о ней, или две-три, чтобы сравнить их рядом. Пока ничего не выбрано,
+    заполните любую из трёх ячеек — её содержимое появится под ней.
+  </p>
+  <div class="tcompare" data-tcompare hidden>
+  {
+    rows.map((row) => (
+      <div class="frow">
+        <span class="flabel">{rowLabel[row]}</span>
+        {traditions.map((t) => {
+          const { since, scripture, adherents, self_view } = t.data;
+          const family = getFamilyByTradition(t.id);
+          return (
+            <div class="cell" data-trad={t.id}>
+              {row === 'since' && (
+                <>
+                  {sinceLines(since.label).map((line) => (
+                    <p class="line">{line}</p>
+                  ))}
+                  <ProofLink proof={since.proof} />
+                </>
+              )}
+              {row === 'adherents' && (
+                <>
+                  <p class="line">
+                    {adherents.value}
+                  </p>
+                  <ProofLink proof={adherents.proof} />
+                </>
+              )}
+              {row === 'scripture' && (
+                <>
+                  <p class="line">
+                    {scripture.name}
+                  </p>
+                  <ProofLink proof={scripture.proof} />
+                </>
+              )}
+              {row === 'self' && (
+                <>
+                  <p class="line">{self_view.summary}</p>
+                  <ProofLink proof={self_view.proof} />
+                </>
+              )}
+              {row === 'family' &&
+                (family ? (
+                  <>
+                    <p class="line">{family.family}</p>
+                    <ProofLink proof={family.proof} />
+                  </>
+                ) : (
+                  // No gap without a reason (owner, 2026-09-26).
+                  <p class="line muted">Классификация не указана: подтверждённого источника пока нет.</p>
+                ))}
+            </div>
+          );
+        })}
+      </div>
+    ))
+  }
+  </div>
+</section>
+
+<script>
+  import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
+  import { onSelection } from '../lib/selection-client';
+
+  const root = document.querySelector<HTMLElement>('[data-tcompare]');
+  const hint = document.querySelector<HTMLElement>('[data-tcompare-hint]');
+  if (root) {
+    onSelection((ids) => {
+      root.hidden = ids.length === 0;
+      if (hint) hint.hidden = ids.length > 0;
+      const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
+      root.style.setProperty('--cols', '3');
+      for (const cell of root.querySelectorAll<HTMLElement>('.cell')) {
+        const index = slots.indexOf(cell.dataset.trad ?? '');
+        cell.hidden = index === -1;
+        cell.style.gridColumn = String(index + 1);
+        cell.style.gridRow = '2';
+      }
+    });
+  }
+</script>
+
+<style>
+
+  #chosen {
+    scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
+  }
+
+  .tcompare[hidden] {
+    display: none;
+  }
+
+  .hint {
+    margin: 0;
+    color: var(--muted);
+  }
+
+  /* Every fact row is its own grid with the same template, so the columns
+  line up across rows while explicit grid positions preserve empty slots. */
+  .frow {
+    display: grid;
+    grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr));
+    column-gap: 20px;
+    row-gap: 6px;
+    padding: 14px 0;
+    border-top: 1px solid color-mix(in srgb, var(--line) 60%, transparent);
+  }
+
+  /* The fact's name heads its row across all columns. */
+  .flabel {
+    grid-column: 1 / -1;
+    order: -1;
+    color: var(--muted);
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.02em;
+  }
+
+  .cell[hidden] {
+    display: none;
+  }
+
+  .cell h3 {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0;
+    font-size: 21px;
+  }
+
+  .chip {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .full-name {
+    margin: 4px 0 0;
+    color: var(--muted);
+    font-size: 15px;
+  }
+
+  .line {
+    margin: 0 0 4px;
+    line-height: 1.6;
+  }
+
+
+  .muted {
+    color: var(--muted);
+  }
+
+
+  /* The name reads as text; the link to the translation stays small, so a
+  long name is not one underlined block (owner, 2026-09-26). */
+  .open {
+    font-size: 14px;
+    color: var(--focus);
+    white-space: nowrap;
+  }
+</style>

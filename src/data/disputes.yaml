@@ -1,0 +1,1834 @@
+- id: monasticism
+  topic: fasting
+  title: "Монашество"
+  challenges:
+    - tradition: islam
+      summary: "Коран говорит о последователях Исы (Иисуса): монашество «они выдумали сами», Бог его им не предписывал; они ввели его, чтобы снискать довольство Аллаха, но «не соблюли его должным образом»."
+      unity:
+        kind: shared
+        note: "Коран — священная книга мусульман; для середины аята переводчик приводит два прочтения."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+            title: "Коран — Википедия (русская)"
+            tier: "reference"
+            excerpt: "священная книга мусульман, написанная на арабском языке"
+            accessed: "2026-09-26"
+          - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=57:27"
+            title: "Коран 57:27, перевод Э. Кулиева | Quran.com Content API"
+            tier: "official"
+            excerpt: "(или Мы предписали им только стремиться к довольству Аллаха)"
+            accessed: "2026-09-26"
+      scripture:
+        ref: "Коран 57:27"
+        text: "В сердца тех, которые последовали за ним, Мы вселили сострадание и милосердие, а монашество они выдумали сами. Мы не предписывали им этого, но они поступили так, дабы снискать довольство Аллаха (или Мы предписали им только стремиться к довольству Аллаха). Но они не соблюли его должным образом."
+        url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=57:27"
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=57:27"
+          title: "Коран 57:27, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "а монашество они выдумали сами. Мы не предписывали им этого"
+          accessed: "2026-09-26"
+    - tradition: protestantism
+      summary: "Лютеранское Аугсбургское исповедание называет монашеские обеты, соблюдением которых люди рассчитывают заслужить благодать и искупить свои грехи, бесполезными и противоречащими Евангелию. Реформатское Вестминстерское исповедание считает обеты пожизненного безбрачия, добровольной бедности и постоянного послушания не путём к более высокой степени совершенства, а «предрассудками и греховными тенетами»."
+      unity:
+        kind: divided
+        note: "в англиканской Церкви Англии монашеские ордены начали возрождаться с 1840-х годов, и их члены часто дают традиционные обеты бедности, целомудрия и послушания."
+        proof:
+          - url: "https://en.wikipedia.org/wiki/Anglican_religious_order"
+            title: "Anglican religious order — Wikipedia (English)"
+            tier: "reference"
+            excerpt: "Between 1841 and 1855, several religious orders for women were begun"
+            accessed: "2026-09-26"
+          - url: "https://en.wikipedia.org/wiki/Anglican_religious_order"
+            title: "Anglican religious order — Wikipedia (English)"
+            tier: "reference"
+            excerpt: "The members of religious orders take vows which often include the traditional monastic vows of poverty, chastity and obedience"
+            accessed: "2026-09-26"
+      quote:
+        text: "Посему монашеские обеты и иные предписания относительно постной пищи, постных дней и т. д., с помощью соблюдения которых люди рассчитывают заслужить благодать и искупить свои грехи, бесполезны и противоречат Евангелию."
+        source: "Аугсбургское вероисповедание, артикул 15 «О церковных порядках»"
+        url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 15 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: official
+          excerpt: "Посему монашеские обеты и иные предписания относительно постной пищи, постных дней и т. д., с помощью соблюдения которых люди рассчитывают заслужить благодать"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 15 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: official
+          excerpt: "рассчитывают заслужить благодать и искупить свои грехи, бесполезны и противоречат Евангелию"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры, глава 22 «О законных клятвах и обетах»"
+          tier: official
+          excerpt: "обеты пожизненного безбрачия, добровольной бедности и постоянного послушания не только не ведут к более высокой степени совершенства"
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры, глава 22 «О законных клятвах и обетах»"
+          tier: official
+          excerpt: "но являются предрассудками и греховными тенетами, в которые не должен попадать христианин"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "Положение о монастырях и монашествующих называет монашество, словами святителя Игнатия (Брянчанинова), установлением Божиим, а не человеческим. Оно основано на словах Иисуса Христа «Если хочешь быть совершенным, пойди, продай имение твое и раздай нищим…» (Мф. 19:21), на Мф. 16:24–25 и 19:29 и на словах апостола Павла о девстве (1 Кор. 7:25–26), а также на живом опыте Церкви — примере Божией Матери, святого Иоанна Предтечи и многих святых подвижников."
+      unity:
+        kind: shared
+        note: "правила Вселенских Соборов: IV Вселенский (Халкидонский, 451) постановил, что «Истинно и искренне проходящие монашеское житие да удостаиваются подобающей чести», а Трулльский (691) — «Позволительно христианину избрать подвижническую жизнь»."
+        proof:
+          - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-4/"
+            title: "Правило 4 IV Вселенского Собора (Халкидонского, 451) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Истинно и искренне проходящие монашеское житие да удостаиваются подобающей чести"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-4/"
+            title: "Правило 4 IV Вселенского Собора (Халкидонского, 451) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Халкидонский (451г.)"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-43/"
+            title: "Правило 43 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Позволительно христианину избрать подвижническую жизнь и, оставив многомятежную бурю житейских дел, вступить в монастырь"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-43/"
+            title: "Правило 43 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Трулльский (691г.)"
+            accessed: "2026-09-26"
+      quote:
+        text: "Монашество есть установление Божие, отнюдь не человеческое."
+        source: "Положение о монастырях и монашествующих (Архиерейский Собор Русской Православной Церкви, 2017), слова свт. Игнатия (Брянчанинова)"
+        url: "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/"
+      proof:
+        - url: "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/"
+          title: "Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)"
+          tier: official
+          excerpt: "Монашество есть установление Божие, отнюдь не человеческое"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/"
+          title: "Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)"
+          tier: official
+          excerpt: "Монашество основано на словах Господа Иисуса Христа: «Если хочешь быть совершенным, пойди, продай имение твое и раздай нищим"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/"
+          title: "Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)"
+          tier: official
+          excerpt: "Монашество имеет основание и в живом опыте Церкви: вдохновляясь примерами Божией Матери, святого Иоанна Предтечи, многих святых подвижников"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "Катехизис Католической Церкви: евангельские советы «в их многообразии предложены каждому ученику Христа». С ранних времён в Церкви были мужчины и женщины, стремившиеся через их исполнение «с большей свободой следовать за Христом»; одни жили отшельниками, другие основали монашеские ордена, «которые Церковь с готовностью приняла и одобрила своею властью». Такая жизнь не относится к иерархической структуре Церкви, но «неотъемлемо принадлежит к ее жизни и святости»."
+      unity:
+        kind: shared
+        note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Евангельские советы в их многообразии предложены каждому ученику Христа."
+        source: "Катехизис Католической Церкви, §915"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §915"
+          tier: official
+          excerpt: "Евангельские советы в их многообразии предложены каждому ученику Христа"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §918"
+          tier: official
+          excerpt: "стремившиеся через исполнение евангельских советов с большей свободой следовать за Христом"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §918"
+          tier: official
+          excerpt: "основали религиозные семьи (монашеские ордена), которые Церковь с готовностью приняла и одобрила своею властью"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §914"
+          tier: official
+          excerpt: "хотя и не относится к иерархической структуре Церкви, все же неотъемлемо принадлежит к ее жизни и святости"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: images
+  topic: images
+  title: "Иконы и священные изображения"
+  challenges:
+    - tradition: islam
+      summary: "Официального исламского документа об иконах сайт не нашёл; по справочным источникам, в исламе существует жёсткий запрет на изображения живых существ: в многочисленных хадисах пророка Мухаммада создающим изображения обещано суровое наказание в День Суда, а создание изображений считается делом идолопоклонников и противоречит учению о чистом единобожии."
+      unity:
+        kind: divided
+        note: "муфтий Египта Мухаммад Абдо (1849–1905) полагал, что хадис о наказании художников, «по всей вероятности, появился в эпоху язычества»."
+        proof:
+          - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+            title: "Наврузов А. Р. Мухаммад Абдо о запрете изображений человека в исламе // Исламоведение, 2010, № 2 | КиберЛенинка"
+            tier: "reference"
+            excerpt: "этот хадис, по всей вероятности, появился в эпоху язычества"
+            accessed: "2026-09-26"
+          - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+            title: "Наврузов А. Р. Мухаммад Абдо о запрете изображений человека в исламе // Исламоведение, 2010, № 2 | КиберЛенинка"
+            tier: "reference"
+            excerpt: "Мухаммад Абдо (1849-1905) - богослов и общественный деятель Египта"
+            accessed: "2026-09-26"
+          - url: "https://cyberleninka.ru/article/n/muhammad-abdo-o-zaprete-izobrazheniy-cheloveka-v-islame-po-materialam-araboyazychnogo-zhurnala-bayan-al-hakaik"
+            title: "Наврузов А. Р. Мухаммад Абдо о запрете изображений человека в исламе // Исламоведение, 2010, № 2 | КиберЛенинка"
+            tier: "reference"
+            excerpt: "С 1899 г. муфтий Египта"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B8%D0%BA%D0%BE%D0%BD%D0%B8%D0%B7%D0%BC"
+          title: "Аниконизм — Википедия (русская), раздел «Аниконизм в исламе»"
+          tier: "reference"
+          excerpt: "В исламе существует очень жёсткий запрет на изображения живых существ"
+          accessed: "2026-09-26"
+        - url: "https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B8%D0%BA%D0%BE%D0%BD%D0%B8%D0%B7%D0%BC"
+          title: "Аниконизм — Википедия (русская), раздел «Аниконизм в исламе»"
+          tier: "reference"
+          excerpt: "людям, создающим изображения, в многочисленных хадисах Пророка Мухаммеда обещано суровое наказание в День Суда"
+          accessed: "2026-09-26"
+        - url: "https://ru.wikipedia.org/wiki/%D0%90%D0%BD%D0%B8%D0%BA%D0%BE%D0%BD%D0%B8%D0%B7%D0%BC"
+          title: "Аниконизм — Википедия (русская), раздел «Аниконизм в исламе»"
+          tier: "reference"
+          excerpt: "Создание изображений считается делом идолопоклонников и противоречит основе исламского учения о чистом единобожии"
+          accessed: "2026-09-26"
+    - tradition: protestantism
+      summary: "Реформатский Гейдельбергский катехизис (вопросы 97–98) учит, что Бога невозможно и недопустимо изображать видимым образом; изображать творения можно, но Бог запрещает делать и иметь такие изображения ради поклонения им, а заменять ими в церквях книги для неграмотных нельзя: не следует пытаться быть мудрее Бога. Вестминстерское исповедание запрещает совершать богослужение «с использованием зримых образов или другими способами, не указанными в Священном Писании»."
+      unity:
+        kind: divided
+        note: "в лютеранских церквах обычно есть алтарь, облачения, распятия и свечи; методистская и пятидесятническая традиции, по англоязычной Википедии, охотнее используют большие кресты и другие изображения."
+        proof:
+          - url: "https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx"
+            title: "Лютеранство — Евангелическо-Лютеранская Церковь России (архив)"
+            tier: "official"
+            excerpt: "Обычно в лютеранских церквах имеется алтарь и кафедра для проповеди, используются традиционная церковная одежда и утварь – облачения, распятия, свечи"
+            accessed: "2026-09-26"
+          - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+            title: "Aniconism in Christianity — Wikipedia (English)"
+            tier: "reference"
+            excerpt: "The Methodist and Pentecostal traditions, as well as other Wesleyan-Arminian Evangelical churches,"
+            accessed: "2026-09-26"
+          - url: "https://en.wikipedia.org/wiki/Aniconism_in_Christianity"
+            title: "Aniconism in Christianity — Wikipedia (English)"
+            tier: "reference"
+            excerpt: "are inspired by the Moravian rather than Calvinist tradition, and are therefore readier to use large crosses and other images"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+          title: "Heidelberg Catechism, Q&A 97 — Christian Reformed Church in North America"
+          tier: official
+          excerpt: "God can not and may not be visibly portrayed in any way."
+          accessed: "2026-09-26"
+        - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+          title: "Heidelberg Catechism, Q&A 97 — Christian Reformed Church in North America"
+          tier: official
+          excerpt: "Although creatures may be portrayed, yet God forbids making or having such images if one’s intention is to worship them"
+          accessed: "2026-09-26"
+        - url: "https://www.crcna.org/welcome/beliefs/confessions/heidelberg-catechism"
+          title: "Heidelberg Catechism, Q&A 98 — Christian Reformed Church in North America"
+          tier: official
+          excerpt: "may not images be permitted in churches in place of books for the unlearned? A. No, we should not try to be wiser than God."
+          accessed: "2026-09-26"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры, глава 21 «О служении Богу и дне Субботнем»"
+          tier: official
+          excerpt: "совершать богослужение согласно представлениям и вымыслам человеческим, или по наущению сатаны, с использованием зримых образов или другими способами, не указанными в Священном Писании, нельзя"
+          accessed: "2026-09-26"
+    - tradition: jw
+      summary: "Свидетели Иеговы не почитают крест и другие изображения. Библия, по их словам, строго повелевает христианам «Убегайте от идолопоклонства», а это значит, что в поклонении Богу не следует использовать крест (1 Кор. 10:14; 1 Ин. 5:21); отличительный признак учеников Христа — самоотверженная любовь, «а не крест или какой-либо другой предмет культа»."
+      unity:
+        kind: shared
+        note: "«Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет Руководящий совет."
+        proof:
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет"
+            accessed: "2026-09-26"
+      quote:
+        text: "Мы не почитаем крест и другие изображения"
+        source: "«Во что верят Свидетели Иеговы?» — jw.org"
+        url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+      proof:
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+          title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "Мы не почитаем крест и другие изображения"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-крест/"
+          title: "«Крест» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "Библия строго повелевает христианам: «Убегайте от идолопоклонства»"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-крест/"
+          title: "«Крест» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "Это значит, что в поклонении Богу не следует использовать крест"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-крест/"
+          title: "«Крест» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "самоотверженная любовь, а не крест или какой-либо другой предмет культа"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "VII Вселенский Собор (II Никейский, 787) в своём определении (оросе) постановил, чтобы святые иконы Господа Иисуса Христа, Богородицы, ангелов и святых предлагались так же, как изображение Креста: иконописание служит подтверждением того, «что Бог Слово истинно, а не призрачно вочеловечился». Иконам воздаются почитание и поклонение, «но никак не то истинное служение, которое, по вере нашей, приличествует одному только божественному естеству»."
+      unity:
+        kind: shared
+        note: "определение VII Вселенского Собора; Вселенский Собор — «собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной»."
+        proof:
+          - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+            title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+            tier: "official"
+            excerpt: "Вселенский Собор – это собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной, для утверждения истинного учения"
+            accessed: "2026-09-26"
+      quote:
+        text: "честь, воздаваемая иконе, относится к ее первообразу и поклоняющийся иконе поклоняется ипостаси изображенного на ней"
+        source: "Определение VII Вселенского Собора (787)"
+        url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+      proof:
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "ВСЕЛЕНСКИЙ VII СОБОР (II Никейский)"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "В мае 787 г. вновь были разосланы приглашения"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "определяем, чтобы святые и честные иконы предлагались (для поклонения) точно так же, как и изображение честного и животворящего Креста"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "служит подтверждением того, что Бог Слово истинно, а не призрачно вочеловечился"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "но никак не то истинное служение, которое, по вере нашей, приличествует одному только божественному естеству"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260520222344/https://pravenc.ru/text/155500.html"
+          title: "Вселенский VII Собор — «Православная энциклопедия» (архивная копия), с текстом соборного определения"
+          tier: official
+          excerpt: "потому что честь, воздаваемая иконе, относится к ее первообразу и поклоняющийся иконе поклоняется ипостаси изображенного на ней"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "Катехизис Католической Церкви: основываясь на тайне Воплощённого Слова, Седьмой Вселенский Собор в Никее (787) «осудил иконоборцев и утвердил почитание икон». Почитание изображений «не противоречит Первой Заповеди, запрещающей идолов»: «почитание, воздаваемое образу, обращено к прообразу», и это «выражение глубокого почтения», а не поклонение, которое подобает одному только Богу."
+      unity:
+        kind: shared
+        note: "решение VII Вселенского Собора (787); Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Христианское почитание изображений не противоречит Первой Заповеди, запрещающей идолов."
+        source: "Катехизис Католической Церкви, §2132"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2131"
+          tier: official
+          excerpt: "Седьмой Вселенский Собор в Никее (в 787 г.) осудил иконоборцев и утвердил почитание икон"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2132"
+          tier: official
+          excerpt: "Христианское почитание изображений не противоречит Первой Заповеди, запрещающей идолов"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2132"
+          tier: official
+          excerpt: "«почитание, воздаваемое образу, обращено к прообразу»"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2132"
+          tier: official
+          excerpt: "Почитание икон — это «выражение глубокого почтения», а не поклонение, которое подобает одному только Богу"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: trinity
+  topic: god
+  title: "Троица"
+  challenges:
+    - tradition: islam
+      summary: "Коран обращается к людям Писания: «не говорите: „Троица!“» — Аллах является Единственным Богом, Он «пречист и далек от того, чтобы у Него был сын». Не уверовали, по Корану, те, кто говорит, что Аллах — третий в троице."
+      unity:
+        kind: shared
+        note: "Коран — священная книга мусульман."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+            title: "Коран — Википедия (русская)"
+            tier: "reference"
+            excerpt: "священная книга мусульман, написанная на арабском языке"
+            accessed: "2026-09-26"
+      scripture:
+        ref: "Коран 4:171"
+        text: "Веруйте же в Аллаха и Его посланников и не говорите: «Троица!». Прекратите, ведь так будет лучше для вас. Воистину, Аллах является Единственным Богом."
+        url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171"
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171"
+          title: "Коран 4:171, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "не говорите: «Троица!». Прекратите, ведь так будет лучше для вас"
+          accessed: "2026-09-26"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:73"
+          title: "Коран 5:73, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "Не уверовали те, которые говорят: «Аллах является третьим в троице»"
+          accessed: "2026-09-26"
+    - tradition: lds
+      summary: "Святые последних дней верят в Бога Отца, Его Сына Иисуса Христа и Святого Духа, но, в отличие от других христианских церквей, считают каждого из Них отдельным существом: Отец и Сын имеют осязаемые тела из плоти и костей. Истинное учение о Боге, по их учению, было утрачено в отступничестве после смерти апостолов и начало восстанавливаться с Первого видения Джозефа Смита."
+      unity:
+        kind: shared
+        note: "первый Символ веры Церкви, часть её Писания (Драгоценная Жемчужина): «Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа Святого»."
+        proof:
+          - url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=rus"
+            title: "Символы веры 1:1, Драгоценная Жемчужина — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+            tier: "official"
+            excerpt: "Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа Святого"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+          title: "“Godhead,” Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+          tier: "official"
+          excerpt: "differ from other Christian religions is in their belief that God and Jesus Christ are glorified, physical beings"
+          accessed: "2026-09-26"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+          title: "“Godhead,” Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+          tier: "official"
+          excerpt: "each member of the Godhead is a separate being"
+          accessed: "2026-09-26"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+          title: "“Godhead,” Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+          tier: "official"
+          excerpt: "The true doctrine of the Godhead was lost in the apostasy that followed the Savior’s mortal ministry and the deaths of His Apostles"
+          accessed: "2026-09-26"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
+          title: "“Godhead,” Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+          tier: "official"
+          excerpt: "The Father and the Son have tangible bodies of flesh and bones"
+          accessed: "2026-09-26"
+    - tradition: jw
+      summary: "Свидетели Иеговы считают, что «в Библии нет и намека на то, что Бог — часть Троицы», и приводят стихи «Наш Бог Иегова — один Иегова» (Втор. 6:4) и «Бог же — один» (Гал. 3:20)."
+      unity:
+        kind: shared
+        note: "«Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет Руководящий совет."
+        proof:
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/троица/"
+          title: "«Является ли Бог Троицей?» — Ответы на библейские вопросы, jw.org"
+          tier: "official"
+          excerpt: "В действительности в Библии нет и намека на то, что Бог — часть Троицы"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/троица/"
+          title: "«Является ли Бог Троицей?» — Ответы на библейские вопросы, jw.org"
+          tier: "official"
+          excerpt: "«Наш Бог Иегова — один Иегова» (Второзаконие 6:4)"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/троица/"
+          title: "«Является ли Бог Троицей?» — Ответы на библейские вопросы, jw.org"
+          tier: "official"
+          excerpt: "«Бог же — один» (Галатам 3:20)"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "Катехизис приводит слова Иисуса Христа «Идите, научите все народы, крестя их во имя Отца и Сына и Святаго Духа» (Мф. 28:19). Учение о Троице утвердили первый (Никейский, 325) и второй (Константинопольский, 381) Вселенские Соборы, на которых составлен Символ веры: первый — против ложного учения Ария о Сыне Божием, второй — против ложного учения Македония о Святом Духе."
+      unity:
+        kind: shared
+        note: "учение первого и второго Вселенских Соборов; Вселенский Собор — «собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной»."
+        proof:
+          - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+            title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+            tier: "official"
+            excerpt: "Вселенский Собор – это собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной, для утверждения истинного учения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная."
+        source: "Пространный христианский катехизис, §90"
+        url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Идите, научите все народы, крестя их во имя Отца и Сына и Святаго Духа"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "1-й – Никейский (325 г.); 2-й – Константинопольский (381 г.)"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "первый – для утверждения истинного учения о Сыне Божием против ложного учения Ария"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "второй – для утверждения учения о Святом Духе против ложного учения Македония"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "Церковь исповедует не трёх богов, а единого Бога в трёх Лицах — «Троицу единосущную»; Божественные Лица не разделяют единую Божественность, «но каждое из Них есть Бог в целом». Первый Вселенский Собор в Никее (325) исповедал, что Сын единосущен Отцу, «то есть единый с Ним Бог», а Второй Вселенский Собор в Константинополе (381) сохранил это выражение в Символе веры."
+      unity:
+        kind: shared
+        note: "исповедание первых Вселенских Соборов; Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Мы не исповедуем трех богов, но единого Бога в трех лицах: «Троицу единосущную»"
+        source: "Катехизис Католической Церкви, §253"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §253"
+          tier: "official"
+          excerpt: "Мы не исповедуем трех богов, но единого Бога в трех лицах: «Троицу единосущную»"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §253"
+          tier: "official"
+          excerpt: "Божественные Лица не разделяют единую Божественность, но каждое из Них есть Бог в целом"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §242"
+          tier: "official"
+          excerpt: "Церковь на первом Вселенском Соборе в Никее (325) исповедала, что Сын «Единосущен» Отцу, то есть единый с Ним Бог"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §242"
+          tier: "official"
+          excerpt: "Второй Вселенский Собор в Константинополе (381) сохранил это выражение в своей формулировке Символа веры"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: divinity-of-christ
+  topic: jesus
+  title: "Божество Иисуса Христа"
+  challenges:
+    - tradition: judaism
+      summary: "Иудаизм исповедует, что Творец «нематериален», и не признаёт Иисуса из Назарета ни Мессией, ни Богом. Справочное издание My Jewish Learning отмечает, что новозаветная вера в Иисуса как равного Богу трудно совместима с настойчивым утверждением иудаизма о единстве Бога."
+      unity:
+        kind: shared
+        note: "даже евреи, которые в последнее время видят в Иисусе еврейского учителя, не верят, как христиане, что он воскрес из мёртвых или был Мессией."
+        proof:
+          - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+            title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+            tier: "reference"
+            excerpt: "Other Jews, recently, have come to regard him as a Jewish teacher"
+            accessed: "2026-09-26"
+          - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+            title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+            tier: "reference"
+            excerpt: "This does not mean, however, that they believe, as Christians do, that he was raised from the dead or was the messiah"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://toldot.com/13PrintsipovVery.html"
+          title: "13 принципов веры (Рамбам) | Толдот.ру"
+          tier: "official"
+          excerpt: "Творец, благословенно имя Его, нематериален и ему несвойственны присущие материи состояния"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: "reference"
+          excerpt: "numerous verses testifying to Jesus as equal to God and as divine"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: "reference"
+          excerpt: "a belief hard to reconcile with Judaism’s insistence on God’s oneness"
+          accessed: "2026-09-26"
+    - tradition: islam
+      summary: "Коран называет Мессию Ису (Иисуса), сына Марьям, посланником Аллаха, Его Словом и духом от Него, но не Богом: не уверовали те, кто говорит, что Аллах — это Мессия, сын Марьям, а сам Мессия сказал: «О сыны Исраила (Израиля)! Поклоняйтесь Аллаху, Господу моему и Господу вашему»."
+      unity:
+        kind: shared
+        note: "Коран — священная книга мусульман."
+        proof:
+          - url: "https://ru.wikipedia.org/wiki/%D0%9A%D0%BE%D1%80%D0%B0%D0%BD"
+            title: "Коран — Википедия (русская)"
+            tier: "reference"
+            excerpt: "священная книга мусульман, написанная на арабском языке"
+            accessed: "2026-09-26"
+      scripture:
+        ref: "Коран 5:72"
+        text: "Не уверовали те, которые говорят: «Аллах - это Мессия, сын Марьям (Марии)». Мессия сказал: «О сыны Исраила (Израиля)! Поклоняйтесь Аллаху, Господу моему и Господу вашему»."
+        url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:72"
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:72"
+          title: "Коран 5:72, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "Не уверовали те, которые говорят: «Аллах - это Мессия, сын Марьям (Марии)»"
+          accessed: "2026-09-26"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171"
+          title: "Коран 4:171, перевод Э. Кулиева | Quran.com Content API"
+          tier: "official"
+          excerpt: "Мессия Иса (Иисус), сын Марьям (Марии), является посланником Аллаха, Его Словом, которое Он послал Марьям (Марии), и духом от Него"
+          accessed: "2026-09-26"
+    - tradition: jw
+      summary: "Свидетели Иеговы верят в Иисуса Христа как в Сына Бога, но не поклоняются ему и не верят, что он — Всемогущий Бог: они ссылаются на его слова «Отец больше меня» (Ин. 14:28)."
+      unity:
+        kind: shared
+        note: "«Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет Руководящий совет."
+        proof:
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет"
+            accessed: "2026-09-26"
+      quote:
+        text: "Однако мы не сомневаемся в правдивости его слов: «Отец больше меня» (Иоанна 14:28). Поэтому мы не поклоняемся Иисусу Христу, а также не верим, что он — Всемогущий Бог."
+        source: "«Верят ли Свидетели Иеговы в Иисуса Христа?» — Часто задаваемые вопросы, jw.org"
+        url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-иисуса-христа/"
+      proof:
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-иисуса-христа/"
+          title: "«Верят ли Свидетели Иеговы в Иисуса Христа?» — Часто задаваемые вопросы, jw.org"
+          tier: "official"
+          excerpt: "мы не сомневаемся в правдивости его слов: «Отец больше меня»"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/вера-в-иисуса-христа/"
+          title: "«Верят ли Свидетели Иеговы в Иисуса Христа?» — Часто задаваемые вопросы, jw.org"
+          tier: "official"
+          excerpt: "Поэтому мы не поклоняемся Иисусу Христу, а также не верим, что он — Всемогущий Бог"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "Символ веры исповедует Господа Иисуса Христа, Сына Божия, «Бога истинна от Бога истинна, рожденна, не сотворенна, единосущна Отцу». Катехизис приводит слова Писания «В начале было Слово, и Слово было у Бога, и Слово было Бог» (Ин. 1:1); первый Вселенский Собор (Никейский, 325) был созван «для утверждения истинного учения о Сыне Божием против ложного учения Ария»."
+      unity:
+        kind: shared
+        note: "учение первого Вселенского Собора (Никейского); Вселенский Собор — «собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной»."
+        proof:
+          - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+            title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+            tier: "official"
+            excerpt: "Вселенский Собор – это собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной, для утверждения истинного учения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Иисус Христос называется Господом в том смысле, что Он есть истинный Бог."
+        source: "Пространный христианский катехизис, §135"
+        url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Бога истинна от Бога истинна, рожденна, не сотворенна, единосущна Отцу"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Иисус Христос называется Господом в том смысле, что Он есть истинный Бог"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "«В начале было Слово, и Слово было у Бога, и Слово было Бог» (Ин. 1:1)"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "первый – для утверждения истинного учения о Сыне Божием против ложного учения Ария"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "1-й – Никейский (325 г.)"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "I Вселенский Собор в Никее в 325 году исповедал Сына Божия «рожденного, не сотворенного, единосущного (омоусиос) Отцу» и осудил Ария, утверждавшего, что «Сын Божий происшел из небытия» и «не единосущен Отцу». Иисус Христос — «Сын Божий по естеству, а не по усыновлению»."
+      unity:
+        kind: shared
+        note: "исповедание I Вселенского Собора; Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "I Вселенский Собор в Никее в 325 г. исповедовал в своем Символе веры Сына Божия «рожденного, не сотворенного, единосущного (омоусиос) Отцу»"
+        source: "Катехизис Католической Церкви, §465"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §465"
+          tier: "official"
+          excerpt: "I Вселенский Собор в Никее в 325 г. исповедовал в своем Символе веры Сына Божия «рожденного, не сотворенного, единосущного (омоусиос) Отцу»"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §465"
+          tier: "official"
+          excerpt: "осудил Ария, утверждавшего, что «Сын Божий происшел из небытия»"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §465"
+          tier: "official"
+          excerpt: "Иисус Христос — Сын Божий по естеству, а не по усыновлению"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: sabbath
+  topic: holy-days
+  title: "Суббота или воскресенье"
+  challenges:
+    - tradition: adventism
+      summary: "Творец после шести дней творения покоился в седьмой день и установил субботний покой «для всех людей как памятник творения»; четвёртая заповедь неизменного Закона Божьего требует соблюдать седьмой день, субботу, как день покоя, поклонения и служения. Суббота — «постоянное Божье знамение вечного завета между Им и Его народом»."
+      unity:
+        kind: shared
+        note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+        proof:
+          - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+            title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+            tier: "official"
+            excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+            accessed: "2026-09-26"
+          - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+            title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+            tier: "official"
+            excerpt: "могут быть внесены на съезде Генеральной Конференции"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "Милосердный Творец после шести дней творения мира покоился в седьмой день и установил субботний покой для всех людей как памятник творения"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "Четвертая заповедь неизменного Закона Божьего требует"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "Суббота — это постоянное Божье знамение вечного завета между Им и Его народом"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "День воскресный празднуется со времени Воскресения Христова. В книге Деяний ученики собираются «во едину от суббот», то есть в первый день недели, для преломления хлеба (Деян. 20:7), а в Апокалипсисе упоминается день воскресный (Откр. 1:10)."
+      unity:
+        kind: shared
+        note: "правило 29 Лаодикийского Собора (360), которое Трулльский Собор (691, правило 2) утвердил для всей Церкви: христиане не должны «иудействовать и в субботу оставлять дела», а в воскресенье, «отдавая, как христиане, предпочтение этому дню», оставляют все дела."
+        proof:
+          - url: "https://azbyka.ru/pravo/laodikijskij-sobor-29/"
+            title: "Правило 29 Лаодикийского Собора (360) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "О том, что христиане не должны иудействовать и в субботу оставлять дела"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/laodikijskij-sobor-29/"
+            title: "Правило 29 Лаодикийского Собора (360) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "а в воскресенье, отдавая, как христиане, предпочтение этому дню, оставляют все дела, если только могут"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/laodikijskij-sobor-29/"
+            title: "Правило 29 Лаодикийского Собора (360) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Лаодикийский Собор (360г.)"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/"
+            title: "Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Одобряем и все прочие священные правила, которые изложили святые и блаженные наши отцы"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/"
+            title: "Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "в Гангре, в Антиохии Сирийской и Лаодикии Фригийской"
+            accessed: "2026-09-26"
+      quote:
+        text: "В христианской Церкви празднуется через каждые шесть дней седьмой, только не последний из семи дней, или субботний, а первый день каждой седмицы, или воскресный."
+        source: "Пространный христианский катехизис, §534"
+        url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "только не последний из семи дней, или субботний, а первый день каждой седмицы, или воскресный"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "День воскресный празднуется со времени воскресения Христа"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "упоминается о собрании учеников, т. е. христиан, во едину от суббот, т. е. в первый день недели"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "Воскресенье «отчетливо отличается от субботы», которую оно заменяет для христиан с точки зрения обрядового предписания: через Пасху Христову оно исполняет духовную истину иудейской субботы. Иисус воскрес из мертвых «в первый день недели»; как «восьмой день» воскресенье «означает новое творение, начатое с Воскресением Христа»."
+      unity:
+        kind: shared
+        note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Воскресенье отчетливо отличается от субботы, за которой оно хронологически следует каждую неделю и которую оно заменяет для христиан с точки зрения обрядового предписания."
+        source: "Катехизис Католической Церкви, §2175"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2175"
+          tier: "official"
+          excerpt: "Воскресенье отчетливо отличается от субботы, за которой оно хронологически следует каждую неделю"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2175"
+          tier: "official"
+          excerpt: "Через Пасху Христову воскресенье исполняет духовную истину иудейской субботы"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2174"
+          tier: "official"
+          excerpt: "Иисус воскрес из мертвых «в первый день недели»"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2174"
+          tier: "official"
+          excerpt: "он означает новое творение, начатое с Воскресением Христа"
+          accessed: "2026-09-26"
+    - tradition: protestantism
+      summary: "Вероучение евангельских христиан-баптистов: первый день недели — день, в который Иисус Христос воскрес; в первый день недели воскресший Христос являлся ученикам (Ин. 20:19–26) и совершилось сошествие Святого Духа (Деян. 2:1). Воскресный день как день Господень должен быть «днем святого труда для Господа»."
+      unity:
+        kind: shared
+        note: "первый день недели как день Господень признают и реформатское Вестминстерское исповедание, и лютеранское Аугсбургское; лютеране при этом считают воскресенье церковным установлением и отвергают мнение, что его соблюдение «было введено взамен субботы как необходимое»."
+        proof:
+          - url: "https://www.ireformed.org/westminster-confession-of-faith"
+            title: "Вестминстерское исповедание веры, глава 21 «О служении Богу и дне Субботнем»"
+            tier: "official"
+            excerpt: "со времени воскресения Христа им стал первый день недели, именуемый в Писании Днем Господним"
+            accessed: "2026-09-26"
+          - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+            title: "Аугсбургское вероисповедание, артикул 28 — Евангелическо-Лютеранская Церковь России (архив)"
+            tier: "official"
+            excerpt: "христианская Церковь определила для этого воскресенье"
+            accessed: "2026-09-26"
+          - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+            title: "Аугсбургское вероисповедание, артикул 28 — Евангелическо-Лютеранская Церковь России (архив)"
+            tier: "official"
+            excerpt: "Глубоко заблуждаются утверждающие, что соблюдение воскресного дня было введено взамен субботы как необходимое"
+            accessed: "2026-09-26"
+      quote:
+        text: "Мы веруем, что первый день недели был днем, в который Иисус Христос воскрес для оправдания нашего."
+        source: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+        url: "https://baptist-volga.ru/verouchenie-baptistov"
+      proof:
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+          tier: "official"
+          excerpt: "Мы веруем, что первый день недели был днем, в который Иисус Христос воскрес для оправдания нашего"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+          tier: "official"
+          excerpt: "Сошествие Духа Святого также совершилось в первый день недели"
+          accessed: "2026-09-26"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, раздел «О воскресном дне»"
+          tier: "official"
+          excerpt: "Воскресный день как день Господний должен быть днем святого труда для Господа"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: immortal-soul
+  topic: afterlife
+  title: "Бессмертие души и вечные муки"
+  challenges:
+    - tradition: adventism
+      summary: "Адвентисты седьмого дня учат, что бессмертие имеет только Бог, дарующий вечную жизнь искупленным; до Второго пришествия смерть для всех людей — «состояние небытия». Нераскаявшиеся будут воскрешены после тысячелетнего Царства, и тогда «снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю»."
+      unity:
+        kind: shared
+        note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+        proof:
+          - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+            title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+            tier: "official"
+            excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+            accessed: "2026-09-26"
+          - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+            title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+            tier: "official"
+            excerpt: "могут быть внесены на съезде Генеральной Конференции"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "До дня Второго пришествия смерть для всех людей — это состояние небытия"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "дарует вечную жизнь Своим искупленным"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "По окончании этого тысячелетнего периода Христос со Своими святыми и Святой Город сойдут на землю. Тогда будут воскрешены и все"
+          accessed: "2026-09-26"
+    - tradition: jw
+      summary: "Когда человек умирает, он перестаёт существовать; «Бог не мучит людей в огненном аду». Те, кто после воскресения откажется учиться Божьим путям, «будут навеки уничтожены без надежды на воскресение»."
+      unity:
+        kind: shared
+        note: "«Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет Руководящий совет."
+        proof:
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет"
+            accessed: "2026-09-26"
+      quote:
+        text: "Когда человек умирает, он перестает существовать"
+        source: "«Во что верят Свидетели Иеговы?» — jw.org"
+        url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+      proof:
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+          title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+          tier: "official"
+          excerpt: "Когда человек умирает, он перестает существовать"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+          title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+          tier: "official"
+          excerpt: "Бог не мучит людей в огненном аду"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+          title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+          tier: "official"
+          excerpt: "будут навеки уничтожены без надежды на воскресение"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: orthodoxy
+      summary: "Душа — «существо духовное и бессмертное». До всеобщего воскресения души праведников пребывают во свете и покое, души грешников — в противоположном состоянии; неверующие и беззаконники будут преданы вечной смерти, «или, иначе говоря, вечному огню, вечному мучению», как сказано: «И пойдут сии в муку вечную, а праведники в жизнь вечную» (Мф. 25:46)."
+      unity:
+        kind: shared
+        note: "Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723), подписанное патриархами Константинопольским, Антиохийским и Иерусалимским: «Веруем, что души умерших блаженствуют или мучатся, смотря по делам своим»; совершенное блаженство или мучение каждый получит по общем воскресении."
+        proof:
+          - url: "https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/"
+            title: "Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»"
+            tier: "official"
+            excerpt: "Святейший нового Рима Константинополя и Вселенский Патриарх Иеремия, Блаженнейший Патриарх града Божия Антиохии Афанасий, Блаженнейший Патриарх Святого града Иерусалима Хрисанф"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/"
+            title: "Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»"
+            tier: "official"
+            excerpt: "Веруем, что души умерших блаженствуют или мучатся, смотря по делам своим"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/"
+            title: "Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»"
+            tier: "official"
+            excerpt: "совершенное блаженство, как и совершенное мучение, каждый получит по общем воскресении, когда душа соединится с телом"
+            accessed: "2026-09-26"
+      quote:
+        text: "Неверующие и беззаконники будут преданы вечной смерти, или, иначе говоря, вечному огню, вечному мучению, вместе с диаволами."
+        source: "Пространный христианский катехизис, §380"
+        url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Дыхание жизни – это душа, существо духовное и бессмертное"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Неверующие и беззаконники будут преданы вечной смерти, или, иначе говоря, вечному огню, вечному мучению, вместе с диаволами"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "«И пойдут сии в муку вечную, а праведники в жизнь вечную» (Мф. 25:46)"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)"
+          tier: "official"
+          excerpt: "Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства"
+          accessed: "2026-09-26"
+    - tradition: catholicism
+      summary: "Церковь учит, что душа бессмертна: «она не погибает, отделившись от тела в смерти, и вновь соединится с телом при воскресении мертвых». «Церковное учение утверждает, что ад существует и что он вечен»; главная адская мука состоит в вечной разлуке с Богом."
+      unity:
+        kind: shared
+        note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      quote:
+        text: "Церковное учение утверждает, что ад существует и что он вечен."
+        source: "Катехизис Католической Церкви, §1035"
+        url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §366"
+          tier: "official"
+          excerpt: "она не погибает, отделившись от тела в смерти, и вновь соединится с телом при воскресении мертвых"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1035"
+          tier: "official"
+          excerpt: "Церковное учение утверждает, что ад существует и что он вечен"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1035"
+          tier: "official"
+          excerpt: "Главная адская мука состоит в вечной разлуке с Богом"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: filioque
+  topic: spirit
+  title: "Исхождение Святого Духа (Filioque)"
+  challenges:
+    - tradition: orthodoxy
+      summary: "Катехизис святителя Филарета, ссылаясь на слова Христа в Ин. 15:26, учит, что Святой Дух исходит от Отца, и отвергает изменение или дополнение этого учения. Окружное послание Восточных патриархов 1848 года отвергает исхождение от Отца и Сына как противоречащее словам Христа и соборному исповеданию. Отдельно катехизис ссылается на запрет составлять новый Символ веры в правиле 7 III Вселенского Собора."
+      unity:
+        kind: shared
+        note: "соборное Окружное послание Восточных патриархов 1848 года (§5) отвергает Filioque; правило 7 III Вселенского Собора запрещает составлять иную веру помимо Никейской."
+        proof:
+          - url: "https://azbyka.ru/otechnik/bogoslovie/okruzhnoe-poslanie-1848/"
+            title: "Окружное послание Восточных патриархов (1848), §5 — «Азбука веры»"
+            tier: official
+            excerpt: "ныне вновь возвещает соборне, что cиe нововведенное мнение, будто Дух Святый исходит от Отца и Сына, есть сущая ересь"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/tretij-vselenskij-sobor-7/"
+            title: "Правило 7 III Вселенского Собора (Ефесского) — «Церковное право», «Азбука веры»"
+            tier: official
+            excerpt: "никому не позволять произносить, или писать, или составлять иную веру помимо той, которая определена святыми отцами, собравшимися в граде Никейском"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §239 — «Азбука веры»"
+          tier: official
+          excerpt: "Дух истины, Который от Отца исходит, Он будет свидетельствовать о Мне"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §240 — «Азбука веры»"
+          tier: official
+          excerpt: "Учение об исхождении Святого Духа от Отца не может быть подвержено какому-либо изменению или дополнению"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §240 — «Азбука веры»"
+          tier: official
+          excerpt: "третий Вселенский Собор своим седьмым правилом запретил составлять новый Символ веры"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/bogoslovie/okruzhnoe-poslanie-1848/"
+          title: "Окружное послание Восточных патриархов (1848), §5 — «Азбука веры»"
+          tier: official
+          excerpt: "Новоявившееся учение, будто «Дух Святый исходит от Отца и Сына», измышлено вопреки ясному и нарочитому о сем предмете изречению Господа нашего"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: catholicism
+      summary: "Катехизис Католической Церкви объясняет латинское Filioque так: Святой Дух вечно исходит от Отца и Сына как от единого начала, единым дыханием. Катехизис признаёт, что этой формулировки не было в Символе 381 года и её введение остаётся предметом спора с православными Церквами. Различие восточного и западного выражений катехизис рассматривает как допустимую взаимодополняемость, которая, если её не обострять, не затрагивает существа веры в одну и ту же тайну."
+      unity:
+        kind: shared
+        note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: official
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §246"
+          tier: official
+          excerpt: "Он вечно исходит от Одного и Другого как от единого начала и единым дыханием"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §247"
+          tier: official
+          excerpt: "Провозглашение Filioque отсутствовало в Символе веры, исповеданном в 381 г. в Константинополе"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §247"
+          tier: official
+          excerpt: "Введение Filioque в Никео-Константинопольский Символ веры через латинскую литургию еще и сегодня составляет предмет спора с православными Церквами"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §248"
+          tier: official
+          excerpt: "Эта законная взаимодополняемость, если она не становится предметом обострения, не затрагивает существа веры в реальность той же исповедуемой тайны"
+          accessed: "2026-09-26"
+  status: verified
+
+- id: "papal-primacy"
+  topic: "organisation"
+  title: "Первенство папы Римского"
+  challenges:
+    - tradition: "orthodoxy"
+      summary: "Катехизис святителя Филарета называет Иисуса Христа единственной главой Церкви. Правило 3 II Вселенского Собора ставит Константинопольского епископа по чести после Римского. Правило 28 IV Вселенского Собора связывает преимущества древнего Рима с его положением царствующего города и наделяет равными преимуществами престол нового Рима, сохраняя за ним второе место."
+      unity:
+        kind: "shared"
+        note: "порядок чести и преимущества престолов закреплены правилами 3 II и 28 IV Вселенских Соборов; здесь приведены именно эти соборные определения."
+        proof:
+          - url: "https://azbyka.ru/pravo/vtoroj-vselenskij-sobor-3/"
+            title: "Правило 3 II Вселенского Собора — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "Константинопольский епископ да имеет первенство чести после Римского епископа, потому что город этот есть новый Рим"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-28/"
+            title: "Правило 28 IV Вселенского Собора — «Церковное право», «Азбука веры»"
+            tier: "official"
+            excerpt: "и 150 боголюбезнейших епископов наделили равными преимуществами святейший престол нового Рима"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §257 — «Азбука веры»"
+          tier: "official"
+          excerpt: "Иисус Христос есть единственная глава единственной Церкви"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/pravo/vtoroj-vselenskij-sobor-3/"
+          title: "Правило 3 II Вселенского Собора — «Церковное право», «Азбука веры»"
+          tier: "official"
+          excerpt: "Константинопольский епископ да имеет первенство чести после Римского епископа, потому что город этот есть новый Рим"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-28/"
+          title: "Правило 28 IV Вселенского Собора — «Церковное право», «Азбука веры»"
+          tier: "official"
+          excerpt: "Ибо и престолу ветхого Рима отцы по справедливости дали преимущества, поскольку тот город был царствующим"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-28/"
+          title: "Правило 28 IV Вселенского Собора — «Церковное право», «Азбука веры»"
+          tier: "official"
+          excerpt: "и 150 боголюбезнейших епископов наделили равными преимуществами святейший престол нового Рима"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/pravo/chetvertyj-vselenskij-sobor-28/"
+          title: "Правило 28 IV Вселенского Собора — «Церковное право», «Азбука веры»"
+          tier: "official"
+          excerpt: "и в церковных делах был возвеличен подобно ему, будучи вторым после него"
+          accessed: "2026-09-26"
+    - tradition: "protestantism"
+      summary: "Лютеранские Шмалькальденские артикулы отвергают главенство папы над всем христианским миром по божественному праву: оно принадлежит Иисусу Христу. Папу они признают епископом Рима и тех, кто добровольно или по человеческой власти присоединился к нему, и заключают, что Церкви следует существовать без папы."
+      unity:
+        kind: "divided"
+        note: "здесь приведён лютеранский текст, а не позиция всех протестантских церквей. Историческое различие видно уже в подписях: Филипп Меланхтон допускал верховенство папы над епископами по человеческому праву при условии, что папа допускает Благовествование, тогда как текст Лютера требует существования Церкви без папы."
+        proof:
+          - url: "https://reformed.org.ua/2/208/"
+            title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+            tier: "official"
+            excerpt: "И поэтому Церкви необходимо далее существовать без папы"
+            accessed: "2026-09-26"
+          - url: "https://reformed.org.ua/2/208/"
+            title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+            tier: "official"
+            excerpt: "если бы он допускал Благовествование, то и мы, по человеческому праву, уступили бы ему верховенство над епископами"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://reformed.org.ua/2/208/"
+          title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+          tier: "official"
+          excerpt: "папа, согласно божественному закону и Слову Божию, вовсе не является главой всего христианского мира"
+          accessed: "2026-09-26"
+        - url: "https://reformed.org.ua/2/208/"
+          title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+          tier: "official"
+          excerpt: "ибо это [имя] принадлежит только Одному — Иисусу Христу"
+          accessed: "2026-09-26"
+        - url: "https://reformed.org.ua/2/208/"
+          title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+          tier: "official"
+          excerpt: "Папа же является лишь епископом и пастором церкви Рима"
+          accessed: "2026-09-26"
+        - url: "https://reformed.org.ua/2/208/"
+          title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+          tier: "official"
+          excerpt: "тех, кто добровольно, или посредством человеческой власти (то есть через мирские власти) присоединился к нему"
+          accessed: "2026-09-26"
+        - url: "https://reformed.org.ua/2/208/"
+          title: "Шмалькальденские артикулы, часть II, артикул IV и подпись Филиппа Меланхтона — «Реформатский взгляд»"
+          tier: "official"
+          excerpt: "И поэтому Церкви необходимо далее существовать без папы"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: "catholicism"
+      summary: "Катехизис Католической Церкви связывает первенство папы с Петром: Христос поставил Петра во главе апостольской коллегии, а папа как преемник Петра составляет единое целое с епископами — преемниками апостолов. Папа является видимым основанием их единства и единства верующих; как наместник Христа и пастырь всей Церкви он обладает полной, верховной и вселенской властью."
+      unity:
+        kind: "shared"
+        note: "Катехизис Католической Церкви излагает основное и фундаментальное содержание католического вероучения."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §880"
+          tier: "official"
+          excerpt: "главою которого поставил Петра, избранного из их среды"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §880"
+          tier: "official"
+          excerpt: "Римский Первосвященник, Преемник Петра, и епископы, преемники апостолов, составляют единое целое"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §882"
+          tier: "official"
+          excerpt: "есть постоянное и видимое начало и основа единства и епископов, и множества верных"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §882"
+          tier: "official"
+          excerpt: "в силу своей должности наместника Христа и пастыря всей Церкви, полную, верховную и вселенскую власть"
+          accessed: "2026-09-26"
+  status: "verified"
+
+- id: "saints"
+  topic: "worship"
+  title: "Почитание святых и обращение к ним в молитве"
+  challenges:
+    - tradition: "protestantism"
+      summary: "Лютеранское Аугсбургское исповедание учит вспоминать святых для укрепления веры и следовать примеру их добрых дел. Но оно отвергает призывание святых и поиск их помощи как не доказанные Священным Писанием, ссылаясь на единого Посредника между Богом и людьми — Иисуса Христа."
+      unity:
+        kind: "divided"
+        note: "лютеранское исповедание отвергает призывание святых; в англиканском святилище Уолсингема практикуется обращение к Марии с просьбой молиться за верующих. Это конкретный пример иной практики, а не позиция всех англикан."
+        proof:
+          - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+            title: "Аугсбургское вероисповедание, артикул 21 — Евангелическо-Лютеранская Церковь России (архив)"
+            tier: "official"
+            excerpt: "Но из Священного Писания нельзя доказать, что святых следует призывать или искать у них помощи"
+            accessed: "2026-09-26"
+          - url: "https://www.walsinghamanglican.org.uk/the-national-pilgrimage/"
+            title: "Past National Pilgrimages — Anglican Shrine of Our Lady of Walsingham (английский)"
+            tier: "official"
+            excerpt: "Our Lady of Walsingham, pray for us."
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 21 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "святых надлежит вспоминать, дабы тем самым укреплялась вера наша"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 21 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "нам должны служить примером их добрые дела"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 21 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Но из Священного Писания нельзя доказать, что святых следует призывать или искать у них помощи"
+          accessed: "2026-09-26"
+        - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+          title: "Аугсбургское вероисповедание, артикул 21 — Евангелическо-Лютеранская Церковь России (архив)"
+          tier: "official"
+          excerpt: "Ибо един Бог и един Посредник между Богом и людьми, человек Христос Иисус"
+          accessed: "2026-09-26"
+    - tradition: "jw"
+      summary: "Свидетели Иеговы учат молиться только Богу во имя Иисуса Христа. Их ответ на вопрос о молитве святым отвергает обращение к святым и ангелам: Иисус, согласно этому объяснению, не учил молиться кому-либо, кроме Бога."
+      unity:
+        kind: "shared"
+        note: "официальное изложение верований говорит, что во всех странах у Свидетелей Иеговы одни и те же верования."
+        proof:
+          - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+            title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+            tier: "official"
+            excerpt: "Во всех странах у Свидетелей Иеговы одни и те же верования"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/нужно-ли-молиться-святым/"
+          title: "«Нужно ли молиться святым?» — Библейские вопросы, jw.org"
+          tier: "official"
+          excerpt: "молиться следует только Богу и делать это нужно во имя Иисуса Христа"
+          accessed: "2026-09-26"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/нужно-ли-молиться-святым/"
+          title: "«Нужно ли молиться святым?» — Библейские вопросы, jw.org"
+          tier: "official"
+          excerpt: "Он никогда не учил, что нужно молиться святым, ангелам или кому-нибудь еще, кроме Бога"
+          accessed: "2026-09-26"
+  answers:
+    - tradition: "orthodoxy"
+      summary: "Катехизис святителя Филарета описывает молитвенное общение земной и небесной Церкви: верующие молятся Богу и обращаются за помощью к святым; святые своими молитвами укрепляют и приносят к Богу молитвы живущих на земле. В четвёртом деянии VII Вселенского Собора говорится о почитании святых и просьбе об их ходатайстве, которое приближает к Богу при соблюдении Его заповедей и добродетельной жизни."
+      unity:
+        kind: "shared"
+        note: "в четвёртом деянии VII Вселенского Собора соборное исповедание прямо включает просьбу о ходатайстве святых."
+        proof:
+          - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_12"
+            title: "VII Вселенский Собор, деяние четвёртое — «Деяния Вселенских Соборов», том 7, «Азбука веры»"
+            tier: "official"
+            excerpt: "Святой собор устами Евфимия епископа сардийского провозгласил нижеизложенное"
+            accessed: "2026-09-26"
+          - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_12"
+            title: "VII Вселенский Собор, деяние четвёртое — «Деяния Вселенских Соборов», том 7, «Азбука веры»"
+            tier: "official"
+            excerpt: "а равно и просить их ходатайства, так как они могут нас приближать к Богу"
+            accessed: "2026-09-26"
+      proof:
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §261 — «Азбука веры»"
+          tier: "official"
+          excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Пространный христианский катехизис, свт. Филарет, §261 — «Азбука веры»"
+          tier: "official"
+          excerpt: "своими посредствующими молитвами очищают, укрепляют и приносят к Богу молитвы верующих, живущих на земле"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_12"
+          title: "VII Вселенский Собор, деяние четвёртое — «Деяния Вселенских Соборов», том 7, «Азбука веры»"
+          tier: "official"
+          excerpt: "а равно и просить их ходатайства, так как они могут нас приближать к Богу"
+          accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_12"
+          title: "VII Вселенский Собор, деяние четвёртое — «Деяния Вселенских Соборов», том 7, «Азбука веры»"
+          tier: "official"
+          excerpt: "конечно если мы будем соблюдать Его заповеди и будем стараться жить добродетельно"
+          accessed: "2026-09-26"
+    - tradition: "catholicism"
+      summary: "Катехизис Католической Церкви учит, что святые на небе ходатайствуют перед Отцом за живущих на земле через единого Посредника — Иисуса Христа. Почитание их памяти связано не только с подражанием их примеру: общение со святыми соединяет верующих со Христом."
+      unity:
+        kind: "shared"
+        note: "Катехизис Католической Церкви излагает основное и фундаментальное содержание католического вероучения."
+        proof:
+          - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+            title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+            tier: "official"
+            excerpt: "изложение основного и фундаментального содержания католического вероучения"
+            accessed: "2026-09-26"
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §956"
+          tier: "official"
+          excerpt: "они непрестанно ходатайствуют о нас перед Отцом"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §956"
+          tier: "official"
+          excerpt: "через единого Посредника между Богом и людьми, Христа Иисуса"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §957"
+          tier: "official"
+          excerpt: "Мы чтим память небожителей не только ради их примера"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §957"
+          tier: "official"
+          excerpt: "общение со святыми соединяет нас со Христом"
+          accessed: "2026-09-26"
+  status: "verified"
+
+- id: justification
+  topic: salvation
+  title: 'Оправдание: вера и дела'
+  challenges:
+    - tradition: protestantism
+      summary: >-
+        В лютеранском Аугсбургском исповедании прощение грехов и оправдание получаются ради Христа по благодати через
+        веру. Вера должна приносить добрые плоды и дела, но на дела нельзя уповать как на способ снискать благодать
+        перед Богом.
+      unity:
+        kind: divided
+        note: >-
+          здесь изложена лютеранская формулировка, а не единое исповедание всех протестантских церквей. Различается, в
+          частности, связь спасения с крещением: Аугсбургское исповедание называет его необходимым средством дарования
+          благодати; Вестминстерское допускает возрождение и спасение без этого обряда.
+        proof:
+          - url: >-
+              https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+            title: Аугсбургское вероисповедание — ЕЛЦ России (архивная копия), артикул IX
+            tier: official
+            excerpt: О Крещении мы учим, что оно необходимо и что через него даруется благодать.
+            accessed: '2026-09-26'
+          - url: https://www.ireformed.org/westminster-confession-of-faith
+            title: Вестминстерское исповедание веры — ireformed.org, глава 28
+            tier: official
+            excerpt: >-
+              благодать и спасение не настолько связаны с этим обрядом, чтобы без него человек не мог пережить духовное
+              возрождение или обрести спасение
+            accessed: '2026-09-26'
+      quote:
+        text: мы получаем прощение грехов и оправдание перед Богом ради Христа по благодати через веру
+        source: Аугсбургское вероисповедание — ЕЛЦ России (архивная копия), артикул IV
+        url: >-
+          https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+      proof:
+        - url: >-
+            https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+          title: Аугсбургское вероисповедание — ЕЛЦ России (архивная копия), артикул IV
+          tier: official
+          excerpt: мы получаем прощение грехов и оправдание перед Богом ради Христа по благодати через веру
+          accessed: '2026-09-26'
+        - url: >-
+            https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+          title: Аугсбургское вероисповедание — ЕЛЦ России (архивная копия), артикул VI
+          tier: official
+          excerpt: вера эта должна приносить добрые плоды и добрые дела
+          accessed: '2026-09-26'
+        - url: >-
+            https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx
+          title: Аугсбургское вероисповедание — ЕЛЦ России (архивная копия), артикул VI
+          tier: official
+          excerpt: Но нельзя уповать на то, что посредством добрых дел можно снискать благодать перед Богом.
+          accessed: '2026-09-26'
+  answers:
+    - tradition: orthodoxy
+      summary: >-
+        Послание Восточных патриархов 1723 года говорит об оправдании не одной верой, а верой, содействуемой любовью, то
+        есть через веру и дела. При этом оно называет Бога единственным виновником спасения, предварительно подающим
+        просвещающую благодать.
+      unity:
+        kind: shared
+        note: >-
+          здесь приведено соборное Послание Восточных патриархов 1723 года; его подписанты исповедуют изложение как
+          православную веру своей Церкви.
+        proof:
+          - url: >-
+              https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+            title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», подписи
+            tier: official
+            excerpt: >-
+              свидетельствую, и исповедую, что сия есть Православная Вера нашей Христовой, Апостольской, Кафолической и
+              Восточной Церкви
+            accessed: '2026-09-26'
+      quote:
+        text: >-
+          Веруем, что человек оправдывается не просто одною верою, но верою, споспешествуемой любовью, т.е. чрез веру и
+          дела.
+        source: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», член 13
+        url: >-
+          https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+      proof:
+        - url: >-
+            https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+          title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», член 13
+          tier: official
+          excerpt: >-
+            Веруем, что человек оправдывается не просто одною верою, но верою, споспешествуемой любовью, т.е. чрез веру
+            и дела.
+          accessed: '2026-09-26'
+        - url: >-
+            https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+          title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», член 3
+          tier: official
+          excerpt: >-
+            представляет Бога единственным виновником нашего спасения, поскольку то есть Он предварительно подает
+            просвещающую благодать
+          accessed: '2026-09-26'
+    - tradition: catholicism
+      summary: >-
+        Катехизис говорит, что оправдание заслужено для нас Страстями Христа и даруется Крещением, таинством веры. Оно
+        устанавливает сотрудничество Божией благодати и человеческой свободы; уже подготовка человека к принятию
+        благодати является действием благодати.
+      unity:
+        kind: shared
+        note: Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения».
+        proof:
+          - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+            title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §11
+            tier: official
+            excerpt: изложение основного и фундаментального содержания католического вероучения
+            accessed: '2026-09-26'
+      quote:
+        text: Оправдание было заслужено для нас Страстями Христа
+        source: Катехизис Католической Церкви (ccconline.ru, архивная копия), §1992
+        url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+      proof:
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §1992
+          tier: official
+          excerpt: Оправдание было заслужено для нас Страстями Христа
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §1992
+          tier: official
+          excerpt: Оправдание даруется Крещением, которое есть таинство веры.
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §1993
+          tier: official
+          excerpt: Оправдание устанавливает сотрудничество между Божией благодатью и свободой человека
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §2001
+          tier: official
+          excerpt: Подготовка человека к принятию благодати уже есть действие благодати.
+          accessed: '2026-09-26'
+  status: verified
+
+- id: scripture-and-tradition
+  topic: authority
+  title: Писание и Предание
+  challenges:
+    - tradition: protestantism
+      summary: >-
+        Лютеранский источник называет Библию единственным судьёй, правилом и нормой для оценки учений. Реформатское
+        Вестминстерское исповедание называет высшим Судией Святого Духа, говорящего в Писании; им проверяются и
+        постановления соборов.
+      unity:
+        kind: divided
+        note: >-
+          приведены лютеранская и реформатская формулировки. Англиканский источник также признаёт высший авторитет
+          Библии, но прямо говорит о необходимости традиций и разума для её толкования; это различие подходов, а не
+          отказ англикан от авторитета Писания.
+        proof:
+          - url: https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx
+            title: Лютеранство — ЕЛЦ России (архивная копия)
+            tier: official
+            excerpt: >-
+              Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует...
+              судить обо всех учениях»
+            accessed: '2026-09-26'
+          - url: https://moscowanglican.org/англиканство/
+            title: Англиканство — St Andrew’s Anglican Church, Moscow
+            tier: official
+            excerpt: >-
+              Библия, Слово Божье, является высшим авторитетом, но мы нуждаемся в традициях и разуме, чтобы
+              интерпретировать Библию
+            accessed: '2026-09-26'
+      quote:
+        text: >-
+          Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует...
+          судить обо всех учениях»
+        source: Лютеранство — ЕЛЦ России (архивная копия)
+        url: https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx
+      proof:
+        - url: https://web.archive.org/web/20260411202304/https://www.elkras.ru/vo_chto_veryat_liuterane/liuteranstvo.jdx
+          title: Лютеранство — ЕЛЦ России (архивная копия)
+          tier: official
+          excerpt: >-
+            Библия, с другой стороны, есть «единственный судья, правило и норма, в соответствии с которым следует...
+            судить обо всех учениях»
+          accessed: '2026-09-26'
+        - url: https://www.ireformed.org/westminster-confession-of-faith
+          title: Вестминстерское исповедание веры — ireformed.org, глава 1
+          tier: official
+          excerpt: Дух Святой, говорящий в Писании, есть единственный высший Судия
+          accessed: '2026-09-26'
+        - url: https://www.ireformed.org/westminster-confession-of-faith
+          title: Вестминстерское исповедание веры — ireformed.org, глава 1
+          tier: official
+          excerpt: Которым проверяются все постановления соборов, мнения писателей, учения человеческие и личные откровения
+          accessed: '2026-09-26'
+  answers:
+    - tradition: orthodoxy
+      summary: >-
+        Послание Восточных патриархов 1723 года придаёт свидетельству Кафолической Церкви не меньшую силу, чем
+        Божественному Писанию. В катехизисе Филарета Предание служит руководством к правильному пониманию Писания.
+      unity:
+        kind: shared
+        note: >-
+          здесь приведено соборное Послание Восточных патриархов 1723 года; его подписанты исповедуют изложение как
+          православную веру своей Церкви.
+        proof:
+          - url: >-
+              https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+            title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», подписи
+            tier: official
+            excerpt: >-
+              свидетельствую, и исповедую, что сия есть Православная Вера нашей Христовой, Апостольской, Кафолической и
+              Восточной Церкви
+            accessed: '2026-09-26'
+      quote:
+        text: свидетельство Кафолической Церкви не меньшую имеет силу, как и Божественное Писание.
+        source: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», член 2
+        url: >-
+          https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+      proof:
+        - url: >-
+            https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+          title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры», член 2
+          tier: official
+          excerpt: свидетельство Кафолической Церкви не меньшую имеет силу, как и Божественное Писание.
+          accessed: '2026-09-26'
+        - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+          title: Пространный православный катехизис, введение — «Азбука веры», §24
+          tier: official
+          excerpt: Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания
+          accessed: '2026-09-26'
+    - tradition: catholicism
+      summary: >-
+        Катехизис связывает Писание и Предание с одним Божественным источником. Церковь черпает уверенность об
+        Откровении не только из Писания: Писание и Предание должны приниматься с одинаковым благоговением и уважением.
+      unity:
+        kind: shared
+        note: Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения».
+        proof:
+          - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+            title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §11
+            tier: official
+            excerpt: изложение основного и фундаментального содержания католического вероучения
+            accessed: '2026-09-26'
+      quote:
+        text: Ибо оба берут начало в одном и том же Божественном источнике
+        source: Катехизис Католической Церкви (ccconline.ru, архивная копия), §80
+        url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+      proof:
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §80
+          tier: official
+          excerpt: Ибо оба берут начало в одном и том же Божественном источнике
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §82
+          tier: official
+          excerpt: черпает свою уверенность о всем, что было открыто, не только из одного Священного Писания.
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §82
+          tier: official
+          excerpt: Поэтому и Писание, и Предание должны приниматься и почитаться с одинаковым чувством благоговения и уважения
+          accessed: '2026-09-26'
+  status: verified
+
+- id: name-of-god
+  topic: name-of-god
+  title: 'Имя Бога: «Иегова» и церковные именования'
+  challenges:
+    - tradition: jw
+      summary: >-
+        Свидетели Иеговы называют «Иегова» личным именем Бога, записанным в Библии. Название своей общины они связывают
+        с возвещением истины об Иегове, Создателе всего.
+      unity:
+        kind: shared
+        note: >-
+          «Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет
+          Руководящий совет.
+        proof:
+          - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/
+            title: «Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org
+            tier: official
+            excerpt: Во всех странах у Свидетелей Иеговы одни и те же верования
+            accessed: '2026-09-26'
+          - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/
+            title: «Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org
+            tier: official
+            excerpt: Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет
+            accessed: '2026-09-26'
+      quote:
+        text: Иегова — это личное имя Бога, которое записано в Библии
+        source: Откуда происходит название «Свидетели Иеговы»? — jw.org
+        url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/название-свидетели-иеговы/
+      proof:
+        - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/название-свидетели-иеговы/
+          title: Откуда происходит название «Свидетели Иеговы»? — jw.org
+          tier: official
+          excerpt: Иегова — это личное имя Бога, которое записано в Библии
+          accessed: '2026-09-26'
+        - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/название-свидетели-иеговы/
+          title: Откуда происходит название «Свидетели Иеговы»? — jw.org
+          tier: official
+          excerpt: мы — группа христиан, которые возвещают истину об Иегове, Создателе всего
+          accessed: '2026-09-26'
+  answers:
+    - tradition: orthodoxy
+      summary: >-
+        Соборный Символ веры исповедует единого Бога Отца, Вседержителя и Творца. Катехизис Филарета объясняет
+        именование «Вседержитель» тем, что Бог содержит всё в Своей силе и воле.
+      unity:
+        kind: shared
+        note: >-
+          приведены именования из Символа веры первого и второго Вселенских Соборов; объяснение «Вседержителя» дано по
+          катехизису Филарета.
+        proof:
+          - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §68
+            tier: official
+            excerpt: Учение о вере так изложили отцы первого и второго Вселенских Соборов
+            accessed: '2026-09-26'
+      quote:
+        text: Верую во единаго Бога Отца, Вседержителя, Творца небу и земли, видимым же всем и невидимым
+        source: Пространный православный катехизис, свт. Филарет — «Азбука веры», §67
+        url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+      proof:
+        - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+          title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §67
+          tier: official
+          excerpt: Верую во единаго Бога Отца, Вседержителя, Творца небу и земли, видимым же всем и невидимым
+          accessed: '2026-09-26'
+        - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+          title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §96
+          tier: official
+          excerpt: Бог называется Вседержителем потому, что Он всё, что ни есть, содержит в Своей силе и в Своей воле
+          accessed: '2026-09-26'
+    - tradition: catholicism
+      summary: >-
+        Катехизис признаёт, что Бог открыл Своё имя, и передаёт его как «Ягве». Он также объясняет, что народ Израиля из
+        почтения к святости Бога не произносит Его имени, заменяя его при чтении Писания званием «Господь» (Адонаи).
+      unity:
+        kind: shared
+        note: Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения».
+        proof:
+          - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+            title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §11
+            tier: official
+            excerpt: изложение основного и фундаментального содержания католического вероучения
+            accessed: '2026-09-26'
+      quote:
+        text: Своему народу Израилю Бог открылся, позволив ему узнать Свое имя.
+        source: Катехизис Католической Церкви (ccconline.ru, архивная копия), §203
+        url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+      proof:
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §203
+          tier: official
+          excerpt: Своему народу Израилю Бог открылся, позволив ему узнать Свое имя.
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §206
+          tier: official
+          excerpt: Открывая Свое сокровенное имя — Ягве
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §209
+          tier: official
+          excerpt: Народ Израиля не произносит имени Бога из почтения к Его святости.
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §209
+          tier: official
+          excerpt: При чтении Священного Писания богооткровенное имя заменяется более важным званием «Господь» ( Адонаи
+          accessed: '2026-09-26'
+  status: verified
+
+- id: end-times-1914
+  topic: end-times
+  title: Конец времён и 1914 год
+  challenges:
+    - tradition: jw
+      summary: >-
+        Согласно учебному курсу Свидетелей Иеговы, Царство Бога начало править на небе в 1914 году; тогда же начались
+        последние дни правления людей.
+      unity:
+        kind: shared
+        note: >-
+          «Во всех странах у Свидетелей Иеговы одни и те же верования»; руководство во всём мире осуществляет
+          Руководящий совет.
+        proof:
+          - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/
+            title: «Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org
+            tier: official
+            excerpt: Во всех странах у Свидетелей Иеговы одни и те же верования
+            accessed: '2026-09-26'
+          - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/
+            title: «Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org
+            tier: official
+            excerpt: Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет
+            accessed: '2026-09-26'
+      quote:
+        text: Царство Бога начало править на небе в 1914 году. В том же году начались последние дни правления людей.
+        source: Царство Бога уже правит! — «Радуйтесь жизни сейчас и вечно!», урок 32, jw.org, урок 32
+        url: https://wol.jw.org/ru/wol/d/r2/lp-u/1102021232
+      proof:
+        - url: https://wol.jw.org/ru/wol/d/r2/lp-u/1102021232
+          title: Царство Бога уже правит! — «Радуйтесь жизни сейчас и вечно!», урок 32, jw.org, урок 32
+          tier: official
+          excerpt: Царство Бога начало править на небе в 1914 году. В том же году начались последние дни правления людей.
+          accessed: '2026-09-26'
+  answers:
+    - tradition: orthodoxy
+      summary: >-
+        Соборный Символ веры исповедует будущее пришествие Христа во славе для суда над живыми и мёртвыми. Катехизис
+        Филарета говорит, что время этого суда неизвестно и к нему нужно быть готовым.
+      unity:
+        kind: shared
+        note: >-
+          будущее пришествие и суд исповедуются в Символе веры первого и второго Вселенских Соборов; пояснение о
+          неизвестности времени суда дано по катехизису Филарета.
+        proof:
+          - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §68
+            tier: official
+            excerpt: Учение о вере так изложили отцы первого и второго Вселенских Соборов
+            accessed: '2026-09-26'
+      quote:
+        text: И паки грядущаго со славою судити живым и мертвым, Егоже царствию не будет конца.
+        source: Пространный православный катехизис, свт. Филарет — «Азбука веры», §67, член 7
+        url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+      proof:
+        - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+          title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §67, член 7
+          tier: official
+          excerpt: И паки грядущаго со славою судити живым и мертвым, Егоже царствию не будет конца.
+          accessed: '2026-09-26'
+        - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+          title: Пространный православный катехизис, свт. Филарет — «Азбука веры», §231
+          tier: official
+          excerpt: >-
+            Когда Господь Иисус Христос придет нас судить неизвестно, поэтому надо жить так, чтобы мы всегда были к
+            этому готовы.
+          accessed: '2026-09-26'
+    - tradition: catholicism
+      summary: >-
+        Катехизис говорит о грядущем пришествии Христа во славе, которое может совершиться в любой момент. Он
+        напоминает, что знать времена и сроки, положенные Отцом в Своей власти, — не дело учеников.
+      unity:
+        kind: shared
+        note: Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения».
+        proof:
+          - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+            title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §11
+            tier: official
+            excerpt: изложение основного и фундаментального содержания католического вероучения
+            accessed: '2026-09-26'
+      quote:
+        text: Это эсхатологическое второе пришествие Христа может совершиться в любой момент
+        source: Катехизис Католической Церкви (ccconline.ru, архивная копия), §673
+        url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+      proof:
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §673
+          tier: official
+          excerpt: Это эсхатологическое второе пришествие Христа может совершиться в любой момент
+          accessed: '2026-09-26'
+        - url: http://web.archive.org/web/20260422005102/https://ccconline.ru/
+          title: Катехизис Католической Церкви (ccconline.ru, архивная копия), §673
+          tier: official
+          excerpt: не наше «дело знать времена или сроки, которые Отец положил в Своей власти»
+          accessed: '2026-09-26'
+  status: verified

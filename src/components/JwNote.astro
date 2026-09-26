@@ -1,0 +1,20 @@
+---
+// The Jehovah's Witnesses legal-status footnote itself (docs/DECISIONS.md),
+// rendered once per page wherever a footnote marker (src/components/TraditionCard.astro,
+// src/components/ComparisonTable.astro) points to it.
+import { JW_NOTE_ID, JW_NOTE_TEXT } from '../lib/jwNote';
+---
+
+<p class="jw-note" id={JW_NOTE_ID}>
+  <sup>*</sup>
+  {JW_NOTE_TEXT}
+</p>
+
+<style>
+  .jw-note {
+    max-width: var(--measure);
+    margin: 24px 0 0;
+    font-size: 14px;
+    color: var(--muted);
+  }
+</style>

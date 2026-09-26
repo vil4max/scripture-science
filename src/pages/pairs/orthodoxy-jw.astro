@@ -1,0 +1,187 @@
+---
+// The pair page Православие <-> Свидетели Иеговы: the first document
+// migrated into the site (docs/tasks/site-m1-migration.md). Renders, in the
+// source's own order, the header/nav/sections as verbatim HTML fragments,
+// and the twelve theology comparison topics rebuilt from structured data -
+// see src/lib/content.ts and src/content.config.ts.
+import { getCollection } from 'astro:content';
+import Topic from '../../components/Topic.astro';
+import correctionsData from '../../data/corrections-orthodoxy-jw.json';
+import Base from '../../layouts/Base.astro';
+import { createArchiveLinker } from '../../lib/archive-links';
+import { getCheckedTopics, getOrderedTraditions, getSection } from '../../lib/content';
+import { createCorrector, parseCorrections, type Correction } from '../../lib/corrections';
+import { withBase } from '../../lib/paths';
+import '../../styles/orthodoxy-jw.css';
+
+// The two traditions this pair page compares. A pair page with a different
+// pair, or a future page comparing more than two, passes its own id list to
+// these same functions - nothing here is specific to exactly these two ids.
+const traditionIds = ['orthodoxy', 'jw'];
+
+const traditions = await getOrderedTraditions(traditionIds);
+const topics = await getCheckedTopics(traditionIds);
+
+const sectionIds = [
+  'history',
+  'sources',
+  'common',
+  'theology',
+  'literature',
+  'structure',
+  'dynamics',
+  'summary',
+  'glossary',
+  'refs',
+] as const;
+const [nav, header, ...sections] = await Promise.all(
+  ['nav', 'header', ...sectionIds].map((id) => getSection(id)),
+);
+
+// docs/tasks/site-m7-pair-corrections.md: facts that verification found
+// outdated are corrected visibly at render time, never written back into the
+// migrated data files, which stay reproducible by scripts/migrate_source.py.
+// Every migrated string passes through the corrector - HTML fragments get the
+// marks, plain-text fields are only checked - so the build fails unless each
+// correction's text occurs exactly once in the whole document.
+const corrections = parseCorrections(correctionsData);
+const corrector = createCorrector(corrections);
+const navHtml = corrector.html(nav.data.html);
+const headerHtml = corrector.html(header.data.html);
+const toArchive = createArchiveLinker((await getCollection('sources')).map((s) => s.data));
+const sectionHtml = Object.fromEntries(
+  sections.map((s) => [s.id, toArchive(corrector.html(s.data.html))]),
+);
+const correctedTopics = topics.map((topic) => ({
+  ...topic,
+  data: {
+    ...topic.data,
+    title: corrector.text(topic.data.title),
+    positions: Object.fromEntries(
+      Object.entries(topic.data.positions).map(([id, position]) => [
+        id,
+        {
+          ...position,
+          label: corrector.text(position.label),
+          thesis: corrector.text(position.thesis),
+          points: position.points.map((point) => ({
+            ...point,
+            ref: point.ref && corrector.text(point.ref),
+            html: corrector.html(point.html),
+          })),
+        },
+      ]),
+    ),
+    extras: corrector.html(topic.data.extras),
+  },
+}));
+corrector.assertEachAppliedOnce();
+
+const tierLabel: Record<Correction['proof'][number]['tier'], string> = {
+  official: 'официальный источник',
+  reference: 'справочный источник',
+  news: 'СМИ/НКО',
+};
+
+const title = 'Православие и Свидетели Иеговы';
+const description =
+  'Одна Библия, два прочтения. Позиции изложены так, как их описывают сами стороны: по материалам jw.org, wol.jw.org и православных источников. Во всех сравнениях слева — более старшая традиция, справа — более молодая; у каждой стороны — цитаты из её собственного перевода Библии.';
+---
+
+<Base title={title} description={description}>
+  <div class="pair-page">
+    <nav aria-label="Разделы">
+      <div class="chips"><Fragment set:html={navHtml} /></div>
+    </nav>
+    {
+      /* docs/tasks/site-m5-reading-polish.md W3: kept outside <main> on
+         purpose - scripts/check_text.py diffs <main>'s text verbatim against
+         source/orthodoxy-jw.html, and this banner is new site text, not part
+         of that migrated document. */
+    }
+    <p class="scope-banner">
+      Это подробное сравнение двух традиций. <a href={withBase('#traditions')}>Вся картина — на главной →</a>
+    </p>
+    <main class="wrap">
+      <header><Fragment set:html={headerHtml} /></header>
+
+      <section id="history"><Fragment set:html={sectionHtml.history} /></section>
+      <section id="sources"><Fragment set:html={sectionHtml.sources} /></section>
+      <section id="common"><Fragment set:html={sectionHtml.common} /></section>
+
+      <section id="theology">
+        <Fragment set:html={sectionHtml.theology} />
+        {correctedTopics.map((topic) => <Topic topic={topic} traditions={traditions} />)}
+      </section>
+
+      <section id="literature"><Fragment set:html={sectionHtml.literature} /></section>
+      <section id="structure"><Fragment set:html={sectionHtml.structure} /></section>
+      <section id="dynamics"><Fragment set:html={sectionHtml.dynamics} /></section>
+      <section id="summary"><Fragment set:html={sectionHtml.summary} /></section>
+      <section id="glossary"><Fragment set:html={sectionHtml.glossary} /></section>
+      <section id="refs"><Fragment set:html={sectionHtml.refs} /></section>
+    </main>
+    {
+      /* Outside <main> for the same reason as the scope banner: this list is
+         new site text. scripts/check_text.py checks it separately - every
+         correction's wording, reason and sources must be present here. */
+    }
+    <aside class="corrections" id="corrections" aria-labelledby="corrections-title">
+      <h2 id="corrections-title">Исправления к исходному тексту</h2>
+      <p class="intro">
+        Этот обзор воспроизводит исходный документ дословно, кроме мест ниже: проверка по источникам
+        показала, что сведения в них устарели или неточны. Исправленные слова выделены в тексте и ведут
+        сюда; у каждого исправления — исходная формулировка, причина и источник.
+      </p>
+      <ol>
+        {
+          corrections.map((correction) => (
+            <li id={`correction-${correction.id}`}>
+              <p>
+                <span class="lbl">Было:</span> <del>{correction.find}</del>
+              </p>
+              <p>
+                <span class="lbl">Стало:</span> <ins>{correction.replace}</ins>
+              </p>
+              <p>
+                <span class="lbl">Почему:</span> {correction.reason}
+              </p>
+              <ul class="proof">
+                {correction.proof.map((item) => (
+                  <li>
+                    <a href={item.url} target="_blank" rel="noopener noreferrer">
+                      {item.title}
+                    </a>
+                    <span class="meta">
+                      {' '}
+                      · {tierLabel[item.tier]} · обращение {item.accessed}
+                    </span>
+                    <p class="excerpt">«{item.excerpt}»</p>
+                  </li>
+                ))}
+              </ul>
+              <a class="back" href={`#corr-${correction.id}`}>↑ К месту в тексте</a>
+            </li>
+          ))
+        }
+      </ol>
+    </aside>
+  </div>
+</Base>
+
+<style>
+  .scope-banner {
+    max-width: var(--page, 1200px);
+    margin: 0 auto;
+    padding: 12px 24px;
+    font-size: 15px;
+    color: var(--muted);
+    text-align: center;
+  }
+
+  .scope-banner a {
+    color: var(--focus);
+    font-weight: 700;
+    text-decoration: underline;
+  }
+</style>

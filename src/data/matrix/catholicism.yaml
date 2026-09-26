@@ -1,0 +1,535 @@
+id: catholicism
+name: Католичество
+full_name: Католическая Церковь
+family: christianity
+
+since:
+  year: 33
+  label: "ок. 33 г. · Пятидесятница; 1054 г. · разделение с Восточной (Православной) Церковью"
+  note: "Катехизис возводит начало Церкви к служению Христа и к дню Пятидесятницы, когда «послан был Дух Святой... чтобы непрерывно освящать Церковь» и «Церковь была явлена открыто перед всеми» — это собственное понимание непрерывности Католической Церкви, не привязанное к конкретному году. Историческая (справочная) датировка относит разрыв общения с Восточной Церковью к 1054 году — «Великой схизме»."
+  proof:
+    - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §767"
+      tier: official
+      excerpt: "послан был Дух Святой в день Пятидесятницы, чтобы непрерывно освящать Церковь"
+      accessed: "2026-09-25"
+    - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
+      title: "Orthodox Christianity in the 21st Century | Pew Research Center"
+      tier: reference
+      excerpt: "Following the Great Schism between the Eastern (Orthodox) churches and the Western (Catholic) church in 1054"
+      accessed: "2026-09-25"
+
+scripture:
+  name: "Единого официально изданного Католической Церковью русского перевода Библии не найдено; цитаты Писания в русском издании Катехизиса Католической Церкви текстуально совпадают с Синодальным переводом (ср. Ин 1:1)"
+  url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+  proof:
+    - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §291"
+      tier: official
+      excerpt: "В начале было Слово (...) и Слово было Бог."
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/biblia/?Jn.1:1&r"
+      title: "Библия онлайн, Синодальный перевод — Азбука веры"
+      tier: reference
+      excerpt: "В начале было Слово, и Слово было у Бога, и Слово было Бог."
+      accessed: "2026-09-25"
+
+adherents:
+  value: "≈ 1,422 млрд"
+  year: 2024
+  method: "крещёные католики, по данным Annuarium Statisticum Ecclesiae 2024 / Annuario Pontificio 2026"
+  proof:
+    - url: "https://www.vaticannews.va/en/vatican-city/news/2026-03/new-data-from-annuario-pontificio-2026-shows-catholics-growing.html"
+      title: "New data from Annuario Pontificio 2026 shows Catholics growing | Vatican News"
+      tier: official
+      excerpt: "In 2024, the Catholic population stood at just over 1.422 billion, compared with about 1.406 billion in 2023"
+      accessed: "2026-09-25"
+
+self_view:
+  summary: "Католическая Церковь видит своё начало в служении Христа, в Его крестной смерти (Церковь «родилась» из прободенного ребра распятого Спасителя) и в явлении Церкви миру в день Пятидесятницы. Апостол Пётр поставлен главой апостольской коллегии, и это служение продолжается в Римском Первосвященнике и епископах — преемниках апостолов, составляющих с ним единое целое."
+  proof:
+    - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §763"
+      tier: official
+      excerpt: "Господь Иисус положил начало Своей Церкви, проповедуя Благую Весть"
+      accessed: "2026-09-25"
+    - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+      title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §880"
+      tier: official
+      excerpt: "по установлению Господа св. Петр и другие апостолы составляют единый апостольский собор, так и Римский Первосвященник, Преемник Петра, и епископы, преемники апостолов, составляют единое"
+      accessed: "2026-09-25"
+
+positions:
+  - topic: god
+    summary: "Один Бог в трёх реально различных, единосущных Лицах («Троицу единосущную»). Лица не разделяют единую Божественность и различаются только взаимными отношениями происхождения: «Отец рождает, Сын рожден, Святой Дух исходит»."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Мы не исповедуем трех богов, но единого Бога в трех лицах: «Троицу единосущную»."
+      source: "Катехизис Католической Церкви, §253"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §253"
+        tier: official
+        excerpt: "Мы не исповедуем трех богов, но единого Бога в трех лицах: «Троицу единосущную»"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: name-of-god
+    summary: "Бог открывает Своё «сокровенное имя» — Ягве, «Я есмь Тот, Кто есть». Это имя одновременно откровение и указание на непостижимую тайну Божию: «Его имя неизреченно», и Он Бог, Который приближается к людям."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Открывая Свое сокровенное имя — Ягве, «Я есмь Тот, Кто есть»... Бог говорит, Кто Он и каким именем следует Его называть."
+      source: "Катехизис Католической Церкви, §206"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §206"
+        tier: official
+        excerpt: "Открывая Свое сокровенное имя — Ягве, «Я есмь Тот, Кто есть»"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: jesus
+    summary: "Иисус Христос — истинный Бог и истинный человек, предвечный Сын Божий, ставший человеком. Церковь верует и исповедует Его историческое рождение от Девы Марии в Вифлееме во времена царя Ирода Великого и Распятие при Понтии Пилате."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Мы веруем и исповедуем, что Иисус Назарянин, родившийся евреем от дочери Израилевой в Вифлееме во времена царя Ирода Великого и императора Цезаря Августа... есть предвечный Сын Божий, ставший человеком."
+      source: "Катехизис Католической Церкви, §423"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §423"
+        tier: official
+        excerpt: "Мы веруем и исповедуем, что Иисус Назарянин, родившийся евреем от дочери Израилевой в Вифлееме во времена царя Ирода Великого"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: spirit
+    summary: "Святой Дух — истинный Бог. Латинская традиция исповедует, что Дух исходит «от Отца и Сына» (Filioque); это разъяснено Флорентийским Собором (1438 г.), хотя введение Filioque в Символ веры остаётся предметом спора с православными Церквами."
+    unity:
+      kind: shared
+      note: "вероучение всей Церкви; Катехизис называет восточную формулу — Дух «исходит от Отца через Сына» — и западную Filioque законно взаимодополняющими: «Эта законная взаимодополняемость» не затрагивает существа веры."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §248"
+          tier: "official"
+          excerpt: "она утверждает, что Дух исходит от Отца через Сына"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §248"
+          tier: "official"
+          excerpt: "Эта законная взаимодополняемость, если она не становится предметом обострения, не затрагивает существа веры в реальность той же исповедуемой тайны"
+          accessed: "2026-09-26"
+    quote:
+      text: "Латинская традиция Символа веры исповедует, что Дух исходит «от Отца и Сына (Filioque)»."
+      source: "Катехизис Католической Церкви, §246"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §246"
+        tier: official
+        excerpt: "Латинская традиция Символа веры исповедует, что Дух исходит «от Отца и Сына (Filioque)»"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: scripture
+    summary: "Канон включает 46 книг Ветхого Завета (45, если считать Иеремию и Плач Иеремии одной книгой) и 27 книг Нового Завета."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "В него входят 46 книг Ветхого Завета (45, если считать Иер и Плач одной книгой) и 27 – Нового."
+      source: "Катехизис Католической Церкви, §120"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    scripture:
+      ref: "Ин 1:1"
+      text: "В начале было Слово (...) и Слово было Бог."
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §120"
+        tier: official
+        excerpt: "В него входят 46 книг Ветхого Завета (45, если считать Иер и Плач одной книгой) и 27 – Нового"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: authority
+    summary: "Обязанность подлинно толковать письменное или устно переданное Слово Божие вверена одному только Учительству Церкви — Папе и епископам в общении с ним. Русский перевод Катехизиса подготовлен комиссией с участием консультанта от Русской Православной Церкви и утверждён Ватиканом."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Обязанность подлинно толковать Слово Божие вверена одному только Учительству Церкви — Папе и епископам в общении с ним."
+      source: "Катехизис Католической Церкви, §100"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §100"
+        tier: official
+        excerpt: "Обязанность подлинно толковать Слово Божие вверена одному только Учительству Церкви — Папе и епископам в общении с ним"
+        accessed: "2026-09-25"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), предисловие к 4-му изданию"
+        tier: official
+        excerpt: "Перевод Катехизиса на русский язык осуществлен Комиссией, учрежденной 19 мая 1993 г., при участии консультанта от Русской Православной Церкви"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: salvation
+    summary: "Вера в Иисуса Христа необходима для спасения. Оправдание — «самое совершенное деяние любви Божией», явленной в Иисусе Христе и дарованной Святым Духом, свободный дар благодати, а не заслуга человека."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Веровать в Иисуса Христа и в Пославшего Его ради нашего спасения необходимо, чтобы спастись."
+      source: "Катехизис Католической Церкви, §161"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §161"
+        tier: official
+        excerpt: "Веровать в Иисуса Христа и в Пославшего Его ради нашего спасения необходимо, чтобы спастись"
+        accessed: "2026-09-25"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1994"
+        tier: official
+        excerpt: "Оправдание — самое совершенное деяние любви Божией, явленной в Иисусе Христе и дарованной Святым Духом"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: afterlife
+    summary: "Те, кто умирает в благодати Божией, совершенно очищенными, видят Бога лицом к лицу (небо). Умершие в благодати, но несовершенно очищенными, проходят конечное очищение — чистилище, учение о котором сформулировано на Флорентийском и Тридентском Соборах. Всеобщее воскресение и Суд последуют в конце времён."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Церковь называет чистилищем это конечное очищение избранных, совершенно иное, нежели наказание проклятых."
+      source: "Катехизис Католической Церкви, §1031"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1031"
+        tier: official
+        excerpt: "Церковь называет чистилищем это конечное очищение избранных, совершенно иное, нежели наказание проклятых"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: end-times
+    summary: "В конце времён Царство Божие достигнет полноты: после всеобщего Суда праведники навсегда воцарятся со Христом, прославленные в теле и в душе, а сама вселенная обновится."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "В конце времен Царство Божие достигнет полноты. После всеобщего суда праведники навсегда воцарятся со Христом."
+      source: "Катехизис Католической Церкви, §1042"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1042"
+        tier: official
+        excerpt: "В конце времен Царство Божие достигнет полноты. После всеобщего суда праведники навсегда воцарятся со Христом"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: worship
+    summary: "В Церкви существует семь таинств: Крещение, Миропомазание (Конфирмация), Евхаристия, Покаяние, Елеопомазание больных, Священство, Брак; вся литургическая жизнь Церкви вращается вокруг евхаристической Жертвы."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "В Церкви существует семь таинств: Крещение, Миропомазание (Конфирмация), Евхаристия, Покаяние, Елеопомазание больных (Елеосвящение, Соборование), Священство, Брак."
+      source: "Катехизис Католической Церкви, §1113"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1113"
+        tier: official
+        excerpt: "В Церкви существует семь таинств: Крещение, Миропомазание (Конфирмация), Евхаристия, Покаяние, Елеопомазание больных"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: images
+    summary: "Почитание изображений не противоречит первой заповеди, запрещающей идолов, потому что «почитание, воздаваемое образу, обращено к прообразу». Почитание икон — «выражение глубокого почтения», а не поклонение, которое подобает одному только Богу."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Почитание икон — это «выражение глубокого почтения», а не поклонение, которое подобает одному только Богу."
+      source: "Катехизис Католической Церкви, §2132"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2132"
+        tier: official
+        excerpt: "Почитание икон — это «выражение глубокого почтения», а не поклонение, которое подобает одному только Богу"
+        accessed: "2026-09-25"
+    status: verified
+
+  - topic: holy-days
+    summary: "Воскресное празднование Дня Господня и Евхаристии находится «в самом сердце церковной жизни»; воскресенье должно соблюдаться «во всей Церкви как самый главный из предписанных праздников». Пасха — не просто один из праздников, а «Праздник праздников», «Торжество торжеств». Так же должны праздноваться Рождество Иисуса Христа, Богоявление, Вознесение, праздник Пресвятого Тела и Крови Христа, праздники Пресвятой Богородицы Марии, Её Непорочного Зачатия и Взятия в небесную славу (Успения), дни святого Иосифа, святых апостолов Петра и Павла и Всех Святых. Церковь использует григорианский календарь."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви (§2177); перечень праздников дан по Кодексу канонического права (кан. 1246), каноны которого относятся только к Латинской Церкви."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2177"
+          tier: "official"
+          excerpt: "CIC кан. 1246, § 1"
+          accessed: "2026-09-26"
+        - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib1-cann1-6_en.html"
+          title: "Code of Canon Law, Book I, can. 1 (vatican.va)"
+          tier: "official"
+          excerpt: "The canons of this Code regard only the Latin Church."
+          accessed: "2026-09-26"
+    quote:
+      text: "Воскресное празднование Дня Господня и Евхаристии Господа находится в самом сердце церковной жизни."
+      source: "Катехизис Католической Церкви, §2177"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2177"
+        tier: official
+        excerpt: "Воскресное празднование Дня Господня и Евхаристии Господа находится в самом сердце церковной жизни"
+        accessed: "2026-09-25"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1169"
+        tier: official
+        excerpt: "Поэтому Пасха не просто один из праздников: она «Праздник праздников», «Торжество торжеств»"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2177"
+        tier: official
+        excerpt: "Таким же образом должны праздноваться дни Рождества Иисуса Христа, Богоявления, Вознесения, Пресвятого Тела и Крови Христа; день Пресвятой Богородицы Марии"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2177"
+        tier: official
+        excerpt: "Ее Непорочного Зачатия, Ее Взятия в небесную славу [Успения]; дни св. Иосифа, свв. апостолов Петра и Павла, Всех Святых"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: fasting
+    summary: "Четвёртая заповедь Церкви — «Соблюдай предписанные Церковью периоды воздержания от мясной пищи и посты» — определяет «периоды аскетической жизни и покаяния». Особое время покаяния — Великий пост и каждая пятница в память смерти Господа. По Кодексу канонического права по пятницам, если на них не приходится торжество, соблюдается воздержание от мяса (или от другой пищи, которую определит епископская конференция), а в Пепельную среду и Страстную пятницу — воздержание и пост; закон о воздержании обязывает с 14 лет, закон о посте — с совершеннолетия до начала шестидесятого года жизни. Пост допускает лишь одну полную трапезу в день; епископская конференция может уточнять эти правила и заменять их иными формами покаяния, прежде всего делами милосердия и благочестия. Перед Причащением соблюдается евхаристический пост — не менее часа без пищи и питья, кроме воды и лекарств. Посвящённая Богу жизнь — обязательство хранить целомудрие Царства Божия, жить в бедности и послушании; монашество отличается публичным принесением обетов и братской совместной жизнью."
+    unity:
+      kind: shared
+      note: "заповедь поста общая для всей Церкви (Катехизис, §2043); правила в позиции — по Кодексу канонического права, каноны которого относятся только к Латинской Церкви; для восточных католических церквей Катехизис ссылается на их кодекс (CCEO)."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2043"
+          tier: "official"
+          excerpt: "Четвертая заповедь («Соблюдай предписанные Церковью периоды воздержания от мясной пищи и посты»)"
+          accessed: "2026-09-26"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2043"
+          tier: "official"
+          excerpt: "Ср. CIC кан. 1249-1251; CCEO кан. 882"
+          accessed: "2026-09-26"
+        - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib1-cann1-6_en.html"
+          title: "Code of Canon Law, Book I, can. 1 (vatican.va)"
+          tier: "official"
+          excerpt: "The canons of this Code regard only the Latin Church."
+          accessed: "2026-09-26"
+    quote:
+      text: "Четвертая заповедь («Соблюдай предписанные Церковью периоды воздержания от мясной пищи и посты») определяет периоды аскетической жизни и покаяния."
+      source: "Катехизис Католической Церкви, §2043"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2043"
+        tier: official
+        excerpt: "Четвертая заповедь («Соблюдай предписанные Церковью периоды воздержания от мясной пищи и посты») определяет периоды аскетической жизни и покаяния"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1438"
+        tier: official
+        excerpt: "Периоды и дни покаяния на протяжении литургического года (время Великого Поста, каждая пятница в память смерти Господа)"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1251 — vatican.va"
+        tier: official
+        excerpt: "Abstinence from meat, or from some other food as determined by the Episcopal Conference, is to be observed on all Fridays"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1251 — vatican.va"
+        tier: official
+        excerpt: "is to be observed on all Fridays, unless a solemnity should fall on a Friday"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1251 — vatican.va"
+        tier: official
+        excerpt: "Abstinence and fasting are to be observed on Ash Wednesday and Good Friday"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1252 — vatican.va"
+        tier: official
+        excerpt: "The law of abstinence binds those who have completed their fourteenth year"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1252 — vatican.va"
+        tier: official
+        excerpt: "The law of fasting binds those who have attained their majority, until the beginning of their sixtieth year"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1253 — vatican.va"
+        tier: official
+        excerpt: "The conference of bishops can determine more precisely the observance of fast and abstinence as well as substitute other forms of penance"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+        title: "Code of Canon Law, Book IV, can. 1253 — vatican.va"
+        tier: official
+        excerpt: "especially works of charity and exercises of piety"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/content/paul-vi/en/apost_constitutions/documents/hf_p-vi_apc_19660217_paenitemini.html"
+        title: "Paul VI, Apostolic Constitution Paenitemini (1966), ch. III, 2 — vatican.va"
+        tier: official
+        excerpt: "The law of fasting allows only one full meal a day, but does not prohibit taking some food in the morning and evening"
+        accessed: "2026-09-26"
+      - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann879-958_en.html"
+        title: "Code of Canon Law, Book IV, can. 919 §1 — vatican.va"
+        tier: official
+        excerpt: "is to abstain for at least one hour before holy communion from any food and drink, except for only water and medicine"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §915"
+        tier: official
+        excerpt: "они обязуются хранить целомудрие Царства Божия, жить в бедности и послушании"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §925"
+        tier: official
+        excerpt: "общежительное монашество отличается от других форм посвященной Богу жизни своим культовым аспектом, публичным принесением обетов, братской совместной жизнью"
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: organisation
+    summary: "Папа, Епископ Римский и Преемник апостола Петра, имеет над Церковью «полную, верховную и вселенскую власть, которую он вправе всегда свободно осуществлять» как наместник Христа и пастырь всей Церкви. Отдельную Церковь — диоцез (епархию) — возглавляет епископ; он управляет ею с помощью пресвитеров и диаконов, в общении со всей Церковью под руководством Папы."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Ибо Римский Первосвященник имеет над Церковью, в силу своей должности наместника Христа и пастыря всей Церкви, полную, верховную и вселенскую власть, которую он вправе всегда свободно осуществлять."
+      source: "Катехизис Католической Церкви, §882"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §882"
+        tier: official
+        excerpt: "Римский Первосвященник имеет над Церковью, в силу своей должности наместника Христа и пастыря всей Церкви, полную, верховную и вселенскую власть"
+        accessed: "2026-09-25"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §833"
+        tier: "official"
+        excerpt: "диоцезом (или епархией), разумеется община верующих христиан, пребывающая в общении веры и таинств со своим епископом"
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §886"
+        tier: "official"
+        excerpt: "исполняют свое пастырское правление над порученной им частью Народа Божия» 2 , с помощью пресвитеров и диаконов."
+        accessed: "2026-09-26"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §895"
+        tier: "official"
+        excerpt: "Эта последняя должна осуществляться в общении со всей Церковью под руководством Папы."
+        accessed: "2026-09-26"
+    status: verified
+
+  - topic: rules
+    summary: "Государственные власти вправе требовать от граждан исполнения обязанностей, необходимых для защиты отечества; при этом, по Катехизису, власти должны находить справедливое решение для тех, кто по убеждению отказывается брать в руки оружие, оставаясь обязанным служить обществу иным образом."
+    unity:
+      kind: shared
+      note: "Катехизис Католической Церкви — «изложение основного и фундаментального содержания католического вероучения»."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §11"
+          tier: "official"
+          excerpt: "изложение основного и фундаментального содержания католического вероучения"
+          accessed: "2026-09-26"
+    quote:
+      text: "Государственные власти в этом случае обладают правом и долгом потребовать от граждан исполнения обязанностей, необходимых для защиты отечества."
+      source: "Катехизис Католической Церкви, §2310"
+      url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+    proof:
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2310"
+        tier: official
+        excerpt: "Государственные власти в этом случае обладают правом и долгом потребовать от граждан исполнения обязанностей, необходимых для защиты отечества"
+        accessed: "2026-09-25"
+      - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+        title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2311"
+        tier: official
+        excerpt: "справедливое решение в тех случаях, когда человек по убеждению отказывается брать в руки оружие, при этом оставаясь обязанным служить человеческому сообществу иным образом"
+        accessed: "2026-09-26"
+    status: verified

@@ -1,0 +1,602 @@
+id: adventism
+name: Адвентисты седьмого дня
+full_name: "Церковь христиан адвентистов седьмого дня"
+family: christianity
+since:
+  year: 1863
+  label: "1863 г. · организация Генеральной конференции"
+  note: "Церковь возводит себя к milleritскому адвентистскому движению 1840-х годов и «Великому разочарованию» 22 октября 1844 года; формальная организация Генеральной конференции состоялась в мае 1863 года."
+  proof:
+    - url: "https://whiteestate.org/about/egwbio/"
+      title: "Ellen G. White — a Brief Biography — Ellen G. White Estate"
+      tier: official
+      excerpt: "The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863."
+      accessed: "2026-09-25"
+    - url: "https://www.oikoumene.org/church-families/seventh-day-adventist-church"
+      title: "Seventh-day Adventist Church — World Council of Churches"
+      tier: reference
+      excerpt: "The church arose out of the eschatological expectations of the middle nineteenth century, but was only formally organized in 1863."
+      accessed: "2026-09-25"
+scripture:
+  name: "Синодальный перевод"
+  url: "https://azbyka.ru/biblia/"
+  proof:
+    - url: "https://bri.esd.adventist.org/uploaded_assets/113416"
+      title: "«Библия и церковь о проблеме войны и мира» — Институт библейских исследований, Евро-Азиатский дивизион"
+      tier: official
+      excerpt: "используется тот же термин, переведенный как «разбойники» в Синодальной Библии и как «мятежники-сикарии» в современном русском переводе ИПБ"
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/biblia/?Jn.3:16"
+      title: "Евангелие от Иоанна 3:16 — Синодальный перевод (Азбука веры)"
+      tier: reference
+      excerpt: "Ибо так возлюбил Бог мир, что отдал Сына Своего Единородного, дабы всякий, верующий в Него, не погиб, но имел жизнь вечную"
+      accessed: "2026-09-25"
+adherents:
+  value: "≈ 24,4 млн"
+  year: 2025
+  method: "крещёное членство (baptized membership), по данным Отдела статистики и архивов Генеральной конференции на 31 декабря 2025 года"
+  proof:
+    - url: "https://documents.adventistarchives.org/Statistics/Other/SDAWorldChurchStatsSummary2025.pdf"
+      title: "World Church Statistics Summary 2025 — General Conference Office of Archives, Statistics and Research"
+      tier: official
+      excerpt: "Church Membership, December 31, 2025 ............................................................... 24,372,139"
+      accessed: "2026-09-25"
+self_view:
+  summary: "Церковь описывает себя как «Церковь Остатка», призванную в последнее время хранить заповеди Божьи и веру в Иисуса Христа, а не как новую религию: своё вероучение она основывает исключительно на Библии и допускает уточнение формулировок на съездах Генеральной конференции. Себя церковь считает движением, открытым к дальнейшему развитию понимания истины."
+  proof:
+    - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+      title: "Полное изложение доктрин, п. 13 «Церковь Остатка и ее миссия» — Московское объединение Церкви ХАСД"
+      tier: official
+      excerpt: "Бог при звал Церковь Остатка к соблюдению заповедей Божьих и сохранению веры в Иисуса"
+      accessed: "2026-09-26"
+    - url: "https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie"
+      title: "«Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД"
+      tier: official
+      excerpt: "Адвентистская церковь была основана как движение, как нечто открытое для нового, для развития и продвижения вперед"
+      accessed: "2026-09-25"
+positions:
+  - topic: god
+    summary: "Бог — единый, в трёх совечных Лицах: Отец, Сын и Святой Дух. Формулировка близка к никейскому тринитаризму других христианских традиций."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей"
+      source: "28 основ вероучения, п. 2 «Троица»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 2 «Троица»"
+        tier: official
+        excerpt: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: name-of-god
+    summary: "Заповедь «Не произноси имени Господа, Бога твоего, напрасно» Елена Уайт, чьи труды церковь признаёт авторитетным источником истины, толкует, в частности, как запрет «небрежно или легкомысленно произносить имя Господа»: «Его святое имя следует произносить с благоговением и торжественностью». В той же книге («Патриархи и пророки») Бог называется и Иеговой; вероучительные положения церкви исповедуют единого Бога — Отца, Сына и Святого Духа."
+    unity:
+      kind: shared
+      note: "основные положения вероучения не говорят об этом прямо; позиция — по трудам Елены Уайт, которые Церковь признаёт «авторитетным источником истины» (п. 18)."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+          accessed: "2026-09-26"
+    quote:
+      text: "Его святое имя следует произносить с благоговением и торжественностью"
+      source: "Елена Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю» (ПП 306.6)"
+      url: "https://m.egwwritings.org/ru/book/1802.1294"
+    proof:
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.5 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "«Не произноси имени Господа, Бога твоего, напрасно; ибо Господь не оставит без наказания того, кто произносит имя Его напрасно»"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.6 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "но она также запрещает нам небрежно или легкомысленно произносить имя Господа, не думая о его внушающем трепет значении"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.6 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Его святое имя следует произносить с благоговением и торжественностью"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 305.4 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Иегова, Вечный, Сущий от начала, не сотворенный, но Сам являющийся Источником жизни и Создателем всего, Один достоин самого высокого почитания и поклонения"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 2 «Троица»"
+        tier: official
+        excerpt: "Бог един. Отец, Сын и Святой Дух"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: jesus
+    summary: "Иисус Христос — предвечный Бог Сын, воплотившийся, зачатый от Святого Духа и рождённый Девой Марией; добровольно умер на Кресте за грехи людей, телесно воскрес и вознёсся; является обетованным Мессией и вернётся во славе."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Бог Вечный Сын явился воплощенным в Иисусе Христе... Он был действительно Богом — обещанным Мессией. Он добровольно пострадал и умер на кресте за наши грехи"
+      source: "28 основ вероучения, п. 4 «Бог Сын»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 4 «Бог Сын»"
+        tier: official
+        excerpt: "Он был действительно Богом — обещанным Мессией. Он добровольно пострадал и умер на кресте за наши грехи"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: spirit
+    summary: "Святой Дух — вечное Божественное Лицо, действовавшее вместе с Отцом и Сыном при сотворении, воплощении и искуплении; вдохновлял авторов Библии, наделяет Церковь духовными дарами и наставляет её на всякую истину."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Бог Вечный Дух Святой действовал вместе с Отцом и Сыном при сотворении, воплощении и искуплении"
+      source: "28 основ вероучения, п. 5 «Святой Дух»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 5 «Святой Дух»"
+        tier: official
+        excerpt: "Бог Вечный Дух Святой действовал вместе с Отцом и Сыном при сотворении, воплощении и искуплении"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: scripture
+    summary: "Библия (Ветхий и Новый Завет) — богодухновенное, непогрешимое Слово Божье и единственное мерило вероучения и опыта; вероучение церкви основывается исключительно на ней. Число книг канона в открытых на сессии официальных текстах не указано явно."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Священное Писание, состоящее из Ветхого и Нового Заветов, есть Слово Божье, письменно переданное по Божественному вдохновению через святых мужей Божьих"
+      source: "28 основ вероучения, п. 1 «Священное Писание»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 1 «Священное Писание»"
+        tier: official
+        excerpt: "Священное Писание, состоящее из Ветхого и Нового Заветов, есть Слово Божье, письменно переданное по Божественному вдохновению"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: authority
+    summary: "Высший авторитет — Библия («sola scriptura»); писания Елены Уайт церковь официально называет не заменой и не добавлением к Писанию, а даром пророчества, служащим Церкви наставлением и утешением, при этом «Библия есть критерий для всякого учения и опыта». Изменения в вероучительные положения вносятся только на съезде Генеральной конференции."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением"
+      source: "28 основ вероучения, п. 18 «Дар пророчества»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством"
+        accessed: "2026-09-26"
+      - url: "https://whiteestate.org/legacy/issues-scripsda-html/"
+        title: "Issues: The Relationship of Ellen White's Writings to Scripture — Ellen G. White Estate"
+        tier: official
+        excerpt: "The writings of Ellen White are not a substitute for Scripture. They cannot be placed on the same level."
+        accessed: "2026-09-25"
+    status: verified
+  - topic: salvation
+    summary: "Спасение — по благодати через веру во Христа, принявшего на Себя грех людей; вера приходит через силу Слова Божьего и является даром благодати, а не заслугой человека."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Христос стал грехом ради нас, чтобы в Нем мы соделались праведными перед Богом"
+      source: "28 основ вероучения, п. 10 «Спасение во Христе»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 10 «Спасение во Христе»"
+        tier: official
+        excerpt: "Вера, посредством которой мы принимаем спасение, приходит к нам от Божественной силы Его Слова и является даром Божьей благодати"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: afterlife
+    summary: "Смерть для всех людей до Второго пришествия — «состояние небытия» (учение о непробуждённом сне души), а не бессмертие души; вечную жизнь дарует только Бог. С 1844 года на небе идёт «следственный суд» — первая стадия окончательного удаления грехов перед возвращением Христа."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "До дня Второго пришествия смерть для всех людей — это состояние небытия"
+      source: "28 основ вероучения, п. 26 «Смерть и воскресение»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 26 «Смерть и воскресение»"
+        tier: official
+        excerpt: "дарует вечную жизнь Своим искупленным. До дня Второго пришествия смерть для всех людей — это состояние небытия"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»"
+        tier: official
+        excerpt: "В 1844 году, по окончании пророческого периода в 2300 лет, началась вторая и последняя часть Его искупительного служения"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: end-times
+    summary: "Второе пришествие Христа будет буквальным, личным и видимым для всего мира; после него следует тысячелетнее Царство на небе, второе воскресение (для неправедных) и, наконец, уничтожение греха огнём и установление Новой Земли, где Бог будет вечно обитать со Своим народом."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "будет буквальным, личным и одновременным для всего мира"
+      source: "28 основ вероучения, п. 25 «Второе пришествие Христа»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 25 «Второе пришествие Христа»"
+        tier: official
+        excerpt: "будет буквальным, личным и одновременным для всего мира"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»"
+        tier: official
+        excerpt: "снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: worship
+    summary: "Крещение совершается через погружение в воду после наставления в вере и покаяния. Вечере Господней предшествует обряд омовения ног; сама Вечеря — совместное принятие хлеба и вина как символов Тела и Крови Христа."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Крещение совершается погружением в воду, и к нему допускаются те, кто имеет веру в Иисуса и засвидетельствовал о раскаянии во грехе"
+      source: "28 основ вероучения, п. 15 «Крещение»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 15 «Крещение»"
+        tier: official
+        excerpt: "Крещение совершается погружением в воду, и к нему допускаются те, кто имеет веру в Иисуса"
+        accessed: "2026-09-25"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 16 «Вечеря Господня»"
+        tier: official
+        excerpt: "Перед принятием символов совершается служение ногоомовения, установленное нашим Божественным Учителем"
+        accessed: "2026-09-25"
+    status: verified
+  - topic: images
+    summary: "Елена Уайт, чьи труды церковь признаёт авторитетным источником истины, толкует заповедь «Не делай себе кумира и никакого изображения…» как запрет поклоняться истинному Богу с помощью икон или иных изображений: попытка изобразить Вечного материальными предметами, по её словам, «снижает представление человека о Боге»."
+    unity:
+      kind: shared
+      note: "основные положения вероучения не говорят об этом прямо; позиция — по трудам Елены Уайт, которые Церковь признаёт «авторитетным источником истины» (п. 18)."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+          accessed: "2026-09-26"
+    quote:
+      text: "Вторая заповедь запрещает поклоняться истинному Богу, используя иконы или иные изображения"
+      source: "Елена Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю» (ПП 306.1)"
+      url: "https://m.egwwritings.org/ru/book/1802.1294"
+    proof:
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 305.5 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "«Не делай себе кумира и никакого изображения того, что на небе вверху"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.1 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Вторая заповедь запрещает поклоняться истинному Богу, используя иконы или иные изображения."
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1802.1294"
+        title: "Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.1 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Попытка изобразить Вечного посредством материальных предметов снижает представление человека о Боге."
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: holy-days
+    summary: "Церковь соблюдает субботу (с вечера пятницы до вечера субботы) как седьмой день покоя, установленный Творцом при сотворении мира и предписанный четвёртой заповедью — день радостного общения с Богом и знак освящения и вечного завета."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "седьмого дня, субботы, как дня покоя"
+      source: "28 основ вероучения, п. 20 «Суббота»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 20 «Суббота»"
+        tier: official
+        excerpt: "седьмого дня, субботы, как дня покоя"
+        accessed: "2026-09-26"
+    status: verified
+  - topic: fasting
+    summary: "Основы вероучения говорят о заботе о теле как о храме Святого Духа — о физических упражнениях, отдыхе и здоровом питании; о посте пишет Елена Уайт, чьи труды церковь признаёт авторитетным источником истины. По её словам, «при некоторых обстоятельствах жизни» пост и молитва «рекомендуются и очень нужны», и «дети Божьи должны выделить дни для поста и молитвы», но полностью отказываться от пищи не обязательно — нужно есть мало и самую простую пищу; «истинный пост, который нужно рекомендовать всем», — это воздержание от возбуждающих блюд и строгая умеренность в простой пище. Заслуги в посте нет: «вся заслуга — в Крови Христа». Воздержание от одного-двух приёмов пищи она советовала и как средство лечения. Об уходе в монастырь она писала, что Иисус Христос «Своим примером не учил людей запирать себя в монастырях, чтобы приготовиться к вечной жизни»."
+    unity:
+      kind: shared
+      note: "основные положения вероучения не говорят об этом прямо; позиция — по трудам Елены Уайт, которые Церковь признаёт «авторитетным источником истины» (п. 18)."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+          accessed: "2026-09-26"
+    quote:
+      text: "Истинный пост, который нужно рекомендовать всем, предполагает воздержание от возбуждающих блюд и строгую умеренность в употреблении всякой здоровой и простой пищи"
+      source: "Елена Уайт, «Основы здорового питания», гл. 10 «Пост» (Пит 188.3)"
+      url: "https://m.egwwritings.org/ru/book/1786.1418"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 22 «Христианское поведение»"
+        tier: official
+        excerpt: "поскольку наши тела являются храмом Святого Духа, мы не должны пренебрегать заботой о них"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 22 «Христианское поведение»"
+        tier: official
+        excerpt: "Нам необходимы физические упражнения, отдых"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают"
+        accessed: "2026-09-26"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
+        tier: official
+        excerpt: "авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1786.1418"
+        title: "Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 187.6 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "При некоторых обстоятельствах жизни рекомендуются и очень нужны пост и молитва."
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1786.1418"
+        title: "Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 188.4 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Дети Божьи должны выделить дни для поста и молитвы. Необязательно полностью воздерживаться от пищи, но есть нужно мало, причем самые простые блюда."
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1786.1418"
+        title: "Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 188.3 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Истинный пост, который нужно рекомендовать всем, предполагает воздержание от возбуждающих блюд и строгую умеренность в употреблении всякой здоровой и простой пищи"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1786.1418"
+        title: "Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 189.1 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "С вашей стороны не будет никакой заслуги в таком посте, но вся заслуга — в Крови Христа."
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1786.1418"
+        title: "Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 189.3 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "самым лучшим средством лечения больного может быть воздержание от одного — двух приемов пищи"
+        accessed: "2026-09-26"
+      - url: "https://m.egwwritings.org/ru/book/1800.2541"
+        title: "Е. Уайт, «Великая Борьба», гл. 35 «Свобода совести под угрозой», ВБ 570.2 — EGW Writings (Ellen G. White Estate)"
+        tier: official
+        excerpt: "Христос Своим примером не учил людей запирать себя в монастырях, чтобы приготовиться к вечной жизни."
+        accessed: "2026-09-26"
+    status: verified
+  - topic: organisation
+    summary: "Церковь устроена по представительному принципу: местные общины объединены в конференции, конференции — в унионы; всемирную деятельность координирует Генеральная конференция. Дивизионы — её региональные управления, отвечающие за группы унионов. Руководителей избирают представители членов церкви. Высший орган — съезд Генеральной конференции; между съездами от его имени действует Исполнительный комитет. Изменения вероучительных положений принимаются на съезде."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "соответствующие изменения и дополнения в данные положения могут быть внесены на съезде Генеральной Конференции"
+      source: "28 основ вероучения, преамбула"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, преамбула"
+        tier: official
+        excerpt: "соответствующие изменения и дополнения в данные положения могут быть внесены на съезде Генеральной Конференции"
+        accessed: "2026-09-25"
+      - url: "https://adventist.org/identity/structure"
+        title: "Structure — Seventh-day Adventist Church"
+        tier: "official"
+        excerpt: "All of the churches within a specific area, often a state, province or territory, are organized into conferences."
+        accessed: "2026-09-26"
+      - url: "https://adventist.org/identity/structure"
+        title: "Structure — Seventh-day Adventist Church"
+        tier: "official"
+        excerpt: "Conferences within a larger territory, such as multiple regions or even borders of a country, are organized into union conferences."
+        accessed: "2026-09-26"
+      - url: "https://adventist.org/identity/structure"
+        title: "Structure — Seventh-day Adventist Church"
+        tier: "official"
+        excerpt: "the GC established regional offices, known as divisions, who have administrative and supervisory responsibilities for groups of unions"
+        accessed: "2026-09-26"
+      - url: "https://gc.adventist.org/about-us/governance/"
+        title: "Governance — General Conference of Seventh-day Adventists"
+        tier: "official"
+        excerpt: "Adventist members get together and vote for their representatives at the local, regional and global level."
+        accessed: "2026-09-26"
+      - url: "https://gc.adventist.org/about-us/governance/"
+        title: "Governance — General Conference of Seventh-day Adventists"
+        tier: "official"
+        excerpt: "The second highest governing body of the Seventh-day Adventist Church, after General Conference Session"
+        accessed: "2026-09-26"
+      - url: "https://gc.adventist.org/about-us/governance/"
+        title: "Governance — General Conference of Seventh-day Adventists"
+        tier: "official"
+        excerpt: "In between Sessions, the Executive Committee is delegated the authority to act on behalf of the General Conference in Session."
+        accessed: "2026-09-26"
+    status: verified
+  - topic: rules
+    summary: "Церковь учит воздерживаться от «нечистой» пищи, указанной в Писании, а также от алкоголя, табака и наркотиков как вредящих телу — «храму Святого Духа». В вопросе военной службы официальные документы церкви не запрещают её: решение остаётся делом личной совести, при этом Генеральная конференция в 1985 году официально призвала к миру и отказу от насилия."
+    unity:
+      kind: shared
+      note: "основные положения вероучения, в которых «Церковь выражает своё понимание Библии»; изменения в них вносятся на съезде Генеральной Конференции."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "В этих положениях Церковь выражает своё понимание Библии"
+          accessed: "2026-09-26"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: "official"
+          excerpt: "могут быть внесены на съезде Генеральной Конференции"
+          accessed: "2026-09-26"
+    quote:
+      text: "Мы должны воздерживаться от нечистой еды, указанной в Писании. Так как употребление алкогольных напитков, табака, наркотиков и злоупотребление лекарствами вредят нашему орга низму"
+      source: "28 основ вероучения, п. 22 «Христианское поведение»"
+      url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+    proof:
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 22 «Христианское поведение»"
+        tier: official
+        excerpt: "Мы должны воздерживаться от нечистой еды, указанной в Писании"
+        accessed: "2026-09-25"
+      - url: "https://bri.esd.adventist.org/uploaded_assets/113416"
+        title: "«Библия и церковь о проблеме войны и мира» — Институт библейских исследований, Евро-Азиатский дивизион"
+        tier: official
+        excerpt: "официальные документы Церкви АСД не запрещают службу в армии"
+        accessed: "2026-09-25"
+      - url: "https://bri.esd.adventist.org/uploaded_assets/113416"
+        title: "«Библия и церковь о проблеме войны и мира», текст заявления Генеральной конференции 1985 года"
+        tier: official
+        excerpt: "Церковь адвентистов седьмого дня убеждает все народы «перековать мечи свои на орала, и копья свои — на серпы»"
+        accessed: "2026-09-25"
+    status: verified

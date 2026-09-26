@@ -1,0 +1,114 @@
+---
+// «Сравнение» (docs/tasks/site-m14-selection.md; owner, 2026-09-26: the
+// topics, the views of others and the pair documents as one section with one
+// template). The reader chooses one tradition to read or up to three to
+// compare, and scrolls through the same sections for all of them: in brief,
+// the topics side by side, what they think of each other, and the
+// detailed documents.
+import CompareControls from '../components/CompareControls.astro';
+import ColumnHeader from '../components/ColumnHeader.astro';
+import Comparison from '../components/Comparison.astro';
+import TraditionCompare from '../components/TraditionCompare.astro';
+import ViewsSection from '../components/ViewsSection.astro';
+import SectionPage from '../layouts/SectionPage.astro';
+import { getDisputes, getOrderedMatrix, getOrderedViews } from '../lib/content';
+import { withBase } from '../lib/paths';
+import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+
+const traditions = await getOrderedMatrix();
+const colorById = new Map(
+  traditions.map((t) => [t.id, TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN]]),
+);
+const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
+const views = await getOrderedViews();
+const disputes = await getDisputes();
+---
+
+<SectionPage
+  title="Сравнение"
+  lead="Выберите вверху одну традицию, чтобы читать о ней, или две-три, чтобы сравнить. Ниже для выбранных — кратко, позиции по пятнадцати темам рядом, что они думают друг о друге, и подробные документы. Каждая традиция описана по её собственным текстам, с источником."
+  jwNote={traditions.some((t) => t.id === 'jw')}
+>
+  <ColumnHeader traditions={traditions} colorById={colorById} />
+  <CompareControls />
+  <TraditionCompare traditions={traditions} />
+
+  <section id="topics">
+    <h2>Общее и различное: пятнадцать тем</h2>
+    <p class="section-lead">Сопоставление по собственным источникам традиций. Спорные вопросы собраны редакционно: «возражение» и позиция другой стороны не всегда означают прямую историческую переписку. Отметка «Единого мнения нет» сохраняется и в кратком режиме.</p>
+    {
+      traditions.length > 0 ? (
+        <Comparison traditions={traditions} colorById={colorById} disputes={disputes} withJwFootnote />
+      ) : (
+        <p class="empty">Данные для сравнения ещё готовятся.</p>
+      )
+    }
+  </section>
+
+  <section id="views">
+    <h2>Что думают друг о друге</h2>
+    {
+      views.length > 0 ? (
+        <ViewsSection views={views} colorById={colorById} namesById={namesById} />
+      ) : (
+        <p class="empty">Раздел ещё готовится.</p>
+      )
+    }
+  </section>
+
+  <section id="pairs">
+    <h2>Подробные документы</h2>
+    <ul class="pairs">
+      <li data-pair="orthodoxy jw">
+        <a href={withBase('pairs/orthodoxy-jw/')}>Православие и Свидетели Иеговы</a>
+        <span class="pair-note"> — подробный разбор пары: история, источники вероучения, общее, богословие, литература,
+        устройство, динамика</span>
+      </li>
+    </ul>
+  </section>
+</SectionPage>
+
+<script>
+  import { onSelection } from '../lib/selection-client';
+
+  // A detailed pair document stands out when the reader's choice includes
+  // both of its traditions.
+  const items = Array.from(document.querySelectorAll<HTMLElement>('[data-pair]'));
+  onSelection((ids) => {
+    for (const id of ['topics', 'views', 'pairs']) {
+      const section = document.getElementById(id);
+      if (section) section.hidden = ids.length === 0;
+    }
+    for (const item of items) {
+      const pair = (item.dataset.pair ?? '').split(' ');
+      item.classList.toggle('match', pair.every((id) => ids.includes(id)));
+    }
+  });
+</script>
+
+<style>
+  .pairs {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .pairs li {
+    padding: 10px 14px;
+    border-radius: 8px;
+  }
+
+  .pairs li.match {
+    background: color-mix(in srgb, var(--focus) 18%, transparent);
+  }
+
+  .pair-note {
+    color: var(--muted);
+  }
+
+  #views,
+  #pairs,
+  #topics {
+    scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
+  }
+</style>

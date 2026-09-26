@@ -1,0 +1,216 @@
+---
+import lineageData from '../../data/lineage.json';
+import { profileChronology } from '../../lib/profileChronology';
+import { parseLineage, validateReferences, formatYearAd, yearFromCreation } from '../../lib/timeline';
+import { withBase } from '../../lib/paths';
+import { type CollectionEntry } from 'astro:content';
+import TraditionImage from '../../components/TraditionImage.astro';
+import GovernanceDiagram from '../../components/GovernanceDiagram.astro';
+import Dispute from '../../components/Dispute.astro';
+import ViewTile from '../../components/ViewTile.astro';
+import { disputeView } from '../../lib/disputes';
+import MatrixPosition from '../../components/MatrixPosition.astro';
+import ProofLink from '../../components/ProofLink.astro';
+import SectionPage from '../../layouts/SectionPage.astro';
+import { getDisputes, getOrderedMatrix, getOrderedViews } from '../../lib/content';
+import { getFamilyByTradition } from '../../lib/families';
+import { sinceLines, TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, TRADITION_IDS } from '../../lib/rules';
+
+export async function getStaticPaths() {
+  const traditions = await getOrderedMatrix();
+  return TRADITION_IDS.map((id) => {
+    const tradition = traditions.find((entry) => entry.id === id);
+    if (!tradition) throw new Error(`Missing matrix entry for profile: ${id}`);
+    return { params: { id }, props: { tradition } };
+  });
+}
+
+interface Props {
+  tradition: CollectionEntry<'matrix'>;
+}
+
+const { tradition } = Astro.props;
+const { name, full_name, since } = tradition.data;
+const family = getFamilyByTradition(tradition.id);
+const color = TRADITION_COLOR_TOKEN[tradition.data.id];
+const traditions = await getOrderedMatrix();
+const order = traditions.map((entry) => entry.id);
+const namesById = new Map(traditions.map((entry) => [entry.id, entry.data.name]));
+const colorById = new Map(traditions.map((entry) => [entry.id, TRADITION_COLOR_TOKEN[entry.data.id]]));
+const disputes = (await getDisputes()).filter((entry) => disputeView({
+  challengers: entry.data.challenges.map((part) => part.tradition),
+  answerers: entry.data.answers.map((part) => part.tradition),
+}, [tradition.id]).visible);
+const views = await getOrderedViews();
+const outgoing = views.find((entry) => entry.id === tradition.id)?.data.documents ?? [];
+const incoming = views.filter((entry) => entry.id !== tradition.id).flatMap((entry) =>
+  entry.data.documents.filter((doc) => doc.about.includes(tradition.data.id)).map((doc) => ({ author: entry.id, doc })),
+);
+const lineage = parseLineage(lineageData);
+validateReferences(lineage);
+const chronology = profileChronology(lineage, tradition.data.id);
+const selfView = lineage.selfViews.find((view) => view.tradition === tradition.id);
+const associationLabels = {
+  own: '', ancestor: 'Общая предыстория', union: 'Уния', epoch: 'Собственная хронология традиции',
+};
+const mentionsJw = tradition.id === 'jw'
+  || disputes.some((entry) => [...entry.data.challenges, ...entry.data.answers].some((part) => part.tradition === 'jw'))
+  || outgoing.some((doc) => doc.about.includes('jw'))
+  || incoming.some(({ author, doc }) => author === 'jw' || doc.about.includes('jw'));
+
+
+---
+
+<SectionPage title={name} lead={full_name === name ? undefined : full_name} jwNote={mentionsJw}>
+  <dl slot="header-details" class="profile-facts" style={`--tradition-color: var(${color})`}>
+    {family && (
+      <div>
+        <dt>Классификация</dt>
+        <dd>
+          {family.family}
+          <ProofLink proof={family.proof} />
+        </dd>
+      </div>
+    )}
+    <div>
+      <dt>Возникновение</dt>
+      <dd>
+        {sinceLines(since.label).map((line) => <p>{line}</p>)}
+        <ProofLink proof={since.proof} />
+      </dd>
+    </div>
+  </dl>
+  <TraditionImage id={tradition.id} />
+  <GovernanceDiagram tradition={tradition.id} />
+  <section class="positions" aria-labelledby="positions-title">
+    <h2 id="positions-title">Позиции по темам</h2>
+    {TOPIC_ORDER.map((topicId) => {
+      const position = tradition.data.positions.find((item) => item.topic === topicId);
+      if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
+      return (
+        <section class="topic" aria-labelledby={`topic-${topicId}`}>
+          <h3 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h3>
+          <MatrixPosition position={position} tradition={tradition.id} />
+        </section>
+      );
+    })}
+  </section>
+  <section class="profile-section" aria-labelledby="disputes-title">
+    <h2 id="disputes-title">Спорные вопросы</h2>
+    {disputes.length ? disputes.map((dispute) => (
+      <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
+    )) : <p class="empty">В материалах сайта пока нет споров с участием этой традиции.</p>}
+  </section>
+  <section class="profile-section profile-views" aria-labelledby="views-title">
+    <h2 id="views-title">Что думают друг о друге</h2>
+    <section class="view-group" aria-labelledby="outgoing-title">
+      <h3 id="outgoing-title">Что эта традиция говорит о других</h3>
+      {outgoing.length ? outgoing.map((doc) => (
+        <ViewTile author={tradition.id} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
+    </section>
+    <section class="view-group" aria-labelledby="incoming-title">
+      <h3 id="incoming-title">Что другие говорят об этой традиции</h3>
+      {incoming.length ? incoming.map(({ author, doc }) => (
+        <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
+    </section>
+  </section>
+  <section class="profile-section" aria-labelledby="chronology-title">
+    <h2 id="chronology-title">Хронология</h2>
+    {selfView && <aside>
+      <h3>Как традиция понимает своё происхождение</h3>
+      <p>{selfView.summary}</p>
+      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatYearAd(gap.from)}–{formatYearAd(gap.to)}: {gap.label}.</p>)}
+    </aside>}
+    <p class="chronology-key">Годы от Сотворения мира — по византийской эре; рядом — годы от Рождества Христова.</p>
+    <ol class="chronology">
+      {chronology.map((row) => (
+        <li data-chronology-id={row.id}>
+          <p class="chronology-date">{row.approx && 'ок. '}{yearFromCreation(row.year)} от С. М. · {row.approx && 'ок. '}{formatYearAd(row.year)}{row.year >= 0 && ' от Р. Х.'}</p>
+          {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
+          <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
+          {row.proof && <ProofLink proof={[row.proof]} />}
+        </li>
+      ))}
+    </ol>
+    <a href={withBase('timeline/')}>Открыть общую хронологию</a>
+  </section>
+
+</SectionPage>
+
+<style>
+  .chronology {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: grid;
+    gap: 24px;
+  }
+
+  .chronology p { margin: 0 0 6px; }
+  .chronology-key, .chronology-date, .association { color: var(--muted); }
+  .chronology-date { font-weight: 700; }
+  .association { font-size: 14px; }
+
+  .profile-section {
+    max-width: 70ch;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .view-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .view-group h3 { margin: 0; }
+
+  @media (max-width: 600px) {
+    .profile-views :global(.route) { flex-wrap: wrap; }
+    .profile-views :global(.about) { flex-basis: 100%; }
+    .profile-views :global(.chip) { white-space: normal; }
+  }
+
+  .positions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 70ch;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .topic h3 {
+    margin: 0 0 16px;
+    font-size: 21px;
+  }
+
+  .profile-facts {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin: 24px 0 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid var(--tradition-color);
+    max-width: 70ch;
+    overflow-wrap: anywhere;
+  }
+
+  dt {
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  dd {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  dd p {
+    margin: 0;
+  }
+</style>

@@ -1,0 +1,16 @@
+---
+import data from '../data/world-hierarchy-2026.json';
+import ProofLink from './ProofLink.astro';
+const proofs = [...data.proof, ...data.groups.flatMap((group) => group.proof), ...data.branches.flatMap((branch) => branch.proof)].map((p) => ({ ...p, tier: 'reference' as const }));
+const unaffiliatedChristiansProof = data.branches.find((b) => b.id === 'unaffiliated-christians')!.proof
+  .map((p) => ({ ...p, tier: 'reference' as const }));
+---
+    <section id="world-methodology">
+      <h2>Диаграмма: оценка на 2026 год</h2>
+      <p>Округлённые оценки World Christian Database за 2026 год.<ProofLink proof={proofs}/></p>
+      <details><summary>Как читать приблизительные доли</summary>
+        <p>Доли религий рассчитаны от оценки населения мира. Народные религии объединяют две категории источника; другие религии — остаток до общего населения.</p>
+        <p>Сумма пяти христианских категорий в источнике выше общего числа христиан. Для наглядности их веса приведены к 100 % христианского сектора: это схематичные пропорции, а не точный подсчёт непересекающихся групп. Протестанты включают англикан; независимые церкви показаны отдельно. Категории карты Pew могут отличаться.</p>
+        <p>«Вне церковных объединений» — это не то же самое, что «Независимые церкви»: сюда источник относит тех, кто называет себя христианами, но не состоит ни в одной церкви или деноминации, включая тайных верующих там, где открыто исповедовать веру небезопасно.<ProofLink proof={unaffiliatedChristiansProof}/></p>
+      </details>
+    </section>

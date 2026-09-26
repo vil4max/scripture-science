@@ -1,0 +1,20 @@
+{
+  "name": "religion-map",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "check": "astro check",
+    "verify": "npm run build && npm run check && node --test scripts/ && python3 scripts/check_text.py"
+  },
+  "dependencies": {
+    "@astrojs/mdx": "^8.0.2",
+    "astro": "^7.3.5"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.10",
+    "typescript": "^6.0.3"
+  }
+}

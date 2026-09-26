@@ -1,0 +1,77 @@
+---
+// The terms box (EDITORIAL.md principle 5): each term the site's own voice
+// uses or deliberately avoids, defined from a reference-tier source.
+// Renders nothing while src/data/terms.yaml hasn't landed yet
+// (docs/tasks/site-m2-main-page.md "Data availability").
+import type { CollectionEntry } from 'astro:content';
+import ProofLink from './ProofLink.astro';
+
+interface Props {
+  terms: CollectionEntry<'terms'>[];
+}
+
+const { terms } = Astro.props;
+---
+
+{
+  terms.length > 0 && (
+    <dl class="terms">
+      {terms.map((entry) => (
+        <div class="term">
+          <dt>
+            {entry.data.term}
+            <span class={entry.data.use_on_site ? 'use yes' : 'use no'}>
+              {entry.data.use_on_site ? 'используется на сайте' : 'на сайте не используется'}
+            </span>
+          </dt>
+          <dd>
+            <p>{entry.data.definition}</p>
+            <p class="notes">{entry.data.notes}</p>
+            <ProofLink proof={entry.data.proof} />
+          </dd>
+        </div>
+      ))}
+    </dl>
+  )
+}
+
+<style>
+  .terms {
+    margin: 0;
+    display: grid;
+    gap: 20px;
+  }
+
+  .term {
+    border-top: 1px solid var(--line);
+    padding-top: 16px;
+  }
+
+  dt {
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .use {
+    font-weight: 400;
+    font-size: 13px;
+    color: var(--muted);
+  }
+
+  .use.yes {
+    color: var(--focus);
+  }
+
+  dd {
+    margin: 6px 0 0;
+  }
+
+  .notes {
+    color: var(--muted);
+    font-size: 15px;
+  }
+</style>

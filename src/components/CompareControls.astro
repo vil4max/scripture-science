@@ -1,0 +1,67 @@
+---
+import { TOPIC_ORDER, TOPIC_TITLES_RU } from '../lib/rules';
+---
+<div class="compare-controls">
+  <div class="choices">
+    <fieldset><legend>Глубина чтения</legend><label><input type="radio" name="reading-mode" value="brief" checked/> Кратко</label><label><input type="radio" name="reading-mode" value="detail"/> С цитатами</label></fieldset>
+    <label class="topic-label" for="topic-filter">Тема<select id="topic-filter"><option value="">Все пятнадцать тем</option>{TOPIC_ORDER.map((id) => <option value={id}>{TOPIC_TITLES_RU[id]}</option>)}</select></label>
+  </div>
+  <p>«Кратко» оставляет позиции и отметки единства; «С цитатами» раскрывает выдержки и пояснения. Выбранные традиции, режим и тема сохраняются в адресе страницы.</p>
+  <noscript><p>Без JavaScript показан полный текст. Для выбора традиций и фильтра тем включите JavaScript.</p></noscript>
+</div>
+<script>
+  import { onSelection } from '../lib/selection-client';
+  import { readingState, readingUrl, type ReadingMode } from '../lib/comparisonReading';
+  const root = document.querySelector<HTMLElement>('[data-comparison]');
+  const filter = document.querySelector<HTMLSelectElement>('#topic-filter');
+  const radios = [...document.querySelectorAll<HTMLInputElement>('input[name="reading-mode"]')];
+  if (root && filter) {
+    let state = readingState(location.search, location.hash);
+    const topicForHash = () => document.getElementById(location.hash.slice(1))?.closest<HTMLElement>('.topic')?.id.slice(6);
+    const sections = [...root.querySelectorAll<HTMLElement>('.topic')];
+    function links() {
+      const url = new URL(location.href);
+      // An explicit empty selection prevents the recipient's saved choice taking over.
+      if (!url.searchParams.has('t')) url.searchParams.set('t', '');
+      for (const link of root!.querySelectorAll<HTMLAnchorElement>('[data-reading-link]')) {
+        const topic = link.closest<HTMLElement>('.topic')?.id.slice(6) ?? '';
+        link.href = readingUrl(url.href, state.mode, topic, link.dataset.readingLink);
+      }
+    }
+    function apply() {
+      root!.dataset.reading = state.mode;
+      filter!.value = state.topic;
+      radios.forEach((radio) => { radio.checked = radio.value === state.mode; });
+      sections.forEach((section) => { section.hidden = Boolean(state.topic) && section.id !== `topic-${state.topic}`; });
+      root!.querySelectorAll<HTMLElement>('[data-reading-detail]').forEach((el) => { el.hidden = state.mode === 'brief'; });
+      root!.querySelectorAll<HTMLElement>('[data-reading-brief]').forEach((el) => { el.hidden = state.mode !== 'brief'; });
+      history.replaceState(history.state, '', readingUrl(location.href, state.mode, state.topic));
+      links();
+    }
+    const initialTopic = topicForHash();
+    if (initialTopic) state.topic = initialTopic;
+    apply();
+    radios.forEach((radio) => radio.addEventListener('change', () => {
+      if (radio.checked) { state.mode = radio.value as ReadingMode; apply(); }
+    }));
+    filter.addEventListener('change', () => {
+      state.topic = filter.value;
+      // A stale question hash must not override the new filter on reload.
+      history.replaceState(history.state, '', readingUrl(location.href, state.mode, state.topic, state.topic ? `topic-${state.topic}` : ''));
+      apply();
+    });
+    window.addEventListener('hashchange', () => {
+      const topic = topicForHash();
+      if (topic) { state.topic = topic; apply(); }
+    });
+    onSelection(() => links());
+    if (location.hash.startsWith('#topic-') || location.hash.startsWith('#question-')) {
+      requestAnimationFrame(() => document.getElementById(location.hash.slice(1))?.scrollIntoView());
+    }
+  }
+</script>
+<style>
+  .compare-controls { background: var(--surface); border: 1px solid var(--line); border-radius: 10px; padding: 20px; }
+  .choices { display: flex; flex-wrap: wrap; gap: 24px; align-items: end; } fieldset { border: 0; padding: 0; margin: 0; } legend,.topic-label { font-size: 14px; color: var(--muted); } fieldset label { color: var(--ink); margin-right: 16px; white-space: nowrap; } input { accent-color: var(--focus); } select { display: block; padding: 8px; border: 1px solid var(--line); background: var(--bg); color: var(--ink); font: inherit; font-size: 16px; border-radius: 6px; min-width: 230px; }
+  p { color: var(--muted); font-size: 14px; max-width: 85ch; }
+</style>

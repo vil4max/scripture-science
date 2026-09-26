@@ -1,0 +1,35 @@
+# Presentation-only data per tradition (docs/tasks/site-m2-main-page.md W1:
+# "traditions.yaml keeps presentation keys only (id, colour token,
+# translation reference)"). Identity and content (name, family, since,
+# positions on the fourteen topics, ...) live in the matrix file
+# src/data/matrix/<id>.yaml instead - docs/tasks/site-m3-matrix-content.md.
+# Keyed by id; the file loader uses the key as each entry's collection id.
+#
+# `color` names a CSS custom property. For the six traditions the new site
+# frame renders (matrix files not landed yet - see "Conflicts found"), it is
+# one of the `--t-*` tokens in src/layouts/Base.astro. orthodoxy and jw keep
+# their pre-existing `--o`/`--j` (src/styles/orthodoxy-jw.css, M1's own
+# palette): the pair page is frame-only in this slice's boundaries, so its
+# already-styled CSS is left untouched rather than switched to `--t-*` and
+# restyled. `translation` is populated only where a source already backed it
+# before this slice (orthodoxy, jw, carried over from the previous
+# traditions.yaml); no value is invented for the other six traditions, whose
+# matrix files (and so their own scripture.name/url) have not landed yet.
+judaism:
+  color: "--t-judaism"
+orthodoxy:
+  color: "--o"
+  translation: syno
+catholicism:
+  color: "--t-catholicism"
+islam:
+  color: "--t-islam"
+protestantism:
+  color: "--t-protestantism"
+lds:
+  color: "--t-lds"
+adventism:
+  color: "--t-adventism"
+jw:
+  color: "--j"
+  translation: nwt

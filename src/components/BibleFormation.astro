@@ -1,0 +1,45 @@
+---
+import guide from '../data/bible-guide.json';
+import type { Citation } from '../lib/citations';
+import ProofLink from './ProofLink.astro';
+
+type VerifiedProof = Citation & Required<Pick<Citation, 'tier' | 'excerpt' | 'accessed'>>;
+const proofs = guide.proofs as Record<keyof typeof guide.proofs, VerifiedProof[]>;
+const { collection: collectionProof, codex: codexProof, synodal: synodalProof } = proofs;
+---
+
+<section aria-labelledby="formation-title">
+  <h2 id="formation-title">Откуда взялась Библия</h2>
+  <p class="section-lead">Короткий ответ: Библия — не произведение одного автора и не одноразово составленная книга. Это библиотека текстов разных жанров, которую общины переписывали, читали и постепенно признавали Священным Писанием.<ProofLink proof={collectionProof} inline /></p>
+  <div class="route" aria-label="Путь библейского текста">
+    <article><span>1</span><h3>Тексты</h3><p>Законы, повествования, пророческие и поэтические книги, Евангелия и послания возникали как отдельные произведения.</p></article>
+    <article><span>2</span><h3>Рукописи</h3><p>Тексты многократно переписывали. Сохранившиеся рукописи различаются возрастом, составом и вариантами чтения.<ProofLink proof={codexProof} /></p></article>
+    <article><span>3</span><h3>Канон</h3><p>Религиозная община определяет, какие книги читает как нормативное Писание. Поэтому состав и названия групп книг различаются.</p></article>
+    <article><span>4</span><h3>Перевод</h3><p>Переводчик работает не с абстрактной «Библией», а с выбранным изданием древнего текста и принимает решения о передаче слов.</p></article>
+  </div>
+  <div class="evidence-grid">
+    <article>
+      <p class="eyebrow">IV век · сохранившаяся рукопись</p>
+      <h3>Codex Sinaiticus</h3>
+      <p>Греческий кодекс содержит древнейший полный Новый Завет. Вместе с ним переписаны Послание Варнавы и «Пастырь» Ермы, которых нет в большинстве современных Библий. Это наглядно показывает, что рукопись и позднейший канонический список — не одно и то же.<ProofLink proof={codexProof} /></p>
+    </article>
+    <article>
+      <p class="eyebrow">1816–1876 · русский перевод</p>
+      <h3>Синодальный перевод</h3>
+      <p>Работу начало Российское Библейское Общество, продолжили церковные переводчики, а полная Библия вышла в 1876 году. Ветхий Завет переводили прежде всего с масоретского текста, сверяясь с греческой и церковнославянской версиями.<ProofLink proof={synodalProof} /></p>
+    </article>
+  </div>
+</section>
+
+<style>
+  section { display: grid; gap: 20px; }
+  .route { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+  article { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 18px; }
+  .route article { position: relative; padding-top: 54px; }
+  .route span { position: absolute; inset: 14px auto auto 16px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--focus); color: var(--bg); font-weight: 700; }
+  h3 { margin: 0 0 8px; font-size: 20px; }
+  p { margin: 0; }
+  .evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
+  .eyebrow { color: var(--focus); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 6px; }
+  @media (max-width: 900px) { .route { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+</style>

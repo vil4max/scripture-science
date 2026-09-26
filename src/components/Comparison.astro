@@ -1,0 +1,225 @@
+---
+// docs/tasks/site-m5-reading-polish.md W1: topic-first reading layout,
+// replacing the old eight-narrow-columns table as the primary view (Problems
+// seen #1: "a wall of eight narrow columns ... with horizontal scrolling").
+// One section per topic; the topic list lives in the sidebar (the page's
+// contents, src/pages/compare.astro). docs/tasks/site-m10-desktop-rows.md:
+// with every tradition shown, each is a row with the name on the left and the
+// position in one wide column. docs/tasks/site-m14-selection.md W2: with the
+// reader's choice of two or three traditions, only theirs are shown, side by
+// side, one column each in the reader's order. The full table
+// (src/components/ComparisonTable.astro) stays available inside a closed
+// <details> for a reader who wants the whole grid on one screen.
+import type { CollectionEntry } from 'astro:content';
+import ComparisonTable from './ComparisonTable.astro';
+import Dispute from './Dispute.astro';
+import MatrixPosition from './MatrixPosition.astro';
+import { JW_NOTE_ID } from '../lib/jwNote';
+import { TOPIC_ORDER, TOPIC_TITLES_RU } from '../lib/rules';
+
+interface Props {
+  traditions: CollectionEntry<'matrix'>[];
+  colorById: Map<string, string>;
+  withJwFootnote?: boolean;
+  disputes?: CollectionEntry<'disputes'>[];
+}
+
+const { traditions, colorById, withJwFootnote = false, disputes = [] } = Astro.props;
+const jwIndex = traditions.findIndex((t) => t.id === 'jw');
+const order = traditions.map((t) => t.id);
+const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
+---
+
+<div class="comparison" data-comparison>
+  <div class="layout">
+    <div class="topics">
+      {
+        TOPIC_ORDER.map((topicId) => (
+          <section class="topic" id={`topic-${topicId}`}>
+            <h3>{TOPIC_TITLES_RU[topicId]} <a class="permalink" href={`#topic-${topicId}`} data-reading-link={`topic-${topicId}`} aria-label={`Ссылка на тему: ${TOPIC_TITLES_RU[topicId]}`}>Ссылка</a></h3>
+            <div class="grid">
+              {traditions.map((tradition, index) => {
+                const position = tradition.data.positions.find((p) => p.topic === topicId);
+                if (!position) return null;
+                return (
+                  <article class="block" data-trad={tradition.id}>
+                    <p class="who">
+                      <span
+                        class="chip"
+                        style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`}
+                        aria-hidden="true"
+                      />
+                      {tradition.data.name}
+                      {withJwFootnote && index === jwIndex && (
+                        <sup>
+                          <a href={`#${JW_NOTE_ID}`}>*</a>
+                        </sup>
+                      )}
+                    </p>
+                    <MatrixPosition position={position} tradition={tradition.id} briefAvailable />
+                  </article>
+                );
+              })}
+            </div>
+            {disputes
+              .filter((dispute) => dispute.data.topic === topicId)
+              .map((dispute) => (
+                <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
+              ))}
+          </section>
+        ))
+      }
+    </div>
+  </div>
+
+  <details class="full-table">
+    <summary>Таблица: все темы и традиции на одном экране</summary>
+    <ComparisonTable traditions={traditions} colorById={colorById} withJwFootnote={withJwFootnote} />
+  </details>
+</div>
+
+<style>
+  .topic[hidden] { display: none; }
+  .topic { scroll-margin-top: calc(var(--comparison-header-h, var(--selection-bar-h, 0px)) + 16px); }
+  .permalink { font-family: 'PT Sans',sans-serif; font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 12px; }
+  .layout {
+    display: grid;
+    gap: 32px;
+  }
+
+  .topics {
+    display: grid;
+    gap: 48px;
+  }
+
+  .topic h3 {
+    font-size: 21px;
+    margin: 0 0 16px;
+    /* Clears the pinned selection bar when a sidebar link jumps here. */
+    scroll-margin-top: calc(var(--selection-bar-h, 0px) + 16px);
+  }
+
+  .grid {
+    display: grid;
+    gap: 12px;
+  }
+
+  .block {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 14px 16px;
+    background: var(--surface);
+    display: grid;
+    gap: 8px;
+    align-content: start;
+  }
+
+  .who {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .chip {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .full-table {
+    margin-top: 40px;
+  }
+
+  .full-table summary {
+    cursor: pointer;
+    color: var(--muted);
+  }
+
+  .full-table :global(.table-wrap) {
+    margin-top: 16px;
+  }
+
+  .block[hidden] {
+    display: none;
+  }
+
+  /* Two or three chosen traditions: one column each, name above the text. */
+  .grid.cols {
+    grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
+    column-gap: 20px;
+    align-items: start;
+  }
+
+  /* In columns the pinned header on /compare/ names each column. */
+  .grid.cols .who {
+    display: none;
+  }
+
+  /* After the base .block and .who rules on purpose: same specificity, so
+  only a later rule can override their gap and alignment. */
+  @media (min-width: 900px) {
+    .block {
+      grid-template-columns: 190px minmax(0, 1fr);
+      column-gap: 24px;
+    }
+
+    .who {
+      align-items: flex-start;
+    }
+
+    .who .chip {
+      margin-top: 7px;
+    }
+
+    .grid.cols .block {
+      grid-template-columns: minmax(0, 1fr);
+    }
+  }
+</style>
+
+<script>
+  import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
+  import { disputeView } from '../lib/disputes';
+  import { onSelection } from '../lib/selection-client';
+
+  // docs/tasks/site-m14-selection.md W2: follow the reader's choice.
+  const root = document.querySelector<HTMLElement>('[data-comparison]');
+  if (root) {
+    const grids = Array.from(root.querySelectorAll<HTMLElement>('.topic .grid'));
+    const disputes = Array.from(root.querySelectorAll<HTMLElement>('[data-dispute]'));
+    const sidesOf = (dispute: HTMLElement) => ({
+      challengers: (dispute.dataset.challengers ?? '').split(' ').filter(Boolean),
+      answerers: (dispute.dataset.answerers ?? '').split(' ').filter(Boolean),
+    });
+    onSelection((ids) => {
+      const slotMode = Boolean(document.querySelector('[data-comparison-slots]'));
+      const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
+      for (const dispute of disputes) {
+        const view = disputeView(sidesOf(dispute), ids);
+        dispute.hidden = !view.visible;
+        const columns = slotMode && ids.length >= 2;
+        for (const side of dispute.querySelectorAll<HTMLElement>('.side')) side.classList.toggle('slot-columns', columns);
+        for (const part of dispute.querySelectorAll<HTMLElement>('[data-trad]')) {
+          part.hidden = !view.shown.includes(part.dataset.trad ?? '');
+          const index = slots.indexOf(part.dataset.trad ?? '');
+          part.style.gridColumn = columns && index >= 0 ? String(index + 1) : '';
+          part.style.gridRow = columns ? '2' : '';
+        }
+      }
+      for (const grid of grids) {
+        for (const block of grid.querySelectorAll<HTMLElement>('.block')) {
+          const index = (slotMode ? slots : ids).indexOf(block.dataset.trad ?? '');
+          block.hidden = (slotMode || ids.length > 0) && index === -1;
+          block.style.order = index === -1 ? '' : String(index);
+          block.style.gridColumn = slotMode && index >= 0 ? String(index + 1) : '';
+          block.style.gridRow = slotMode ? '1' : '';
+        }
+        grid.classList.toggle('cols', slotMode || ids.length > 1);
+        grid.style.setProperty('--cols', String(slotMode ? 3 : ids.length));
+      }
+    });
+  }
+</script>

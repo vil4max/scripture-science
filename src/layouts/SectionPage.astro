@@ -1,0 +1,79 @@
+---
+// One section of the site as its own page (docs/tasks/site-m13-sidebar-sections.md):
+// the sidebar in Base lists the sections, and each page carries a title, a
+// lead and its content. `jwNote` renders the Jehovah's Witnesses footnote
+// (docs/DECISIONS.md) that every page describing them must carry.
+import JwNote from '../components/JwNote.astro';
+import Base from './Base.astro';
+
+interface Props {
+  title: string;
+  lead?: string;
+  jwNote?: boolean;
+  selectionBar?: boolean;
+}
+
+const { title, lead, jwNote = false, selectionBar = false } = Astro.props;
+---
+
+<Base title={title} description={lead} selectionBar={selectionBar}>
+  <main class="page">
+    <header class="page-head">
+      <h1>{title}</h1>
+      {lead && <p class="lead">{lead}</p>}
+      <slot name="header-details" />
+    </header>
+    <slot />
+    {jwNote && <JwNote />}
+  </main>
+</Base>
+
+<style>
+  .page {
+    max-width: var(--page);
+    margin: 0 auto;
+    padding: 40px 32px 64px;
+    display: grid;
+    /* minmax(0, 1fr), not the implicit auto column: a wide child (a
+    table, a chart) must not widen the whole page. */
+    grid-template-columns: minmax(0, 1fr);
+    gap: 40px;
+  }
+
+  .page-head h1 {
+    margin: 0 0 12px;
+    font-size: 36px;
+  }
+
+  .lead {
+    margin: 0;
+    max-width: var(--measure);
+    font-size: 20px;
+    color: var(--muted);
+  }
+
+  .page :global(h2) {
+    font-size: 26px;
+    margin: 0 0 8px;
+  }
+
+  .page :global(.section-lead) {
+    margin: 0 0 20px;
+    color: var(--muted);
+  }
+
+  .page :global(.empty) {
+    color: var(--muted);
+    font-style: italic;
+  }
+
+  @media (max-width: 760px) {
+    .page {
+      padding: 28px 16px 48px;
+    }
+
+    .page-head h1 {
+      font-size: 30px;
+    }
+  }
+</style>

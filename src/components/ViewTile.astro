@@ -1,0 +1,248 @@
+---
+// One tradition's document about others (EDITORIAL.md principle 9): author ->
+// the traditions it speaks about, title and year, issuing body, whether it is
+// the tradition's official position (docs/tasks/site-m20-unity-marks.md),
+// the summary in full, the quote open and set apart, its attribution linking
+// to the source (owner, 2026-09-26), other sources as a short line.
+import SourceLink from './SourceLink.astro';
+import ProofLink from './ProofLink.astro';
+
+interface Proof {
+  url: string;
+  title: string;
+  tier: 'official' | 'reference' | 'news';
+  excerpt: string;
+  accessed: string;
+}
+
+interface Props {
+  author: string;
+  doc: {
+    about: string[];
+    body: string;
+    date: string;
+    unity: { kind: 'official' | 'partial'; note: string; proof: Proof[] };
+    status_check: 'verified' | 'todo';
+    summary: string;
+    quote: { text: string; url: string };
+    proof: Proof[];
+    title: string;
+    title_ru: string;
+  };
+  // Age-ordered tradition ids, names and colour tokens (EDITORIAL.md
+  // principle 2: subjects stand older first).
+  order: string[];
+  namesById: Map<string, string>;
+  colorById: Map<string, string>;
+}
+
+const { author, doc, order, namesById, colorById } = Astro.props;
+const nameOf = (id: string) => namesById.get(id) ?? id;
+const colorOf = (id: string) => `var(${colorById.get(id) ?? '--t-other'})`;
+const rank = new Map(order.map((id, index) => [id, index]));
+const about = [...doc.about].sort((a, b) => (rank.get(a) ?? rank.size) - (rank.get(b) ?? rank.size));
+
+// Dates are a year ("1180"), a full ISO date or a phrase ("не указана").
+const year = /^(\d{1,4})(?:-\d{2}-\d{2})?$/.exec(doc.date)?.[1];
+const yearLabel = year ? `${Number(year)} г.` : `дата ${doc.date}`;
+const fullDate = /^\d{4}-\d{2}-\d{2}$/.test(doc.date)
+  ? new Intl.DateTimeFormat('ru', { day: 'numeric', month: 'long', year: 'numeric', timeZone: 'UTC' }).format(
+      new Date(`${doc.date}T00:00:00Z`),
+    )
+  : null;
+const UNITY_LABEL = { official: 'Официальная позиция традиции', partial: 'Не официальная позиция традиции' } as const;
+// Some quotes already carry their own guillemets.
+const quoted = /^«[\s\S]*»$/.test(doc.quote.text) ? doc.quote.text : `«${doc.quote.text}»`;
+---
+
+<article class="tile">
+  <div class="route">
+    <span class="chip author" style={`--chip:${colorOf(author)}`}>{nameOf(author)}</span>
+    <span class="arrow" aria-hidden="true">→</span>
+    {
+      about.length > 0 ? (
+        <ul class="about" aria-label="О каких традициях">
+          {about.map((id) => (
+            <li class="chip" style={`--chip:${colorOf(id)}`}>
+              {nameOf(id)}
+            </li>
+          ))}
+        </ul>
+      ) : (
+        <span class="unnamed">конкретные традиции не названы</span>
+      )
+    }
+  </div>
+  <h4 class="title">{doc.title_ru} <span class="year">{yearLabel}</span></h4>
+  <p class="meta">
+    {doc.body}
+    {fullDate && `, ${fullDate}`}
+  </p>
+  <p class={`unity ${doc.unity.kind}`}>
+    <span class="unity-label">{UNITY_LABEL[doc.unity.kind]}:</span> {doc.unity.note}
+    <ProofLink proof={doc.unity.proof} exclude={[doc.quote.url, ...doc.proof.map((item) => item.url)]} inline />
+  </p>
+  <p class="summary">{doc.summary}</p>
+  {doc.status_check === 'todo' && <p class="todo-flag">источник уточняется</p>}
+  <blockquote class="quote">
+    <p>{quoted}</p>
+    <cite>
+      —{' '}
+      <SourceLink url={doc.quote.url} title={doc.title} />
+      <ProofLink proof={doc.proof} exclude={[doc.quote.url]} inline />
+    </cite>
+  </blockquote>
+</article>
+
+<style>
+  .tile {
+    border: 1px solid var(--line);
+    border-radius: 10px;
+    padding: 16px 18px;
+    background: var(--surface);
+    display: grid;
+    gap: 10px;
+    align-content: start;
+    min-width: 0;
+  }
+
+  .route {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    font-size: 14px;
+  }
+
+  /* Subject chips wrap inside their own box, hanging under the first one. */
+  .about,
+  .unnamed {
+    flex: 1 1 0;
+    min-width: 0;
+  }
+
+  .about {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .chip {
+    position: relative;
+    list-style: none;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    padding: 2px 10px 2px 22px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
+
+  .chip::before {
+    content: '';
+    position: absolute;
+    left: 8px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    background: var(--chip);
+  }
+
+  .chip.author {
+    border-color: var(--chip);
+    background: color-mix(in srgb, var(--chip) 22%, var(--surface));
+    font-weight: 700;
+  }
+
+  .arrow,
+  .unnamed {
+    color: var(--muted);
+  }
+
+  .title {
+    margin: 0;
+    font-family: 'PT Serif', Georgia, serif;
+    font-size: 20px;
+    line-height: 1.25;
+  }
+
+  .year {
+    margin-left: 4px;
+    font-family: 'PT Sans', -apple-system, 'Segoe UI', Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 400;
+    color: var(--muted);
+    white-space: nowrap;
+  }
+
+  .meta {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.45;
+    color: var(--muted);
+  }
+
+  .unity {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .unity-label {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .unity.partial .unity-label {
+    color: var(--focus);
+  }
+
+  .unity :global(.proof-inline a) {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  .summary {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .todo-flag {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--focus);
+  }
+
+  .quote {
+    margin: 0;
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  }
+
+  .quote p {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .quote cite {
+    display: block;
+    margin-top: 4px;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .quote cite a {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  .quote cite a:hover {
+    text-decoration: underline;
+  }
+</style>

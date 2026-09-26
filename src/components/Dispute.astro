@@ -1,0 +1,220 @@
+---
+// A dispute under its comparison topic (EDITORIAL.md principle 10;
+// docs/tasks/site-m19-disputes.md): the contesting traditions' view, then the
+// contested ones' answer, each from its own sources and older first within a
+// side. Comparison.astro's script shows the parts the reader's choice asks for.
+import type { CollectionEntry } from 'astro:content';
+import SourceLink from './SourceLink.astro';
+import ProofLink from './ProofLink.astro';
+import { UNITY_LABEL_RU } from '../lib/rules';
+
+interface Props {
+  dispute: CollectionEntry<'disputes'>;
+  // Age-ordered tradition ids (EDITORIAL.md principle 2).
+  order: string[];
+  namesById: Map<string, string>;
+  colorById: Map<string, string>;
+}
+
+const { dispute, order, namesById, colorById } = Astro.props;
+type Part = CollectionEntry<'disputes'>['data']['challenges'][number];
+const rank = (id: string) => (order.includes(id) ? order.indexOf(id) : order.length);
+const byAge = (parts: Part[]) => [...parts].sort((a, b) => rank(a.tradition) - rank(b.tradition));
+// Sources the part already links, so the unity mark does not repeat them.
+const linked = (part: Part) =>
+  [part.quote?.url, part.scripture?.url, ...part.proof.map((item) => item.url)].filter((u): u is string => Boolean(u));
+const sides = [
+  { head: 'Возражение', parts: byAge(dispute.data.challenges) },
+  { head: 'Позиция другой стороны', parts: byAge(dispute.data.answers) },
+];
+---
+
+<aside
+  id={`question-${dispute.id}`}
+  class="dispute"
+  data-dispute
+  data-challengers={dispute.data.challenges.map((part) => part.tradition).join(' ')}
+  data-answerers={dispute.data.answers.map((part) => part.tradition).join(' ')}
+>
+  <p class="kicker">Спорный вопрос</p>
+  <h4>{dispute.data.title} <a class="permalink" data-reading-link={`question-${dispute.id}`} href={`#question-${dispute.id}`} aria-label={`Ссылка на вопрос: ${dispute.data.title}`}>Ссылка</a></h4>
+  {
+    sides.map((side) => (
+      <div class="side">
+        <p class="side-head">{side.head}</p>
+        {side.parts.map((part) => (
+          <article class="part" data-trad={part.tradition}>
+            <p class="who">
+              <span class="chip" style={`background:var(${colorById.get(part.tradition) ?? '--t-other'})`} aria-hidden="true" />
+              {namesById.get(part.tradition) ?? part.tradition}
+            </p>
+            <p class="summary">{part.summary}</p>
+            <span data-reading-brief hidden><ProofLink proof={part.proof}/></span>
+            <p class={`unity ${part.unity.kind}`}>
+              <span class="unity-label">{UNITY_LABEL_RU[part.unity.kind]}</span><span data-reading-detail>: {part.unity.note}</span>
+              <ProofLink proof={part.unity.proof} exclude={linked(part)} inline />
+            </p>
+            {part.quote && (
+              <blockquote class="quote" data-reading-detail>
+                <p>«{part.quote.text}»</p>
+                <cite>
+                  —{' '}
+                  <SourceLink url={part.quote.url} title={part.quote.source} />
+                  <ProofLink
+                    proof={part.proof}
+                    exclude={[part.quote.url, part.scripture?.url].filter((u): u is string => Boolean(u))}
+                    inline
+                  />
+                </cite>
+              </blockquote>
+            )}
+            {part.scripture && (
+              <blockquote class="quote" data-reading-detail>
+                <p>«{part.scripture.text}»</p>
+                <cite>
+                  —{' '}
+                  <SourceLink url={part.scripture.url} title={part.scripture.ref} />
+                </cite>
+              </blockquote>
+            )}
+            {!part.quote && (
+    <span data-reading-detail={true}>
+              <ProofLink proof={part.proof} exclude={[part.scripture?.url].filter((u): u is string => Boolean(u))} />
+    </span>
+            )}
+          </article>
+        ))}
+      </div>
+    ))
+  }
+</aside>
+
+<style>
+  .dispute { scroll-margin-top: calc(var(--comparison-header-h, var(--selection-bar-h, 0px)) + 16px); }
+  .permalink { font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 12px; }
+  .dispute {
+    margin-top: 16px;
+    padding: 16px 18px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--focus);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--focus) 6%, var(--surface));
+    display: grid;
+    gap: 12px;
+  }
+
+  .dispute[hidden],
+  .part[hidden] {
+    display: none;
+  }
+
+  .kicker {
+    margin: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--focus);
+  }
+
+  h4 {
+    margin: -6px 0 0;
+    font-size: 19px;
+  }
+
+  .side {
+    display: grid;
+    gap: 12px;
+  }
+
+  .side.slot-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); column-gap: 20px; }
+  .side.slot-columns .side-head { grid-column: 1 / -1; }
+
+  .side + .side {
+    padding-top: 12px;
+    border-top: 1px solid var(--line);
+  }
+
+  .side-head {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 700;
+    color: var(--muted);
+  }
+
+  .part {
+    display: grid;
+    gap: 6px;
+    min-width: 0;
+  }
+
+  .who {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin: 0;
+    font-weight: 700;
+  }
+
+  .chip {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    flex: none;
+  }
+
+  .summary {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .unity {
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--muted);
+  }
+
+  .unity-label {
+    font-weight: 700;
+    color: var(--ink);
+  }
+
+  .unity.divided .unity-label {
+    color: var(--focus);
+  }
+
+  .unity :global(.proof-inline a) {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  .quote {
+    margin: 4px 0 0;
+    padding: 2px 0 2px 14px;
+    border-left: 3px solid color-mix(in srgb, var(--ink) 25%, transparent);
+  }
+
+  .quote p {
+    margin: 0;
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .quote cite {
+    display: block;
+    margin-top: 4px;
+    font-style: normal;
+    font-size: 14px;
+    color: var(--muted);
+  }
+
+  .quote cite a {
+    color: var(--focus);
+    text-decoration: none;
+  }
+
+  .quote cite a:hover {
+    text-decoration: underline;
+  }
+</style>

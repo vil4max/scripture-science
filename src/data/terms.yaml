@@ -1,0 +1,108 @@
+- term: секта
+  use_on_site: false
+  definition: В социологии религии, начиная с типологии Эрнста Трёльча (кон. XIX – нач. XX в.), сектой называют сравнительно небольшую группу, стремящуюся к «неопосредованному» спасению и относящуюся к окружающему миру безразлично или враждебно — в отличие от более крупного, институционально непрерывного типа «церкви».
+  notes: Слово восходит к лат. secta (учение, направление, школа); по одной из версий — от глагола sequor («следовать»), по другой — от secare («отсекать, отделять»). Согласно порталу «Азбука веры», в западной христианской литературе термин закрепился при переводе Библии на латынь (Vulgata), где блаженный Иероним нередко передавал им греческое αἵρεσις. Тот же портал утверждает, что слова «секта» и «сектант» не имеют оскорбительного значения, и применяет их, в частности, к общинам адвентистов, свидетелей Иеговы и мормонов, — но фиксирует и то, что «некоторые общественные деятели и представители религиозных групп выступают против использования термина «секта»» применительно к тем или иным группам.
+  proof:
+    - url: http://web.archive.org/web/20260724185802/https://www.britannica.com/topic/Christianity/Church-sect-and-mystical-movement
+      title: "Christianity: Church, sect, and mystical movement — Encyclopaedia Britannica (архивная копия)"
+      tier: reference
+      excerpt: sects, which are comparatively small groups that strive for unmediated salvation and that are related indifferently or antagonistically to the world
+      accessed: 2026-09-25
+    - url: https://azbyka.ru/sekta
+      title: Секта — Азбука веры
+      tier: official
+      excerpt: понятие (термин), которое используется для обозначения религиозных объединений, отделившихся от какой-либо крупной религиозной организации и вероучительно противоречащих ей
+      accessed: 2026-09-25
+    - url: https://azbyka.ru/sekta
+      title: Секта — Азбука веры
+      tier: official
+      excerpt: Термины «секта» и «сектант» не имеют оскорбительного значения
+      accessed: 2026-09-25
+    - url: https://azbyka.ru/sekta
+      title: Секта — Азбука веры
+      tier: official
+      excerpt: некоторые общественные деятели и представители религиозных групп выступают против использования термина «секта»
+      accessed: 2026-09-25
+  status_check: verified
+- term: конфессия
+  use_on_site: true
+  definition: Конфессия (от лат. confessio — исповедание) — объединение верующих в пределах одной религии, имеющее собственное вероучение, особенности богослужения и определённую организационную структуру; к христианским конфессиям относят, в частности, католицизм и протестантизм.
+  notes: Термин получил распространение в эпоху Реформации, когда отделявшиеся от католичества протестантские общины формулировали собственные исповедания веры — «confessiones».
+  proof:
+    - url: https://azbyka.ru/konfessiya
+      title: Конфессия — Азбука веры
+      tier: official
+      excerpt: объединение верующих, в пределах одной религии, имеющее свое вероучение, особенности богослужения и определенную организационную структуру
+      accessed: 2026-09-25
+  status_check: todo
+  todo: "Определение проверено только на конфессиональном (православном) портале «Азбука веры». Независимый источник референсного уровня не найден в этой сессии: bigenc.ru и gramota.ru отдали пустой антибот-ответ (Qrator), pravenc.ru и dic.academic.ru отказали в соединении. Нужно открыть один из этих (или иной нейтральный энциклопедический) источник перед публикацией."
+- term: деноминация
+  use_on_site: true
+  definition: Деноминация — конкретное религиозное объединение (церковь, община) в составе более широкой религии, обозначаемое собственным названием, историей, организацией и вероучением. Например, в США, где это словоупотребление особенно распространено, крупнейшей отдельной деноминацией называют католицизм, а протестантские церкви в совокупности составляют большинство религиозных приверженцев.
+  notes: Термин нейтрально применяется энциклопедическими источниками как к католической, так и к протестантским церквам, без указания на численное или доктринальное меньшинство.
+  proof:
+    - url: http://web.archive.org/web/20260822231059/https://www.britannica.com/topic/denomination
+      title: "United States: Religious groups — Encyclopaedia Britannica (архивная копия)"
+      tier: reference
+      excerpt: Roman Catholicism is the largest single denomination (about one-fifth of the U.S. population), the many churches of Protestantism constitute the majority
+      accessed: 2026-09-25
+  status_check: verified
+- term: новое религиозное движение (НРД)
+  use_on_site: true
+  definition: Новое религиозное движение (НРД) — нейтральный, не содержащий оценочного значения термин для религиозных или философских объединений, предлагающих ответы на вопросы о смысле жизни. По словоупотреблению исследовательницы Айлин Баркер (её книга так и называется — «Новые религиозные движения»), это понятие в основном относится к движениям, принявшим современную форму после Второй мировой войны.
+  notes: Основанная Баркер организация Inform описывает себя как «независимую образовательную благотворительную организацию, предоставляющую информацию о религиозных меньшинствах и сектах», стремящуюся к максимальной точности и опоре на данные. Православный портал «Азбука веры», пересказывая книгу Баркер, отмечает, что использование термина «НРД» «позволяет сохранить научную объективность, поскольку он не несёт в себе оценочного значения», но в собственной, конфессиональной оценке называет «влиятельными и агрессивными сектами, такими как свидетели Иеговы и мормоны» ряд движений, не охватываемых понятием НРД по возрасту (Святые последних дней — с 1830 года, свидетели Иеговы — с 1870-х).
+  proof:
+    - url: https://inform.ac/about-us/
+      title: About Us — Inform
+      tier: reference
+      excerpt: an independent educational charity providing information about minority religions and sects which is as accurate, up-to-date and as evidence-based as possible
+      accessed: 2026-09-25
+    - url: https://azbyka.ru/sekta
+      title: Секта — Азбука веры
+      tier: official
+      excerpt: использование термина «НРД» позволяет сохранить научную объективность, поскольку он не несёт в себе оценочного значения
+      accessed: 2026-09-25
+    - url: https://azbyka.ru/sekta
+      title: Секта — Азбука веры
+      tier: official
+      excerpt: влиятельные и агрессивные секты, такие как свидетели Иеговы и мормоны
+      accessed: 2026-09-25
+  status_check: verified
+- term: реставрационизм
+  use_on_site: true
+  definition: Реставрационизм — направление в христианстве, стремящееся вернуться к практике и вероучению ранней Церкви (также называемое христианским примитивизмом). В XIX веке в Америке оно породило ряд новых, не связанных друг с другом христианских групп, в том числе мормонов и свидетелей Иеговы, стремившихся воспроизвести принципы новозаветной Церкви.
+  notes: По данным той же справочной статьи, движение восходит к Средним векам, получило новый импульс в эпоху Реформации XVI века, а в середине XX века на его формы повлияли харизматическое и пятидесятническое возрождения.
+  proof:
+    - url: https://www.ebsco.com/research-starters/religion-and-philosophy/restorationism
+      title: Restorationism — EBSCO Research Starters (авт. Janine Ungvarsky, 2023)
+      tier: reference
+      excerpt: new denominations such as the Mormons, Jehovah's Witnesses, and the Disciples of Christ, all emphasizing unity and a return to Apostolic traditions
+      accessed: 2026-09-25
+    - url: https://www.ebsco.com/research-starters/religion-and-philosophy/restorationism
+      title: Restorationism — EBSCO Research Starters (авт. Janine Ungvarsky, 2023)
+      tier: reference
+      excerpt: In the nineteenth century, various unaffiliated Christian groups emerged, striving to replicate the principles of the New Testament Church
+      accessed: 2026-09-25
+  status_check: verified
+- term: адвентизм
+  use_on_site: true
+  definition: "Адвентизм — течение, восходящее к движению миллеритов: в начале 1830-х годов американский проповедник Уильям Миллер начал провозглашать скорое («адвент» — пришествие) телесное возвращение Христа, первоначально ожидавшееся около 1843–1844 годов. Из миллеритского движения после «великого разочарования» 1844 года сложился ряд адвентистских групп, включая Церковь адвентистов седьмого дня."
+  notes: Название происходит от лат. adventus — «пришествие».
+  proof:
+    - url: http://web.archive.org/web/20250907220248/https://www.britannica.com/topic/Millerism
+      title: Millerism — Encyclopaedia Britannica (архивная копия)
+      tier: reference
+      excerpt: a movement called Millerism that sought to revive belief that the bodily arrival ("advent") of Christ was imminent
+      accessed: 2026-09-25
+  status_check: verified
+- term: религиозные меньшинства
+  use_on_site: true
+  definition: Религиозные меньшинства — нейтральный собирательный термин для религиозных групп, не относящихся к численно преобладающим традициям; используется, в частности, благотворительной организацией Inform как альтернатива оценочным обозначениям.
+  notes: Inform описывает собственную задачу как предоставление точной, основанной на данных информации о «религиозных меньшинствах и сектах» (minority religions and sects) с целью предотвратить вред от недостоверных сведений о них.
+  proof:
+    - url: https://inform.ac/about-us/
+      title: About Us — Inform
+      tier: reference
+      excerpt: providing information about minority religions and sects which is as accurate, up-to-date and as evidence-based as possible
+      accessed: 2026-09-25
+  status_check: verified
