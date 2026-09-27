@@ -9,6 +9,7 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
 ---
 <section id="traditions" aria-labelledby="families-title" class="families">
   <h2 id="families-title">Авраамические религии</h2>
+  <p class="order-note">Основные традиции — по времени возникновения, от древних к более поздним.</p>
   <p class="intro">{overview.introduction.text}</p>
   <section class="family" aria-labelledby="judaism-title">
     <h3 id="judaism-title">Иудаизм</h3>
@@ -30,6 +31,7 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
   </section>
 </section>
 <style>
+  .order-note { color: var(--muted); font-size: 15px; margin: 8px 0 20px; }
   .intro { max-width: 80ch; }
   .family { margin-top: 36px; }
   .family > h3 { font-size: 30px; margin: 0 0 12px; }
