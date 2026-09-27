@@ -2,7 +2,7 @@
 import data from '../data/world-countries.json';
 import shapes from '../data/world-shapes.json';
 import groups from '../data/world-composition.json';
-import { WORLD_COLORS, largestGroup, countryShare } from '../lib/worldAtlas';
+import { WORLD_COLORS, largestGroup, formatShare } from '../lib/worldAtlas';
 const byId = new Map(data.countries.map((country) => [country.id, country]));
 const labels = new Map(groups.map((group) => [group.id, group.label]));
 const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 'ru'));
@@ -22,15 +22,19 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
     })}
   </svg>
   <ul class="legend">{groups.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет сопоставленных данных</li></ul>
-  <label for="atlas-country">Страна или территория</label>
-  <select id="atlas-country"><option value="">Выберите страну…</option>{ordered.map((country) => <option value={country.id}>{country.name}</option>)}</select>
-  <div id="country-detail" aria-live="polite" hidden></div>
-  <details class="all-countries"><summary>Таблица всех стран и территорий</summary><div class="table-scroll"><table><caption>Доли населения, 2020 год</caption><thead><tr><th>Страна</th>{data.groups.map((id) => <th>{labels.get(id)}</th>)}</tr></thead><tbody>{ordered.map((country) => <tr><th>{country.name}</th>{country.counts.map((n) => <td>{countryShare(n, country.total)}</td>)}</tr>)}</tbody></table></div></details>
+  <label for="atlas-country">Весь мир, страна или территория</label>
+  <select id="atlas-country"><option value="">Весь мир</option>{ordered.map((country) => <option value={country.id}>{country.name}</option>)}</select>
+  <div id="country-detail" aria-live="polite">
+    <h3>Весь мир · 2020</h3>
+    <dl>{[...groups].sort((a, b) => b.share - a.share).map((group) => <div class:list={{ largest: group.id === largestGroup(groups.map((g) => g.share), groups.map((g) => g.id)) }}>
+      <dt>{group.label}</dt><dd><span class="bar-track" aria-hidden="true"><span class="bar-fill" style={`width:${group.share}%;background:var(${WORLD_COLORS[group.id]})`}/></span><span class="bar-value">{formatShare(group.share)}</span></dd>
+    </div>)}</dl>
+  </div>
 </section>
 <script>
   import data from '../data/world-countries.json';
   import groups from '../data/world-composition.json';
-  import { countryShare, largestGroup, WORLD_COLORS } from '../lib/worldAtlas';
+  import { countryShare, formatShare, largestGroup, WORLD_COLORS } from '../lib/worldAtlas';
   const select = document.querySelector<HTMLSelectElement>('#atlas-country');
   const detail = document.querySelector<HTMLElement>('#country-detail');
   function buildList(rows: { id: string; label: string; value: string; share: number }[], largest: string | null) {
@@ -54,14 +58,15 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
     if (!detail || !select) return;
     select.value = '';
     document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.remove('selected'));
-    detail.replaceChildren();
-    detail.hidden = true;
+    const heading = document.createElement('h3'); heading.textContent = 'Весь мир · 2020';
+    const largest = largestGroup(groups.map((group) => group.share), groups.map((group) => group.id));
+    const list = buildList(groups.map((group) => ({ id: group.id, label: group.label, value: formatShare(group.share), share: group.share })), largest);
+    detail.replaceChildren(heading, list);
   }
   function showCountry(id: string) {
     const country = data.countries.find((item) => item.id === id);
     if (!country) { showWorld(); return; }
     if (!detail || !select) return;
-    detail.hidden = false;
     select.value = country.id;
     document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.toggle('selected', path.dataset.country === id));
     detail.replaceChildren();
@@ -71,6 +76,7 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
     detail.append(heading, list);
     if (!largest) { const note = document.createElement('p'); note.textContent = 'Нет единственной крупнейшей группы.'; detail.append(note); }
   }
+  showCountry(select?.value ?? '');
   select?.addEventListener('change', () => showCountry(select.value));
   document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => {
     path.addEventListener('click', () => showCountry(path.dataset.country!));
@@ -91,6 +97,4 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
   #country-detail :global(.bar-value) { text-align: right; font-variant-numeric: tabular-nums; }
   #country-detail :global(.bar-fill) { display: block; height: 100%; }
   #country-detail :global(.largest) { font-weight: 700; }
-  .all-countries { margin-top: 20px; }
-  summary { cursor: pointer; font-size: 14px; } .table-scroll { overflow: auto; max-height: 450px; } table { border-collapse: collapse; font-size: 13px; } th,td { padding: 6px; border-bottom: 1px solid var(--line); text-align: left; }
 </style>

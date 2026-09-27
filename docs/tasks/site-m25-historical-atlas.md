@@ -171,3 +171,31 @@ on the map. The final chart has seven equal-width tracks and no horizontal
 overflow. Browser access is now available for this follow-up, superseding the
 older access blocker above. `git diff --check` passed. Final diff review: No
 findings. No new external claims; a remote-source refresh was not run.
+
+## Unified country selector (2026-09-26)
+
+The selector now defaults to “Весь мир” and displays the complete 201-country
+and territory table directly. Selecting a country, either in the selector or
+on the map, replaces the table with its existing share chart. Returning to the
+world restores the table and clears the map selection. Remove the separate
+table disclosure to keep a single selection flow; the table remains available
+without JavaScript. Demographic data is unchanged.
+
+Validation: `npm run verify` passed (99 tests, Astro check, text fidelity).
+Browser checks passed for the default world view, Australia selection, return
+to all 201 rows, cleared map selection, and Canada selection on the map.
+`git diff --check` passed. No commit or push.
+
+## World chart correction (2026-09-26)
+
+The owner clarified that “Весь мир” means worldwide religious shares in the
+same bar chart as individual countries, not the country table. Replace the
+table with the existing sourced 2020 world-composition dataset. Render the
+world chart by default, including without JavaScript; country and map choices
+replace its bars, and returning to the world clears the selected map shape.
+This supersedes the table behavior in the preceding review note.
+
+Validation: `npm run verify` passed (99 tests, Astro check, text fidelity).
+Desktop browser checks confirmed seven world bars by default, Australia shares,
+return to world shares, cleared map selection, no table and no page overflow.
+`git diff --check` passed. No commit or push.
