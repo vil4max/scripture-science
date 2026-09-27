@@ -44,3 +44,9 @@ test('Scripture narrative links canon, Latin transmission and Reformation before
   const sequence = ['new-testament', 'sinaiticus', 'canon', 'vulgate', 'printing', 'erasmus', 'reformation-translations', 'book-of-mormon', 'synodal', 'new-world', 'modern-russian'];
   for (let i = 1; i < sequence.length; i++) assert.ok(ids.indexOf(sequence[i - 1]) < ids.indexOf(sequence[i]));
 });
+
+test('Contemporary Russian Translation is explicitly identified as cross-confessional', () => {
+  const text = guide.timeline.find((item) => item.id === 'modern-russian')?.paragraphs.join(' ') ?? '';
+  assert.match(text, /межконфессиональный перевод РБО/);
+  assert.match(text, /не православный церковный перевод/);
+});

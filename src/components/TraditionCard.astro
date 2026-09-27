@@ -30,18 +30,20 @@ interface Props {
   // True for the first Jehovah's Witnesses mention on the page
   // (docs/DECISIONS.md): renders a footnote marker linking to the note.
   withJwFootnote?: boolean;
+  // The overview card is the site's introductory mention of a tradition.
+  introduceCommonName?: boolean;
 }
 
-const { tradition, color, withJwFootnote = false, headingLevel = 3 } = Astro.props;
+const { tradition, color, withJwFootnote = false, introduceCommonName = false, headingLevel = 3 } = Astro.props;
 const Heading = `h${headingLevel}` as 'h3' | 'h4' | 'h5';
-const { name, full_name, since, scripture, adherents, self_view } = tradition.data;
+const { name, common_name, full_name, since, scripture, adherents, self_view } = tradition.data;
 const family = getFamilyByTradition(tradition.id);
 ---
 
 <article class="card">
   <Heading class="card-title">
     <span class="chip" style={`background:var(${color})`} aria-hidden="true"></span>
-    <a class="profile-link" href={withBase(`traditions/${tradition.id}/`)}>{name}</a>
+    <a class="profile-link" href={withBase(`traditions/${tradition.id}/`)}>{name}{introduceCommonName && common_name ? ` (${common_name})` : ''}</a>
     {withJwFootnote && (
       <sup>
         <a href={`#${JW_NOTE_ID}`}>*</a>

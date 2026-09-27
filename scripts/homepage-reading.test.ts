@@ -55,3 +55,14 @@ test('homepage presents the revised Orthodox framing and current source context'
   assert.match(html, /дхарма, карма и сансара/);
   assert.match(html, /бахаи, джайнов, синтоистов, сикхов, даосов, виккан, зороастрийцев/);
 });
+
+test('colloquial tradition names appear only in the introductory overview', () => {
+  const homepage = readFileSync('dist/index.html', 'utf8');
+  assert.equal(homepage.match(/Свидетели Иеговы \(иеговисты\)/g)?.length, 1);
+  assert.equal(homepage.match(/Святые последних дней \(мормоны\)/g)?.length, 1);
+
+  for (const path of ['bible/index.html', 'compare/index.html', 'traditions/jw/index.html', 'traditions/lds/index.html']) {
+    const html = readFileSync(`dist/${path}`, 'utf8');
+    assert.doesNotMatch(html, /Свидетели Иеговы \(иеговисты\)|Святые последних дней \(мормоны\)/, path);
+  }
+});

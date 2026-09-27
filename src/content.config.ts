@@ -127,6 +127,7 @@ const matrix = defineCollection({
   schema: z.object({
     id: z.enum(TRADITION_IDS),
     name: z.string(),
+    common_name: z.string().optional(),
     full_name: z.string(),
     family: z.enum(['judaism', 'christianity', 'islam']),
     since: z.object({

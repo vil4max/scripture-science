@@ -206,6 +206,8 @@ claims the main session re-checked against the source, how, and the result
 
 | 2026-09-26 | site-m25 / slice 4 | Introductory profiles and media | All new excerpts matched opened web-reader text after markup/whitespace normalisation; all ten downloaded photos inspected visually | Historical overviews use The Met and Pluralism Project. Belief explanations are attributed to Hindu American Foundation, the Dalai Lama's office, Sikh Coalition and Jinja Honcho rather than implying a universal authority. Daoism is limited to a historical movement/date. Geography ranks original Pew country counts. Wikimedia Commons imageinfo metadata supplied the exact author, title, description, licence and thumbnail URL; all are stored in media.json and credited beside the image. CC0, CC BY and CC BY-SA images retained unchanged. Governance diagrams reuse existing proof data; no new denominational disputes added. |
 
+| 2026-09-27 | site-m29 | The Contemporary Russian Translation is an RBO cross-confessional translation rather than an Orthodox Church translation | Opened the official RBO Contemporary Russian Translation overview and checked the published description | Confirmed: RBO says about 20 translators from different Christian confessions worked on it. The site now attributes the edition to RBO and distinguishes it from an Orthodox Church translation without making a claim about personal confession determine translation authority. |
+
 ### M25 consolidated acceptance (2026-09-26)
 
 - All new evidence is retained in the data and the slice records above; no new

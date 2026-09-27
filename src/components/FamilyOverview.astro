@@ -15,7 +15,7 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
   <section class="family" aria-labelledby="judaism-title">
     <h3 id="judaism-title">Иудаизм</h3>
     <p class="intro">{overview.judaism.text}</p>
-    <TraditionCard tradition={card('judaism')} color={color('judaism')} headingLevel={4} />
+    <TraditionCard tradition={card('judaism')} color={color('judaism')} headingLevel={4} introduceCommonName />
   </section>
   <section class="family christian" aria-labelledby="christian-title">
     <h3 id="christian-title">Христианство и связанные с ним движения</h3>
@@ -27,13 +27,13 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
     {overview.groups.map((group) => <section class="doctrine-group" data-doctrine-group={group.id} aria-labelledby={`${group.id}-title`}>
       <h4 id={`${group.id}-title`}>{group.title}</h4>
       <p class="intro">{group.text}</p>
-      <div class="cards">{group.ids.map((id) => <TraditionCard tradition={card(id)} color={color(id)} headingLevel={5} />)}</div>
+      <div class="cards">{group.ids.map((id) => <TraditionCard tradition={card(id)} color={color(id)} headingLevel={5} introduceCommonName />)}</div>
     </section>)}
   </section>
   <section class="family" aria-labelledby="islam-title">
     <h3 id="islam-title">Ислам</h3>
     <p class="intro">{overview.islam.text}</p>
-    <TraditionCard tradition={card('islam')} color={color('islam')} headingLevel={4} />
+    <TraditionCard tradition={card('islam')} color={color('islam')} headingLevel={4} introduceCommonName />
   </section>
 </section>
 <style>
