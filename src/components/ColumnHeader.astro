@@ -19,7 +19,6 @@ const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.
   </div>
   <noscript>Для выбора колонок включите JavaScript; полная таблица доступна ниже.</noscript>
 </div>
-<p>Одна традиция — видны все стороны её споров. Две или три — только выбранные.</p>
 <script>
   import { onSelection, setSelection } from '../lib/selection-client';
   import { comparisonSlots, replaceComparisonSlot, SLOT_PARAM } from '../lib/comparisonSlots';
@@ -62,5 +61,4 @@ const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.
   select { width: 100%; min-width: 0; padding: 12px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
   select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   @media (max-width: 600px) { .colhead { position: static; } .slots { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
-  p { margin: 10px 0 0; color: var(--muted); font-size: 13px; }
 </style>

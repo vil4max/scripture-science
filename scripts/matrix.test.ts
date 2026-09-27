@@ -5,7 +5,7 @@
 import assert from 'node:assert/strict';
 // @ts-expect-error - node:test has no types without @types/node
 import { test } from 'node:test';
-import { TOPIC_ORDER, TRADITION_IDS, checkMatrixTopicOrder, orderByAge } from '../src/lib/rules.ts';
+import { TOPIC_ORDER, TOPIC_GROUPS, TRADITION_IDS, checkMatrixTopicOrder, orderByAge } from '../src/lib/rules.ts';
 
 test('TRADITION_IDS lists all eight traditions', () => {
   assert.equal(TRADITION_IDS.length, 8);
@@ -109,4 +109,10 @@ test('orderByAge does not mutate its input', () => {
   const original = traditions.map((t) => t.id);
   orderByAge(traditions);
   assert.deepEqual(traditions.map((t) => t.id), original);
+});
+
+
+test('reading groups cover every comparison topic once in canonical order', () => {
+  assert.deepEqual(TOPIC_GROUPS.flatMap((group) => group.topics), [...TOPIC_ORDER]);
+  assert.equal(new Set(TOPIC_GROUPS.map((group) => group.id)).size, 3);
 });

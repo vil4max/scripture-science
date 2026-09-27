@@ -4,78 +4,14 @@
 // source's own order, the header/nav/sections as verbatim HTML fragments,
 // and the twelve theology comparison topics rebuilt from structured data -
 // see src/lib/content.ts and src/content.config.ts.
-import { getCollection } from 'astro:content';
 import Topic from '../../components/Topic.astro';
-import correctionsData from '../../data/corrections-orthodoxy-jw.json';
 import Base from '../../layouts/Base.astro';
-import { createArchiveLinker } from '../../lib/archive-links';
-import { getCheckedTopics, getOrderedTraditions, getSection } from '../../lib/content';
-import { createCorrector, parseCorrections, type Correction } from '../../lib/corrections';
+import { getPairDocument } from '../../lib/pairDocument';
+import type { Correction } from '../../lib/corrections';
 import { withBase } from '../../lib/paths';
 import '../../styles/orthodoxy-jw.css';
 
-// The two traditions this pair page compares. A pair page with a different
-// pair, or a future page comparing more than two, passes its own id list to
-// these same functions - nothing here is specific to exactly these two ids.
-const traditionIds = ['orthodoxy', 'jw'];
-
-const traditions = await getOrderedTraditions(traditionIds);
-const topics = await getCheckedTopics(traditionIds);
-
-const sectionIds = [
-  'history',
-  'sources',
-  'common',
-  'theology',
-  'literature',
-  'structure',
-  'dynamics',
-  'summary',
-  'glossary',
-  'refs',
-] as const;
-const [nav, header, ...sections] = await Promise.all(
-  ['nav', 'header', ...sectionIds].map((id) => getSection(id)),
-);
-
-// docs/tasks/site-m7-pair-corrections.md: facts that verification found
-// outdated are corrected visibly at render time, never written back into the
-// migrated data files, which stay reproducible by scripts/migrate_source.py.
-// Every migrated string passes through the corrector - HTML fragments get the
-// marks, plain-text fields are only checked - so the build fails unless each
-// correction's text occurs exactly once in the whole document.
-const corrections = parseCorrections(correctionsData);
-const corrector = createCorrector(corrections);
-const navHtml = corrector.html(nav.data.html);
-const headerHtml = corrector.html(header.data.html);
-const toArchive = createArchiveLinker((await getCollection('sources')).map((s) => s.data));
-const sectionHtml = Object.fromEntries(
-  sections.map((s) => [s.id, toArchive(corrector.html(s.data.html))]),
-);
-const correctedTopics = topics.map((topic) => ({
-  ...topic,
-  data: {
-    ...topic.data,
-    title: corrector.text(topic.data.title),
-    positions: Object.fromEntries(
-      Object.entries(topic.data.positions).map(([id, position]) => [
-        id,
-        {
-          ...position,
-          label: corrector.text(position.label),
-          thesis: corrector.text(position.thesis),
-          points: position.points.map((point) => ({
-            ...point,
-            ref: point.ref && corrector.text(point.ref),
-            html: corrector.html(point.html),
-          })),
-        },
-      ]),
-    ),
-    extras: corrector.html(topic.data.extras),
-  },
-}));
-corrector.assertEachAppliedOnce();
+const { traditions, correctedTopics, sectionHtml, corrections, navHtml, headerHtml } = await getPairDocument();
 
 const tierLabel: Record<Correction['proof'][number]['tier'], string> = {
   official: 'официальный источник',

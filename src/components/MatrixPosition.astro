@@ -6,13 +6,18 @@ import ProofLink from './ProofLink.astro';
 import { UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
 
 interface Props {
-  briefAvailable?: boolean;
   tradition?: string;
+  expandable?: boolean;
   position: CollectionEntry<'matrix'>['data']['positions'][number];
 }
 
-const { position, briefAvailable = false, tradition } = Astro.props;
+const { position, tradition, expandable = false } = Astro.props;
 const summary = positionSummaryText(position);
+const EvidenceTag = expandable ? 'details' : 'div';
+const quoteText = position.quote?.text_ru ?? position.quote?.text;
+const scriptureText = position.scripture?.text_ru ?? position.scripture?.text;
+const quoteInSummary = Boolean(quoteText && summary?.includes(quoteText));
+const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureText));
 ---
 
 <div class="body">
@@ -21,10 +26,11 @@ const summary = positionSummaryText(position);
   ) : (
     <p class="todo-flag">Источник уточняется</p>
   )}
-  {briefAvailable && <span data-reading-brief hidden><ProofLink proof={position.proof}/></span>}
-  {summary && position.unity && (
+  <EvidenceTag class="evidence">
+    {expandable && <summary>Обоснование и цитаты</summary>}
+  {summary && position.unity?.kind === 'divided' && (
     <p class={`unity ${position.unity.kind}`}>
-      <span class="unity-label">{UNITY_LABEL_RU[position.unity.kind]}</span><span data-reading-detail={briefAvailable || undefined}>: {position.unity.note}</span>
+      <span class="unity-label">{UNITY_LABEL_RU[position.unity.kind]}</span><span>: {position.unity.note}</span>
       <ProofLink
         proof={position.unity.proof}
         exclude={[position.quote?.url, position.scripture?.url, ...position.proof.map((item) => item.url)].filter(
@@ -36,12 +42,13 @@ const summary = positionSummaryText(position);
   )}
   {/* Detailed reading keeps quotes open, set apart by style; the attribution is the link to
   the source (owner, 2026-09-26). */}
-  {position.quote && (
-    <blockquote class="quote" data-reading-detail={briefAvailable || undefined}>
-      <p>«{position.quote.text}»</p>
+  {position.quote && !quoteInSummary && (
+    <blockquote class="quote">
+      <p>«{position.quote.text_ru ?? position.quote.text}»</p>
       <cite>
         —{' '}
         <SourceLink url={position.quote.url} title={position.quote.source} />
+        {position.quote.translation && <span class="translation"> · {position.quote.translation}</span>}
         <ProofLink
           proof={position.proof}
           exclude={[position.quote.url, position.scripture?.url].filter((u): u is string => Boolean(u))}
@@ -50,17 +57,24 @@ const summary = positionSummaryText(position);
       </cite>
     </blockquote>
   )}
-  {position.scripture && (
-    <blockquote class="quote scripture" data-reading-detail={briefAvailable || undefined}>
-      <p>«{position.scripture.text}»</p>
+  {position.scripture && !scriptureInQuote && (
+    <blockquote class="quote scripture">
+      <p>«{position.scripture.text_ru ?? position.scripture.text}»</p>
       <cite>
         —{' '}
         <SourceLink url={position.scripture.url} title={position.scripture.ref} />
+        {position.scripture.translation && <span class="translation"> · {position.scripture.translation}</span>}
       </cite>
     </blockquote>
   )}
+  {position.quote && quoteInSummary && <cite class="inline-source">
+    <SourceLink url={position.quote.url} title={position.quote.source} />
+    {position.quote.translation && <span class="translation"> · {position.quote.translation}</span>}
+    <ProofLink proof={position.proof} exclude={[position.quote.url, position.scripture?.url].filter((u): u is string => Boolean(u))} inline />
+  </cite>}
+  {!position.quote && !position.scripture && position.proof.length > 0 && <p class="inline-source">Основание: <SourceLink url={position.proof[0].url} title={position.proof[0].title} /></p>}
   {!position.quote && (
-    <span data-reading-detail={briefAvailable || undefined}>
+    <span>
     <ProofLink
       proof={position.proof}
       exclude={[position.scripture?.url].filter((u): u is string => Boolean(u))}
@@ -68,9 +82,13 @@ const summary = positionSummaryText(position);
     </span>
   )}
   {tradition && <SharedPositions tradition={tradition} topic={position.topic} />}
+  </EvidenceTag>
 </div>
 
 <style>
+  .evidence > summary { cursor: pointer; color: var(--focus); font-size: 15px; font-weight: 700; }
+  .evidence[open] > summary { margin-bottom: 12px; }
+  .inline-source { font-size: 14px; color: var(--muted); font-style: normal; }
   .body {
     display: grid;
     gap: 8px;

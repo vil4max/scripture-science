@@ -14,7 +14,7 @@ import ProofLink from '../../components/ProofLink.astro';
 import SectionPage from '../../layouts/SectionPage.astro';
 import { getDisputes, getOrderedMatrix, getOrderedViews } from '../../lib/content';
 import { getFamilyByTradition } from '../../lib/families';
-import { sinceLines, TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, TRADITION_IDS } from '../../lib/rules';
+import { sinceLines, TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, TRADITION_IDS } from '../../lib/rules';
 
 export async function getStaticPaths() {
   const traditions = await getOrderedMatrix();
@@ -81,41 +81,6 @@ const mentionsJw = tradition.id === 'jw'
     </div>
   </dl>
   <TraditionImage id={tradition.id} />
-  <GovernanceDiagram tradition={tradition.id} />
-  <section class="positions" aria-labelledby="positions-title">
-    <h2 id="positions-title">Позиции по темам</h2>
-    {TOPIC_ORDER.map((topicId) => {
-      const position = tradition.data.positions.find((item) => item.topic === topicId);
-      if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
-      return (
-        <section class="topic" aria-labelledby={`topic-${topicId}`}>
-          <h3 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h3>
-          <MatrixPosition position={position} tradition={tradition.id} />
-        </section>
-      );
-    })}
-  </section>
-  <section class="profile-section" aria-labelledby="disputes-title">
-    <h2 id="disputes-title">Спорные вопросы</h2>
-    {disputes.length ? disputes.map((dispute) => (
-      <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
-    )) : <p class="empty">В материалах сайта пока нет споров с участием этой традиции.</p>}
-  </section>
-  <section class="profile-section profile-views" aria-labelledby="views-title">
-    <h2 id="views-title">Что думают друг о друге</h2>
-    <section class="view-group" aria-labelledby="outgoing-title">
-      <h3 id="outgoing-title">Что эта традиция говорит о других</h3>
-      {outgoing.length ? outgoing.map((doc) => (
-        <ViewTile author={tradition.id} doc={doc} order={order} namesById={namesById} colorById={colorById} />
-      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
-    </section>
-    <section class="view-group" aria-labelledby="incoming-title">
-      <h3 id="incoming-title">Что другие говорят об этой традиции</h3>
-      {incoming.length ? incoming.map(({ author, doc }) => (
-        <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
-      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
-    </section>
-  </section>
   <section class="profile-section" aria-labelledby="chronology-title">
     <h2 id="chronology-title">Хронология</h2>
     {selfView && <aside>
@@ -136,10 +101,52 @@ const mentionsJw = tradition.id === 'jw'
     </ol>
     <a href={withBase('timeline/')}>Открыть общую хронологию</a>
   </section>
+  <GovernanceDiagram tradition={tradition.id} />
+  <section class="positions" aria-labelledby="positions-title">
+    <h2 id="positions-title">Позиции по темам</h2>
+    {TOPIC_ORDER.map((topicId) => {
+      const position = tradition.data.positions.find((item) => item.topic === topicId);
+      if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
+      return (
+        <>
+        {TOPIC_GROUPS.filter((group) => group.topics[0] === topicId).map((group) => <h3>{group.title}</h3>)}
+        <section class="topic" aria-labelledby={`topic-${topicId}`}>
+
+          <h4 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h4>
+            {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
+          <MatrixPosition position={position} tradition={tradition.id} />
+        </section>
+        </>
+      );
+    })}
+  </section>
+  <section class="profile-section" aria-labelledby="disputes-title">
+    <h2 id="disputes-title">Спорные вопросы</h2>
+    {disputes.length ? disputes.map((dispute) => (
+      <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
+    )) : <p class="empty">В материалах сайта пока нет споров с участием этой традиции.</p>}
+  </section>
+  <section class="profile-section profile-views" aria-labelledby="views-title">
+    <h2 id="views-title">Взгляды на другие традиции</h2>
+    <section class="view-group" aria-labelledby="outgoing-title">
+      <h3 id="outgoing-title">Что эта традиция говорит о других</h3>
+      {outgoing.length ? outgoing.map((doc) => (
+        <ViewTile author={tradition.id} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
+    </section>
+    <section class="view-group" aria-labelledby="incoming-title">
+      <h3 id="incoming-title">Что другие говорят об этой традиции</h3>
+      {incoming.length ? incoming.map(({ author, doc }) => (
+        <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
+      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
+    </section>
+  </section>
+
 
 </SectionPage>
 
 <style>
+  .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
   .chronology {
     list-style: none;
     padding: 0;
@@ -183,7 +190,7 @@ const mentionsJw = tradition.id === 'jw'
     overflow-wrap: anywhere;
   }
 
-  .topic h3 {
+  .topic h4 {
     margin: 0 0 16px;
     font-size: 21px;
   }

@@ -1,11 +1,5 @@
 ---
-// «Сравнение» (docs/tasks/site-m14-selection.md; owner, 2026-09-26: the
-// topics, the views of others and the pair documents as one section with one
-// template). The reader chooses one tradition to read or up to three to
-// compare, and scrolls through the same sections for all of them: in brief,
-// the topics side by side, what they think of each other, and the
-// detailed documents.
-import CompareControls from '../components/CompareControls.astro';
+import CompareAnchors from '../components/CompareAnchors.astro';
 import ColumnHeader from '../components/ColumnHeader.astro';
 import Comparison from '../components/Comparison.astro';
 import TraditionCompare from '../components/TraditionCompare.astro';
@@ -26,19 +20,20 @@ const disputes = await getDisputes();
 
 <SectionPage
   title="Сравнение"
-  lead="Выберите вверху одну традицию, чтобы читать о ней, или две-три, чтобы сравнить. Ниже для выбранных — кратко, позиции по пятнадцати темам рядом, что они думают друг о друге, и подробные документы. Каждая традиция описана по её собственным текстам, с источником."
-  jwNote={traditions.some((t) => t.id === 'jw')}
+  lead="Выберите до трёх традиций для сравнения."
 >
   <ColumnHeader traditions={traditions} colorById={colorById} />
-  <CompareControls />
+  <CompareAnchors />
+  <nav class="reading-nav" aria-label="Разделы сравнения">
+    <a href="#chosen">Основные сведения</a><a href="#topics">Вера и практика</a><a href="#views">Отношения между традициями</a>
+  </nav>
   <TraditionCompare traditions={traditions} />
 
   <section id="topics">
-    <h2>Общее и различное: пятнадцать тем</h2>
-    <p class="section-lead">Сопоставление по собственным источникам традиций. Спорные вопросы собраны редакционно: «возражение» и позиция другой стороны не всегда означают прямую историческую переписку. Отметка «Единого мнения нет» сохраняется и в кратком режиме.</p>
+    <h2>Вера и практика</h2>
     {
       traditions.length > 0 ? (
-        <Comparison traditions={traditions} colorById={colorById} disputes={disputes} withJwFootnote />
+        <Comparison traditions={traditions} colorById={colorById} disputes={disputes} />
       ) : (
         <p class="empty">Данные для сравнения ещё готовятся.</p>
       )
@@ -46,7 +41,8 @@ const disputes = await getDisputes();
   </section>
 
   <section id="views">
-    <h2>Что думают друг о друге</h2>
+    <h2>Отношения между традициями</h2>
+    <p>Высказывания из конкретных документов. Автор и дата помогают понять, чью позицию и какую эпоху они отражают.</p>
     {
       views.length > 0 ? (
         <ViewsSection views={views} colorById={colorById} namesById={namesById} />
@@ -56,59 +52,25 @@ const disputes = await getDisputes();
     }
   </section>
 
-  <section id="pairs">
-    <h2>Подробные документы</h2>
-    <ul class="pairs">
-      <li data-pair="orthodoxy jw">
-        <a href={withBase('pairs/orthodoxy-jw/')}>Православие и Свидетели Иеговы</a>
-        <span class="pair-note"> — подробный разбор пары: история, источники вероучения, общее, богословие, литература,
-        устройство, динамика</span>
-      </li>
-    </ul>
-  </section>
+  <p class="reference-link">Исторические события — в разделе <a href={withBase('timeline/')}>«История»</a>, справочные материалы — в разделе <a href={withBase('sources/')}>«Термины и источники»</a>.</p>
 </SectionPage>
 
 <script>
   import { onSelection } from '../lib/selection-client';
 
-  // A detailed pair document stands out when the reader's choice includes
-  // both of its traditions.
-  const items = Array.from(document.querySelectorAll<HTMLElement>('[data-pair]'));
   onSelection((ids) => {
-    for (const id of ['topics', 'views', 'pairs']) {
+    for (const id of ['topics', 'views']) {
       const section = document.getElementById(id);
       if (section) section.hidden = ids.length === 0;
-    }
-    for (const item of items) {
-      const pair = (item.dataset.pair ?? '').split(' ');
-      item.classList.toggle('match', pair.every((id) => ids.includes(id)));
     }
   });
 </script>
 
 <style>
-  .pairs {
-    margin: 0;
-    padding: 0;
-    list-style: none;
-  }
-
-  .pairs li {
-    padding: 10px 14px;
-    border-radius: 8px;
-  }
-
-  .pairs li.match {
-    background: color-mix(in srgb, var(--focus) 18%, transparent);
-  }
-
-  .pair-note {
-    color: var(--muted);
-  }
-
-  #views,
-  #pairs,
-  #topics {
+  .reading-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
+  .reading-nav a, .reference-link a { color: var(--focus); }
+  .reference-link { color: var(--muted); font-size: 15px; }
+  #views, #topics {
     scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
   }
 </style>

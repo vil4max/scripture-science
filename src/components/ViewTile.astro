@@ -1,9 +1,4 @@
 ---
-// One tradition's document about others (EDITORIAL.md principle 9): author ->
-// the traditions it speaks about, title and year, issuing body, whether it is
-// the tradition's official position (docs/tasks/site-m20-unity-marks.md),
-// the summary in full, the quote open and set apart, its attribution linking
-// to the source (owner, 2026-09-26), other sources as a short line.
 import SourceLink from './SourceLink.astro';
 import ProofLink from './ProofLink.astro';
 
@@ -17,6 +12,7 @@ interface Proof {
 
 interface Props {
   author: string;
+  showContext?: boolean;
   doc: {
     about: string[];
     body: string;
@@ -24,7 +20,7 @@ interface Props {
     unity: { kind: 'official' | 'partial'; note: string; proof: Proof[] };
     status_check: 'verified' | 'todo';
     summary: string;
-    quote: { text: string; url: string };
+    quote: { text: string; text_ru?: string; translation?: string; url: string };
     proof: Proof[];
     title: string;
     title_ru: string;
@@ -36,9 +32,8 @@ interface Props {
   colorById: Map<string, string>;
 }
 
-const { author, doc, order, namesById, colorById } = Astro.props;
+const { author, doc, order, namesById, showContext = true } = Astro.props;
 const nameOf = (id: string) => namesById.get(id) ?? id;
-const colorOf = (id: string) => `var(${colorById.get(id) ?? '--t-other'})`;
 const rank = new Map(order.map((id, index) => [id, index]));
 const about = [...doc.about].sort((a, b) => (rank.get(a) ?? rank.size) - (rank.get(b) ?? rank.size));
 
@@ -50,48 +45,38 @@ const fullDate = /^\d{4}-\d{2}-\d{2}$/.test(doc.date)
       new Date(`${doc.date}T00:00:00Z`),
     )
   : null;
-const UNITY_LABEL = { official: 'Официальная позиция традиции', partial: 'Не официальная позиция традиции' } as const;
+const UNITY_LABEL = { official: 'Официальная позиция', partial: 'Позиция автора' } as const;
 // Some quotes already carry their own guillemets.
-const quoted = /^«[\s\S]*»$/.test(doc.quote.text) ? doc.quote.text : `«${doc.quote.text}»`;
+const quoteText = doc.quote.text_ru ?? doc.quote.text;
+const quoted = /^«[\s\S]*»$/.test(quoteText) ? quoteText : `«${quoteText}»`;
 ---
 
 <article class="tile">
-  <div class="route">
-    <span class="chip author" style={`--chip:${colorOf(author)}`}>{nameOf(author)}</span>
-    <span class="arrow" aria-hidden="true">→</span>
-    {
-      about.length > 0 ? (
-        <ul class="about" aria-label="О каких традициях">
-          {about.map((id) => (
-            <li class="chip" style={`--chip:${colorOf(id)}`}>
-              {nameOf(id)}
-            </li>
-          ))}
-        </ul>
-      ) : (
-        <span class="unnamed">конкретные традиции не названы</span>
-      )
-    }
-  </div>
-  <h4 class="title">{doc.title_ru} <span class="year">{yearLabel}</span></h4>
-  <p class="meta">
-    {doc.body}
-    {fullDate && `, ${fullDate}`}
-  </p>
-  <p class={`unity ${doc.unity.kind}`}>
-    <span class="unity-label">{UNITY_LABEL[doc.unity.kind]}:</span> {doc.unity.note}
-    <ProofLink proof={doc.unity.proof} exclude={[doc.quote.url, ...doc.proof.map((item) => item.url)]} inline />
-  </p>
-  <p class="summary">{doc.summary}</p>
+  {showContext && <p class="meta">{nameOf(author)} · О традициях: {about.map(nameOf).join(', ')}</p>}
+  <p class={`unity ${doc.unity.kind}`}><span class="unity-label">{UNITY_LABEL[doc.unity.kind]}</span></p>
+    <h4 class="title">{doc.title_ru} <span class="year">{yearLabel}</span></h4>
+    <p class="meta">
+      {doc.body}
+      {fullDate && `, ${fullDate}`}
+    </p>
   {doc.status_check === 'todo' && <p class="todo-flag">источник уточняется</p>}
-  <blockquote class="quote">
-    <p>{quoted}</p>
-    <cite>
-      —{' '}
-      <SourceLink url={doc.quote.url} title={doc.title} />
-      <ProofLink proof={doc.proof} exclude={[doc.quote.url]} inline />
-    </cite>
-  </blockquote>
+  <details class="document">
+    <summary>Прочитать позицию и цитату</summary>
+    <p class="summary">{doc.summary}</p>
+    <p class={`unity ${doc.unity.kind}`}>
+      <span class="unity-label">{UNITY_LABEL[doc.unity.kind]}:</span> {doc.unity.note}
+      <ProofLink proof={doc.unity.proof} exclude={[doc.quote.url, ...doc.proof.map((item) => item.url)]} inline />
+    </p>
+    <blockquote class="quote">
+      <p>{quoted}</p>
+      {doc.quote.translation && <p class="translation">{doc.quote.translation}</p>}
+      <cite>
+        —{' '}
+        <SourceLink url={doc.quote.url} title={doc.title_ru} />
+        <ProofLink proof={doc.proof} exclude={[doc.quote.url]} inline />
+      </cite>
+    </blockquote>
+  </details>
 </article>
 
 <style>
@@ -106,60 +91,10 @@ const quoted = /^«[\s\S]*»$/.test(doc.quote.text) ? doc.quote.text : `«${doc.
     min-width: 0;
   }
 
-  .route {
-    display: flex;
-    align-items: baseline;
-    gap: 6px;
-    font-size: 14px;
-  }
-
-  /* Subject chips wrap inside their own box, hanging under the first one. */
-  .about,
-  .unnamed {
-    flex: 1 1 0;
-    min-width: 0;
-  }
-
-  .about {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    margin: 0;
-    padding: 0;
-  }
-
-  .chip {
-    position: relative;
-    list-style: none;
-    border: 1px solid var(--line);
-    border-radius: 999px;
-    padding: 2px 10px 2px 22px;
-    line-height: 1.4;
-    white-space: nowrap;
-  }
-
-  .chip::before {
-    content: '';
-    position: absolute;
-    left: 8px;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 9px;
-    height: 9px;
-    border-radius: 50%;
-    background: var(--chip);
-  }
-
-  .chip.author {
-    border-color: var(--chip);
-    background: color-mix(in srgb, var(--chip) 22%, var(--surface));
-    font-weight: 700;
-  }
-
-  .arrow,
-  .unnamed {
-    color: var(--muted);
-  }
+  .document > summary { cursor: pointer; color: var(--focus); font-weight: 700; }
+  .document[open] > summary { margin-bottom: 14px; }
+  .document > :not(summary) + * { margin-top: 12px; }
+  .quote .translation { font-size: 13px; font-style: normal; color: var(--muted); }
 
   .title {
     margin: 0;

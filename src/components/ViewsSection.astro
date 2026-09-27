@@ -45,8 +45,6 @@ const FORMS: Record<TraditionId, { subject: string; plural: boolean; object: str
   jw: { subject: 'Свидетели Иеговы', plural: true, object: 'Свидетелей Иеговы', about: 'о Свидетелях Иеговы' },
 };
 const f = (id: string) => FORMS[id as TraditionId];
-const says = (id: string) => (f(id).plural ? 'высказываются' : 'высказывается');
-const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
 ---
 
 {
@@ -90,7 +88,7 @@ const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
                   ))}
                 </div>
               ) : (
-                <p class="none">В разделе нет документа, где {f(id).subject} {says(id)} о других традициях.</p>
+                <p class="none">Нет данных в подборке.</p>
               )}
             </section>
             <section class="group" style={`--chip:${colorOf(id)}`}>
@@ -105,7 +103,7 @@ const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
                   ))}
                 </div>
               ) : (
-                <p class="none">В разделе нет документа другой традиции {f(id).about}.</p>
+                <p class="none">Нет данных в подборке.</p>
               )}
             </section>
           </div>
@@ -116,30 +114,13 @@ const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
       <div class="mode cols" data-mode="many" hidden>
         {order.map((author) => (
           <div class="col" data-author={author} hidden>
-            {order
-              .filter((about) => about !== author)
-              .map((about) => {
-                const docs = docsBy(author).filter((doc) => mentions(doc, about));
-                return (
-                  <section class="pair" data-about={about} hidden style={`--chip:${colorOf(about)}`}>
-                    <h3 class="pair-head">
-                      <span class="dot" aria-hidden="true" />
-                      {capital(f(about).about)}
-                    </h3>
-                    {docs.length > 0 ? (
-                      <div class="tiles single">
-                        {docs.map((doc) => (
-                          <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
-                        ))}
-                      </div>
-                    ) : (
-                      <p class="none">
-                        В разделе нет документа, где {f(author).subject} {says(author)} {f(about).about}.
-                      </p>
-                    )}
-                  </section>
-                );
-              })}
+            <h3 class="group-head" style={`--chip:${colorOf(author)}`}><span class="dot" aria-hidden="true" />{nameOf(author)}</h3>
+            {docsBy(author).map((doc) => <section class="pair" data-about={doc.about.join(' ')} hidden>
+              <p class="recipient">О традициях: {doc.about.map((about) => <span data-recipient={about} hidden>{nameOf(about)}</span>)}</p>
+              <ViewTile author={author} doc={doc} showContext={false} order={order} namesById={namesById} colorById={colorById} />
+            </section>)}
+            {order.filter((about) => about !== author && !docsBy(author).some((doc) => mentions(doc, about))).map((about) => <p class="none" data-missing-about={about} hidden>Нет данных в подборке {f(about).about}.</p>)}
+            <p class="none" data-no-documents hidden>Нет данных в подборке об остальных выбранных традициях.</p>
           </div>
         ))}
       </div>
@@ -171,16 +152,24 @@ const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
         col.style.gridColumn = slotMode && index >= 0 ? String(index + 1) : '';
         col.style.gridRow = slotMode ? '1' : '';
         for (const pair of col.querySelectorAll<HTMLElement>('[data-about]')) {
-          const at = ids.indexOf(pair.dataset.about ?? '');
-          pair.hidden = at === -1;
-          pair.style.order = String(at);
+          const recipients = (pair.dataset.about ?? '').split(' ');
+          pair.hidden = !recipients.some((id) => ids.includes(id) && id !== col.dataset.author);
+          for (const recipient of pair.querySelectorAll<HTMLElement>('[data-recipient]')) {
+            recipient.hidden = !ids.includes(recipient.dataset.recipient ?? '');
+          }
         }
+        for (const missing of col.querySelectorAll<HTMLElement>('[data-missing-about]')) missing.hidden = !ids.includes(missing.dataset.missingAbout ?? '');
+        const empty = col.querySelector<HTMLElement>('[data-no-documents]')!;
+        empty.hidden = true;
       }
     });
   }
 </script>
 
 <style>
+  [hidden] { display: none !important; }
+  .recipient { margin: 0; font-size: 14px; color: var(--muted); }
+  .recipient span:not([hidden]) { display: inline-block; margin-right: 8px; }
   .views,
   .mode {
     display: grid;
@@ -231,7 +220,7 @@ const capital = (text: string) => text.charAt(0).toUpperCase() + text.slice(1);
   .none {
     margin: 0;
     color: var(--muted);
-    font-style: italic;
+    font-size: 15px;
   }
 
   .tiles {

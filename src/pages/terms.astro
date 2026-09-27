@@ -1,17 +1,18 @@
 ---
-// «Термины» (docs/tasks/site-m13-sidebar-sections.md): the words the site
-// uses and how each tradition and scholarship use them.
-import TermsBox from '../components/TermsBox.astro';
-import SectionPage from '../layouts/SectionPage.astro';
-import { getTerms } from '../lib/content';
-
-const terms = await getTerms();
+import { withBase } from '../lib/paths';
+const destination = withBase('sources/');
 ---
-
-<SectionPage
-  title="Термины"
-  lead="Слова, которыми пользуется сайт, и как их понимают сами традиции и религиоведение."
-  jwNote
->
-  {terms.length > 0 ? <TermsBox terms={terms} /> : <p class="empty">Раздел ещё готовится.</p>}
-</SectionPage>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Термины и источники</title>
+    <link rel="canonical" href={`${destination}#terms`} />
+    <script is:inline define:vars={{ destination }}>
+      const target = new URL(destination, location.origin);
+      target.search = location.search;
+      target.hash = 'terms';
+      location.replace(target.href);
+    </script>
+  </head>
+  <body><p><a href={`${destination}#terms`}>Термины и источники</a></p></body>
+</html>

@@ -45,3 +45,10 @@ export function disputeView(sides: DisputeSides, ids: readonly string[]): Disput
   const visible = sides.challengers.some((id) => ids.includes(id)) && sides.answerers.some((id) => ids.includes(id));
   return { visible, shown: visible ? shown : [] };
 }
+
+/** Comparison can supplement a documented question with selected traditions' topic positions. */
+export function comparisonQuestionView(sides: DisputeSides, ids: readonly string[]): DisputeView {
+  if (ids.length < 2) return disputeView(sides, ids);
+  const visible = [...sides.challengers, ...sides.answerers].some((id) => ids.includes(id));
+  return { visible, shown: visible ? [...ids] : [] };
+}

@@ -38,3 +38,12 @@ test('disputeView needs a chosen contesting and a chosen answering tradition amo
     shown: ['protestantism', 'catholicism'],
   });
 });
+
+
+test('comparison includes selected topic positions without inventing dispute roles', async () => {
+  const { comparisonQuestionView } = await import('../src/lib/disputes.ts');
+  const sides = { challengers: ['jw'], answerers: ['orthodoxy', 'catholicism'] };
+  assert.deepEqual(comparisonQuestionView(sides, ['adventism', 'jw']), { visible: true, shown: ['adventism', 'jw'] });
+  assert.deepEqual(comparisonQuestionView(sides, ['islam', 'judaism']), { visible: false, shown: [] });
+  assert.deepEqual(comparisonQuestionView(sides, ['jw']), disputeView(sides, ['jw']));
+});

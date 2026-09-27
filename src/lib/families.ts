@@ -24,6 +24,7 @@ interface FamilyProof {
 export interface Family {
   tradition: TraditionId;
   family: string;
+  path: string[];
   proof: FamilyProof[];
 }
 

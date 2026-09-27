@@ -7,15 +7,14 @@
 // with every tradition shown, each is a row with the name on the left and the
 // position in one wide column. docs/tasks/site-m14-selection.md W2: with the
 // reader's choice of two or three traditions, only theirs are shown, side by
-// side, one column each in the reader's order. The full table
-// (src/components/ComparisonTable.astro) stays available inside a closed
-// <details> for a reader who wants the whole grid on one screen.
+// side, one column each in the reader's order. Supporting pair material
+// is embedded under the corresponding topics.
 import type { CollectionEntry } from 'astro:content';
-import ComparisonTable from './ComparisonTable.astro';
+import PairSupplement from './PairSupplement.astro';
 import Dispute from './Dispute.astro';
 import MatrixPosition from './MatrixPosition.astro';
 import { JW_NOTE_ID } from '../lib/jwNote';
-import { TOPIC_ORDER, TOPIC_TITLES_RU } from '../lib/rules';
+import { TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU } from '../lib/rules';
 
 interface Props {
   traditions: CollectionEntry<'matrix'>[];
@@ -31,12 +30,19 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 ---
 
 <div class="comparison" data-comparison>
+  <nav class="topic-contents" aria-label="Темы сравнения">{TOPIC_GROUPS.map((group) => <div>
+    <a href={`#group-${group.id}`}><strong>{group.title}</strong></a>
+    <ul>{group.topics.map((topic) => <li><a href={`#topic-${topic}`}>{TOPIC_TITLES_RU[topic]}</a></li>)}</ul>
+  </div>)}</nav>
   <div class="layout">
     <div class="topics">
       {
         TOPIC_ORDER.map((topicId) => (
+          <>
+          {TOPIC_GROUPS.filter((group) => group.topics[0] === topicId).map((group) => <h3 class="topic-group" id={`group-${group.id}`}>{group.title}</h3>)}
           <section class="topic" id={`topic-${topicId}`}>
-            <h3>{TOPIC_TITLES_RU[topicId]} <a class="permalink" href={`#topic-${topicId}`} data-reading-link={`topic-${topicId}`} aria-label={`Ссылка на тему: ${TOPIC_TITLES_RU[topicId]}`}>Ссылка</a></h3>
+            <h4>{TOPIC_TITLES_RU[topicId]}</h4>
+            {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
             <div class="grid">
               {traditions.map((tradition, index) => {
                 const position = tradition.data.positions.find((p) => p.topic === topicId);
@@ -56,32 +62,36 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
                         </sup>
                       )}
                     </p>
-                    <MatrixPosition position={position} tradition={tradition.id} briefAvailable />
+                    <MatrixPosition position={position} tradition={tradition.id} expandable />
                   </article>
                 );
               })}
             </div>
+            <PairSupplement area={topicId} />
             {disputes
               .filter((dispute) => dispute.data.topic === topicId)
               .map((dispute) => (
-                <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
+                <Dispute dispute={dispute} traditions={traditions} order={order} namesById={namesById} colorById={colorById} />
               ))}
           </section>
+          </>
         ))
       }
     </div>
   </div>
 
-  <details class="full-table">
-    <summary>Таблица: все темы и традиции на одном экране</summary>
-    <ComparisonTable traditions={traditions} colorById={colorById} withJwFootnote={withJwFootnote} />
-  </details>
+
 </div>
 
 <style>
+  .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
+  .topic-contents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0 36px; }
+  .topic-contents ul { padding-left: 18px; margin: 10px 0 0; font-size: 15px; }
+  .topic-contents a { color: inherit; text-underline-offset: 3px; }
+  .topic-group { margin: 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 26px; scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px); }
+
   .topic[hidden] { display: none; }
   .topic { scroll-margin-top: calc(var(--comparison-header-h, var(--selection-bar-h, 0px)) + 16px); }
-  .permalink { font-family: 'PT Sans',sans-serif; font-size: 13px; font-weight: 400; color: var(--muted); margin-left: 12px; }
   .layout {
     display: grid;
     gap: 32px;
@@ -92,7 +102,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
     gap: 48px;
   }
 
-  .topic h3 {
+  .topic h4 {
     font-size: 21px;
     margin: 0 0 16px;
     /* Clears the pinned selection bar when a sidebar link jumps here. */
@@ -127,19 +137,6 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
     height: 12px;
     border-radius: 50%;
     flex: none;
-  }
-
-  .full-table {
-    margin-top: 40px;
-  }
-
-  .full-table summary {
-    cursor: pointer;
-    color: var(--muted);
-  }
-
-  .full-table :global(.table-wrap) {
-    margin-top: 16px;
   }
 
   .block[hidden] {
@@ -182,7 +179,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 
 <script>
   import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
-  import { disputeView } from '../lib/disputes';
+  import { comparisonQuestionView } from '../lib/disputes';
   import { onSelection } from '../lib/selection-client';
 
   // docs/tasks/site-m14-selection.md W2: follow the reader's choice.
@@ -198,7 +195,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
       const slotMode = Boolean(document.querySelector('[data-comparison-slots]'));
       const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
       for (const dispute of disputes) {
-        const view = disputeView(sidesOf(dispute), ids);
+        const view = comparisonQuestionView(sidesOf(dispute), ids);
         dispute.hidden = !view.visible;
         const columns = slotMode && ids.length >= 2;
         for (const side of dispute.querySelectorAll<HTMLElement>('.side')) side.classList.toggle('slot-columns', columns);
@@ -206,7 +203,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
           part.hidden = !view.shown.includes(part.dataset.trad ?? '');
           const index = slots.indexOf(part.dataset.trad ?? '');
           part.style.gridColumn = columns && index >= 0 ? String(index + 1) : '';
-          part.style.gridRow = columns ? '2' : '';
+          part.style.gridRow = columns ? '1' : '';
         }
       }
       for (const grid of grids) {

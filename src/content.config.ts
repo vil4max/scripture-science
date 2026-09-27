@@ -80,12 +80,16 @@ const proof = z.object({
 // A verbatim quote from a tradition's own document (not scripture).
 const sourcedQuote = z.object({
   text: z.string(),
+  text_ru: z.string().optional(),
+  translation: z.string().optional(),
   source: z.string(),
   url: z.url(),
 });
 
 // A verbatim scripture verse in the tradition's own translation.
 const scriptureQuote = z.object({
+  text_ru: z.string().optional(),
+  translation: z.string().optional(),
   ref: z.string(),
   text: z.string(),
   url: z.url(),
@@ -132,6 +136,10 @@ const matrix = defineCollection({
     }),
     scripture: z.object({
       name: z.string(),
+      overview: z.object({
+        title: z.string(),
+        text: z.string(),
+      }).optional(),
       url: z.url(),
       proof: z.array(proof),
     }),
@@ -195,7 +203,7 @@ const viewsDocument = z.object({
   }),
   about: z.array(z.enum(TRADITION_IDS)),
   summary: z.string(),
-  quote: z.object({ text: z.string(), url: z.url() }),
+  quote: z.object({ text: z.string(), text_ru: z.string().optional(), translation: z.string().optional(), url: z.url() }),
   proof: z.array(proof),
   status_check: z.enum(['verified', 'todo']),
 });

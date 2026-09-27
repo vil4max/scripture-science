@@ -1,0 +1,113 @@
+---
+import { getPairDocument } from '../lib/pairDocument';
+import { withBase } from '../lib/paths';
+
+interface Props { area: string; }
+const { area } = Astro.props;
+const { traditions, correctedTopics, sectionHtml } = await getPairDocument();
+const topicAreas = ['god', 'jesus', 'jesus', 'worship', 'jesus', 'spirit', 'afterlife', 'end-times', 'authority', 'scripture', 'images', 'holy-days'];
+const topics = correctedTopics.filter((topic) => topicAreas[topic.data.order - 1] === area);
+const continuityHeading = sectionHtml.history.indexOf('Как Свидетели');
+const continuity = area === 'authority' && continuityHeading >= 0
+  ? sectionHtml.history.slice(sectionHtml.history.lastIndexOf('<div class="card">', continuityHeading))
+  : '';
+const readingApproaches = area === 'authority'
+  ? sectionHtml.summary.split('<h3 class="qhead">')[0]
+  : '';
+// Keep local IDs unique and route source references to the complete document.
+const inlineHtml = (html: string) => html
+  .replace(/\bid="([^"]+)"/g, 'id="pair-$1"')
+  .replace(/\bhref="#([^"]+)"/g, (_, id) => `href="${withBase('pairs/orthodoxy-jw/')}#${id}"`)
+  .replace(/url\(#([^)]+)\)/g, 'url(#pair-$1)')
+  .replace(/class="pos o"/g, 'class="pos o" data-pair-trad="orthodoxy"')
+  .replace(/class="pos j"/g, 'class="pos j" data-pair-trad="jw"')
+  .replace(/<p class="eyebrow">[\s\S]*?<\/p>/g, '');
+---
+{(topics.length > 0 || continuity) && (
+  <div class="pair-page pair-inline" data-pair-supplement hidden>
+    {topics.length > 0 && <details class="pair-evidence">
+      <summary>Библейские аргументы и различия толкований</summary>
+      <div class="pair-positions">
+        {traditions.map((tradition) => <div data-pair-trad={tradition.id}>
+          <strong>{topics[0].data.positions[tradition.id].label}</strong>
+          {topics.map((topic) => <section class="pair-argument" id={tradition.id === 'orthodoxy' ? `pair-${topic.data.slug}` : undefined}>
+            {topics.length > 1 && <h5>{topic.data.title}</h5>}
+            {[3, 4, 5, 8, 10].includes(topic.data.order) && <p>{topic.data.positions[tradition.id].thesis}</p>}
+            <ul>{topic.data.positions[tradition.id].points.map((point) => <li>
+              {point.ref && <strong class="ref">{point.ref}: </strong>}
+              <Fragment set:html={inlineHtml(point.html)} />
+            </li>)}</ul>
+          </section>)}
+        </div>)}
+      </div>
+      {topics.map((topic) => <Fragment set:html={inlineHtml(topic.data.extras)} />)}
+    </details>}
+    {readingApproaches && <details class="pair-background" id="pair-summary">
+      <summary>Два подхода к одной Книге</summary>
+      <p class="note">Как православие и Свидетели Иеговы объясняют свой подход к Писанию.</p>
+      <Fragment set:html={inlineHtml(readingApproaches).replace('<h2>Два подхода к одной Книге</h2>', '')} />
+      <p class="note"><a href={`${withBase('pairs/orthodoxy-jw/')}#summary`}>Голоса двух традиций: цитаты и полный итог сравнения</a></p>
+    </details>}
+    {continuity && <details class="pair-background" id="pair-continuity">
+      <summary>Преемственность: православие и Свидетели Иеговы</summary>
+      <Fragment set:html={inlineHtml(continuity)} />
+    </details>}
+  </div>
+)}
+<script>
+  import { onSelection } from '../lib/selection-client';
+  import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
+  const supplements = [...document.querySelectorAll<HTMLElement>('[data-pair-supplement]')];
+  onSelection((ids) => {
+    const visible = ids.includes('orthodoxy') && ids.includes('jw');
+    const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
+    for (const supplement of supplements) {
+      supplement.hidden = !visible;
+      for (const side of supplement.querySelectorAll<HTMLElement>('[data-pair-trad]')) {
+        side.style.gridColumn = String(slots.indexOf(side.dataset.pairTrad ?? '') + 1);
+        side.style.gridRow = '1';
+      }
+    }
+  });
+</script>
+<style>
+  .pair-inline.pair-page {
+    --bg: inherit; --surface: inherit; --ink: inherit; --muted: inherit; --line: inherit;
+    --o: var(--t-orthodoxy); --j: var(--t-jw);
+    --o-bg: color-mix(in srgb, var(--o) 7%, var(--surface));
+    --j-bg: color-mix(in srgb, var(--j) 7%, var(--surface));
+    background: transparent;
+    display: grid;
+    gap: 32px;
+    margin-top: 20px;
+    padding-top: 16px; border-top: 1px solid var(--line);
+  }
+  .pair-inline[hidden] { display: none; }
+  .pair-argument { display: grid; gap: 8px; }
+  .pair-argument h5 { font-size: 17px; margin: 16px 0 0; }
+  .pair-argument p { margin: 8px 0 0; }
+  .pair-argument ul { padding-left: 20px; }
+  .pair-argument li + li { margin-top: 10px; }
+  .pair-evidence > summary, .pair-background > summary { cursor: pointer; font-weight: 700; color: var(--focus); }
+  .pair-evidence[open] > summary, .pair-background[open] > summary { margin-bottom: 20px; }
+  .pair-argument h4 { margin: 0; font-size: 20px; }
+  .pair-positions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .pair-positions > div { min-width: 0; }
+  .pair-inline :global(.eyebrow) { display: none; }
+  .pair-inline :global(section), .pair-inline :global([id]) {
+    scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
+  }
+  .pair-inline :global(.ref) { white-space: normal; }
+  .pair-inline :global(.duo) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .pair-inline :global(.textdiff), .pair-inline :global(.card) { min-width: 0; }
+  .pair-inline :global(h2), .pair-inline :global(h3) { font-family: inherit; font-size: 19px; margin: 16px 0; }
+  .pair-inline :global(.pos) { padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .pair-inline :global(.who) { display: block; font-weight: 700; }
+  .pair-inline :global(.thesis) { font-weight: 700; margin: 12px 0; }
+  .pair-inline :global(.note), .pair-inline :global(.crux) { font-size: 15px; color: var(--muted); }
+  .pair-inline :global(.svgwrap) { overflow-x: auto; }
+  .pair-inline :global(svg) { max-width: 100%; height: auto; }
+  .pair-inline :global(.textdiff) { border: 1px solid var(--line); padding: 16px; border-radius: 10px; background: var(--surface); }
+  .pair-corrections { color: var(--muted); font-size: 15px; }
+  .pair-corrections li { margin-top: 16px; }
+</style>

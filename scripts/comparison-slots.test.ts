@@ -27,9 +27,9 @@ test('legacy or stale slot URLs fall back to the valid selected order', () => {
 test('selection and reading links retain explicit slots, topic and question anchor', () => {
   const slots = ['orthodoxy', '', 'jw'];
   const selected = hrefWithSelection('https://example.test/religion-map/compare/?slots=orthodoxy,,jw', slots.filter(Boolean));
-  const url = new URL(readingUrl(selected, 'detail', 'god', 'question-trinity'));
+  const url = new URL(readingUrl(selected, 'god', 'question-trinity'));
   assert.deepEqual(comparisonSlots(parseSelection(url.searchParams.get('t')), url.searchParams.get('slots')), slots);
-  assert.equal(url.searchParams.get('mode'), 'detail');
-  assert.equal(url.searchParams.get('topic'), 'god');
+  assert.equal(url.searchParams.has('mode'), false);
+  assert.equal(url.searchParams.has('topic'), false);
   assert.equal(url.hash, '#question-trinity');
 });

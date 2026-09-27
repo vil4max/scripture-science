@@ -1,0 +1,29 @@
+<script>
+  import { onSelection } from '../lib/selection-client';
+  import { readingState, readingUrl } from '../lib/comparisonReading';
+  const root = document.querySelector<HTMLElement>('[data-comparison]');
+  if (root) {
+    const state = readingState(location.search, location.hash);
+    history.replaceState(history.state, '', readingUrl(location.href, state.topic));
+    onSelection(() => {
+      const url = new URL(location.href);
+      // Preserve an explicitly empty selection in shared question links.
+      if (!url.searchParams.has('t')) url.searchParams.set('t', '');
+      for (const link of root.querySelectorAll<HTMLAnchorElement>('[data-reading-link]')) {
+        link.href = readingUrl(url.href, '', link.dataset.readingLink);
+      }
+    });
+    const revealAnchor = () => {
+      const target = document.getElementById(location.hash.slice(1));
+      if (!target) return;
+      for (let parent: HTMLElement | null = target; parent; parent = parent.parentElement) {
+        if (parent instanceof HTMLDetailsElement) parent.open = true;
+      }
+      const discussion = target.querySelector<HTMLDetailsElement>(':scope > details.discussion');
+      if (discussion) discussion.open = true;
+      requestAnimationFrame(() => target.scrollIntoView());
+    };
+    window.addEventListener('hashchange', revealAnchor);
+    if (location.hash) revealAnchor();
+  }
+</script>

@@ -42,6 +42,19 @@ export const TOPIC_ORDER = [
 
 export type TopicId = (typeof TOPIC_ORDER)[number];
 
+export const TOPIC_INTROS: Partial<Record<TopicId, string>> = {
+  spirit: 'Христианский вопрос о Святом Духе; рядом — понимание духа Божия в других традициях.',
+  images: 'Иконы, священные изображения и отношение к ним в богослужении.',
+  scripture: 'Какие книги признаются священными. Канон — их перечень; перевод — передача текста на другом языке.',
+};
+
+export const TOPIC_GROUPS = [
+  { id: 'revelation', title: 'Бог и откровение', topics: TOPIC_ORDER.slice(0, 6) },
+  { id: 'human', title: 'Человек и спасение', topics: TOPIC_ORDER.slice(6, 9) },
+  { id: 'life', title: 'Религиозная жизнь', topics: TOPIC_ORDER.slice(9) },
+];
+
+
 // Labels of the unity mark on a position or a dispute part
 // (docs/tasks/site-m20-unity-marks.md).
 export const UNITY_LABEL_RU = {
@@ -63,8 +76,8 @@ export const TOPIC_TITLES_RU: Record<TopicId, string> = {
   afterlife: 'Душа, смерть и посмертие',
   'end-times': 'Конец времён',
   worship: 'Богослужение и обряды',
-  images: 'Изображения',
-  'holy-days': 'Праздники и священное время',
+  images: 'Иконы',
+  'holy-days': 'Праздники',
   fasting: 'Пост и аскетика',
   organisation: 'Устройство и духовенство',
   rules: 'Особые правила (пища, кровь, армия, государство)',

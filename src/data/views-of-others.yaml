@@ -26,6 +26,8 @@
       summary: Текст называет мессианские притязания, связанные с Иисусом из Назарета, величайшим «камнем преткновения», а деяния как Иисуса, так и «исмаильтянина, вставшего после него» (Мухаммада), описывает как то, что, по замыслу Творца, лишь подготавливает путь для прихода Мошиаха.
       quote:
         text: Can there be a greater stumbling block than Christianity? All the prophets spoke of Mashiach as the redeemer of Israel.
+        text_ru: "Может ли быть больший камень преткновения, чем христианство? Все пророки говорили о Мошиахе как об избавителе Израиля."
+        translation: Перевод редакции с английского
         url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
       proof:
         - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
@@ -54,6 +56,8 @@
       summary: Заявление утверждает, что евреи и христиане поклоняются одному Богу, и что христианское богослужение не является приемлемым религиозным выбором для евреев, хотя авторы рады тому, что через христианство сотни миллионов людей вступили в отношения с Богом Израиля. Христианство названо верой, возникшей внутри иудаизма, но не его продолжением.
       quote:
         text: Jews and Christians worship the same God.
+        text_ru: "Иудеи и христиане поклоняются одному и тому же Богу."
+        translation: Перевод редакции с английского
         url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
       proof:
         - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
@@ -85,6 +89,8 @@
       summary: Приуроченное к 50-летию декларации «Nostra Aetate», заявление называет возникновение христианства не случайностью и не ошибкой, а желанным Творцом итогом и даром народам, и связывает саму возможность партнёрства между иудеями и христианами сегодня с переменой, начатой этим католическим документом.
       quote:
         text: the emergence of Christianity in human history is neither an accident nor an error, but the willed divine outcome and gift to the nations.
+        text_ru: "Возникновение христианства в человеческой истории — не случайность и не ошибка, а желанный Богом результат и дар народам."
+        translation: Перевод редакции с английского
         url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians
       proof:
         - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians
@@ -208,6 +214,8 @@
       summary: Декрет говорит о восточных (православных) Церквах как о сохраняющих истинные таинства — прежде всего благодаря апостольскому преемству, священству и Евхаристии, — хотя и отделённых от полного общения с Католической Церковью. О разделениях, возникших на Западе более чем через четыре века после этого, в событиях, обычно именуемых Реформацией, декрет говорит отдельно, признавая всех оправданных верой в крещении членами Тела Христова.
       quote:
         text: These Churches, although separated from us, possess true sacraments, above all by apostolic succession, the priesthood and the Eucharist.
+        text_ru: "Эти Церкви, хотя и отделённые от нас, обладают истинными таинствами, прежде всего — благодаря апостольскому преемству — священством и Евхаристией."
+        translation: Перевод редакции с английского
         url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html
       proof:
         - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decree_19641121_unitatis-redintegratio_en.html
@@ -245,6 +253,8 @@
       summary: О мусульманах декларация говорит как о поклоняющихся единому Богу, живому и сущему, милосердному и всемогущему Творцу неба и земли, чтущих Иисуса Христа как пророка и почитающих Деву Марию. Об иудеях декларация утверждает, что их не следует представлять отверженными или проклятыми Богом, будто бы это следует из Священного Писания.
       quote:
         text: the Jews should not be presented as rejected or accursed by God, as if this followed from the Holy Scriptures.
+        text_ru: "Иудеев не следует изображать отвергнутыми или проклятыми Богом, будто это вытекает из Священного Писания."
+        translation: Перевод редакции с английского
         url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html
       proof:
         - url: https://www.vatican.va/archive/hist_councils/ii_vatican_council/documents/vat-ii_decl_19651028_nostra-aetate_en.html
@@ -262,7 +272,7 @@
   documents:
     - title: The Qur'an on Ahl al-Kitab ("People of the Book") — 3:64, 2:62, 5:5
       title_ru: Коран о «людях Писания» — 3:64, 2:62, 5:5
-      body: текст Корана; перевод Saheeh International, платформа Quran.com Фонда Корана
+      body: текст Корана; русский перевод смыслов Эльмира Кулиева
       date: "632"
       unity:
         kind: official
@@ -281,7 +291,9 @@
       summary: Аяты обращаются к «людям Писания» с призывом к общему поклонению единому Богу, называют пищу людей Писания дозволенной для мусульман и пищу мусульман — дозволенной для них, а верующим из иудеев, христиан и сабиев, творящим благое, обещают воздаяние у их Господа.
       quote:
         text: O People of the Scripture, come to a word that is equitable between us and you - that we will not worship except Allāh and not associate anything with Him and not take one another as lords instead of Allāh.
-        url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:64
+        text_ru: "Скажи: «О люди Писания! Давайте придем к единому слову для нас и для вас, о том, что мы не будем поклоняться никому, кроме Аллаха, не будем приобщать к Нему никаких сотоварищей и не будем считать друг друга господами наряду с Аллахом»."
+        translation: Перевод смыслов Эльмира Кулиева
+        url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:64
       proof:
         - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=5:5
           title: Quran.com — перевод Saheeh International, 5:5
@@ -296,7 +308,7 @@
       status_check: verified
     - title: The Qur'an on Tahrif (alteration of earlier scripture) — 3:78
       title_ru: Коран об искажении Писания (тахриф) — 3:78
-      body: текст Корана; перевод Saheeh International, платформа Quran.com Фонда Корана
+      body: текст Корана; русский перевод смыслов Эльмира Кулиева
       date: "632"
       unity:
         kind: official
@@ -312,7 +324,9 @@
       summary: Аят говорит о группе среди людей Писания, искажающей Писание своими языками, чтобы это приняли за само Писание, хотя оно им не является.
       quote:
         text: there is among them a party who alter the Scripture with their tongues so you may think it is from the Scripture, but it is [not].
-        url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:78
+        text_ru: "Среди них есть такие, которые искажают Писание своими языками, чтобы вы приняли за Писание то, что не относится к нему."
+        translation: Перевод смыслов Эльмира Кулиева
+        url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:78
       proof:
         - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:78
           title: Quran.com — перевод Saheeh International, 3:78
@@ -345,6 +359,8 @@
       summary: Письмо, адресованное христианским лидерам, называет единство Бога, необходимость любви к Нему и необходимость любви к ближнему общим основанием между исламом и христианством, обращаясь к христианам словами Корана о «людях Писания».
       quote:
         text: The Unity of God, the necessity of love for Him, and the necessity of love of the neighbour is thus the common ground between Islam and Christianity.
+        text_ru: "Единство Бога, необходимость любви к Нему и необходимость любви к ближнему — вот общая основа ислама и христианства."
+        translation: Перевод редакции с английского
         url: https://www.acommonword.com/the-acw-document/
       proof:
         - url: https://www.acommonword.com/the-acw-document/
@@ -378,6 +394,8 @@
       summary: Текст называет папу истинным антихристом, превознесшим себя над Христом и противопоставившим себя Ему, и указывает, что святая Церковь существовала без папы «более пятисот лет» — как довод против того, что папство необходимо для Церкви.
       quote:
         text: This teaching shows forcefully that the Pope is the very Antichrist, who has exalted himself above, and opposed himself against Christ.
+        text_ru: "Это учение убедительно показывает, что папа — тот самый антихрист, который возвысил себя над Христом и выступил против Него."
+        translation: Перевод редакции с английского
         url: https://thebookofconcord.org/smalcald-articles/part-ii/article-iv/
       proof:
         - url: https://thebookofconcord.org/smalcald-articles/part-ii/article-iv/
@@ -404,6 +422,8 @@
       summary: Первоначальный текст §6 называл римского папу «тем антихристом, человеком греха и сыном погибели, превозносящим себя в Церкви против Христа». Американская редакция 1788 года исключила эту формулировку, оставив лишь отрицание того, что папа может быть главою Церкви в каком бы то ни было смысле.
       quote:
         text: that Antichrist, that man of sin, and son of perdition, that exalteth himself, in the Church, against Christ and all that is called God.
+        text_ru: "Тот антихрист, тот человек греха и сын погибели, который в Церкви возвышает себя против Христа и всего, что называется Богом."
+        translation: Перевод редакции с английского
         url: https://opc.org/documents/WCF_orig.html
       proof:
         - url: https://opc.org/documents/WCF_orig.html
@@ -439,6 +459,8 @@
       summary: Страница безоговорочно утверждает, что святые последних дней — христиане. Она указывает, что Церковь, в отличие от католической, англиканской, восточно-православной и протестантской традиций, не произошла от какой-либо иной веры, а восходит к представлению о том, что после смерти Иисуса Христа и Его апостолов власть Господа и Его Церковь были утрачены на земле.
       quote:
         text: The Church of Jesus Christ of Latter-day Saints, however, did not descend from any other faith.
+        text_ru: "Однако Церковь Иисуса Христа Святых последних дней не произошла ни от какой другой веры."
+        translation: Перевод редакции с английского
         url: https://faq.churchofjesuschrist.org/are-mormons-christian
       proof:
         - url: https://faq.churchofjesuschrist.org/are-mormons-christian
@@ -473,6 +495,8 @@
       summary: Документ описывает адвентистское самопонимание через образ «выхода» из «вавилонского разделения и смятения» и «вхождения» в единство в рамках Адвентистского движения, а также говорит об опасности, которую видит в «соединении рук» католицизма и протестантизма при осуществлении религиозно-политической власти. Итоговая оценка документа в отношении Всемирного совета Церквей — что «вред перевешивает пользу».
       quote:
         text: The General Conference Executive Committee has never voted an official statement regarding the Seventh-day Adventist relationship to the ecumenical movement as such.
+        text_ru: "Исполнительный комитет Генеральной конференции никогда не принимал голосованием официального заявления об отношении адвентистов седьмого дня к экуменическому движению как таковому."
+        translation: Перевод редакции с английского
         url: https://gc.adventist.org/documents/ecumenical-movement/
       proof:
         - url: http://web.archive.org/web/20250720163148/https://gc.adventist.org/documents/ecumenical-movement/
@@ -513,6 +537,8 @@
       summary: Статья прослеживает историю того, что называет «христианским миром», — церквей, восходящих к императорской римской церкви после Константина, включая католическую, восточно-православные церкви и протестантизм, — и заключает, что христианский мир «не является и никогда не был владением Христа». Учение о Троице статья описывает как одну из отличительных черт «религии Вавилона», принятую, по её изложению, после решения императора Константина в пользу тринитарного учения.
       quote:
         text: Christendom is not and never has been Christ's domain.
+        text_ru: "Христианский мир не является и никогда не был владением Христа."
+        translation: Перевод редакции с английского
         url: https://wol.jw.org/en/wol/d/r1/lp-e/1966325
       proof:
         - url: https://wol.jw.org/en/wol/d/r1/lp-e/1966325
@@ -549,6 +575,8 @@
         Статья даёт определение Вавилона Великого: «Мировая империя ложной религии». Она охватывает все религии, учения и практика которых не соответствуют истинному поклонению Иегове. Статья явно указывает, что это понятие не ограничено одной религиозной группой, а включает и религии, называющие себя христианскими.
       quote:
         text: The world empire of false religion, embracing all religions whose teachings and practices do not conform to the true worship of Jehovah, the only true God.
+        text_ru: "Мировая империя ложной религии, охватывающая все религии, чьи учения и обычаи не соответствуют истинному поклонению Иегове, единственному истинному Богу."
+        translation: Перевод редакции с английского
         url: https://wol.jw.org/en/wol/d/r1/lp-e/1101989211
       proof:
         - url: https://wol.jw.org/ru/wol/d/r2/lp-u/1101989211

@@ -2,6 +2,8 @@
 // /sources/: every proof used by the site, de-duplicated by URL, grouped by
 // tier and by tradition, with access dates, and a coverage summary
 // (docs/tasks/site-m2-main-page.md W4).
+import { getPairDocument } from '../lib/pairDocument';
+import { withBase } from '../lib/paths';
 import { getFamilies } from '../lib/families';
 import { collectProofs, collectTextSources } from '../lib/sourceCatalog';
 import { citationTitle } from '../lib/citations';
@@ -20,6 +22,7 @@ import WorldMethodology from '../components/WorldMethodology.astro';
 import { JW_NOTE_TEXT } from '../lib/jwNote';
 import overview from '../data/family-overview.json';
 import Base from '../layouts/Base.astro';
+import TermsBox from '../components/TermsBox.astro';
 import { getDisputes, getOrderedMatrix, getOrderedViews, getTerms } from '../lib/content';
 import { TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../lib/rules';
 
@@ -43,6 +46,7 @@ interface ProofEntry {
   usages: Usage[];
 }
 
+const { sectionHtml: pairSections, corrections: pairCorrections } = await getPairDocument();
 const traditions = await getOrderedMatrix();
 // src/lib/rules.ts TRADITION_COLOR_TOKEN: same shared --t-* palette as the
 // home page (docs/tasks/site-m5-reading-polish.md W3 "Colours").
@@ -169,8 +173,8 @@ const coverageByTopic = TOPIC_ORDER.map((topicId) => {
   return { topicId, title: TOPIC_TITLES_RU[topicId], verified, todo };
 });
 
-const title = 'Источники';
-const description = 'Источники, тексты и пояснения к материалам сайта: по традициям, темам и уровню источника.';
+const title = 'Термины и источники';
+const description = 'Значения слов, пояснения к данным и источники материалов сайта.';
 ---
 
 <Base title={title} description={description}>
@@ -178,7 +182,24 @@ const description = 'Источники, тексты и пояснения к �
     <header>
       <h1>{title}</h1>
       <p class="lead">{description}</p>
+      <nav class="reference-sections" aria-label="На этой странице">
+        <div><strong>Термины</strong><ul><li><a href="#terms">Словарь</a></li></ul></div>
+        <div><strong>Пояснения по разделам</strong><ul>
+          <li><a href="#adherents">Численность</a></li><li><a href="#map-method">Карта</a></li>
+          <li><a href="#history-evidence">История и хронология</a></li>
+          <li><a href="#overview-notes">Группировка традиций</a></li><li><a href="#legal-context">Правовая справка</a></li>
+        </ul></div>
+        <div><strong>Источники</strong><ul>
+          <li><a href="#by-tradition">По традициям и темам</a></li><li><a href="#texts">Тексты и переводы</a></li>
+          <li><a href="#data-and-media">Данные и изображения</a></li><li><a href="#by-tier">Полный каталог</a></li><li><a href="#coverage">Покрытие</a></li><li><a href="#pair-reference">Материалы сравнения православия и Свидетелей Иеговы</a></li>
+        </ul></div>
+      </nav>
     </header>
+
+    <section id="terms" aria-labelledby="terms-title">
+      <h2 id="terms-title">Термины</h2>
+      <TermsBox terms={terms} />
+    </section>
 
     <section id="adherents">
       <h2>Численность: даты и способы подсчёта</h2>
@@ -205,6 +226,55 @@ const description = 'Источники, тексты и пояснения к �
     <WorldMethodology />
     <section id="overview-notes"><h2>Авраамические религии: пояснения к группировке</h2><p>{overview.introduction.text}</p>{overview.groups.map((group) => <article><h3>{group.title}</h3><p>{group.text}</p></article>)}</section>
     <section id="legal-context"><h2>Правовая справка</h2><p>{JW_NOTE_TEXT}</p></section>
+
+    <section id="by-tradition">
+      <h2>Источники по традициям и темам</h2>
+      {
+        traditions.map((tradition) => {
+          const traditionEntries = byTradition.get(tradition.id) ?? [];
+          return (
+            traditionEntries.length > 0 && (
+              <div class="tradition-group">
+                <h3>
+                  <span class="chip" style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`} aria-hidden="true" />
+                  {tradition.data.name}
+                </h3>
+                {[
+                  { title: 'Общие сведения и отношения с другими', topic: null },
+                  ...TOPIC_ORDER.map((topic) => ({ title: TOPIC_TITLES_RU[topic], topic })),
+                ].map(({ title, topic }) => {
+                  const entries = traditionEntries.filter((entry) => entry.usages.some((usage) => usage.traditionId === tradition.id && (topic ? usage.section === title : !Object.values(TOPIC_TITLES_RU).includes(usage.section))));
+                  return entries.length > 0 && <details class="source-topic"><summary>{title} · {entries.length}</summary><ul>
+                    {entries.map((entry) => <li><a href={entry.proof.url} target="_blank" rel="noopener noreferrer">{citationTitle(entry.proofs)}</a><span class="meta"> · {entry.proof.accessed}</span></li>)}
+                  </ul></details>;
+                })}
+
+              </div>
+            )
+          );
+        })
+      }
+    </section>
+
+    <section id="pair-reference">
+      <h2>Подробные материалы: православие и Свидетели Иеговы</h2>
+      <details class="source-topic" id="pair-refs">
+        <summary>Библиография сравнения</summary>
+        <Fragment set:html={pairSections.refs} />
+      </details>
+      <details class="source-topic" id="pair-corrections">
+        <summary>Уточнения и источники</summary>
+        <ol>{pairCorrections.map((correction) => <li id={`pair-correction-${correction.id}`}>
+          <p><strong>{correction.replace}</strong></p>
+          <p>{correction.reason}</p>
+          <ul>{[...new Map(correction.proof.map((proof) => [proof.url, proof])).values()].map((proof) => <li>
+            <a href={proof.url}>{proof.title}</a><span class="meta"> · {proof.accessed}</span>
+          </li>)}</ul>
+          <a href={`${withBase('pairs/orthodoxy-jw/')}#corr-${correction.id}`}>К месту в полном тексте</a>
+        </li>)}</ol>
+      </details>
+      <p>Исходное исследование содержит дополнительные таблицы, исторические пояснения и библиографию. <a href={withBase('pairs/orthodoxy-jw/')}>Открыть полный материал</a>.</p>
+    </section>
 
     <section id="coverage">
       <h2>Покрытие</h2>
@@ -303,34 +373,7 @@ const description = 'Источники, тексты и пояснения к �
       <ul>{media.map((item) => <li id={`media-${item.id}`}><a href={item.source}>{item.caption}</a> — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (обращение {item.accessed}). {item.changes === 'No edits; Wikimedia thumbnail.' ? 'Без изменений; уменьшенная копия Wikimedia.' : item.changes}</li>)}</ul>
     </section>
 
-    <section id="by-tradition">
-      <h2>По традиции</h2>
-      {
-        traditions.map((tradition) => {
-          const traditionEntries = byTradition.get(tradition.id) ?? [];
-          return (
-            traditionEntries.length > 0 && (
-              <div class="tradition-group">
-                <h3>
-                  <span class="chip" style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`} aria-hidden="true" />
-                  {tradition.data.name}
-                </h3>
-                <ul>
-                  {traditionEntries.map((entry) => (
-                    <li>
-                      <a href={entry.proof.url} target="_blank" rel="noopener noreferrer">
-                        {citationTitle(entry.proofs)}
-                      </a>
-                      <span class="meta"> · обращение {entry.proof.accessed}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            )
-          );
-        })
-      }
-    </section>
+
   </main>
 </Base>
 
@@ -342,6 +385,12 @@ const description = 'Источники, тексты и пояснения к �
     display: grid;
     gap: 48px;
   }
+
+  .reference-sections { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; font-size: 16px; }
+  .reference-sections ul { padding-left: 18px; margin-top: 8px; }
+  .source-topic { margin: 12px 0; }
+  .source-topic summary { cursor: pointer; font-weight: 700; }
+  section { scroll-margin-top: 96px; }
 
   .lead {
     max-width: var(--measure);

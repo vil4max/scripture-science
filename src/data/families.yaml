@@ -9,6 +9,7 @@
 # means"). No proof -> no line: a tradition without a sourced classification
 # stays out of this file rather than getting an invented one.
 - tradition: judaism
+  path: ["Авраамические религии", "Иудаизм"]
   family: "монотеистическая традиция, одна из авраамических религий (наряду с христианством и исламом)"
   proof:
     - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
@@ -22,6 +23,7 @@
       excerpt: "that recognize Abraham as their first prophet; they are therefore known as the Abrahamic religions."
       accessed: "2026-09-26"
 - tradition: orthodoxy
+  path: ["Авраамические религии", "Христианство", "Православие"]
   family: "одна из трёх основных ветвей христианства (наряду с католичеством и протестантизмом)"
   proof:
     - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
@@ -30,6 +32,7 @@
       excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
       accessed: "2026-09-26"
 - tradition: catholicism
+  path: ["Авраамические религии", "Христианство", "Католичество"]
   family: "одна из трёх основных ветвей христианства (наряду с православием и протестантизмом)"
   proof:
     - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
@@ -38,6 +41,7 @@
       excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
       accessed: "2026-09-26"
 - tradition: islam
+  path: ["Авраамические религии", "Ислам"]
   family: "монотеистическая традиция, одна из авраамических религий (наряду с иудаизмом и христианством)"
   proof:
     - url: "https://www.pewresearch.org/religion/2012/07/19/asian-americans-a-mosaic-of-faiths-appendix-6/"
@@ -51,6 +55,7 @@
       excerpt: "that recognize Abraham as their first prophet; they are therefore known as the Abrahamic religions."
       accessed: "2026-09-26"
 - tradition: protestantism
+  path: ["Авраамические религии", "Христианство", "Протестантизм"]
   family: "одна из трёх основных ветвей христианства (наряду с православием и католичеством)"
   proof:
     - url: "https://www.pewresearch.org/religion/2017/11/08/orthodox-christianity-in-the-21st-century/"
@@ -59,6 +64,7 @@
       excerpt: "all three major branches of Christianity (Orthodoxy, Catholicism and Protestantism) were predominantly concentrated in Europe"
       accessed: "2026-09-25"
 - tradition: adventism
+  path: ["Авраамические религии", "Христианство", "Протестантизм", "Адвентисты седьмого дня"]
   family: "протестантская деноминация"
   proof:
     - url: "https://www.oikoumene.org/church-families/seventh-day-adventist-church"
@@ -67,6 +73,7 @@
       excerpt: "the SDA Church is probably the most widespread Protestant denomination, with work in over 200 countries"
       accessed: "2026-09-25"
 - tradition: lds
+  path: ["Авраамические религии", "Движения христианского происхождения", "Реставрационизм", "Церковь Иисуса Христа Святых последних дней"]
   family: "реставрационизм"
   proof:
     - url: "https://wrldrels.org/2016/10/08/lds/"
@@ -75,6 +82,7 @@
       excerpt: "Mormonism is a Restorationist church."
       accessed: "2026-09-25"
 - tradition: jw
+  path: ["Авраамические религии", "Движения христианского происхождения", "Реставрационизм", "Свидетели Иеговы"]
   family: "реставрационизм"
   proof:
     - url: "https://wrldrels.org/2016/10/08/archive-jehovahs-witnesses/"
