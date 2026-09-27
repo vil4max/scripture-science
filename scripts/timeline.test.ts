@@ -39,7 +39,8 @@ test('historical rows retain branch spans after religious epochs are separated',
   assert.ok(readFileSync('dist/sources/index.html', 'utf8').includes('Начало мира в религиозных традициях'));
   assert.doesNotMatch(historyHtml, /class="am"|data-selfview|row epoch/);
   assert.ok(historyHtml.includes('до н. э.'));
-  assert.ok(historyHtml.includes('Начало нашей эры'));
+  assert.ok(historyHtml.includes('без нулевого года'));
+  assert.doesNotMatch(historyHtml, /divider era|Начало нашей эры — отсчёт/);
   for (const view of lineage.selfViews) {
     const profile = readFileSync(`dist/traditions/${view.tradition}/index.html`, 'utf8');
     assert.ok(profile.includes(view.summary), view.tradition);
@@ -148,6 +149,28 @@ test('the chronicle has one row per dated item, oldest first, starting with the 
   assert.equal(rows[0].id, 'byzantine-era');
 });
 
+test('Sacred History becomes the Church line while later rejections form separate branches', () => {
+  const nodeById = new Map(lineage.nodes.map((node) => [node.id, node]));
+  const rowById = new Map(rows.map((row) => [row.id, row]));
+  assert.equal(nodeById.get('early-christianity')?.parent, 'israelite-second-temple');
+  assert.equal(nodeById.get('early-christianity')?.kind, 'trunk');
+  assert.equal(nodeById.get('rabbinic-judaism')?.parent, 'israelite-second-temple');
+  assert.equal(nodeById.get('church-of-the-east')?.start.year, 484);
+  assert.equal(nodeById.get('catholicism')?.parent, 'early-christianity');
+  assert.equal(nodeById.has('chalcedonian-christianity'), false);
+  assert.equal(rowById.get('third-ecumenical-council')?.kind, 'other');
+  assert.equal(rowById.get('fourth-ecumenical-council')?.kind, 'other');
+  assert.match(rowById.get('early-christianity')?.text ?? '', /завершилась ветхозаветная история спасения/);
+  assert.match(rowById.get('early-christianity')?.text ?? '', /Антиохии/);
+  assert.match(rowById.get('rabbinic-judaism')?.text ?? '', /не признавшую Иисуса Христа Мессией/);
+});
+
+test('the Church continues the Sacred History trunk while Judaism leaves it as a branch', () => {
+  const { column } = assignBranchColumns(lineage, rows);
+  assert.equal(column.get('early-christianity'), column.get('israelite-second-temple'));
+  assert.notEqual(column.get('rabbinic-judaism'), column.get('israelite-second-temple'));
+});
+
 test('on a tie a parent separation comes before its child', () => {
   const index = new Map(rows.map((r, i) => [r.id, i]));
   for (const node of lineage.nodes) {
@@ -201,6 +224,24 @@ test('no text in the chronicle styles is below the minimum size', () => {
   const sizes = [...source.matchAll(/font-size:\s*(\d+(?:\.\d+)?)px/g)].map((m) => Number(m[1]));
   assert.ok(sizes.length > 0);
   for (const size of sizes) assert.ok(size >= MIN_LABEL_FONT_PX, `font-size ${size}px is below ${MIN_LABEL_FONT_PX}px`);
+});
+
+test('the rendered chronicle keeps a strong Orthodox trunk, varied branches and the emphasized Great Schism', () => {
+  const source = readFileSync(fileURLToPath(new URL('../src/components/timeline/Chronicle.astro', import.meta.url)), 'utf8');
+  const html = readFileSync('dist/timeline/index.html', 'utf8');
+  assert.match(source, /const colX = \(c: number\) => BIBLICAL_X \+ c \* COL_W/);
+  assert.match(source, /n\.id === 'israelite-second-temple'\) continue/);
+  assert.match(source, /\.seg\.main-trunk[\s\S]*width: 5px/);
+  assert.match(source, /node\.id === 'early-christianity'[\s\S]*'var\(--testament-new\)'/);
+  assert.match(source, /\['rabbinic-judaism', 'light-dark\(#4338ca, #818cf8\)'\]/);
+  assert.match(source, /\['pentecostalism', 'light-dark\(#0e7490, #22d3ee\)'\]/);
+  assert.match(html, /row node major-schism/);
+  assert.match(html, /Пятидесятница — явление Церкви и продолжение единой Священной истории/);
+  assert.doesNotMatch(html, /Начало нашей эры — отсчёт от Рождества Христова/);
+  assert.match(html, /перед ним идёт 1 год до н\. э\., без нулевого года/);
+  assert.match(html, /Великий раскол: отпадение Рима/);
+  assert.match(html, /Начало протестантизма · Реформация/);
+  assert.match(html, /замена канонической принадлежности/);
 });
 
 test('the biblical comparison line is chronological without displacing branch connections', () => {

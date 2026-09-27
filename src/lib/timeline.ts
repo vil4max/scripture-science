@@ -79,6 +79,7 @@ export type Union = z.infer<typeof unionSchema>;
 export const otherSchema = z.object({
   id: z.string().min(1),
   label: z.string().min(1),
+  description: z.string().min(1).optional(),
   from: z.number().int(),
   to: z.number().int().optional(),
   approx: z.boolean().default(false),
@@ -352,7 +353,7 @@ export function buildChronicleRows(lineage: Lineage, biblical: readonly { id: st
       year: o.from,
       approx: o.approx,
       title: o.label,
-      text: o.to !== undefined ? `до ${o.approx ? 'ок. ' : ''}${formatYearAd(o.to)}` : '',
+      text: o.description ?? (o.to !== undefined ? `до ${o.approx ? 'ок. ' : ''}${formatYearAd(o.to)}` : ''),
       proof: o.proof[0],
       rank: 0,
     });
@@ -377,7 +378,6 @@ export function selfViewTargetId(lineage: Lineage, tradition: string): string | 
 // living tradition) runs to the end of the chronicle.
 export const TRANSITIONAL_NODE_IDS = new Set([
   'israelite-second-temple',
-  'chalcedonian-christianity',
   'reformation',
   'second-great-awakening',
   'islam',
@@ -401,8 +401,8 @@ export interface BranchLayout {
  * Gives each node's line a graph column like a git log graph. Lines are
  * placed in the order they start (the fewest columns an interval layout
  * allows: one per line alive at the same row), each in the leftmost free
- * column. The last child of a structural node continues its parent's
- * column, so the line bends once instead of jumping.
+ * column. A child explicitly marked as the trunk continues its structural
+ * parent's column; the parent's other children become side branches.
  */
 export function assignBranchColumns(lineage: Lineage, rows: ChronicleRow[]): BranchLayout {
   const rowOf = new Map<string, number>();
@@ -415,7 +415,13 @@ export function assignBranchColumns(lineage: Lineage, rows: ChronicleRow[]): Bra
   const span = new Map<string, [number, number]>();
   for (const n of lineage.nodes) {
     const kids = children.get(n.id);
-    const last = TRANSITIONAL_NODE_IDS.has(n.id) && kids ? Math.max(...kids.map((k) => rowOf.get(k)!)) : lastRow;
+    const trunkChild = kids
+      ?.map((id) => lineage.nodes.find((node) => node.id === id)!)
+      .find((node) => node.kind === 'trunk');
+    const lastChild = kids?.reduce((latest, id) => rowOf.get(id)! > rowOf.get(latest)! ? id : latest);
+    const last = TRANSITIONAL_NODE_IDS.has(n.id) && kids
+      ? rowOf.get(trunkChild?.id ?? lastChild!)!
+      : lastRow;
     // A line starts at its own row: the connector to the parent is drawn on
     // that row, inside the parent's still-open span.
     span.set(n.id, [rowOf.get(n.id)!, last]);

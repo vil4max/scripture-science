@@ -48,11 +48,35 @@ function rowHighlight(row: ChronicleRow): string {
 const COL_W = 12;
 const GRAPH_PAD = 8;
 const GRAPH_W = GRAPH_PAD * 2 + (branches.columns + 1) * COL_W;
+const BIBLICAL_X = GRAPH_PAD + COL_W / 2;
 // The dot sits on the first text line's centre: row padding 6 + half of the
 // 26px line height.
 const DOT_Y = 19;
-const colX = (c: number) => GRAPH_PAD + (c + 1) * COL_W + COL_W / 2;
+// The first lineage column is the biblical line itself. The apostolic Church
+// continues that trunk; Judaism and later separations leave it as branches.
+const colX = (c: number) => BIBLICAL_X + c * COL_W;
 const colorOf = (tradition?: string) => `var(--t-${tradition ?? 'other'})`;
+const branchColor = new Map<string, string>([
+  ['rabbinic-judaism', 'light-dark(#4338ca, #818cf8)'],
+  ['church-of-the-east', 'light-dark(#6d28d9, #a78bfa)'],
+  ['oriental-orthodoxy', 'light-dark(#0f766e, #2dd4bf)'],
+  ['old-believers', 'light-dark(#9a3412, #fdba74)'],
+  ['reformation', 'light-dark(#b91c1c, #fb7185)'],
+  ['lutheran', 'light-dark(#c2410c, #fb923c)'],
+  ['reformed', 'light-dark(#1d4ed8, #60a5fa)'],
+  ['anabaptist', 'light-dark(#a16207, #facc15)'],
+  ['anglican', 'light-dark(#7e22ce, #d8b4fe)'],
+  ['pentecostalism', 'light-dark(#0e7490, #22d3ee)'],
+  ['second-great-awakening', 'light-dark(#475569, #cbd5e1)'],
+  ['sunni', 'light-dark(#15803d, #4ade80)'],
+  ['shia', 'light-dark(#4d7c0f, #a3e635)'],
+]);
+const colorOfNode = (node: LineageNode) => node.id === 'early-christianity'
+  ? 'var(--testament-new)'
+  : branchColor.get(node.id) ?? colorOf(node.tradition);
+const chipColorOfNode = (node: LineageNode) => node.id === 'early-christianity'
+  ? colorOf('orthodoxy')
+  : colorOfNode(node);
 const nativityIndex = rows.findIndex((row) => row.id === 'biblical-nativity');
 const bibleEnd = rows.findIndex((row) => row.id === 'early-christianity');
 const testamentOf = (row: ChronicleRow) => row.id === 'early-christianity' || row.id === 'biblical-nativity'
@@ -65,6 +89,7 @@ interface Segment {
   to: 'bottom' | 'dot';
   color: string;
   hl: string;
+  trunk?: boolean;
 }
 interface Connector {
   x1: number;
@@ -74,20 +99,17 @@ interface Connector {
   dashed?: boolean;
 }
 
-/** The vertical line pieces crossing row `r`; `between` draws a gap-marker row that sits just above row `r`. */
-function segmentsAt(r: number, between = false): Segment[] {
+/** The vertical line pieces crossing row `r`. */
+function segmentsAt(r: number): Segment[] {
   const out: Segment[] = [];
-  if (r <= bibleEnd) out.push({ x: GRAPH_PAD + COL_W / 2,
-    from: between || r > 0 ? 'top' : 'dot', to: !between && r === bibleEnd ? 'dot' : 'bottom',
-    color: testamentColor(r < nativityIndex || (between && r === nativityIndex) ? 'old' : 'new'), hl: 'biblical' });
+  if (r <= bibleEnd) out.push({ x: BIBLICAL_X,
+    from: r > 0 ? 'top' : 'dot', to: r === bibleEnd ? 'dot' : 'bottom',
+    color: testamentColor(r < nativityIndex ? 'old' : 'new'), hl: 'biblical', trunk: true });
   for (const n of lineage.nodes) {
     const [a, b] = branches.span.get(n.id)!;
     const hl = [...(highlightOf.get(n.id) ?? [])].join(' ');
-    const base = { x: colX(branches.column.get(n.id)!), color: colorOf(n.tradition), hl };
-    if (between) {
-      if (a < r && b >= r) out.push({ ...base, from: 'top', to: 'bottom' });
-      continue;
-    }
+    const base = { x: colX(branches.column.get(n.id)!), color: colorOfNode(n), hl, trunk: n.id === 'early-christianity' };
+    if (n.id === 'israelite-second-temple') continue;
     if (r < a || r > b) continue;
     // A living line runs on through the "now" row; a structural line ends
     // on the dot of its last child's row (branches.living, src/lib/timeline.ts).
@@ -107,7 +129,7 @@ function connectorAt(row: ChronicleRow): Connector | undefined {
     const x1 = colX(branches.column.get(n.parent)!);
     const x2 = colX(branches.column.get(n.id)!);
     if (x1 === x2) return undefined;
-    return { x1, x2, color: colorOf(n.tradition), hl: rowHighlight(row) };
+    return { x1, x2, color: colorOfNode(n), hl: rowHighlight(row) };
   }
   if (row.kind === 'union') {
     const u = lineage.unions.find((x) => x.id === row.id)!;
@@ -122,9 +144,13 @@ function connectorAt(row: ChronicleRow): Connector | undefined {
   return undefined;
 }
 
-function dotAt(row: ChronicleRow): { x: number; color: string } | undefined {
-  if (row.kind === 'biblical') return { x: GRAPH_PAD + COL_W / 2, color: testamentColor(testamentOf(row)!) };
-  if (row.kind === 'node') return { x: colX(branches.column.get(row.id)!), color: colorOf(row.tradition) };
+function dotAt(row: ChronicleRow): { x: number; color: string; trunk?: boolean } | undefined {
+  if (row.kind === 'biblical') return { x: BIBLICAL_X, color: testamentColor(testamentOf(row)!), trunk: true };
+  if (row.kind === 'node') return {
+    x: colX(branches.column.get(row.id)!),
+    color: row.id === 'israelite-second-temple' ? testamentColor('old') : colorOfNode(nodeById.get(row.id)!),
+    trunk: row.id === 'israelite-second-temple' || row.id === 'early-christianity',
+  };
   if (row.kind === 'union') {
     const u = lineage.unions.find((x) => x.id === row.id)!;
     return { x: colX(branches.column.get(u.to)!), color: 'var(--muted)' };
@@ -132,15 +158,10 @@ function dotAt(row: ChronicleRow): { x: number; color: string } | undefined {
   return undefined;
 }
 
-// Keep the era boundary distinct from dated events.
-type Item =
-  | { type: 'row'; row: ChronicleRow; index: number }
-  | { type: 'era'; index: number };
+type Item = { row: ChronicleRow; index: number };
 const items: Item[] = [];
 rows.forEach((row, index) => {
-  const prev = rows[index - 1];
-  if (prev && prev.year < 0 && row.year > 0) items.push({ type: 'era', index });
-  items.push({ type: 'row', row, index });
+  items.push({ row, index });
 });
 
 // Living lines end on the "now" row's dot.
@@ -150,8 +171,9 @@ const nowSegments: Segment[] = lineage.nodes
     x: colX(branches.column.get(n.id)!),
     from: 'top' as const,
     to: 'dot' as const,
-    color: colorOf(n.tradition),
+    color: colorOfNode(n),
     hl: [...(highlightOf.get(n.id) ?? [])].join(' '),
+    trunk: n.id === 'early-christianity',
   }));
 
 // A static site knows the current year at build time.
@@ -167,26 +189,13 @@ const today = new Date();
   <ol class="rows" style={`--graph-w: ${GRAPH_W}px`}>
     {
       items.map((item) => {
-        if (item.type === 'era') {
-          return (
-            <li class="divider era">
-              <span class="ad">1 г. н. э.</span>
-              <span class="graph" aria-hidden="true">
-                {segmentsAt(item.index, true).map((s) => (
-                  <span class="seg full" data-hl={s.hl} style={`left:${s.x - 1}px; background:${s.color}`} />
-                ))}
-              </span>
-              <span class="text">Начало нашей эры — отсчёт от Рождества Христова</span>
-            </li>
-          );
-        }
         const { row, index } = item;
         const context = contextByRow.get(row.id);
         const dot = dotAt(row);
         const connector = connectorAt(row);
         const about = row.approx ? 'ок. ' : '';
         return (
-          <li class={`row ${row.kind}${index === 0 ? ' start' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
+          <li class={`row ${row.kind}${index === 0 ? ' start' : ''}${row.id === 'catholicism' ? ' major-schism' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
             <span class="ad" id={row.id === 'early-christianity' ? 'history-orthodoxy' : undefined}>
               {about}
               {formatYear(row.year)}
@@ -194,9 +203,9 @@ const today = new Date();
             <span class="graph" aria-hidden="true">
               {segmentsAt(index).map((s) => (
                 <span
-                  class={`seg ${s.from}-${s.to}`}
+                  class={`seg ${s.from}-${s.to}${s.trunk ? ' main-trunk' : ''}`}
                   data-hl={s.hl}
-                  style={`left:${s.x - 1}px; background:${s.color}; --dot-y:${DOT_Y}px`}
+                  style={`left:${s.x - (s.trunk ? 2.5 : 1)}px; background:${s.color}; --dot-y:${DOT_Y}px`}
                 />
               ))}
               {connector && (
@@ -207,12 +216,12 @@ const today = new Date();
                 />
               )}
               {dot && (
-                <span class="dot" data-hl={rowHighlight(row)} style={`left:${dot.x - 5}px; top:${DOT_Y - 5}px; background:${dot.color}`} />
+                <span class={`dot${dot.trunk ? ' main-trunk' : ''}`} data-hl={rowHighlight(row)} style={`left:${dot.x - (dot.trunk ? 7 : 5)}px; top:${DOT_Y - (dot.trunk ? 7 : 5)}px; background:${dot.color}`} />
               )}
             </span>
             <span class="text">
               {testamentOf(row) && <span class="biblical-label">{testamentOf(row) === 'old' ? 'Ветхий Завет' : 'Новый Завет'}</span>}
-              {row.kind === 'node' && <span class="chip" style={`background:${colorOf(row.tradition)}`} aria-hidden="true" />}
+              {row.kind === 'node' && <span class="chip" style={`background:${chipColorOfNode(nodeById.get(row.id)!)}`} aria-hidden="true" />}
               <b class="title">{row.title}</b>
               {row.text && <span class="event"> — {row.text.replaceAll('до Р.Х.', 'до н. э.')}</span>}
               {row.todo && <span class="todo"> (уточняется)</span>}
@@ -232,7 +241,7 @@ const today = new Date();
       <span class="ad">{formatYear(today.getFullYear())}</span>
       <span class="graph" aria-hidden="true">
         {nowSegments.map((s) => (
-          <span class="seg top-dot" data-hl={s.hl} style={`left:${s.x - 1}px; background:${s.color}; --dot-y:${DOT_Y}px`} />
+          <span class={`seg top-dot${s.trunk ? ' main-trunk' : ''}`} data-hl={s.hl} style={`left:${s.x - (s.trunk ? 2.5 : 1)}px; background:${s.color}; --dot-y:${DOT_Y}px`} />
         ))}
       </span>
       <span class="text">Наши дни</span>
@@ -294,6 +303,12 @@ const today = new Date();
     width: 2px;
   }
 
+  .seg.main-trunk {
+    width: 5px;
+    border-radius: 3px;
+    z-index: 2;
+  }
+
   .seg.full,
   .seg.top-bottom {
     top: 0;
@@ -328,6 +343,13 @@ const today = new Date();
     height: 10px;
     border-radius: 50%;
     box-shadow: 0 0 0 2px var(--surface);
+    z-index: 3;
+  }
+
+  .dot.main-trunk {
+    width: 14px;
+    height: 14px;
+    box-shadow: 0 0 0 3px var(--surface);
   }
 
   .milestones { margin-top: 12px; font-size: 16px; }
@@ -369,6 +391,17 @@ const today = new Date();
 
   .row.union .title { color: var(--ink); }
 
+  .row.major-schism {
+    background: color-mix(in srgb, var(--t-catholicism) 14%, var(--surface));
+    box-shadow: inset 5px 0 0 var(--t-catholicism);
+  }
+
+  .row.major-schism .title {
+    color: var(--t-catholicism);
+    font-size: 19px;
+    letter-spacing: 0.01em;
+  }
+
   .row.epoch .title {
     font-weight: 400;
     font-style: italic;
@@ -389,7 +422,6 @@ const today = new Date();
     font-size: 15px;
   }
 
-  .rows > li.divider.era,
   .rows > li.divider.now {
     color: var(--ink);
     font-weight: 700;

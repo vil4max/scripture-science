@@ -2,7 +2,7 @@
   "nodes": [
     {
       "id": "israelite-second-temple",
-      "label": "Древний Израиль",
+      "label": "Ветхозаветный Израиль",
       "kind": "trunk",
       "start": {
         "year": -1200,
@@ -15,6 +15,13 @@
             "tier": "reference",
             "excerpt": "Israelite religion, like Israel's language and culture, is a child of the Canaanite or West Semitic world.",
             "accessed": "2026-09-25"
+          },
+          {
+            "url": "https://www.azbyka.ru/otechnik/Mihail_Pomazanskij/vethij-zavet-v-novozavetnoj-tserkvi/",
+            "title": "Протопресв. Михаил Помазанский. «Ветхий Завет в Новозаветной Церкви»: преемство Священной истории",
+            "tier": "reference",
+            "excerpt": "Церковь показала, что она есть наследница угасшей ветхозаветной Церкви",
+            "accessed": "2026-09-27"
           }
         ]
       }
@@ -39,7 +46,7 @@
         ]
       },
       "event": {
-        "label": "Разрушение Иерусалима и Второго Храма; перенос центра в Явне",
+        "label": "После явления Церкви Христовой отдельная ветвь обозначает иудейскую религиозную традицию, не признавшую Иисуса Христа Мессией. Её раввинистическая форма складывалась после разрушения Иерусалима и Второго Храма; центр иудейской учёности переместился в Явне.",
         "proof": [
           {
             "url": "https://jewishvirtuallibrary.org/yochanan-ben-zakkai",
@@ -47,15 +54,22 @@
             "tier": "reference",
             "excerpt": "The school ben Zakkai established at Yavneh became the center of Jewish learning for centuries and replaced Jerusalem as the seat of the Sanhedrin.",
             "accessed": "2026-09-25"
+          },
+          {
+            "url": "https://azbyka.ru/iudaizm",
+            "title": "Энциклопедия «Азбуки веры»: отношение иудаизма ко Христу",
+            "tier": "reference",
+            "excerpt": "в иудаизме отрицается и троичность Бога по Лицам, и мессианское и Божественное достоинство Господа Иисуса Христа",
+            "accessed": "2026-09-27"
           }
         ]
       }
     },
     {
       "id": "early-christianity",
-      "label": "Православная Церковь · Пятидесятница",
+      "label": "Церковь Христова · Пятидесятница",
       "parent": "israelite-second-temple",
-      "kind": "branch",
+      "kind": "trunk",
       "start": {
         "year": 33,
         "approx": true,
@@ -78,7 +92,7 @@
         ]
       },
       "event": {
-        "label": "Сошествие Святого Духа на апостолов. Начало открытой жизни и всемирной проповеди Церкви, основанной Христом; её апостольское преемство продолжается доныне.",
+        "label": "Сошествие Святого Духа на апостолов: Церковь, основанная Христом, открыто явилась миру, и в ней завершилась ветхозаветная история спасения. Ученики впервые стали называться христианами позднее, в Антиохии (Деян. 11:26).",
         "proof": [
           {
             "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
@@ -93,6 +107,20 @@
             "tier": "official",
             "excerpt": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
             "accessed": "2026-09-25"
+          },
+          {
+            "url": "https://azbyka.ru/obzor-istorii-prazdnika-pyatidesyatnicy",
+            "title": "«Обзор истории праздника Пятидесятницы»: завершение ветхозаветной истории спасения",
+            "tier": "reference",
+            "excerpt": "в Церкви Христовой, в которой нашла свое завершение ветхозаветная история спасения",
+            "accessed": "2026-09-27"
+          },
+          {
+            "url": "https://azbyka.ru/otechnik/Averkij_Taushev/kniga-dejanij-svjatykh-apostolov/1#sel=173:1,173:129",
+            "title": "Архиеп. Аверкий (Таушев). Толкование Деян. 11:26: имя христиан в Антиохии",
+            "tier": "reference",
+            "excerpt": "ученики в Антиохии в первый раз стали называться христианами",
+            "accessed": "2026-09-27"
           }
         ]
       },
@@ -104,71 +132,27 @@
       "parent": "early-christianity",
       "kind": "branch",
       "start": {
-        "year": 431,
-        "label": "431 г. · Эфесский собор",
+        "year": 484,
+        "approx": true,
+        "label": "ок. 484–486 гг. · закрепление отдельной христологической традиции",
         "proof": [
           {
-            "url": "https://www.newadvent.org/cathen/05491a.htm",
-            "title": "Council of Ephesus — Catholic Encyclopedia (New Advent)",
+            "url": "https://www.livius.org/articles/concept/ecclesiastical-council/the-council-of-ephesus-431/",
+            "title": "Livius — Council of Ephesus: Beth Lapat and Seleucia",
             "tier": "reference",
-            "excerpt": "The third ecumenical council, held in 431.",
-            "accessed": "2026-09-25"
-          }
-        ]
-      },
-      "event": {
-        "label": "Осуждение учения Нестория на Эфесском соборе",
-        "proof": [
-          {
-            "url": "https://www.newadvent.org/cathen/05491a.htm",
-            "title": "Council of Ephesus — Catholic Encyclopedia (New Advent)",
-            "tier": "reference",
-            "excerpt": "The third ecumenical council, held in 431.",
-            "accessed": "2026-09-25"
-          }
-        ]
-      }
-    },
-    {
-      "id": "chalcedonian-christianity",
-      "label": "IV Вселенский Собор",
-      "parent": "early-christianity",
-      "kind": "branch",
-      "start": {
-        "year": 451,
-        "label": "451 г. · Халкидонский собор",
-        "proof": [
-          {
-            "url": "https://www.newadvent.org/cathen/03555a.htm",
-            "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
-            "tier": "reference",
-            "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
-            "accessed": "2026-09-25"
-          }
-        ]
-      },
-      "event": {
-        "label": "Халкидонское исповедание: один Христос в двух природах. Собор свидетельствует веру Церкви, а не основывает новую религию.",
-        "proof": [
-          {
-            "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
-            "title": "Основные принципы отношения РПЦ к инославию (2000), §§1.1–1.4: единство Церкви",
-            "tier": "official",
-            "excerpt": "Православная Церковь есть истинная Церковь Христова",
+            "excerpt": "their christology was established in the Councils of Bet-Lapat (484) and Seleucia (486)",
             "accessed": "2026-09-27"
-          },
+          }
+        ]
+      },
+      "event": {
+        "label": "После III Вселенского Собора отдельная христологическая традиция закрепилась в персидской Церкви Востока на соборах Бет-Лапата (484) и Селевкии (486). Поэтому ветвь начинается здесь, а не в строке самого Эфесского Собора.",
+        "proof": [
           {
-            "url": "https://www.newadvent.org/cathen/03555a.htm",
-            "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
+            "url": "https://www.livius.org/articles/concept/ecclesiastical-council/the-council-of-ephesus-431/",
+            "title": "Livius — Council of Ephesus: Beth Lapat and Seleucia",
             "tier": "reference",
-            "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
-            "accessed": "2026-09-25"
-          },
-          {
-            "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
-            "title": "Свт. Филарет. Пространный катехизис, §§180–181: природы и Ипостась Христа",
-            "tier": "official",
-            "excerpt": "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе",
+            "excerpt": "their christology was established in the Councils of Bet-Lapat (484) and Seleucia (486)",
             "accessed": "2026-09-27"
           }
         ]
@@ -254,12 +238,19 @@
       "id": "catholicism",
       "label": "Католицизм",
       "tradition": "catholicism",
-      "parent": "chalcedonian-christianity",
+      "parent": "early-christianity",
       "kind": "branch",
       "start": {
         "year": 1054,
-        "label": "1054 г. · веха отпадения Рима",
+        "label": "1054 г. · Великий раскол: отпадение Рима",
         "proof": [
+          {
+            "url": "https://azbyka.ru/katolicizm#kak-proizoshlo-otpadenie-rimsko-katolicheskoj-cerkvi-ot-vselenskogo-pravoslaviya",
+            "title": "Энциклопедия «Азбуки веры»: отпадение Римской церкви от Вселенского Православия",
+            "tier": "reference",
+            "excerpt": "Римская Поместная церковь откололась от Вселенской Православной",
+            "accessed": "2026-09-27"
+          },
           {
             "url": "https://www.newadvent.org/cathen/13535a.htm",
             "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
@@ -270,7 +261,7 @@
         ]
       },
       "event": {
-        "label": "Отпадение Рима от единства с Православной Церковью. События 1054 года стали вехой длительного разделения, а не датой возникновения Церкви Христовой.",
+        "label": "Великий раскол: Римская Поместная церковь отделилась от православного церковного единства. 1054 год — важнейшая веха длительного процесса; разрыв общения завершался постепенно и не означает возникновения Церкви Христовой в эту дату.",
         "proof": [
           {
             "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
@@ -285,38 +276,45 @@
             "tier": "reference",
             "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
             "accessed": "2026-09-25"
+          },
+          {
+            "url": "https://azbyka.ru/katolicizm#kak-proizoshlo-otpadenie-rimsko-katolicheskoj-cerkvi-ot-vselenskogo-pravoslaviya",
+            "title": "Энциклопедия «Азбуки веры»: 1054 год как условная дата Великой схизмы",
+            "tier": "reference",
+            "excerpt": "условная дата «Великой схизмы»",
+            "accessed": "2026-09-27"
           }
         ]
       }
     },
     {
       "id": "reformation",
-      "label": "Реформация",
+      "label": "Начало протестантизма · Реформация",
       "tradition": "protestantism",
       "parent": "catholicism",
       "kind": "branch",
       "start": {
         "year": 1517,
-        "label": "1517 г. · 95 тезисов Лютера",
+        "label": "1517 г. · условное начало протестантской Реформации",
         "proof": [
           {
-            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
-            "title": "Martin Luther posts 95 theses — HISTORY",
-            "tier": "news",
-            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
-            "accessed": "2026-09-25"
+            "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+            "title": "OpenStax World History — The Protestant Reformation",
+            "tier": "reference",
+            "excerpt": "The Protestant Reformation began in 1517, but its seeds had been sown years earlier.",
+            "accessed": "2026-09-27"
           }
         ]
       },
       "event": {
-        "label": "95 тезисов Лютера",
+        "label": "Выступление Мартина Лютера с 95 тезисами принято за условное начало Реформации — длительного процесса, в котором из западного христианства сформировались протестантские исповедания.",
         "proof": [
           {
-            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
-            "title": "Martin Luther posts 95 theses — HISTORY",
-            "tier": "news",
-            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
-            "accessed": "2026-09-25"
+            "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+            "title": "OpenStax World History — The Protestant Reformation",
+            "tier": "reference",
+            "excerpt": "The Protestant Reformation began in 1517, but its seeds had been sown years earlier.",
+            "accessed": "2026-09-27"
           }
         ]
       }
@@ -696,9 +694,23 @@
           "tier": "official",
           "excerpt": "not all bishops and faithful of the Kyivan Metropolia supported the model approved by the 1596 Council of Brest.",
           "accessed": "2026-09-26"
+        },
+        {
+          "url": "https://azbyka.ru/otechnik/Kallist_Uer/pravoslavnaja-tserkov/1_2",
+          "title": "Митр. Каллист (Уэр). «Православная Церковь»: Брестская уния",
+          "tier": "reference",
+          "excerpt": "они признали примат папы, но получили позволение сохранить традиционные институты",
+          "accessed": "2026-09-27"
+        },
+        {
+          "url": "https://azbyka.ru/otechnik/Kallist_Uer/pravoslavnaja-tserkov/1_2",
+          "title": "Митр. Каллист (Уэр). «Православная Церковь»: православное сопротивление унии",
+          "tier": "reference",
+          "excerpt": "два других епископа, а также значительное число делегатов от монастырей и приходов решили остаться православными",
+          "accessed": "2026-09-27"
         }
       ],
-      "description": "часть православных епископов Киевской митрополии в Речи Посполитой вошла в общение с Римом, сохранив византийский обряд. Другие епископы и верующие остались в Православной церкви."
+      "description": "часть епископов Киевской митрополии признала власть Римского папы, сохранив византийский обряд во внешней богослужебной форме. С православной точки зрения это была замена канонической принадлежности: православные епископы, духовенство, братства и миряне, не принявшие унию, сохранили верность Православной Церкви."
     }
   ],
   "others": [
@@ -929,6 +941,45 @@
           "tier": "reference",
           "excerpt": "in about the 3rd or 2nd century bce, is directly related to later Japanese culture and hence to Shintō",
           "accessed": "2026-09-26"
+        }
+      ]
+    },
+    {
+      "id": "third-ecumenical-council",
+      "label": "III Вселенский Собор · Эфес",
+      "description": "Собор единой Церкви осудил учение Нестория и исповедал Пресвятую Деву Богородицей. Отдельная линия Церкви Востока показана позднее, когда иная христологическая традиция закрепилась в 484–486 годах.",
+      "from": 431,
+      "approx": false,
+      "proof": [
+        {
+          "url": "https://www.newadvent.org/cathen/05491a.htm",
+          "title": "Council of Ephesus — Catholic Encyclopedia (New Advent)",
+          "tier": "reference",
+          "excerpt": "The third ecumenical council, held in 431.",
+          "accessed": "2026-09-25"
+        }
+      ]
+    },
+    {
+      "id": "fourth-ecumenical-council",
+      "label": "IV Вселенский Собор · Халкидон",
+      "description": "Собор единой Церкви исповедал одного Христа в двух природах. Он засвидетельствовал церковную веру; отдельная ветвь возникла вследствие непринятия его определения.",
+      "from": 451,
+      "approx": false,
+      "proof": [
+        {
+          "url": "https://www.newadvent.org/cathen/03555a.htm",
+          "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
+          "tier": "reference",
+          "excerpt": "The Fourth Ecumenical Council, held in 451",
+          "accessed": "2026-09-25"
+        },
+        {
+          "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+          "title": "Свт. Филарет. Пространный катехизис, §§180–181: один Христос в двух природах",
+          "tier": "official",
+          "excerpt": "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе",
+          "accessed": "2026-09-27"
         }
       ]
     }
