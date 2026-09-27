@@ -3,15 +3,12 @@ import { TOPIC_GROUPS, TOPIC_TITLES_RU } from '../lib/rules';
 ---
 
 <nav class="contents" aria-labelledby="comparison-contents-title">
-  <div class="contents-head">
-    <h2 id="comparison-contents-title">Содержание</h2>
-    <div class="section-links">
-      <a href="#chosen">Основные сведения</a>
-      <a href="#topics">Вера и практика</a>
-      <a href="#views">Отношения между традициями</a>
-    </div>
-  </div>
+  <h2 id="comparison-contents-title">Содержание</h2>
   <div class="groups">
+    <section class="group" style="--group-accent:var(--t-orthodoxy)">
+      <a class="group-title" href="#chosen">Основные сведения</a>
+      <p>Классификация, возникновение, численность, Писание и самоописание.</p>
+    </section>
     {TOPIC_GROUPS.map((group, index) => <section class="group" style={`--group-accent:var(${['--t-orthodoxy', '--t-catholicism', '--t-jw'][index]})`}>
       <a class="group-title" href={`#group-${group.id}`}>{group.title}</a>
       <div class="topic-links">
@@ -23,22 +20,19 @@ import { TOPIC_GROUPS, TOPIC_TITLES_RU } from '../lib/rules';
 
 <style>
   .contents { margin: 8px 0 36px; }
-  .contents-head { display: flex; align-items: baseline; justify-content: space-between; gap: 20px; margin-bottom: 14px; }
-  .contents-head h2 { margin: 0; font-size: 25px; }
-  .section-links { display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 8px; }
-  .section-links a, .topic-links a {
+  .contents > h2 { margin: 0 0 14px; font-size: 25px; }
+  .topic-links a {
     color: var(--ink);
     text-decoration: none;
     border: 1px solid var(--line);
     border-radius: 999px;
     background: var(--bg);
   }
-  .section-links a { padding: 7px 12px; font-size: 14px; font-weight: 700; }
-  .groups { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+  .groups { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
   .group { min-width: 0; padding: 13px; border: 1px solid var(--line); border-top: 3px solid var(--group-accent); background: var(--surface); }
   .group-title { display: inline-block; margin-bottom: 10px; color: var(--ink); font-weight: 700; text-underline-offset: 3px; }
+  .group p { margin: 0; color: var(--muted); font-size: 13px; line-height: 1.4; }
   .topic-links { display: flex; flex-wrap: wrap; gap: 6px; }
   .topic-links a { padding: 4px 8px; color: var(--muted); font-size: 13px; line-height: 1.25; }
-  .section-links a:hover, .section-links a:focus-visible,
   .topic-links a:hover, .topic-links a:focus-visible { border-color: var(--focus); color: var(--focus); }
 </style>

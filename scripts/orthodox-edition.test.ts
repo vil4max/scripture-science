@@ -48,6 +48,10 @@ test('server output keeps a fixed Orthodox foundation column in every comparison
   assert.match(html, /aria-labelledby="comparison-contents-title"/);
   for (const topic of TOPIC_ORDER) assert.ok(html.includes(`href="#topic-${topic}"`), topic);
   assert.match(html, /<header class="views-heading"/);
+  assert.ok(html.indexOf('id="views"') < html.indexOf('data-comparison-slots'));
+  assert.ok(!html.includes('Итоговый раздел'));
+  assert.ok(!html.includes('class="section-links"'));
+  assert.match(html, /data-back-to-top/);
 });
 test('legacy pair destinations preserve parameters and resolve published anchors', () => {
   const routes = new Map<string, string>([

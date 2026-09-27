@@ -1,0 +1,44 @@
+<button class="back-to-top" type="button" data-back-to-top hidden aria-label="Вернуться к началу страницы">
+  <span aria-hidden="true">↑</span> Наверх
+</button>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-back-to-top]');
+  if (button) {
+    const update = () => { button.hidden = window.scrollY < 700; };
+    window.addEventListener('scroll', update, { passive: true });
+    button.addEventListener('click', () => {
+      const url = new URL(location.href);
+      url.hash = '';
+      history.replaceState(history.state, '', url);
+      window.scrollTo({
+        top: 0,
+        behavior: matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth',
+      });
+    });
+    update();
+  }
+</script>
+
+<style>
+  .back-to-top {
+    position: fixed;
+    right: 24px;
+    bottom: 24px;
+    z-index: 20;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    border: 1px solid var(--focus);
+    border-radius: 999px;
+    color: var(--bg);
+    background: var(--focus);
+    box-shadow: 0 8px 24px color-mix(in srgb, #000 35%, transparent);
+    font: inherit;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .back-to-top[hidden] { display: none; }
+  .back-to-top:focus-visible { outline: 2px solid var(--ink); outline-offset: 3px; }
+</style>
