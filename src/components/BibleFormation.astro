@@ -1,45 +1,60 @@
 ---
 import guide from '../data/bible-guide.json';
+import type { CollectionEntry } from 'astro:content';
+import BibleTraditions from './BibleTraditions.astro';
+interface Props { traditions: CollectionEntry<'matrix'>[]; }
+const { traditions } = Astro.props;
 import type { Citation } from '../lib/citations';
 import ProofLink from './ProofLink.astro';
 
+const labels: Record<string, string> = { lds: 'Святые последних дней · отдельное Писание', hebrew: 'Еврейские Писания', christian: 'Христианская Библия', islam: 'Ислам · самостоятельное Писание' };
 type VerifiedProof = Citation & Required<Pick<Citation, 'tier' | 'excerpt' | 'accessed'>>;
-const proofs = guide.proofs as Record<keyof typeof guide.proofs, VerifiedProof[]>;
-const { collection: collectionProof, codex: codexProof, synodal: synodalProof } = proofs;
+const proofs = guide.proofs as Record<string, VerifiedProof[]>;
 ---
 
 <section aria-labelledby="formation-title">
-  <h2 id="formation-title">Откуда взялась Библия</h2>
-  <p class="section-lead">Короткий ответ: Библия — не произведение одного автора и не одноразово составленная книга. Это библиотека текстов разных жанров, которую общины переписывали, читали и постепенно признавали Священным Писанием.<ProofLink proof={collectionProof} inline /></p>
-  <div class="route" aria-label="Путь библейского текста">
-    <article><span>1</span><h3>Тексты</h3><p>Законы, повествования, пророческие и поэтические книги, Евангелия и послания возникали как отдельные произведения.</p></article>
-    <article><span>2</span><h3>Рукописи</h3><p>Тексты многократно переписывали. Сохранившиеся рукописи различаются возрастом, составом и вариантами чтения.<ProofLink proof={codexProof} /></p></article>
-    <article><span>3</span><h3>Канон</h3><p>Религиозная община определяет, какие книги читает как нормативное Писание. Поэтому состав и названия групп книг различаются.</p></article>
-    <article><span>4</span><h3>Перевод</h3><p>Переводчик работает не с абстрактной «Библией», а с выбранным изданием древнего текста и принимает решения о передаче слов.</p></article>
-  </div>
-  <div class="evidence-grid">
-    <article>
-      <p class="eyebrow">IV век · сохранившаяся рукопись</p>
-      <h3>Codex Sinaiticus</h3>
-      <p>Греческий кодекс содержит древнейший полный Новый Завет. Вместе с ним переписаны Послание Варнавы и «Пастырь» Ермы, которых нет в большинстве современных Библий. Это наглядно показывает, что рукопись и позднейший канонический список — не одно и то же.<ProofLink proof={codexProof} /></p>
-    </article>
-    <article>
-      <p class="eyebrow">1816–1876 · русский перевод</p>
-      <h3>Синодальный перевод</h3>
-      <p>Работу начало Российское Библейское Общество, продолжили церковные переводчики, а полная Библия вышла в 1876 году. Ветхий Завет переводили прежде всего с масоретского текста, сверяясь с греческой и церковнославянской версиями.<ProofLink proof={synodalProof} /></p>
-    </article>
-  </div>
+  <h2 id="formation-title">История Писаний</h2>
+  <ol class="scripture-timeline">
+    {guide.timeline.map((event) => <li id={`scripture-${event.id}`} data-branch={event.branch}>
+      <div class="period">{event.period}</div>
+      <article>
+        <span class="branch">{labels[event.branch]}</span>
+        <h3>{event.title}</h3>
+        <dl class="participants">
+          <div><dt>Где</dt><dd>{event.place}</dd></div>
+          <div><dt>Кто</dt><dd>{event.people}</dd></div>
+        </dl>
+        {event.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+        <ProofLink proof={event.proofKeys.flatMap((key) => proofs[key])} />
+        <BibleTraditions traditions={traditions} event={event.id} />
+      </article>
+    </li>)}
+    <li class="present">
+      <div class="period">Сегодня</div>
+      <div class="today"><slot /></div>
+    </li>
+  </ol>
 </section>
 
 <style>
-  section { display: grid; gap: 20px; }
-  .route { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
-  article { border: 1px solid var(--line); border-radius: 10px; background: var(--surface); padding: 18px; }
-  .route article { position: relative; padding-top: 54px; }
-  .route span { position: absolute; inset: 14px auto auto 16px; width: 28px; height: 28px; border-radius: 50%; display: grid; place-items: center; background: var(--focus); color: var(--bg); font-weight: 700; }
-  h3 { margin: 0 0 8px; font-size: 20px; }
-  p { margin: 0; }
-  .evidence-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; }
-  .eyebrow { color: var(--focus); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: .03em; margin-bottom: 6px; }
-  @media (max-width: 900px) { .route { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  .scripture-timeline { list-style: none; padding: 0; margin: 28px 0 0; }
+  li { --thread: var(--focus); display: grid; grid-template-columns: 154px minmax(0, 1fr); column-gap: 28px; }
+  li[data-branch='christian'] { --thread: light-dark(#245b94, #8bbef2); }
+  li[data-branch='lds'] { --thread: var(--t-lds); }
+  li[data-branch='islam'] { --thread: light-dark(#276642, #8ec9a2); }
+  .period { padding: 25px 0; text-align: right; font-size: 16px; font-weight: 700; color: var(--thread); }
+  article, .today { position: relative; border-left: 2px solid var(--thread); padding: 22px 0 34px 30px; }
+  article::before, .today::before { content: ''; position: absolute; left: -7px; top: 30px; width: 12px; height: 12px; border-radius: 50%; background: var(--thread); outline: 4px solid var(--bg); }
+  article { border-bottom: 1px solid var(--line); }
+  .branch { color: var(--thread); font-size: 13px; font-weight: 700; letter-spacing: .04em; }
+  h3 { font-size: 25px; margin: 5px 0 12px; }
+  .participants { display: flex; flex-wrap: wrap; gap: 6px 24px; margin: 0 0 18px; font-size: 14px; color: var(--muted); }
+  .participants div { display: flex; gap: 6px; }
+  dt { font-weight: 700; }
+  dd { margin: 0; }
+  p { max-width: 76ch; margin: 10px 0 0; }
+  li[data-branch='islam'] article { margin: 20px 0 20px 28px; padding-right: 24px; background: color-mix(in srgb, var(--thread) 5%, var(--bg)); border-radius: 0 10px 10px 0; }
+  li[data-branch='islam'] .period { padding-top: 45px; }
+  .today { display: grid; gap: 40px; padding-bottom: 0; }
+  @media (max-width: 1050px) { li { grid-template-columns: 130px minmax(0, 1fr); column-gap: 20px; } article, .today { padding-left: 24px; } }
 </style>

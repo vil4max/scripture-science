@@ -72,6 +72,494 @@
         "excerpt": "It includes 46 books for the Old Testament (45 if we count Jeremiah and Lamentations as one) and 27 for the New.",
         "accessed": "2026-09-26"
       }
+    ],
+    "torah": [
+      {
+        "url": "https://www.ou.org/judaism-101/glossary/torah/",
+        "title": "Torah — Orthodox Union",
+        "tier": "official",
+        "excerpt": "given to them by G-d at Mt. Sinai, some thirty three hundred years ago",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "septuagint": [
+      {
+        "url": "https://olli.gmu.edu/docstore/600docs/1603-602-OLLIMacc1HO.pdf",
+        "title": "The Books of the Maccabees, slides 6–7 — OLLI, George Mason University",
+        "tier": "reference",
+        "excerpt": "A Greek translation of Hebrew scriptures compiled in Alexandria for the Jews outside of the homeland.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "transmission": [
+      {
+        "url": "https://www.csntm.org/csntm-exhibit-guide-2/",
+        "title": "Rare Books & Manuscript Facsimile Exhibit Guide — CSNTM",
+        "tier": "reference",
+        "excerpt": "All compositions comprising the New Testament were produced in the first century in the Greek language.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.csntm.org/csntm-exhibit-guide-2/",
+        "title": "Rare Books & Manuscript Facsimile Exhibit Guide — CSNTM",
+        "tier": "reference",
+        "excerpt": "printed in Mainz (Germany) around 1454",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.csntm.org/csntm-exhibit-guide-2/",
+        "title": "Rare Books & Manuscript Facsimile Exhibit Guide — CSNTM",
+        "tier": "reference",
+        "excerpt": "in 1516",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "codexProduction": [
+      {
+        "url": "https://codexsinaiticus.org/en/codex/production.aspx",
+        "title": "Codex Sinaiticus Project — production",
+        "tier": "reference",
+        "excerpt": "Codex Sinaiticus was copied by more than one scribe.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "codexPlace": [
+      {
+        "url": "https://codexsinaiticus.org/en/codex/history.aspx",
+        "title": "Codex Sinaiticus Project — history",
+        "tier": "reference",
+        "excerpt": "The Codex Sinaiticus is named after the Monastery of Saint Catherine, Mount Sinai",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "quranHistory": [
+      {
+        "url": "https://pluralism.org/muhammad",
+        "title": "Muhammad — Harvard Pluralism Project",
+        "tier": "reference",
+        "excerpt": "In 622 C.E., the Prophet and his followers emigrated north from Makkah to Madinah to establish the first Islamic community.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "quranText": [
+      {
+        "url": "https://pluralism.org/qur%E2%80%99an-the-word-of-god",
+        "title": "Qur’an: The Word of God — Harvard Pluralism Project",
+        "tier": "reference",
+        "excerpt": "The words of the Qur’an were originally revealed to Muhammad in Arabic; he then recited them to his followers.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "slavonic": [
+      {
+        "url": "https://www.prlib.ru/news/2116599",
+        "title": "Кирилл и Мефодий — Президентская библиотека",
+        "tier": "reference",
+        "excerpt": "В 863 году по просьбе князя Великой Моравии Ростислава",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.vatican.va/content/benedict-xvi/en/audiences/2009/documents/hf_ben-xvi_aud_20090617.html",
+        "title": "Saints Cyril and Methodius — Benedict XVI, 17 June 2009",
+        "tier": "official",
+        "excerpt": "the Evangeliarium (liturgical passages of the New Testament), the Psalter, various liturgical texts in Slavonic, on which both the Brothers had worked",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "newWorld": [
+      {
+        "url": "https://www.jw.org/ru/библиотека/библия/",
+        "title": "Русские издания Библии — JW.org",
+        "tier": "official",
+        "excerpt": "Священное Писание. Перевод «Новый мир» (издание 2007 года)",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.jw.org/ru/библиотека/библия/",
+        "title": "Русские издания Библии — JW.org",
+        "tier": "official",
+        "excerpt": "Библия. Перевод «Новый мир» (издание 2021 года)",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.jw.org/ru/библиотека/библия/nwt/Титульная-страница-Выходные-данные/",
+        "title": "Перевод «Новый мир» — выходные данные",
+        "tier": "official",
+        "excerpt": "За основу этого перевода взято английское издание New World Translation 2013 года.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "modernRussian": [
+      {
+        "url": "https://www.biblia.ru/catalog/MobileApps/Lit1319/",
+        "title": "Библия. Современный русский перевод — Российское Библейское Общество",
+        "tier": "official",
+        "excerpt": "в 2011 году вышло в свет первое издание Библии в Современном русском переводе",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.biblia.ru/catalog/MobileApps/Lit1319/",
+        "title": "Библия. Современный русский перевод — Российское Библейское Общество",
+        "tier": "official",
+        "excerpt": "второе исправленное и дополненное издание",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "bookOfMormon": [
+      {
+        "url": "https://churchhistorylibrary.churchofjesuschrist.org/chl/foundations-of-faith-exhibit/2-3?lang=eng",
+        "title": "Book of Mormon First Edition (1830) — Church History Library",
+        "tier": "official",
+        "excerpt": "The Book of Mormon was published in March 1830 in Palmyra, New York",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.churchofjesuschrist.org/study/manual/teachings-joseph-smith/historical-summary?lang=eng",
+        "title": "Joseph Smith: Historical Summary — The Church of Jesus Christ of Latter-day Saints",
+        "tier": "official",
+        "excerpt": "Joseph traveled periodically to Manchester, Fayette, and Palmyra to work on matters pertaining to the Book of Mormon translation",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "canonHistory": [
+      {
+        "url": "https://www.cambridge.org/core/journals/harvard-theological-review/article/abs/canon-formation-and-social-conflict-in-fourthcentury-egypt-athanasius-of-alexandrias-thirtyninth-festal-letter/32DE04D9904E7E77475FB529FA4B67BD",
+        "title": "David Brakke — Canon Formation and Social Conflict in Fourth-Century Egypt",
+        "tier": "reference",
+        "excerpt": "the earliest extant Christian document to list precisely the twenty-seven books that eventually formed the generally accepted canon of the New Testament",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "vulgate": [
+      {
+        "url": "https://www.vatican.va/content/francesco/en/apost_letters/documents/papa-francesco-lettera-ap_20200930_scripturae-sacrae-affectus.html",
+        "title": "Scripturae Sacrae affectus — Pope Francis, 2020",
+        "tier": "official",
+        "excerpt": "his translation of the Old Testament into Latin from the original Hebrew.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "printingText": [
+      {
+        "url": "https://www.csntm.org/csntm-exhibit-guide-2/",
+        "title": "Rare Books & Manuscript Facsimile Exhibit Guide — CSNTM",
+        "tier": "reference",
+        "excerpt": "The first major book Gutenberg printed on the movable type printing press was the Latin Vulgate Bible",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "lutherBible": [
+      {
+        "url": "https://gruber.lstc.edu/luthers_bible/1522.php",
+        "title": "The Gruber Collection — Luther’s Bible Translations, 1522",
+        "tier": "reference",
+        "excerpt": "In September, 1522, Luther published the first edition of his translation of the New Testament.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://gruber.lstc.edu/luthers_bible/1522.php",
+        "title": "The Gruber Collection — Luther’s Bible Translations, 1522",
+        "tier": "reference",
+        "excerpt": "complete Bible in 1534",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://gruber.lstc.edu/luthers_bible/1522.php",
+        "title": "The Gruber Collection — Luther’s Bible Translations, 1522",
+        "tier": "reference",
+        "excerpt": "Greek text edited by Erasmus",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "newWorldHistory": [
+      {
+        "url": "https://www.jw.org/en/news/region/global/New-World-Translation-of-the-Christian-Greek-Scriptures-First-Released-75-Years-Ago/",
+        "title": "Jehovah’s Witnesses — New World Translation first released 75 years ago",
+        "tier": "official",
+        "excerpt": "Finally, in 1961, the complete New World Translation of the Holy Scriptures was released.",
+        "accessed": "2026-09-26"
+      }
     ]
-  }
+  },
+  "timeline": [
+    {
+      "id": "torah",
+      "period": "Библейский рассказ",
+      "title": "Тора: начало Писания",
+      "branch": "hebrew",
+      "place": "Синай",
+      "people": "Моисей и народ Израиля",
+      "paragraphs": [
+        "В иудейской традиции Тора дарована Богом Моисею на Синае. Это первые пять книг Библии: от рассказа о Сотворении мира до истории Исхода и закона, по которому должен жить народ.",
+        "Танах — более широкое собрание: Тора, Пророки и Писания. Эти тексты принадлежат иудейской традиции; христиане читают их в составе Ветхого Завета. Синай здесь обозначает событие священной истории, а не дату сохранившейся рукописи."
+      ],
+      "proofKeys": [
+        "torah",
+        "collection"
+      ]
+    },
+    {
+      "id": "septuagint",
+      "period": "С III века до н. э.",
+      "title": "Септуагинта: Писание на греческом",
+      "branch": "hebrew",
+      "place": "Александрия, Египет",
+      "people": "Еврейские переводчики",
+      "paragraphs": [
+        "В грекоязычной еврейской среде начинают переводить священные книги на греческий. Это собрание переводов известно как Септуагинта. Работа продолжалась со временем: книги не были переведены все сразу.",
+        "Позднее грекоязычные христиане приняли этот перевод Ветхого Завета. Так еврейские Писания стали частью христианской Библии и на языке, которым пользовались многие ранние христианские общины."
+      ],
+      "proofKeys": [
+        "septuagint",
+        "codex"
+      ]
+    },
+    {
+      "id": "new-testament",
+      "period": "I век н. э.",
+      "title": "Новый Завет: Евангелия и послания",
+      "branch": "christian",
+      "place": "Общины Римской империи",
+      "people": "Апостолы и ранние христианские авторы",
+      "paragraphs": [
+        "В христианских общинах появляются тексты об Иисусе Христе и жизни Церкви: Евангелия, послания и другие сочинения на греческом языке. Среди авторов — апостол Павел, писавший письма общинам.",
+        "Эти произведения переписывают и передают дальше. Создание текста, изготовление его копии и признание книги Писанием — разные этапы: готового общего тома в начале этой истории ещё нет."
+      ],
+      "proofKeys": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "sinaiticus",
+      "period": "Середина IV века",
+      "title": "Синайский кодекс: Библия, переписанная от руки",
+      "branch": "christian",
+      "place": "Синай: место хранения до XIX века",
+      "people": "Несколько переписчиков",
+      "paragraphs": [
+        "Кодекс — книга из сшитых листов. Синайский кодекс, или Codex Sinaiticus, — сохранившаяся греческая рукопись Библии. В ней находится древнейший дошедший до нас полный Новый Завет: это копия более ранних произведений, а не время их создания.",
+        "Вместе с библейскими книгами переписаны Послание Варнавы и «Пастырь» Ермы — ранние христианские тексты, которых нет в большинстве современных Библий. Состав древней рукописи поэтому нельзя автоматически принимать за сегодняшний список священных книг."
+      ],
+      "proofKeys": [
+        "codex",
+        "codexProduction",
+        "codexPlace"
+      ]
+    },
+    {
+      "id": "canon",
+      "period": "367 год · формирование канона",
+      "title": "Какие книги признаются Писанием",
+      "branch": "christian",
+      "place": "Александрия и христианские общины",
+      "people": "Афанасий Александрийский; церковные общины",
+      "paragraphs": [
+        "Канон — перечень книг, которые община признаёт Священным Писанием. Он складывался по мере чтения, передачи и обсуждения текстов: состав одной древней рукописи ещё не означает согласия всех церквей.",
+        "В пасхальном послании 367 года Афанасий Александрийский перечисляет те 27 книг, которые составляют современный Новый Завет. Это важное свидетельство формирования канона; различия в составе Ветхого Завета сохраняются у христианских традиций и сегодня."
+      ],
+      "proofKeys": [
+        "canonHistory",
+        "codex",
+        "orthodoxCanon",
+        "catholicCanon"
+      ]
+    },
+    {
+      "id": "vulgate",
+      "period": "Конец IV — начало V века",
+      "title": "Вульгата: Библия на латинском",
+      "branch": "christian",
+      "place": "Рим и Вифлеем",
+      "people": "Иероним и продолжатели его работы",
+      "paragraphs": [
+        "В католическом изложении этой истории Иероним сначала пересматривает прежний латинский текст Евангелий, затем переводит книги Ветхого Завета с еврейского. Его работа и труды продолжателей легли в основу Вульгаты — латинской библейской традиции.",
+        "Вульгата широко распространяется в западном христианстве. Позднее именно её печатает Гутенберг: между древними рукописями и печатной Библией лежат века перевода и переписывания."
+      ],
+      "proofKeys": [
+        "vulgate",
+        "printingText"
+      ]
+    },
+    {
+      "id": "quran",
+      "period": "VII век · 610–632",
+      "title": "Коран: Писание ислама",
+      "branch": "islam",
+      "place": "Мекка и Медина, Аравия",
+      "people": "Пророк Мухаммад и первые мусульмане",
+      "paragraphs": [
+        "Согласно исламу, Мухаммад получает откровения от Бога и произносит их на арабском языке. Его последователи слушают и запоминают их. Эти откровения составляют Коран — самостоятельное Писание мусульман.",
+        "Ислам связывает себя с прежними пророками, включая Моисея и Иисуса, но Коран не является разделом или переводом Библии. Переводы Корана мусульмане понимают как передачу его смыслов; сам текст откровения для них — арабский."
+      ],
+      "proofKeys": [
+        "quranHistory",
+        "quranText"
+      ]
+    },
+    {
+      "id": "slavonic",
+      "period": "IX век · с 863 года",
+      "title": "Кирилл и Мефодий: Писание на славянском языке",
+      "branch": "christian",
+      "place": "Византия и Великая Моравия",
+      "people": "Кирилл (Константин), Мефодий и их ученики",
+      "paragraphs": [
+        "Кирилл и Мефодий переводят библейские и богослужебные тексты на славянский язык. В 863 году братья отправляются в Великую Моравию, чтобы проповедовать и совершать богослужение на понятном местным жителям языке.",
+        "Среди их переводов — евангельские чтения и Псалтирь. После смерти Кирилла работу продолжили Мефодий и ученики; позднее ученики перенесли её в Болгарию. Так складывалась славянская библейская традиция, задолго до русского Синодального перевода."
+      ],
+      "proofKeys": [
+        "slavonic"
+      ]
+    },
+    {
+      "id": "printing",
+      "period": "Середина XV века",
+      "title": "Печатная Библия Гутенберга",
+      "branch": "christian",
+      "place": "Майнц, Германия",
+      "people": "Иоганн Гутенберг",
+      "paragraphs": [
+        "Гутенберг печатает латинскую Вульгату с помощью подвижных литер. Вместо ручного переписывания каждого экземпляра становится возможным многократно воспроизводить набранные страницы.",
+        "Меняется способ распространения текста: печать позволяет выпускать много одинаковых экземпляров. Это издание существующего перевода, а не создание новой Библии."
+      ],
+      "proofKeys": [
+        "transmission",
+        "printingText"
+      ]
+    },
+    {
+      "id": "erasmus",
+      "period": "1516 год",
+      "title": "Греческий Новый Завет в печати",
+      "branch": "christian",
+      "place": "Базель, Швейцария",
+      "people": "Эразм Роттердамский и издатель Иоганн Фробен",
+      "paragraphs": [
+        "Эразм готовит греческий текст Нового Завета по доступным ему рукописям, а Фробен выпускает его печатное издание. Выбор рукописей и сравнение их чтений становятся частью работы над изданием.",
+        "Это помогает понять, почему важен вопрос «по какому тексту сделан перевод»: переводчик опирается на конкретное издание древнего текста."
+      ],
+      "proofKeys": [
+        "transmission"
+      ]
+    },
+    {
+      "id": "reformation-translations",
+      "period": "1522–1534 годы",
+      "title": "Реформация: Библия на языке читателя",
+      "branch": "christian",
+      "place": "Виттенберг, Германия",
+      "people": "Мартин Лютер, Филипп Меланхтон и сотрудники",
+      "paragraphs": [
+        "В 1522 году выходит немецкий Новый Завет Лютера, в 1534 году — полная Библия. Перевод Нового Завета опирается на греческое издание Эразма; текст дорабатывается вместе с другими богословами.",
+        "Разные переводы могут опираться на разные рукописи и печатные издания, а также по-разному передавать смысл исходных слов. Выбор перевода, список книг и толкование текста связаны, но это три разных вопроса."
+      ],
+      "proofKeys": [
+        "lutherBible",
+        "transmission"
+      ]
+    },
+    {
+      "id": "book-of-mormon",
+      "period": "1830 год",
+      "title": "Книга Мормона: ещё одно Писание",
+      "branch": "lds",
+      "place": "Пальмира, штат Нью-Йорк, США",
+      "people": "Джозеф Смит; печатник Эгберт Б. Грандин",
+      "paragraphs": [
+        "В марте 1830 года выходит первое издание Книги Мормона. Это отдельная книга, которую Святые последних дней признают Писанием наряду с Библией."
+      ],
+      "proofKeys": [
+        "bookOfMormon"
+      ]
+    },
+    {
+      "id": "synodal",
+      "period": "1876 год · полное издание",
+      "title": "Синодальный перевод: Библия на русском",
+      "branch": "christian",
+      "place": "Россия",
+      "people": "Российское Библейское Общество и церковные переводчики",
+      "paragraphs": [
+        "В 1816 году Российское Библейское Общество начинает работу над русским переводом. Позже её продолжают церковные переводчики. Полная Библия выходит в 1876 году с благословения Святейшего Синода — отсюда название «Синодальный».",
+        "Основой перевода Ветхого Завета служит масоретский текст — еврейский текст Библии, переданный в традиции еврейских книжников. Переводчики также сверяются с греческой и церковнославянской версиями. Поэтому перевод связан и с древними языками, и с уже существовавшими переводами."
+      ],
+      "proofKeys": [
+        "synodal"
+      ]
+    },
+    {
+      "id": "new-world",
+      "period": "1961 год · полное издание",
+      "title": "«Перевод нового мира»",
+      "branch": "christian",
+      "place": "США",
+      "people": "Свидетели Иеговы",
+      "paragraphs": [
+        "По истории Свидетелей Иеговы, Новый Завет этого перевода выходит на английском в 1950 году, а полная Библия одним томом — в 1961 году.",
+        "Полный русский перевод выходит в 2007 году, позднейшая русская редакция — в 2021 году.",
+        "В выходных данных более поздней редакции указано: основой служит английское издание 2013 года, при переводе также использован текст на языках оригинала. Это перевод Библии, используемый конкретной религиозной общиной."
+      ],
+      "proofKeys": [
+        "newWorld",
+        "newWorldHistory"
+      ]
+    },
+    {
+      "id": "modern-russian",
+      "period": "2011 год",
+      "title": "Современный русский перевод Библии",
+      "branch": "christian",
+      "place": "Россия",
+      "people": "Переводчики и редакторы Российского Библейского Общества",
+      "paragraphs": [
+        "Российское Библейское Общество выпускает полную Библию в Современном русском переводе. Перевод опирается на издания древнееврейского и греческого текстов и передаёт их на современном русском языке.",
+        "В 2015 году выходит исправленное и дополненное издание. Новая редакция перевода и состав священных книг — разные вопросы: язык и формулировки могут меняться без появления нового Писания."
+      ],
+      "proofKeys": [
+        "modernRussian"
+      ]
+    }
+  ],
+  "traditionNotes": [
+    {
+      "tradition": "judaism",
+      "event": "torah",
+      "text": "Танах объединяет 24 книги: Тору, Пророков и Писания. Его читают вместе с традицией толкования; роль Устной Торы и подходы к её пониманию различаются между течениями иудаизма."
+    },
+    {
+      "tradition": "catholicism",
+      "event": "canon",
+      "text": "Католическая Библия содержит 46 книг Ветхого Завета и 27 Нового. Авторитетное толкование Писания принадлежит Учительству Церкви — Папе и епископам в общении с ним."
+    },
+    {
+      "tradition": "orthodoxy",
+      "event": "slavonic",
+      "text": "За богослужением используется церковнославянский текст, для домашнего чтения — Синодальный перевод. Писание толкуют в свете церковного Предания и трудов святых отцов."
+    },
+    {
+      "tradition": "islam",
+      "event": "quran",
+      "text": "Коран признаётся заключительным откровением. Толкованием занимаются богословы; формы религиозного авторитета различаются у суннитов и шиитов."
+    },
+    {
+      "tradition": "protestantism",
+      "event": "reformation-translations",
+      "text": "Признаются 66 книг Библии; широко используется Синодальный перевод. Библия имеет высший авторитет, а роль исповеданий веры, предания и поместной общины различается между течениями."
+    },
+    {
+      "tradition": "adventism",
+      "event": "synodal",
+      "text": "Библия служит высшим мерилом вероучения; русский текст — Синодальный перевод. Труды Елены Уайт признаются пророческим наставлением, но церковь не считает их заменой или дополнением к Библии."
+    },
+    {
+      "tradition": "lds",
+      "event": "book-of-mormon",
+      "text": "В канон входят Библия, Книга Мормона, Учение и Заветы и Драгоценная жемчужина. Учение устанавливают Первое Президентство и Кворум Двенадцати Апостолов."
+    },
+    {
+      "tradition": "jw",
+      "event": "new-world",
+      "text": "Признаются 66 книг Библии, без апокрифов. Используется «Перевод нового мира»; окончательное толкование Библии осуществляет Руководящий совет."
+    }
+  ]
 }

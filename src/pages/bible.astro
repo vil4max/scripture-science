@@ -1,7 +1,6 @@
 ---
 import BibleCanon from '../components/BibleCanon.astro';
 import BibleFormation from '../components/BibleFormation.astro';
-import BibleTraditions from '../components/BibleTraditions.astro';
 import SectionPage from '../layouts/SectionPage.astro';
 import { getOrderedMatrix } from '../lib/content';
 
@@ -9,11 +8,10 @@ const traditions = await getOrderedMatrix();
 ---
 
 <SectionPage
-  title="Писания: тексты, каноны и переводы"
-  lead="Танах, Библия, Коран и другие священные тексты: что признают разные традиции, какие переводы используют и как толкуют Писание. История формирования и сравнение канонов ниже посвящены Библии."
-  jwNote
+  title="Писания: от Торы до наших дней"
+  lead="Как появились священные книги — от древних текстов до Писаний новых христианских движений и современных переводов."
 >
-  <BibleFormation />
-  <BibleCanon traditions={traditions} />
-  <BibleTraditions traditions={traditions} />
+  <BibleFormation traditions={traditions}>
+    <BibleCanon traditions={traditions} />
+  </BibleFormation>
 </SectionPage>

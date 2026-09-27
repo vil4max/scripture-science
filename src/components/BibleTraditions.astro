@@ -1,41 +1,30 @@
 ---
 import type { CollectionEntry } from 'astro:content';
+import guide from '../data/bible-guide.json';
 import ProofLink from './ProofLink.astro';
-import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
-interface Props { traditions: CollectionEntry<'matrix'>[]; }
-const { traditions } = Astro.props;
+interface Props { traditions: CollectionEntry<'matrix'>[]; event: string; }
+const { traditions, event } = Astro.props;
+const notes = guide.traditionNotes.filter((note) => note.event === event);
 ---
 
-<section aria-labelledby="tradition-scripture-title">
-  <h2 id="tradition-scripture-title">Как каждая традиция относится к Писанию</h2>
-  <p class="section-lead">Для всех заданы одинаковые вопросы: что признаётся Писанием, какой русский текст указан на сайте и кто имеет право толковать его для общины.</p>
-  <div class="tradition-grid">
-    {traditions.map((tradition) => {
-      const scripture = tradition.data.positions.find((position) => position.topic === 'scripture')!;
-      const authority = tradition.data.positions.find((position) => position.topic === 'authority')!;
-      const color = TRADITION_COLOR_TOKEN[tradition.id as keyof typeof TRADITION_COLOR_TOKEN];
-      return <article style={`--tradition: var(${color})`}>
-        <h3>{tradition.data.name}</h3>
-        <dl>
-          <div><dt>Писание и канон</dt><dd>{scripture.summary}<ProofLink proof={scripture.proof} /></dd></div>
-          <div><dt>Русский текст на сайте</dt><dd>{tradition.data.scripture.name}<ProofLink proof={tradition.data.scripture.proof} /></dd></div>
-          <div><dt>Кто толкует</dt><dd>{authority.summary}<ProofLink proof={authority.proof} /></dd></div>
-        </dl>
-      </article>;
-    })}
-  </div>
-</section>
+{notes.length > 0 && <aside class="tradition-notes" aria-label="В современных традициях">
+  <p class="label">В современных традициях</p>
+  {notes.map((note) => {
+    const tradition = traditions.find((item) => item.id === note.tradition)!;
+    const evidence = tradition.data.positions.filter((position) => ['scripture', 'authority'].includes(position.topic));
+    return <div data-scripture-tradition={note.tradition}>
+      <h4>{tradition.data.name}</h4>
+      <p>{note.text}</p>
+      <ProofLink proof={[...tradition.data.scripture.proof, ...evidence.flatMap((position) => [...position.proof, ...position.unity.proof])]} />
+    </div>;
+  })}
+</aside>}
 
 <style>
-  section { display: grid; gap: 18px; }
-  .tradition-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
-  article { border: 1px solid var(--line); border-top: 4px solid var(--tradition); border-radius: 10px; background: var(--surface); padding: 20px; }
-  h3 { margin: 0 0 14px; font-size: 22px; }
-  dl { margin: 0; display: grid; gap: 14px; }
-  dl div { display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 14px; padding-top: 14px; border-top: 1px solid var(--line); }
-  dt { font-weight: 700; font-size: 14px; text-transform: uppercase; letter-spacing: .03em; color: var(--muted); }
-  dd { margin: 0; }
-  dd a { color: var(--focus); }
-  @media (max-width: 1050px) { .tradition-grid { grid-template-columns: minmax(0, 1fr); } }
+  .tradition-notes { margin-top: 22px; padding: 18px 22px; background: var(--surface); border-left: 3px solid var(--line); }
+  .label { margin: 0 0 14px; font-size: 13px; color: var(--muted); }
+  h4 { margin: 0 0 4px; font-size: 17px; }
+  p { margin: 0; }
+  .tradition-notes > div + div { margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line); }
 </style>
