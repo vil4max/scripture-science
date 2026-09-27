@@ -23,7 +23,7 @@ scripture:
   overview:
     title: "Коран"
     text: "VII век. По исламской традиции, Мухаммад получал откровения в 610–632 годах. Письменный свод закрепили при халифе Усмане около 650 года."
-  name: "Коран в переводе смыслов Эльмира Кулиева (наиболее распространённый современный русский «перевод смыслов»; официальный API Quran.com/Quran Foundation отдаёт его под номером 45)"
+  name: "Коран: арабский текст откровений, приписываемых Мухаммаду; свод закреплён в VII веке"
   url: "https://quran.com/2?translations=45"
   proof:
     - url: "https://www.birmingham.ac.uk/facilities/cadbury/birmingham-quran-mingana-collection/birmingham-quran/what-is"

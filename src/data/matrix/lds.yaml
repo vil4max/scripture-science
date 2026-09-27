@@ -1,5 +1,5 @@
 id: lds
-name: Святые последних дней
+name: "Святые последних дней (мормоны)"
 full_name: "Церковь Иисуса Христа Святых последних дней"
 family: christianity
 since:
@@ -26,11 +26,10 @@ since:
       excerpt: "This Restoration began in 1820 through the Prophet Joseph Smith"
       accessed: "2026-09-25"
 scripture:
-  name: "Книга Мормона"
+  name: "Библия и три дополнительных канонических собрания"
   overview:
     title: "Библия и другие Писания"
-    text: "Наряду с Библией признаются Книга Мормона, Учение и Заветы и Драгоценная
-      Жемчужина."
+    text: "Наряду с Библией каноническими Писаниями признаются Книга Мормона, Учение и Заветы и Драгоценная жемчужина. В английском языке официально используется издание Библии короля Иакова со справочным аппаратом Церкви."
   url: "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=rus"
   proof:
     - url: "https://newsroom.churchofjesuschrist.org/style-guide"
@@ -47,6 +46,11 @@ scripture:
         представляет собой летопись общения Бога с древними жителями
         Американского континента и содержит полноту вечного Евангелия"
       accessed: "2026-09-26"
+    - url: "https://newsroom.churchofjesuschrist.org/article/king-james-bible-400-years"
+      title: "King James Bible, 400 Years — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      tier: official
+      excerpt: "the official English Bible of The Church of Jesus Christ of Latter-day Saints"
+      accessed: "2026-09-27"
   status: verified
 adherents:
   value: "≈ 17,9 млн"

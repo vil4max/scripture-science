@@ -14,7 +14,8 @@ const topCountries = (group: string) => {
     <h3>{item.title}</h3><p class="origin">{item.origin}</p>
     <TraditionImage id={item.id} compact/>
     <p>{item.intro}</p><ProofLink proof={item.proof.map((p) => ({...p,tier:p.tier as 'official' | 'reference'}))}/>
-    {item.geographyGroup && <p class="geography">Больше всего последователей в 2020 году: {topCountries(item.geographyGroup)}. По числу людей, а не по доле населения.<ProofLink proof={[{url:world.url,title:'Pew — Country composition, 2020',tier:'reference',accessed:world.accessed,excerpt:'This interactive table shows the religious makeup of 201 countries and territories.'}]}/></p>}
+    {item.geographyGroup && <p class="geography">Распространён прежде всего в странах: {topCountries(item.geographyGroup)}. Перечень дан по числу последователей.<ProofLink proof={[{url:world.url,title:'Pew — Country composition, 2020',tier:'reference',accessed:world.accessed,excerpt:'This interactive table shows the religious makeup of 201 countries and territories.'}]}/></p>}
+    {item.geography && <p class="geography">{item.geography}</p>}
   </article>)}</div>
 </section>
 <style>

@@ -36,3 +36,22 @@ test('source relocation preserves every image credit and new overview proof', ()
   assert.match(sources, /id="world-methodology"/);
   assert.match(sources, /id="legal-context"/);
 });
+
+test('homepage presents the revised Orthodox framing and current source context', () => {
+  const html = readFileSync('dist/index.html', 'utf8');
+  assert.match(html, /Православная классификация/);
+  assert.match(html, />Подробнее</);
+  assert.doesNotMatch(html, /Основание классификации/);
+  assert.doesNotMatch(html, /исходное исповедание (?:этого )?сайта/);
+  assert.match(html, /Последние глобально сопоставимые данные — за 2020 год/);
+  assert.match(html, /отчёт опубликован Pew Research Center в 2025 году/);
+  assert.match(html, /Псевдохристианские реставрационистские движения/);
+  assert.match(html, /замена непрерывного церковного Предания поздней реконструкцией/);
+  assert.match(html, /Святые последних дней \(мормоны\)/);
+  assert.match(html, /Свидетели Иеговы \(иеговисты\)/);
+  assert.match(html, /Протестантизм \(лютеране, баптисты, пятидесятники и др\.\)/);
+  assert.match(html, /Писание и канон/);
+  assert.doesNotMatch(html, /Эльмира Кулиева|официальный API Quran/);
+  assert.match(html, /дхарма, карма и сансара/);
+  assert.match(html, /бахаи, джайнов, синтоистов, сикхов, даосов, виккан, зороастрийцев/);
+});

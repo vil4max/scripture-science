@@ -73,11 +73,14 @@ const family = getFamilyByTradition(tradition.id);
       </dd>
     </div>}
     <div class="fact">
-      <dt>Писание</dt>
+      <dt>Писание и канон</dt>
       <dd>
-        <p class="line">
-          {scripture.name}
-        </p>
+        {scripture.overview ? (
+          <>
+            <p class="line"><strong>{scripture.overview.title}</strong></p>
+            <p class="line">{scripture.overview.text}</p>
+          </>
+        ) : <p class="line">{scripture.name}</p>}
         <ProofLink proof={scripture.proof} />
       </dd>
     </div>
@@ -90,7 +93,7 @@ const family = getFamilyByTradition(tradition.id);
     </div>
     {family && (
       <div class="fact">
-        <dt>Классификация</dt>
+        <dt>Православная классификация</dt>
         <dd>
           <OrthodoxClassification tradition={tradition.id} />
         </dd>

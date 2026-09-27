@@ -3,7 +3,7 @@
     "id": "hinduism",
     "title": "Индуизм",
     "origin": "Древняя Индия; нет единственного основателя.",
-    "intro": "Семейство традиций, которое не стоит сводить к одному вероучению. Hindu American Foundation поясняет мокшу как освобождение из круговорота рождения и перерождения.",
+    "intro": "Индуизм объединяет разные школы и формы почитания. Общими ориентирами часто служат дхарма, карма и сансара — круговорот рождений; мокша понимается как освобождение от него. Пути к освобождению и представления о Боге различаются между традициями.",
     "geographyGroup": "hindus",
     "proof": [
       {
@@ -19,6 +19,20 @@
         "excerpt": "attaining moksha or liberation from the cycle of birth and rebirth.",
         "tier": "official",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.hinduamerican.org/hinduism-basics",
+        "title": "Hindu American Foundation — Hinduism Basics",
+        "excerpt": "a diverse family of philosophies and traditions",
+        "tier": "official",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.hinduamerican.org/hinduism-basics",
+        "title": "Hindu American Foundation — Hinduism Basics",
+        "excerpt": "samsara, a cycle of reincarnation from which a soul attains liberation",
+        "tier": "official",
+        "accessed": "2026-09-27"
       }
     ]
   },
@@ -63,7 +77,7 @@
     "id": "sikhism",
     "title": "Сикхизм",
     "origin": "Начало XVI века; община Гуру Нанака, исторический центр — Пенджаб.",
-    "intro": "Это отдельная традиция единобожия. Sikh Coalition описывает веру в одного Творца, присутствующего в мире. В повседневной жизни организация выделяет медитацию, служение и справедливость.",
+    "intro": "Сикхизм — самостоятельная монотеистическая религия. Он учит об одном Творце и равном достоинстве людей; три повседневных принципа — правдивая жизнь, служение людям и преданность Богу.",
     "proof": [
       {
         "url": "https://pluralism.org/introduction-to-sikhism",
@@ -92,14 +106,36 @@
         "excerpt": "Meditation, service, and justice are core aspects of the Sikh way of life.",
         "tier": "official",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.sikhcoalition.org/",
+        "title": "Sikh Coalition — Who are Sikhs?",
+        "excerpt": "There are more than 25 million Sikhs around the world",
+        "tier": "official",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2012/12/18/global-religious-landscape-other/",
+        "title": "Pew Research Center — Other Religions",
+        "excerpt": "more than nine-in-ten Sikhs are in India",
+        "tier": "reference",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.sikhcoalition.org/about-sikhs/beliefs/",
+        "title": "Sikh Coalition — Beliefs",
+        "excerpt": "truthful living, service to humanity, and devotion to God",
+        "tier": "official",
+        "accessed": "2026-09-27"
       }
-    ]
+    ],
+    "geography": "Исторический центр и основная область распространения — Пенджаб в Индии; крупные сикхские общины существуют также в Канаде, Великобритании и США."
   },
   {
     "id": "shinto",
     "title": "Синто",
     "origin": "Япония; традиция без единственного основателя.",
-    "intro": "Ассоциация синтоистских святилищ Jinja Honcho описывает синто через почитание природы и предков. Она связывает его развитие с японской культурой и жизненными обрядами.",
+    "intro": "Синто — японская храмовая и обрядовая традиция почитания ками, связанных с природой, местами и предками. У неё нет единственного основателя, единого догматического свода и общего канона; религиозная жизнь сосредоточена вокруг святилищ, праздников мацури и обрядов очищения.",
     "proof": [
       {
         "url": "https://www.jinjahoncho.or.jp/en/",
@@ -107,43 +143,87 @@
         "excerpt": "Shinto has no founder, no dogma, and no scripture, and is expressed through reverence for nature and ancestors.",
         "tier": "official",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.jinjahoncho.or.jp/en/honcho/",
+        "title": "Jinja Honcho — Association of Shinto Shrines",
+        "excerpt": "There are about 80,000 Shinto jinja throughout Japan",
+        "tier": "official",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.jinjahoncho.or.jp/en/honcho/",
+        "title": "Jinja Honcho — Association of Shinto Shrines",
+        "excerpt": "The majority of these jinja are associated with Jinja Honcho",
+        "tier": "official",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.jinjahoncho.or.jp/en/",
+        "title": "Jinja Honcho — What is Shinto?",
+        "excerpt": "to participate in festivals called matsuri",
+        "tier": "official",
+        "accessed": "2026-09-27"
       }
-    ]
+    ],
+    "geography": "Распространён прежде всего в Японии: Jinja Honcho объединяет большинство из примерно 80 000 синтоистских святилищ страны."
   },
   {
     "id": "daoism",
     "title": "Даосизм",
     "origin": "Китай; философские тексты и религиозные сообщества.",
-    "intro": "Исторический обзор Pluralism Project различает раннюю философскую традицию и организованные сообщества: движение Небесных наставников он относит к 142 году н. э. Это не дата появления всех даосских идей.",
+    "intro": "Даосизм включает философское наследие «Дао дэ цзина» и «Чжуан-цзы» и организованные религиозные школы. Его ключевые темы — следование Дао, недеяние (у-вэй), простота и согласие с естественным порядком; религиозные формы включают общины, ритуалы и практики совершенствования.",
     "proof": [
       {
         "url": "https://pluralism.org/daoism",
-        "title": "The Pluralism Project — Daoism timeline",
+        "title": "The Pluralism Project — Daoism",
         "excerpt": "142 CE Way of the Five Pecks of Rice",
         "tier": "reference",
         "accessed": "2026-09-26"
       },
       {
         "url": "https://pluralism.org/daoism",
-        "title": "The Pluralism Project — Daoism timeline",
+        "title": "The Pluralism Project — Daoism",
         "excerpt": "Zhang Daoling founded the Way of the Five Pecks of Rice, or The Celestial Masters",
         "tier": "reference",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/daoism",
+        "title": "The Pluralism Project — Daoism",
+        "excerpt": "The Chinese tradition of Daoism includes both a philosophy and a religion",
+        "tier": "reference",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://pluralism.org/daoism",
+        "title": "The Pluralism Project — Daoism",
+        "excerpt": "a revival of Daoist institutions and practices in China",
+        "tier": "reference",
+        "accessed": "2026-09-27"
       }
-    ]
+    ],
+    "geography": "Исторически и сегодня связан прежде всего с Китаем и Тайванем; даосские общины и практики представлены также в китайской диаспоре, Европе и Северной Америке."
   },
   {
     "id": "other",
     "title": "Другие малочисленные направления",
     "origin": "Статистическое объединение, не одна традиция.",
-    "intro": "В таблице Pew сюда входят, в частности, бахаи и сикхи: данных недостаточно, чтобы анализировать все такие группы отдельно. Поэтому карта не выделяет каждую из них своим цветом. Этот вводный раздел также не является исчерпывающим списком религий мира.",
+    "intro": "Это статистическое объединение, а не единое вероучение. Pew включает сюда, среди прочих, бахаи, джайнов, синтоистов, сикхов, даосов, виккан, зороастрийцев и последователей иных малочисленных или народных религий. Большинство людей этой совокупной категории живёт в Азиатско-Тихоокеанском регионе, особенно в Китае и Индии; карта не приписывает этим разным традициям одно учение.",
     "proof": [
       {
-        "url": "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
-        "title": "Pew — Religious Composition by Country (other religions)",
-        "excerpt": "includes Baha’is, Sikhs and many other religious groups",
+        "url": "https://www.pewresearch.org/religion/2025/06/09/other-religions-population-change/",
+        "title": "Pew Research Center — How the global population of other religions changed",
+        "excerpt": "Baha’is, Jains, Shintoists, Sikhs, Daoists, Wiccans, Zoroastrians and many others",
         "tier": "reference",
-        "accessed": "2026-09-26"
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.pewresearch.org/religion/2025/06/09/other-religions-population-change/",
+        "title": "Pew Research Center — How the global population of other religions changed",
+        "excerpt": "Nearly nine-in-ten followers of other religions live in the Asia-Pacific region",
+        "tier": "reference",
+        "accessed": "2026-09-27"
       }
     ]
   }

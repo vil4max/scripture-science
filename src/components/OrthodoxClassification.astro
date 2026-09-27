@@ -3,5 +3,5 @@ import entries from '../data/orthodox-classifications.json';
 interface Props { tradition: string; }
 const entry = entries[Astro.props.tradition as keyof typeof entries];
 ---
-{entry && <div class="classification"><strong>{entry.label}</strong><p>{entry.text}</p><details><summary>Основание классификации</summary><p>{entry.authority}: <a href={entry.url}>{entry.title}</a></p></details></div>}
-<style>p { margin: 8px 0; line-height: 1.6; } summary { font-size: 14px; color: var(--focus); cursor: pointer; } details p { font-size: 14px; }</style>
+{entry && <div class="classification"><strong>{entry.label}</strong><p>{entry.text}</p><a class="details" href={entry.url}>Подробнее</a></div>}
+<style>p { margin: 8px 0; line-height: 1.6; } .details { font-size: 14px; color: var(--focus); }</style>

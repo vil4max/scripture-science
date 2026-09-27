@@ -18,12 +18,17 @@ since:
       excerpt: "The church arose out of the eschatological expectations of the middle nineteenth century, but was only formally organized in 1863."
       accessed: "2026-09-25"
 scripture:
-  name: "Синодальный перевод"
+  name: "Библия: 66-книжный протестантский канон"
   overview:
     title: "Библия"
-    text: "Библия (Ветхий и Новый Завет) — богодухновенное, непогрешимое Слово Божье и единственное мерило вероучения и опыта; вероучение церкви основывается исключительно на ней. Число книг канона в открытых на сессии официальных текстах не указано явно."
+    text: "Адвентисты принимают 66-книжный протестантский канон и считают Библию единственным мерилом вероучения и опыта. Труды Елены Уайт признаются пророческим наставлением, но официально не включаются в библейский канон. Переводы Библии различаются по языкам."
   url: "https://azbyka.ru/biblia/"
   proof:
+    - url: "https://adventist.org/beliefs/bible/understanding"
+      title: "Seventh-day Adventists — Understanding the Bible"
+      tier: official
+      excerpt: "The Bible is a rich, diverse, complex collection of 66 books"
+      accessed: "2026-09-27"
     - url: "https://bri.esd.adventist.org/uploaded_assets/113416"
       title: "«Библия и церковь о проблеме войны и мира» — Институт библейских исследований, Евро-Азиатский дивизион"
       tier: official

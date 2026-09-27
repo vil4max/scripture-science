@@ -8,8 +8,8 @@ const labels = new Map(groups.map((group) => [group.id, group.label]));
 const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 'ru'));
 ---
 <section class="atlas" aria-labelledby="atlas-title">
-  <h2 id="atlas-title">Где распространены религии · 2020</h2>
-  <p class="key">Цвет — крупнейшая группа населения, даже если её доля меньше половины. Площадь страны не показывает число верующих.</p>
+  <h2 id="atlas-title">Где распространены религии</h2>
+  <p class="key">Последние глобально сопоставимые данные — за 2020 год; отчёт опубликован Pew Research Center в 2025 году. Цвет — крупнейшая группа населения, даже если её доля меньше половины. Площадь страны не показывает число верующих.</p>
   <svg viewBox="0 0 720 300" aria-labelledby="map-title map-desc" role="group">
     <title id="map-title">Крупнейшие религиозные группы по странам, 2020 год</title>
     <desc id="map-desc">Выберите страну на карте или в списке под ней. Штриховка: нет сопоставленных данных. Границы — схематическая подложка Natural Earth.</desc>
