@@ -109,17 +109,21 @@ const inlineHtml = (html: string) => html
   .pair-evidence > summary, .pair-background > summary { cursor: pointer; font-weight: 700; color: var(--focus); }
   .pair-evidence[open] > summary, .pair-background[open] > summary { margin-bottom: 20px; }
   .pair-argument h4 { margin: 0; font-size: 20px; }
-  .pair-positions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
-  .pair-positions > div { min-width: 0; }
+  .pair-positions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: stretch; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); background: var(--surface); }
+  .pair-positions > div { min-width: 0; padding: 16px; }
+  .pair-positions > div:not([data-pair-trad="orthodoxy"]) { border-left: 1px solid var(--line); }
+  .pair-positions > div[data-pair-trad="orthodoxy"] { background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
   .pair-inline :global(.eyebrow) { display: none; }
   .pair-inline :global(section), .pair-inline :global([id]) {
     scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
   }
   .pair-inline :global(.ref) { white-space: normal; }
-  .pair-inline :global(.duo) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
+  .pair-inline :global(.duo) { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: stretch; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); background: var(--surface); }
   .pair-inline :global(.textdiff), .pair-inline :global(.card) { min-width: 0; }
   .pair-inline :global(h2), .pair-inline :global(h3) { font-family: inherit; font-size: 19px; margin: 16px 0; }
-  .pair-inline :global(.pos) { padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .pair-inline :global(.pos) { padding: 16px; border: 0; border-radius: 0; background: transparent; }
+  .pair-inline :global(.pos:not([data-pair-trad="orthodoxy"])) { border-left: 1px solid var(--line); }
+  .pair-inline :global(.pos[data-pair-trad="orthodoxy"]) { background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
   .pair-inline :global(.who) { display: block; font-weight: 700; }
   .pair-inline :global(.thesis) { font-weight: 700; margin: 12px 0; }
   .pair-inline :global(.note), .pair-inline :global(.crux) { font-size: 15px; color: var(--muted); }

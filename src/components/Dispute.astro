@@ -27,7 +27,7 @@ const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(i
     <summary>Разбор вопроса: {dispute.data.title}</summary>
     <div class="foundation"><h5>Православное учение</h5><p>{dispute.data.orthodoxFoundation}</p><p class="role">{dispute.data.authority}</p></div>
     <div class:list={["side", { "slot-columns": comparison }]}>
-      {parts.map((part) => <article class="part" data-trad={part.id} hidden={comparison && !initial.shown.includes(part.id)} style={comparison ? `grid-column:${DEFAULT_SELECTION.indexOf(part.id) + 1};grid-row:1` : undefined}>
+      {parts.map((part) => <article class="part" data-trad={part.id} data-foundation-column={part.id === 'orthodoxy' ? '' : undefined} hidden={comparison && !initial.shown.includes(part.id)} style={comparison ? `grid-column:${DEFAULT_SELECTION.indexOf(part.id) + 1};grid-row:1` : undefined}>
         <p class="who"><span class="chip" style={`background:var(${colorById.get(part.id) ?? '--t-other'})`} aria-hidden="true" />{namesById.get(part.id) ?? part.id}</p>
         <p class="role">{part.role}</p>
         <MatrixPosition position={part.position} />
@@ -40,8 +40,11 @@ const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(i
   .dispute[hidden], .part[hidden] { display: none; }
   summary { cursor: pointer; color: var(--focus); font-weight: 700; }
   .side { margin-top: 16px; display: grid; gap: 20px; align-items: start; }
-  .side.slot-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .side.slot-columns { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; align-items: stretch; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); background: var(--surface); }
   .part { min-width: 0; padding: 16px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .side.slot-columns .part { border: 0; border-radius: 0; background: transparent; }
+  .side.slot-columns .part:not([data-foundation-column]) { border-left: 1px solid var(--line); }
+  .side.slot-columns .part[data-foundation-column] { background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
   .who { margin: 0; font-weight: 700; display: flex; gap: 8px; align-items: center; }
   .chip { width: 12px; height: 12px; border-radius: 50%; flex: none; }
   .role, .missing { font-size: 14px; color: var(--muted); margin: 8px 0 12px; }

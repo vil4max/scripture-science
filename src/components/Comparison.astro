@@ -32,10 +32,6 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 ---
 
 <div class="comparison" data-comparison>
-  <nav class="topic-contents" aria-label="Темы сравнения">{TOPIC_GROUPS.map((group) => <div>
-    <a href={`#group-${group.id}`}><strong>{group.title}</strong></a>
-    <ul>{group.topics.map((topic) => <li><a href={`#topic-${topic}`}>{TOPIC_TITLES_RU[topic]}</a></li>)}</ul>
-  </div>)}</nav>
   <div class="layout">
     <div class="topics">
       {
@@ -50,7 +46,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
                 const position = tradition.data.positions.find((p) => p.topic === topicId);
                 if (!position) return null;
                 return (
-                  <article class="block" data-trad={tradition.id} hidden={!DEFAULT_SELECTION.includes(tradition.id)} style={`order:${DEFAULT_SELECTION.indexOf(tradition.id)};grid-column:${DEFAULT_SELECTION.indexOf(tradition.id) + 1};grid-row:1`}>
+                  <article class="block" data-trad={tradition.id} data-foundation-column={tradition.id === 'orthodoxy' ? '' : undefined} hidden={!DEFAULT_SELECTION.includes(tradition.id)} style={`order:${DEFAULT_SELECTION.indexOf(tradition.id)};grid-column:${DEFAULT_SELECTION.indexOf(tradition.id) + 1};grid-row:1`}>
                     <p class="who">
                       <span
                         class="chip"
@@ -90,9 +86,6 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 <style>
   .reading-label { margin: 0; font-size: 14px; font-weight: 700; color: var(--muted); }
   .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
-  .topic-contents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0 36px; }
-  .topic-contents ul { padding-left: 18px; margin: 10px 0 0; font-size: 15px; }
-  .topic-contents a { color: inherit; text-underline-offset: 3px; }
   .topic-group { margin: 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 26px; scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px); }
 
   .topic[hidden] { display: none; }
@@ -151,9 +144,23 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
   /* Two or three chosen traditions: one column each, name above the text. */
   .grid.cols {
     grid-template-columns: repeat(var(--cols), minmax(0, 1fr));
-    column-gap: 20px;
-    align-items: start;
+    column-gap: 0;
+    align-items: stretch;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--t-orthodoxy);
+    background: var(--surface);
   }
+
+  .grid.cols .block {
+    border: 0;
+    border-radius: 0;
+    background: transparent;
+    padding: 18px;
+    min-height: 100%;
+  }
+
+  .grid.cols .block:not([data-foundation-column]) { border-left: 1px solid var(--line); }
+  .grid.cols .block[data-foundation-column] { background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
 
   /* In columns the pinned header on /compare/ names each column. */
   .grid.cols .who {

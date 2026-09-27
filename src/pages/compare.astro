@@ -2,6 +2,7 @@
 import CompareAnchors from '../components/CompareAnchors.astro';
 import ColumnHeader from '../components/ColumnHeader.astro';
 import Comparison from '../components/Comparison.astro';
+import ComparisonContents from '../components/ComparisonContents.astro';
 import TraditionCompare from '../components/TraditionCompare.astro';
 import SectionPage from '../layouts/SectionPage.astro';
 import { getDisputes, getOrderedMatrix } from '../lib/content';
@@ -17,13 +18,11 @@ const disputes = await getDisputes();
 
 <SectionPage
   title="Сравнение"
-  lead="Православное учение → В чём отличие → Православный ответ. Православие закреплено первым; две другие колонки можно изменить или очистить."
+  lead="Православное учение → В чём отличие → Православный ответ. Православие закреплено слева; две другие традиции можно выбрать."
 >
   <ColumnHeader traditions={traditions} colorById={colorById} />
   <CompareAnchors />
-  <nav class="reading-nav" aria-label="Разделы сравнения">
-    <a href="#chosen">Основные сведения</a><a href="#topics">Вера и практика</a><a href="#views">Отношения между традициями</a>
-  </nav>
+  <ComparisonContents />
   <TraditionCompare traditions={traditions} />
 
   <section id="topics">
@@ -37,10 +36,15 @@ const disputes = await getDisputes();
     }
   </section>
 
-  <section id="views">
-    <h2>Отношения между традициями</h2>
-    <p>Православная Церковь свидетельствует о единстве Церкви Христовой. Отвергая ошибочные учения, христианин призван любить людей, которые их исповедуют. Конкретные вероучительные различия разобраны выше, рядом с каждым вопросом.</p>
-    <p><a href="https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/">Основные принципы отношения Русской Православной Церкви к инославию, 2000, §§1.1, 7.1</a>. Ответные документы других традиций сохранены в <a href={withBase('sources/#relations-documents')}>справочных материалах</a>.</p>
+  <section id="views" aria-labelledby="views-title">
+    <header class="views-heading">
+      <p>Итоговый раздел</p>
+      <h2 id="views-title">Отношения между традициями</h2>
+    </header>
+    <div class="views-body">
+      <p>Православная Церковь свидетельствует о единстве Церкви Христовой. Отвергая ошибочные учения, христианин призван любить людей, которые их исповедуют. Конкретные вероучительные различия разобраны выше, рядом с каждым вопросом.</p>
+      <p><a href="https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/">Основные принципы отношения Русской Православной Церкви к инославию, 2000, §§1.1, 7.1</a>. Ответные документы других традиций сохранены в <a href={withBase('sources/#relations-documents')}>справочных материалах</a>.</p>
+    </div>
   </section>
 
   <p class="reference-link">Исторические события — в разделе <a href={withBase('timeline/')}>«История»</a>, справочные материалы — в разделе <a href={withBase('sources/')}>«Термины и источники»</a>.</p>
@@ -58,9 +62,13 @@ const disputes = await getDisputes();
 </script>
 
 <style>
-  .reading-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
-  .reading-nav a, .reference-link a { color: var(--focus); }
+  .reference-link a, .views-body a { color: var(--focus); }
   .reference-link { color: var(--muted); font-size: 15px; }
+  #views { margin-top: 54px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); background: var(--surface); }
+  .views-heading { padding: 18px 22px; border-bottom: 1px solid var(--line); background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
+  .views-heading p { margin: 0 0 4px; color: var(--muted); font-size: 13px; text-transform: uppercase; letter-spacing: .06em; }
+  .views-heading h2 { margin: 0; }
+  .views-body { padding: 4px 22px 10px; }
   #views, #topics {
     scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
   }

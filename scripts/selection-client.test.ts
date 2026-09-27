@@ -29,7 +29,7 @@ test('browser state migrates legacy storage, survives reload and supports blocke
     url.searchParams.set('slots', 'orthodoxy,,jw');
     client.setSelection(['orthodoxy', 'jw']);
     client = await load();
-    assert.deepEqual(comparisonSlots(client.getSelection(), url.searchParams.get('slots')), ['orthodoxy', '', 'jw']);
+    assert.deepEqual(comparisonSlots(client.getSelection(), url.searchParams.get('slots')), ['orthodoxy', 'catholicism', 'jw']);
     url = new URL('https://example.test/scripture-science/compare/?t=judaism,islam#question-trinity');
     client = await load();
     assert.deepEqual(client.getSelection(), ['orthodoxy', 'judaism', 'islam']);

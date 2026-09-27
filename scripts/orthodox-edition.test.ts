@@ -7,6 +7,7 @@ import { readFileSync } from 'node:fs';
 import { assessments, validateAssessments } from '../src/lib/orthodox.ts';
 import { legacyPairDestination } from '../src/lib/legacyPairRoute.ts';
 import { DEFAULT_SELECTION } from '../src/lib/selection.ts';
+import { TOPIC_ORDER } from '../src/lib/rules.ts';
 
 const html: string = readFileSync('dist/compare/index.html', 'utf8');
 test('105 separately sourced assessments are complete and malformed coverage fails', () => {
@@ -24,17 +25,29 @@ test('105 separately sourced assessments are complete and malformed coverage fai
     assert.equal(record.assessmentAuthority, 'editorial-application');
   }
 });
-test('server output shows only the Orthodox default combination in every topic', () => {
+test('server output keeps a fixed Orthodox foundation column in every comparison row', () => {
   const blocks = [...html.matchAll(/<article class="block"[^>]+>/g)].map(m => m[0]);
   assert.equal(blocks.length, 120);
   assert.equal(blocks.filter(b => !/\bhidden\b/.test(b)).length, 45);
   for (const block of blocks) {
     const id = block.match(/data-trad="([^"]+)"/)![1];
     assert.equal(/\bhidden\b/.test(block), !DEFAULT_SELECTION.includes(id));
-    if (id === 'orthodoxy') assert.match(block, /grid-column:1/);
+    if (id === 'orthodoxy') {
+      assert.match(block, /grid-column:1/);
+      assert.match(block, /data-foundation-column/);
+    }
   }
+  const factCells = [...html.matchAll(/<div class="cell"[^>]+>/g)].map(m => m[0]);
+  assert.equal(factCells.filter(cell => /data-trad="orthodoxy"/.test(cell)).length, 5);
+  assert.ok(factCells.filter(cell => /data-trad="orthodoxy"/.test(cell)).every(cell => /data-foundation-column/.test(cell)));
+  assert.match(html, /class="colcell foundation" data-foundation-column/);
   const selects = [...html.matchAll(/<select[^>]*data-slot="(\d)"/g)].map(m => m[1]);
   assert.deepEqual(selects, ['1', '2']);
+  assert.ok(!html.includes('Очистить колонку'));
+  assert.ok(!html.includes('<option value="">'));
+  assert.match(html, /aria-labelledby="comparison-contents-title"/);
+  for (const topic of TOPIC_ORDER) assert.ok(html.includes(`href="#topic-${topic}"`), topic);
+  assert.match(html, /<header class="views-heading"/);
 });
 test('legacy pair destinations preserve parameters and resolve published anchors', () => {
   const routes = new Map<string, string>([

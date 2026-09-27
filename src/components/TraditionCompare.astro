@@ -40,7 +40,7 @@ const rowLabel: Record<(typeof rows)[number], string> = {
         {traditions.map((t) => {
           const { since, scripture, adherents, self_view } = t.data;
           return (
-            <div class="cell" data-trad={t.id} hidden={!DEFAULT_SELECTION.includes(t.id)} style={`grid-column:${DEFAULT_SELECTION.indexOf(t.id)+1};grid-row:2`}>
+            <div class="cell" data-trad={t.id} data-foundation-column={t.id === 'orthodoxy' ? '' : undefined} hidden={!DEFAULT_SELECTION.includes(t.id)} style={`grid-column:${DEFAULT_SELECTION.indexOf(t.id)+1};grid-row:2`}>
               {row === 'since' && (
                 <>
                   {sinceLines(since.label).map((line) => (
@@ -116,6 +116,13 @@ const rowLabel: Record<(typeof rows)[number], string> = {
     display: none;
   }
 
+  .tcompare {
+    margin-top: 20px;
+    border: 1px solid var(--line);
+    border-left: 4px solid var(--t-orthodoxy);
+    background: var(--surface);
+  }
+
   .hint {
     margin: 0;
     color: var(--muted);
@@ -126,14 +133,13 @@ const rowLabel: Record<(typeof rows)[number], string> = {
   .frow {
     display: grid;
     grid-template-columns: repeat(var(--cols, 1), minmax(0, 1fr));
-    column-gap: 20px;
+    column-gap: 0;
     row-gap: 0;
-    margin-top: 20px;
-    background: var(--surface);
-    border: 1px solid var(--line);
-    border-radius: 8px;
-    overflow: hidden;
+    margin: 0;
+    border-bottom: 1px solid var(--line);
   }
+
+  .frow:last-child { border-bottom: 0; }
 
   /* The fact's name heads its row across all columns. */
   .flabel {
@@ -148,6 +154,8 @@ const rowLabel: Record<(typeof rows)[number], string> = {
   }
 
   .cell { padding: 16px; min-width: 0; }
+  .cell:not([data-foundation-column]) { border-left: 1px solid var(--line); }
+  .cell[data-foundation-column] { background: color-mix(in srgb, var(--t-orthodoxy) 8%, var(--surface)); }
 
   .family-path {
     list-style: none;
