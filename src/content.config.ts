@@ -108,6 +108,7 @@ const unityMark = z.object({
 const matrixPosition = z.object({
   topic: z.enum(TOPIC_ORDER),
   summary: z.string(),
+  doctrine: z.object({ authority: z.string(), sections: z.array(z.object({ title: z.string(), text: z.string() })) }).optional(),
   quote: sourcedQuote.optional(),
   scripture: scriptureQuote.optional(),
   proof: z.array(proof),
@@ -144,6 +145,7 @@ const matrix = defineCollection({
       proof: z.array(proof),
     }),
     adherents: z.object({
+      display: z.boolean().optional(),
       value: z.string(),
       year: z.number().int(),
       method: z.string(),
@@ -238,6 +240,8 @@ const disputes = defineCollection({
       id: z.string(),
       topic: z.enum(TOPIC_ORDER),
       title: z.string(),
+      orthodoxFoundation: z.string(),
+      authority: z.string(),
       challenges: z.array(disputePart),
       answers: z.array(disputePart),
       status: z.enum(['verified', 'todo']),

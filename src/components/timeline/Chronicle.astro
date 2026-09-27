@@ -5,7 +5,7 @@ import lineageData from '../../data/lineage.json';
 import biblical from '../../data/biblical-timeline.json';
 import chapters from '../../data/history-overview.json';
 const biblicalById = new Map(biblical.map((row) => [row.id, row]));
-const contextByRow = new Map(chapters.filter((chapter) => chapter.timelineRow).map((chapter) => [chapter.timelineRow, chapter]));
+const contextByRow = new Map(chapters.filter((chapter) => chapter.timelineRow && chapter.id !== 'orthodoxy').map((chapter) => [chapter.timelineRow, chapter]));
 import {
   assignBranchColumns,
   buildChronicleRows,
@@ -159,7 +159,7 @@ const today = new Date();
 ---
 
 <div class="chronicle" data-chronicle>
-  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Даты взяты из православной «Хронологии Септуагинты»: это выбранная религиозная реконструкция для сопоставления, а не общепринятая историческая датировка.</p>
+  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Для этой шкалы принята византийская хронология, представленная в «Хронологии Септуагинты». Вера в сотворение мира Богом — церковное учение; конкретное вычисление лет от Сотворения мира — хронологическая традиция.</p>
   <div class="testament-key" aria-label="Библейское повествование">
     <span class="old">Ветхий Завет · от Сотворения мира</span>
     <span class="new">Новый Завет · от Рождества Христова</span>
@@ -187,7 +187,7 @@ const today = new Date();
         const about = row.approx ? 'ок. ' : '';
         return (
           <li class={`row ${row.kind}${index === 0 ? ' start' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
-            <span class="ad">
+            <span class="ad" id={row.id === 'early-christianity' ? 'history-orthodoxy' : undefined}>
               {about}
               {formatYear(row.year)}
             </span>

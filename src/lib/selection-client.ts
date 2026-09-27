@@ -4,7 +4,7 @@
 // scripts are ordered. The choice lives in the address (shareable), is
 // remembered in localStorage, and is carried by links marked
 // data-carry-selection.
-import { hrefWithSelection, parseSelection, SELECTION_PARAM } from './selection';
+import { hrefWithSelection, parseSelection, SELECTION_PARAM } from './selection.ts';
 
 const STORAGE_KEY = 'traditions';
 type Listener = (ids: string[]) => void;
@@ -42,16 +42,17 @@ function syncPage(ids: string[]): void {
 export function getSelection(): string[] {
   if (current) return current;
   const params = new URLSearchParams(location.search);
-  current = params.has(SELECTION_PARAM) ? parseSelection(params.get(SELECTION_PARAM)) : parseSelection(readStored());
+  current = parseSelection(params.has(SELECTION_PARAM) ? params.get(SELECTION_PARAM) : params.has('slots') ? params.get('slots') : readStored());
+  store(current);
   syncPage(current);
   return current;
 }
 
 export function setSelection(ids: string[]): void {
-  current = ids;
-  store(ids);
-  syncPage(ids);
-  for (const listener of listeners) listener(ids);
+  current = parseSelection(ids.join(','));
+  store(current);
+  syncPage(current);
+  for (const listener of listeners) listener(current);
 }
 
 /** Calls `listener` now with the current choice and again on every change. */

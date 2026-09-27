@@ -24,7 +24,7 @@ const pageContent = await Astro.slots.render('default');
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title}</title>
+    <title>{title === 'Православный взгляд на религии мира' ? title : `${title} · Православный взгляд на религии мира`}</title>
     {description && <meta name="description" content={description} />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />

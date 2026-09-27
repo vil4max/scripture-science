@@ -1,64 +1,15 @@
 # Editorial principles
 
-The site gives one picture of the religious world with proof for every claim.
-These rules apply to every page and to the data behind it.
-Sources and verification: `SOURCES.md`.
+The site is «Православный взгляд на религии мира»: an Orthodox Christian account for adult readers. This contract supersedes the earlier neutral, symmetrical editorial edition (owner, 2026-09-27; site-m26-orthodox-edition.md).
 
-1. **All traditions are equal.** No tradition is the reference point. Each is
-   described as it describes itself, from its own sources.
-2. **Order by age.** Wherever traditions stand side by side, the older one comes
-   first (left, or top).
-3. **Each tradition quotes its own scripture in its own translation**, with a
-   link to the verse. Where verse numbering differs from another tradition's,
-   give both numbers.
-4. **Balance of the last word.** In a dispute, each side's argument is present,
-   and no side systematically answers last.
-5. **Do not offend; use academically recognised terms.** In its own voice the
-   site uses the neutral terms of religious studies — confession, denomination,
-   religious movement, new religious movement.
-   A tradition's evaluative terms for others (e.g. «секта», «ересь», «раскол»,
-   «отступничество») appear only as that tradition's attributed position, quoted
-   from its own source, or in a source title.
-6. **Invent nothing.** No quote, number, date or attribution without a verified
-   source; anything unverified is marked `TODO: verify` and not published as fact.
-7. **Two layers of history.** Historical facts (dated, sourced separations) are
-   drawn solid; each tradition's own view of its continuity is a separate,
-   switchable layer drawn dashed, and is labelled as that tradition's view.
-8. **Orthodox chronology, other epochs labelled.** Dates read in years from
-   the Creation of the world (the Byzantine era) and from the Nativity side by
-   side (owner, 2026-09-26; `docs/DECISIONS.md`). Every other tradition's own
-   epoch (anno mundi, Ussher, the Hijri calendar, ...) is labelled as that
-   tradition's own.
-9. **Symmetric views of others.** If the site shows how one tradition classifies
-   or judges the others, it shows every tradition's view of the others, each from
-   that tradition's own official sources, with date, body and status of the
-   document. No tradition's judgements of others stand alone.
-10. **Disputed points are shown with the answer.** Where one tradition contests
-    another's teaching or practice (monasticism, icons, ...), the dispute is
-    shown, not left out: the contesting view with its source, then the contested
-    tradition's own answer — its argument in brief and where it is stated (a
-    council, a catechism) — with a link (owner, 2026-09-26; `docs/DECISIONS.md`).
-    Principles 4 and 9 still hold: each side speaks from its own sources, and the
-    side that answers is whichever one is contested, never a fixed tradition.
-    Every side of every dispute is marked, with a source, either as its whole
-    tradition's position (and on what authority: a council, a catechism, an
-    official statement of beliefs) or as a point on which the tradition is
-    divided (and who within it holds otherwise). The same mark accompanies every
-    comparison position, and every document in «Что думают друг о друге» says
-    whether it is its tradition's official position
-    (`docs/tasks/site-m20-unity-marks.md`).
-
-Terms in the site's voice (principle 5), each to be backed by a reference work
-before publication (`TODO: verify`):
-
-| Term | Use for |
-|---|---|
-| конфессия, деноминация | Established Christian bodies |
-| новое религиозное движение (НРД) | Movements that took their current form after the Second World War (Eileen Barker's usage) |
-| реставрационизм | 19th-century movements that see themselves as restoring first-century Christianity (Latter-day Saints, Jehovah's Witnesses) |
-| адвентизм | Movements from the Millerite milieu (Seventh-day Adventists) |
-| религиозные меньшинства | Neutral collective term (as used by Inform) |
-
-«Секта» appears only in the terms box — its etymology, its confessional use and
-the sociological church–sect typology, each attributed — and inside attributed
-positions.
+1. **Orthodox foundation.** State Orthodox teaching in the site's own voice. Follow the sequence: Orthodox teaching, the specific difference, the Orthodox answer.
+2. **Accurate attribution.** Describe other traditions through their own documents. Their descriptions and the Orthodox assessment are separate records. Similar wording does not establish complete doctrinal agreement.
+3. **Authority matters.** Scripture read in the Church, the Creed, conciliar definitions and received catechetical teaching establish the foundation. Azbyka hosts these sources and explanatory works; hosting alone confers no doctrinal authority. Label local practice and an individual author's opinion explicitly.
+4. **Source fidelity.** Preserve exact definitions and brief quotations in context; distinguish quotations from explanatory paraphrase. Never invent a quotation, date, judgement or consensus. Sources and verification follow SOURCES.md.
+5. **Confessional terminology.** Explain and use inoslaviye, inoveriye, heresy, schism and sect when the specific application is supported by a named source. Terms classify teachings or religious bodies; they do not authorize insults toward people. Follow section 7.1 of the 2000 ROC principles on relations with the heterodox.
+6. **Scripture and translations.** The Orthodox exposition uses the Synodal text, with Church Slavonic where relevant. Another tradition's textual argument identifies its translation. Differences of verse numbering and translation remain explicit.
+7. **History and continuity.** The Orthodox narrative follows Sacred History and the continuity of the Church. Separations are historical events, not new births of the Orthodox Church. The Byzantine era is the timeline's chosen dating convention; chronological calculations are not themselves dogmatic definitions.
+8. **Comparison.** Orthodoxy always occupies the first column. Two other traditions are selectable; defaults are Catholicism and Jehovah's Witnesses. Chronological ordering still applies to historical events and reference lists.
+9. **Complete, specific answers.** Each of the 15 topics has a sourced Orthodox foundation and a separate assessment for each of seven comparison traditions. Specific disputed questions show only documented positions; an unrelated topic summary is not a substitute.
+10. **Readable evidence.** Keep essential explanations in the reading flow, longer arguments in disclosures and full bibliographies in the topic-organized Sources page. Integrate unique older arguments without repeating whole catalogues.
+11. **Practice and statistics.** Distinguish common Orthodox teaching from local Russian Orthodox usage and pastoral application. Demographic categories describe a source's counting method, not the doctrinal boundaries of the Church.

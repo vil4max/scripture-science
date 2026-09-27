@@ -6,6 +6,13 @@
     "ref": "Быт. 1–2",
     "proof": [
       {
+        "url": "https://azbyka.ru/biblia/?Gen.1:1&r",
+        "title": "Быт. 1:1 — Синодальный перевод",
+        "tier": "official",
+        "excerpt": "В начале сотворил Бог небо и землю.",
+        "accessed": "2026-09-27"
+      },
+      {
         "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
         "title": "Азбука веры — Хронология Септуагинты",
         "tier": "reference",
@@ -13,7 +20,7 @@
         "accessed": "2026-09-26"
       }
     ],
-    "description": "Начало библейской истории и отправная точка этой временной линии."
+    "description": "Бог сотворил небо и землю. Это начало Священной истории. Число 5508 до Р. Х. относится к принятой на этой шкале византийской хронологии; вера в Творца не зависит от этого вычисления."
   },
   {
     "id": "biblical-flood",
@@ -22,21 +29,21 @@
     "ref": "Быт. 6–9",
     "proof": [
       {
+        "url": "https://azbyka.ru/biblia/?Gen.6:9-22&r",
+        "title": "Быт. 6:9–22 — Синодальный перевод",
+        "tier": "official",
+        "excerpt": "Ной был человек праведный и непорочный в роде своем; Ной ходил пред Богом.",
+        "accessed": "2026-09-27"
+      },
+      {
         "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
         "title": "Азбука веры — Хронология Септуагинты",
         "tier": "reference",
         "excerpt": "Всемирный потоп",
         "accessed": "2026-09-26"
-      },
-      {
-        "url": "https://www.biblegateway.com/passage/?search=Genesis+6%3A9-22&version=NRSVUE",
-        "title": "Genesis 6:9–22 — NRSVUE",
-        "tier": "official",
-        "excerpt": "Noah was a righteous man, blameless in his generation; Noah walked with God.",
-        "accessed": "2026-09-26"
       }
     ],
-    "description": "В библейском рассказе Ной — праведник, которому Бог велит построить ковчег перед Потопом. Ковчег должен сохранить жизнь его семье и животным (Быт. 6–9)."
+    "description": "Ной — праведник, которому Бог велит построить ковчег перед Потопом. Ковчег должен сохранить жизнь его семье и животным (Быт. 6–9)."
   },
   {
     "id": "biblical-abraham",
@@ -45,21 +52,21 @@
     "ref": "Быт. 12",
     "proof": [
       {
+        "url": "https://azbyka.ru/biblia/?Gal.3:16&r",
+        "title": "Гал. 3:16 — Синодальный перевод",
+        "tier": "official",
+        "excerpt": "Аврааму даны были обетования и семени его.",
+        "accessed": "2026-09-27"
+      },
+      {
         "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
         "title": "Азбука веры — Хронология Септуагинты",
         "tier": "reference",
         "excerpt": "Призвание Авраама",
         "accessed": "2026-09-26"
-      },
-      {
-        "url": "https://pluralism.org/abraham",
-        "title": "The Pluralism Project — Abraham",
-        "excerpt": "Abraham is the patriarch, acknowledged as the father of the lineage of faith by the Jewish, Christian, and Islamic traditions.",
-        "tier": "reference",
-        "accessed": "2026-09-26"
       }
     ],
-    "description": "Авраам — общая фигура для иудаизма, христианства и ислама: все три традиции признают в нём праотца веры. Поэтому их называют авраамическими. Здесь показан общий исток их рассказа о вере, а не одновременное возникновение трёх религий."
+    "description": "Бог призывает Авраама, обещая благословение всем племенам земным через его потомство. Церковь почитает его как праотца и пример веры; обетование исполняется во Христе (Быт. 12:1–3; Гал. 3:16). Позднейшие обращения к Аврааму не означают одинакового учения о Боге."
   },
   {
     "id": "biblical-exodus",
@@ -68,21 +75,21 @@
     "ref": "Исх. 12",
     "proof": [
       {
+        "url": "https://azbyka.ru/biblia/?Ex.19:5-8&r",
+        "title": "Исх. 19:5–8 — Синодальный перевод",
+        "tier": "official",
+        "excerpt": "всё, что сказал Господь, исполним",
+        "accessed": "2026-09-27"
+      },
+      {
         "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
         "title": "Азбука веры — Хронология Септуагинты",
         "tier": "reference",
         "excerpt": "Исход из Египта",
         "accessed": "2026-09-26"
-      },
-      {
-        "url": "https://www.mechon-mamre.org/e/et/et0219.htm",
-        "title": "Exodus 19 — Mechon Mamre",
-        "tier": "official",
-        "excerpt": "All that the LORD hath spoken we will do.",
-        "accessed": "2026-09-26"
       }
     ],
-    "description": "После выхода из Египта библейский рассказ приводит народ Израиля к Синаю: Бог предлагает ему завет, а народ принимает обязательство следовать Его словам. Так линия от праотцев переходит к истории народа и его завета с Богом (Исх. 19)."
+    "description": "После выхода из Египта народ Израиля приходит к Синаю: Бог предлагает ему завет, а народ принимает обязательство следовать Его словам. Так линия от праотцев переходит к истории народа и его завета с Богом (Исх. 19)."
   },
   {
     "id": "biblical-temple",
@@ -91,21 +98,21 @@
     "ref": "3 Цар. 6",
     "proof": [
       {
+        "url": "https://azbyka.ru/biblia/?2Chron.3:1-2&r",
+        "title": "2 Пар. 3:1–2 — Синодальный перевод",
+        "tier": "official",
+        "excerpt": "начал Соломон строить дом Господень в Иерусалиме на горе Мориа",
+        "accessed": "2026-09-27"
+      },
+      {
         "url": "https://azbyka.ru/shemy/hronologija-septuaginty.shtml",
         "title": "Азбука веры — Хронология Септуагинты",
         "tier": "reference",
         "excerpt": "Основание Храма",
         "accessed": "2026-09-26"
-      },
-      {
-        "url": "https://www.biblegateway.com/passage/?search=2+Chronicles+3&version=NIV",
-        "title": "2 Chronicles 3:1–2 — NIV",
-        "tier": "official",
-        "excerpt": "Then Solomon began to build the temple of the Lord in Jerusalem on Mount Moriah",
-        "accessed": "2026-09-26"
       }
     ],
-    "description": "По библейскому рассказу, царь Соломон, сын Давида, начинает строить храм Господа в Иерусалиме, на горе Мориа. Строительство начинается на четвёртом году его царствования (2 Пар. 3:1–2)."
+    "description": "Царь Соломон, сын Давида, начинает строить храм Господа в Иерусалиме, на горе Мориа. Строительство начинается на четвёртом году его царствования (2 Пар. 3:1–2)."
   },
   {
     "id": "biblical-second-temple",
@@ -120,7 +127,8 @@
         "excerpt": "Окончание Второго Храма",
         "accessed": "2026-09-26"
       }
-    ]
+    ],
+    "description": ""
   },
   {
     "id": "biblical-nativity",
@@ -135,6 +143,7 @@
         "excerpt": "Рождество Христово",
         "accessed": "2026-09-26"
       }
-    ]
+    ],
+    "description": ""
   }
 ]

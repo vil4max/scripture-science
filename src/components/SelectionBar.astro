@@ -1,17 +1,15 @@
 ---
-// The reader's choice of traditions as a bar pinned to the top of the page
-// (docs/tasks/site-m14-selection.md W1): the eight traditions in age order as
-// toggles, at most three at a time.
+// Orthodoxy is fixed; two further traditions may be toggled.
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
-const traditions = await getOrderedMatrix();
+const traditions = (await getOrderedMatrix()).sort((a, b) => Number(b.id === 'orthodoxy') - Number(a.id === 'orthodoxy'));
 // Outside «Сравнение» the bar offers the way there with the same choice.
 const onCompare = Astro.url.pathname.replace(/\/*$/, '/') === withBase('compare/');
 ---
 
-<div class="selection-bar" data-selection-bar role="group" aria-describedby={onCompare ? 'dispute-selection-hint' : undefined} aria-label="Выбор традиций: одна, чтобы читать, или до трёх, чтобы сравнить">
+<div class="selection-bar" data-selection-bar role="group" aria-describedby={onCompare ? 'dispute-selection-hint' : undefined} aria-label="Православие и две традиции для сравнения">
   <div class="chips">
     {
       traditions.map((t) => (
@@ -19,7 +17,8 @@ const onCompare = Astro.url.pathname.replace(/\/*$/, '/') === withBase('compare/
           type="button"
           class="chip"
           data-pick={t.id}
-          aria-pressed="false"
+          aria-pressed={['orthodoxy', 'catholicism', 'jw'].includes(t.id)}
+          disabled={t.id === 'orthodoxy'}
           style={`--chip: var(${TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other'})`}
         >
           {t.data.name}
@@ -37,7 +36,7 @@ const onCompare = Astro.url.pathname.replace(/\/*$/, '/') === withBase('compare/
 </div>
 {onCompare && (
   <p class="selection-hint" id="dispute-selection-hint">
-    Одна выбранная традиция — все стороны её споров; две или три — только выбранные стороны.
+    Православие закреплено первым. Выберите до двух других традиций; в разборах показаны только документированные позиции по вопросу.
   </p>
 )}
 

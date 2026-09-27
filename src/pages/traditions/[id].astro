@@ -7,7 +7,8 @@ import { type CollectionEntry } from 'astro:content';
 import TraditionImage from '../../components/TraditionImage.astro';
 import GovernanceDiagram from '../../components/GovernanceDiagram.astro';
 import Dispute from '../../components/Dispute.astro';
-import ViewTile from '../../components/ViewTile.astro';
+import OrthodoxAssessment from '../../components/OrthodoxAssessment.astro';
+import OrthodoxClassification from '../../components/OrthodoxClassification.astro';
 import { disputeView } from '../../lib/disputes';
 import MatrixPosition from '../../components/MatrixPosition.astro';
 import ProofLink from '../../components/ProofLink.astro';
@@ -67,8 +68,7 @@ const mentionsJw = tradition.id === 'jw'
       <div>
         <dt>Классификация</dt>
         <dd>
-          {family.family}
-          <ProofLink proof={family.proof} />
+          <OrthodoxClassification tradition={tradition.id} />
         </dd>
       </div>
     )}
@@ -101,9 +101,8 @@ const mentionsJw = tradition.id === 'jw'
     </ol>
     <a href={withBase('timeline/')}>Открыть общую хронологию</a>
   </section>
-  <GovernanceDiagram tradition={tradition.id} />
   <section class="positions" aria-labelledby="positions-title">
-    <h2 id="positions-title">Позиции по темам</h2>
+    <h2 id="positions-title">Вера и практика: православное сопоставление</h2>
     {TOPIC_ORDER.map((topicId) => {
       const position = tradition.data.positions.find((item) => item.topic === topicId);
       if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
@@ -114,33 +113,17 @@ const mentionsJw = tradition.id === 'jw'
 
           <h4 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h4>
             {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
-          <MatrixPosition position={position} tradition={tradition.id} />
+          {tradition.id !== 'orthodoxy' && <><h5>Православное учение</h5><p>{traditions.find(entry => entry.id === 'orthodoxy')?.data.positions.find(item => item.topic === topicId)?.summary}</p><h5>Учение традиции</h5></>}
+          <MatrixPosition position={position} tradition={tradition.id} expandable />
+          <OrthodoxAssessment tradition={tradition.id} topic={topicId} />
+          {disputes.filter(dispute => dispute.data.topic === topicId).map(dispute => <Dispute dispute={dispute} order={tradition.id === 'orthodoxy' ? ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')] : ['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}
         </section>
         </>
       );
     })}
   </section>
-  <section class="profile-section" aria-labelledby="disputes-title">
-    <h2 id="disputes-title">Спорные вопросы</h2>
-    {disputes.length ? disputes.map((dispute) => (
-      <Dispute dispute={dispute} order={order} namesById={namesById} colorById={colorById} />
-    )) : <p class="empty">В материалах сайта пока нет споров с участием этой традиции.</p>}
-  </section>
-  <section class="profile-section profile-views" aria-labelledby="views-title">
-    <h2 id="views-title">Взгляды на другие традиции</h2>
-    <section class="view-group" aria-labelledby="outgoing-title">
-      <h3 id="outgoing-title">Что эта традиция говорит о других</h3>
-      {outgoing.length ? outgoing.map((doc) => (
-        <ViewTile author={tradition.id} doc={doc} order={order} namesById={namesById} colorById={colorById} />
-      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
-    </section>
-    <section class="view-group" aria-labelledby="incoming-title">
-      <h3 id="incoming-title">Что другие говорят об этой традиции</h3>
-      {incoming.length ? incoming.map(({ author, doc }) => (
-        <ViewTile author={author} doc={doc} order={order} namesById={namesById} colorById={colorById} />
-      )) : <p class="empty">В материалах сайта пока нет таких документов.</p>}
-    </section>
-  </section>
+  <section id="disputes-title" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>
+  <section id="views-title" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
 
 
 </SectionPage>

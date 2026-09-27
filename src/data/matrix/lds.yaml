@@ -5,15 +5,23 @@ family: christianity
 since:
   year: 1830
   label: "1830 г. · организация Церкви в Фейетте, штат Нью-Йорк"
-  note: "Организация формально учреждена 6 апреля 1830 года; сама Церковь называет это событие не основанием новой религии, а «Восстановлением» полноты Евангелия Иисуса Христа, которое, по её учению, началось раньше — с «Первого видения» Джозефа Смита в 1820 году."
+  note: "Организация формально учреждена 6 апреля 1830 года; сама Церковь называет
+    это событие не основанием новой религии, а «Восстановлением» полноты
+    Евангелия Иисуса Христа, которое, по её учению, началось раньше — с «Первого
+    видения» Джозефа Смита в 1820 году."
   proof:
-    - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
-      title: "Facts and Statistics — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+    - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+        f-the-church"
+      title: "Facts and Statistics — Newsroom, The Church of Jesus Christ of
+        Latter-day Saints"
       tier: official
-      excerpt: "organized in April 1830, when Joseph Smith met with a small group of believers in northwestern New York to restore the ancient Church"
+      excerpt: "organized in April 1830, when Joseph Smith met with a small group of
+        believers in northwestern New York to restore the ancient Church"
       accessed: "2026-09-25"
-    - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng"
-      title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+    - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=\
+        eng"
+      title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library,
+        The Church of Jesus Christ of Latter-day Saints"
       tier: official
       excerpt: "This Restoration began in 1820 through the Prophet Joseph Smith"
       accessed: "2026-09-25"
@@ -21,24 +29,30 @@ scripture:
   name: "Книга Мормона"
   overview:
     title: "Библия и другие Писания"
-    text: "Наряду с Библией признаются Книга Мормона, Учение и Заветы и Драгоценная Жемчужина."
+    text: "Наряду с Библией признаются Книга Мормона, Учение и Заветы и Драгоценная
+      Жемчужина."
   url: "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=rus"
   proof:
     - url: "https://newsroom.churchofjesuschrist.org/style-guide"
-      title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus
+        Christ of Latter-day Saints"
       tier: official
       excerpt: "\"Mormon\" is correctly used in proper names such as the Book of Mormon"
       accessed: "2026-09-25"
     - url: "https://www.churchofjesuschrist.org/study/scriptures/bofm?lang=rus"
-      title: "Книга Мормона — Священные Писания, Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      title: "Книга Мормона — Священные Писания, Gospel Library, The Church of Jesus
+        Christ of Latter-day Saints"
       tier: official
-      excerpt: "Книга Мормона – том Священного Писания, сравнимого с Библией. Она представляет собой летопись общения Бога с древними жителями Американского континента и содержит полноту вечного Евангелия"
+      excerpt: "Книга Мормона – том Священного Писания, сравнимого с Библией. Она
+        представляет собой летопись общения Бога с древними жителями
+        Американского континента и содержит полноту вечного Евангелия"
       accessed: "2026-09-26"
   status: verified
 adherents:
   value: "≈ 17,9 млн"
   year: 2025
-  method: "общая численность членов Церкви (total church membership) по состоянию на 31 декабря 2025 года"
+  method: "общая численность членов Церкви (total church membership) по состоянию
+    на 31 декабря 2025 года"
   proof:
     - url: "https://www.churchofjesuschrist.org/learn/facts-statistics?lang=eng"
       title: "Facts and Statistics — The Church of Jesus Christ of Latter-day Saints"
@@ -46,122 +60,183 @@ adherents:
       excerpt: "Total Church Membership 17,887,212"
       accessed: "2026-09-25"
     - url: "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report"
-      title: "2025 Statistical Report — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      title: "2025 Statistical Report — Newsroom, The Church of Jesus Christ of
+        Latter-day Saints"
       tier: official
       excerpt: "Total membership 17,887,212"
       accessed: "2026-09-25"
 self_view:
-  summary: "Церковь описывает себя не как новую конфессию, а как восстановление полноты Евангелия Иисуса Христа и Его Церкви, утраченных после смерти апостолов; Восстановление началось с «Первого видения» Джозефа Смита. Церковь официально просит не называть её «мормонской церковью» и не использовать сокращение «LDS», настаивая на полном имени, данном, по её учению, Самим Господом."
+  summary: "Церковь описывает себя не как новую конфессию, а как восстановление
+    полноты Евангелия Иисуса Христа и Его Церкви, утраченных после смерти
+    апостолов; Восстановление началось с «Первого видения» Джозефа Смита.
+    Церковь официально просит не называть её «мормонской церковью» и не
+    использовать сокращение «LDS», настаивая на полном имени, данном, по её
+    учению, Самим Господом."
   proof:
-    - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng"
-      title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+    - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=\
+        eng"
+      title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library,
+        The Church of Jesus Christ of Latter-day Saints"
       tier: official
-      excerpt: "Heavenly Father and His Son Jesus Christ restored, or reestablished, the Church and the fulness of the gospel"
+      excerpt: "Heavenly Father and His Son Jesus Christ restored, or reestablished,
+        the Church and the fulness of the gospel"
       accessed: "2026-09-25"
     - url: "https://newsroom.churchofjesuschrist.org/article/name-of-the-church"
-      title: "The Name of the Church — Official Statement, Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      title: "The Name of the Church — Official Statement, Newsroom, The Church of
+        Jesus Christ of Latter-day Saints"
       tier: official
-      excerpt: "The Lord has impressed upon my mind the importance of the name He has revealed for His Church"
+      excerpt: "The Lord has impressed upon my mind the importance of the name He has
+        revealed for His Church"
       accessed: "2026-09-25"
     - url: "https://newsroom.churchofjesuschrist.org/style-guide"
-      title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus
+        Christ of Latter-day Saints"
       tier: official
-      excerpt: "please avoid using the abbreviation \"LDS\" or the nickname \"Mormon\" as substitutes for the name of the Church"
+      excerpt: "please avoid using the abbreviation \"LDS\" or the nickname \"Mormon\"
+        as substitutes for the name of the Church"
       accessed: "2026-09-25"
 positions:
   - topic: god
-    summary: "Первый Символ веры Церкви гласит: «Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа Святого». По учению Церкви, Отец и Сын имеют осязаемые тела из плоти и костей, а Святой Дух — тело духа; будучи отдельными личностями с разными ролями, они едины в цели и учении."
+    summary: "Первый Символ веры Церкви гласит: «Мы верим в Бога, Отца Вечного, и в
+      Сына Его, Иисуса Христа, и в Духа Святого». По учению Церкви, Отец и Сын
+      имеют осязаемые тела из плоти и костей, а Святой Дух — духовная личность;
+      будучи отдельными личностями с разными ролями, они едины в цели и учении."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа Святого"
-      source: "Символы веры 1:1, Драгоценная Жемчужина — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=rus"
+      text: "Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа
+        Святого"
+      source: "Символы веры 1:1, Драгоценная Жемчужина — Священные Писания, The Church
+        of Jesus Christ of Latter-day Saints"
+      url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=ru\
+        s"
     proof:
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=rus"
-        title: "Символы веры 1 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=ru\
+          s"
+        title: "Символы веры 1 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа Святого"
+        excerpt: "Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа
+          Святого"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
-        title: "\"Godhead,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?la\
+          ng=eng"
+        title: "\"Godhead,\" Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "the members of the Godhead are three separate beings. The Father and the Son have tangible bodies of flesh and bones"
+        excerpt: "the members of the Godhead are three separate beings. The Father and
+          the Son have tangible bodies of flesh and bones"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng"
-        title: "\"Godhead,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (о единстве членов Божества)"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?la\
+          ng=eng"
+        title: "\"Godhead,\" Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints (о единстве членов Божества)"
         tier: official
-        excerpt: "Although the members of the Godhead are distinct beings with distinct roles, they are one in purpose and doctrine"
+        excerpt: "Although the members of the Godhead are distinct beings with distinct
+          roles, they are one in purpose and doctrine"
         accessed: "2026-09-26"
     status: verified
   - topic: name-of-god
-    summary: "Библейский словарь (Bible Dictionary) на официальном сайте Церкви поясняет, что, когда говорят о Боге, как правило, имеют в виду Отца — Элохима. Личность, известную в Ветхом Завете как Иегова, Церковь отождествляет с Сыном, Иисусом Христом, в Его предземном состоянии, до Его рождения на земле от Марии."
+    summary: "Библейский словарь (Bible Dictionary) на официальном сайте Церкви
+      поясняет, что, когда говорят о Боге, как правило, имеют в виду Отца —
+      Элохима. Личность, известную в Ветхом Завете как Иегова, Церковь
+      отождествляет с Сыном, Иисусом Христом, в Его предземном состоянии, до Его
+      рождения на земле от Марии."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Jehovah is the premortal Jesus Christ and came to earth being born of Mary"
-      text_ru: "Иегова — это Иисус Христос до Своей земной жизни, пришедший на землю, родившись от Марии"
+      text: "Jehovah is the premortal Jesus Christ and came to earth being born of
+        Mary"
+      text_ru: "Иегова — это Иисус Христос до Своей земной жизни, пришедший на землю,
+        родившись от Марии"
       translation: "Перевод с английского для этого сайта"
-      source: "Bible Dictionary: \"Jehovah\" — Scriptures, The Church of Jesus Christ of Latter-day Saints"
+      source: "Bible Dictionary: \"Jehovah\" — Scriptures, The Church of Jesus Christ
+        of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/study/scriptures/bd/jehovah?lang=eng"
     proof:
       - url: "https://www.churchofjesuschrist.org/study/scriptures/bd/god?lang=eng"
-        title: "Bible Dictionary: \"God\" — Scriptures, The Church of Jesus Christ of Latter-day Saints"
+        title: "Bible Dictionary: \"God\" — Scriptures, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "When one speaks of God, it is generally the Father who is referred to; that is, Elohim"
+        excerpt: "When one speaks of God, it is generally the Father who is referred to;
+          that is, Elohim"
         accessed: "2026-09-26"
       - url: "https://www.churchofjesuschrist.org/study/scriptures/bd/jehovah?lang=eng"
-        title: "Bible Dictionary: \"Jehovah\" — Scriptures, The Church of Jesus Christ of Latter-day Saints"
+        title: "Bible Dictionary: \"Jehovah\" — Scriptures, The Church of Jesus Christ
+          of Latter-day Saints"
         tier: official
-        excerpt: "Jehovah is the premortal Jesus Christ and came to earth being born of Mary"
+        excerpt: "Jehovah is the premortal Jesus Christ and came to earth being born of
+          Mary"
         accessed: "2026-09-26"
     status: verified
   - topic: jesus
-    summary: "Иисус Христос организовал Свою Церковь и дал апостолам полномочия представлять Его; после Его смерти и смерти апостолов важные истины и изначальные полномочия Его Церкви были утрачены (эпоха, называемая «Великим отступничеством»), а впоследствии, по учению Церкви, восстановлены через пророка Джозефа Смита. Через Искупление и Воскресение Иисуса Христа все люди будут воскрешены."
+    summary: "Святые последних дней называют Иисуса Христа Первородным и Единородным
+      Сыном Небесного Отца, избранным Спасителем ещё до земной жизни. Они верят
+      в Его искупительную смерть, телесное Воскресение и будущее возвращение;
+      это учение связано с их представлением о предземной жизни и об Отце и Сыне
+      как отдельных личностях."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Jesus called Apostles and gave them authority to represent Him and assist in His work. He organized His Church"
-      text_ru: "Иисус призвал Апостолов и дал им власть представлять Его и помогать в Его работе. Он организовал Свою Церковь"
-      translation: "Перевод с английского для этого сайта"
-      source: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng"
+      text: Jesus Christ is the Firstborn and Only Begotten Son of Heavenly Father.
+      text_ru: Иисус Христос — Первородный и Единородный Сын Небесного Отца.
+      translation: Перевод с английского для этого сайта
+      source: Jesus Christ — Who Is Jesus Christ?
+      url: https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng
     scripture:
       ref: "1 Коринфянам 15:22"
       text: "As in Adam all die, even so in Christ shall all be made alive"
@@ -169,121 +244,210 @@ positions:
       translation: "Перевод с английского для этого сайта"
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
-      - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng"
-        title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      - url: https://www.churchofjesuschrist.org/study/manual/gospel-topics/jesus-christ-study-guide?lang=eng
+        title: Jesus Christ — Who Is Jesus Christ?
         tier: official
-        excerpt: "the true Church of Jesus Christ ceased to exist"
-        accessed: "2026-09-25"
-      - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        excerpt: Jesus Christ is the Firstborn and Only Begotten Son of Heavenly Father.
+        accessed: 2026-09-27
+      - url: https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng
+        title: '"Restoration of the Gospel," Topics and Questions — Gospel Library, The
+          Church of Jesus Christ of Latter-day Saints'
         tier: official
-        excerpt: "through the Atonement and Resurrection of Jesus Christ, all people will be resurrected"
-        accessed: "2026-09-25"
+        excerpt: the true Church of Jesus Christ ceased to exist
+        accessed: 2026-09-25
+      - url: https://www.churchofjesuschrist.org/topics/salvation?lang=eng
+        title: '"Salvation," Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints'
+        tier: official
+        excerpt: through the Atonement and Resurrection of Jesus Christ, all people will
+          be resurrected
+        accessed: 2026-09-25
     status: verified
   - topic: spirit
-    summary: "Дар Святого Духа описывается как одно из необходимых для спасения таинств (ordinances), которое человек получает после проявления веры во Христа, покаяния и крещения."
+    summary: "Святые последних дней считают Святого Духа отдельной духовной
+      личностью, не имеющей тела из плоти и костей. В их учении Отец, Сын и
+      Святой Дух едины в цели, но не исповедуются как три единосущных Лица. Дар
+      Святого Духа получают через возложение рук после веры, покаяния и
+      крещения."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "an individual must exercise faith in Jesus Christ, repent, be baptized, and receive the gift of the Holy Ghost"
-      text_ru: "человек должен проявлять веру в Иисуса Христа, покаяться, креститься и получить дар Святого Духа"
+      text: "an individual must exercise faith in Jesus Christ, repent, be baptized,
+        and receive the gift of the Holy Ghost"
+      text_ru: "человек должен проявлять веру в Иисуса Христа, покаяться, креститься и
+        получить дар Святого Духа"
       translation: "Перевод с английского для этого сайта"
-      source: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      source: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+        Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
-      - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      - url: https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/130?lang=eng&id=p22#p22
+        title: Учение и Заветы 130:22 — представление о Божестве
         tier: official
-        excerpt: "receive the gift of the Holy Ghost through the proper priesthood authority"
-        accessed: "2026-09-25"
+        excerpt: but is a personage of Spirit
+        accessed: 2026-09-27
+      - url: https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=rus
+        title: Символы веры 1 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints
+        tier: official
+        excerpt: Мы верим в Бога, Отца Вечного, и в Сына Его, Иисуса Христа, и в Духа
+          Святого
+        accessed: 2026-09-26
+      - url: https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng
+        title: '"Godhead," Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints'
+        tier: official
+        excerpt: the members of the Godhead are three separate beings. The Father and
+          the Son have tangible bodies of flesh and bones
+        accessed: 2026-09-26
+      - url: https://www.churchofjesuschrist.org/study/manual/gospel-topics/godhead?lang=eng
+        title: '"Godhead," Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints (о единстве членов Божества)'
+        tier: official
+        excerpt: Although the members of the Godhead are distinct beings with distinct
+          roles, they are one in purpose and doctrine
+        accessed: 2026-09-26
+      - url: https://www.churchofjesuschrist.org/topics/salvation?lang=eng
+        title: '"Salvation," Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints'
+        tier: official
+        excerpt: receive the gift of the Holy Ghost through the proper priesthood
+          authority
+        accessed: 2026-09-25
     status: verified
   - topic: scripture
-    summary: "Каноническими признаются четыре книги («стандартные труды»): Библия, Книга Мормона, Учение и Заветы и Драгоценная жемчужина (в которую входят и «Символы веры»); в официальных учебных материалах они используются как единый корпус Писания."
+    summary: "Каноническими признаются четыре книги («стандартные труды»): Библия,
+      Книга Мормона, Учение и Заветы и Драгоценная жемчужина (в которую входят и
+      «Символы веры»); в официальных учебных материалах они используются как
+      единый корпус Писания."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     proof:
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (список отсылок к Писанию)"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints (список отсылок к Писанию)"
         tier: official
-        excerpt: "Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith 1:3"
+        excerpt: "Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith
+          1:3"
         accessed: "2026-09-25"
       - url: "https://newsroom.churchofjesuschrist.org/style-guide"
-        title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "\"Mormon\" is correctly used in proper names such as the Book of Mormon"
+        excerpt: "\"Mormon\" is correctly used in proper names such as the Book of
+          Mormon"
         accessed: "2026-09-25"
     status: verified
   - topic: authority
-    summary: "Священство — это власть и полномочия Бога, дарованные людям для совершения всего необходимого для спасения. По учению Церкви, эти полномочия были утрачены после смерти апостолов Иисуса Христа и восстановлены Джозефу Смиту через небесных посланников в XIX веке; ключами священства в полноте обладает Президент Церкви."
+    summary: "Священство — это власть и полномочия Бога, дарованные людям для
+      совершения всего необходимого для спасения. По учению Церкви, эти
+      полномочия были утрачены после смерти апостолов Иисуса Христа и
+      восстановлены Джозефу Смиту через небесных посланников в XIX веке; ключами
+      священства в полноте обладает Президент Церкви."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "priesthood is the power and authority that God gives to man to act in all things necessary for the salvation of God's children"
-      text_ru: "священство — это сила и власть, которую Бог даёт человеку, чтобы действовать во всём, необходимом для спасения детей Бога"
+      text: "priesthood is the power and authority that God gives to man to act in all
+        things necessary for the salvation of God's children"
+      text_ru: "священство — это сила и власть, которую Бог даёт человеку, чтобы
+        действовать во всём, необходимом для спасения детей Бога"
       translation: "Перевод с английского для этого сайта"
-      source: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      source: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of
+        Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/topics/priesthood?lang=eng"
     proof:
       - url: "https://www.churchofjesuschrist.org/topics/priesthood?lang=eng"
-        title: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        title: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "it was restored by the Lord to Joseph Smith through heavenly messengers during the 19th century"
+        excerpt: "it was restored by the Lord to Joseph Smith through heavenly
+          messengers during the 19th century"
         accessed: "2026-09-25"
       - url: "https://www.churchofjesuschrist.org/topics/priesthood?lang=eng"
-        title: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (о ключах священства)"
+        title: "\"Priesthood,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints (о ключах священства)"
         tier: official
-        excerpt: "The senior living Apostle, the President of the Church, is the only person on earth authorized to exercise all priesthood keys"
+        excerpt: "The senior living Apostle, the President of the Church, is the only
+          person on earth authorized to exercise all priesthood keys"
         accessed: "2026-09-25"
     status: verified
   - topic: salvation
-    summary: "Слова «спасение» и «спасённый» употребляются в нескольких значениях: все люди будут спасены от физической смерти через Искупление и Воскресение Христа; спасение же от греха условно и требует веры, покаяния, крещения и дара Святого Духа. Через благодать Божью человек может быть спасён от своих грехов при условии стойкости в вере до конца."
+    summary: "Слова «спасение» и «спасённый» употребляются в нескольких значениях:
+      все люди будут спасены от физической смерти через Искупление и Воскресение
+      Христа; спасение же от греха условно и требует веры, покаяния, крещения и
+      дара Святого Духа. Через благодать Божью человек может быть спасён от
+      своих грехов при условии стойкости в вере до конца."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
@@ -291,33 +455,47 @@ positions:
       text: "through the grace of God, all can be saved from their sins"
       text_ru: "по благодати Бога все могут быть спасены от своих грехов"
       translation: "Перевод с английского для этого сайта"
-      source: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      source: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+        Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints"
         tier: official
         excerpt: "all people will be resurrected—saved from physical death"
         accessed: "2026-09-25"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (об условном спасении от греха)"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints (об условном спасении от греха)"
         tier: official
-        excerpt: "salvation is conditional, depending on an individual's continuing in faithfulness"
+        excerpt: "salvation is conditional, depending on an individual's continuing in
+          faithfulness"
         accessed: "2026-09-25"
     status: verified
   - topic: afterlife
-    summary: "Все люди будут воскрешены и, за немногими исключениями, избегут «второй смерти» — окончательной духовной смерти, наступающей только после Последнего суда. «Вечная жизнь», или превознесение, означает пребывание с Небесным Отцом и Иисусом Христом навечно в высшей степени славы — celestial kingdom."
+    summary: "Все люди будут воскрешены и, за немногими исключениями, избегут
+      «второй смерти» — окончательной духовной смерти, наступающей только после
+      Последнего суда. «Вечная жизнь», или превознесение, означает пребывание с
+      Небесным Отцом и Иисусом Христом навечно в высшей степени славы —
+      celestial kingdom."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
@@ -329,29 +507,43 @@ positions:
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "Almost every person who has ever lived on the earth is assured salvation from the second death"
+        excerpt: "Almost every person who has ever lived on the earth is assured
+          salvation from the second death"
         accessed: "2026-09-25"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (о превознесении)"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints (о превознесении)"
         tier: official
-        excerpt: "Eternal life is to know Heavenly Father and Jesus Christ and dwell with Them forever"
+        excerpt: "Eternal life is to know Heavenly Father and Jesus Christ and dwell
+          with Them forever"
         accessed: "2026-09-25"
     status: verified
   - topic: end-times
-    summary: "Тысячелетие — период в 1000 лет, наступающий после Второго пришествия Спасителя, во время которого Христос будет лично царствовать на земле; воцарятся праведность и мир, а сатана будет скован и лишён власти над сердцами людей. В конце этого периода сатана будет ненадолго освобождён, соберёт свои воинства, потерпит поражение и будет низвергнут навсегда."
+    summary: "Тысячелетие — период в 1000 лет, наступающий после Второго пришествия
+      Спасителя, во время которого Христос будет лично царствовать на земле;
+      воцарятся праведность и мир, а сатана будет скован и лишён власти над
+      сердцами людей. В конце этого периода сатана будет ненадолго освобождён,
+      соберёт свои воинства, потерпит поражение и будет низвергнут навсегда."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
@@ -359,39 +551,59 @@ positions:
       text: "Christ will reign personally upon the earth"
       text_ru: "Христос будет лично царствовать на земле"
       translation: "Перевод с английского для этого сайта"
-      source: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium?lang=eng"
+      source: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of
+        Jesus Christ of Latter-day Saints"
+      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium\
+        ?lang=eng"
     proof:
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium?lang=eng"
-        title: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium\
+          ?lang=eng"
+        title: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "When we speak of “the Millennium,” we refer to the 1,000 years following the Savior’s Second Coming"
+        excerpt: "When we speak of “the Millennium,” we refer to the 1,000 years
+          following the Savior’s Second Coming"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium?lang=eng"
-        title: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (о судьбе сатаны)"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/millennium\
+          ?lang=eng"
+        title: "\"Millennium,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints (о судьбе сатаны)"
         tier: official
-        excerpt: "Satan will be “bound, that he shall have no place in the hearts of the children of men”"
+        excerpt: "Satan will be “bound, that he shall have no place in the hearts of the
+          children of men”"
         accessed: "2026-09-26"
     status: verified
   - topic: worship
-    summary: "Богослужение включает еженедельные воскресные собрания с причастием (хлеб и вода в память об Иисусе Христе) и крещение погружением; отдельно от воскресных собраний совершаются священные обряды в храмах — например, браковенчание («запечатывание»), доступные только полноправным членам Церкви."
+    summary: "Богослужение включает еженедельные воскресные собрания с причастием
+      (хлеб и вода в память об Иисусе Христе) и крещение погружением; отдельно
+      от воскресных собраний совершаются священные обряды в храмах — например,
+      браковенчание («запечатывание»), доступные только полноправным членам
+      Церкви."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "sacred ceremonies such as marriages are performed. These ceremonies are called ordinances"
-      text_ru: "совершаются священные церемонии, например бракосочетания. Эти церемонии называются таинствами"
+      text: "sacred ceremonies such as marriages are performed. These ceremonies are
+        called ordinances"
+      text_ru: "совершаются священные церемонии, например бракосочетания. Эти
+        церемонии называются таинствами"
       translation: "Перевод с английского для этого сайта"
       source: "Temple FAQ — The Church of Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/temples/faq?lang=eng"
@@ -399,237 +611,375 @@ positions:
       - url: "https://www.churchofjesuschrist.org/temples/faq?lang=eng"
         title: "Temple FAQ — The Church of Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "Modern temples are dedicated to the Lord and have purposes similar to biblical ones"
+        excerpt: "Modern temples are dedicated to the Lord and have purposes similar to
+          biblical ones"
         accessed: "2026-09-25"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
+          Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "This rebirth occurs as individuals are baptized and receive the gift of the Holy Ghost"
+        excerpt: "This rebirth occurs as individuals are baptized and receive the gift
+          of the Holy Ghost"
         accessed: "2026-09-25"
     status: verified
   - topic: images
-    summary: "Церковь не использует крест на своих зданиях, в часовнях, классах и подобных помещениях; официальным символом Церкви служит изображение воскресшего, живого Христа. Страдания Спасителя в Гефсимании и на Кресте вспоминаются с благоговением, а учение Церкви сосредоточено на доктрине Искупления Христа."
+    summary: "Церковь не использует крест на своих зданиях, в часовнях, классах и
+      подобных помещениях; официальным символом Церкви служит изображение
+      воскресшего, живого Христа. Страдания Спасителя в Гефсимании и на Кресте
+      вспоминаются с благоговением, а учение Церкви сосредоточено на доктрине
+      Искупления Христа."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "The Church of Jesus Christ of Latter-day Saints does not display the cross on its buildings or in its chapels or classrooms or similar places"
-      text_ru: "Церковь Иисуса Христа Святых последних дней не размещает крест на своих зданиях, в молитвенных залах, классах и подобных местах"
+      text: "The Church of Jesus Christ of Latter-day Saints does not display the
+        cross on its buildings or in its chapels or classrooms or similar
+        places"
+      text_ru: "Церковь Иисуса Христа Святых последних дней не размещает крест на
+        своих зданиях, в молитвенных залах, классах и подобных местах"
       translation: "Перевод с английского для этого сайта"
-      source: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang=eng"
+      source: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus
+        Christ of Latter-day Saints"
+      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang\
+        =eng"
     proof:
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang=eng"
-        title: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang\
+          =eng"
+        title: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "The Church of Jesus Christ of Latter-day Saints does not display the cross on its buildings or in its chapels or classrooms or similar places"
+        excerpt: "The Church of Jesus Christ of Latter-day Saints does not display the
+          cross on its buildings or in its chapels or classrooms or similar
+          places"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang=eng"
-        title: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (об официальном символе Церкви)"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/cross?lang\
+          =eng"
+        title: "\"Cross,\" Topics and Questions — Gospel Library, The Church of Jesus
+          Christ of Latter-day Saints (об официальном символе Церкви)"
         tier: official
-        excerpt: "the official symbol for the Church is an image of the resurrected, living Christ, who guides His Church today through revelation to His prophet"
+        excerpt: "the official symbol for the Church is an image of the resurrected,
+          living Christ, who guides His Church today through revelation to His
+          prophet"
         accessed: "2026-09-26"
     status: verified
   - topic: holy-days
-    summary: "Особый ежегодный праздничный цикл отсутствует; вместо этого дважды в год, в первые выходные апреля и октября, проводится Всеобщая конференция, на которой руководители Церкви обращаются к членам по всему миру. Помимо этого члены еженедельно посещают воскресные богослужения в своих приходах."
+    summary: "Святые последних дней празднуют Пасху как Воскресение Иисуса Христа и
+      собираются на воскресные богослужения. Их пасхальные службы включают
+      чтение Нового Завета и Книги Мормона; православного великопостного и
+      страстного богослужебного цикла у них нет. Всеобщие конференции проходят
+      дважды в год и не заменяют Пасху."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Twice a year, during the first weekend of April and the first weekend of October, Church leaders from around the world share messages"
-      text_ru: "Дважды в год, в первые выходные апреля и октября, церковные руководители со всего мира выступают с посланиями"
+      text: "Twice a year, during the first weekend of April and the first weekend of
+        October, Church leaders from around the world share messages"
+      text_ru: "Дважды в год, в первые выходные апреля и октября, церковные
+        руководители со всего мира выступают с посланиями"
       translation: "Перевод с английского для этого сайта"
-      source: "General Conference — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      source: "General Conference — Newsroom, The Church of Jesus Christ of Latter-day
+        Saints"
       url: "https://newsroom.churchofjesuschrist.org/article/general-conference"
     proof:
-      - url: "https://newsroom.churchofjesuschrist.org/article/general-conference"
-        title: "General Conference — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      - url: https://www.churchofjesuschrist.org/study/manual/gospel-topics/easter?lang=eng
+        title: Easter — Overview; пасхальное воскресное богослужение
         tier: official
-        excerpt: "the meetings are broadcast via satellite in as many as 70 languages"
-        accessed: "2026-09-25"
-      - url: "https://www.churchofjesuschrist.org/temples/faq?lang=eng"
-        title: "Temple FAQ — The Church of Jesus Christ of Latter-day Saints"
+        excerpt: Latter-day Saints conduct Easter Sunday services
+        accessed: 2026-09-27
+      - url: https://newsroom.churchofjesuschrist.org/article/general-conference
+        title: General Conference — Newsroom, The Church of Jesus Christ of Latter-day
+          Saints
         tier: official
-        excerpt: "Temples are not open on the Sabbath, so that members may attend their local congregations"
-        accessed: "2026-09-25"
+        excerpt: the meetings are broadcast via satellite in as many as 70 languages
+        accessed: 2026-09-25
+      - url: https://www.churchofjesuschrist.org/temples/faq?lang=eng
+        title: Temple FAQ — The Church of Jesus Christ of Latter-day Saints
+        tier: official
+        excerpt: Temples are not open on the Sabbath, so that members may attend their
+          local congregations
+        accessed: 2026-09-25
     status: verified
   - topic: fasting
-    summary: "Обычно в первое воскресенье месяца члены Церкви на 24 часа отказываются от еды и питья, если позволяет здоровье, и помогают нуждающимся пожертвованиями от поста. Пост сопровождается молитвой и собранием свидетельств. Церковь признаёт брак установленным Богом и не предписывает всем безбрачие или отказ от мяса."
+    summary: "Обычно в первое воскресенье месяца члены Церкви на 24 часа
+      отказываются от еды и питья, если позволяет здоровье, и помогают
+      нуждающимся пожертвованиями от поста. Пост сопровождается молитвой и
+      собранием свидетельств. Церковь признаёт брак установленным Богом и не
+      предписывает всем безбрачие или отказ от мяса."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Члены Церкви регулярно постятся вместе, как правило, в первое воскресенье каждого месяца."
-      source: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
+      text: "Члены Церкви регулярно постятся вместе, как правило, в первое воскресенье
+        каждого месяца."
+      source: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+        Christ of Latter-day Saints"
+      url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+        d-fast-offerings-study-guide?lang=rus"
     proof:
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "Господь также вновь учредил этот закон в наши дни (см. Учение и Заветы 88:76)."
+        excerpt: "Господь также вновь учредил этот закон в наши дни (см. Учение и Заветы
+          88:76)."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?lang=rus"
-        title: "Учение и Заветы 88:76 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/88?l\
+          ang=rus"
+        title: "Учение и Заветы 88:76 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "Также Я даю вам повеление, чтобы вы продолжали с этого времени и впредь молиться и поститься."
+        excerpt: "Также Я даю вам повеление, чтобы вы продолжали с этого времени и
+          впредь молиться и поститься."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "Члены Церкви регулярно постятся вместе, как правило, в первое воскресенье каждого месяца."
+        excerpt: "Члены Церкви регулярно постятся вместе, как правило, в первое
+          воскресенье каждого месяца."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "Святые последних дней постятся, воздерживаясь от употребления пищи и питья в течение 24 часов, если позволяет здоровье."
+        excerpt: "Святые последних дней постятся, воздерживаясь от употребления пищи и
+          питья в течение 24 часов, если позволяет здоровье."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "добровольно вносят денежные пожертвования, называемые пожертвованиями от поста, равные по меньшей мере стоимости пищи, которую они не ели во время поста"
+        excerpt: "добровольно вносят денежные пожертвования, называемые пожертвованиями
+          от поста, равные по меньшей мере стоимости пищи, которую они не ели во
+          время поста"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "Их пожертвования помогают обеспечить нуждающихся едой, жильем, одеждой и другими предметами первой необходимости."
+        excerpt: "Их пожертвования помогают обеспечить нуждающихся едой, жильем, одеждой
+          и другими предметами первой необходимости."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings-study-guide?lang=rus"
-        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-an\
+          d-fast-offerings-study-guide?lang=rus"
+        title: "«Пост» — учебное пособие, раздел «Темы и вопросы», The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "В Церкви каждый месяц в постное воскресенье проводится собрание свидетельств."
+        excerpt: "В Церкви каждый месяц в постное воскресенье проводится собрание
+          свидетельств."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?lang=rus"
-        title: "Учение и Заветы 49, вступление к разделу — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?l\
+          ang=rus"
+        title: "Учение и Заветы 49, вступление к разделу — Священные Писания, The Church
+          of Jesus Christ of Latter-day Saints"
         tier: official
-        excerpt: "Они отвергали брак и верили в полное воздержание от половых отношений. Некоторые шейкеры также запрещали есть мясо."
+        excerpt: "Они отвергали брак и верили в полное воздержание от половых отношений.
+          Некоторые шейкеры также запрещали есть мясо."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?lang=rus"
-        title: "Учение и Заветы 49:15 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?l\
+          ang=rus"
+        title: "Учение и Заветы 49:15 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "Тот, кто запрещает вступать в брак, не назначен Богом, ибо брак назначен Богом человеку."
+        excerpt: "Тот, кто запрещает вступать в брак, не назначен Богом, ибо брак
+          назначен Богом человеку."
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?lang=rus"
-        title: "Учение и Заветы 49:18 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/49?l\
+          ang=rus"
+        title: "Учение и Заветы 49:18 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "И тот, кто повелевает воздерживаться от мяса, чтобы человек не ел его, Богом не назначен."
+        excerpt: "И тот, кто повелевает воздерживаться от мяса, чтобы человек не ел его,
+          Богом не назначен."
         accessed: "2026-09-26"
     status: verified
   - topic: organisation
-    summary: "Церковь возглавляют 15 апостолов: Президент Церкви и два его советника образуют Первое президентство — высший руководящий орган; ещё двенадцать — Кворум двенадцати апостолов, следующий по уровню орган. Вместе они руководят всей Церковью. Местные приходы (wards) возглавляют епископы, группы приходов образуют «колья» (stakes) во главе с президентами кольев. Именно эти местные руководители — неоплачиваемые миряне с существенной местной самостоятельностью."
+    summary: "Церковь возглавляют 15 апостолов: Президент Церкви и два его советника
+      образуют Первое президентство — высший руководящий орган; ещё двенадцать —
+      Кворум двенадцати апостолов, следующий по уровню орган. Вместе они
+      руководят всей Церковью. Местные приходы (wards) возглавляют епископы,
+      группы приходов образуют «колья» (stakes) во главе с президентами кольев.
+      Именно эти местные руководители — неоплачиваемые миряне с существенной
+      местной самостоятельностью."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "Stake presidents and bishops are the leaders most commonly encountered by the broad membership of the Church"
-      text_ru: "Президенты кольев и епископы — это руководители, с которыми чаще всего взаимодействуют рядовые члены Церкви"
+      text: "Stake presidents and bishops are the leaders most commonly encountered by
+        the broad membership of the Church"
+      text_ru: "Президенты кольев и епископы — это руководители, с которыми чаще всего
+        взаимодействуют рядовые члены Церкви"
       translation: "Перевод с английского для этого сайта"
-      source: "Organizational Structure of the Church — Newsroom, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
+      source: "Organizational Structure of the Church — Newsroom, The Church of Jesus
+        Christ of Latter-day Saints"
+      url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+        f-the-church"
     proof:
-      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
-        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+          f-the-church"
+        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: official
-        excerpt: "These leaders are unsalaried and have a significant amount of local autonomy"
+        excerpt: "These leaders are unsalaried and have a significant amount of local
+          autonomy"
         accessed: "2026-09-25"
       - url: "https://newsroom.churchofjesuschrist.org/article/2025-statistical-report"
-        title: "2025 Statistical Report — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        title: "2025 Statistical Report — Newsroom, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
         excerpt: "Stakes 3,695 Missions 451"
         accessed: "2026-09-25"
-      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
-        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+          f-the-church"
+        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: "official"
         excerpt: "The Church is led by 15 apostles."
         accessed: "2026-09-26"
-      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
-        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+          f-the-church"
+        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: "official"
-        excerpt: "These three function as the First Presidency, which is the highest governing body of the Church."
+        excerpt: "These three function as the First Presidency, which is the highest
+          governing body of the Church."
         accessed: "2026-09-26"
-      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-of-the-church"
-        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://newsroom.churchofjesuschrist.org/topic/organizational-structure-o\
+          f-the-church"
+        title: "Organizational Structure of the Church — Newsroom, The Church of Jesus
+          Christ of Latter-day Saints"
         tier: "official"
-        excerpt: "Twelve others form the Quorum of the Twelve — the second-highest governing body of the Church."
+        excerpt: "Twelve others form the Quorum of the Twelve — the second-highest
+          governing body of the Church."
         accessed: "2026-09-26"
     status: verified
   - topic: rules
-    summary: "Особые правила Церкви включают «Слово Мудрости» (Учение и Заветы 89): воздержание от вина и крепких напитков (кроме используемого в причастии), от табака и «горячих напитков»; и закон десятины (Учение и Заветы 119), согласно которому член Церкви ежегодно отдаёт одну десятую часть своего дохода."
+    summary: "Особые правила Церкви включают «Слово Мудрости» (Учение и Заветы 89):
+      воздержание от вина и крепких напитков (кроме используемого в причастии),
+      от табака и «горячих напитков»; и закон десятины (Учение и Заветы 119),
+      согласно которому член Церкви ежегодно отдаёт одну десятую часть своего
+      дохода."
     unity:
       kind: shared
-      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати Апостолов и провозглашают в официальных изданиях Церкви."
+      note: "учение Церкви устанавливают Первое Президентство и Кворум Двенадцати
+        Апостолов и провозглашают в официальных изданиях Церкви."
       proof:
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
-          excerpt: "counsel together to establish doctrine that is consistently proclaimed in official Church publications"
+          excerpt: "counsel together to establish doctrine that is consistently proclaimed
+            in official Church publications"
           accessed: "2026-09-26"
-        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctrine"
-          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+        - url: "https://newsroom.churchofjesuschrist.org/article/approaching-mormon-doctr\
+            ine"
+          title: "Approaching Mormon Doctrine — Newsroom, The Church of Jesus Christ of
+            Latter-day Saints"
           tier: "official"
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     quote:
-      text: "если какой-либо человек среди вас пьёт вино или крепкие напитки, вот это нехорошо и непристойно перед лицом Отца вашего"
-      source: "Учение и Заветы 89:5 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
-      url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?lang=rus"
+      text: "если какой-либо человек среди вас пьёт вино или крепкие напитки, вот это
+        нехорошо и непристойно перед лицом Отца вашего"
+      source: "Учение и Заветы 89:5 — Священные Писания, The Church of Jesus Christ of
+        Latter-day Saints"
+      url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?l\
+        ang=rus"
     proof:
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?lang=rus"
-        title: "Учение и Заветы 89 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?l\
+          ang=rus"
+        title: "Учение и Заветы 89 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
         excerpt: "крепкие напитки не для живота, но для омовения вашего тела"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?lang=rus"
-        title: "Учение и Заветы 89 — Священные Писания, The Church of Jesus Christ of Latter-day Saints (о табаке)"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/89?l\
+          ang=rus"
+        title: "Учение и Заветы 89 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints (о табаке)"
         tier: official
         excerpt: "табак ни для тела, ни для живота, и он не полезен для человека"
         accessed: "2026-09-26"
-      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?lang=rus"
-        title: "Учение и Заветы 119 — Священные Писания, The Church of Jesus Christ of Latter-day Saints"
+      - url: "https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/119?\
+          lang=rus"
+        title: "Учение и Заветы 119 — Священные Писания, The Church of Jesus Christ of
+          Latter-day Saints"
         tier: official
-        excerpt: "те, кто таким образом были обложены десятиной, должны платить ежегодно одну десятую часть от всего своего прибытка"
+        excerpt: "те, кто таким образом были обложены десятиной, должны платить ежегодно
+          одну десятую часть от всего своего прибытка"
         accessed: "2026-09-26"
     status: verified

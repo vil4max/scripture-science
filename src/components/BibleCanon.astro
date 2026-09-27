@@ -10,18 +10,18 @@ const byId = new Map(traditions.map((tradition) => [tradition.id, tradition]));
 const position = (id: string, topic: 'scripture' | 'authority') => byId.get(id)?.data.positions.find((item) => item.topic === topic);
 type VerifiedProof = Citation & Required<Pick<Citation, 'tier' | 'excerpt' | 'accessed'>>;
 const proofs = guide.proofs as Record<keyof typeof guide.proofs, VerifiedProof[]>;
-const { orthodoxCanon: orthodoxProof, catholicCanon: catholicProof } = proofs;
+const { catholicCanon: catholicProof } = proofs;
 ---
 
 <section aria-labelledby="canon-title">
   <h2 id="canon-title">Состав Библии</h2>
-  <p class="intro">Канон — список книг, которые община признаёт Священным Писанием. У православных, католиков и протестантов общий Новый Завет из 27 книг; основные различия — в составе Ветхого Завета.</p>
+  <p class="intro">Библейский канон — состав книг, принятых Церковью как богодухновенные. У православных, католиков и протестантов общий Новый Завет из 27 книг; основные различия — в составе Ветхого Завета.</p>
   <div class="book-group">
     <h3>Какие книги вызывают различия</h3>
     <p>Товит, Иудифь, Премудрость Соломона, Сирах, Варух, 1–2 Маккавейские, а также греческие добавления к Есфири и Даниилу.</p>
   </div>
   <dl class="canon-comparison">
-    <div><dt>Православие</dt><dd><b>Входят в более широкий Ветхий Завет.</b> Состав и названия этой группы могут различаться по церковной традиции и изданию. Например, Православная Церковь в Америке включает также Молитву Манассии.<ProofLink proof={orthodoxProof} /></dd></div>
+    <div><dt>Православие</dt><dd><b>В русской православной Библии — 77 книг.</b> Ветхий Завет: 39 канонических и 11 неканонических; Новый Завет: 27. Исторический счёт «22 книги» объединяет несколько книг под общими заглавиями и не означает, что в Ветхом Завете русской Библии только 22 книги. Неканонические книги читаются Церковью, но их статус отличается от канонических.<ProofLink proof={position('orthodoxy', 'scripture')?.proof ?? []} /></dd></div>
     <div><dt>Католичество</dt><dd><b>Входят в канон.</b> Их называют девтероканоническими. Католическая Библия насчитывает 46 книг Ветхого Завета и 27 Нового.<ProofLink proof={catholicProof} /></dd></div>
     <div><dt>Протестантизм</dt><dd><b>Не входят в 66-книжный канон.</b> В некоторых изданиях печатаются отдельно как апокрифы.<ProofLink proof={position('protestantism', 'scripture')?.proof ?? []} /></dd></div>
     <div><dt>Свидетели Иеговы</dt><dd><b>Не входят в канон.</b> Признаются 66 книг: 39 Ветхого Завета и 27 Нового.<ProofLink proof={position('jw', 'scripture')?.proof ?? []} /></dd></div>

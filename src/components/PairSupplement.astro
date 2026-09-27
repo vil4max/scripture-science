@@ -1,6 +1,7 @@
 ---
 import { getPairDocument } from '../lib/pairDocument';
 import { withBase } from '../lib/paths';
+import { orthodoxAssessment } from '../lib/orthodox';
 
 interface Props { area: string; }
 const { area } = Astro.props;
@@ -8,27 +9,30 @@ const { traditions, correctedTopics, sectionHtml } = await getPairDocument();
 const topicAreas = ['god', 'jesus', 'jesus', 'worship', 'jesus', 'spirit', 'afterlife', 'end-times', 'authority', 'scripture', 'images', 'holy-days'];
 const topics = correctedTopics.filter((topic) => topicAreas[topic.data.order - 1] === area);
 const continuityHeading = sectionHtml.history.indexOf('Как Свидетели');
-const continuity = area === 'authority' && continuityHeading >= 0
+const continuity = area === 'organisation' && continuityHeading >= 0
   ? sectionHtml.history.slice(sectionHtml.history.lastIndexOf('<div class="card">', continuityHeading))
   : '';
 const readingApproaches = area === 'authority'
   ? sectionHtml.summary.split('<h3 class="qhead">')[0]
+    .replace('Вера читается через Предание, соборы и Отцов — наследие двадцати веков, общее для всей Церкви. Главное — непрерывность от апостолов.', 'Священное Писание принадлежит Священному Преданию Церкви. Соборы и святые отцы свидетельствуют об апостольской вере; её преемство включает учение, богослужение и таинственную жизнь.')
+    .replace('Опора только на Писание, единое учение для собраний всего мира и личная проповедь каждого. Главное — восстановить веру христиан I века.', 'Свидетели Иеговы заявляют об опоре только на Писание и восстановлении веры христиан I века. Обязательное для собраний толкование определяет Руководящий совет; каждый верующий участвует в проповеди.')
   : '';
 // Keep local IDs unique and route source references to the complete document.
 const inlineHtml = (html: string) => html
   .replace(/\bid="([^"]+)"/g, 'id="pair-$1"')
-  .replace(/\bhref="#([^"]+)"/g, (_, id) => `href="${withBase('pairs/orthodoxy-jw/')}#${id}"`)
+  .replace(/\bhref="#([^"]+)"/g, (_, id) => `href="${withBase('sources/')}#${id.startsWith('correction-') ? `pair-${id}` : 'pair-refs'}"`)
   .replace(/url\(#([^)]+)\)/g, 'url(#pair-$1)')
   .replace(/class="pos o"/g, 'class="pos o" data-pair-trad="orthodoxy"')
   .replace(/class="pos j"/g, 'class="pos j" data-pair-trad="jw"')
   .replace(/<p class="eyebrow">[\s\S]*?<\/p>/g, '');
 ---
-{(topics.length > 0 || continuity) && (
-  <div class="pair-page pair-inline" data-pair-supplement hidden>
+{(topics.length > 0 || continuity || readingApproaches) && (
+  <div class="pair-page pair-inline" data-pair-supplement>
     {topics.length > 0 && <details class="pair-evidence">
       <summary>Библейские аргументы и различия толкований</summary>
+      <p class="note">Православное учение — основание разбора. Конкретные толкования святых отцов и богословов указаны с именами авторов; отдельное объяснение не приравнивается к соборному догмату.</p>
       <div class="pair-positions">
-        {traditions.map((tradition) => <div data-pair-trad={tradition.id}>
+        {traditions.map((tradition) => <div data-pair-trad={tradition.id} style={`grid-column:${tradition.id === 'orthodoxy' ? 1 : 3};grid-row:1`}>
           <strong>{topics[0].data.positions[tradition.id].label}</strong>
           {topics.map((topic) => <section class="pair-argument" id={tradition.id === 'orthodoxy' ? `pair-${topic.data.slug}` : undefined}>
             {topics.length > 1 && <h5>{topic.data.title}</h5>}
@@ -46,11 +50,25 @@ const inlineHtml = (html: string) => html
       <summary>Два подхода к одной Книге</summary>
       <p class="note">Как православие и Свидетели Иеговы объясняют свой подход к Писанию.</p>
       <Fragment set:html={inlineHtml(readingApproaches).replace('<h2>Два подхода к одной Книге</h2>', '')} />
-      <p class="note"><a href={`${withBase('pairs/orthodoxy-jw/')}#summary`}>Голоса двух традиций: цитаты и полный итог сравнения</a></p>
+      <p class="note"><a href={withBase('sources/#pair-reference')}>Источники и пояснения к сравнению</a></p>
     </details>}
     {continuity && <details class="pair-background" id="pair-continuity">
       <summary>Преемственность: православие и Свидетели Иеговы</summary>
-      <Fragment set:html={inlineHtml(continuity)} />
+      <p><strong>Православное учение.</strong> Православная Церковь сохраняет непрерывное апостольское преемство веры, священства и таинств. Возраст организации и истинность исповедания — разные вопросы; само по себе позднее основание общины не заменяет проверки её учения.</p>
+      <div class="pair-positions">
+        <div data-pair-trad="orthodoxy" style="grid-column:1;grid-row:1"><strong>Православный ответ</strong><ul>
+          <li>Христос обещал неодолимость Церкви и Своё пребывание с учениками до скончания века (Мф. 16:18; 28:20). Её жизнь нельзя считать полностью исчезнувшей до XIX века.</li>
+          <li>Преемство включает не только сохранение отдельных убеждений, но и рукоположение, единство веры и Таинств (Деян. 13:3; 1 Тим. 4:14; Основные принципы отношения РПЦ к инославию, §§1.6–1.9).</li>
+          <li>Ветхозаветные праведники почитаются Церковью в единстве Священной истории, исполненной во Христе. Упоминание Авеля не доказывает тождества древнего праведника и позднейшей организации.</li>
+        </ul></div>
+        <div data-pair-trad="jw" style="grid-column:3;grid-row:1"><strong>В чём отличие: доводы Свидетелей Иеговы</strong><ul>
+          <li>Слова о свидетелях Бога (Ис. 43:10) и о Христе как верном свидетеле (Откр. 3:14) связываются с преемством служения Богу.</li>
+          <li>Книга «Свидетели Иеговы — возвещатели Царства Бога» называет Авеля первым свидетелем Иеговы и связывает с ним «облако свидетелей» (Евр. 11:4; 12:1).</li>
+          <li>В статье 2012 года притча о пшенице и сорняках (Мф. 13:30) объясняется как сохранение отдельных истинных христиан во все века. Группа исследователей Библии 1870 года представлена как продолжение этого поиска, а не начало веры вообще.</li>
+        </ul></div>
+      </div>
+      <p>{orthodoxAssessment('jw', 'organisation')?.response}</p>
+      <p class="note"><a href={withBase('sources/#sources-organisation')}>Церковное основание и документы Свидетелей Иеговы</a>.</p>
     </details>}
   </div>
 )}

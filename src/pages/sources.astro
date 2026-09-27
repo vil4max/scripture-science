@@ -3,6 +3,9 @@
 // tier and by tradition, with access dates, and a coverage summary
 // (docs/tasks/site-m2-main-page.md W4).
 import { getPairDocument } from '../lib/pairDocument';
+import { assessments } from '../lib/orthodox';
+import classifications from '../data/orthodox-classifications.json';
+import ViewTile from '../components/ViewTile.astro';
 import { withBase } from '../lib/paths';
 import { getFamilies } from '../lib/families';
 import { collectProofs, collectTextSources } from '../lib/sourceCatalog';
@@ -54,6 +57,8 @@ const colorById = new Map(
   traditions.map((t) => [t.id, TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN]]),
 );
 const views = await getOrderedViews();
+const namesById = new Map(traditions.map(entry => [entry.id, entry.data.name]));
+const orthodox = traditions.find(entry => entry.id === 'orthodoxy')!;
 const terms = await getTerms();
 const disputes = await getDisputes();
 const textSources = [...new Map(
@@ -125,6 +130,8 @@ for (const [section, data] of [
   for (const proof of collectProofs(data)) raw.push({ proof, usage: { section } });
 }
 
+for (const record of assessments) for (const proof of [...record.proof, ...record.positionProof]) raw.push({ proof: proof as Proof, usage: { traditionId: record.tradition, section: `Православный ответ: ${record.topic}` } });
+
 // De-duplicate by URL: the same page can back several claims.
 const byUrl = new Map<string, ProofEntry>();
 for (const { proof, usage } of raw) {
@@ -190,7 +197,7 @@ const description = 'Значения слов, пояснения к данны
           <li><a href="#overview-notes">Группировка традиций</a></li><li><a href="#legal-context">Правовая справка</a></li>
         </ul></div>
         <div><strong>Источники</strong><ul>
-          <li><a href="#by-tradition">По традициям и темам</a></li><li><a href="#texts">Тексты и переводы</a></li>
+          <li><a href="#by-topic">Православное основание и источники по темам</a></li><li><a href="#by-tradition">По традициям</a></li><li><a href="#texts">Тексты и переводы</a></li>
           <li><a href="#data-and-media">Данные и изображения</a></li><li><a href="#by-tier">Полный каталог</a></li><li><a href="#coverage">Покрытие</a></li><li><a href="#pair-reference">Материалы сравнения православия и Свидетелей Иеговы</a></li>
         </ul></div>
       </nav>
@@ -201,11 +208,25 @@ const description = 'Значения слов, пояснения к данны
       <TermsBox terms={terms} />
     </section>
 
+    <section id="by-topic"><h2>Православное основание и источники по темам</h2>
+      <p>Символ веры, Писание, соборные определения и катехизис составляют вероучительное основание. Энциклопедические статьи и авторские толкования поясняют его; местная практика не становится общецерковным догматом.</p>
+      {TOPIC_ORDER.map(topic => {
+        const foundation = orthodox.data.positions.find(position => position.topic === topic)!;
+        const records = assessments.filter(record => record.topic === topic);
+        return <section id={`sources-${topic}`}><h3>{TOPIC_TITLES_RU[topic]}</h3><p>{foundation.doctrine?.authority}</p>
+          <details class="source-topic"><summary>Православное учение: места и проверочные выдержки</summary><ul>{foundation.proof.map(proof => <li><a href={proof.url}>{proof.title}</a><p>«{proof.excerpt}»</p><span class="meta">Обращение: {proof.accessed}</span></li>)}</ul></details>
+          {records.map(record => <details class="source-topic"><summary>{namesById.get(record.tradition)}: учение и православный ответ</summary><p><strong>В чём отличие:</strong> {record.difference}</p><p><strong>Православный ответ:</strong> {record.response}</p><h4>Документы традиции</h4><ul>{record.positionProof.map(proof => <li><a href={proof.url}>{proof.title}</a><p>«{proof.excerpt}»</p></li>)}</ul><h4>Основание ответа</h4><p>{record.authority}</p><ul>{record.proof.map(proof => <li><a href={proof.url}>{proof.title}</a><p>«{proof.excerpt}»</p></li>)}</ul></details>)}
+        </section>;
+      })}
+    </section>
+    <section id="classification-sources"><h2>Православная классификация</h2>{Object.entries(classifications).map(([id, entry]) => <article><h3>{namesById.get(id)}</h3><p>{entry.label}. {entry.text}</p><p>{entry.authority}: <a href={entry.url}>{entry.title}</a>.</p></article>)}</section>
+    <section id="relations-documents"><h2>Документы об отношениях между традициями</h2><p>Ниже — датированные документы их авторов. Их исторические оценки не заменяют православного вероучения и не переносятся автоматически на всех современных последователей.</p>{[...views].sort((a,b) => Number(b.id === 'orthodoxy') - Number(a.id === 'orthodoxy')).map(view => <details class="source-topic"><summary>{namesById.get(view.id)}</summary>{view.data.documents.map(doc => <ViewTile author={view.id} doc={doc} order={traditions.map(entry => entry.id)} namesById={namesById} colorById={colorById} />)}</details>)}</section>
+
     <section id="adherents">
       <h2>Численность: даты и способы подсчёта</h2>
       <p>На страницах показаны округлённые оценки. Годы и способы подсчёта различаются: членство в организации не всегда означает то же, что религиозная самоидентификация.</p>
       {traditions.map(({ data }) => <article>
-        <h3>{data.name}: {data.adherents.value} ({data.adherents.year})</h3>
+        <h3>{data.adherents.display === false ? 'Восточные и Древневосточные православные церкви вместе (категория Pew)' : data.name}: {data.adherents.display === false ? '≈ 260 млн' : data.adherents.value} ({data.adherents.year})</h3>
         <p>{data.adherents.method}</p>
         <ul>{data.adherents.proof.map((proof) => <li><a href={proof.url}>{proof.title}</a></li>)}</ul>
       </article>)}
@@ -234,7 +255,7 @@ const description = 'Значения слов, пояснения к данны
           const traditionEntries = byTradition.get(tradition.id) ?? [];
           return (
             traditionEntries.length > 0 && (
-              <div class="tradition-group">
+              <div class="tradition-group" id={tradition.id}>
                 <h3>
                   <span class="chip" style={`background:var(${colorById.get(tradition.id) ?? '--t-other'})`} aria-hidden="true" />
                   {tradition.data.name}
@@ -262,6 +283,11 @@ const description = 'Значения слов, пояснения к данны
         <summary>Библиография сравнения</summary>
         <Fragment set:html={pairSections.refs} />
       </details>
+      <details class="source-topic" id="pair-voices">
+        <summary>Именные цитаты из исходного исследования</summary>
+        <p>Эти свидетельства приводятся с именами авторов и указанием перевода. Авторское духовное размышление не является отдельным догматическим определением.</p>
+        <Fragment set:html={(pairSections.summary.split('<h3 class="qhead">')[1] ?? '').replace(/^Голоса двух традиций<\/h3>/, '').replace(/href="#correction-([^"]+)"/g, 'href="#pair-correction-$1"')} />
+      </details>
       <details class="source-topic" id="pair-corrections">
         <summary>Уточнения и источники</summary>
         <ol>{pairCorrections.map((correction) => <li id={`pair-correction-${correction.id}`}>
@@ -270,10 +296,9 @@ const description = 'Значения слов, пояснения к данны
           <ul>{[...new Map(correction.proof.map((proof) => [proof.url, proof])).values()].map((proof) => <li>
             <a href={proof.url}>{proof.title}</a><span class="meta"> · {proof.accessed}</span>
           </li>)}</ul>
-          <a href={`${withBase('pairs/orthodoxy-jw/')}#corr-${correction.id}`}>К месту в полном тексте</a>
         </li>)}</ol>
       </details>
-      <p>Исходное исследование содержит дополнительные таблицы, исторические пояснения и библиографию. <a href={withBase('pairs/orthodoxy-jw/')}>Открыть полный материал</a>.</p>
+      <p>Библейские аргументы исходного исследования переработаны и включены в соответствующие темы. Исходный документ и его прежние исправления сохранены в репозитории для проверки происхождения материала. <a href={withBase('pairs/orthodoxy-jw/')}>Открыть сравнение</a>.</p>
     </section>
 
     <section id="coverage">
@@ -376,6 +401,19 @@ const description = 'Значения слов, пояснения к данны
 
   </main>
 </Base>
+
+<script>
+  const revealSource = () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (!target) return;
+    for (let node: HTMLElement | null = target; node; node = node.parentElement) {
+      if (node instanceof HTMLDetailsElement) node.open = true;
+    }
+    requestAnimationFrame(() => target.scrollIntoView());
+  };
+  window.addEventListener('hashchange', revealSource);
+  if (location.hash) revealSource();
+</script>
 
 <style>
   .page {

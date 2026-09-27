@@ -1,10 +1,11 @@
 import { getCollection } from 'astro:content';
+import { revisePairTopic } from './pairRevision';
 import correctionsData from '../data/corrections-orthodoxy-jw.json';
 import { createArchiveLinker } from './archive-links';
 import { getCheckedTopics, getOrderedTraditions, getSection } from './content';
 import { createCorrector, parseCorrections } from './corrections';
 
-// Both presentations use the same corrected content; the archive keeps its fidelity gate.
+// Public fragments receive editorial revisions; imported data preserves provenance.
 export async function getPairDocument() {
   const traditionIds = ['orthodoxy', 'jw'];
 
@@ -66,5 +67,5 @@ export async function getPairDocument() {
   }));
   corrector.assertEachAppliedOnce();
 
-  return { traditions, correctedTopics, sectionHtml, corrections, navHtml, headerHtml };
+  return { traditions, correctedTopics: correctedTopics.map(revisePairTopic), sectionHtml, corrections, navHtml, headerHtml };
 }

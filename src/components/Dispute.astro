@@ -1,33 +1,35 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import MatrixPosition from './MatrixPosition.astro';
+import { DEFAULT_SELECTION } from '../lib/selection';
+import { comparisonQuestionView } from '../lib/disputes';
 interface Props {
   dispute: CollectionEntry<'disputes'>;
   order: string[];
   namesById: Map<string, string>;
   colorById: Map<string, string>;
-  traditions?: CollectionEntry<'matrix'>[];
+  comparison?: boolean;
 }
-const { dispute, order, namesById, colorById, traditions = [] } = Astro.props;
+const { dispute, order, namesById, colorById, comparison = false } = Astro.props;
+const initial = comparisonQuestionView({ challengers: dispute.data.challenges.map(p => p.tradition), answerers: dispute.data.answers.map(p => p.tradition) }, DEFAULT_SELECTION);
 const supplied = [...dispute.data.challenges, ...dispute.data.answers];
-const parts = order.flatMap((id) => {
-  const part = supplied.find((part) => part.tradition === id);
-  const position = traditions.find((entry) => entry.id === id)?.data.positions.find((position) => position.topic === dispute.data.topic);
-  if (!part && !position) return [];
-  return [{ id, specific: Boolean(part), position: part ? { ...part, topic: dispute.data.topic, status: dispute.data.status } : position!,
-    role: part ? (dispute.data.challenges.includes(part) ? 'Возражение' : 'Обоснование позиции') : 'Позиция по теме' }];
+const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(id => {
+  const part = supplied.find(part => part.tradition === id);
+  if (!part) return [];
+  return [{ id, position: { ...part, topic: dispute.data.topic, status: dispute.data.status },
+    role: id === 'orthodoxy' ? 'Православный ответ' : 'В чём отличие: позиция по этому вопросу' }];
 });
 ---
-<aside id={`question-${dispute.id}`} class="dispute" data-dispute
+<aside id={`question-${dispute.id}`} class="dispute" data-dispute hidden={comparison && !initial.visible}
   data-challengers={dispute.data.challenges.map((part) => part.tradition).join(' ')}
   data-answerers={dispute.data.answers.map((part) => part.tradition).join(' ')}>
   <details class="discussion">
     <summary>Разбор вопроса: {dispute.data.title}</summary>
-    <div class="side">
-      {parts.map((part) => <article class="part" data-trad={part.id}>
+    <div class="foundation"><h5>Православное учение</h5><p>{dispute.data.orthodoxFoundation}</p><p class="role">{dispute.data.authority}</p></div>
+    <div class:list={["side", { "slot-columns": comparison }]}>
+      {parts.map((part) => <article class="part" data-trad={part.id} hidden={comparison && !initial.shown.includes(part.id)} style={comparison ? `grid-column:${DEFAULT_SELECTION.indexOf(part.id) + 1};grid-row:1` : undefined}>
         <p class="who"><span class="chip" style={`background:var(${colorById.get(part.id) ?? '--t-other'})`} aria-hidden="true" />{namesById.get(part.id) ?? part.id}</p>
         <p class="role">{part.role}</p>
-        {!part.specific && <p class="missing">Отдельного разбора этого вопроса в подборке пока нет. Ниже — подтверждённая позиция по теме.</p>}
         <MatrixPosition position={part.position} />
       </article>)}
     </div>

@@ -5,26 +5,27 @@ interface Props {
   colorById: Map<string, string>;
 }
 const { traditions, colorById } = Astro.props;
-const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
+const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy').sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
 ---
 <div class="colhead" data-comparison-slots>
   <div class="slots">
-    {[0, 1, 2].map((index) => <label class="colcell">
-      <span>Традиция {index + 1}</span>
+    <div class="colcell" style="--slot-color:var(--t-orthodoxy)"><span>Основание сравнения</span><strong class="fixed">Православие</strong></div>
+    {[1, 2].map((index) => <label class="colcell" style={`--slot-color:var(${index === 1 ? '--t-catholicism' : '--t-jw'})`}>
+      <span>Для сравнения {index}</span>
       <select data-slot={index} aria-label={`Выберите традицию для колонки ${index + 1}`}>
-        <option value="">Выберите традицию…</option>
-        {alphabetical.map((tradition) => <option value={tradition.id} data-color={colorById.get(tradition.id)}>{tradition.data.name}</option>)}
+        <option value="">Очистить колонку</option>
+        {alphabetical.map((tradition) => <option value={tradition.id} selected={tradition.id === (index === 1 ? 'catholicism' : 'jw')} data-color={colorById.get(tradition.id)}>{tradition.data.name}</option>)}
       </select>
     </label>)}
   </div>
-  <noscript>Для выбора колонок включите JavaScript; полная таблица доступна ниже.</noscript>
+  <noscript>По умолчанию показаны Православие, Католичество и Свидетели Иеговы. Для изменения двух сравнительных колонок включите JavaScript.</noscript>
 </div>
 <script>
   import { onSelection, setSelection } from '../lib/selection-client';
   import { comparisonSlots, replaceComparisonSlot, SLOT_PARAM } from '../lib/comparisonSlots';
   const head = document.querySelector<HTMLElement>('[data-comparison-slots]');
   if (head) {
-    let slots = ['', '', ''];
+    let slots = ['orthodoxy', 'catholicism', 'jw'];
     const selects = [...head.querySelectorAll<HTMLSelectElement>('[data-slot]')];
     const publishHeight = () => document.documentElement.style.setProperty('--comparison-header-h', `${head.offsetHeight}px`);
     new ResizeObserver(publishHeight).observe(head);
@@ -36,7 +37,8 @@ const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.
       // An empty shared comparison must not inherit its recipient's saved choice.
       if (!ids.length) url.searchParams.set('t', '');
       history.replaceState(history.state, '', url);
-      selects.forEach((select, index) => {
+      selects.forEach((select) => {
+        const index = Number(select.dataset.slot);
         select.value = slots[index];
         select.options[0].textContent = slots[index] ? 'Очистить колонку' : 'Выберите традицию…';
         for (const option of select.options) option.disabled = Boolean(option.value) && slots.some((id, i) => i !== index && id === option.value);
@@ -44,7 +46,8 @@ const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.
         select.closest<HTMLElement>('.colcell')?.style.setProperty('--slot-color', color ? `var(${color})` : 'var(--line)');
       });
     });
-    selects.forEach((select, index) => select.addEventListener('change', () => {
+    selects.forEach((select) => select.addEventListener('change', () => {
+      const index = Number(select.dataset.slot);
       slots = replaceComparisonSlot(slots, index, select.value);
       const url = new URL(location.href);
       url.searchParams.set(SLOT_PARAM, slots.join(','));
@@ -58,6 +61,7 @@ const alphabetical = [...traditions].sort((a, b) => a.data.name.localeCompare(b.
   .slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; }
   .colcell { display: grid; gap: 6px; min-width: 0; border-top: 3px solid var(--slot-color, var(--line)); padding-top: 8px; }
   .colcell span { font-size: 13px; color: var(--muted); }
+  .fixed { display: flex; align-items: center; padding: 12px 8px; font-size: 16px; min-height: 48px; }
   select { width: 100%; min-width: 0; padding: 12px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
   select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   @media (max-width: 600px) { .colhead { position: static; } .slots { grid-template-columns: minmax(0, 1fr); gap: 8px; } }

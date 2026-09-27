@@ -377,7 +377,6 @@ export function selfViewTargetId(lineage: Lineage, tradition: string): string | 
 // living tradition) runs to the end of the chronicle.
 export const TRANSITIONAL_NODE_IDS = new Set([
   'israelite-second-temple',
-  'early-christianity',
   'chalcedonian-christianity',
   'reformation',
   'second-great-awakening',

@@ -13,6 +13,8 @@ import type { CollectionEntry } from 'astro:content';
 import PairSupplement from './PairSupplement.astro';
 import Dispute from './Dispute.astro';
 import MatrixPosition from './MatrixPosition.astro';
+import OrthodoxAssessment from './OrthodoxAssessment.astro';
+import { DEFAULT_SELECTION } from '../lib/selection';
 import { JW_NOTE_ID } from '../lib/jwNote';
 import { TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU } from '../lib/rules';
 
@@ -43,12 +45,12 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
           <section class="topic" id={`topic-${topicId}`}>
             <h4>{TOPIC_TITLES_RU[topicId]}</h4>
             {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
-            <div class="grid">
+            <div class="grid cols" style="--cols:3">
               {traditions.map((tradition, index) => {
                 const position = tradition.data.positions.find((p) => p.topic === topicId);
                 if (!position) return null;
                 return (
-                  <article class="block" data-trad={tradition.id}>
+                  <article class="block" data-trad={tradition.id} hidden={!DEFAULT_SELECTION.includes(tradition.id)} style={`order:${DEFAULT_SELECTION.indexOf(tradition.id)};grid-column:${DEFAULT_SELECTION.indexOf(tradition.id) + 1};grid-row:1`}>
                     <p class="who">
                       <span
                         class="chip"
@@ -62,7 +64,9 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
                         </sup>
                       )}
                     </p>
+                    <p class="reading-label">{tradition.id === 'orthodoxy' ? 'Православное учение' : 'Учение традиции'}</p>
                     <MatrixPosition position={position} tradition={tradition.id} expandable />
+                    <OrthodoxAssessment tradition={tradition.id} topic={topicId} />
                   </article>
                 );
               })}
@@ -71,7 +75,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
             {disputes
               .filter((dispute) => dispute.data.topic === topicId)
               .map((dispute) => (
-                <Dispute dispute={dispute} traditions={traditions} order={order} namesById={namesById} colorById={colorById} />
+                <Dispute dispute={dispute} comparison order={order} namesById={namesById} colorById={colorById} />
               ))}
           </section>
           </>
@@ -84,6 +88,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 </div>
 
 <style>
+  .reading-label { margin: 0; font-size: 14px; font-weight: 700; color: var(--muted); }
   .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
   .topic-contents { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 24px; margin: 16px 0 36px; }
   .topic-contents ul { padding-left: 18px; margin: 10px 0 0; font-size: 15px; }

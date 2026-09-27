@@ -15,7 +15,7 @@ import { withBase } from '../lib/paths';
 const sections = [
   { path: '', label: 'Обзор' },
   { path: 'timeline/', label: 'История' },
-  { path: 'bible/', label: 'Писания' },
+  { path: 'bible/', label: 'Священное Писание' },
   { path: 'compare/', label: 'Сравнение' },
 ];
 // Reference pages sit at the bottom of the sidebar (owner, 2026-09-26:
@@ -36,7 +36,7 @@ const isCurrent = (path: string) =>
 
 <aside class="site-side">
   <div class="side-inner">
-    <a class="brand" href={withBase()}>Религии мира</a>
+    <a class="brand" href={withBase()}>Православный взгляд на религии мира</a>
     <div class="site-nav" role="navigation" aria-label="Разделы сайта">
       <ul>
         {

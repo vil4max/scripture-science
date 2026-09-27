@@ -13,9 +13,10 @@ const proofs = guide.proofs as Record<string, VerifiedProof[]>;
 ---
 
 <section aria-labelledby="formation-title">
-  <h2 id="formation-title">История Писаний</h2>
+  <h2 id="formation-title">Священное Писание в истории Церкви</h2>
+  <p>Библия — богодухновенное свидетельство Откровения, принятое и хранимое Церковью. История рукописей и переводов объясняет передачу текста; она не заменяет его церковного понимания.</p>
   <ol class="scripture-timeline">
-    {guide.timeline.map((event) => <li id={`scripture-${event.id}`} data-branch={event.branch}>
+    {guide.timeline.filter(event => !['islam', 'lds'].includes(event.branch)).map((event) => <li id={`scripture-${event.id}`} data-branch={event.branch}>
       <div class="period">{event.period}</div>
       <article>
         <span class="branch">{labels[event.branch]}</span>
@@ -34,6 +35,8 @@ const proofs = guide.proofs as Record<string, VerifiedProof[]>;
       <div class="today"><slot /></div>
     </li>
   </ol>
+  <section id="other-religious-texts"><h2>Религиозные тексты других традиций</h2><p>Мусульмане считают Коран откровением, а Святые последних дней признают Книгу Мормона Писанием. Православная Церковь не принимает эти притязания: эти книги не входят в Библию и не являются продолжением церковного канона.</p>
+  <ol class="scripture-timeline">{guide.timeline.filter(event => ['islam', 'lds'].includes(event.branch)).map(event => <li id={`scripture-${event.id}`} data-branch={event.branch}><div class="period">{event.period}</div><article><span class="branch">{event.branch === 'islam' ? 'Ислам' : 'Святые последних дней'}</span><h3>{event.title}</h3>{event.paragraphs.map(paragraph => <p>{paragraph}</p>)}<ProofLink proof={event.proofKeys.flatMap(key => proofs[key])} /><BibleTraditions traditions={traditions} event={event.id} /></article></li>)}</ol></section>
 </section>
 
 <style>

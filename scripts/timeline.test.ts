@@ -189,7 +189,7 @@ test('living lines are every node but a structural one with children, whatever r
   const { living, span } = assignBranchColumns(lineage, rows);
   assert.ok(!living.has('reformation'), 'the Reformation line ends at its last child (Pentecostalism), not at the present');
   assert.ok(living.has('pentecostalism'));
-  assert.ok(living.has('orthodoxy'));
+  assert.ok(living.has('early-christianity'));
   for (const node of lineage.nodes) {
     if (!living.has(node.id)) assert.ok(lineage.nodes.some((n) => n.parent === node.id), `${node.id} ends without children`);
     else assert.equal(span.get(node.id)![1], rows.length - 1, `${node.id} is living but its span stops early`);
@@ -223,7 +223,7 @@ test('the biblical comparison line is chronological without displacing branch co
   assert.doesNotMatch(html, /gap-caption|divider gap/);
   assert.doesNotMatch(html, /class="head"|id="jw-legal-note"|События идут последовательно/);
   assert.match(html, /сохранив византийский обряд/);
-  assert.match(html, /религиозная реконструкция/);
+  assert.match(html, /хронологическая традиция/);
   assert.match(html, /data-row-id="biblical-creation" data-testament="old"/);
   assert.match(html, /data-row-id="biblical-nativity" data-testament="new"/);
   assert.match(html, /data-row-id="early-christianity" data-testament="new"/);

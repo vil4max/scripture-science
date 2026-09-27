@@ -1,0 +1,21 @@
+---
+import { orthodoxAssessment } from '../lib/orthodox';
+import { withBase } from '../lib/paths';
+interface Props { tradition: string; topic: string; }
+const record = orthodoxAssessment(Astro.props.tradition, Astro.props.topic);
+---
+{record && <div class="assessment" data-assessment={record.id}>
+  <p><strong>В чём отличие</strong></p><p>{record.difference}</p>
+  <p><strong>Православный ответ</strong></p><p>{record.response}</p>
+  <details><summary>Основание ответа</summary>
+    <p class="authority">Сопоставление редакции на основании: {record.authority}</p>
+    {record.proof.map(source => <p><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></p>)}
+    <a href={withBase(`sources/#sources-${record.topic}`)}>Источники по теме</a>
+  </details>
+</div>}
+<style>
+.assessment { border-top: 1px solid var(--line); padding-top: 12px; margin-top: 12px; }
+p { margin: 0 0 10px; line-height: 1.6; }
+summary { cursor: pointer; color: var(--focus); font-size: 15px; font-weight: 700; }
+.authority, details p, details a { font-size: 14px; }
+</style>

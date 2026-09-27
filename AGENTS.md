@@ -3,7 +3,10 @@
 Repository history: this site was built under the name "religion-map" and
 squash-published here on 2026-09-27, replacing this repository's prior,
 unrelated content (owner decision). The unsquashed development history
-remains in the original local checkout.
+is preserved in the complete retired checkout at
+`../../local/retired-repositories/religion-map`, with verified recovery copies
+beside it. This repository is the active site; do not resume edits in the
+retired checkout.
 
 Repository visibility: **PUBLIC** (owner, 2026-09-27: published to GitHub Pages).
 
@@ -21,7 +24,7 @@ direction. Then return to this repository.
 
 ## Project
 
-- Name: scripture-science (site content and internal docs still say "religion-map" in places; not renamed throughout)
+- Repository: scripture-science. Public title: Orthodox View of World Religions. Historical briefs retain the former religion-map name.
 - kind: personal
 - Skill profile: core
 - Marker: `.agents/project-context.yaml` (local)
@@ -30,9 +33,9 @@ direction. Then return to this repository.
   "Desktop-only scope"). No 375px check and no separate mobile layout in a
   task's acceptance criteria going forward.
 - Product: a Russian-language static site — one picture of the religious world
-  (a timeline with the tree of separations between traditions, and comparisons
-  in which every tradition speaks for itself), with a verified source for every
-  claim. Built with Astro (static output), MDX and content collections; served
+  (a continuous Orthodox Church timeline and comparisons grounded in Orthodox
+  teaching, with separately attributed statements from other traditions), with
+  supporting evidence for each claim. Built with Astro (static output), MDX and content collections; served
   by GitHub Pages under the `/scripture-science` base path.
 - Rules for content: `docs/EDITORIAL.md` (editorial principles) and
   `docs/SOURCES.md` (source tiers and what "verified" means). Research notes and

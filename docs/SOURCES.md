@@ -1,58 +1,25 @@
 # Source policy
 
-The site promises one picture of the religious world with proof for every claim,
-and its sources must be reliable and verified. A reader must be able to check any
-statement through the Sources tab, grouped by tradition and topic. Reading
-pages contain no numbered citation markers or repeated bibliographies (owner,
-2026-09-26). Evidence remains attached to claims in data; demographic dates
-and counting methods are displayed in the Sources tab beside the figures.
+## Source roles
 
-## Source tiers
+- **Orthodox foundation:** Scripture, the Nicene-Constantinopolitan Creed, conciliar definitions, received catechisms and Church documents hosted on Azbyka. Record the actual work, author or ecclesiastical body and passage. The portal is a host, not a substitute for authority.
+- **Orthodox explanation:** Azbyka encyclopaedia articles and named theological authors. Distinguish explanations and individual opinions from dogma, Church teaching and local practice.
+- **Other traditions:** their primary statements of belief and official texts establish what they teach. An Orthodox critique does not replace their attributed self-description.
+- **History and demographics:** primary documents and scholarly/statistical reference sources with dates and counting scope. A demographic grouping is not an ecclesiological classification.
+- **Legal facts:** primary legal documents; keep legal status separate from theological assessment.
 
-1. **Official.** A tradition's own authoritative body or text, for how that
-   tradition describes itself: catechisms, confessions, statements of belief,
-   official scripture sites. For legal facts: primary legal documents — court
-   decisions, laws on official portals, government registers, judgments of
-   international courts.
-2. **Reference.** Neutral scholarship and statistics: Pew Research Center,
-   Encyclopaedia Britannica, peer-reviewed and university sources.
-3. **News/NGO.** Reputable media and monitoring organisations, used only when no
-   official or reference source states the fact, and labelled as such.
+Existing `official`, `reference` and `news` tiers remain provenance categories. `official` means official for the named issuer, not Orthodox authority. Orthodox foundations additionally identify their doctrinal authority and scope.
 
-Wikipedia may be cited as a reference source when no official or scholarly
-page states the fact (owner, 2026-09-26; `docs/DECISIONS.md`): the specific
-article is named as Wikipedia in the title, with a verbatim excerpt of at most
-25 words and the access date, like any other source. Prefer the primary or
-scholarly source it cites when that can be opened.
+## Verification
 
-Not a source: other aggregators, blogs, forums, anonymous pages, AI-generated
-text, and polemical works as the description of the tradition they criticise.
-Polemic may appear only as an attributed "how others critique it" line.
+For every new assertion, open the source and check a supporting passage in context. Store its URL, title, a short exact excerpt, access date and tier. Keep document sections or catechism paragraph numbers in the reference title. Check translations and numerical scope separately. Prefer stable originals or an accessible archive; never mark an inaccessible quotation as newly verified.
 
-## Which source for which claim
+Use exact short doctrinal definitions and quotations; write explanatory paraphrases without quotation marks. Contemporary articles are not reproduced wholesale. Scripture and public-domain source texts may be quoted with their exact attribution.
 
-| Claim | Required source |
-|---|---|
-| A tradition's belief or practice | That tradition's own official source |
-| Scripture quote | The tradition's own translation, per-verse URL of its official or canonical online text |
-| Adherent numbers, volumes, counts | Official or reference source, with year and counting method |
-| History and dates | Reference source; a tradition's own dating is labelled as its own |
-| Legal status | Primary legal documents, plus the affected party's own statement and, where it exists, an international court's judgment |
+The correction register records the current wording, type of correction, replacement and supporting references. An assessment has separately identifiable evidence for the other tradition's statement and the Orthodox answer. Do not infer agreement on an entire doctrine from one common proposition.
 
-## What "verified" means
+The structural build gate checks required fields, coverage and internal links. It does not re-fetch every historical reference or establish theological correctness. Live passage checks and manual contextual review are recorded separately; failures are not silently treated as verified.
 
-A claim is verified only when all of these hold:
+## Presentation
 
-1. The source page was opened and contains a verbatim excerpt of at most 25
-   words that supports the claim; the excerpt is stored with the claim.
-2. The URL, the access date and the tier are stored with the claim.
-3. An archived copy is linked when one exists, or the source is a stable
-   official document.
-4. The build check re-fetches every source and confirms the excerpt is still
-   there; failures are reported, never hidden.
-
-A claim that fails any of these carries `TODO: verify` in the data and is either
-left out of the published site or visibly marked as unconfirmed; the editor
-decides which, per claim. Research notes produced by agents are leads, not
-verification: key claims are re-checked against the source before they reach
-site data.
+Reading pages link to relevant source sections without repeated bibliographies. The Sources page groups evidence by topic, with Orthodox foundations first, other traditions' documents second, and historical/statistical material separately. Preserve author, document status, passage, access date and counting method. Keep original imported material for provenance while revising its public presentation.

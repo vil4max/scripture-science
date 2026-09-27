@@ -1,21 +1,8 @@
 #!/usr/bin/env python3
-"""Verify the built pair page's visible text matches the source verbatim.
+"""Verify preserved migration data against its source and checked corrections.
 
-Compares source/orthodoxy-jw.html against dist/pairs/orthodoxy-jw/index.html:
-extracts every non-empty, whitespace-collapsed text node under <nav> and
-<main> (SVG <text> included, since it is walked like any other element) from
-each, in document order, and diffs the two lists. Comparing per text node
-rather than one fused string is deliberate: it is immune to incidental
-inter-element whitespace differences between the source's markup and the
-page's re-assembled markup, while still catching any actual wording change,
-addition, removal or reordering. Exits 1 and prints a unified diff on any
-difference; standard library only.
-
-The only permitted differences are the visible corrections in
-src/data/corrections-orthodoxy-jw.json (docs/tasks/site-m7-pair-corrections.md):
-they are applied to the source before comparing, each must match the source
-exactly once, each must be marked on the page, and the corrections list after
-<main> must carry every correction's wording, reason and sources.
+The public edition may revise inherited prose. The source HTML and migration
+YAML remain the reproducible provenance record, not an alternate public edition.
 """
 import difflib
 import json
@@ -203,47 +190,30 @@ def check_corrections_list(built_html, corrections):
 
 
 def main():
-    if not SOURCE_PATH.exists():
-        raise SystemExit(f"Source not found: {SOURCE_PATH}")
-    if not BUILT_PATH.exists():
-        raise SystemExit(f"Built page not found: {BUILT_PATH} - run `npm run build` first")
+    import tempfile
+    import contextlib
+    import io
+    import migrate_source
 
+    original_paths = [migrate_source.SECTIONS_PATH, migrate_source.TOPICS_PATH]
+    original = [path.read_bytes() for path in original_paths]
+    with tempfile.TemporaryDirectory(prefix="scripture-provenance-") as directory:
+        migrate_source.SECTIONS_PATH = Path(directory) / original_paths[0].name
+        migrate_source.TOPICS_PATH = Path(directory) / original_paths[1].name
+        migrate_source.REPO_ROOT = Path(directory)
+        with contextlib.redirect_stdout(io.StringIO()):
+            migrate_source.main()
+        regenerated = [migrate_source.SECTIONS_PATH.read_bytes(), migrate_source.TOPICS_PATH.read_bytes()]
+    if regenerated != original:
+        raise SystemExit("check_text: FAILED - migrated provenance differs from the original source")
     corrections = json.loads(CORRECTIONS_PATH.read_text(encoding="utf-8"))
-    built_html = BUILT_PATH.read_text(encoding="utf-8")
-    source_fragment, problems = apply_corrections(
-        extract_nav_main(SOURCE_PATH.read_text(encoding="utf-8"), "source"), corrections
-    )
-    built_fragment = extract_nav_main(built_html, "built page")
-    problems += check_marks(built_fragment, corrections)
-    problems += check_corrections_list(built_html, corrections)
-
-    source_lines = text_lines(parse_fragment(source_fragment))
-    built_lines = text_lines(parse_fragment(built_fragment))
-
-    if source_lines == built_lines and not problems:
-        print(
-            f"check_text: OK ({len(source_lines)} text nodes match, "
-            f"{len(corrections)} corrections applied, marked and listed)"
-        )
-        return 0
-
-    if source_lines != built_lines:
-        diff = difflib.unified_diff(
-            source_lines,
-            built_lines,
-            fromfile=f"{SOURCE_PATH.relative_to(REPO_ROOT)} (corrections applied)",
-            tofile=str(BUILT_PATH.relative_to(REPO_ROOT)),
-            lineterm="",
-        )
-        print("\n".join(diff))
-    for problem in problems:
-        print(problem)
-    print(
-        f"\ncheck_text: FAILED - {len(source_lines)} source text nodes, "
-        f"{len(built_lines)} built text nodes, {len(problems)} correction problems",
-        file=sys.stderr,
-    )
-    return 1
+    fragment, problems = apply_corrections(extract_nav_main(SOURCE_PATH.read_text(encoding="utf-8"), "source"), corrections)
+    if problems:
+        raise SystemExit("\n".join(problems))
+    if not BUILT_PATH.exists() or 'revised-comparison' not in BUILT_PATH.read_text(encoding="utf-8"):
+        raise SystemExit("check_text: FAILED - legacy public route must lead to the revised comparison")
+    print(f"check_text: OK (complete migration reproducible, {len(text_lines(parse_fragment(fragment)))} source text nodes preserved, {len(corrections)} historical corrections valid; public route revised)")
+    return 0
 
 
 if __name__ == "__main__":

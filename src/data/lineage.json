@@ -53,7 +53,7 @@
     },
     {
       "id": "early-christianity",
-      "label": "Раннее христианство (неразделённая Церковь)",
+      "label": "Православная Церковь · Пятидесятница",
       "parent": "israelite-second-temple",
       "kind": "branch",
       "start": {
@@ -61,6 +61,13 @@
         "approx": true,
         "label": "ок. 33 г. н.э. · Пятидесятница",
         "proof": [
+          {
+            "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+            "title": "Основные принципы отношения РПЦ к инославию (2000), §§1.1–1.4: единство Церкви",
+            "tier": "official",
+            "excerpt": "Православная Церковь есть истинная Церковь Христова",
+            "accessed": "2026-09-27"
+          },
           {
             "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
             "title": "Деяния 2:1–4 (King James Version)",
@@ -71,8 +78,15 @@
         ]
       },
       "event": {
-        "label": "Пятидесятница",
+        "label": "Сошествие Святого Духа на апостолов. Начало открытой жизни и всемирной проповеди Церкви, основанной Христом; её апостольское преемство продолжается доныне.",
         "proof": [
+          {
+            "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+            "title": "Основные принципы отношения РПЦ к инославию (2000), §§1.1–1.4: единство Церкви",
+            "tier": "official",
+            "excerpt": "Православная Церковь есть истинная Церковь Христова",
+            "accessed": "2026-09-27"
+          },
           {
             "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
             "title": "Деяния 2:1–4 (King James Version)",
@@ -81,7 +95,8 @@
             "accessed": "2026-09-25"
           }
         ]
-      }
+      },
+      "tradition": "orthodoxy"
     },
     {
       "id": "church-of-the-east",
@@ -116,7 +131,7 @@
     },
     {
       "id": "chalcedonian-christianity",
-      "label": "Халкидонское христианство",
+      "label": "IV Вселенский Собор",
       "parent": "early-christianity",
       "kind": "branch",
       "start": {
@@ -133,14 +148,28 @@
         ]
       },
       "event": {
-        "label": "Халкидонский собор",
+        "label": "Халкидонское исповедание: один Христос в двух природах. Собор свидетельствует веру Церкви, а не основывает новую религию.",
         "proof": [
+          {
+            "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+            "title": "Основные принципы отношения РПЦ к инославию (2000), §§1.1–1.4: единство Церкви",
+            "tier": "official",
+            "excerpt": "Православная Церковь есть истинная Церковь Христова",
+            "accessed": "2026-09-27"
+          },
           {
             "url": "https://www.newadvent.org/cathen/03555a.htm",
             "title": "Council of Chalcedon — Catholic Encyclopedia (New Advent)",
             "tier": "reference",
             "excerpt": "The Fourth Ecumenical Council, held in 451, from 8 October until 1 November inclusive, at Chalcedon.",
             "accessed": "2026-09-25"
+          },
+          {
+            "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+            "title": "Свт. Филарет. Пространный катехизис, §§180–181: природы и Ипостась Христа",
+            "tier": "official",
+            "excerpt": "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе",
+            "accessed": "2026-09-27"
           }
         ]
       }
@@ -191,41 +220,9 @@
       }
     },
     {
-      "id": "orthodoxy",
-      "label": "Православие",
-      "tradition": "orthodoxy",
-      "parent": "chalcedonian-christianity",
-      "kind": "branch",
-      "start": {
-        "year": 1054,
-        "label": "1054 г. · раскол с Западной церковью",
-        "proof": [
-          {
-            "url": "https://www.newadvent.org/cathen/13535a.htm",
-            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
-            "tier": "reference",
-            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
-            "accessed": "2026-09-25"
-          }
-        ]
-      },
-      "event": {
-        "label": "Великая схизма",
-        "proof": [
-          {
-            "url": "https://www.newadvent.org/cathen/13535a.htm",
-            "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
-            "tier": "reference",
-            "excerpt": "the Roman legates excommunicated him (16 July, 1054)",
-            "accessed": "2026-09-25"
-          }
-        ]
-      }
-    },
-    {
       "id": "old-believers",
       "label": "Старообрядчество",
-      "parent": "orthodoxy",
+      "parent": "early-christianity",
       "kind": "branch",
       "start": {
         "year": 1666,
@@ -261,7 +258,7 @@
       "kind": "branch",
       "start": {
         "year": 1054,
-        "label": "1054 г. · раскол с Восточной церковью",
+        "label": "1054 г. · веха отпадения Рима",
         "proof": [
           {
             "url": "https://www.newadvent.org/cathen/13535a.htm",
@@ -273,8 +270,15 @@
         ]
       },
       "event": {
-        "label": "Великая схизма",
+        "label": "Отпадение Рима от единства с Православной Церковью. События 1054 года стали вехой длительного разделения, а не датой возникновения Церкви Христовой.",
         "proof": [
+          {
+            "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+            "title": "Основные принципы отношения РПЦ к инославию, §1.13: отделение Римской Церкви",
+            "tier": "official",
+            "excerpt": "Во II тысячелетии за отделением Римской Церкви последовали внутренние разделения западного христианства",
+            "accessed": "2026-09-27"
+          },
           {
             "url": "https://www.newadvent.org/cathen/13535a.htm",
             "title": "The Eastern Schism — Catholic Encyclopedia (New Advent)",
@@ -681,7 +685,7 @@
   "unions": [
     {
       "id": "union-of-brest",
-      "from": "orthodoxy",
+      "from": "early-christianity",
       "to": "catholicism",
       "year": 1596,
       "label": "Брестская уния, 1596 г.",
@@ -1014,8 +1018,15 @@
         "node": "early-christianity",
         "label": "Апостольская Церковь"
       },
-      "summary": "Православная Церковь описывает себя как единую непрерывную линию верующих от воскресения Христа и Пятидесятницы до наших дней, без разрыва апостольского преемства.",
+      "summary": "Православная Церковь — Церковь Христова, сохраняющая апостольскую веру, преемство священства и таинственную жизнь. Пятидесятница — начало её открытой проповеди; разделения последующих веков не являются её основанием.",
       "proof": [
+        {
+          "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+          "title": "Основные принципы отношения РПЦ к инославию (2000), §§1.1–1.4: единство Церкви",
+          "tier": "official",
+          "excerpt": "Православная Церковь есть истинная Церковь Христова",
+          "accessed": "2026-09-27"
+        },
         {
           "url": "https://www.monasterevmc.org/en-us/pages/orthodox-church",
           "title": "Orthodox Church — Monastery of the Virgin Mary the Consolatory",

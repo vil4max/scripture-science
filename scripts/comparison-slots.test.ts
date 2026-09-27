@@ -6,14 +6,16 @@ import { comparisonSlots, replaceComparisonSlot } from '../src/lib/comparisonSlo
 import { hrefWithSelection, parseSelection } from '../src/lib/selection.ts';
 import { readingUrl } from '../src/lib/comparisonReading.ts';
 
-test('slots preserve middle and leading gaps without moving selected columns', () => {
+test('slots preserve editable gaps and repair an empty foundation', () => {
   assert.deepEqual(comparisonSlots(['orthodoxy', 'jw'], 'orthodoxy,,jw'), ['orthodoxy', '', 'jw']);
-  assert.deepEqual(comparisonSlots(['jw'], ',,jw'), ['', '', 'jw']);
-  assert.deepEqual(comparisonSlots([], ',,'), ['', '', '']);
+  assert.deepEqual(comparisonSlots(['jw'], ',,jw'), ['orthodoxy', 'jw', '']);
+  assert.deepEqual(comparisonSlots([], ',,'), ['orthodoxy', '', '']);
   assert.deepEqual(replaceComparisonSlot(['orthodoxy', 'catholicism', 'jw'], 1, ''), ['orthodoxy', '', 'jw']);
 });
 test('replacement refuses duplicates, unknown ids and invalid slot numbers', () => {
   const slots = ['orthodoxy', '', 'jw'];
+  assert.deepEqual(replaceComparisonSlot(slots, 0, ''), slots);
+  assert.deepEqual(replaceComparisonSlot(slots, 0, 'islam'), slots);
   assert.deepEqual(replaceComparisonSlot(slots, 1, 'jw'), slots);
   assert.deepEqual(replaceComparisonSlot(slots, 1, 'unknown'), slots);
   assert.deepEqual(replaceComparisonSlot(slots, 3, 'islam'), slots);

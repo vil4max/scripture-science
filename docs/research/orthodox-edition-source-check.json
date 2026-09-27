@@ -1,0 +1,638 @@
+{
+  "checked": "2026-09-27",
+  "method": "Live HTML retrieval and passage inspection; normalized whitespace and HTML-generated spacing before punctuation. Exact-match checks do not establish doctrinal interpretation. Historical non-Orthodox sources retain prior verification metadata.",
+  "checks": [
+    {
+      "topic": "god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §§90–94: единосущная Троица",
+      "excerpt": "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, §§86–90",
+      "excerpt": "Бог один по существу, но троичен в лицах",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §90",
+      "excerpt": "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "name-of-god",
+      "url": "https://azbyka.ru/bozhestvennye-imena",
+      "location": "Азбука веры. Божие имя и божественные имена: понятие об именах, Исх. 3:14",
+      "excerpt": "имена Бога не говорят о Нем исчерпывающе",
+      "result": "matched",
+      "sourceHash": "ed1750baffb9da7355b427073e9bb0aad1694ae30f87e4889fef477c2bba6091"
+    },
+    {
+      "topic": "name-of-god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, §135",
+      "excerpt": "Имя Господь есть одно из имён Божиих.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "name-of-god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Бог есть Дух вечный, всеблагой, всеведущий, всеправедный, всемогущий, вездесущий, неизменяемый, вседовольный, всеблаженный",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "name-of-god",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Бог называется Вседержителем потому, что Он всё, что ни есть, содержит в Своей силе и в Своей воле",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "jesus",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §§180–181: природы и Ипостась Христа",
+      "excerpt": "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "jesus",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, §134",
+      "excerpt": "Его человеческой природе безмерно сообщены все дары Святого Духа.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "jesus",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе, одним словом – Богочеловек",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "jesus",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Имя Христос означает Помазанник и оно произошло от помазания священным миром",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "spirit",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §§237–240: Божество и исхождение Святого Духа",
+      "excerpt": "Учение об исхождении Святого Духа от Отца не может быть подвержено какому-либо изменению или дополнению.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "spirit",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Святой Дух исповедуем исходящим от Отца и именуем Его Духом Отца; от Сына же не исповедуем исхождение Святого Духа",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "spirit",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §240 (со ссылкой на свт. Иоанна Дамаскина)",
+      "excerpt": "Святой Дух исповедуем исходящим от Отца и именуем Его Духом Отца; от Сына же не исповедуем исхождение Святого Духа, но только именуем Его Духом Сыновним",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "scripture",
+      "url": "https://azbyka.ru/bibliya",
+      "location": "Азбука веры. Библия: состав и язык библейских книг",
+      "excerpt": "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг.",
+      "result": "matched",
+      "sourceHash": "2603ad0c5da245f04d376eafffde0ada1a62375f52840b68b9e0ae5cd82c7475"
+    },
+    {
+      "topic": "scripture",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+      "location": "Свт. Филарет Московский. Пространный катехизис, О Священном Писании: число ветхозаветных книг",
+      "excerpt": "двадцать две",
+      "result": "matched",
+      "sourceHash": "98f4ab0e550aa5734dbf56b11218fcccc223b4facbc80d51add5c2b4df7936c2"
+    },
+    {
+      "topic": "scripture",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Святой Кирилл Иерусалимский, святой Афанасий Великий и святой Иоанн Дамаскин принимают число Священных книг Ветхого Завета – двадцать две",
+      "result": "matched",
+      "sourceHash": "6a285a9a4a0e6fb3f936a129d3712f1a7a2d3a526ae17ff52f2ed8c5ef944670"
+    },
+    {
+      "topic": "scripture",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "В Новом Завете двадцать семь книг",
+      "result": "matched",
+      "sourceHash": "6a285a9a4a0e6fb3f936a129d3712f1a7a2d3a526ae17ff52f2ed8c5ef944670"
+    },
+    {
+      "topic": "authority",
+      "url": "https://azbyka.ru/predanie-svyashhennoe",
+      "location": "Азбука веры. Священное Предание, определение 2",
+      "excerpt": "вся апостольская проповедь, весь спасительный апостольский опыт вообще, переданные Церкви",
+      "result": "matched",
+      "sourceHash": "5c2980eccecc60f4a2136921c870777cff9c95ca3a16966af8687809b385f6be"
+    },
+    {
+      "topic": "authority",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания",
+      "result": "matched",
+      "sourceHash": "6a285a9a4a0e6fb3f936a129d3712f1a7a2d3a526ae17ff52f2ed8c5ef944670"
+    },
+    {
+      "topic": "authority",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "понимать его следует согласно толкованию Православной Церкви и святых отцов",
+      "result": "matched",
+      "sourceHash": "6a285a9a4a0e6fb3f936a129d3712f1a7a2d3a526ae17ff52f2ed8c5ef944670"
+    },
+    {
+      "topic": "authority",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
+      "location": "Пространный христианский катехизис, §24",
+      "excerpt": "Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания, для правильного совершения Таинств и для соблюдения священных обрядов в чистоте первоначального их установления.",
+      "result": "matched",
+      "sourceHash": "6a285a9a4a0e6fb3f936a129d3712f1a7a2d3a526ae17ff52f2ed8c5ef944670"
+    },
+    {
+      "topic": "salvation",
+      "url": "https://azbyka.ru/spasenie",
+      "location": "Азбука веры. Спасение: определение и условия спасения",
+      "excerpt": "уподобление Богу и духовное единение с Ним",
+      "result": "matched",
+      "sourceHash": "b25e881e0a99b8c96e6745572947acff1deb4eb5eaf4bb65e1e3cb77815bc332"
+    },
+    {
+      "topic": "salvation",
+      "url": "https://azbyka.ru/sinergiya",
+      "location": "Азбука веры. Синергия",
+      "excerpt": "соработничество Бога и человека в деле достижения спасения",
+      "result": "matched",
+      "sourceHash": "1399a95cbc043376173ae63699106cb8bf34fe821de50b7631a4ccd3cec20266"
+    },
+    {
+      "topic": "salvation",
+      "url": "https://azbyka.ru/obozhenie",
+      "location": "Азбука веры. Обожение",
+      "excerpt": "процесс уподобления верующего Богу и единения с Богом.",
+      "result": "matched",
+      "sourceHash": "2889050089f62e1f8005d972c0a798375f0175d9554ea4409bc28dcce225e2ba"
+    },
+    {
+      "topic": "salvation",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Для спасения нужно не только веровать, но и исповедовать православную веру",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "afterlife",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, О членах 11 и 12 Символа веры",
+      "excerpt": "во свете, покое и предначинании вечного блаженства",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "afterlife",
+      "url": "https://azbyka.ru/simvol_very",
+      "location": "Никео-Цареградский Символ веры, члены 1–12",
+      "excerpt": "Во Единую Святую, Соборную",
+      "result": "matched",
+      "sourceHash": "0c457e914126b9f3c0333dd47a822576b829b4c5f5393cc6790f34c2ba29d899"
+    },
+    {
+      "topic": "afterlife",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "afterlife",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Душам умерших с верой, но не успевших принести достойных плодов покаяния, для достижения блаженного воскресения могут помочь возносимые за них молитвы",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "afterlife",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §369",
+      "excerpt": "Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства, а души грешников – в противоположном тому состоянии.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "end-times",
+      "url": "https://azbyka.ru/simvol_very",
+      "location": "Никео-Цареградский Символ веры, член 7: Пришествие и Суд",
+      "excerpt": "царству Которого не будет конца",
+      "result": "matched",
+      "sourceHash": "0c457e914126b9f3c0333dd47a822576b829b4c5f5393cc6790f34c2ba29d899"
+    },
+    {
+      "topic": "end-times",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, О седьмом члене Символа веры",
+      "excerpt": "Когда Господь Иисус Христос придет нас судить неизвестно",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "end-times",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "В слове Божием открыты некоторые признаки приближения пришествия Христа, а именно: уменьшение веры и любви между людьми",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "end-times",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §232",
+      "excerpt": "В слове Божием открыты некоторые признаки приближения пришествия Христа, а именно: уменьшение веры и любви между людьми, умножение пороков и бедствий, проповедание Евангелия всем народам, пришествие антихриста",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "worship",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения",
+      "excerpt": "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "worship",
+      "url": "https://azbyka.ru/prichastie",
+      "location": "Азбука веры. Причастие: Таинство Евхаристии и преложение Даров",
+      "excerpt": "они становятся Телом и Кровью Христовыми",
+      "result": "matched",
+      "sourceHash": "c303ac37ea88296dfcdf946c5d884a481adfc49760f5c59bc410aeb8b41548ea"
+    },
+    {
+      "topic": "worship",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов) — Азбука веры",
+      "excerpt": "подробно рассказывается о 7-ми таинствах Церкви (Крещение, Миропомазание, Евхаристия, Покаяние, Священство, Брак, Елеосвящение)",
+      "result": "matched",
+      "sourceHash": "3581e7978f66c5ee0dda20dc1214c995a1a281a5d37675108c8ca6b133d9838c"
+    },
+    {
+      "topic": "worship",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §§289–291: Крещение младенцев",
+      "excerpt": "Младенцев крестят по вере родителей и восприемников",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "worship",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §282",
+      "excerpt": "Таинств – семь: Крещение; Миропомазание; Причащение; Покаяние; Священство; Брак; Елеосвящение.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "images",
+      "url": "https://azbyka.ru/ikonopochitanie",
+      "location": "Азбука веры. Иконопочитание: основной тезис",
+      "excerpt": "Честь, воздаваемая образу, переходит на Первообраз",
+      "result": "matched",
+      "sourceHash": "8cb174e68bdb13c84451334ac3765bb5326085f67997cba470ad61ae347f1cc0"
+    },
+    {
+      "topic": "images",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Иметь какие бы то ни было священные изображения вовсе не запрещается",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "images",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Глядя на иконы, следует умом видеть Бога и святых, на них изображённых",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "images",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет. Пространный катехизис, §§184–189: Приснодева и Богородица",
+      "excerpt": "Пресвятая Мария действительно всегда пребывала и пребывает Девой",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "images",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис, §514",
+      "excerpt": "Иметь какие бы то ни было священные изображения вовсе не запрещается.",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Свт. Филарет. Пространный катехизис, §§535–536: воскресный день",
+      "excerpt": "День воскресный празднуется со времени воскресения Христа.",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "В христианской Церкви празднуется через каждые шесть дней седьмой, только не последний из семи дней",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Праздник Воскресения Христова, Пасха, праздник праздников, предначинание вечного праздника, вечного блаженства",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Важнейшие праздники – это праздники, установленные в память о главных событиях, относящихся к спасительному для нас воплощению Сына Божия",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "а затем установленные в честь Пресвятой Богородицы как послужившей тайне воплощения",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "holy-days",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис, §534",
+      "excerpt": "В христианской Церкви празднуется через каждые шесть дней седьмой, только не последний из семи дней, или субботний, а первый день каждой седмицы, или воскресный.",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Свт. Филарет. Пространный катехизис, §§540–543: посты",
+      "excerpt": "Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/monashestvo",
+      "location": "Азбука веры. Монашество: обеты и духовная жизнь",
+      "excerpt": "всецело посвятивший себя Богу через принятие обетов",
+      "result": "matched",
+      "sourceHash": "c3b088ddb942856370d61bdf237193418c8ab5add597f5b524c7d87621b390f6"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §539",
+      "excerpt": "Важнейшим постом является Великий пост, или святая Четыредесятница",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §540",
+      "excerpt": "Великий пост называется Четыредесятницей потому, что продолжается сорок дней, исключая неделю страдания Христа (Страстную седмицу)",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §541",
+      "excerpt": "Великий пост продолжается сорок дней, поскольку Сам Господь Иисус Христос постился сорок дней",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §542",
+      "excerpt": "Поститься положено в среду – в воспоминание предания Господа нашего Иисуса Христа на страдание, а в пятницу – в память самих Его страданий и смерти",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543",
+      "excerpt": "Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить следующие за этими постами праздники",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543",
+      "excerpt": "а пост в память святых апостолов – для подражания апостолам, которые постились, готовя себя для дела Евангельской проповеди",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §524",
+      "excerpt": "Вторая заповедь, запрещая чревоугодие, учит воздержанию и посту",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/skoromnaya-pishha",
+      "location": "Скоромная пища — православная энциклопедия «Азбука веры»",
+      "excerpt": "к скоромным продуктам относятся любые продовольственные продукты, имеющие в своем составе плоть или продукты жизнедеятельности теплокровных животных, такие как (молоко, яйца)",
+      "result": "matched",
+      "sourceHash": "91bd22e2d406b33e63d74e9fd2541d0823d9d38edc8f1cb3c49c19b0b71a5e65"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/skoromnaya-pishha",
+      "location": "Скоромная пища — православная энциклопедия «Азбука веры»",
+      "excerpt": "Рыба и морепродукты занимают особое срединное место между постной и скоромной пищей",
+      "result": "matched",
+      "sourceHash": "91bd22e2d406b33e63d74e9fd2541d0823d9d38edc8f1cb3c49c19b0b71a5e65"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/skoromnaya-pishha",
+      "location": "Скоромная пища — православная энциклопедия «Азбука веры»",
+      "excerpt": "Рыба и морепродукты (которые разрешаются в рамках менее строгих форм поста)",
+      "result": "matched",
+      "sourceHash": "91bd22e2d406b33e63d74e9fd2541d0823d9d38edc8f1cb3c49c19b0b71a5e65"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/",
+      "location": "Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)",
+      "excerpt": "Пост в форме воздержания от скоромной пищи и удаления от развлечений, сопровождаемый усердной молитвой и покаянием, традиционно предваряет причащение Святых Таин",
+      "result": "matched",
+      "sourceHash": "364015da4dc2d70aee397a0abc5c93e8b9617665885775004d16c82066d3f846"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/",
+      "location": "Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)",
+      "excerpt": "Евхаристический пост в строгом смысле слова – полное воздержание от пищи и питья с полуночи до Святого Причащения",
+      "result": "matched",
+      "sourceHash": "364015da4dc2d70aee397a0abc5c93e8b9617665885775004d16c82066d3f846"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/",
+      "location": "Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)",
+      "excerpt": "особый образ христианского жительства, заключающийся во всецелом посвящении себя на служение Богу",
+      "result": "matched",
+      "sourceHash": "6c9a49aebf2237cb72ca4352e4438eec3dc8253a9a16da90889a3ba9969f3b24"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/",
+      "location": "Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)",
+      "excerpt": "Главными из этих обетов являются послушание, нестяжание и целомудрие",
+      "result": "matched",
+      "sourceHash": "6c9a49aebf2237cb72ca4352e4438eec3dc8253a9a16da90889a3ba9969f3b24"
+    },
+    {
+      "topic": "fasting",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис, §524",
+      "excerpt": "Вторая заповедь, запрещая чревоугодие, учит воздержанию и посту.",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
+      "location": "Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §§1.1–1.3, 7.1",
+      "excerpt": "Православная Церковь есть истинная Церковь Христова",
+      "result": "matched",
+      "sourceHash": "342ba2f14f3dd35e0c369914e549492c87cc8b37e8aa0bb9a99d0d8fb88495a9"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/simvol_very",
+      "location": "Никео-Цареградский Символ веры, члены 1–12",
+      "excerpt": "Во Единую Святую, Соборную",
+      "result": "matched",
+      "sourceHash": "0c457e914126b9f3c0333dd47a822576b829b4c5f5393cc6790f34c2ba29d899"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Свт. Филарет Московский. Пространный катехизис, §§256–257; об иерархии",
+      "excerpt": "Иисус Христос есть единственная глава единственной Церкви.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Церковь одна, однако имеются отдельные и самостоятельные Церкви, например: Иерусалимская, Антиохийская, Александрийская, Константинопольская, Российская",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Священноначалием, которое может действовать от имени всей Кафолической Церкви, является Вселенский Собор",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "organisation",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12",
+      "location": "Пространный христианский катехизис, §259",
+      "excerpt": "Церковь одна, однако имеются отдельные и самостоятельные Церкви, например: Иерусалимская, Антиохийская, Александрийская, Константинопольская, Российская.",
+      "result": "matched",
+      "sourceHash": "ea3b1881ad910b6c1d29795df64302c047f93600caa6b2e0357d66adfc57db02"
+    },
+    {
+      "topic": "rules",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Свт. Филарет. Пространный катехизис, §§489–492: любовь к Богу и ближнему",
+      "excerpt": "Все люди являются нашими ближними. Потому что все – создания единого Бога",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "rules",
+      "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6",
+      "location": "Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)",
+      "excerpt": "Наша любовь к Государю и Отечеству должна простираться до готовности отдать за них свою жизнь",
+      "result": "matched",
+      "sourceHash": "ac6c93b57b3925881949e1bb0adf8c5d20fabc284f49d55ee61ac82705f821fd"
+    },
+    {
+      "topic": "rules",
+      "url": "https://azbyka.ru/pravo/shestoj-vselenskij-sobor-67/",
+      "location": "Правило 67 Трулльского Собора (691) — «Церковное право», «Азбука веры»",
+      "excerpt": "Божественное Писание заповедало нам воздерживаться от крови, удавленины и блуда",
+      "result": "matched",
+      "sourceHash": "0dc0ce63cbb230cecea7bb2fff4d5cb7880201c88d607e5a848a569a70f92c25"
+    },
+    {
+      "topic": "rules",
+      "url": "https://azbyka.ru/pravo/63-apostolskoe-pravilo/",
+      "location": "Правило 63 святых Апостолов — «Церковное право», «Азбука веры»",
+      "excerpt": "съест мясо с кровью души его, или звероядину, или мертвечину, да будет извержен, ибо это запретил закон",
+      "result": "matched",
+      "sourceHash": "d42eb6c05143b05dd10a32431155a2b5c5e98ff705a196b12ffd91e425aed5a0"
+    }
+  ]
+}

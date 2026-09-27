@@ -46,9 +46,10 @@ export function disputeView(sides: DisputeSides, ids: readonly string[]): Disput
   return { visible, shown: visible ? shown : [] };
 }
 
-/** Comparison can supplement a documented question with selected traditions' topic positions. */
+/** A question may show only its documented participants. */
 export function comparisonQuestionView(sides: DisputeSides, ids: readonly string[]): DisputeView {
-  if (ids.length < 2) return disputeView(sides, ids);
-  const visible = [...sides.challengers, ...sides.answerers].some((id) => ids.includes(id));
-  return { visible, shown: visible ? [...ids] : [] };
+  const everyone = [...sides.challengers, ...sides.answerers];
+  const shown = ids.filter(id => everyone.includes(id));
+  const visible = shown.includes('orthodoxy') && shown.some(id => id !== 'orthodoxy');
+  return { visible, shown: visible ? shown : [] };
 }

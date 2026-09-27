@@ -1,6 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
-import SharedPositions from './SharedPositions.astro';
+
 import SourceLink from './SourceLink.astro';
 import ProofLink from './ProofLink.astro';
 import { UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
@@ -11,7 +11,7 @@ interface Props {
   position: CollectionEntry<'matrix'>['data']['positions'][number];
 }
 
-const { position, tradition, expandable = false } = Astro.props;
+const { position, expandable = false } = Astro.props;
 const summary = positionSummaryText(position);
 const EvidenceTag = expandable ? 'details' : 'div';
 const quoteText = position.quote?.text_ru ?? position.quote?.text;
@@ -26,8 +26,10 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   ) : (
     <p class="todo-flag">Источник уточняется</p>
   )}
+  {position.doctrine && <p class="unity">{position.doctrine.authority}</p>}
   <EvidenceTag class="evidence">
     {expandable && <summary>Обоснование и цитаты</summary>}
+    {position.doctrine?.sections.map(section => <section><h5>{section.title}</h5><p>{section.text}</p></section>)}
   {summary && position.unity?.kind === 'divided' && (
     <p class={`unity ${position.unity.kind}`}>
       <span class="unity-label">{UNITY_LABEL_RU[position.unity.kind]}</span><span>: {position.unity.note}</span>
@@ -81,7 +83,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
     />
     </span>
   )}
-  {tradition && <SharedPositions tradition={tradition} topic={position.topic} />}
+
   </EvidenceTag>
 </div>
 

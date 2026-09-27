@@ -3,9 +3,8 @@ import CompareAnchors from '../components/CompareAnchors.astro';
 import ColumnHeader from '../components/ColumnHeader.astro';
 import Comparison from '../components/Comparison.astro';
 import TraditionCompare from '../components/TraditionCompare.astro';
-import ViewsSection from '../components/ViewsSection.astro';
 import SectionPage from '../layouts/SectionPage.astro';
-import { getDisputes, getOrderedMatrix, getOrderedViews } from '../lib/content';
+import { getDisputes, getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
@@ -13,14 +12,12 @@ const traditions = await getOrderedMatrix();
 const colorById = new Map(
   traditions.map((t) => [t.id, TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN]]),
 );
-const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
-const views = await getOrderedViews();
 const disputes = await getDisputes();
 ---
 
 <SectionPage
   title="Сравнение"
-  lead="Выберите до трёх традиций для сравнения."
+  lead="Православное учение → В чём отличие → Православный ответ. Православие закреплено первым; две другие колонки можно изменить или очистить."
 >
   <ColumnHeader traditions={traditions} colorById={colorById} />
   <CompareAnchors />
@@ -42,14 +39,8 @@ const disputes = await getDisputes();
 
   <section id="views">
     <h2>Отношения между традициями</h2>
-    <p>Высказывания из конкретных документов. Автор и дата помогают понять, чью позицию и какую эпоху они отражают.</p>
-    {
-      views.length > 0 ? (
-        <ViewsSection views={views} colorById={colorById} namesById={namesById} />
-      ) : (
-        <p class="empty">Раздел ещё готовится.</p>
-      )
-    }
+    <p>Православная Церковь свидетельствует о единстве Церкви Христовой. Отвергая ошибочные учения, христианин призван любить людей, которые их исповедуют. Конкретные вероучительные различия разобраны выше, рядом с каждым вопросом.</p>
+    <p><a href="https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/">Основные принципы отношения Русской Православной Церкви к инославию, 2000, §§1.1, 7.1</a>. Ответные документы других традиций сохранены в <a href={withBase('sources/#relations-documents')}>справочных материалах</a>.</p>
   </section>
 
   <p class="reference-link">Исторические события — в разделе <a href={withBase('timeline/')}>«История»</a>, справочные материалы — в разделе <a href={withBase('sources/')}>«Термины и источники»</a>.</p>

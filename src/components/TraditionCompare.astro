@@ -8,7 +8,8 @@
 // a hint asks for one.
 import type { CollectionEntry } from 'astro:content';
 import ProofLink from './ProofLink.astro';
-import { getFamilyByTradition } from '../lib/families';
+import OrthodoxClassification from './OrthodoxClassification.astro';
+import { DEFAULT_SELECTION } from '../lib/selection';
 import { sinceLines } from '../lib/rules';
 
 interface Props {
@@ -28,19 +29,18 @@ const rowLabel: Record<(typeof rows)[number], string> = {
 
 <section id="chosen" aria-labelledby="chosen-title">
   <h2 id="chosen-title">Основные сведения</h2>
-  <p class="hint" data-tcompare-hint>
+  <p class="hint" data-tcompare-hint hidden>
     Выберите традицию в любой колонке.
   </p>
-  <div class="tcompare" data-tcompare hidden>
+  <div class="tcompare" data-tcompare style="--cols:3">
   {
     rows.map((row) => (
       <div class="frow">
         <span class="flabel">{rowLabel[row]}</span>
         {traditions.map((t) => {
           const { since, scripture, adherents, self_view } = t.data;
-          const family = getFamilyByTradition(t.id);
           return (
-            <div class="cell" data-trad={t.id}>
+            <div class="cell" data-trad={t.id} hidden={!DEFAULT_SELECTION.includes(t.id)} style={`grid-column:${DEFAULT_SELECTION.indexOf(t.id)+1};grid-row:2`}>
               {row === 'since' && (
                 <>
                   {sinceLines(since.label).map((line) => (
@@ -52,7 +52,7 @@ const rowLabel: Record<(typeof rows)[number], string> = {
               {row === 'adherents' && (
                 <>
                   <p class="line">
-                    {adherents.value}
+                    {adherents.display === false ? 'Отдельная сопоставимая оценка в подборке не приводится.' : adherents.value}
                   </p>
                   <ProofLink proof={adherents.proof} />
                 </>
@@ -74,18 +74,7 @@ const rowLabel: Record<(typeof rows)[number], string> = {
                   <ProofLink proof={self_view.proof} />
                 </>
               )}
-              {row === 'family' &&
-                (family ? (
-                  <>
-                    <ol class="family-path" aria-label="От общего к частному">
-                      {family.path.map((step) => <li>{step}</li>)}
-                    </ol>
-                    <ProofLink proof={[...(getFamilyByTradition('judaism')?.proof ?? []), ...family.proof]} />
-                  </>
-                ) : (
-                  // No gap without a reason (owner, 2026-09-26).
-                  <p class="line muted">Классификация не указана: подтверждённого источника пока нет.</p>
-                ))}
+              {row === 'family' && <OrthodoxClassification tradition={t.id} />}
             </div>
           );
         })}

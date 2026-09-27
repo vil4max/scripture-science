@@ -44,7 +44,7 @@ export type TopicId = (typeof TOPIC_ORDER)[number];
 
 export const TOPIC_INTROS: Partial<Record<TopicId, string>> = {
   spirit: 'Христианский вопрос о Святом Духе; рядом — понимание духа Божия в других традициях.',
-  images: 'Иконы, священные изображения и отношение к ним в богослужении.',
+  images: 'Почитание икон, Богородицы и святых: его основания и отличия от поклонения, подобающего Богу.',
   scripture: 'Какие книги признаются священными. Канон — их перечень; перевод — передача текста на другом языке.',
 };
 
@@ -67,20 +67,20 @@ export const UNITY_LABEL_RU = {
 // from the special rules (owner, 2026-09-26; docs/tasks/site-m18-fasting.md).
 export const TOPIC_TITLES_RU: Record<TopicId, string> = {
   god: 'Бог',
-  'name-of-god': 'Имя Бога',
-  jesus: 'Иисус Христос, пророки, Мессия',
-  spirit: 'Святой Дух (дух Божий)',
+  'name-of-god': 'Имя Божие',
+  jesus: 'Иисус Христос',
+  spirit: 'Святой Дух',
   scripture: 'Писание и канон',
   authority: 'Предание и толкование',
   salvation: 'Спасение',
   afterlife: 'Душа, смерть и посмертие',
   'end-times': 'Конец времён',
-  worship: 'Богослужение и обряды',
-  images: 'Иконы',
+  worship: 'Богослужение и Таинства',
+  images: 'Иконы, Богородица и святые',
   'holy-days': 'Праздники',
   fasting: 'Пост и аскетика',
-  organisation: 'Устройство и духовенство',
-  rules: 'Особые правила (пища, кровь, армия, государство)',
+  organisation: 'Церковь и духовенство',
+  rules: 'Нравственная жизнь и общество',
 };
 
 /**

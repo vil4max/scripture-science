@@ -7,23 +7,35 @@ task's state.
 
 ## In progress
 
-- **Bible guide** (`docs/tasks/site-bible-guide.md`): the new primary section explains composition, manuscripts, canon terminology, Russian translations and each tradition's use of Scripture. Implementation complete; ready for owner review. Local commit authorised; no push.
+- **M26 — authorized delivery** (`docs/tasks/site-m26-orthodox-edition.md`): implemented and verified, with 15 foundations, 105 assessments, 13 disputed questions and 12 legacy topics recorded in the correction register. Orthodoxy is fixed first; Catholicism and Jehovah's Witnesses are the default comparison choices. The owner authorized one consolidated commit and push on 2026-09-27. The delivery gate passed 114 tests; the existing GitHub Pages workflow records deployment success separately. Independent theological acceptance is not claimed.
 
-- **Related positions and comparison slots** (`docs/tasks/site-related-comparison.md`): both outcomes implemented (86 tests): sourced related-position hints and three stable alphabetically ordered dropdown slots. Desktop visual acceptance remains pending. Codex, no push.
+## Current baseline
 
-- **World diagram subdivisions** (`docs/tasks/site-world-hierarchy.md`): one approximate current diagram uses 2026 WCD estimates with explicit normalization of Christian category weights; 2020 Pew statistics remain a table beside the map. Local verification and desktop review at 1280/1440 px passed (86 tests); one duplicate-tab-stop defect was repaired in `f08307c`. Review notes remain uncommitted; no push.
+The earlier Bible guide, comparison reading changes and M25 atlas work were
+included in the site migration to this repository on 2026-09-27 (`db15715`).
+Their briefs remain historical records, not separate pending implementations.
+The world and country views now use charts; the former full-country table is
+not the current overview. M26 builds on this baseline rather than replacing it
+with the older `religion-map` checkout.
 
-- **M25 — historical atlas ready for proofreading** (`docs/tasks/site-m25-historical-atlas.md`): all six implementation slices complete, 79 tests and static link/source checks pass. Desktop visual and interaction acceptance remains pending. Codex, no push. The brief records source limits, the repaired YAML-loader defect and the remaining desktop review matrix. Follow-up: the world overview now has one 2026 diagram; the 2020 map and table remain alongside it.
+Legacy checkout reconciliation and retirement are complete. All 57 existing
+files among its 58 pending changes are byte-identical to canonical `db15715`
+and preserved in the recovery snapshot; the removed file is absent in both.
+The 33 differences from the current working tree belong to the subsequent
+Orthodox edition. The complete old checkout, including Git history and ignored
+files, is preserved at `local/retired-repositories/religion-map` under the
+Personal workspace. Both agents coordinated the move; the live Claude session
+and the canonical preview were preserved. See the M26 brief for verification.
 
 ## Next (owner picks the order)
 
-- **Further disputes.** Topics are agreed with the owner first
-  (`docs/tasks/site-m19-disputes.md`); thirteen exist across the topics
-  listed there.
-- **Owner review of the M20 unity marks** across the site.
-- **Publication on GitHub Pages.** Needs a GitHub repository (private
-  first), the owner switching it to public, and the orchestrator's
-  `APPROVED` for the push. The repository has no remote yet.
+- **Further theological and editorial review of M26.** Review the correction
+  register and source passages separately from automated checks; technical
+  delivery does not establish independent ecclesiastical approval.
+- **Future delivery changes.** The existing remote is
+  `https://github.com/vil4max/scripture-science.git`; the site uses GitHub Pages.
+  The current edition has explicit commit/push authorization. Later changes
+  retain their own delivery authorization boundary.
 
 ## Known issues (not scheduled)
 
@@ -39,6 +51,9 @@ task's state.
   Ukraine): its Wayback copies carry no commentaries.
 
 ## Done
+
+The commit identifiers below belong to the original unsquashed development
+history, preserved with the legacy repository and its recovery bundle.
 
 | Task | Brief | Last commit |
 |---|---|---|

@@ -23,22 +23,23 @@ test('embedded citation links and SVG markers resolve after namespacing', () => 
   assert.equal(/class="full-table\b|id="pairs"|id="jw-legal-note"/.test(html), false);
 });
 
-test('migrated references resolve in the preserved full document', () => {
-  const archive = readFileSync('dist/pairs/orthodoxy-jw/index.html', 'utf8');
-  const ids = new Set([...archive.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]));
-  const links = [...html.matchAll(/href="[^"#]*pairs\/orthodoxy-jw\/#([^"]+)"/g)];
-  assert.ok(links.length > 0);
-  for (const match of links) assert.ok(ids.has(match[1]), match[1]);
+test('legacy public route is a bridge to the revision, not an alternate edition', () => {
+  const bridge = readFileSync('dist/pairs/orthodoxy-jw/index.html', 'utf8');
+  assert.match(bridge, /id="revised-comparison"/);
+  assert.doesNotMatch(bridge, /Исторический масштаб|Что совпадает и что различается|class="topic"/);
+  assert.doesNotMatch(html, /href="[^"#]*pairs\/orthodoxy-jw\/#/);
 });
 
-test('every dispute has a selected-column candidate for all eight traditions', () => {
-  const ids = ['judaism', 'orthodoxy', 'catholicism', 'islam', 'protestantism', 'lds', 'adventism', 'jw'];
+test('all thirteen disputes retain documented participants without topic fallbacks', () => {
   const questions = [...html.matchAll(/<aside\b[^>]*\bid="question-[\s\S]*?<\/aside>/g)];
   assert.equal(questions.length, 13);
   for (const [question] of questions) {
-    for (const id of ids) assert.equal(question.split(`data-trad="${id}"`).length - 1, 1, id);
+    const participants = [...question.matchAll(/data-trad="([^"]+)"/g)].map(m => m[1]);
+    assert.ok(participants.includes('orthodoxy'));
+    assert.equal(participants.length, new Set(participants).size);
+    assert.ok(participants.length < 8);
   }
-  assert.match(html, /Отдельного разбора этого вопроса в подборке пока нет/);
+  assert.doesNotMatch(html, /Отдельного разбора этого вопроса в подборке пока нет/);
 });
 
 test('comparison keeps topic evidence on demand and history in its own section', () => {
@@ -55,8 +56,8 @@ test('comparison keeps topic evidence on demand and history in its own section',
   const authority = html.slice(start, end);
   assert.match(authority, /id="pair-summary"/);
   assert.match(authority, /Возвращение к Библии/);
-  assert.match(authority, /Голоса двух традиций: цитаты и полный итог сравнения/);
-  const approaches = authority.slice(authority.indexOf('id="pair-summary"'), authority.indexOf('id="pair-continuity"'));
+  assert.doesNotMatch(authority, /цитаты и полный итог сравнения/);
+  const approaches = authority.slice(authority.indexOf('id="pair-summary"'), authority.length);
   for (const id of ['orthodoxy', 'jw']) assert.ok(approaches.includes(`data-pair-trad="${id}"`));
 });
 

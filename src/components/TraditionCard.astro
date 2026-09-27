@@ -14,6 +14,7 @@
 // screens keep one stacked column.
 import type { CollectionEntry } from 'astro:content';
 import TraditionImage from './TraditionImage.astro';
+import OrthodoxClassification from './OrthodoxClassification.astro';
 import ProofLink from './ProofLink.astro';
 import { getFamilyByTradition } from '../lib/families';
 import { JW_NOTE_ID } from '../lib/jwNote';
@@ -46,8 +47,8 @@ const family = getFamilyByTradition(tradition.id);
         <a href={`#${JW_NOTE_ID}`}>*</a>
       </sup>
     )}
-    <button type="button" class="add" data-add-compare={tradition.id} aria-pressed="false">
-      + В сравнение
+    <button type="button" class="add" data-add-compare={tradition.id} disabled={tradition.id === 'orthodoxy'} aria-pressed={tradition.id === 'orthodoxy'}>
+      {tradition.id === 'orthodoxy' ? 'Основание сравнения' : '+ В сравнение'}
     </button>
   </Heading>
   {full_name !== name && <p class="full-name">{full_name}</p>}
@@ -64,13 +65,13 @@ const family = getFamilyByTradition(tradition.id);
         <ProofLink proof={since.proof} />
       </dd>
     </div>
-    <div class="fact">
+    {adherents.display !== false && <div class="fact">
       <dt>Численность</dt>
       <dd>
         {adherents.value}
         <ProofLink proof={adherents.proof} />
       </dd>
-    </div>
+    </div>}
     <div class="fact">
       <dt>Писание</dt>
       <dd>
@@ -91,8 +92,7 @@ const family = getFamilyByTradition(tradition.id);
       <div class="fact">
         <dt>Классификация</dt>
         <dd>
-          {family.family}
-          <ProofLink proof={family.proof} />
+          <OrthodoxClassification tradition={tradition.id} />
         </dd>
       </div>
     )}
@@ -251,7 +251,7 @@ const family = getFamilyByTradition(tradition.id);
     for (const button of buttons) {
       const on = ids.includes(button.dataset.addCompare ?? '');
       button.setAttribute('aria-pressed', String(on));
-      button.textContent = on ? '✓ В сравнении' : '+ В сравнение';
+      button.textContent = button.dataset.addCompare === 'orthodoxy' ? 'Основание сравнения' : on ? '✓ В сравнении' : '+ В сравнение';
     }
   });
   for (const button of buttons) {
