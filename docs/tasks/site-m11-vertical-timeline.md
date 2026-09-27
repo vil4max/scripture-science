@@ -40,3 +40,13 @@ Owned: `src/lib/timeline.ts`, `src/components/timeline/**`,
 `src/pages/timeline.astro`, the timeline section of `src/pages/index.astro`,
 `scripts/timeline.test.ts`, `docs/EDITORIAL.md` principle 8,
 `docs/DECISIONS.md`. The data in `src/data/lineage.json` is unchanged.
+
+## Reading review — 2026-09-26
+
+Remove elapsed-year gap rows: readers mistook durations for event dates. Keep
+the era boundary and uninterrupted branch lines. Add brief, sourced context
+to Noah, Solomon, Sunni and Shia Islam, the Christian schism, the Reformation,
+the Second Great Awakening, Adventist organization, and the Bible Students.
+Distinguish scriptural narratives, movements and organizational milestones.
+Acceptance: desktop rendering has no duration captions, and each annotated
+event explains its participants or religious family in a short paragraph.

@@ -27,8 +27,16 @@
         "tier": "reference",
         "excerpt": "Всемирный потоп",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.biblegateway.com/passage/?search=Genesis+6%3A9-22&version=NRSVUE",
+        "title": "Genesis 6:9–22 — NRSVUE",
+        "tier": "official",
+        "excerpt": "Noah was a righteous man, blameless in his generation; Noah walked with God.",
+        "accessed": "2026-09-26"
       }
-    ]
+    ],
+    "description": "В библейском рассказе Ной — праведник, которому Бог велит построить ковчег перед Потопом. Ковчег должен сохранить жизнь его семье и животным (Быт. 6–9)."
   },
   {
     "id": "biblical-abraham",
@@ -79,7 +87,7 @@
   {
     "id": "biblical-temple",
     "year": -973,
-    "title": "Соломон: начало строительства Храма",
+    "title": "Соломон: начало строительства храма в Иерусалиме",
     "ref": "3 Цар. 6",
     "proof": [
       {
@@ -88,8 +96,16 @@
         "tier": "reference",
         "excerpt": "Основание Храма",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.biblegateway.com/passage/?search=2+Chronicles+3&version=NIV",
+        "title": "2 Chronicles 3:1–2 — NIV",
+        "tier": "official",
+        "excerpt": "Then Solomon began to build the temple of the Lord in Jerusalem on Mount Moriah",
+        "accessed": "2026-09-26"
       }
-    ]
+    ],
+    "description": "По библейскому рассказу, царь Соломон, сын Давида, начинает строить храм Господа в Иерусалиме, на горе Мориа. Строительство начинается на четвёртом году его царствования (2 Пар. 3:1–2)."
   },
   {
     "id": "biblical-second-temple",

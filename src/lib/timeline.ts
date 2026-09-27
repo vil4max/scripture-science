@@ -449,10 +449,3 @@ export function assignBranchColumns(lineage: Lineage, rows: ChronicleRow[]): Bra
   );
   return { column, span, living, columns: taken.length };
 }
-
-/**
- * Years between consecutive rows worth a visible gap marker, so the
- * one-row-per-event list does not hide that 5,000 years separate two
- * adjacent rows.
- */
-export const GAP_MARKER_YEARS = 300;

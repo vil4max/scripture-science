@@ -240,7 +240,7 @@
     "id": "reformation",
     "period": "XVI век",
     "title": "Реформация",
-    "text": "95 тезисов Мартина Лютера относятся к 1517 году. Для подробного сравнения сайт использует конкретные вероисповедные документы: например, Аугсбургское исповедание 1530 года. Дата документа и начало движения — разные точки отсчёта.",
+    "text": "Начало Реформации — движения за преобразование Западной христианской церкви, из которого выросли протестантские церкви. В 1517 году Мартин Лютер выступил с 95 тезисами, оспаривая церковные учения и практики. Это начало длительного процесса, а не основание всех протестантских церквей в один день.",
     "kind": "Историческое исследование",
     "proof": [
       {
@@ -249,11 +249,18 @@
         "excerpt": "1517 CE Martin Luther’s Ninety-Five Theses",
         "tier": "reference",
         "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity",
+        "tier": "reference",
+        "excerpt": "launched the first wave of a movement that would become the Protestant Reformation.",
+        "accessed": "2026-09-26"
       }
     ],
     "link": "traditions/protestantism/",
     "timelineRow": "reformation",
-    "timelineText": "95 тезисов Лютера относятся к 1517 году. Аугсбургское исповедание 1530 года — более поздний вероисповедный документ, используемый в сравнении на сайте."
+    "timelineText": "Начало Реформации — движения за преобразование Западной христианской церкви, из которого выросли протестантские церкви. В 1517 году Мартин Лютер выступил с 95 тезисами, оспаривая церковные учения и практики. Это начало длительного процесса, а не основание всех протестантских церквей в один день."
   },
   {
     "id": "today",
@@ -475,5 +482,166 @@
     ],
     "timelineRow": "slavic",
     "timelineText": "Дохристианские верования славянских народов. Среди почитаемых божеств был Перун, связанный с громом; обряды проходили у идолов, в святилищах и священных рощах. Историю этих верований восстанавливают по археологии, фольклору и нередко пристрастным христианским описаниям."
+  },
+  {
+    "id": "sunni",
+    "period": "VII век",
+    "title": "Суннизм",
+    "text": "Одно из двух основных направлений ислама. Его истоки связаны с общиной, признавшей Абу Бакра преемником Мухаммада и право общины выбирать руководителя. Различие с шиизмом началось со спора о преемстве после смерти пророка.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/sunni-and-shi%E2%80%99i-interpretations",
+        "title": "The Pluralism Project — Sunni and Shi’i Interpretations",
+        "tier": "reference",
+        "excerpt": "The differences between Sunni and Shi’i Muslims stem from questions about Muhammad’s successors.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "sunni",
+    "timelineText": "Одно из двух основных направлений ислама. Его истоки связаны с общиной, признавшей Абу Бакра преемником Мухаммада и право общины выбирать руководителя. Различие с шиизмом началось со спора о преемстве после смерти пророка."
+  },
+  {
+    "id": "shia",
+    "period": "VII век",
+    "title": "Шиизм",
+    "text": "Направление ислама, связанное со сторонниками Али — двоюродного брата и зятя Мухаммада. Они считали законными руководителями общины Али и наследников из семьи пророка. Память о гибели внука Мухаммада — Хусейна — в 680 году занимает важное место в шиитской традиции.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/sunni-and-shi%E2%80%99i-interpretations",
+        "title": "The Pluralism Project — Sunni and Shi’i Interpretations",
+        "tier": "reference",
+        "excerpt": "The differences between Sunni and Shi’i Muslims stem from questions about Muhammad’s successors.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "shia",
+    "timelineText": "Направление ислама, связанное со сторонниками Али — двоюродного брата и зятя Мухаммада. Они считали законными руководителями общины Али и наследников из семьи пророка. Память о гибели внука Мухаммада — Хусейна — в 680 году занимает важное место в шиитской традиции."
+  },
+  {
+    "id": "orthodoxy",
+    "period": "1054 год",
+    "title": "Православие",
+    "text": "Восточная ветвь христианства. Дата отмечает разрыв между церковными центрами Константинополя и Рима: взаимные отлучения закрепили длительное отчуждение Восточной и Западной церквей.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity",
+        "tier": "reference",
+        "excerpt": "two major Christian churches: Eastern Orthodox and Roman Catholic.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "orthodoxy",
+    "timelineText": "Восточная ветвь христианства. Дата отмечает разрыв между церковными центрами Константинополя и Рима: взаимные отлучения закрепили длительное отчуждение Восточной и Западной церквей."
+  },
+  {
+    "id": "catholicism",
+    "period": "1054 год",
+    "title": "Католичество",
+    "text": "Западная ветвь христианства с центром в Риме. Великая схизма разделила Восточную и Западную церкви; обе продолжали более раннюю христианскую традицию.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://pluralism.org/christianity",
+        "title": "The Pluralism Project — Christianity",
+        "tier": "reference",
+        "excerpt": "two major Christian churches: Eastern Orthodox and Roman Catholic.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "catholicism",
+    "timelineText": "Западная ветвь христианства с центром в Риме. Великая схизма разделила Восточную и Западную церкви; обе продолжали более раннюю христианскую традицию."
+  },
+  {
+    "id": "second-great-awakening",
+    "period": "Начало XIX века",
+    "title": "Второе великое пробуждение",
+    "text": "Волна протестантского религиозного возрождения в США: проповедники проводили многодневные собрания под открытым небом и призывали людей обратиться к христианской вере. Это общая религиозная среда, в которой появлялись новые движения, а не отдельная церковь или их единый основатель.",
+    "kind": "Историческое исследование",
+    "proof": [
+      {
+        "url": "https://www.loc.gov/exhibits/religion/rel07.html",
+        "title": "Library of Congress — Religion and the New Republic",
+        "tier": "reference",
+        "excerpt": "The principal religious innovation produced by the Kentucky revivals was the camp meeting.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "second-great-awakening",
+    "timelineText": "Волна протестантского религиозного возрождения в США: проповедники проводили многодневные собрания под открытым небом и призывали людей обратиться к христианской вере. Это общая религиозная среда, в которой появлялись новые движения, а не отдельная церковь или их единый основатель."
+  },
+  {
+    "id": "adventism",
+    "period": "1863 год",
+    "title": "Адвентисты седьмого дня",
+    "text": "По истории церкви, в мае 1863 года создание местных церковных организаций завершилось учреждением Генеральной конференции — общего органа церковного управления. Эта дата обозначает организационное оформление уже существовавшего адвентистского движения.",
+    "kind": "История традиции",
+    "proof": [
+      {
+        "url": "https://whiteestate.org/about/egwbio/",
+        "title": "Ellen G. White Estate — Biography",
+        "tier": "official",
+        "excerpt": "The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863.",
+        "accessed": "2026-09-26"
+      }
+    ],
+    "timelineRow": "adventism",
+    "timelineText": "По истории церкви, в мае 1863 года создание местных церковных организаций завершилось учреждением Генеральной конференции — общего органа церковного управления. Эта дата обозначает организационное оформление уже существовавшего адвентистского движения."
+  },
+  {
+    "id": "jw",
+    "period": "Около 1870 года",
+    "title": "Исследователи Библии",
+    "text": "Согласно истории организации, Чарлз Тейз Расселл и другие участники кружка возле Питтсбурга сопоставляли учения церквей с Библией и публиковали свои выводы. Они назывались Исследователями Библии; из этого круга выросла современная организация Свидетелей Иеговы.",
+    "kind": "История традиции",
+    "proof": [
+      {
+        "url": "https://www.jw.org/en/jehovahs-witnesses/faq/founder/",
+        "title": "Jehovah’s Witnesses — Who Was Your Founder?",
+        "tier": "official",
+        "excerpt": "a small group of Bible students who lived near Pittsburgh, Pennsylvania, in the United States, began a systematic analysis of the Bible.",
+        "accessed": "2026-09-26"
+      },
+      {
+        "url": "https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Who-Are-They-What-Do-They-Believe/Their-Modern-Development-and-Growth/",
+        "title": "Their Modern Development and Growth — история организации, jw.org",
+        "tier": "official",
+        "excerpt": "In July 1879, the first issue of the magazine Zion’s Watch Tower",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.jw.org/en/library/brochures/Jehovahs-Witnesses-Who-Are-They-What-Do-They-Believe/Their-Modern-Development-and-Growth/",
+        "title": "Their Modern Development and Growth — история организации, jw.org",
+        "tier": "official",
+        "excerpt": "in 1931 these Christians embraced the name Jehovah’s Witnesses",
+        "accessed": "2026-09-27"
+      },
+      {
+        "url": "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/",
+        "title": "Во что верят Свидетели Иеговы? — царствование Христа",
+        "tier": "official",
+        "excerpt": "Он начал править в 1914 году",
+        "accessed": "2026-09-27"
+      }
+    ],
+    "timelineRow": "jw",
+    "timelineText": "Согласно истории организации, Чарлз Тейз Расселл и другие участники кружка возле Питтсбурга сопоставляли учения церквей с Библией и публиковали свои выводы. Они назывались Исследователями Библии; из этого круга выросла современная организация Свидетелей Иеговы.",
+    "milestones": [
+      {
+        "year": 1879,
+        "text": "Выходит первый номер «Сторожевой башни» — по истории организации."
+      },
+      {
+        "year": 1914,
+        "text": "В учении Свидетелей Иеговы — начало небесного царствования Христа."
+      },
+      {
+        "year": 1931,
+        "text": "Принимается название «Свидетели Иеговы» — по истории организации."
+      }
+    ]
   }
 ]

@@ -219,7 +219,8 @@ test('the biblical comparison line is chronological without displacing branch co
   }
   const html = readFileSync('dist/timeline/index.html', 'utf8');
   for (const row of biblical) assert.ok(html.includes(`data-row-id="${row.id}"`));
-  assert.match(html, /Промежуток/);
+  assert.doesNotMatch(html, /Промежуток/);
+  assert.doesNotMatch(html, /gap-caption|divider gap/);
   assert.doesNotMatch(html, /class="head"|id="jw-legal-note"|События идут последовательно/);
   assert.match(html, /сохранив византийский обряд/);
   assert.match(html, /религиозная реконструкция/);

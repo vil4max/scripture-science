@@ -1,5 +1,6 @@
 ---
 // The biblical comparison line is explicitly distinguished from historical branches.
+import { withBase } from '../../lib/paths';
 import lineageData from '../../data/lineage.json';
 import biblical from '../../data/biblical-timeline.json';
 import chapters from '../../data/history-overview.json';
@@ -8,7 +9,6 @@ const contextByRow = new Map(chapters.filter((chapter) => chapter.timelineRow).m
 import {
   assignBranchColumns,
   buildChronicleRows,
-  GAP_MARKER_YEARS,
   parseLineage,
   validateReferences,
   type ChronicleRow,
@@ -132,29 +132,14 @@ function dotAt(row: ChronicleRow): { x: number; color: string } | undefined {
   return undefined;
 }
 
-// --- Rows with gap markers and the era divider -----------------------------
-const yearsWord = (n: number) => {
-  const mod10 = n % 10;
-  const mod100 = n % 100;
-  if (mod10 === 1 && mod100 !== 11) return 'год';
-  if (mod10 >= 2 && mod10 <= 4 && (mod100 < 12 || mod100 > 14)) return 'года';
-  return 'лет';
-};
-const formatNumber = (n: number) => n.toLocaleString('ru-RU');
-// Historical years skip 0: from 1 BC to AD 1 is one year.
-const yearsBetween = (a: number, b: number) => b - a - (a < 0 && b > 0 ? 1 : 0);
-
+// Keep the era boundary distinct from dated events.
 type Item =
   | { type: 'row'; row: ChronicleRow; index: number }
-  | { type: 'gap'; years: number; index: number }
   | { type: 'era'; index: number };
 const items: Item[] = [];
 rows.forEach((row, index) => {
   const prev = rows[index - 1];
   if (prev && prev.year < 0 && row.year > 0) items.push({ type: 'era', index });
-  else if (prev && yearsBetween(prev.year, row.year) >= GAP_MARKER_YEARS) {
-    items.push({ type: 'gap', years: yearsBetween(prev.year, row.year), index });
-  }
   items.push({ type: 'row', row, index });
 });
 
@@ -174,7 +159,7 @@ const today = new Date();
 ---
 
 <div class="chronicle" data-chronicle>
-  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Даты взяты из православной «Хронологии Септуагинты» на «Азбуке веры»: это выбранная религиозная реконструкция для сопоставления, а не общепринятая историческая датировка.</p>
+  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Даты взяты из православной «Хронологии Септуагинты»: это выбранная религиозная реконструкция для сопоставления, а не общепринятая историческая датировка.</p>
   <div class="testament-key" aria-label="Библейское повествование">
     <span class="old">Ветхий Завет · от Сотворения мира</span>
     <span class="new">Новый Завет · от Рождества Христова</span>
@@ -182,18 +167,16 @@ const today = new Date();
   <ol class="rows" style={`--graph-w: ${GRAPH_W}px`}>
     {
       items.map((item) => {
-        if (item.type === 'era' || item.type === 'gap') {
+        if (item.type === 'era') {
           return (
-            <li class={item.type === 'era' ? 'divider era' : 'divider gap'}>
-              {item.type === 'era' && <span class="ad">1 г. н. э.</span>}
+            <li class="divider era">
+              <span class="ad">1 г. н. э.</span>
               <span class="graph" aria-hidden="true">
                 {segmentsAt(item.index, true).map((s) => (
                   <span class="seg full" data-hl={s.hl} style={`left:${s.x - 1}px; background:${s.color}`} />
                 ))}
               </span>
-              <span class={item.type === 'gap' ? 'gap-caption' : 'text'}>
-                {item.type === 'era' ? <>Начало нашей эры — отсчёт от Рождества Христова</> : <>Промежуток — {formatNumber(item.years)} {yearsWord(item.years)}</>}
-              </span>
+              <span class="text">Начало нашей эры — отсчёт от Рождества Христова</span>
             </li>
           );
         }
@@ -235,6 +218,11 @@ const today = new Date();
               {row.todo && <span class="todo"> (уточняется)</span>}
               {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
               {context && <span class="context">{context.timelineText}</span>}
+              {context?.milestones && <details class="milestones">
+                <summary>Дальнейшая история</summary>
+                <ul>{context.milestones.map((event) => <li><strong>{event.year}</strong> — {event.text}</li>)}</ul>
+                <a href={withBase('bible/#scripture-new-world')}>История «Перевода нового мира»</a>
+              </details>}
             </span>
           </li>
         );
@@ -342,6 +330,9 @@ const today = new Date();
     box-shadow: 0 0 0 2px var(--surface);
   }
 
+  .milestones { margin-top: 12px; font-size: 16px; }
+  .milestones summary { cursor: pointer; color: var(--focus); }
+  .milestones ul { padding-left: 20px; }
   .context { display: block; font-size: 16px; font-weight: 400; line-height: 1.55; margin-top: 8px; color: var(--ink); }
   .rows > li[id] { scroll-margin-top: 60px; }
 
@@ -405,42 +396,6 @@ const today = new Date();
     background: color-mix(in srgb, var(--ink) 5%, transparent);
   }
 
-  .rows > li.divider.gap {
-    position: relative;
-    padding-block: 0;
-    min-height: 24px;
-    border-top: 0;
-    align-items: center;
-  }
-  .rows > li.divider.gap + li { border-top: 0; }
-  .divider.gap::before {
-    content: '';
-    position: absolute;
-    left: 12px;
-    right: 16px;
-    top: 50%;
-    border-top: 1px dashed var(--line);
-  }
-  .divider.gap .graph {
-    grid-column: 2;
-    grid-row: 1;
-    margin-block: 0;
-    z-index: 1;
-  }
-  .gap-caption {
-    grid-column: 1 / -1;
-    grid-row: 1;
-    justify-self: center;
-    position: relative;
-    padding-inline: 8px;
-    background: var(--surface);
-    color: var(--focus);
-    font-family: Georgia, serif;
-    font-style: italic;
-    font-size: 13px;
-    line-height: 24px;
-    white-space: nowrap;
-  }
   [data-testament="old"] { --testament-color: var(--testament-old); }
   [data-testament="new"] { --testament-color: var(--testament-new); }
   .row[data-testament] { background: color-mix(in srgb, var(--testament-color) 7%, var(--surface)); }

@@ -164,3 +164,7 @@ Calendar-era and present-day rows retain their previous layout.
 Validation: `npm run verify` passed (93 tests, Astro check and text fidelity).
 Desktop inspection confirmed every gap is 24px tall and no caption overlaps a
 vertical branch. `git diff --check` passed. Diff review: No findings.
+
+Owner refinement (2026-09-26): interval captions now contain only the elapsed
+years, aligned in the date column between adjacent dates. Keep the compact
+dashed separator and distinct italic styling.
