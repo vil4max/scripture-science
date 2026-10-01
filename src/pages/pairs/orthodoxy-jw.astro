@@ -1,11 +1,18 @@
 ---
 import Base from '../../layouts/Base.astro';
+import { getAnalyses } from '../../lib/analysis';
 import { withBase } from '../../lib/paths';
+
+const analysis = (await getAnalyses()).find((entry) => entry.data.tradition === 'jw');
+const cards = Object.fromEntries(
+  (analysis?.data.groups ?? []).flatMap((group) => group.cards.flatMap((card) => card.legacy.map((slug) => [slug, card.id]))),
+);
 ---
-<Base title="Православие и Свидетели Иеговы"><main class="page"><h1>Православие и Свидетели Иеговы</h1><p>Материал включён в православное сравнение по темам.</p><a id="revised-comparison" href={withBase('compare/?t=orthodoxy,jw&slots=orthodoxy,jw,')}>Открыть переработанное сравнение</a></main></Base>
+<Base title="Православие и Свидетели Иеговы"><main class="page" data-legacy-cards={JSON.stringify(cards)}><h1>Православие и Свидетели Иеговы</h1><p>Материал перенесён в подробный разбор на странице традиции.</p><a id="revised-comparison" href={withBase('traditions/jw/')}>Открыть: Свидетели Иеговы</a></main></Base>
 <script>
   import { withBase } from '../../lib/paths';
   import { legacyPairDestination } from '../../lib/legacyPairRoute';
-  location.replace(legacyPairDestination(location.href, withBase('')));
+  const cards = JSON.parse(document.querySelector<HTMLElement>('[data-legacy-cards]')?.dataset.legacyCards ?? '{}');
+  location.replace(legacyPairDestination(location.href, withBase(''), cards));
 </script>
 <style>.page { max-width: var(--page); margin: 0 auto; padding: 48px 24px; }</style>

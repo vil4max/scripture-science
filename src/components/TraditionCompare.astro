@@ -51,13 +51,19 @@ const rowLabel: Record<(typeof rows)[number], string> = {
               )}
               {row === 'adherents' && (
                 <>
-                  <p class="line">
-                    {adherents.display === false ? 'Отдельная сопоставимая оценка в подборке не приводится.' : adherents.value}
-                  </p>
+                  <p class="line">{adherents.value}</p>
+                  {adherents.scopeNote && <p class="line scope">{adherents.scopeNote}</p>}
                   <ProofLink proof={adherents.proof} />
                 </>
               )}
-              {row === 'scripture' && (
+              {row === 'scripture' && scripture.comparison && (
+                <>
+                  <p class="line"><strong>Общее:</strong> {scripture.comparison.common}</p>
+                  <p class="line"><strong>Различие:</strong> {scripture.comparison.difference}</p>
+                  <ProofLink proof={[...scripture.comparison.proof, ...scripture.proof]} />
+                </>
+              )}
+              {row === 'scripture' && !scripture.comparison && (
                 <>
                   {scripture.overview ? (
                     <>
@@ -112,6 +118,10 @@ const rowLabel: Record<(typeof rows)[number], string> = {
     scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
   }
 
+  .scope {
+    font-size: 14px;
+    color: var(--muted);
+  }
   .tcompare[hidden] {
     display: none;
   }

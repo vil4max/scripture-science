@@ -1,9 +1,14 @@
 ---
 import FamilyOverview from '../components/FamilyOverview.astro';
+import TraditionCard from '../components/TraditionCard.astro';
+import { profileHref } from '../lib/analysis';
+import { getOrderedMatrix } from '../lib/content';
 import OtherTraditions from '../components/OtherTraditions.astro';
 import WorldHierarchy from '../components/WorldHierarchy.astro';
 import WorldAtlas from '../components/WorldAtlas.astro';
 import SectionPage from '../layouts/SectionPage.astro';
+
+const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'orthodoxy')!;
 ---
 
 <SectionPage
@@ -12,11 +17,18 @@ import SectionPage from '../layouts/SectionPage.astro';
 >
   <p class="scope-note">Православное учение изложено по Священному Писанию, Священному Преданию и церковным вероучительным документам. Другие религии и движения описаны по их собственным источникам; различия сопровождаются православной оценкой.</p>
   <div class="overview-nav" role="navigation" aria-label="На этой странице">
+    <a href="#foundation">Основание</a>
     <a href="#world">Масштабы</a>
     <a href="#geography">География</a>
     <a href="#traditions">Авраамические религии</a>
     <a href="#other-traditions">Другие религии</a>
   </div>
+  <section id="foundation" aria-labelledby="foundation-title">
+    <h2 id="foundation-title">Основание: Православная Церковь</h2>
+    <p class="foundation-intro">Все остальные религии и движения на сайте рассматриваются в сравнении с православным учением.</p>
+    <TraditionCard tradition={orthodoxy} color="--t-orthodoxy" headingLevel={3} />
+    <p><a href={profileHref('orthodoxy')}>Православная вера: учение по темам, хронология, устройство →</a></p>
+  </section>
   <div id="world"><WorldHierarchy /></div>
   <div id="geography"><WorldAtlas /></div>
 
@@ -27,6 +39,9 @@ import SectionPage from '../layouts/SectionPage.astro';
 <style>
   .overview-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
   .overview-nav a { color: var(--muted); text-underline-offset: 4px; }
+  #foundation { padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 12px; scroll-margin-top: 24px; }
+  #foundation h2 { margin: 0 0 8px; }
+  .foundation-intro { margin: 0 0 16px; color: var(--muted); }
   #world, #geography { min-width: 0; scroll-margin-top: 24px; }
   #geography { border-top: 1px solid var(--line); padding-top: 32px; }
 </style>

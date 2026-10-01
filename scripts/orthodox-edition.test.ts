@@ -20,8 +20,9 @@ test('105 separately sourced assessments are complete and malformed coverage fai
   assert.throws(() => validateAssessments(incomplete), /Incomplete/);
   for (const record of assessments) {
     assert.ok(html.includes(`data-assessment="${record.id}"`), record.id);
+    // A curated profile (M33) answers each topic in its analysis cards instead.
     const profile = readFileSync(`dist/traditions/${record.tradition}/index.html`, 'utf8');
-    assert.ok(profile.includes(`data-assessment="${record.id}"`));
+    assert.ok(profile.includes(`data-assessment="${record.id}"`) || profile.includes(`data-topic="${record.topic}"`), record.id);
     assert.equal(record.assessmentAuthority, 'editorial-application');
   }
 });
@@ -54,25 +55,29 @@ test('server output keeps a fixed Orthodox foundation column in every comparison
   assert.match(html, /data-back-to-top/);
 });
 test('legacy pair destinations preserve parameters and resolve published anchors', () => {
+  const analysis = readFileSync('dist/traditions/jw/index.html', 'utf8');
+  const cards = Object.fromEntries([...analysis.matchAll(/<article class="card" id="([^"]+)"[^>]*data-legacy="([^"]+)"/g)]
+    .flatMap((match) => match[2].split(' ').map((slug: string) => [slug, match[1]])));
   const routes = new Map<string, string>([
-    ['#summary', 'pair-summary'], ['#history', 'detailed-chronology'],
-    ['#corrections', 'pair-reference'], ['#corr-blood-comparison', 'pair-correction-blood-comparison'],
-    ['#theology', 'topics'], ['#common', 'chosen'],
+    ['#summary', 'tradition'], ['#bog-troica-ili-odna-lichnost', 'trinity'], ['#structure', 'governing-body'],
+    ['#history', 'detailed-chronology'], ['#corrections', 'pair-reference'],
+    ['#corr-blood-comparison', 'pair-correction-blood-comparison'], ['#theology', ''], ['#common', ''],
   ]);
   for (const [old, expected] of routes) {
-    const result = legacyPairDestination(`https://example.test/scripture-science/pairs/orthodoxy-jw/?extra=keep${old}`, '/scripture-science/');
+    const result = legacyPairDestination(`https://example.test/scripture-science/pairs/orthodoxy-jw/?extra=keep${old}`, '/scripture-science/', cards);
     const url = new URL(result, 'https://example.test');
-    assert.equal(url.hash, '#' + expected); assert.equal(url.searchParams.get('extra'), 'keep');
+    assert.equal(url.hash, expected ? '#' + expected : ''); assert.equal(url.searchParams.get('extra'), 'keep');
     const page = readFileSync(`dist/${url.pathname.replace('/scripture-science/', '')}index.html`, 'utf8');
-    assert.ok(page.includes(`id="${expected}"`), result);
+    if (expected) assert.ok(page.includes(`id="${expected}"`), result);
   }
 });
 
 test('unique legacy continuity arguments and attributed quotations remain in the revised edition', () => {
-  assert.ok(html.includes('id="pair-continuity"'));
-  assert.ok(html.includes('Мф. 13:30'));
-  assert.ok(html.includes('1 Тим. 4:14'));
-  assert.ok(html.includes('Авеля первым свидетелем'));
+  const analysis = readFileSync('dist/traditions/jw/index.html', 'utf8');
+  const card = analysis.slice(analysis.indexOf('id="great-apostasy"'), analysis.indexOf('</article>', analysis.indexOf('id="great-apostasy"')));
+  assert.ok(card.includes('Мф 13:30'));
+  assert.ok(card.includes('1 Тим 4:14'));
+  assert.ok(card.includes('Авел'));
   const sources = readFileSync('dist/sources/index.html', 'utf8');
   assert.ok(sources.includes('id="pair-voices"'));
   assert.ok(sources.includes('Григорий Богослов'));

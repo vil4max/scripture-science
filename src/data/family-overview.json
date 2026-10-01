@@ -92,9 +92,8 @@
   "groups": [
     {
       "id": "trinitarian",
-      "title": "Православная Церковь и инославные исповедания",
+      "title": "Инославные исповедания",
       "ids": [
-        "orthodoxy",
         "catholicism",
         "protestantism",
         "adventism"

@@ -1,0 +1,252 @@
+---
+import lineageData from '../data/lineage.json';
+import { profileChronology } from '../lib/profileChronology';
+import { parseLineage, validateReferences, formatYearAd, yearFromCreation } from '../lib/timeline';
+import { withBase } from '../lib/paths';
+import { type CollectionEntry } from 'astro:content';
+import TraditionImage from './TraditionImage.astro';
+import GovernanceDiagram from './GovernanceDiagram.astro';
+import AnalysisCard from './AnalysisCard.astro';
+import Dispute from './Dispute.astro';
+import OrthodoxAssessment from './OrthodoxAssessment.astro';
+import OrthodoxClassification from './OrthodoxClassification.astro';
+import { disputeView } from '../lib/disputes';
+import MatrixPosition from './MatrixPosition.astro';
+import ProofLink from './ProofLink.astro';
+import SectionPage from '../layouts/SectionPage.astro';
+import { getDisputes, getOrderedMatrix, getOrderedViews } from '../lib/content';
+import { getAnalyses } from '../lib/analysis';
+import { JW_NOTE_ID } from '../lib/jwNote';
+import { getFamilyByTradition } from '../lib/families';
+import { sinceLines, TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, TRADITION_IDS } from '../lib/rules';
+
+// One tradition's own page: Orthodoxy's at /orthodoxy/ («Православная вера»,
+// the site's foundation), every other at /traditions/<id>/ (owner, 2026-10-01).
+interface Props {
+  tradition: CollectionEntry<'matrix'>;
+  title?: string;
+}
+
+const { tradition, title } = Astro.props;
+const { name, full_name, since, adherents, scripture } = tradition.data;
+// Curated analysis cards replace the topic-by-topic positions
+// (docs/tasks/site-m33-jw-analysis.md).
+const curated = (await getAnalyses()).find((entry) => entry.data.tradition === tradition.id)?.data;
+const family = getFamilyByTradition(tradition.id);
+const color = TRADITION_COLOR_TOKEN[tradition.data.id];
+const traditions = await getOrderedMatrix();
+const order = traditions.map((entry) => entry.id);
+const namesById = new Map(traditions.map((entry) => [entry.id, entry.data.name]));
+const colorById = new Map(traditions.map((entry) => [entry.id, TRADITION_COLOR_TOKEN[entry.data.id]]));
+const disputes = (await getDisputes()).filter((entry) => disputeView({
+  challengers: entry.data.challenges.map((part) => part.tradition),
+  answerers: entry.data.answers.map((part) => part.tradition),
+}, [tradition.id]).visible);
+const views = await getOrderedViews();
+const outgoing = views.find((entry) => entry.id === tradition.id)?.data.documents ?? [];
+const incoming = views.filter((entry) => entry.id !== tradition.id).flatMap((entry) =>
+  entry.data.documents.filter((doc) => doc.about.includes(tradition.data.id)).map((doc) => ({ author: entry.id, doc })),
+);
+const lineage = parseLineage(lineageData);
+validateReferences(lineage);
+const chronology = profileChronology(lineage, tradition.data.id);
+const selfView = lineage.selfViews.find((view) => view.tradition === tradition.id);
+const associationLabels = {
+  own: '', ancestor: 'Общая предыстория', union: 'Уния', epoch: 'Собственная хронология традиции',
+};
+const mentionsJw = tradition.id === 'jw'
+  || disputes.some((entry) => [...entry.data.challenges, ...entry.data.answers].some((part) => part.tradition === 'jw'))
+  || outgoing.some((doc) => doc.about.includes('jw'))
+  || incoming.some(({ author, doc }) => author === 'jw' || doc.about.includes('jw'));
+
+
+---
+
+<SectionPage title={title ?? name} lead={full_name === name ? undefined : full_name} jwNote={mentionsJw}>
+  <dl slot="header-details" class="profile-facts" style={`--tradition-color: var(${color})`}>
+    {family && (
+      <div>
+        <dt>Классификация</dt>
+        <dd>
+          <OrthodoxClassification tradition={tradition.id} />
+        </dd>
+      </div>
+    )}
+    <div>
+      <dt>Возникновение</dt>
+      <dd>
+        {sinceLines(since.label).map((line) => <p>{line}</p>)}
+        <ProofLink proof={since.proof} />
+      </dd>
+    </div>
+    <div>
+      <dt>Численность</dt>
+      <dd>
+        <p>{adherents.value} ({adherents.year})</p>
+        <p class="note">{adherents.scopeNote ?? adherents.method}</p>
+        <ProofLink proof={adherents.proof} />
+      </dd>
+    </div>
+    <div>
+      <dt>Писание</dt>
+      <dd>
+        <p>{scripture.overview?.text ?? scripture.name}</p>
+        <ProofLink proof={scripture.proof} />
+      </dd>
+    </div>
+  </dl>
+  <TraditionImage id={tradition.id} />
+  <section class="profile-section" aria-labelledby="chronology-title">
+    <h2 id="chronology-title">Хронология</h2>
+    {selfView && <aside>
+      <h3>Как традиция понимает своё происхождение</h3>
+      <p>{selfView.summary}</p>
+      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatYearAd(gap.from)}–{formatYearAd(gap.to)}: {gap.label}.</p>)}
+    </aside>}
+    <p class="chronology-key">Годы от Сотворения мира — по византийской эре; рядом — годы от Рождества Христова.</p>
+    <ol class="chronology">
+      {chronology.map((row) => (
+        <li data-chronology-id={row.id}>
+          <p class="chronology-date">{row.approx && 'ок. '}{yearFromCreation(row.year)} от С. М. · {row.approx && 'ок. '}{formatYearAd(row.year)}{row.year >= 0 && ' от Р. Х.'}</p>
+          {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
+          <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
+          {row.proof && <ProofLink proof={[row.proof]} />}
+        </li>
+      ))}
+    </ol>
+    <a href={withBase('timeline/')}>Открыть общую хронологию</a>
+  </section>
+  {curated ? (
+  <section class="positions" aria-labelledby="positions-title">
+    <h2 id="positions-title">Вера и практика: подробный разбор</h2>
+    <p class="analysis-lead">{curated.lead}</p>
+    <p class="analysis-authority">{curated.authorityNote}{tradition.id === 'jw' && <sup><a href={`#${JW_NOTE_ID}`}>*</a></sup>}</p>
+    <nav class="analysis-contents" aria-label="Содержание разбора">
+      <ol>
+        {curated.groups.map((group) => <li>
+          <a href={`#${group.id}`}>{group.title}</a>
+          <ul>{group.cards.map((card) => <li><a href={`#${card.id}`}>{card.title}</a></li>)}</ul>
+        </li>)}
+      </ol>
+    </nav>
+    {curated.groups.map((group) => <section class="analysis-group" id={group.id}>
+      <h3>{group.title}</h3>
+      {group.cards.map((card) => <AnalysisCard card={card} tradition={tradition.id} traditionName={name} />)}
+    </section>)}
+    {disputes.length > 0 && <section class="analysis-group" id="questions">
+      <h3>Спорные вопросы в сопоставлении с другими традициями</h3>
+      {disputes.map((dispute) => <Dispute dispute={dispute} order={['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}
+    </section>}
+  </section>
+  ) : (
+  <section class="positions" aria-labelledby="positions-title">
+    <h2 id="positions-title">{tradition.id === 'orthodoxy' ? 'Православное учение по темам' : 'Вера и практика: православное сопоставление'}</h2>
+    {TOPIC_ORDER.map((topicId) => {
+      const position = tradition.data.positions.find((item) => item.topic === topicId);
+      if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
+      return (
+        <>
+        {TOPIC_GROUPS.filter((group) => group.topics[0] === topicId).map((group) => <h3>{group.title}</h3>)}
+        <section class="topic" aria-labelledby={`topic-${topicId}`}>
+
+          <h4 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h4>
+            {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
+          {tradition.id !== 'orthodoxy' && <><h5>Православное учение</h5><p>{traditions.find(entry => entry.id === 'orthodoxy')?.data.positions.find(item => item.topic === topicId)?.summary}</p><h5>Учение традиции</h5></>}
+          <MatrixPosition position={position} tradition={tradition.id} expandable />
+          <OrthodoxAssessment tradition={tradition.id} topic={topicId} />
+          {disputes.filter(dispute => dispute.data.topic === topicId).map(dispute => <Dispute dispute={dispute} order={tradition.id === 'orthodoxy' ? ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')] : ['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}
+        </section>
+        </>
+      );
+    })}
+  </section>
+  )}
+  <section id="disputes-title" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>
+  <section id="views-title" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
+
+
+</SectionPage>
+
+<style>
+  .analysis-lead, .analysis-authority { max-width: var(--measure); }
+  .analysis-authority { color: var(--muted); }
+  .analysis-contents ol { margin: 0 0 16px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 32px; }
+  .analysis-contents > ol > li > a { font-weight: 700; }
+  .analysis-contents ul { margin: 6px 0 0; padding-left: 18px; font-size: 15px; }
+  .analysis-group { scroll-margin-top: 24px; }
+  .note { font-size: 14px; color: var(--muted); }
+  .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
+  .chronology {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0;
+    display: grid;
+    gap: 24px;
+  }
+
+  .chronology p { margin: 0 0 6px; }
+  .chronology-key, .chronology-date, .association { color: var(--muted); }
+  .chronology-date { font-weight: 700; }
+  .association { font-size: 14px; }
+
+  .profile-section {
+    max-width: 70ch;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .view-group {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 16px;
+    margin-top: 24px;
+  }
+
+  .view-group h3 { margin: 0; }
+
+  @media (max-width: 600px) {
+    .profile-views :global(.route) { flex-wrap: wrap; }
+    .profile-views :global(.about) { flex-basis: 100%; }
+    .profile-views :global(.chip) { white-space: normal; }
+  }
+
+  .positions {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 32px;
+    max-width: 70ch;
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  .topic h4 {
+    margin: 0 0 16px;
+    font-size: 21px;
+  }
+
+  .profile-facts {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 24px;
+    margin: 24px 0 0;
+    padding: 0 0 0 20px;
+    border-left: 4px solid var(--tradition-color);
+    max-width: 70ch;
+    overflow-wrap: anywhere;
+  }
+
+  dt {
+    margin-bottom: 6px;
+    color: var(--muted);
+    font-size: 14px;
+  }
+
+  dd {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  dd p {
+    margin: 0;
+  }
+</style>

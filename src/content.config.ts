@@ -138,6 +138,9 @@ const matrix = defineCollection({
     }),
     scripture: z.object({
       name: z.string(),
+      // What this tradition's Scripture shares with the Orthodox Bible and
+      // where it differs, for the thesis comparison (owner, 2026-10-01).
+      comparison: z.object({ common: z.string(), difference: z.string(), proof: z.array(proof) }).optional(),
       overview: z.object({
         title: z.string(),
         text: z.string(),
@@ -147,6 +150,9 @@ const matrix = defineCollection({
     }),
     adherents: z.object({
       display: z.boolean().optional(),
+      // Shown beside a figure whose counting scope differs from the site's
+      // classification (EDITORIAL.md principle 11).
+      scopeNote: z.string().optional(),
       value: z.string(),
       year: z.number().int(),
       method: z.string(),
@@ -312,7 +318,68 @@ const sections = defineCollection({
   }),
 });
 
+// Further reading attached to an analysis card. `kind` keeps an individual
+// author or a conference statement from reading as a Church definition
+// (EDITORIAL.md principle 3; docs/tasks/site-m33-jw-analysis.md).
+const furtherReading = z.object({
+  title: z.string(),
+  author: z.string().optional(),
+  url: z.url(),
+  kind: z.enum(['church', 'encyclopedia', 'author', 'conference', 'testimony']),
+});
+
+// One difference in a tradition's detailed analysis, always in the order
+// Church teaching → the tradition's own teaching → Orthodox answer.
+const analysisCard = z
+  .object({
+    id: z.string().regex(/^[a-z0-9-]+$/),
+    title: z.string(),
+    // The comparison topic whose column links to this card.
+    topic: z.enum(TOPIC_ORDER).optional(),
+    church: z.object({ text: z.string(), proof: z.array(proof) }),
+    tradition: z.object({ text: z.string(), proof: z.array(proof) }),
+    answer: z.object({ points: z.array(z.string()).min(1), proof: z.array(proof) }),
+    more: z.array(furtherReading).default([]),
+    // Slugs of the retired pair document's topics this card absorbs.
+    legacy: z.array(z.string()).default([]),
+    status: z.enum(['verified', 'todo']),
+    todo: z.string().optional(),
+  })
+  .superRefine((card, ctx) => {
+    if (card.status === 'todo' && !card.todo) {
+      ctx.addIssue({ code: 'custom', message: `${card.id}: a todo card states what remains to verify` });
+    }
+    if (card.status === 'verified' && (card.church.proof.length === 0 || card.tradition.proof.length === 0)) {
+      ctx.addIssue({ code: 'custom', message: `${card.id}: a verified card needs proof for both positions` });
+    }
+  });
+
+// A tradition's curated analysis, shown on its profile page
+// (docs/tasks/site-m33-jw-analysis.md); one file per tradition in src/data/analyses/.
+const analyses = defineCollection({
+  loader: glob({ pattern: '*.yaml', base: './src/data/analyses' }),
+  schema: z
+    .object({
+      tradition: z.enum(TRADITION_IDS),
+      lead: z.string(),
+      authorityNote: z.string(),
+      groups: z.array(
+        z.object({
+          id: z.string().regex(/^[a-z0-9-]+$/),
+          title: z.string(),
+          cards: z.array(analysisCard),
+        }),
+      ),
+    })
+    .superRefine((analysis, ctx) => {
+      const ids = [...analysis.groups.map((g) => g.id), ...analysis.groups.flatMap((g) => g.cards.map((c) => c.id))];
+      const duplicate = ids.find((id, index) => ids.indexOf(id) !== index);
+      if (duplicate) ctx.addIssue({ code: 'custom', message: `duplicate analysis id: ${duplicate}` });
+    }),
+});
+
 export const collections = {
+  analyses,
   sources,
   translations,
   traditions,

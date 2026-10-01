@@ -8,10 +8,11 @@ import { UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
 interface Props {
   tradition?: string;
   expandable?: boolean;
+  compact?: boolean;
   position: CollectionEntry<'matrix'>['data']['positions'][number];
 }
 
-const { position, expandable = false } = Astro.props;
+const { position, expandable = false, compact = false } = Astro.props;
 const summary = positionSummaryText(position);
 const EvidenceTag = expandable ? 'details' : 'div';
 const quoteText = position.quote?.text_ru ?? position.quote?.text;
@@ -26,8 +27,8 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   ) : (
     <p class="todo-flag">Источник уточняется</p>
   )}
-  {position.doctrine && <p class="unity">{position.doctrine.authority}</p>}
-  <EvidenceTag class="evidence">
+  {!compact && position.doctrine && <p class="unity">{position.doctrine.authority}</p>}
+  {!compact && <EvidenceTag class="evidence">
     {expandable && <summary>Обоснование и цитаты</summary>}
     {position.doctrine?.sections.map(section => <section><h5>{section.title}</h5><p>{section.text}</p></section>)}
   {summary && position.unity?.kind === 'divided' && (
@@ -84,7 +85,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
     </span>
   )}
 
-  </EvidenceTag>
+  </EvidenceTag>}
 </div>
 
 <style>

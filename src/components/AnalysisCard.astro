@@ -1,0 +1,66 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import { withBase } from '../lib/paths';
+import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+
+type Card = CollectionEntry<'analyses'>['data']['groups'][number]['cards'][number];
+interface Props { card: Card; tradition: string; traditionName: string; }
+const { card, tradition, traditionName } = Astro.props;
+
+const KIND_LABEL = {
+  church: 'церковный документ',
+  encyclopedia: 'энциклопедия «Азбуки веры»',
+  author: 'мнение автора',
+  conference: 'итоговый документ конференции',
+  testimony: 'свидетельство',
+} as const;
+const accent = TRADITION_COLOR_TOKEN[tradition as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other';
+const proofs = [...card.church.proof, ...card.tradition.proof, ...card.answer.proof];
+---
+<article class="card" id={card.id} data-topic={card.topic} data-legacy={card.legacy.length > 0 ? card.legacy.join(' ') : undefined}>
+  <h4>{card.title}{card.status === 'todo' && <span class="todo" title={card.todo}>уточняется</span>}</h4>
+  <div class="block church">
+    <p class="label">Учение Церкви</p>
+    <p>{card.church.text}</p>
+  </div>
+  <div class="block tradition" style={`border-left-color:var(${accent})`}>
+    <p class="label">Учение: {traditionName}</p>
+    <p>{card.tradition.text}</p>
+  </div>
+  <div class="block answer">
+    <p class="label">Православный ответ</p>
+    <ul>{card.answer.points.map((point) => <li>{point}</li>)}</ul>
+  </div>
+  {card.more.length > 0 && <div class="more">
+    <p class="label">Подробнее</p>
+    <ul>{card.more.map((item) => <li>
+      <a href={item.url} target="_blank" rel="noopener noreferrer">{item.author ? `${item.author}. ` : ''}{item.title}</a>
+      <span class="kind"> — {KIND_LABEL[item.kind]}</span>
+    </li>)}</ul>
+  </div>}
+  {proofs.length > 0 && <details class="proof">
+    <summary>Источники</summary>
+    <ul>{proofs.map((source) => <li>
+      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+    </li>)}</ul>
+  </details>}
+  {card.topic && <p class="back"><a href={withBase(`compare/?t=orthodoxy,${tradition}#topic-${card.topic}`)}>К сравнению по теме</a></p>}
+</article>
+<style>
+.card { border-top: 1px solid var(--line); padding: 24px 0 8px; scroll-margin-top: 24px; }
+h4 { margin: 0 0 16px; font-size: 22px; }
+.todo { margin-left: 12px; font-size: 13px; font-weight: 400; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; vertical-align: middle; }
+.block { max-width: var(--measure); margin: 0 0 14px; padding-left: 14px; border-left: 3px solid var(--line); }
+.church { border-left-color: var(--t-orthodoxy); }
+.answer { border-left-color: var(--t-orthodoxy); }
+.label { margin: 0 0 4px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+p, li { line-height: 1.6; }
+.block p:last-child { margin-bottom: 0; }
+ul { margin: 0; padding-left: 20px; }
+li + li { margin-top: 4px; }
+.more { max-width: var(--measure); margin: 0 0 12px; font-size: 15px; }
+.kind, .accessed { color: var(--muted); font-size: 14px; }
+.proof { max-width: var(--measure); font-size: 14px; margin-bottom: 8px; }
+summary { cursor: pointer; color: var(--focus); font-weight: 700; }
+.back { font-size: 14px; margin: 8px 0 0; }
+</style>

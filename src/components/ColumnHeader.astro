@@ -4,6 +4,7 @@ interface Props {
   traditions: CollectionEntry<'matrix'>[];
   colorById: Map<string, string>;
 }
+import { withBase } from '../lib/paths';
 const { traditions, colorById } = Astro.props;
 const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy').sort((a, b) => a.data.name.localeCompare(b.data.name, 'ru'));
 ---
@@ -15,11 +16,13 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
       <select data-slot={index} aria-label={`Выберите традицию для колонки ${index + 1}`}>
         {alphabetical.map((tradition) => <option value={tradition.id} selected={tradition.id === (index === 1 ? 'catholicism' : 'jw')} data-color={colorById.get(tradition.id)}>{tradition.data.name}</option>)}
       </select>
+      <a class="profile" data-profile-link={index} href={withBase(`traditions/${index === 1 ? 'catholicism' : 'jw'}/`)}>Страница традиции →</a>
     </label>)}
   </div>
   <noscript>По умолчанию показаны Православие, Католичество и Свидетели Иеговы. Для изменения двух сравнительных колонок включите JavaScript.</noscript>
 </div>
 <script>
+  import { withBase } from '../lib/paths';
   import { onSelection, setSelection } from '../lib/selection-client';
   import { comparisonSlots, replaceComparisonSlot, SLOT_PARAM } from '../lib/comparisonSlots';
   const head = document.querySelector<HTMLElement>('[data-comparison-slots]');
@@ -44,6 +47,8 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
         for (const option of select.options) option.disabled = Boolean(option.value) && slots.some((id, i) => i !== index && id === option.value);
         const color = select.selectedOptions[0]?.dataset.color;
         select.closest<HTMLElement>('.colcell')?.style.setProperty('--slot-color', color ? `var(${color})` : 'var(--line)');
+        const profile = head.querySelector<HTMLAnchorElement>(`[data-profile-link="${index}"]`);
+        if (profile) profile.href = withBase(`traditions/${slots[index]}/`);
       });
     });
     selects.forEach((select) => select.addEventListener('change', () => {
@@ -63,6 +68,7 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
   .colcell + .colcell { border-left: 1px solid var(--line); }
   .foundation { background: color-mix(in srgb, var(--t-orthodoxy) 10%, var(--surface)); }
   .colcell span { font-size: 13px; color: var(--muted); }
+  .profile { font-size: 14px; }
   .fixed { display: flex; align-items: center; padding: 12px 0; font-size: 18px; min-height: 48px; }
   select { width: 100%; min-width: 0; padding: 12px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
   select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }

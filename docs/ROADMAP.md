@@ -9,6 +9,8 @@ task's state.
 
 - **M26 — authorized delivery** (`docs/tasks/site-m26-orthodox-edition.md`): implemented and verified, with 15 foundations, 105 assessments, 13 disputed questions and 12 legacy topics recorded in the correction register. Orthodoxy is fixed first; Catholicism and Jehovah's Witnesses are the default comparison choices. The owner authorized one consolidated commit and push on 2026-09-27. The delivery gate passed 114 tests; the existing GitHub Pages workflow records deployment success separately. Independent theological acceptance is not claimed.
 
+- **M33 — detailed analysis of Jehovah's Witnesses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): implemented 2026-10-01, awaiting owner review and commit. The Jehovah's Witnesses page (`/traditions/jw/`) carries 35 curated cards covering all 15 comparison topics and every retired pair topic (one card, «Проповедь и отчёты», is `todo`). The comparison is theses only, every column linking to the tradition's page; disputes moved to those pages. Navigation: «Религии мира» (home, opening with the Orthodox foundation block), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
+
 ## Current baseline
 
 The earlier Bible guide, comparison reading changes and M25 atlas work were
@@ -36,6 +38,12 @@ and the canonical preview were preserved. See the M26 brief for verification.
   `https://github.com/vil4max/scripture-science.git`; the site uses GitHub Pages.
   The current edition has explicit commit/push authorization. Later changes
   retain their own delivery authorization boundary.
+
+## Backlog
+
+- Curated analysis cards (M33 format) for Catholicism, Protestantism,
+  Adventists, Latter-day Saints, Islam and Judaism; their profiles keep the
+  topic-by-topic positions with evidence until then.
 
 ## Known issues (not scheduled)
 

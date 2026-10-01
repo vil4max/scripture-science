@@ -7,14 +7,15 @@
 // with every tradition shown, each is a row with the name on the left and the
 // position in one wide column. docs/tasks/site-m14-selection.md W2: with the
 // reader's choice of two or three traditions, only theirs are shown, side by
-// side, one column each in the reader's order. Supporting pair material
-// is embedded under the corresponding topics.
+// side, one column each in the reader's order. The comparison shows
+// theses; evidence, arguments and disputed questions live on each
+// tradition's profile page
+// (owner, 2026-10-01; docs/tasks/site-m33-jw-analysis.md).
 import type { CollectionEntry } from 'astro:content';
-import PairSupplement from './PairSupplement.astro';
-import Dispute from './Dispute.astro';
 import MatrixPosition from './MatrixPosition.astro';
 import OrthodoxAssessment from './OrthodoxAssessment.astro';
 import { DEFAULT_SELECTION } from '../lib/selection';
+import { hasAnalysisPage, profileHref } from '../lib/analysis';
 import { JW_NOTE_ID } from '../lib/jwNote';
 import { TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU } from '../lib/rules';
 
@@ -22,13 +23,10 @@ interface Props {
   traditions: CollectionEntry<'matrix'>[];
   colorById: Map<string, string>;
   withJwFootnote?: boolean;
-  disputes?: CollectionEntry<'disputes'>[];
 }
 
-const { traditions, colorById, withJwFootnote = false, disputes = [] } = Astro.props;
+const { traditions, colorById, withJwFootnote = false } = Astro.props;
 const jwIndex = traditions.findIndex((t) => t.id === 'jw');
-const order = traditions.map((t) => t.id);
-const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 ---
 
 <div class="comparison" data-comparison>
@@ -61,18 +59,13 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
                       )}
                     </p>
                     <p class="reading-label">{tradition.id === 'orthodoxy' ? 'Православное учение' : 'Учение традиции'}</p>
-                    <MatrixPosition position={position} tradition={tradition.id} expandable />
-                    <OrthodoxAssessment tradition={tradition.id} topic={topicId} />
+                    <MatrixPosition position={position} tradition={tradition.id} compact />
+                    {tradition.id === 'orthodoxy' && <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${topicId}`)}>Обоснование →</a></p>}
+                    <OrthodoxAssessment tradition={tradition.id} topic={topicId} compact={hasAnalysisPage(tradition.id)} />
                   </article>
                 );
               })}
             </div>
-            <PairSupplement area={topicId} />
-            {disputes
-              .filter((dispute) => dispute.data.topic === topicId)
-              .map((dispute) => (
-                <Dispute dispute={dispute} comparison order={order} namesById={namesById} colorById={colorById} />
-              ))}
           </section>
           </>
         ))
@@ -86,6 +79,7 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 <style>
   .reading-label { margin: 0; font-size: 14px; font-weight: 700; color: var(--muted); }
   .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
+  .foundation-link { font-size: 15px; margin: 8px 0 0; }
   .topic-group { margin: 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 26px; scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px); }
 
   .topic[hidden] { display: none; }
@@ -191,33 +185,15 @@ const namesById = new Map(traditions.map((t) => [t.id, t.data.name]));
 
 <script>
   import { comparisonSlots, SLOT_PARAM } from '../lib/comparisonSlots';
-  import { comparisonQuestionView } from '../lib/disputes';
   import { onSelection } from '../lib/selection-client';
 
   // docs/tasks/site-m14-selection.md W2: follow the reader's choice.
   const root = document.querySelector<HTMLElement>('[data-comparison]');
   if (root) {
     const grids = Array.from(root.querySelectorAll<HTMLElement>('.topic .grid'));
-    const disputes = Array.from(root.querySelectorAll<HTMLElement>('[data-dispute]'));
-    const sidesOf = (dispute: HTMLElement) => ({
-      challengers: (dispute.dataset.challengers ?? '').split(' ').filter(Boolean),
-      answerers: (dispute.dataset.answerers ?? '').split(' ').filter(Boolean),
-    });
     onSelection((ids) => {
       const slotMode = Boolean(document.querySelector('[data-comparison-slots]'));
       const slots = comparisonSlots(ids, new URLSearchParams(location.search).get(SLOT_PARAM));
-      for (const dispute of disputes) {
-        const view = comparisonQuestionView(sidesOf(dispute), ids);
-        dispute.hidden = !view.visible;
-        const columns = slotMode && ids.length >= 2;
-        for (const side of dispute.querySelectorAll<HTMLElement>('.side')) side.classList.toggle('slot-columns', columns);
-        for (const part of dispute.querySelectorAll<HTMLElement>('[data-trad]')) {
-          part.hidden = !view.shown.includes(part.dataset.trad ?? '');
-          const index = slots.indexOf(part.dataset.trad ?? '');
-          part.style.gridColumn = columns && index >= 0 ? String(index + 1) : '';
-          part.style.gridRow = columns ? '1' : '';
-        }
-      }
       for (const grid of grids) {
         for (const block of grid.querySelectorAll<HTMLElement>('.block')) {
           const index = (slotMode ? slots : ids).indexOf(block.dataset.trad ?? '');

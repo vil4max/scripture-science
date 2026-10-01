@@ -1,0 +1,17 @@
+---
+import { withBase } from '../../lib/paths';
+const destination = withBase('orthodoxy/');
+---
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <title>Православная вера</title>
+    <link rel="canonical" href={destination} />
+    <script is:inline define:vars={{ destination }}>
+      const target = new URL(destination, location.origin);
+      target.hash = location.hash;
+      location.replace(target.href);
+    </script>
+  </head>
+  <body><p><a href={destination}>Православная вера</a></p></body>
+</html>

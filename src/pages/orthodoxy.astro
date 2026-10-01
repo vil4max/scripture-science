@@ -1,0 +1,8 @@
+---
+import TraditionProfile from '../components/TraditionProfile.astro';
+import { getOrderedMatrix } from '../lib/content';
+
+const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'orthodoxy');
+if (!orthodoxy) throw new Error('Missing matrix entry for Orthodoxy');
+---
+<TraditionProfile tradition={orthodoxy} title="Православная вера" />

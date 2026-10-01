@@ -12,11 +12,15 @@
 import ThemeSwitch from './ThemeSwitch.astro';
 import { withBase } from '../lib/paths';
 
+// Orthodoxy is the site's foundation, so it has its own item; the other
+// traditions' pages open from «Религии мира» and the comparison
+// (owner, 2026-10-01).
 const sections = [
-  { path: '', label: 'Обзор' },
+  { path: '', label: 'Религии мира' },
+  { path: 'orthodoxy/', label: 'Православная вера' },
+  { path: 'compare/', label: 'Сравнение' },
   { path: 'timeline/', label: 'История' },
   { path: 'bible/', label: 'Священное Писание' },
-  { path: 'compare/', label: 'Сравнение' },
 ];
 // Reference pages sit at the bottom of the sidebar (owner, 2026-09-26:
 // «глоссарий источники это доп инфо которую можно опустить вниз»).
@@ -25,13 +29,15 @@ const reference = [
 ];
 
 // Compare paths with one trailing slash, so "/religion-map" and
-// "/religion-map/" both mark «Обзор» as current.
+// "/religion-map/" both mark «Религии мира» as current.
 const normalise = (p: string) => p.replace(/\/*$/, '/');
 const here = normalise(Astro.url.pathname);
 // The detailed pair documents are part of «Сравнение»
 // (owner, 2026-09-26: one comparison section).
 const isCurrent = (path: string) =>
-  normalise(withBase(path)) === here || (path === 'compare/' && here.startsWith(normalise(withBase('pairs/'))));
+  normalise(withBase(path)) === here ||
+  (path === 'compare/' && here.startsWith(normalise(withBase('pairs/')))) ||
+  (path === '' && here.startsWith(normalise(withBase('traditions/'))));
 ---
 
 <aside class="site-side">

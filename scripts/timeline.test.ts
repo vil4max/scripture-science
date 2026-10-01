@@ -42,7 +42,8 @@ test('historical rows retain branch spans after religious epochs are separated',
   assert.ok(historyHtml.includes('без нулевого года'));
   assert.doesNotMatch(historyHtml, /divider era|Начало нашей эры — отсчёт/);
   for (const view of lineage.selfViews) {
-    const profile = readFileSync(`dist/traditions/${view.tradition}/index.html`, 'utf8');
+    const page = view.tradition === 'orthodoxy' ? 'orthodoxy' : `traditions/${view.tradition}`;
+    const profile = readFileSync(`dist/${page}/index.html`, 'utf8');
     assert.ok(profile.includes(view.summary), view.tradition);
   }
 });
