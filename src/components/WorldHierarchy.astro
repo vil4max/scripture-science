@@ -20,16 +20,27 @@ const worldShare = (n: number) => (n / data.population) * 100;
 // 3:1 on the dark surface, relieved by the labelled table.
 const STACK_ORDER = ['christians', 'muslims', 'unaffiliated', 'hindus', 'buddhists', 'other-religions', 'jews', 'folk'];
 const stack = STACK_ORDER.map((id) => data.groups.find((group) => group.id === id)!);
+// Sub-rows: Christian branches (their estimates overlap, data.method: listed,
+// never summed) and the agnostics and atheists that make up the nonreligious.
 const rows = [...data.groups].sort((a, b) => b.count - a.count).map((group) => ({
   ...group,
-  // Christian branch estimates overlap (data.method): listed, never summed.
-  branches: group.id === 'christians' ? [...data.branches].sort((a, b) => b.count - a.count) : [],
+  branches: group.id === 'christians'
+    ? [...data.branches].sort((a, b) => b.count - a.count)
+    : (group.subgroups ?? []).map((sub) => ({ ...sub, color: group.color })),
 }));
 const largest = rows[0].count;
+// Christian confessions under the Christian segment. Branch estimates
+// overlap, so the bar shows their proportions, not disjoint counts. Order
+// keeps neighbours apart (validator: light pass; dark protan dE 6.1, so
+// every wide segment is labelled and the table lists all of them).
+const CONFESSION_ORDER = ['orthodox', 'catholics', 'independents', 'protestants', 'unaffiliated-christians'];
+const confessions = CONFESSION_ORDER.map((id) => data.branches.find((branch) => branch.id === id)!);
+const christians = data.groups.find((group) => group.id === 'christians')!;
+const christianWidth = (christians.count / data.population) * 100;
 const describe = (label: string, n: number) => `${label}: около ${count(n)}, ${percent(worldShare(n))} населения мира`;
 ---
 <section class="world-hierarchy" aria-labelledby="hierarchy-title">
-  <h2 id="hierarchy-title">Сколько последователей у религий · ≈ 2026</h2>
+  <h2 id="hierarchy-title">Религиозный состав населения мира, 2026 (оценка)</h2>
   <div class="headline">
     <p class="figure-label">Всё население мира, 2026 год</p>
     <p class="figure">≈ {count(data.population)} человек</p>
@@ -39,6 +50,14 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; числа — в таблице ниже">
     {stack.map((group) => <span class="segment" style={`flex-grow:${group.count};background:var(${group.color})`} title={describe(group.label, group.count)} data-hierarchy-id={group.id}></span>)}
   </div>
+  <div class="zoom" style={`--christian-width:${christianWidth}%;--christian-color:var(${christians.color})`} aria-hidden="true"></div>
+  <div class="world-bar confessions" role="img" aria-label="Христиане по конфессиям: православные, католики, независимые церкви, протестанты, вне церковных объединений; числа — в таблице ниже">
+    {confessions.map((branch) => <span class="segment" style={`flex-grow:${branch.count};background:var(${branch.color})`} title={describe(branch.label, branch.count)} data-hierarchy-id={branch.id}></span>)}
+  </div>
+  <div class="confession-labels" aria-hidden="true">
+    {confessions.map((branch) => <span style={`flex-grow:${branch.count}`}>{branch.share >= 8 && <><strong>{branch.label}</strong> ≈ {count(branch.count)}</>}</span>)}
+  </div>
+  <p class="confessions-title">Нижняя полоса — христиане по конфессиям, в пропорции ветвей (их оценки частично пересекаются).</p>
 
   <table class="counts">
     <caption class="visually-hidden">Численность последователей религий и их доля населения мира, 2026 год</caption>
@@ -61,7 +80,7 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
     </tbody>
     <tfoot><tr><th scope="row">Население мира</th><td class="bar-col"></td><td>≈ {count(data.population)}</td><td>100 %</td></tr></tfoot>
   </table>
-  <p class="note">Христианские ветви показаны внутри христиан. Их оценки частично пересекаются — часть людей учтена в нескольких ветвях, — поэтому сумма ветвей больше общего числа христиан. Источник: World Christian Database, Status of Global Christianity 2026; <a href={withBase('sources/#world-methodology')}>способ подсчёта</a>.</p>
+  <p class="note">Христианские ветви показаны внутри христиан, агностики и атеисты — внутри нерелигиозных. Оценки христианских ветвей частично пересекаются — часть людей учтена в нескольких ветвях, — поэтому сумма ветвей больше общего числа христиан. Источник: World Christian Database, Status of Global Christianity 2026; <a href={withBase('sources/#world-methodology')}>способ подсчёта</a>.</p>
 </section>
 
 <style>
@@ -71,7 +90,12 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   .figure { margin: 4px 0 0; font-size: 40px; font-weight: 700; line-height: 1.1; }
   .figure-label { margin: 0; color: var(--muted); font-size: 16px; }
   .split { margin: 0 0 10px; }
-  .world-bar { display: flex; gap: 2px; height: 28px; margin-bottom: 24px; }
+  .world-bar { display: flex; gap: 2px; height: 28px; }
+  .zoom { height: 32px; margin: 2px 0; clip-path: polygon(0 0, var(--christian-width) 0, 100% 100%, 0 100%); background: color-mix(in srgb, var(--christian-color) 45%, transparent); }
+  .confessions-title { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
+  .confession-labels { display: flex; gap: 2px; margin: 6px 0 8px; font-size: 14px; line-height: 1.3; color: var(--muted); }
+  .confession-labels span { flex-basis: 0; min-width: 0; }
+  .confession-labels strong { display: block; color: var(--ink); font-weight: 700; }
   .segment { min-width: 2px; flex-basis: 0; }
   .segment:first-child { border-radius: 4px 0 0 4px; }
   .segment:last-child { border-radius: 0 4px 4px 0; }

@@ -15,11 +15,15 @@ test('2026 estimates keep population totals and explicitly normalize Christian w
   assert.match(data.method, /schematic proportions/);
   assert.equal(new Set([...data.groups, ...data.branches].map((g) => g.id)).size, 13);
   for (const group of data.groups) assert.equal(group.share, group.count / data.population * 100);
+  const nonreligious = data.groups.find((g) => g.id === 'unaffiliated')!;
+  // WCD rounds each row to thousands, so agnostics + atheists may differ from
+  // the nonreligionists row by one rounding step.
+  assert.ok(Math.abs((nonreligious.subgroups ?? []).reduce((sum, g) => sum + g.count, 0) - nonreligious.count) <= 1000);
   for (const branch of data.branches) {
     assert.equal(branch.share, branch.count / data.branchWeightTotal * 100);
     assert.ok(branch.proof.some((p) => p.excerpt === branch.count.toLocaleString('en-US')));
   }
-  for (const proof of [...data.proof, ...data.groups.flatMap((g) => g.proof), ...data.branches.flatMap((g) => g.proof)]) {
+  for (const proof of [...data.proof, ...data.groups.flatMap((g) => [...g.proof, ...(g.subgroups ?? []).flatMap((s) => s.proof)]), ...data.branches.flatMap((g) => g.proof)]) {
     assert.ok(proof.excerpt.split(/\s+/).length <= 25);
     assert.match(proof.url, /Status-of-Global-Christianity-2026/);
   }

@@ -39,7 +39,7 @@
     },
     {
       "id": "unaffiliated",
-      "label": "Без религиозной принадлежности",
+      "label": "Нерелигиозные: агностики и атеисты",
       "share": 10.986680847034423,
       "color": "--world-unaffiliated",
       "count": 911969000,
@@ -50,6 +50,36 @@
           "tier": "reference",
           "accessed": "2026-09-26",
           "excerpt": "911,969,000"
+        }
+      ],
+      "subgroups": [
+        {
+          "id": "agnostics",
+          "label": "Агностики",
+          "count": 764998000,
+          "proof": [
+            {
+              "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+              "title": "World Christian Database — Status of Global Christianity 2026, row 23, 2026 column",
+              "tier": "reference",
+              "accessed": "2026-10-01",
+              "excerpt": "764,998,000"
+            }
+          ]
+        },
+        {
+          "id": "atheists",
+          "label": "Атеисты",
+          "count": 146970000,
+          "proof": [
+            {
+              "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
+              "title": "World Christian Database — Status of Global Christianity 2026, row 24, 2026 column",
+              "tier": "reference",
+              "accessed": "2026-10-01",
+              "excerpt": "146,970,000"
+            }
+          ]
         }
       ]
     },
