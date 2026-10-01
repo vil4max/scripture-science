@@ -52,6 +52,7 @@ const isCurrent = (path: string) =>
 
 <aside class="site-side">
   <div class="side-inner">
+    <a class="search-link" href={withBase('search/')} data-carry-selection>Найти вопрос</a>
     <a class="brand" href={withBase()}>Православный взгляд на религии мира</a>
     <div class="site-nav" role="navigation" aria-label="Разделы сайта">
       <ul>
@@ -117,6 +118,8 @@ const isCurrent = (path: string) =>
     gap: 20px;
     padding: 24px 20px;
   }
+
+  .search-link { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; text-decoration: none; }
 
   .brand {
     font-family: 'PT Serif', Georgia, serif;

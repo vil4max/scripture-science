@@ -4,6 +4,7 @@
 // scripts are ordered. The choice lives in the address (shareable), is
 // remembered in localStorage, and is carried by links marked
 // data-carry-selection.
+import { hrefWithReadingContext } from './readingContext.ts';
 import { hrefWithSelection, parseSelection, SELECTION_PARAM } from './selection.ts';
 
 const STORAGE_KEY = 'traditions';
@@ -34,7 +35,7 @@ function syncPage(ids: string[]): void {
   const url = hrefWithSelection(location.href, ids);
   if (url !== location.href) history.replaceState(history.state, '', url);
   document.querySelectorAll<HTMLAnchorElement>('a[data-carry-selection]').forEach((a) => {
-    a.href = hrefWithSelection(a.getAttribute('href') ?? '', ids, location.origin);
+    a.href = hrefWithReadingContext(a.getAttribute('href') ?? '', ids, location.href);
   });
 }
 

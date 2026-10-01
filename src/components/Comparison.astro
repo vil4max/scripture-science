@@ -60,7 +60,7 @@ const jwIndex = traditions.findIndex((t) => t.id === 'jw');
                     </p>
                     <p class="reading-label">{tradition.id === 'orthodoxy' ? 'Православное учение' : 'Учение традиции'}</p>
                     <MatrixPosition position={position} tradition={tradition.id} compact />
-                    {tradition.id === 'orthodoxy' && <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${topicId}`)}>Обоснование →</a></p>}
+                    {tradition.id === 'orthodoxy' && <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${topicId}`)} data-carry-selection>Обоснование →</a></p>}
                     <OrthodoxAssessment tradition={tradition.id} topic={topicId} compact={hasAnalysisPage(tradition.id)} />
                   </article>
                 );

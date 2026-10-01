@@ -23,6 +23,7 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
 </div>
 <script>
   import { withBase } from '../lib/paths';
+  import { hrefWithReadingContext } from '../lib/readingContext';
   import { onSelection, setSelection } from '../lib/selection-client';
   import { comparisonSlots, replaceComparisonSlot, SLOT_PARAM } from '../lib/comparisonSlots';
   const head = document.querySelector<HTMLElement>('[data-comparison-slots]');
@@ -48,7 +49,7 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
         const color = select.selectedOptions[0]?.dataset.color;
         select.closest<HTMLElement>('.colcell')?.style.setProperty('--slot-color', color ? `var(${color})` : 'var(--line)');
         const profile = head.querySelector<HTMLAnchorElement>(`[data-profile-link="${index}"]`);
-        if (profile) profile.href = withBase(`traditions/${slots[index]}/`);
+        if (profile) profile.href = hrefWithReadingContext(withBase(`traditions/${slots[index]}/`), slots, location.href);
       });
     });
     selects.forEach((select) => select.addEventListener('change', () => {

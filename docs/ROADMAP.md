@@ -7,9 +7,9 @@ task's state.
 
 ## In progress
 
-- **Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`): owner authorized sequential implementation, verification, commits and pushes on 2026-10-01. Orthodox teaching remains the foundation; search, reading navigation, source discovery and editorial context are the next iterations.
+- **Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`): owner authorized sequential implementation, verification, commits and pushes on 2026-10-01. Orthodox teaching remains the foundation; question search and reading navigation are implemented and verified (148 Node tests, 17 pages); source discovery and editorial context follow.
 
-- **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01, not pushed. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
+- **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01 and included in the owner-authorized push. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
 
 ## Current baseline
 

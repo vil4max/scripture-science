@@ -9,7 +9,7 @@ const analysisCards = record && Astro.props.analysisLink !== false ? await analy
 {record && <div class="assessment" data-assessment={record.id}>
   <p><strong>В чём отличие</strong></p><p>{record.difference}</p>
   <p><strong>Православный ответ</strong></p><p>{record.response}</p>
-  {analysisCards.length > 0 && <p class="analysis">Подробный разбор: {analysisCards.map((card, index) => <>{index > 0 && ', '}<a href={card.href}>{card.title}</a></>)} →</p>}
+  {analysisCards.length > 0 && <p class="analysis">Подробный разбор: {analysisCards.map((card, index) => <>{index > 0 && ', '}<a href={card.href} data-carry-selection>{card.title}</a></>)} →</p>}
   {!Astro.props.compact && <details><summary>Основание ответа</summary>
     <p class="authority">Сопоставление редакции на основании: {record.authority}</p>
     {record.proof.map(source => <p><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></p>)}

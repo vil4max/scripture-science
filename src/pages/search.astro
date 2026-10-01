@@ -1,0 +1,102 @@
+---
+import SectionPage from '../layouts/SectionPage.astro';
+import { getAnalyses, profileHref } from '../lib/analysis';
+import { getOrderedMatrix } from '../lib/content';
+import { TOPIC_ORDER, TOPIC_TITLES_RU, type TopicId } from '../lib/rules';
+import { withBase } from '../lib/paths';
+
+const traditions = await getOrderedMatrix();
+const names = new Map(traditions.map((entry) => [entry.id, entry.data.name]));
+const orthodox = traditions.find((entry) => entry.id === 'orthodoxy')!;
+const questions = [
+  ...orthodox.data.positions.map((position) => ({
+    title: TOPIC_TITLES_RU[position.topic], topic: position.topic, tradition: 'orthodoxy',
+    href: profileHref('orthodoxy', `topic-${position.topic}`),
+    text: position.summary, search: position.summary, pending: position.status === 'todo',
+  })),
+  ...(await getAnalyses()).flatMap(({ data }) => data.groups.flatMap((group) => group.cards.map((card) => ({
+    title: card.title, topic: card.topic, tradition: data.tradition,
+    href: profileHref(data.tradition, card.id), text: card.tradition.text,
+    search: [group.title, card.church.text, card.tradition.text, ...card.answer.points].join(' '),
+    pending: card.status === 'todo',
+  })))),
+];
+---
+<SectionPage title="Найти вопрос" lead="Православное учение, самоописание других традиций и православный ответ — по вопросам.">
+  <form role="search" class="search-form" action={withBase('search/')}>
+    <label class="query">Вопрос или слово
+      <input type="search" name="q" placeholder="Например: Троица, иконы, крещение" autocomplete="off" />
+    </label>
+    <label>Раздел
+      <select name="tradition"><option value="">Все разделы</option>{traditions.map((entry) => <option value={entry.id}>{entry.data.name}</option>)}</select>
+    </label>
+    <label>Тема
+      <select name="topic"><option value="">Все темы</option>{TOPIC_ORDER.map((topic) => <option value={topic}>{TOPIC_TITLES_RU[topic]}</option>)}</select>
+    </label>
+    <button type="submit">Найти</button><button type="reset">Сбросить</button>
+  </form>
+  <p class="result-count" role="status" aria-live="polite">Вопросов: {questions.length}</p>
+  <p data-search-empty hidden>Ничего не найдено. Попробуйте одно ключевое слово или выберите другую тему.</p>
+  <noscript>Поиск требует JavaScript. Ниже доступны ссылки на все вопросы; также можно использовать поиск браузера.</noscript>
+  <ol class="results">
+    {questions.map((question) => <li data-question data-tradition={question.tradition} data-topic={question.topic}
+      data-search={[question.title, names.get(question.tradition), TOPIC_TITLES_RU[question.topic as TopicId], question.search].join(' ')}>
+      <p class="context">{question.tradition === 'orthodoxy' ? 'Православное основание' : `Православный разбор: ${names.get(question.tradition)}`} · {TOPIC_TITLES_RU[question.topic as TopicId]}</p>
+      <h2><a href={question.href} data-carry-selection>{question.title}</a></h2>
+      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Церкви: ' : 'Самоописание традиции: '}</strong>{question.text}</p>
+      {question.pending && <p class="pending">Есть сведения, требующие уточнения; пояснение — в разборе.</p>}
+    </li>)}
+  </ol>
+</SectionPage>
+<script>
+  import { matchesSearch } from '../lib/search';
+  const form = document.querySelector<HTMLFormElement>('.search-form')!;
+  const query = form.elements.namedItem('q') as HTMLInputElement;
+  const tradition = form.elements.namedItem('tradition') as HTMLSelectElement;
+  const topic = form.elements.namedItem('topic') as HTMLSelectElement;
+  const rows = [...document.querySelectorAll<HTMLElement>('[data-question]')];
+  const update = (writeUrl = true) => {
+    let count = 0;
+    for (const row of rows) {
+      const visible = (!tradition.value || row.dataset.tradition === tradition.value)
+        && (!topic.value || row.dataset.topic === topic.value) && matchesSearch(row.dataset.search ?? '', query.value);
+      row.hidden = !visible;
+      if (visible) count++;
+    }
+    document.querySelector('.result-count')!.textContent = `Найдено вопросов: ${count}`;
+    document.querySelector<HTMLElement>('[data-search-empty]')!.hidden = count > 0;
+    if (writeUrl) {
+      const url = new URL(location.href);
+      for (const control of [query, tradition, topic]) {
+        if (control.value.trim()) url.searchParams.set(control.name, control.value.trim());
+        else url.searchParams.delete(control.name);
+      }
+      history.replaceState(history.state, '', url);
+    }
+  };
+  const restore = () => {
+    const params = new URLSearchParams(location.search);
+    for (const control of [query, tradition, topic]) control.value = params.get(control.name) ?? '';
+    update(false);
+  };
+  form.addEventListener('input', () => update());
+  form.addEventListener('submit', (event) => { event.preventDefault(); update(); });
+  form.addEventListener('reset', () => { query.value = ''; tradition.value = ''; topic.value = ''; update(); });
+  window.addEventListener('popstate', restore);
+  restore();
+</script>
+<style>
+  .search-form { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 20px; border: 1px solid var(--line); background: var(--surface); border-radius: 10px; }
+  label { display: grid; gap: 6px; font-size: 15px; }
+  .query { flex: 1 1 100%; }
+  input, select, button { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 10px 12px; }
+  button { cursor: pointer; }
+  button[type='submit'] { border-color: var(--focus); }
+  .result-count { margin: 0; color: var(--muted); }
+  .results { list-style: none; margin: 0; padding: 0; display: grid; gap: 24px; }
+  .results li { border-top: 1px solid var(--line); padding-top: 20px; }
+  .results li[hidden] { display: none; }
+  .results h2 { font-size: 23px; }
+  .context, .pending { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
+  .snippet { max-width: var(--measure); margin: 8px 0 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
+</style>

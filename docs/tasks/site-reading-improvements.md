@@ -62,3 +62,16 @@ The initial cleanup passed 145 Node tests and two Python tests, with 16 built
 pages and no Astro diagnostics. Migration fidelity remains 1028 source text
 nodes and 14 historical corrections. The completed Sources baseline is
 5,802,055 HTML bytes (515,149 bytes with local gzip compression).
+
+### Iteration 2 — question navigation
+
+Implemented a static search page with 207 question links, topic/tradition
+filters, Russian word normalization and an explicit no-match state. Detailed
+analyses have a sticky local contents list, active question and previous/next
+links. Reading links carry both selection and slot placement.
+
+Validation: npm run verify under Node.js 26 passed 148 Node tests, two Python
+tests and 17 pages, with no Astro diagnostics. Browser checks at 1280 px
+(light) and 1440 px (dark) confirmed search, source disclosure, active contents
+and selection preservation through question navigation, return and reload.
+Iteration 1 was committed as 83121ab and pushed successfully.

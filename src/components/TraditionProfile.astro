@@ -31,6 +31,7 @@ const { name, full_name, since, adherents, scripture } = tradition.data;
 // Curated analysis cards replace the topic-by-topic positions
 // (docs/tasks/site-m33-jw-analysis.md).
 const curated = (await getAnalyses()).find((entry) => entry.data.tradition === tradition.id)?.data;
+const cards = curated?.groups.flatMap((group) => group.cards) ?? [];
 const family = getFamilyByTradition(tradition.id);
 const color = TRADITION_COLOR_TOKEN[tradition.data.id];
 const traditions = await getOrderedMatrix();
@@ -104,11 +105,14 @@ const showsJwNote = tradition.id === 'jw';
     <a href={withBase('timeline/')}>Открыть общую хронологию</a>
   </section>
   {curated ? (
-  <section class="positions" aria-labelledby="positions-title">
+  <section class="positions curated" aria-labelledby="positions-title">
     <h2 id="positions-title">Вера и практика: подробный разбор</h2>
     <p class="analysis-lead">{curated.lead}</p>
     <p class="analysis-authority">{curated.authorityNote}{tradition.id === 'jw' && <sup><a href={`#${JW_NOTE_ID}`}>*</a></sup>}</p>
+    <div class="reading-layout">
     <nav class="analysis-contents" aria-label="Содержание разбора">
+      <p class="contents-label">В этом разборе</p>
+      <p class="reading-progress" aria-live="off">Вопросов: {cards.length}</p>
       <ol>
         {curated.groups.map((group) => <li>
           <a href={`#${group.id}`}>{group.title}</a>
@@ -116,14 +120,17 @@ const showsJwNote = tradition.id === 'jw';
         </li>)}
       </ol>
     </nav>
+    <div class="reading-body">
     {curated.groups.map((group) => <section class="analysis-group" id={group.id}>
       <h3>{group.title}</h3>
-      {group.cards.map((card) => <AnalysisCard card={card} tradition={tradition.id} traditionName={name} />)}
+      {group.cards.map((card) => <AnalysisCard card={card} tradition={tradition.id} traditionName={name} previous={cards[cards.indexOf(card) - 1]} next={cards[cards.indexOf(card) + 1]} />)}
     </section>)}
     {disputes.length > 0 && <section class="analysis-group" id="questions">
       <h3>Спорные вопросы в сопоставлении с другими традициями</h3>
       {disputes.map((dispute) => <Dispute dispute={dispute} order={['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}
     </section>}
+    </div>
+    </div>
   </section>
   ) : (
   <section class="positions" aria-labelledby="positions-title">
@@ -156,9 +163,18 @@ const showsJwNote = tradition.id === 'jw';
 <style>
   .analysis-lead, .analysis-authority { max-width: var(--measure); }
   .analysis-authority { color: var(--muted); }
-  .analysis-contents ol { margin: 0 0 16px; padding: 0; list-style: none; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px 32px; }
+  .positions.curated { max-width: none; }
+  .reading-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: start; }
+  .reading-body { grid-column: 1; grid-row: 1; min-width: 0; }
+  .analysis-contents { grid-column: 2; grid-row: 1; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; border-left: 1px solid var(--line); padding-left: 16px; font-size: 14px; }
+  .analysis-contents ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 18px; }
+  .contents-label { font-weight: 700; margin: 0; }
+  .reading-progress { color: var(--muted); margin: 4px 0 16px; font-size: 13px; }
+  .analysis-contents a { display: inline-block; padding: 3px 0; text-decoration: none; }
+  .analysis-contents a:hover { text-decoration: underline; }
+  .analysis-contents a[aria-current='location'] { color: var(--focus); font-weight: 700; text-decoration: underline; text-underline-offset: 3px; }
   .analysis-contents > ol > li > a { font-weight: 700; }
-  .analysis-contents ul { margin: 6px 0 0; padding-left: 18px; font-size: 15px; }
+  .analysis-contents ul { margin: 6px 0 0; padding-left: 18px; font-size: 14px; }
   .analysis-group { scroll-margin-top: 24px; }
   .note { font-size: 14px; color: var(--muted); }
   .topic-intro { margin: 0 0 20px; color: var(--muted); font-size: 15px; max-width: 80ch; }
@@ -236,3 +252,34 @@ const showsJwNote = tradition.id === 'jw';
     margin: 0;
   }
 </style>
+
+<script>
+  const contents = document.querySelector<HTMLElement>('.analysis-contents');
+  if (contents) {
+    const cards = [...document.querySelectorAll<HTMLElement>('.reading-body article.card')];
+    const links = [...contents.querySelectorAll<HTMLAnchorElement>('a')];
+    let current = '';
+    let scheduled = false;
+    const update = () => {
+      scheduled = false;
+      const active = cards.findLast((card) => card.getBoundingClientRect().top <= 120) ?? cards[0];
+      if (!active || active.id === current) return;
+      current = active.id;
+      links.forEach((link) => {
+        if (link.hash === `#${current}`) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+      contents.querySelector('.reading-progress')!.textContent = `Вопрос ${cards.indexOf(active) + 1} из ${cards.length}`;
+      const link = links.find((link) => link.hash === `#${current}`);
+      if (link) {
+        const box = contents.getBoundingClientRect();
+        const item = link.getBoundingClientRect();
+        if (item.top < box.top || item.bottom > box.bottom) contents.scrollTop += item.top - box.top - 60;
+      }
+    };
+    window.addEventListener('scroll', () => {
+      if (!scheduled) { scheduled = true; requestAnimationFrame(update); }
+    }, { passive: true });
+    update();
+  }
+</script>
