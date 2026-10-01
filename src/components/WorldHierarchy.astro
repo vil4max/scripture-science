@@ -47,8 +47,12 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   </div>
   <p class="split">Как оно делится по религиям — от всего населения мира (100 %):</p>
 
-  <div class="bracket-row" aria-hidden="true">
-    <span class="bracket" style={`width:${christianWidth}%`}>Христиане ≈ {count(christians.count)} · {percent(christianWidth)}</span>
+  <div class="bracket-row" aria-hidden="true" data-fit-labels>
+    {stack.map((group) => <span class="bracket" style={`flex-grow:${group.count}`} data-variants={JSON.stringify([
+      `${group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} ≈ ${count(group.count)} · ${percent(worldShare(group.count))}`,
+      `${group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} · ${percent(worldShare(group.count))}`,
+      percent(worldShare(group.count)),
+    ])}>{percent(worldShare(group.count))}</span>)}
   </div>
   <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; христиане разделены по конфессиям; числа — в таблице ниже">
     {stack.map((group) => group.id === 'christians'
@@ -60,7 +64,10 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   <ul class="legend" aria-label="Христиане по конфессиям">
     {confessions.map((branch) => <li><span class="chip" style={`background:var(${branch.color})`} aria-hidden="true"></span>{branch.label} <span class="legend-count">≈ {count(branch.count)}</span></li>)}
   </ul>
-  <p class="confessions-title">Христианский сегмент разделён по конфессиям в пропорции ветвей: их оценки частично пересекаются. Остальные цвета — в таблице.</p>
+  <ul class="legend" aria-label="Остальные группы">
+    {stack.filter((group) => group.id !== 'christians').map((group) => <li><span class="chip" style={`background:var(${group.color})`} aria-hidden="true"></span>{group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} <span class="legend-count">{percent(worldShare(group.count))}</span></li>)}
+  </ul>
+  <p class="confessions-title">Христианский сегмент разделён по конфессиям в пропорции ветвей: их оценки частично пересекаются. Полные числа — в таблице.</p>
 
   <table class="counts">
     <caption class="visually-hidden">Численность последователей религий и их доля населения мира, 2026 год</caption>
@@ -86,6 +93,26 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   <p class="note">Христианские ветви показаны внутри христиан, агностики и атеисты — внутри нерелигиозных. Оценки христианских ветвей частично пересекаются — часть людей учтена в нескольких ветвях, — поэтому сумма ветвей больше общего числа христиан. Источник: World Christian Database, Status of Global Christianity 2026; <a href={withBase('sources/#world-methodology')}>способ подсчёта</a>.</p>
 </section>
 
+<script>
+  // Fullest label that fits its segment: name + count + share, name + share,
+  // share only, or nothing for the smallest (the tooltip and table still have it).
+  const fit = (row: HTMLElement) => {
+    for (const label of row.querySelectorAll<HTMLElement>('.bracket')) {
+      const variants: string[] = JSON.parse(label.dataset.variants ?? '[]');
+      label.textContent = '';
+      for (const text of variants) {
+        label.textContent = text;
+        if (label.scrollWidth <= label.clientWidth) break;
+        label.textContent = '';
+      }
+    }
+  };
+  for (const row of document.querySelectorAll<HTMLElement>('[data-fit-labels]')) {
+    fit(row);
+    new ResizeObserver(() => fit(row)).observe(row);
+  }
+</script>
+
 <style>
   .world-hierarchy { grid-column: 1 / -1; --world-folk: #527c67; --world-independent: #3979a8; }
   h2 { margin: 0 0 16px; }
@@ -95,9 +122,11 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   .split { margin: 0 0 10px; }
   .world-bar { display: flex; gap: 2px; height: 28px; }
   .confessions-title { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
-  .bracket-row { height: 30px; position: relative; }
-  /* A line over the Christian segment, labelled, marks the group the slices belong to. */
-  .bracket { position: absolute; left: 0; bottom: 4px; box-sizing: border-box; padding-bottom: 3px; border-bottom: 2px solid var(--muted); font-size: 14px; font-weight: 700; white-space: nowrap; }
+  /* One labelled line over each world segment, aligned with it (same order,
+     growth and gap); the script shows the fullest label that fits. */
+  .bracket-row { display: flex; gap: 2px; height: auto; margin-bottom: 4px; }
+  .bracket { flex-basis: 0; min-width: 0; overflow: hidden; box-sizing: border-box; padding-bottom: 3px; border-bottom: 2px solid var(--muted); font-size: 14px; font-weight: 700; white-space: nowrap; }
+  .bracket:empty { border-bottom-color: transparent; }
   .christian-group { display: flex; gap: 1px; background: var(--bg); }
   .slice { flex-basis: 0; min-width: 2px; }
   .christian-group .slice:first-child { border-radius: 4px 0 0 4px; }
