@@ -1,0 +1,2216 @@
+# Curated analysis of adventism (docs/tasks/site-m33-jw-analysis.md); Orthodox sources from Azbyka,
+# the tradition's teaching from its own documents. Validated for full evidence coverage.
+# Detailed analysis: Orthodoxy and the Church of Seventh-day Adventists.
+# Source rules: docs/SOURCES.md. Reused proofs keep their original wording and access dates.
+tradition: adventism
+lead: 'Все документированные расхождения православного учения и учения Церкви адвентистов седьмого дня — по тезисам: учение Церкви, учение адвентистов, православный ответ. Общее исповедание отмечено так же прямо, как и различия.'
+authorityNote: Среди использованных церковных документов — «Основные принципы отношения Русской Православной Церкви к инославию» (Архиерейский Собор, 2000) и «Основы социальной концепции» — адвентисты не названы, а соборного или синодального акта, посвящённого им отдельно, мы не нашли. Православная позиция здесь изложена по Писанию, Символу веры и катехизису свт. Филарета; оценки отдельных авторов — свящ. Д. Сысоева, свящ. Е. Веселова, свящ. Р. Коня, А. Л. Дворкина и других — подписаны как их мнения. Проект чина присоединения свящ. Е. Веселова — предложение автора для обсуждения, а не принятый священноначалием акт.
+groups:
+  - id: god-christ
+    title: Бог, Христос и Святой Дух
+    cards:
+      - id: trinity
+        title: 'Троица: общее исповедание'
+        topic: god
+        church:
+          text: 'Православная Церковь исповедует Бога единого по существу и троичного в Лицах: Отца, Сына и Святого Духа — Троицу единосущную и нераздельную. Основание — Символ веры и катехизис свт. Филарета (Дроздова): Символ исповедует Сына «единосущна Отцу», а Духа — «со Отцем и Сыном спокланяема и сславима».'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§90–94: единосущная Троица'
+              tier: official
+              excerpt: 'Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух'
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §§86–90
+              tier: official
+              excerpt: Бог один по существу, но троичен в лицах
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная'
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 2: о Сыне'
+              tier: official
+              excerpt: рожде́нна, несотворе́нна, единосущна Отцу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 8: о Святом Духе'
+              tier: official
+              excerpt: Иже со Отцем и Сыном спокланя́ема и ссла́вима
+              accessed: '2026-10-01'
+        tradition:
+          text: 'В «Основах вероучения» церкви адвентистов седьмого дня сказано: «Бог един. Отец, Сын и Святой Дух — единство трёх совечных Личностей». На сайте Московского объединения церкви добавлено, что эти доктрины она относит к тем, что объединяют её с ортодоксальным христианством: они сформулированы в постановлениях первых четырёх соборов.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 2 «Троица»
+              tier: official
+              excerpt: Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
+              title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Доктрины сформулированные в постановлениях первых четырех соборов и утверждающие веру в тайну Божественной Троицы и тайну Богочеловечества Господа Иисуса Христа
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'В исповедании Троицы расхождения нет: и Церковь, и адвентисты исповедуют единого Бога в трёх Лицах. Приписывать адвентистам отрицание Троицы неверно.'
+            - Свящ. Роман Конь свидетельствует, что в XIX веке большинство адвентистов Троицу не исповедовало, и считает, что не все адвентисты до сих пор отошли от начальных взглядов. Это мнение автора, а не акт Церкви; официальное исповедание сегодня троично (п. 2).
+            - Архиерейский Собор 2000 года различает «инославные исповедания», признающие веру в Святую Троицу и Богочеловечество Иисуса Христа, и секты, отвергающие основополагающие догматы (§6.3). Адвентисты в документе не названы; к какому разряду их относить, он прямо не говорит.
+            - Различия начинаются дальше — в учении о пророческом авторитете, о состоянии умерших, о суде и о Церкви; они разобраны в следующих карточках.
+          proof:
+            - url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+              title: Свящ. Р. М. Конь. Особенности христологии адвентизма седьмого дня, введение
+              tier: reference
+              excerpt: когда большинство адвентистов не верили в Святую Троицу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+              title: Свящ. Р. М. Конь. Особенности христологии адвентизма седьмого дня, аннотация
+              tier: reference
+              excerpt: не все адвентисты отошли от начальных взглядов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §6.3
+              tier: official
+              excerpt: Православная Церковь проводит четкое различие между инославными исповеданиями, признающими веру в Святую Троицу, Богочеловечество Иисуса Христа, и сектами, которые отвергают основополагающие христианские догматы
+              accessed: '2026-10-01'
+        more:
+          - title: Особенности христологии адвентизма седьмого дня
+            url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+            kind: author
+            author: Свящ. Р. М. Конь
+          - title: Основные принципы отношения Русской Православной Церкви к инославию (2000)
+            url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+            kind: church
+        legacy: []
+        status: verified
+      - id: name-of-god
+        title: Имя Божие
+        topic: name-of-god
+        church:
+          text: Православная Церковь чтит имя Божие и называет Бога многими именами, ни одно из которых не исчерпывает Его существа. «Господь» — одно из имён Божиих, а Вседержителем Бог называется потому, что содержит всё сущее в Своей силе и воле.
+          proof:
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: понятие об именах, Исх. 3:14'
+              tier: reference
+              excerpt: имена Бога не говорят о Нем исчерпывающе
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §135
+              tier: official
+              excerpt: Имя Господь есть одно из имён Божиих.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Бог есть Дух вечный, всеблагой, всеведущий, всеправедный, всемогущий, вездесущий, неизменяемый, вседовольный, всеблаженный
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Бог называется Вседержителем потому, что Он всё, что ни есть, содержит в Своей силе и в Своей воле
+              accessed: '2026-09-25'
+        tradition:
+          text: В «Основах вероучения» особого учения об имени Божием нет. Е. Уайт, труды которой церковь признаёт авторитетным источником истины, толкует третью заповедь как запрет «небрежно или легкомысленно произносить имя Господа» и требует произносить его «с благоговением и торжественностью»; в той же книге Бог назван и Иеговой.
+          proof:
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.5 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: «Не произноси имени Господа, Бога твоего, напрасно; ибо Господь не оставит без наказания того, кто произносит имя Его напрасно»
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.6 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: но она также запрещает нам небрежно или легкомысленно произносить имя Господа, не думая о его внушающем трепет значении
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.6 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Его святое имя следует произносить с благоговением и торжественностью
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 305.4 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Иегова, Вечный, Сущий от начала, не сотворенный, но Сам являющийся Источником жизни и Создателем всего, Один достоин самого высокого почитания и поклонения
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 2 «Троица»
+              tier: official
+              excerpt: Бог един. Отец, Сын и Святой Дух
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Здесь расхождения нет: благоговейное отношение к имени Божию, о котором говорит третья заповедь (Исх 20:7), общее для Церкви и адвентистов.'
+            - 'Православная традиция называет Бога многими именами и не ограничивает Его одним произносимым именем: «Я есмь Сущий» (Исх 3:14); имя Иисуса — «выше всякого имени» (Флп 2:9).'
+            - 'Форма «Иегова» в книге Е. Уайт сама по себе спора не создаёт. Различие в другом: на какой авторитет опирается толкование — на Писание и Предание или на труды позднейшего автора (см. карточку «Дар пророчества»).'
+          proof:
+            - url: https://azbyka.ru/biblia/?Ex.20:7&r
+              title: Исх. 20:7 — Синодальный перевод
+              tier: official
+              excerpt: Не произноси имени Господа, Бога твоего, напрасно
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ex.3:14&r
+              title: Исх. 3:14 — Синодальный перевод
+              tier: official
+              excerpt: Я есмь Сущий
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Phil.2:9&r
+              title: Флп. 2:9 — Синодальный перевод
+              tier: official
+              excerpt: дал Ему имя выше всякого имени
+              accessed: '2026-10-01'
+        more:
+          - title: Божие имя и божественные имена
+            url: https://azbyka.ru/bozhestvennye-imena
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: christ-incarnation
+        title: 'Лицо Христа: общее исповедание'
+        topic: jesus
+        church:
+          text: Иисус Христос — Сын Божий, второе Лицо Троицы, воплотившийся от Духа Святого и Марии Девы. По катехизису свт. Филарета, «в Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе»; Его человеческой природе безмерно сообщены все дары Святого Духа.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§180–181: природы и Ипостась Христа'
+              tier: official
+              excerpt: В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §134
+              tier: official
+              excerpt: Его человеческой природе безмерно сообщены все дары Святого Духа.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе, одним словом – Богочеловек
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Имя Христос означает Помазанник и оно произошло от помазания священным миром
+              accessed: '2026-09-25'
+        tradition:
+          text: 'В «Основах вероучения» Христос — «Бог Вечный Сын»: «будучи вовеки истинным Богом», Он стал истинным человеком, зачатый Святым Духом и рождённый девой Марией. Он добровольно умер на кресте за грехи, воскрес, вознёсся и вернётся во славе.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 4 «Бог Сын»
+              tier: official
+              excerpt: Он был действительно Богом — обещанным Мессией. Он добровольно пострадал и умер на кресте за наши грехи
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 4 «Бог Сын»
+              tier: official
+              excerpt: Будучи вовеки истинным Богом, Он стал также истинным человеком, Иисусом Христом
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'В основном исповедании о Лице Христа расхождения не видно: предвечный Сын, воплощение, Крест, телесное воскресение — общее (Ин 1:14).'
+            - 'Различие возникает в учении об искуплении и Суде: адвентисты говорят о служении Христа в небесном святилище, во второй части которого с 1844 года идёт «следственный суд». См. карточки «Небесное святилище» и «Следственный суд».'
+            - Свящ. Р. Конь, отмечая, что адвентисты «формально исповедуют веру во Святую Троицу и Богочеловечество Иисуса Христа», рассматривает их христологию в связи с учением о человеке, спасении и конце времён. Это оценка автора, а не определение Церкви.
+          proof:
+            - url: https://azbyka.ru/biblia/?Jn.1:14&r
+              title: Ин. 1:14 — Синодальный перевод
+              tier: official
+              excerpt: И Слово стало плотию
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+              title: Свящ. Р. М. Конь. Особенности христологии адвентизма седьмого дня, введение
+              tier: reference
+              excerpt: АСД формально исповедуют веру во Святую Троицу и Богочеловечество Иисуса Христа
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+              title: Свящ. Р. М. Конь. Особенности христологии адвентизма седьмого дня, аннотация
+              tier: reference
+              excerpt: в связи с ключевыми концепциями в области антропологии
+              accessed: '2026-10-01'
+        more:
+          - title: Особенности христологии адвентизма седьмого дня
+            url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+            kind: author
+            author: Свящ. Р. М. Конь
+        legacy: []
+        status: verified
+      - id: holy-spirit
+        title: Святой Дух
+        topic: spirit
+        church:
+          text: Церковь исповедует Святого Духа Господом животворящим, Который «от Отца исходит» и «со Отцем и Сыном спокланяема и сславима». Катехизис свт. Филарета добавляет, что учение об исхождении Святого Духа от Отца не подлежит изменению или дополнению.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§237–240: Божество и исхождение Святого Духа'
+              tier: official
+              excerpt: Учение об исхождении Святого Духа от Отца не может быть подвержено какому-либо изменению или дополнению.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Святой Дух исповедуем исходящим от Отца и именуем Его Духом Отца; от Сына же не исповедуем исхождение Святого Духа
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 8: о Святом Духе'
+              tier: official
+              excerpt: Иже от Отца исходящаго
+              accessed: '2026-10-01'
+        tradition:
+          text: Святой Дух в «Основах вероучения» — «Бог Вечный Дух Святой», действовавший вместе с Отцом и Сыном при сотворении, воплощении и искуплении и вдохновлявший авторов Библии. «Посланный Отцом и Сыном», Он наделяет Церковь духовными дарами; среди них назван дар пророчества (пп. 17–18).
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 5 «Святой Дух»
+              tier: official
+              excerpt: Бог Вечный Дух Святой действовал вместе с Отцом и Сыном при сотворении, воплощении и искуплении
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 5 «Святой Дух»
+              tier: official
+              excerpt: Посланный Отцом и Сыном, чтобы всегда быть с Его детьми
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Дух здесь — вечное Божественное Лицо, а не безличная сила: «Бог Вечный Дух Святой». Это совпадает с православной основой; лгать Духу Святому значит лгать Богу (Деян 5:3–4).'
+            - Вопрос об исхождении Духа в адвентистском тексте не рассматривается. «Посланный Отцом и Сыном» говорит о посылании, а Ин 15:26 различает посылание Сыном («Которого Я пошлю вам от Отца») и исхождение «от Отца». Документированного расхождения по этому пункту нет.
+            - 'Спор возникает там, где дар Духа связывают с конкретными позднейшими пророчествами (п. 18). Церковь проверяет такие притязания Писанием и верой, полученной от апостолов (1 Ин 4:1); см. «Дар пророчества: Елена Уайт».'
+          proof:
+            - url: https://azbyka.ru/biblia/?Act.5:4&r
+              title: Деян. 5:4 — Синодальный перевод
+              tier: official
+              excerpt: Ты солгал не человекам, а Богу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.15:26&r
+              title: Ин. 15:26 — Синодальный перевод
+              tier: official
+              excerpt: Который от Отца исходит
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Jn.4:1&r
+              title: 1 Ин. 4:1 — Синодальный перевод
+              tier: official
+              excerpt: испытывайте духов
+              accessed: '2026-10-01'
+        more:
+          - title: Особенности христологии адвентизма седьмого дня
+            url: https://azbyka.ru/otechnik/Roman-Kon/osobennosti-hristologii-adventizma-sedmogo-dnja/
+            kind: author
+            author: Свящ. Р. М. Конь
+        legacy: []
+        status: verified
+  - id: scripture-authority
+    title: Писание, Предание и пророческий дар
+    cards:
+      - id: canon
+        title: Библия и состав канона
+        topic: scripture
+        church:
+          text: Православная Церковь исповедует Священное Писание Ветхого и Нового Заветов и читает его в Церкви. По Азбуке веры, в Библии 77 книг (50 ветхозаветных и 27 новозаветных), и 11 из ветхозаветных названы неканоническими; катехизис свт. Филарета приводит счёт в 22 ветхозаветные книги, который принимали свв. Кирилл Иерусалимский, Афанасий Великий и Иоанн Дамаскин, и 27 новозаветных.
+          proof:
+            - url: https://azbyka.ru/bibliya
+              title: 'Азбука веры. Библия: состав и язык библейских книг'
+              tier: reference
+              excerpt: 'Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг.'
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+              title: 'Свт. Филарет Московский. Пространный катехизис, О Священном Писании: число ветхозаветных книг'
+              tier: official
+              excerpt: двадцать две
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Святой Кирилл Иерусалимский, святой Афанасий Великий и святой Иоанн Дамаскин принимают число Священных книг Ветхого Завета – двадцать две
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В Новом Завете двадцать семь книг
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/bibliya
+              title: 'Азбука веры. Библия: состав и язык библейских книг'
+              tier: reference
+              excerpt: 11 неканонических книг (Товита, Иудифи, Премудрости Соломона
+              accessed: '2026-10-01'
+        tradition:
+          text: В «Основах вероучения» Священное Писание, «состоящее из Ветхого и Нового Заветов», — Слово Божье, «письменно переданное по Божественному вдохновению»; число книг в этом тексте не названо. На официальном сайте церкви Библия описана как собрание 66 книг.
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 1 «Священное Писание»
+              tier: official
+              excerpt: Священное Писание, состоящее из Ветхого и Нового Заветов, есть Слово Божье, письменно переданное по Божественному вдохновению
+              accessed: '2026-09-25'
+            - url: https://adventist.org/beliefs/bible/understanding
+              title: Seventh-day Adventists — Understanding the Bible
+              tier: official
+              excerpt: The Bible is a rich, diverse, complex collection of 66 books
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'По объёму канона документированного спора нет: 66 книг адвентистов — это 39 ветхозаветных и 27 новозаветных книг; 11 из 50 ветхозаветных книг Азбука веры называет неканоническими. Это счёт русской православной классификации (Азбука веры); при этом православная Библия включает и эти 11 книг.'
+            - 'Богодухновенность Писания общая: «Все Писание богодухновенно» (2 Тим 3:16).'
+            - Различие — в способе чтения. Кафедра библеистики ПСТГУ в отзыве на адвентистский перевод Библии (под ред. М. П. Кулакова) пишет, что для восприятия библейского текста необходима традиционная среда, создаваемая живой религиозной практикой; тот же отзыв приветствует сам опыт нового перевода. Это мнение кафедры, а не определение Церкви.
+          proof:
+            - url: https://azbyka.ru/biblia/?2Tim.3:16&r
+              title: 2 Тим. 3:16 — Синодальный перевод
+              tier: official
+              excerpt: Все Писание богодухновенно
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/sekty/otzyv-kafedry-bibleistiki-pstgu-na-adventistskij-perevod-biblii-pod-redaktsitsej-m-p-kulakova/
+              title: Отзыв кафедры библеистики ПСТГУ на адвентистский перевод Библии под ред. М. П. Кулакова
+              tier: reference
+              excerpt: для восприятия библейского текста необходима традиционная среда, создаваемая живой религиозной практикой
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/sekty/otzyv-kafedry-bibleistiki-pstgu-na-adventistskij-perevod-biblii-pod-redaktsitsej-m-p-kulakova/
+              title: Отзыв кафедры библеистики ПСТГУ на адвентистский перевод Библии под ред. М. П. Кулакова
+              tier: reference
+              excerpt: как и любой новый опыт обращения к библейскому тексту, может только приветствоваться
+              accessed: '2026-10-01'
+        more:
+          - title: 'Библия: состав и язык книг'
+            url: https://azbyka.ru/bibliya
+            kind: encyclopedia
+          - title: Отзыв кафедры библеистики ПСТГУ на адвентистский перевод Библии под ред. М. П. Кулакова
+            url: https://azbyka.ru/otechnik/sekty/otzyv-kafedry-bibleistiki-pstgu-na-adventistskij-perevod-biblii-pod-redaktsitsej-m-p-kulakova/
+            kind: author
+            author: Прот. Владимир Воробьёв
+        legacy: []
+        status: verified
+      - id: scripture-and-tradition
+        title: Писание и Священное Предание
+        topic: authority
+        church:
+          text: 'Церковь хранит Священное Предание: то, что «словом и примером» передают друг другу верующие, — учение веры, закон Божий, Таинства и священные обряды. Оно нужно и сегодня «для руководства к правильному пониманию Священного Писания»; основание — слова апостола: «держите предания» (2 Фес 2:15).'
+          proof:
+            - url: https://azbyka.ru/predanie-svyashhennoe
+              title: Азбука веры. Священное Предание, определение 2
+              tier: reference
+              excerpt: вся апостольская проповедь, весь спасительный апостольский опыт вообще, переданные Церкви
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: понимать его следует согласно толкованию Православной Церкви и святых отцов
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: 'Свт. Филарет. Пространный катехизис, §17: что такое Священное Предание'
+              tier: official
+              excerpt: Под Священным Преданием понимается то, что словом и примером истинно верующие и чтущие Бога люди передают друг другу
+              accessed: '2026-10-01'
+        tradition:
+          text: Адвентисты «основывают своё вероучение исключительно на Библии» и, по заявлению Ellen G. White Estate, поддерживают реформационный принцип sola scriptura. Формулировки доктрин, по тексту «Основ вероучения», могут уточняться на съезде Генеральной конференции.
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, преамбула
+              tier: official
+              excerpt: основывают своё вероучение исключительно на Библии
+              accessed: '2026-10-01'
+            - url: https://whiteestate.org/legacy/issues-scripsda-html/
+              title: 'Issues: The Relationship of Ellen White''s Writings to Scripture — Ellen G. White Estate'
+              tier: official
+              excerpt: Seventh-day Adventists fully support the Reformation principle of sola scriptura
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
+              title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Следование протестантскому принципу Sola Scriptura
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, преамбула
+              tier: official
+              excerpt: соответствующие изменения и дополнения в данные положения могут быть внесены на съезде Генеральной Конференции
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общее: Писание богодухновенно и имеет высший авторитет (2 Тим 3:16). Церковь не противопоставляет ему Предание, а читает Писание в Предании.'
+            - 'Церковь существовала до написания Нового Завета: Спаситель не написал ни слова, а основал Церковь, которая жила по Преданию (так объясняет А. Л. Дворкин; это его объяснение, а не определение). Сам евангелист говорит, что написано не всё (Ин 21:25).'
+            - 'Писание нуждается в истолковании в Церкви: евнух отвечает Филиппу: «как могу разуметь, если кто не наставит меня?» (Деян 8:31), а апостол Пётр предупреждает о тех, кто превращает трудные места Писания «к собственной своей погибели» (2 Пет 3:16).'
+            - 'Разница и в понимании неизменности веры: по преамбуле адвентистского текста формулировки доктрин могут быть изменены съездом, тогда как Церковь хранит «веру, однажды преданную святым» (Иуд 3); так, об исхождении Духа катехизис говорит, что оно не может быть подвержено изменению или дополнению.'
+          proof:
+            - url: https://azbyka.ru/biblia/?2Thes.2:15&r
+              title: 2 Фес. 2:15 — Синодальный перевод
+              tier: official
+              excerpt: стойте и держите предания
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/o-predanii-cerkvi-i-sektantskih-predaniyah
+              title: А. Л. Дворкин. О Предании Церкви и сектантских преданиях — Азбука веры
+              tier: reference
+              excerpt: Сам Спаситель не написал ни слова
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.21:25&r
+              title: Ин. 21:25 — Синодальный перевод
+              tier: official
+              excerpt: то, думаю, и самому миру не вместить бы написанных книг
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.8:31&r
+              title: Деян. 8:31 — Синодальный перевод
+              tier: official
+              excerpt: как могу разуметь
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?2Pet.3:16&r
+              title: 2 Пет. 3:16 — Синодальный перевод
+              tier: official
+              excerpt: к собственной своей погибели
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Juda.1:3&r
+              title: Иуд. 1:3 — Синодальный перевод
+              tier: official
+              excerpt: подвизаться за веру, однажды преданную святым
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§237–240: Божество и исхождение Святого Духа'
+              tier: official
+              excerpt: Учение об исхождении Святого Духа от Отца не может быть подвержено какому-либо изменению или дополнению.
+              accessed: '2026-09-27'
+        more:
+          - title: О Предании Церкви и сектантских преданиях
+            url: https://azbyka.ru/o-predanii-cerkvi-i-sektantskih-predaniyah
+            kind: encyclopedia
+            author: А. Л. Дворкин
+          - title: Священное Предание — Азбука веры
+            url: https://azbyka.ru/predanie-svyashhennoe
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: ellen-white
+        title: 'Дар пророчества: Елена Уайт'
+        topic: authority
+        church:
+          text: Церковь, по определению Архиерейского Собора 2000 года, несёт «полноту власти свидетельствовать о „вере, однажды преданной святым“» (Иуд 3). Любое учение и любое притязание на пророческий дар Церковь проверяет Писанием и этой верой.
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §1.1
+              tier: official
+              excerpt: полноту власти свидетельствовать о «вере, однажды преданной святым»
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Пункт 18 «Основ вероучения» называет пророчество даром Святого Духа и «отличительным признаком Церкви Остатка»; он проявился в служении Елены Уайт, чьи труды «продолжают оставаться авторитетным источником истины». Тот же пункт указывает, что Библия — «критерий для всякого учения и опыта». Ellen G. White Estate подчёркивает: труды Е. Уайт не заменяют Писание и не могут быть поставлены на один с ним уровень.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: Пророчество — один из даров Святого Духа
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: Библия есть критерий для всякого учения и опыта
+              accessed: '2026-10-01'
+            - url: https://whiteestate.org/legacy/issues-scripsda-html/
+              title: 'Issues: The Relationship of Ellen White''s Writings to Scripture — Ellen G. White Estate'
+              tier: official
+              excerpt: The writings of Ellen White are not a substitute for Scripture. They cannot be placed on the same level.
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - Адвентисты сами оговаривают, что труды Е. Уайт не заменяют Писание и не равны ему; это нужно признать.
+            - Но, называя эти труды «авторитетным источником истины» для Церкви, а дар пророчества — «отличительным признаком» церкви, учение отводит позднейшему автору место в вероучительной жизни. Церковь не принимает этот авторитет как часть апостольского Предания (Иуд 3).
+            - 'Проверка пророчества — Писанием и полученной от апостолов верой: «если бы даже мы или Ангел с неба стал благовествовать вам не то, что мы благовествовали вам, да будет анафема» (Гал 1:8); «испытывайте духов» (1 Ин 4:1); слово пророка, которое не сбылось, — не от Господа (Втор 18:22).'
+          proof:
+            - url: https://azbyka.ru/biblia/?Gal.1:8&r
+              title: Гал. 1:8 — Синодальный перевод
+              tier: official
+              excerpt: стал благовествовать вам не то, что́ мы благовествовали вам, да будет анафема
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Jn.4:1&r
+              title: 1 Ин. 4:1 — Синодальный перевод
+              tier: official
+              excerpt: испытывайте духов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Deut.18:22&r
+              title: Втор. 18:22 — Синодальный перевод
+              tier: official
+              excerpt: не сбудется и не исполнится
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания
+              accessed: '2026-09-25'
+        more:
+          - title: Эллен Г. Уайт — миф и правда
+            url: https://azbyka.ru/otechnik/sekty/ellen-g-uajt-mif-i-pravda/
+            kind: testimony
+            author: Асмунд Касперсен
+          - title: 'Чин присоединения приходящих в Православную Церковь от адвентистов: приглашение к обсуждению'
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/chin-prisoedinenija-prihodjashhih-v-pravoslavnuyu-tserkov-ot-adventistov-priglashenie-k-obsuzhdeniyu/
+            kind: author
+            author: Свящ. Е. Веселов
+        legacy: []
+        status: verified
+  - id: church-worship
+    title: Спасение, Церковь и богослужение
+    cards:
+      - id: grace-and-works
+        title: Благодать, вера и дела
+        topic: salvation
+        church:
+          text: 'Спасение, по православному учению, — дело Божие, в котором человек соработничает с Богом (синергия); его цель — уподобление Богу и единение с Ним (обожение). Катехизис свт. Филарета не разделяет веру и жизнь по вере: «вера без дел мертва» (Иак 2:20).'
+          proof:
+            - url: https://azbyka.ru/spasenie
+              title: 'Азбука веры. Спасение: определение и условия спасения'
+              tier: reference
+              excerpt: уподобление Богу и духовное единение с Ним
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/sinergiya
+              title: Азбука веры. Синергия
+              tier: reference
+              excerpt: соработничество Бога и человека в деле достижения спасения
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/obozhenie
+              title: Азбука веры. Обожение
+              tier: reference
+              excerpt: процесс уподобления верующего Богу и единения с Богом.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Для спасения нужно не только веровать, но и исповедовать православную веру
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: 'Свт. Филарет. Пространный катехизис, §5: вера, жизнь по вере и добрые дела'
+              tier: official
+              excerpt: С верой должны быть нераздельны жизнь по вере и добрые дела
+              accessed: '2026-10-01'
+        tradition:
+          text: 'По «Основам вероучения», спасение — дар Божьей благодати: вера «является даром Божьей благодати», а «спасение — это дар благодати, его невозможно заслужить делами, но спасённый человек послушен заповедям». Действие Духа производит в верующем возрождение и освящение, и, как сказано, «пребывая в Нём, мы становимся причастниками Божественной природы».'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 10 «Спасение во Христе»
+              tier: official
+              excerpt: Вера, посредством которой мы принимаем спасение, приходит к нам от Божественной силы Его Слова и является даром Божьей благодати
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 10 «Спасение во Христе»
+              tier: official
+              excerpt: производит в нас возрождение и освящение
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 10 «Спасение во Христе»
+              tier: official
+              excerpt: Пребывая в Нем, мы становимся причастниками Божественной природы
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 19 «Закон Божий»
+              tier: official
+              excerpt: его невозможно заслужить делами, но спасенный человек послушен заповедям
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Адвентистское учение нельзя описывать как «спасение делами»: спасение — дар благодати, принимаемый верой, дела — его плод (Еф 2:8–10). Это близко к православному различению веры и жизни по вере (Иак 2:24).'
+            - 'Совпадают и слова: «причастниками Божественной природы» (2 Пет 1:4) — язык, которым Православие говорит об обожении. Но общность слов не доказывает общности всего учения: из одного совпадающего положения нельзя выводить согласие во всей доктрине.'
+            - Различие — в том, как действует благодать. Церковь учит о соработничестве Бога и человека (Флп 2:12–13) и о Таинствах как о действии благодати в Церкви; адвентистский текст называет Крещение «установлением» и «символом», а в Вечере говорит о принятии «символов» (см. следующие карточки).
+          proof:
+            - url: https://azbyka.ru/biblia/?Eph.2:8&r
+              title: Еф. 2:8 — Синодальный перевод
+              tier: official
+              excerpt: Ибо благодатью вы спасены через веру
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jac.2:24&r
+              title: Иак. 2:24 — Синодальный перевод
+              tier: official
+              excerpt: человек оправдывается делами
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Phil.2:13&r
+              title: Флп. 2:13 — Синодальный перевод
+              tier: official
+              excerpt: Бог производит в вас и хотение и действие
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?2Pet.1:4&r
+              title: 2 Пет. 1:4 — Синодальный перевод
+              tier: official
+              excerpt: причастниками Божеского естества
+              accessed: '2026-10-01'
+        more:
+          - title: Спасение — Азбука веры
+            url: https://azbyka.ru/spasenie
+            kind: encyclopedia
+          - title: Синергия — Азбука веры
+            url: https://azbyka.ru/sinergiya
+            kind: encyclopedia
+          - title: Обожение — Азбука веры
+            url: https://azbyka.ru/obozhenie
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: baptism
+        title: 'Крещение: Таинство или установление'
+        topic: worship
+        church:
+          text: 'Крещение, по катехизису свт. Филарета, — Таинство: верующий при троекратном погружении в воду с призыванием Отца, Сына и Святого Духа умирает для греховной жизни и возрождается Духом. От желающего креститься требуются покаяние и вера; младенцев крестят по вере родителей и восприемников. Крещение не повторяется, потому что оно — духовное рождение.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§289–291: Крещение младенцев'
+              tier: official
+              excerpt: Младенцев крестят по вере родителей и восприемников
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов) — Азбука веры
+              tier: official
+              excerpt: подробно рассказывается о 7-ми таинствах Церкви (Крещение, Миропомазание, Евхаристия, Покаяние, Священство, Брак, Елеосвящение)
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §285: что такое Крещение'
+              tier: official
+              excerpt: Крещение есть Таинство, в котором верующий при троекратном погружении тела в воду
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §288: что требуется от желающего принять Крещение'
+              tier: official
+              excerpt: От желающего принять Крещение требуется покаяние и вера
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §301: почему Крещение не повторяется'
+              tier: official
+              excerpt: Крещение не повторяется потому, что оно есть духовное рождение
+              accessed: '2026-10-01'
+        tradition:
+          text: Согласно «Основам вероучения», Крещение — «Божье установление» и «символ нашего единства со Христом, прощения грехов и принятия Духа Святого». Оно совершается погружением в воду, и к нему допускаются те, кто имеет веру в Иисуса и засвидетельствовал о раскаянии во грехе.
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 15 «Крещение»
+              tier: official
+              excerpt: Крещение совершается погружением в воду, и к нему допускаются те, кто имеет веру в Иисуса
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 15 «Крещение»
+              tier: official
+              excerpt: Крещение — это Божье установление
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 15 «Крещение»
+              tier: official
+              excerpt: Крещение — это символ нашего единства со Христом, прощения грехов и принятия Духа Святого
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Есть общее: оба вероучения связывают Крещение с погружением в воду, покаянием и верой (Деян 2:38). В адвентистском тексте оно связано и с прощением грехов, и с принятием Духа Святого.'
+            - Первое различие — возраст. К адвентистскому Крещению допускаются лишь исповедавшие веру и раскаяние; Церковь крестит и младенцев по вере родителей и восприемников (§289), потому что Крещение заменило обрезание (Кол 2:11–12; §291); в Писании упомянуты крещения целых домов (Деян 16:33).
+            - Второе — смысл. Адвентистский текст говорит об «установлении» и «символе»; Церковь — о Таинстве, через которое действует благодать и без рождения «от воды и Духа» нельзя войти в Царствие Божие (Ин 3:5).
+            - Свящ. Евгений Веселов предлагает для обсуждения принимать адвентистов, которые не были крещены в Православной Церкви и не принимали крещения у католиков или традиционных протестантов, через полноценное Крещение. Это проект чина, предложенный автором, а не принятое священноначалием правило.
+          proof:
+            - url: https://azbyka.ru/biblia/?Jn.3:5&r
+              title: Ин. 3:5 — Синодальный перевод
+              tier: official
+              excerpt: если кто не родится от воды и Духа
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:11&r
+              title: Кол. 2:11 — Синодальный перевод
+              tier: official
+              excerpt: обрезанием нерукотворенным
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.16:33&r
+              title: Деян. 16:33 — Синодальный перевод
+              tier: official
+              excerpt: крестился сам и все домашние его
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/chin-prisoedinenija-prihodjashhih-v-pravoslavnuyu-tserkov-ot-adventistov-priglashenie-k-obsuzhdeniyu/
+              title: Свящ. Е. Веселов. Чин присоединения приходящих в Православную Церковь от адвентистов, предисловие
+              tier: reference
+              excerpt: В статье предлагается для общецерковного обсуждения чин присоединения к Православной Церкви из адвентистов седьмого дня
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/chin-prisoedinenija-prihodjashhih-v-pravoslavnuyu-tserkov-ot-adventistov-priglashenie-k-obsuzhdeniyu/
+              title: Свящ. Е. Веселов. Чин присоединения приходящих в Православную Церковь от адвентистов, предисловие
+              tier: reference
+              excerpt: Не крещенные в Православной Церкви и не принимавшие ранее крещения у католиков и традиционных протестантов (лютеран, реформатов, англикан) принимаются первым чином
+              accessed: '2026-10-01'
+        more:
+          - title: 'Чин присоединения приходящих в Православную Церковь от адвентистов: приглашение к обсуждению'
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/chin-prisoedinenija-prihodjashhih-v-pravoslavnuyu-tserkov-ot-adventistov-priglashenie-k-obsuzhdeniyu/
+            kind: author
+            author: Свящ. Е. Веселов
+          - title: 'Таинство Крещения: ответы на основные вопросы — Азбука веры'
+            url: https://azbyka.ru/kreshhenie
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: lords-supper
+        title: Вечеря Господня и Евхаристия
+        topic: worship
+        church:
+          text: Евхаристия — Таинство, в котором верующий «под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни»; причащающийся соединяется с Самим Христом. К Таинству приступают после испытания совести, покаяния, поста и молитвы.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §312: Таинство Причащения'
+              tier: official
+              excerpt: под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/prichastie
+              title: 'Азбука веры. Причастие: Таинство Евхаристии и преложение Даров'
+              tier: reference
+              excerpt: они становятся Телом и Кровью Христовыми
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §339: что с нами происходит в Таинстве Причащения'
+              tier: official
+              excerpt: Причащающийся Тела и Крови Христовой соединяется с Самим Иисусом Христом
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §338: как следует приступать к Таинству Причащения'
+              tier: official
+              excerpt: очистить её покаянием в грехах, чему способствуют пост и молитва
+              accessed: '2026-10-01'
+        tradition:
+          text: По «Основам вероучения», Вечеря Господня — «совместное принятие символов тела и крови Иисуса»; при этом обряде «присутствует Сам Христос, общаясь со Своим народом». Перед принятием символов совершается служение омовения ног, а участие открыто для всех верующих христиан.
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 16 «Вечеря Господня»
+              tier: official
+              excerpt: Перед принятием символов совершается служение ногоомовения, установленное нашим Божественным Учителем
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 16 «Вечеря Господня»
+              tier: official
+              excerpt: Вечеря Господня — это совместное принятие символов
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 16 «Вечеря Господня»
+              tier: official
+              excerpt: При совершении этого обряда присутствует Сам Христос, общаясь со Своим народом
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 16 «Вечеря Господня»
+              tier: official
+              excerpt: Служение Вечери открыто для участия в нем всех верующих христиан
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Различие — в смысле слов Христа: адвентисты принимают «символы» тела и крови, Церковь исповедует, что в Причащении принимаются подлинные Тело и Кровь Христовы (Мф 26:26–28; Ин 6:53–56; 1 Кор 10:16).'
+            - 'Адвентистский текст не сводит Вечерю к одному воспоминанию: по нему, при её совершении присутствует Сам Христос. Но об особом соединении со Христом в самом Причастии (§339) в нём не сказано.'
+            - Омовение ног адвентисты совершают перед Вечерей на основании Ин 13:1–17; в перечне семи Таинств катехизиса оно не названо (§282).
+            - Адвентистская Вечеря, по тексту, открыта для участия «всех верующих христиан»; в Церкви к Таинству приступают после покаяния, поста и молитвы, а единство Церкви видимо выражается «одинаковым исповеданием веры и общением в молитвах и Таинствах» (§259).
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.26:26&r
+              title: Мф. 26:26 — Синодальный перевод
+              tier: official
+              excerpt: сие есть Тело Мое
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.6:55&r
+              title: Ин. 6:55 — Синодальный перевод
+              tier: official
+              excerpt: Плоть Моя истинно есть пища
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.13:14&r
+              title: Ин. 13:14 — Синодальный перевод
+              tier: official
+              excerpt: умыл ноги вам
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §282: сколько всего Таинств'
+              tier: official
+              excerpt: 'Таинств – семь: Крещение; Миропомазание; Причащение; Покаяние; Священство; Брак; Елеосвящение'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §259: как единственность Церкви соотносится с наличием многих поместных Церквей'
+              tier: official
+              excerpt: Это единство видимо выражается одинаковым исповеданием веры и общением в молитвах и Таинствах
+              accessed: '2026-10-01'
+        more:
+          - title: Причастие — Азбука веры
+            url: https://azbyka.ru/prichastie
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: images
+        title: Иконы и вторая заповедь
+        topic: images
+        church:
+          text: 'Церковь не считает запрещёнными священные изображения: вторая заповедь запрещает поклоняться идолам как мнимым божествам. Иконы — изображения Господа Иисуса Христа, Пречистой Его Матери и святых; честь, воздаваемая образу, переходит на Первообраз. Учение о Богородице Церковь отличает от частных богословских мнений о Ней.'
+          proof:
+            - url: https://azbyka.ru/ikonopochitanie
+              title: 'Азбука веры. Иконопочитание: основной тезис'
+              tier: reference
+              excerpt: Честь, воздаваемая образу, переходит на Первообраз
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Иметь какие бы то ни было священные изображения вовсе не запрещается
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Глядя на иконы, следует умом видеть Бога и святых, на них изображённых
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§184–189: Приснодева и Богородица'
+              tier: official
+              excerpt: Пресвятая Мария действительно всегда пребывала и пребывает Девой
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/bogorodica
+              title: Богородица — раздел о католическом догмате непорочного зачатия и православных объяснениях очищения
+              tier: reference
+              excerpt: Согласно одним, предочищение Её Духом Святым
+              accessed: '2026-09-27'
+        tradition:
+          text: 'Е. Уайт, труды которой церковь признаёт авторитетным источником, толкует вторую заповедь как запрет «поклоняться истинному Богу, используя иконы или иные изображения»: попытка изобразить Вечного материальными предметами, по её словам, «снижает представление человека о Боге».'
+          proof:
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.1 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Вторая заповедь запрещает поклоняться истинному Богу, используя иконы или иные изображения.
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 306.1 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Попытка изобразить Вечного посредством материальных предметов снижает представление человека о Боге.
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1802.1294
+              title: Е. Уайт, «Патриархи и пророки», гл. 27 «Закон, данный Израилю», ПП 305.5 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: «Не делай себе кумира и никакого изображения того, что на небе вверху
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Общее — запрет боготворить изображение: употребление икон противоречило бы второй заповеди, «если бы их боготворили» (§517). Церковь с этим согласна.'
+            - 'Но запрет идолов не есть запрет всех священных изображений: тот же Моисей по повелению Бога поставил в скинии золотых херувимов (Исх 25:18–20), и катехизис делает вывод, что иметь священные изображения вовсе не запрещается (§514).'
+            - 'Воплощение сделало невидимого Бога видимым: «Слово стало плотию» (Ин 1:14), Христос — «образ Бога невидимого» (Кол 1:15). Икона Христа свидетельствует о Его истинном воплощении, а не пытается изобразить непостижимую сущность Божию.'
+            - 'Икона не идол: на ней следует «умом видеть Бога и святых, на них изображённых» (§518), а почитание переходит на Первообраз.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §517: противоречит ли употребление икон второй заповеди'
+              tier: official
+              excerpt: Употребление святых икон противоречило бы второй заповеди в том случае, если бы их боготворили
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ex.25:18&r
+              title: Исх. 25:18 — Синодальный перевод
+              tier: official
+              excerpt: и сделай из золота двух херувимов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.1:14&r
+              title: Ин. 1:14 — Синодальный перевод
+              tier: official
+              excerpt: И Слово стало плотию
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.1:15&r
+              title: Кол. 1:15 — Синодальный перевод
+              tier: official
+              excerpt: образ Бога невидимого
+              accessed: '2026-10-01'
+        more:
+          - title: Иконопочитание — Азбука веры
+            url: https://azbyka.ru/ikonopochitanie
+            kind: encyclopedia
+          - title: Богородица — Азбука веры
+            url: https://azbyka.ru/bogorodica
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: remnant-church
+        title: Церковь Остатка и единая Церковь
+        topic: organisation
+        church:
+          text: 'Церковь едина: у неё один Глава — Христос, и по катехизису свт. Филарета это «общество людей, соединённых православной верой, законом Божиим, священноначалием и Таинствами». Архиерейский Собор 2000 года свидетельствует: «Православная Церковь есть истинная Церковь Христова» (§1.1) и призывает православных относиться к исповедующим иные взгляды «с христианской любовью» (§7.1).'
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §§1.1–1.3, 7.1
+              tier: official
+              excerpt: Православная Церковь есть истинная Церковь Христова
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/simvol_very
+              title: Никео-Цареградский Символ веры, члены 1–12
+              tier: official
+              excerpt: Во Единую Святую, Соборную
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §§256–257; об иерархии
+              tier: official
+              excerpt: Иисус Христос есть единственная глава единственной Церкви.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §250: что такое Церковь'
+              tier: official
+              excerpt: Церковь есть Богом установленное общество людей, соединённых православной верой, законом Божиим, священноначалием и Таинствами
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §7.1
+              tier: official
+              excerpt: православные призваны с христианской любовью относиться к людям, их исповедующим
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Пункт 13 «Основ вероучения»: «Вселенская Церковь состоит из тех, кто истинно верит в Христа», а в последние дни Бог призвал «Церковь Остатка» к соблюдению заповедей Божьих и сохранению веры в Иисуса; её миссия — вестью трёх ангелов (Откр 14) провозглашать наступление часа суда. Дар пророчества назван «отличительным признаком» этой Церкви (п. 18).'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 13 «Церковь Остатка и ее миссия» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Бог при звал Церковь Остатка к соблюдению заповедей Божьих и сохранению веры в Иисуса
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 13 «Церковь Остатка и ее миссия»
+              tier: official
+              excerpt: Вселенская Церковь состоит из тех, кто истинно верит в Христа
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 13 «Церковь Остатка и ее миссия»
+              tier: official
+              excerpt: Церковь Остатка провозглашает наступление часа суда
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Адвентистский текст не исключает других христиан из Церкви: вселенская Церковь, по тексту, «состоит из тех, кто истинно верит в Христа»; «Церковь Остатка» описана как особое призвание последнего времени.'
+            - 'Православное понимание иное: единство Церкви — в одной апостольской вере, в Таинствах и священноначалии (Еф 4:4–6), которое непрерывно ведёт начало от апостолов (§§272–275). Призвание «остатка» оценивается по соответствию этой вере.'
+            - Христос обещал быть с Церковью «во все дни до скончания века» (Мф 28:20); врата ада не одолеют её (Мф 16:18).
+            - Отвергая ошибочные, с православной точки зрения, взгляды, православные призваны с любовью относиться к людям, которые их исповедуют (§7.1 документа 2000 года).
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.16:18&r
+              title: Мф. 16:18 — Синодальный перевод
+              tier: official
+              excerpt: врата ада не одолеют ее
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.28:20&r
+              title: Мф. 28:20 — Синодальный перевод
+              tier: official
+              excerpt: Я с вами во все дни до скончания века
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Eph.4:5&r
+              title: Еф. 4:5 — Синодальный перевод
+              tier: official
+              excerpt: один Господь, одна вера, одно крещение
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §272: почему наша Церковь именуется Апостольской'
+              tier: official
+              excerpt: Церковь называется Апостольской, потому что она непрерывно и неизменно сохраняет от апостолов и учение, и преемство даров Святого Духа
+              accessed: '2026-10-01'
+        more:
+          - title: Основные принципы отношения Русской Православной Церкви к инославию (2000)
+            url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+            kind: church
+        legacy: []
+        status: verified
+      - id: origin-and-structure
+        title: Происхождение и устройство церкви
+        topic: organisation
+        church:
+          text: Церковь управляется священноначалием, преемство которого, по катехизису, ведёт начало «от Самого Иисуса Христа и от сшедшего на апостолов Святого Духа». Хотя Церковь одна, есть самостоятельные поместные Церкви; священноначалием, действующим от имени всей Церкви, является Вселенский Собор.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'Церковь одна, однако имеются отдельные и самостоятельные Церкви, например: Иерусалимская, Антиохийская, Александрийская, Константинопольская, Российская'
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Священноначалием, которое может действовать от имени всей Кафолической Церкви, является Вселенский Собор
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §275: откуда ведёт своё начало иерархия Православной Церкви'
+              tier: official
+              excerpt: Иерархия Православной Церкви ведёт своё начало от Самого Иисуса Христа и от сшедшего на апостолов Святого Духа
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Адвентистская церковь устроена по представительному принципу: общины входят в конференции, конференции — в унионы; всемирную работу координирует Генеральная конференция, а её съезд — высший орган, который может вносить изменения в «Основы вероучения». Церковь возводит себя к адвентистскому движению 1840-х годов и «Великому разочарованию» 22 октября 1844 года; Генеральная конференция организована в мае 1863 года.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, преамбула
+              tier: official
+              excerpt: соответствующие изменения и дополнения в данные положения могут быть внесены на съезде Генеральной Конференции
+              accessed: '2026-09-25'
+            - url: https://adventist.org/identity/structure
+              title: Structure — Seventh-day Adventist Church
+              tier: official
+              excerpt: All of the churches within a specific area, often a state, province or territory, are organized into conferences.
+              accessed: '2026-09-26'
+            - url: https://adventist.org/identity/structure
+              title: Structure — Seventh-day Adventist Church
+              tier: official
+              excerpt: Conferences within a larger territory, such as multiple regions or even borders of a country, are organized into union conferences.
+              accessed: '2026-09-26'
+            - url: https://adventist.org/identity/structure
+              title: Structure — Seventh-day Adventist Church
+              tier: official
+              excerpt: the GC established regional offices, known as divisions, who have administrative and supervisory responsibilities for groups of unions
+              accessed: '2026-09-26'
+            - url: https://gc.adventist.org/about-us/governance/
+              title: Governance — General Conference of Seventh-day Adventists
+              tier: official
+              excerpt: Adventist members get together and vote for their representatives at the local, regional and global level.
+              accessed: '2026-09-26'
+            - url: https://gc.adventist.org/about-us/governance/
+              title: Governance — General Conference of Seventh-day Adventists
+              tier: official
+              excerpt: The second highest governing body of the Seventh-day Adventist Church, after General Conference Session
+              accessed: '2026-09-26'
+            - url: https://gc.adventist.org/about-us/governance/
+              title: Governance — General Conference of Seventh-day Adventists
+              tier: official
+              excerpt: In between Sessions, the Executive Committee is delegated the authority to act on behalf of the General Conference in Session.
+              accessed: '2026-09-26'
+            - url: https://whiteestate.org/about/egwbio/
+              title: Ellen G. White — a Brief Biography — Ellen G. White Estate
+              tier: official
+              excerpt: The climax was reached in the organization of the General Conference of Seventh-day Adventists in May, 1863.
+              accessed: '2026-09-25'
+            - url: https://whiteestate.org/about/egwbio/
+              title: Ellen G. White — a Brief Biography — Ellen G. White Estate
+              tier: official
+              excerpt: The keenness of the Great Disappointment that Jesus did not return to earth on October 22, 1844
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Устройство адвентистской церкви представительное: члены церкви голосуют за своих представителей на местном, региональном и мировом уровне. Православное священноначалие понимается иначе: не как делегирование, а как преемство апостольского служения, через рукоположение (§§274–275).'
+            - Церковь определяется единством апостольской веры и Таинств; способ избрания руководителей этого основания не заменяет.
+            - Адвентистская церковь называет себя движением, открытым для нового; Православие хранит веру, которую «непрерывно и неизменно» получило от апостолов (§272). Организационная история церкви — XIX век (1844, 1863); Православная Церковь ведёт своё начало от апостолов, а не от отдельного исторического движения.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §272: почему наша Церковь именуется Апостольской'
+              tier: official
+              excerpt: Церковь называется Апостольской, потому что она непрерывно и неизменно сохраняет от апостолов и учение, и преемство даров Святого Духа
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
+              title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Адвентистская церковь была основана как движение, как нечто открытое для нового
+              accessed: '2026-10-01'
+        more:
+          - title: Основные принципы отношения Русской Православной Церкви к инославию (2000)
+            url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+            kind: church
+        legacy: []
+        status: verified
+  - id: law-life
+    title: Закон, суббота и образ жизни
+    cards:
+      - id: moral-and-ceremonial-law
+        title: Закон Божий и Десять заповедей
+        topic: rules
+        church:
+          text: 'Десять заповедей даны народу Израиля, но, по катехизису свт. Филарета, и нам следует поступать по ним: в сущности это тот же закон, который написан в сердцах всех людей. Господь Иисус Христос учил хранить заповеди и исполнять их более совершенно, чем их понимали до Него (Мф 19:17; гл. 5).'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §486: следует ли поступать по заповедям, если даны они другому народу'
+              tier: official
+              excerpt: Заповеди эти даны народу израильскому, но и нам следует поступать по ним
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §487: учил ли Иисус Христос поступать по десяти заповедям'
+              tier: official
+              excerpt: учил понимать и исполнять их более совершенно, чем до Него их понимали
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Пункт 19 «Основ вероучения»: Десять заповедей «обязательны для людей всех времён» и лежат в основе Божьего завета с Его народом. Спасение — дар благодати и «невозможно заслужить делами», но «спасённый человек послушен заповедям».'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 19 «Закон Божий»
+              tier: official
+              excerpt: Они обязательны для людей всех времен
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 19 «Закон Божий»
+              tier: official
+              excerpt: его невозможно заслужить делами, но спасенный человек послушен заповедям
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Здесь есть настоящее согласие: Десять заповедей обязательны и для христиан — так учит и катехизис (§486), и адвентистский текст (п. 19).'
+            - 'Различие в том, что ещё из Закона Моисея остаётся в силе. Церковь читает обрядовые установления Закона как исполненные во Христе: «конец закона — Христос» (Рим 10:4), закон был «детоводителем ко Христу» (Гал 3:24), а то, что ветшает и стареет, «близко к уничтожению» (Евр 8:13).'
+            - 'Апостольский Собор не наложил на обращённых из язычников бремени Закона: «не возлагать на вас никакого бремени более, кроме сего необходимого» (Деян 15:28). Субботу и пищевые предписания адвентисты соблюдают как продолжающие действовать; см. карточки «Суббота» и «Пища, здоровье и воздержание».'
+          proof:
+            - url: https://azbyka.ru/biblia/?Rom.10:4&r
+              title: Рим. 10:4 — Синодальный перевод
+              tier: official
+              excerpt: конец закона – Христос
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Gal.3:24&r
+              title: Гал. 3:24 — Синодальный перевод
+              tier: official
+              excerpt: закон был для нас детоводителем ко Христу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.8:13&r
+              title: Евр. 8:13 — Синодальный перевод
+              tier: official
+              excerpt: близко к уничтожению
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.15:28&r
+              title: Деян. 15:28 — Синодальный перевод
+              tier: official
+              excerpt: не возлагать на вас никакого бремени более, кроме сего необходимого
+              accessed: '2026-10-01'
+        more:
+          - title: 'Пространный катехизис свт. Филарета: о заповедях Закона Божия'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: verified
+      - id: sabbath
+        title: Суббота или воскресенье
+        topic: holy-days
+        church:
+          text: Церковь празднует не седьмой, а первый день недели — воскресный, со времени воскресения Христа (катехизис свт. Филарета, §§534–536). Суббота как день недели не празднуется как большой праздник, но в память о сотворении мира отличается от других дней освобождением от поста (§533). Лаодикийский Собор (360), правила которого утвердил Трулльский Собор (691), постановил, что христиане «не должны иудействовать и в субботу оставлять дела», а в воскресенье, «отдавая, как христиане, предпочтение этому дню», оставлять все дела, если они могут.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§535–536: воскресный день'
+              tier: official
+              excerpt: День воскресный празднуется со времени воскресения Христа.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В христианской Церкви празднуется через каждые шесть дней седьмой, только не последний из семи дней
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: упоминается о собрании учеников, т. е. христиан, во едину от суббот, т. е. в первый день недели
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Праздник Воскресения Христова, Пасха, праздник праздников, предначинание вечного праздника, вечного блаженства
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Важнейшие праздники – это праздники, установленные в память о главных событиях, относящихся к спасительному для нас воплощению Сына Божия
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: а затем установленные в честь Пресвятой Богородицы как послужившей тайне воплощения
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/laodikijskij-sobor-29/
+              title: Правило 29 Лаодикийского Собора (360) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: О том, что христиане не должны иудействовать и в субботу оставлять дела
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/laodikijskij-sobor-29/
+              title: Правило 29 Лаодикийского Собора (360) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: а в воскресенье, отдавая, как христиане, предпочтение этому дню, оставляют все дела, если только могут
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/
+              title: Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: Одобряем и все прочие священные правила, которые изложили святые и блаженные наши отцы
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/shestoj-vselenskij-sobor-2/
+              title: Правило 2 Трулльского Собора (691) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: в Гангре, в Антиохии Сирийской и Лаодикии Фригийской
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §533: как в христианской Церкви празднуется суббота'
+              tier: official
+              excerpt: отличается от прочих дней освобождением от поста
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Адвентисты, по п. 20 «Основ вероучения», соблюдают «седьмого дня, субботы, как дня покоя» — с вечера до вечера: это «памятник творения», требование четвёртой заповеди «неизменного Закона Божьего» и «постоянное Божье знамение вечного завета между Им и Его народом».'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 20 «Суббота»
+              tier: official
+              excerpt: седьмого дня, субботы, как дня покоя
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: Милосердный Творец после шести дней творения мира покоился в седьмой день и установил субботний покой для всех людей как памятник творения
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: Четвертая заповедь неизменного Закона Божьего требует
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: Суббота — это постоянное Божье знамение вечного завета между Им и Его народом
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 20 «Суббота»
+              tier: official
+              excerpt: Радостное проведение этого святого времени с вечера до вечера, от захода до захода солнца
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее — память о творении и посвящение времени Богу. Церковь не отменяет памяти о субботе: в этот день не поститься (§533).'
+            - 'Но день христианского собрания в Новом Завете — первый день недели: «в первый же день недели, когда ученики собрались для преломления хлеба» (Деян 20:7); сборы в этот день (1 Кор 16:2); «день воскресный» (Откр 1:10). Св. Иустин (около 150 г.), по цитате А. Л. Дворкина: «Мы, христиане, собираемся для трапезы Господней в первый день недели».'
+            - 'Апостол учит не судить «за какой-нибудь праздник, или новомесячие, или субботу», которые «есть тень будущего, а тело — во Христе» (Кол 2:16–17); он говорит и о различении дней (Рим 14:5), и упрекает: «Наблюдаете дни, месяцы, времена и годы» (Гал 4:10).'
+            - Свящ. Евгений Веселов называет соблюдение субботы «одним из самых заметных отличий» адвентистов от остальных христиан; ответ Церкви основан на Новом Завете и правиле Лаодикийского Собора, а не на отрицании Закона.
+          proof:
+            - url: https://azbyka.ru/biblia/?Act.20:7&r
+              title: Деян. 20:7 — Синодальный перевод
+              tier: official
+              excerpt: В первый же день недели, когда ученики собрались для преломления хлеба
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.16:2&r
+              title: 1 Кор. 16:2 — Синодальный перевод
+              tier: official
+              excerpt: В первый день недели каждый из вас пусть отлагает у себя
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.1:10&r
+              title: Откр. 1:10 — Синодальный перевод
+              tier: official
+              excerpt: Я был в духе в день воскресный
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:16&r
+              title: Кол. 2:16 — Синодальный перевод
+              tier: official
+              excerpt: за какой-нибудь праздник, или новомесячие, или субботу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:17&r
+              title: Кол. 2:17 — Синодальный перевод
+              tier: official
+              excerpt: это есть тень будущего
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.14:5&r
+              title: Рим. 14:5 — Синодальный перевод
+              tier: official
+              excerpt: Иной отличает день от дня
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Gal.4:10&r
+              title: Гал. 4:10 — Синодальный перевод
+              tier: official
+              excerpt: Наблюдаете дни, месяцы, времена и годы
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/o-predanii-cerkvi-i-sektantskih-predaniyah
+              title: А. Л. Дворкин. О Предании Церкви и сектантских преданиях — Азбука веры
+              tier: reference
+              excerpt: Мы, христиане, собираемся для трапезы Господней в первый день недели
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/uchenie-adventistov-sedmogo-dnja-o-subbote/
+              title: Свящ. Е. Веселов. Учение адвентистов седьмого дня о субботе
+              tier: reference
+              excerpt: Одним из самых заметных отличий адвентистов седьмого дня от остальных христиан является соблюдение ими ветхозаветных предписаний о праздновании субботы
+              accessed: '2026-10-01'
+        more:
+          - title: Учение адвентистов седьмого дня о субботе
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/uchenie-adventistov-sedmogo-dnja-o-subbote/
+            kind: author
+            author: Свящ. Е. Веселов
+          - title: Почему христиане празднуют воскресение, а не субботу (ответ адвентистам седьмого дня)
+            url: https://azbyka.ru/otechnik/sekty/pochemu-hristiane-prazdnuyut-voskresenie-a-ne-subbotu-otvet-adventistam-sedmogo-dnja/
+            kind: author
+            author: Еп. Иннокентий
+          - title: Субботство сектантов-адвентистов
+            url: https://azbyka.ru/otechnik/sekty/subbotstvo-sektantov-adventistov/
+            kind: author
+            author: Н. Б. Белогорский
+        legacy: []
+        status: verified
+      - id: diet-and-health
+        title: Пища, здоровье и воздержание
+        topic: rules
+        church:
+          text: 'Церковь не делит пищу на чистую и нечистую по ветхозаветному закону: «нет ничего в себе самом нечистого» (Рим 14:14), «всякое творение Божие хорошо» (1 Тим 4:4). Но Апостольское правило 63 и 67-е правило Трулльского Собора сохраняют запрет вкушать кровь и удавленину, о котором говорит Писание.'
+          proof:
+            - url: https://azbyka.ru/pravo/shestoj-vselenskij-sobor-67/
+              title: Правило 67 Трулльского Собора (691) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: Божественное Писание заповедало нам воздерживаться от крови, удавленины и блуда
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/63-apostolskoe-pravilo/
+              title: Правило 63 святых Апостолов — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: съест мясо с кровью души его, или звероядину, или мертвечину, да будет извержен, ибо это запретил закон
+              accessed: '2026-09-26'
+        tradition:
+          text: 'Пункт 22 «Основ вероучения»: «Мы должны воздерживаться от нечистой еды, указанной в Писании» (Лев 11:1–47), а также от алкоголя, табака, наркотиков и злоупотребления лекарствами, потому что наши тела, как сказано, «являются храмом Святого Духа», и о них нельзя пренебрегать заботой.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 22 «Христианское поведение»
+              tier: official
+              excerpt: Мы должны воздерживаться от нечистой еды, указанной в Писании
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 22 «Христианское поведение»
+              tier: official
+              excerpt: употребление алкогольных напитков, табака, наркотиков и злоупотребление лекарствами
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 22 «Христианское поведение»
+              tier: official
+              excerpt: поскольку наши тела являются храмом Святого Духа, мы не должны пренебрегать заботой о них
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Здесь есть общее: тело — храм Святого Духа (1 Кор 6:19), а пьянство осуждено — «не упивайтесь вином, от которого бывает распутство» (Еф 5:18). Писание осуждает пьянство, а не вино как таковое (Пс 103:15; Ин 2:1–11).'
+            - 'Различие — в разделении пищи на чистую и нечистую. Христос учит, что человека оскверняет не входящее в уста (Мф 15:11), и евангелист поясняет: «чем очищается всякая пища» (Мк 7:19); Петру сказано: «что Бог очистил, того ты не почитай нечистым» (Деян 10:15); см. также Рим 14:14; 1 Тим 4:3–5; Кол 2:16.'
+            - Церковь при этом сохраняет часть апостольского запрета — на кровь и удавленину (Деян 15:29; Апостольское правило 63; Трулльское 67). Так что полного расхождения в пищевых предписаниях нет.
+            - Церковные посты — подвиг воздержания (катехизис, §§539–543), а не деление пищи на чистую и нечистую; см. карточку «Пост».
+          proof:
+            - url: https://azbyka.ru/biblia/?Act.10:15&r
+              title: Деян. 10:15 — Синодальный перевод
+              tier: official
+              excerpt: что Бог очистил, того ты не почитай нечистым
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.15:11&r
+              title: Мф. 15:11 — Синодальный перевод
+              tier: official
+              excerpt: не то́, что́ входит в уста, оскверняет человека
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.7:19&r
+              title: Мк. 7:19 — Синодальный перевод
+              tier: official
+              excerpt: чем очищается всякая пища
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.14:14&r
+              title: Рим. 14:14 — Синодальный перевод
+              tier: official
+              excerpt: нет ничего в себе самом нечистого
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Tim.4:4&r
+              title: 1 Тим. 4:4 — Синодальный перевод
+              tier: official
+              excerpt: всякое творение Божие хорошо
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.15:29&r
+              title: Деян. 15:29 — Синодальный перевод
+              tier: official
+              excerpt: воздерживаться от идоложертвенного и крови, и удавленины
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Eph.5:18&r
+              title: Еф. 5:18 — Синодальный перевод
+              tier: official
+              excerpt: не упивайтесь вином
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.6:19&r
+              title: 1 Кор. 6:19 — Синодальный перевод
+              tier: official
+              excerpt: храм живущего в вас Святаго Духа
+              accessed: '2026-10-01'
+        more:
+          - title: Скоромная пища — Азбука веры
+            url: https://azbyka.ru/skoromnaya-pishha
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: military-service
+        title: Военная служба и мир
+        topic: rules
+        church:
+          text: '«Основы социальной концепции» Русской Православной Церкви (VIII.2): «Признавая войну злом, Церковь все же не воспрещает своим чадам участвовать в боевых действиях», когда речь идёт о защите ближних и восстановлении попранной справедливости. Катехизис свт. Филарета учит: все люди — наши ближние, а любовь к Отечеству должна простираться «до готовности отдать за них свою жизнь».'
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+              title: 'Основы социальной концепции РПЦ (2000), VIII.2: участие христиан в боевых действиях'
+              tier: official
+              excerpt: Признавая войну злом, Церковь все же не воспрещает своим чадам участвовать в боевых действиях
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§489–492: любовь к Богу и ближнему'
+              tier: official
+              excerpt: Все люди являются нашими ближними. Потому что все – создания единого Бога
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Наша любовь к Государю и Отечеству должна простираться до готовности отдать за них свою жизнь
+              accessed: '2026-09-25'
+        tradition:
+          text: 'Институт библейских исследований Евро-Азиатского дивизиона отмечает: официальные документы церкви АСД не запрещают службу в армии. Заявление Генеральной конференции 1985 года убеждает народы «перековать мечи свои на орала».'
+          proof:
+            - url: https://bri.esd.adventist.org/uploaded_assets/113416
+              title: «Библия и церковь о проблеме войны и мира» — Институт библейских исследований, Евро-Азиатский дивизион
+              tier: official
+              excerpt: официальные документы Церкви АСД не запрещают службу в армии
+              accessed: '2026-09-25'
+            - url: https://bri.esd.adventist.org/uploaded_assets/113416
+              title: «Библия и церковь о проблеме войны и мира», текст заявления Генеральной конференции 1985 года
+              tier: official
+              excerpt: Церковь адвентистов седьмого дня убеждает все народы «перековать мечи свои на орала, и копья свои — на серпы»
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - По документам обеих сторон военная служба не запрещена общим правилом. Расхождения в этом вопросе документально не выявлено.
+            - 'Общее и отношение к войне: в «Основах социальной концепции» война названа злом («Признавая войну злом…»), а адвентистская церковь призывает народы к миру (заявление 1985 г.).'
+            - Основания православного подхода — слова Христа «нет больше той любви, как если кто положит душу свою за друзей своих» (Ин 15:13) и то, что Иоанн Креститель не потребовал от воинов оставить службу (Лк 3:14).
+          proof:
+            - url: https://azbyka.ru/biblia/?Jn.15:13&r
+              title: Ин. 15:13 — Синодальный перевод
+              tier: official
+              excerpt: Нет больше той любви, как если кто положит душу свою за друзей своих
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.3:14&r
+              title: Лк. 3:14 — Синодальный перевод
+              tier: official
+              excerpt: и довольствуйтесь своим жалованьем
+              accessed: '2026-10-01'
+        more:
+          - title: Основы социальной концепции Русской Православной Церкви
+            url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+            kind: church
+        legacy: []
+        status: verified
+      - id: fasting
+        title: Пост
+        topic: fasting
+        church:
+          text: 'Церковь устанавливает общие посты как подвиг воздержания: Великий пост («Четыредесятница»), пост в среду и пятницу, Рождественский, Успенский и апостольский посты (катехизис свт. Филарета, §§539–543). Согласно определению Архиерейского Собора 2016 года, причащению Святых Таин традиционно предшествует пост, а «евхаристический пост в строгом смысле слова» — полное воздержание от пищи и питья с полуночи.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§540–543: посты'
+              tier: official
+              excerpt: Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §539
+              tier: official
+              excerpt: Важнейшим постом является Великий пост, или святая Четыредесятница
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §540
+              tier: official
+              excerpt: Великий пост называется Четыредесятницей потому, что продолжается сорок дней, исключая неделю страдания Христа (Страстную седмицу)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §541
+              tier: official
+              excerpt: Великий пост продолжается сорок дней, поскольку Сам Господь Иисус Христос постился сорок дней
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §542
+              tier: official
+              excerpt: Поститься положено в среду – в воспоминание предания Господа нашего Иисуса Христа на страдание, а в пятницу – в память самих Его страданий и смерти
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543
+              tier: official
+              excerpt: Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить следующие за этими постами праздники
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543
+              tier: official
+              excerpt: а пост в память святых апостолов – для подражания апостолам, которые постились, готовя себя для дела Евангельской проповеди
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §524
+              tier: official
+              excerpt: Вторая заповедь, запрещая чревоугодие, учит воздержанию и посту
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: к скоромным продуктам относятся любые продовольственные продукты, имеющие в своем составе плоть или продукты жизнедеятельности теплокровных животных, такие как (молоко, яйца)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: Рыба и морепродукты занимают особое срединное место между постной и скоромной пищей
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: Рыба и морепродукты (которые разрешаются в рамках менее строгих форм поста)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/
+              title: Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Пост в форме воздержания от скоромной пищи и удаления от развлечений, сопровождаемый усердной молитвой и покаянием, традиционно предваряет причащение Святых Таин
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/
+              title: Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Евхаристический пост в строгом смысле слова – полное воздержание от пищи и питья с полуночи до Святого Причащения
+              accessed: '2026-09-26'
+        tradition:
+          text: 'Е. Уайт, труды которой церковь признаёт авторитетными, пишет, что при некоторых обстоятельствах пост и молитва «рекомендуются и очень нужны»: «Дети Божьи должны выделить дни для поста и молитвы», но полное воздержание от еды необязательно. «С вашей стороны не будет никакой заслуги в таком посте, но вся заслуга — в Крови Христа». «Основы вероучения» требуют заботы о теле: физических упражнений, отдыха, здоровой пищи.'
+          proof:
+            - url: https://m.egwwritings.org/ru/book/1786.1418
+              title: Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 187.6 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: При некоторых обстоятельствах жизни рекомендуются и очень нужны пост и молитва.
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1786.1418
+              title: Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 188.4 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Дети Божьи должны выделить дни для поста и молитвы. Необязательно полностью воздерживаться от пищи, но есть нужно мало, причем самые простые блюда.
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1786.1418
+              title: Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 188.3 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Истинный пост, который нужно рекомендовать всем, предполагает воздержание от возбуждающих блюд и строгую умеренность в употреблении всякой здоровой и простой пищи
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1786.1418
+              title: Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 189.1 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: С вашей стороны не будет никакой заслуги в таком посте, но вся заслуга — в Крови Христа.
+              accessed: '2026-09-26'
+            - url: https://m.egwwritings.org/ru/book/1786.1418
+              title: Е. Уайт, «Основы здорового питания», гл. 10 «Пост», Пит 189.3 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: самым лучшим средством лечения больного может быть воздержание от одного — двух приемов пищи
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 22 «Христианское поведение»
+              tier: official
+              excerpt: Нам необходимы физические упражнения, отдых
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 22 «Христианское поведение»
+              tier: official
+              excerpt: поскольку наши тела являются храмом Святого Духа, мы не должны пренебрегать заботой о них
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: Он проявился в служении Елены Уайт, вестницы Господней, письменные труды которой продолжают
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 18 «Дар пророчества»
+              tier: official
+              excerpt: авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением для исправления
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - Общее — пост вместе с молитвой и без расчёта на заслугу (Мф 6:16–18). В тексте Е. Уайт «вся заслуга — в Крови Христа».
+            - Различие — в устройстве. В Церкви общие посты имеют календарь (Великий пост, среда и пятница, четыре годовых поста) и правила о пище (скоромная пища); в приведённых адвентистских текстах дни поста «выделяют» сами верующие и пост описан как умеренность в простой пище.
+            - 'Церковь возводит пост к Писанию: Христос говорит, что когда отнимется Жених, тогда будут поститься (Мф 9:15), а апостольская Церковь постилась при призвании служителей (Деян 13:2–3; 14:23).'
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.9:15&r
+              title: Мф. 9:15 — Синодальный перевод
+              tier: official
+              excerpt: тогда будут поститься
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.13:2&r
+              title: Деян. 13:2 — Синодальный перевод
+              tier: official
+              excerpt: Когда они служили Господу и постились
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.14:23&r
+              title: Деян. 14:23 — Синодальный перевод
+              tier: official
+              excerpt: они помолились с постом
+              accessed: '2026-10-01'
+        more:
+          - title: Скоромная пища — Азбука веры
+            url: https://azbyka.ru/skoromnaya-pishha
+            kind: encyclopedia
+          - title: Об участии верных в Евхаристии — Архиерейский Собор РПЦ 2016
+            url: https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/
+            kind: church
+        legacy: []
+        status: verified
+      - id: monasticism
+        title: Монашество
+        topic: fasting
+        church:
+          text: 'Монашество — свободное посвящение жизни Богу. Положение о монастырях и монашествующих (Архиерейский Собор 2017 года) определяет его как «особый образ христианского жительства, заключающийся во всецелом посвящении себя на служение Богу»; главные обеты — послушание, нестяжание и целомудрие. Церковь не требует этого пути от всех: Христос говорит, что безбрачие вмещают те, «кому дано» (Мф 19:11–12).'
+          proof:
+            - url: https://azbyka.ru/monashestvo
+              title: 'Азбука веры. Монашество: обеты и духовная жизнь'
+              tier: reference
+              excerpt: всецело посвятивший себя Богу через принятие обетов
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+              title: Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: особый образ христианского жительства, заключающийся во всецелом посвящении себя на служение Богу
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+              title: Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Главными из этих обетов являются послушание, нестяжание и целомудрие
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §359: почему брак является Таинством'
+              tier: official
+              excerpt: То, что брак есть Таинство, видно из следующих слов апостола Павла
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Е. Уайт пишет: «Христос Своим примером не учил людей запирать себя в монастырях, чтобы приготовиться к вечной жизни». Те же «Основы вероучения», где труды Е. Уайт названы авторитетным источником, говорят о заботе о теле, которое «является храмом Святого Духа», и описывают брак как пожизненный союз мужчины и женщины.'
+          proof:
+            - url: https://m.egwwritings.org/ru/book/1800.2541
+              title: Е. Уайт, «Великая Борьба», гл. 35 «Свобода совести под угрозой», ВБ 570.2 — EGW Writings (Ellen G. White Estate)
+              tier: official
+              excerpt: Христос Своим примером не учил людей запирать себя в монастырях, чтобы приготовиться к вечной жизни.
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 23 «Брак и семья»
+              tier: official
+              excerpt: является, согласно учению Христа, пожизненным союзом
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Спор возник бы, если бы монашество считалось обязательным для спасения. Церковь этого не учит: «Кто может вместить, да вместит» (Мф 19:12); брак при этом — не низшее состояние, а Таинство (§359).'
+            - Е. Уайт возражает против того, чтобы «запирать себя в монастырях, чтобы приготовиться к вечной жизни». Православное монашество понимается не как условие спасения, а как избранный путь посвящения Богу (Мф 19:21; 1 Кор 7:32–35).
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.19:11&r
+              title: Мф. 19:11 — Синодальный перевод
+              tier: official
+              excerpt: но кому дано
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.19:12&r
+              title: Мф. 19:12 — Синодальный перевод
+              tier: official
+              excerpt: Кто может вместить, да вместит
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.19:21&r
+              title: Мф. 19:21 — Синодальный перевод
+              tier: official
+              excerpt: если хочешь быть совершенным
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.7:32&r
+              title: 1 Кор. 7:32 — Синодальный перевод
+              tier: official
+              excerpt: Неженатый заботится о Господнем
+              accessed: '2026-10-01'
+        more:
+          - title: Монашество — Азбука веры
+            url: https://azbyka.ru/monashestvo
+            kind: encyclopedia
+          - title: Положение о монастырях и монашествующих — Архиерейский Собор РПЦ 2017
+            url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+            kind: church
+        legacy: []
+        status: verified
+  - id: judgment-end
+    title: Небесное святилище, суд и конец времён
+    cards:
+      - id: heavenly-sanctuary
+        title: Небесное святилище и служение Христа
+        topic: salvation
+        church:
+          text: Церковь исповедует, что Христос вознёсся на небеса и «седяща одесную Отца» (Символ веры, член 6); Он — Первосвященник, Который «однажды» принёс Себя в жертву и «всегда жив, чтобы ходатайствовать за них» (Евр 7:25; 9:12, 26). Катехизис свт. Филарета приписывает Христу «святость Первосвященника».
+          proof:
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 6: о Вознесении'
+              tier: official
+              excerpt: И восше́дшаго на Небеса, и седя́ща одесну́ю Отца
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §134: почему Иисус назван Помазанником'
+              tier: official
+              excerpt: Ему в высочайшей степени принадлежит ведение Пророка, святость Первосвященника и могущество Царя
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Пункт 24 «Основ вероучения»: на небе есть святилище, где Христос «совершает ради нас Своё заступническое служение»; «сразу же после вознесения Он стал нашим великим Первосвященником». Пункт 4: Он вознёсся, «чтобы ради нас совершать служение в небесном святилище». В 1844 году, по тексту, началась «вторая и последняя часть Его искупительного служения».'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
+              excerpt: Сразу же после вознесения Он стал нашим великим Первосвященником
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
+              excerpt: Его служение даёт каждому верующему возможность спасения через принятие Его искупительной жертвы
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 4 «Бог Сын»
+              tier: official
+              excerpt: чтобы ради нас совершать служение в небесном святилище
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
+              excerpt: В 1844 году, по окончании пророческого периода в 2300 лет, началась вторая и последняя часть Его искупительного служения
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общее: Христос — наш небесный Первосвященник и ходатай (Евр 4:14; 7:25; Рим 8:34), а жертва на Кресте принесена «однажды» — об этом говорит и адвентистский текст.'
+            - Особое адвентистское положение — деление служения на две части с переходом ко второй в 1844 году. Писание же говорит, что Христос «однажды вошел во святилище и приобрел вечное искупление» (Евр 9:12) и «однажды, к концу веков, явился для уничтожения греха жертвою Своею» (Евр 9:26). Православное учение о ходатайстве Христа не содержит второго этапа, начавшегося в определённый год.
+            - Свящ. Евгений Веселов, разбирая это учение, считает, что оно «является результатом крайне рационального отношения к тайне нашего Искупления и продуктом юридического мышления XIX в.», и что оно, вопреки заявлениям адвентистов, «не имеет точного соответствия» в ветхозаветном дне очищения (Лев 16). Это оценка автора, не определение Церкви.
+          proof:
+            - url: https://azbyka.ru/biblia/?Hebr.7:25&r
+              title: Евр. 7:25 — Синодальный перевод
+              tier: official
+              excerpt: будучи всегда жив, чтобы ходатайствовать за них
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.9:12&r
+              title: Евр. 9:12 — Синодальный перевод
+              tier: official
+              excerpt: однажды вошел во святилище и приобрел вечное искупление
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.9:26&r
+              title: Евр. 9:26 — Синодальный перевод
+              tier: official
+              excerpt: Он же однажды, к концу веков, явился для уничтожения греха жертвою Своею
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.4:14&r
+              title: Евр. 4:14 — Синодальный перевод
+              tier: official
+              excerpt: Итак, имея Первосвященника великого
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/adventistskie-uchenija-o-pervosvjashennicheskom-sluzhenii-gospoda-iisusa-hrista-i-nebesnom-svjatilishe-v-svete-poslanija-ap-pavla-k-evrejam/
+              title: Свящ. Е. Веселов. Адвентистские учения о первосвященническом служении Господа Иисуса Христа и небесном святилище, аннотация
+              tier: reference
+              excerpt: Адвентистское учение о небесном святилище является результатом крайне рационального отношения к тайне нашего Искупления
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/analiz-sootvetstvija-adventistskogo-uchenija-ob-ochishhenii-nebesnogo-svjatilishha-vethozavetnomu-bogosluzheniyu-dnja-ochishhenija/
+              title: Свящ. Е. Веселов. Анализ соответствия адвентистского учения об очищении небесного святилища ветхозаветному богослужению дня очищения, аннотация
+              tier: reference
+              excerpt: не имеет точного соответствия в ветхозаветном богослужении дня очищения (Лев. 16)
+              accessed: '2026-10-01'
+        more:
+          - title: Адвентистские учения о первосвященническом служении Господа Иисуса Христа и небесном святилище в свете послания ап. Павла к Евреям
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/adventistskie-uchenija-o-pervosvjashennicheskom-sluzhenii-gospoda-iisusa-hrista-i-nebesnom-svjatilishe-v-svete-poslanija-ap-pavla-k-evrejam/
+            kind: author
+            author: Свящ. Е. Веселов
+          - title: Анализ соответствия адвентистского учения об очищении небесного святилища ветхозаветному богослужению дня очищения
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/analiz-sootvetstvija-adventistskogo-uchenija-ob-ochishhenii-nebesnogo-svjatilishha-vethozavetnomu-bogosluzheniyu-dnja-ochishhenija/
+            kind: author
+            author: Свящ. Е. Веселов
+        legacy: []
+        status: verified
+      - id: investigative-judgment
+        title: Следственный суд и 1844 год
+        topic: afterlife
+        church:
+          text: 'Церковь исповедует, что Христос «паки грядущаго со славою судити живым и мертвым»: Он будет судить всех людей без исключения при Своём пришествии, и когда это будет — неизвестно. Православное учение о Суде не опирается на расчёт года.'
+          proof:
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 7: Пришествие и Суд'
+              tier: official
+              excerpt: И па́ки гряду́щаго со славою суди́ти живым и мертвым
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §228: всех ли людей Он будет судить'
+              tier: official
+              excerpt: Он будет судить всех людей без исключения
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, О седьмом члене Символа веры
+              tier: official
+              excerpt: Когда Господь Иисус Христос придет нас судить неизвестно
+              accessed: '2026-09-27'
+        tradition:
+          text: По п. 24 «Основ вероучения», в 1844 году, «по окончании пророческого периода в 2300 лет», на небе начался следственный суд — «первая стадия окончательного удаления всех грехов», прообразом которой было очищение святилища в День искупления. Он должен показать, кто из умерших и ещё живущих достоин вечного Царства. Церковь возводит свою историю к ожиданию Христа 22 октября 1844 года («Великое разочарование»).
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
+              excerpt: В 1844 году, по окончании пророческого периода в 2300 лет, началась вторая и последняя часть Его искупительного служения
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
+              excerpt: На этом суде также становится ясно, кто из ещё живущих на земле пребывает во Христе
+              accessed: '2026-10-01'
+            - url: https://whiteestate.org/about/egwbio/
+              title: Ellen G. White — a Brief Biography — Ellen G. White Estate
+              tier: official
+              excerpt: The keenness of the Great Disappointment that Jesus did not return to earth on October 22, 1844
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее: Христос — Судия, суд будет справедливым и по делам (Мф 25:31–46).'
+            - Особое в адвентистском учении — начало небесного суда в определённый год, 1844. В Писании сказано, что о том дне и часе «никто не знает, ни Ангелы небесные, а только Отец Мой один» (Мф 24:36), и «не ваше дело знать времена или сроки» (Деян 1:7).
+            - Свящ. Евгений Веселов считает, что учение об очищении небесного святилища не соответствует ветхозаветному дню очищения (Лев 16). Это разбор автора, а не определение Церкви.
+            - 'Год 1844 — исторический исток движения: адвентисты ждали возвращения Христа 22 октября 1844 года. Нынешнее адвентистское учение связывает с этой датой начало небесного суда; православное учение о Суде такого положения не содержит.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.24:36&r
+              title: Мф. 24:36 — Синодальный перевод
+              tier: official
+              excerpt: О дне же том и часе никто не знает
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.1:7&r
+              title: Деян. 1:7 — Синодальный перевод
+              tier: official
+              excerpt: не ваше дело знать времена или сроки
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Evgenij-Veselov/analiz-sootvetstvija-adventistskogo-uchenija-ob-ochishhenii-nebesnogo-svjatilishha-vethozavetnomu-bogosluzheniyu-dnja-ochishhenija/
+              title: Свящ. Е. Веселов. Анализ соответствия адвентистского учения об очищении небесного святилища ветхозаветному богослужению дня очищения, аннотация
+              tier: reference
+              excerpt: не имеет точного соответствия в ветхозаветном богослужении дня очищения (Лев. 16)
+              accessed: '2026-10-01'
+        more:
+          - title: Анализ соответствия адвентистского учения об очищении небесного святилища ветхозаветному богослужению дня очищения
+            url: https://azbyka.ru/otechnik/Evgenij-Veselov/analiz-sootvetstvija-adventistskogo-uchenija-ob-ochishhenii-nebesnogo-svjatilishha-vethozavetnomu-bogosluzheniyu-dnja-ochishhenija/
+            kind: author
+            author: Свящ. Е. Веселов
+          - title: Эсхатология христиан адвентистов седьмого дня
+            url: https://azbyka.ru/otechnik/sekty/eshatologija-hristian-adventistov-sedmogo-dnja/
+            kind: author
+            author: А. С. Грузинов
+        legacy: []
+        status: verified
+      - id: soul-and-death
+        title: Душа и состояние умерших
+        topic: afterlife
+        church:
+          text: 'Церковь учит, что душа не исчезает со смертью тела: «Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства», а души грешников — в противоположном состоянии (катехизис свт. Филарета). По Посланию восточных патриархов 1723 года, совершенное блаженство или мучение каждый получит по общем воскресении, когда душа соединится с телом. Церковь молится об усопших.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, О членах 11 и 12 Символа веры
+              tier: official
+              excerpt: во свете, покое и предначинании вечного блаженства
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Душам умерших с верой, но не успевших принести достойных плодов покаяния, для достижения блаженного воскресения могут помочь возносимые за них молитвы
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 11: воскресение мёртвых'
+              tier: official
+              excerpt: Чаю воскресения мертвых
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Дыхание жизни – это душа, существо духовное и бессмертное
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+              title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»
+              tier: official
+              excerpt: Святейший нового Рима Константинополя и Вселенский Патриарх Иеремия, Блаженнейший Патриарх града Божия Антиохии Афанасий, Блаженнейший Патриарх Святого града Иерусалима Хрисанф
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+              title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»
+              tier: official
+              excerpt: Веруем, что души умерших блаженствуют или мучатся, смотря по делам своим
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/bogoslovie/poslanie-patriarhov-vostochno-kafolicheskoj-tserkvi-o-pravoslavnoj-vere-1723-g/
+              title: Послание Патриархов Восточно-Кафолической Церкви о православной вере (1723) — «Азбука веры»
+              tier: official
+              excerpt: совершенное блаженство, как и совершенное мучение, каждый получит по общем воскресении, когда душа соединится с телом
+              accessed: '2026-09-26'
+        tradition:
+          text: 'Пункт 26 «Основ вероучения»: «Бог, единственный имеющий бессмертие, дарует вечную жизнь Своим искупленным. До дня Второго пришествия смерть для всех людей — это состояние небытия». Пункт 7 описывает человека как «неразрывное единство тела, души и духа». Московское объединение церкви описывает своё учение как понимание смертности души, или условного бессмертия: до воскресения и суда мёртвые бессознательны.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 26 «Смерть и воскресение»
+              tier: official
+              excerpt: дарует вечную жизнь Своим искупленным. До дня Второго пришествия смерть для всех людей — это состояние небытия
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: До дня Второго пришествия смерть для всех людей — это состояние небытия
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 7 «Природа человека»
+              tier: official
+              excerpt: Человек, по замыслу Божьему, — это неразрывное единство тела, души и духа
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
+              title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Понимание смертности души или условном бессмертии
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Есть общее: центр надежды — воскресение мёртвых (Ин 5:28–29; Символ веры, член 11). Писание называет смерть сном (Ин 11:11), и православные авторы этого не отрицают: по свящ. Даниилу Сысоеву, образ сна «предполагает пробуждение», но не небытие.'
+            - 'Расхождение — в состоянии между смертью и воскресением. Христос говорит разбойнику: «ныне же будешь со Мною в раю» (Лк 23:43); Павел желает «разрешиться и быть со Христом» (Флп 1:23; 2 Кор 5:8); «Бог не есть Бог мертвых, но живых» (Мф 22:32); души убиенных «под жертвенником» взывают к Богу (Откр 6:9–10).'
+            - Лк 23:43 адвентистские авторы, как пишет Сысоев, читают с запятой после «ныне». Притча о богаче и Лазаре (Лк 16:22–26) лежит в основе слов катехизиса (§371); при этом православные авторы расходятся, притча ли это или рассказ о реальных событиях (Сысоев).
+            - 'Церковь молится об усопших: «душам умерших с верой, но не успевших принести достойных плодов покаяния, для достижения блаженного воскресения могут помочь возносимые за них молитвы» (§373). Молитва об усопших связана с этим различением состояния до воскресения и окончательной участи после Суда.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Lk.23:43&r
+              title: Лк. 23:43 — Синодальный перевод
+              tier: official
+              excerpt: истинно говорю тебе, ныне же будешь со Мною в раю
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Phil.1:23&r
+              title: Флп. 1:23 — Синодальный перевод
+              tier: official
+              excerpt: имею желание разрешиться и быть со Христом
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.22:32&r
+              title: Мф. 22:32 — Синодальный перевод
+              tier: official
+              excerpt: Бог не есть Бог мертвых, но живых
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.6:9&r
+              title: Откр. 6:9 — Синодальный перевод
+              tier: official
+              excerpt: я увидел под жертвенником души убиенных
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.11:11&r
+              title: Ин. 11:11 — Синодальный перевод
+              tier: official
+              excerpt: Лазарь, друг наш, уснул
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 2.3: смерть и сон'
+              tier: reference
+              excerpt: Сон действительно предполагает пробуждение. Но с ним согласна и православная танатология.
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 6.4.1: обещание благоразумному разбойнику'
+              tier: reference
+              excerpt: поставили в Лк. 23:43 запятую после слова
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 6.2.1: притча о богаче и Лазаре'
+              tier: reference
+              excerpt: в православной традиции существует два взаимоисключающих ответа на этот вопрос
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §371: откуда мы знаем, что души праведных пребывают в предначинании блаженства'
+              tier: official
+              excerpt: Души праведных пребывают в предначинании блаженства прежде последнего Суда
+              accessed: '2026-10-01'
+        more:
+          - title: Антропология Адвентистов Седьмого дня и свидетелей Иеговы
+            url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+            kind: author
+            author: Свящ. Даниил Сысоев
+          - title: Душа и состояние умерших — по учению адвентистов
+            url: https://azbyka.ru/otechnik/sekty/dusha-i-sostojanie-umershih-po-ucheniyu-adventistov/
+            kind: author
+            author: Н. Б. Белогорский
+        legacy: []
+        status: verified
+      - id: hell-and-annihilation
+        title: 'Участь неверующих: вечное мучение или уничтожение'
+        topic: end-times
+        church:
+          text: 'Катехизис свт. Филарета: «Неверующие и беззаконники будут преданы вечной смерти, или, иначе говоря, вечному огню, вечному мучению, вместе с диаволами» (Откр 20:14–15). Церковь опирается на слова Христа: «И пойдут сии в муку вечную, а праведники в жизнь вечную» (Мф 25:46).'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Неверующие и беззаконники будут преданы вечной смерти, или, иначе говоря, вечному огню, вечному мучению, вместе с диаволами
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: «И пойдут сии в муку вечную, а праведники в жизнь вечную» (Мф. 25:46)
+              accessed: '2026-09-26'
+        tradition:
+          text: По п. 27 «Основ вероучения», в конце тысячелетия нечестивые будут воскрешены, и «снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю»; грех и грешники «навсегда исчезнут из вселенной». Московское объединение церкви описывает своё учение как понимание ада «как полного и окончательного уничтожения нечестивых».
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»
+              tier: official
+              excerpt: снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: По окончании этого тысячелетнего периода Христос со Своими святыми и Святой Город сойдут на землю. Тогда будут воскрешены и все
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
+              title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
+              tier: official
+              excerpt: Понимание ада как полного и окончательного уничтожения нечестивых
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее: окончательный Суд, воскресение всех (Ин 5:28–29 приведено и в адвентистском тексте) и конец греха. Расходятся в участи нераскаявшихся: вечное мучение — или уничтожение.'
+            - В Мф 25:46 слово «вечный» относится и к муке, и к жизни; свящ. Д. Сысоев указывает на это и считает неверным понимать его в двух разных смыслах (его аргумент, не определение Церкви).
+            - Откровение говорит, что дым мучения «будет восходить во веки веков» (Откр 14:11), а диавол с зверем и лжепророком «будут мучиться день и ночь во веки веков» (Откр 20:10); Христос говорит о геенне, «где червь их не умирает и огонь не угасает» (Мк 9:48).
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.25:46&r
+              title: Мф. 25:46 — Синодальный перевод
+              tier: official
+              excerpt: И пойдут сии в му́ку вечную, а праведники в жизнь вечную
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.14:11&r
+              title: Откр. 14:11 — Синодальный перевод
+              tier: official
+              excerpt: дым мучения их будет восходить во веки веков
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.20:10&r
+              title: Откр. 20:10 — Синодальный перевод
+              tier: official
+              excerpt: будут мучиться день и ночь во веки веков
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.9:48&r
+              title: Мк. 9:48 — Синодальный перевод
+              tier: official
+              excerpt: где червь их не умирает и огонь не угасает
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 10.1: уничтожение или вечное существование'
+              tier: reference
+              excerpt: употребляется в том же стихе, что и «вечная жизнь»
+              accessed: '2026-10-01'
+        more:
+          - title: Антропология Адвентистов Седьмого дня и свидетелей Иеговы
+            url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+            kind: author
+            author: Свящ. Даниил Сысоев
+          - title: Ожидание адвентистами второго пришествия Иисуса Христа; учение их о 1000-летнем царстве и вечности мучений грешников
+            url: https://azbyka.ru/otechnik/sekty/ozhidanie-adventistami-vtorogo-prishestvija-iisusa-hrista-uchenie-ih-o-1000-letnem-tsarstve-hristovom-i-vechnosti-muchenij-greshnikov/
+            kind: author
+            author: Н. А. Белогорский
+        legacy: []
+        status: verified
+      - id: second-coming
+        title: Второе пришествие Христа
+        topic: end-times
+        church:
+          text: 'Церковь исповедует, что Христос придёт «со славою судити живым и мертвым», и «Егоже царствию не будет конца». «Когда Господь Иисус Христос придет нас судить неизвестно», поэтому надо быть всегда готовым; в слове Божием открыты признаки приближения Его пришествия (Мф 24): умножение пороков и бедствий, проповедь Евангелия всем народам, пришествие антихриста.'
+          proof:
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 7: Пришествие и Суд'
+              tier: official
+              excerpt: царству Которого не будет конца
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, О седьмом члене Символа веры
+              tier: official
+              excerpt: Когда Господь Иисус Христос придет нас судить неизвестно
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'В слове Божием открыты некоторые признаки приближения пришествия Христа, а именно: уменьшение веры и любви между людьми'
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §224: как Священное Писание говорит о будущем пришествии Христа'
+              tier: official
+              excerpt: Сей Иисус, вознесшийся от вас на небо, придет таким же образом
+              accessed: '2026-10-01'
+        tradition:
+          text: 'По п. 25 «Основ вероучения», пришествие будет «буквальным, личным и одновременным для всего мира»: праведники воскреснут и вместе с живыми будут вознесены на небо, «нечестивые же в этот момент умрут». «Время этого события не открыто, и потому мы должны быть готовы к нему в любой момент», но «почти полное исполнение важнейших пророчеств» свидетельствует о близком пришествии.'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 25 «Второе пришествие Христа»
+              tier: official
+              excerpt: будет буквальным, личным и одновременным для всего мира
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 25 «Второе пришествие Христа»
+              tier: official
+              excerpt: Нечестивые же в этот момент умрут
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 25 «Второе пришествие Христа»
+              tier: official
+              excerpt: Время этого события не открыто, и потому мы должны быть готовы к нему в любой момент
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 25 «Второе пришествие Христа»
+              tier: official
+              excerpt: Почти полное исполнение важнейших пророчеств, последовательно раскрывающих историю мира, свидетельствует о близком пришествии Христа
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Здесь сильное согласие: возвращение Христа будет личным и видимым (Деян 1:11), срок неизвестен, готовым нужно быть всегда. Это не вопрос расхождения.'
+            - 'История предостерегает: движение возникло из ожидания, привязанного к дате (22 октября 1844 года, по Ellen G. White Estate). Писание говорит о дне и часе: «никто не знает» (Мф 24:36). Современный адвентистский текст прямо признаёт, что время не открыто.'
+            - Различие — в том, что происходит при пришествии. По адвентистскому тексту, праведники вознесены на небо, а «нечестивые же в этот момент умрут»; затем следует тысячелетие на небе (см. следующую карточку). По катехизису, Христос придёт судить всех людей без исключения, и тогда начнётся царство славы, которому нет конца (§§228, 234–235).
+          proof:
+            - url: https://azbyka.ru/biblia/?Act.1:11&r
+              title: Деян. 1:11 — Синодальный перевод
+              tier: official
+              excerpt: придет таким же образом, как вы видели Его восходящим на небо
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.24:36&r
+              title: Мф. 24:36 — Синодальный перевод
+              tier: official
+              excerpt: О дне же том и часе никто не знает
+              accessed: '2026-10-01'
+            - url: https://whiteestate.org/about/egwbio/
+              title: Ellen G. White — a Brief Biography — Ellen G. White Estate
+              tier: official
+              excerpt: The keenness of the Great Disappointment that Jesus did not return to earth on October 22, 1844
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §228: всех ли людей Он будет судить'
+              tier: official
+              excerpt: Он будет судить всех людей без исключения
+              accessed: '2026-10-01'
+        more:
+          - title: Эсхатология христиан адвентистов седьмого дня
+            url: https://azbyka.ru/otechnik/sekty/eshatologija-hristian-adventistov-sedmogo-dnja/
+            kind: author
+            author: А. С. Грузинов
+        legacy: []
+        status: verified
+      - id: millennium
+        title: Тысячелетнее Царство и Новая Земля
+        topic: end-times
+        church:
+          text: Катехизис свт. Филарета различает царство природы (весь мир), благодати (верующие на земле) и славы (блаженные на небесах); слова Символа веры о том, что царству Христа не будет конца, относятся к царству славы (§§234–235). Тысячелетнего царства между пришествием и Судом катехизис не описывает.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §234: что такое царство Христа'
+              tier: official
+              excerpt: 'Царство Христа это: весь мир; все верующие на земле; все блаженные на небесах'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §235: какому из царств не будет конца'
+              tier: official
+              excerpt: Слова Символа о том, что царству Христа не будет конца, относятся к царству славы
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Пункт 27 «Основ вероучения»: тысячелетнее Царство — «промежуточный период между первым и вторым воскресениями», когда Христос и искупленные находятся на небе, а на земле остаётся только сатана с ангелами. После тысячелетия Христос и святые сойдут на землю, нечестивые воскреснут, и огонь уничтожит их. Затем, по п. 28, будет Новая Земля, где «Сам Господь будет там жить вместе со Своим народом».'
+          proof:
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»
+              tier: official
+              excerpt: Тысячелетнее Царство — это промежуточный период между
+              accessed: '2026-10-01'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
+              tier: official
+              excerpt: По окончании этого тысячелетнего периода Христос со Своими святыми и Святой Город сойдут на землю. Тогда будут воскрешены и все
+              accessed: '2026-09-26'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»
+              tier: official
+              excerpt: снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю
+              accessed: '2026-09-25'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 28 «Новая Земля»
+              tier: official
+              excerpt: Сам Господь будет там жить вместе со Своим народом
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - Общее — надежда на вечное Царство и жизнь с Богом после Суда (Лк 1:33; Откр 21:3).
+            - 'Различие — в промежуточном «тысячелетнем» периоде на небе после пришествия. Катехизис не описывает такого отдельного периода: перед Судом — царство благодати, а после — царство славы (§§234–235).'
+            - Свящ. Д. Сысоев пишет, что Православная Церковь понимает тысячелетие как всё время от Искупления до Второго пришествия Христа, а «первое воскресение» — как оживление души верой и Крещением (он цитирует свт. Игнатия Брянчанинова). Это толкование авторов, а не догмат.
+            - Адвентистский текст относит Откр 20:4–6 к периоду после пришествия; обе стороны читают этот текст по-разному, и спор нужно решать не отдельной цитатой, а в свете Символа веры (Его «царствию не будет конца»).
+          proof:
+            - url: https://azbyka.ru/biblia/?Apok.20:4&r
+              title: Откр. 20:4 — Синодальный перевод
+              tier: official
+              excerpt: Они ожили и царствовали со Христом тысячу лет
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.20:5&r
+              title: Откр. 20:5 — Синодальный перевод
+              tier: official
+              excerpt: Это – первое воскресение
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.1:33&r
+              title: Лк. 1:33 — Синодальный перевод
+              tier: official
+              excerpt: и Царству Его не будет конца
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 9: тысячелетнее царство'
+              tier: reference
+              excerpt: Православной Церкви, Которая понимает под этим периодом все время от времени Искупления до Второго Пришествия Христа
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+              title: 'Свящ. Д. Сысоев. Антропология адвентистов седьмого дня и свидетелей Иеговы, 9.1: первое воскресение'
+              tier: reference
+              excerpt: речь здесь идет об «оживлении души из ее смерти верою в Господа Иисуса Христа
+              accessed: '2026-10-01'
+        more:
+          - title: Антропология Адвентистов Седьмого дня и свидетелей Иеговы
+            url: https://azbyka.ru/otechnik/Daniil_Sysoev/antropologija-adventistov-sedmogo-dnja-i-svidetelej-iegovy/
+            kind: author
+            author: Свящ. Даниил Сысоев
+          - title: 'Эсхатология, милленаризм, адвентизм: история и современность'
+            url: https://azbyka.ru/otechnik/sekty/eshatologija-millenarizm-adventizm-istorija-i-sovremennost/
+            kind: author
+            author: А. Ю. Григоренко
+        legacy: []
+        status: verified
