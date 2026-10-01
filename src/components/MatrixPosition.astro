@@ -14,7 +14,13 @@ interface Props {
 
 const { position, expandable = false, compact = false } = Astro.props;
 const summary = positionSummaryText(position);
-const EvidenceTag = expandable ? 'details' : 'div';
+// A fold hides only what is long: a position whose evidence is just its
+// source line shows that line directly (owner, 2026-10-01).
+const hasLongEvidence = Boolean(
+  position.doctrine?.sections.length || position.quote || position.scripture
+  || (summary && position.unity?.kind === 'divided'),
+);
+const EvidenceTag = expandable && hasLongEvidence ? 'details' : 'div';
 const quoteText = position.quote?.text_ru ?? position.quote?.text;
 const scriptureText = position.scripture?.text_ru ?? position.scripture?.text;
 const quoteInSummary = Boolean(quoteText && summary?.includes(quoteText));
@@ -29,7 +35,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   )}
   {!compact && position.doctrine && <p class="unity">{position.doctrine.authority}</p>}
   {!compact && <EvidenceTag class="evidence">
-    {expandable && <summary>Обоснование и цитаты</summary>}
+    {expandable && hasLongEvidence && <summary>Обоснование и цитаты</summary>}
     {position.doctrine?.sections.map(section => <section><h5>{section.title}</h5><p>{section.text}</p></section>)}
   {summary && position.unity?.kind === 'divided' && (
     <p class={`unity ${position.unity.kind}`}>
