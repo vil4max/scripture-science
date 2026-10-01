@@ -1,15 +1,7 @@
 import { defineCollection, reference } from 'astro:content';
 import { file, glob } from 'astro/loaders';
 import { z } from 'astro/zod';
-// js-yaml is not a declared dependency of this project, but it is the
-// parser astro/loaders' own `file()` loader uses internally for .yaml/.yml
-// (node_modules/astro/dist/content/loaders/file.js) - reusing it here to
-// reshape an array-of-objects YAML file into the id-keyed object `file()`
-// expects is not a new dependency, just the same one Astro already needs to
-// have installed for every YAML-backed collection in this file to load.
-// @ts-expect-error - js-yaml has no types without @types/js-yaml (no new
-// dependency added for this - see the comment above); Node resolves the
-// module fine at both build and check time regardless.
+// @ts-expect-error - js-yaml has no separately installed TypeScript declarations.
 import * as yaml from 'js-yaml';
 import { checkDisputeSides } from './lib/disputes';
 import { TOPIC_ORDER, TRADITION_IDS, checkMatrixTopicOrder } from './lib/rules';
@@ -188,12 +180,6 @@ function keyedArrayParser(idField: string) {
   };
 }
 
-// How one tradition's own official documents describe the others
-// (EDITORIAL.md principle 9), one entry per tradition id
-// (docs/tasks/site-m4-views-terms.md). Content writers own this file; not
-// yet written (docs/tasks/site-m2-main-page.md "Data availability") - the
-// collection is simply empty until it lands, so the section it backs
-// renders nothing rather than failing the build.
 const viewsDocument = z.object({
   title: z.string(),
   title_ru: z.string(),
@@ -265,10 +251,6 @@ const disputes = defineCollection({
     }),
 });
 
-// The terms box (EDITORIAL.md principle 5): each term the site uses or
-// deliberately avoids, defined from a reference-tier source
-// (docs/tasks/site-m4-views-terms.md). Content writers own this file; not
-// yet written - see `views` above for the same "renders nothing" contract.
 const terms = defineCollection({
   loader: file('src/data/terms.yaml', { parser: keyedArrayParser('term') }),
   schema: z.object({

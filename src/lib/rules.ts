@@ -104,15 +104,7 @@ export function checkMatrixTopicOrder(topicIds: readonly string[]): void {
   }
 }
 
-// docs/tasks/site-m5-reading-polish.md W3 "Colours": the home page's reading
-// layout uses one shared `--t-*` accent per tradition, including Orthodoxy
-// and Jehovah's Witnesses, which otherwise carry the pair page's own legacy
-// `--o`/`--j` tokens (src/data/traditions.yaml, src/styles/orthodoxy-jw.css) -
-// tokens the home page's layout never loads, so a chip using them renders
-// empty (Problems seen #4). The pair page keeps using `traditions.yaml`'s own
-// `color` field untouched; only home-page callers (src/pages/index.astro,
-// src/pages/sources.astro) should build their `colorById` map from this
-// canonical table instead.
+// Current pages share these tokens; preserved migration data retains its original palette.
 export const TRADITION_COLOR_TOKEN: Record<TraditionId, string> = {
   judaism: '--t-judaism',
   orthodoxy: '--t-orthodoxy',

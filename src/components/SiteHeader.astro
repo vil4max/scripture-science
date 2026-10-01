@@ -4,12 +4,6 @@
 // Below 1000px it becomes a top bar with the same links in a row; nothing
 // folds or nests (owner, 2026-09-26: «не усложняй вложением»); the religions
 // group is a second flat list under a small label.
-// The navigation is a plain, ARIA-labelled list - not a <nav> element - on
-// purpose: scripts/check_text.py locates the page's *first* <nav> (and
-// first <main>) to compare against source/orthodoxy-jw.html, and on the
-// pair page that must stay the page's own local chips nav
-// (src/pages/pairs/orthodoxy-jw.astro), not this sitewide one. `role="navigation"`
-// keeps the same accessibility landmark without the tag collision.
 import ThemeSwitch from './ThemeSwitch.astro';
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
@@ -105,6 +99,11 @@ const isCurrent = (path: string) =>
     </div>
   </div>
 </aside>
+
+<script>
+  import { getSelection } from '../lib/selection-client';
+  getSelection();
+</script>
 
 <style>
   .site-side {

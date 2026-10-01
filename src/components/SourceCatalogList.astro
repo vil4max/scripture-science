@@ -1,0 +1,39 @@
+---
+import { citationTitle } from '../lib/citations';
+import { profileHref } from '../lib/analysis';
+import { EVIDENCE_ROLE_LABELS, type CatalogEntry } from '../lib/sourceCatalog';
+import { TOPIC_TITLES_RU, type TopicId } from '../lib/rules';
+interface Props { entries: CatalogEntry[]; detailed?: boolean; }
+const { entries, detailed = false } = Astro.props;
+const tierLabels = { official: 'официальный источник', reference: 'справочный источник', news: 'СМИ/НКО' };
+---
+<ul class="catalog-list">
+  {entries.map((entry) => <li>
+    <a href={entry.url} target="_blank" rel="noopener noreferrer">{citationTitle(entry.references.map(({ proof }) => proof))}</a>
+    <span class="meta"> · обращение {[...new Set(entry.references.map(({ proof }) => proof.accessed))].join(', ')}</span>
+    {detailed && <details>
+      <summary>Проверочные выдержки ({entry.references.length})</summary>
+      {entry.references.map(({ proof, usages }) => <div class="evidence">
+        <p class="excerpt">«{proof.excerpt}»</p>
+        <p class="meta">{proof.title} · {tierLabels[proof.tier]} · {proof.accessed}</p>
+        <ul class="usages">{usages.map((usage) => <li>
+          {usage.traditionName && `${usage.traditionName} — `}
+          {usage.topic && `${TOPIC_TITLES_RU[usage.topic as TopicId]} — `}
+          {usage.cardId && usage.traditionId
+            ? <a href={profileHref(usage.traditionId, usage.cardId)}>{usage.cardTitle}</a>
+            : usage.section}
+          {usage.role && ` — ${EVIDENCE_ROLE_LABELS[usage.role]}`}
+        </li>)}</ul>
+      </div>)}
+    </details>}
+  </li>)}
+</ul>
+<style>
+  .catalog-list { list-style: none; margin: 12px 0 0; padding: 0; display: grid; gap: 14px; overflow-wrap: anywhere; }
+  .meta, .usages { color: var(--muted); font-size: 14px; }
+  .meta { margin: 4px 0; }
+  .excerpt { margin: 4px 0; font-style: italic; }
+  .evidence + .evidence { margin-top: 16px; }
+  .usages { margin: 4px 0; padding-left: 20px; }
+  summary { cursor: pointer; }
+</style>

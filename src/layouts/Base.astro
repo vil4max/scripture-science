@@ -1,21 +1,12 @@
 ---
-// The site frame (docs/tasks/site-m2-main-page.md W2; sidebar since
-// docs/tasks/site-m13-sidebar-sections.md): sidebar, footer and theme switch
-// wrap every page that uses this layout, including the pair
-// page (src/pages/pairs/orthodoxy-jw.astro), so there is exactly one place
-// that assembles them.
-import SelectionBar from '../components/SelectionBar.astro';
 import SiteHeader from '../components/SiteHeader.astro';
 
 interface Props {
   title: string;
   description?: string;
-  // Pages that follow the reader's choice of traditions show the pinned
-  // selection bar (docs/tasks/site-m14-selection.md).
-  selectionBar?: boolean;
 }
 
-const { title, description, selectionBar = false } = Astro.props;
+const { title, description } = Astro.props;
 const pageContent = await Astro.slots.render('default');
 ---
 
@@ -54,7 +45,6 @@ const pageContent = await Astro.slots.render('default');
     <div class="shell">
       <SiteHeader />
       <div class="content">
-        {selectionBar && <SelectionBar />}
         <Fragment set:html={pageContent} />
       </div>
     </div>

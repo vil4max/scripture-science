@@ -1,15 +1,10 @@
 ---
 import worldComposition from '../data/world-composition.json';
 import { WORLD_COLORS } from '../lib/worldAtlas';
-import ProofLink from './ProofLink.astro';
 
 const groups = [...worldComposition].sort((a, b) => b.share - a.share);
 const formatShare = (share: number) => `${share.toFixed(1).replace('.', ',')}\u00a0%`;
 const formatCount = (count: string) => count.replace(' ', '\u00a0');
-const sources = [...new Map(groups.flatMap((group) => group.proof).map((proof) => [proof.url, proof])).values()]
-  .map((proof) => ({ ...proof, tier: 'reference' as const }));
-const otherReligionsProof = groups.find((group) => group.id === 'other-religions')!.proof
-  .map((proof) => ({ ...proof, tier: 'reference' as const }));
 ---
 <figure class="wc">
   <h2 id="world-composition-title">Население мира · последние сопоставимые данные</h2>
@@ -24,8 +19,8 @@ const otherReligionsProof = groups.find((group) => group.id === 'other-religions
     </tbody>
   </table>
   <figcaption>
-    <p>Данные Pew Research Center (2025) на 2020 год. Доли округлены до десятых долей процента, численность — как в отчёте.<ProofLink proof={sources}/></p>
-    <p>«Другие религии» у Pew объединяют бахаи, джайнов, синтоистов, сикхов, даосов, викканов, зороастрийцев и другие немногочисленные группы, часть которых относят к народным или традиционным религиям.<ProofLink proof={otherReligionsProof}/></p>
+    <p>Данные Pew Research Center (2025) на 2020 год. Доли округлены до десятых долей процента, численность — как в отчёте.</p>
+    <p>«Другие религии» у Pew объединяют бахаи, джайнов, синтоистов, сикхов, даосов, викканов, зороастрийцев и другие немногочисленные группы, часть которых относят к народным или традиционным религиям.</p>
   </figcaption>
 </figure>
 <style>

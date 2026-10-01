@@ -3,7 +3,6 @@ import { getOrderedMatrix } from '../lib/content';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 import overview from '../data/family-overview.json';
 import TraditionCard from './TraditionCard.astro';
-import ProofLink from './ProofLink.astro';
 const traditions = await getOrderedMatrix();
 const card = (id: string) => traditions.find((tradition) => tradition.id === id)!;
 const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other';
@@ -22,7 +21,6 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
     <aside class="development-note" aria-labelledby="development-title">
       <h4 id="development-title">Как развивается линия разделений</h4>
       <p>{overview.christianDevelopment.text}</p>
-      <ProofLink proof={overview.christianDevelopment.proof.map((proof) => ({ ...proof, tier: proof.tier as 'official' | 'reference' }))} />
     </aside>
     {overview.groups.map((group) => <section class="doctrine-group" data-doctrine-group={group.id} aria-labelledby={`${group.id}-title`}>
       <h4 id={`${group.id}-title`}>{group.title}</h4>

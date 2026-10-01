@@ -2,20 +2,14 @@
 import type { CollectionEntry } from 'astro:content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+import { READING_KIND_LABELS, uniqueProofs } from '../lib/sourceCatalog';
 
 type Card = CollectionEntry<'analyses'>['data']['groups'][number]['cards'][number];
 interface Props { card: Card; tradition: string; traditionName: string; }
 const { card, tradition, traditionName } = Astro.props;
 
-const KIND_LABEL = {
-  church: 'церковный документ',
-  encyclopedia: 'энциклопедия «Азбуки веры»',
-  author: 'мнение автора',
-  conference: 'итоговый документ конференции',
-  testimony: 'свидетельство',
-} as const;
 const accent = TRADITION_COLOR_TOKEN[tradition as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other';
-const proofs = [...card.church.proof, ...card.tradition.proof, ...card.answer.proof];
+const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...card.answer.proof]);
 ---
 <article class="card" id={card.id} data-topic={card.topic} data-legacy={card.legacy.length > 0 ? card.legacy.join(' ') : undefined}>
   <h4>{card.title}{card.status === 'todo' && <span class="todo" title={card.todo}>уточняется</span>}</h4>
@@ -35,7 +29,7 @@ const proofs = [...card.church.proof, ...card.tradition.proof, ...card.answer.pr
     <p class="label">Подробнее</p>
     <ul>{card.more.map((item) => <li>
       <a href={item.url} target="_blank" rel="noopener noreferrer">{item.author ? `${item.author}. ` : ''}{item.title}</a>
-      <span class="kind"> — {KIND_LABEL[item.kind]}</span>
+      <span class="kind"> — {READING_KIND_LABELS[item.kind]}</span>
     </li>)}</ul>
   </div>}
   {proofs.length > 0 && <details class="proof">

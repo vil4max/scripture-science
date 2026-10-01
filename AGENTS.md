@@ -28,14 +28,14 @@ direction. Then return to this repository.
 - kind: personal
 - Skill profile: core
 - Marker: `.agents/project-context.yaml` (local)
-- Runtime: none; Node.js with npm
+- Runtime: none; Node.js 26 with npm
 - Device scope: desktop only (owner, 2026-09-26, `docs/DECISIONS.md`
   "Desktop-only scope"). No 375px check and no separate mobile layout in a
   task's acceptance criteria going forward.
 - Product: a Russian-language static site — one picture of the religious world
   (a continuous Orthodox Church timeline and comparisons grounded in Orthodox
   teaching, with separately attributed statements from other traditions), with
-  supporting evidence for each claim. Built with Astro (static output), MDX and content collections; served
+  supporting evidence for each claim. Built with Astro (static output) and content collections; served
   by GitHub Pages under the `/scripture-science` base path.
 - Rules for content: `docs/EDITORIAL.md` (editorial principles) and
   `docs/SOURCES.md` (source tiers and what "verified" means). Research notes and
@@ -53,8 +53,8 @@ source, excerpt, access date and tier, or is marked `TODO: verify`.
 
 ## Commands
 
-    npm install
+    npm ci
     npm run dev       # local server
     npm run build     # static site in dist/
     npm run check     # astro check (types and templates)
-    npm run verify    # build + check + node --test scripts/ + text-fidelity check
+    npm run verify    # build + check + node --test scripts/ + internal-link and text-fidelity checks

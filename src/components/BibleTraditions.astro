@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from 'astro:content';
 import guide from '../data/bible-guide.json';
-import ProofLink from './ProofLink.astro';
 
 interface Props { traditions: CollectionEntry<'matrix'>[]; event: string; }
 const { traditions, event } = Astro.props;
@@ -12,11 +11,9 @@ const notes = guide.traditionNotes.filter((note) => note.event === event);
   <p class="label">В современных традициях</p>
   {notes.map((note) => {
     const tradition = traditions.find((item) => item.id === note.tradition)!;
-    const evidence = tradition.data.positions.filter((position) => ['scripture', 'authority'].includes(position.topic));
     return <div data-scripture-tradition={note.tradition}>
       <h4>{tradition.data.name}</h4>
       <p>{note.text}</p>
-      <ProofLink proof={[...tradition.data.scripture.proof, ...evidence.flatMap((position) => [...position.proof, ...position.unity.proof])]} />
     </div>;
   })}
 </aside>}

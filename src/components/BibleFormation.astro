@@ -4,12 +4,8 @@ import type { CollectionEntry } from 'astro:content';
 import BibleTraditions from './BibleTraditions.astro';
 interface Props { traditions: CollectionEntry<'matrix'>[]; }
 const { traditions } = Astro.props;
-import type { Citation } from '../lib/citations';
-import ProofLink from './ProofLink.astro';
 
 const labels: Record<string, string> = { lds: 'Святые последних дней · отдельное Писание', hebrew: 'Еврейские Писания', christian: 'Христианская Библия', islam: 'Ислам · самостоятельное Писание' };
-type VerifiedProof = Citation & Required<Pick<Citation, 'tier' | 'excerpt' | 'accessed'>>;
-const proofs = guide.proofs as Record<string, VerifiedProof[]>;
 ---
 
 <section aria-labelledby="formation-title">
@@ -26,7 +22,6 @@ const proofs = guide.proofs as Record<string, VerifiedProof[]>;
           <div><dt>Кто</dt><dd>{event.people}</dd></div>
         </dl>
         {event.paragraphs.map((paragraph) => <p>{paragraph}</p>)}
-        <ProofLink proof={event.proofKeys.flatMap((key) => proofs[key])} />
         <BibleTraditions traditions={traditions} event={event.id} />
       </article>
     </li>)}
@@ -36,7 +31,7 @@ const proofs = guide.proofs as Record<string, VerifiedProof[]>;
     </li>
   </ol>
   <section id="other-religious-texts"><h2>Религиозные тексты других традиций</h2><p>Мусульмане считают Коран откровением, а Святые последних дней признают Книгу Мормона Писанием. Православная Церковь не принимает эти притязания: эти книги не входят в Библию и не являются продолжением церковного канона.</p>
-  <ol class="scripture-timeline">{guide.timeline.filter(event => ['islam', 'lds'].includes(event.branch)).map(event => <li id={`scripture-${event.id}`} data-branch={event.branch}><div class="period">{event.period}</div><article><span class="branch">{event.branch === 'islam' ? 'Ислам' : 'Святые последних дней'}</span><h3>{event.title}</h3>{event.paragraphs.map(paragraph => <p>{paragraph}</p>)}<ProofLink proof={event.proofKeys.flatMap(key => proofs[key])} /><BibleTraditions traditions={traditions} event={event.id} /></article></li>)}</ol></section>
+  <ol class="scripture-timeline">{guide.timeline.filter(event => ['islam', 'lds'].includes(event.branch)).map(event => <li id={`scripture-${event.id}`} data-branch={event.branch}><div class="period">{event.period}</div><article><span class="branch">{event.branch === 'islam' ? 'Ислам' : 'Святые последних дней'}</span><h3>{event.title}</h3>{event.paragraphs.map(paragraph => <p>{paragraph}</p>)}<BibleTraditions traditions={traditions} event={event.id} /></article></li>)}</ol></section>
 </section>
 
 <style>

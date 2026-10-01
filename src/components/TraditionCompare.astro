@@ -4,10 +4,8 @@
 // row across the columns so the same fact is read at the same height. The
 // columns share their template with the topics and the pinned column header
 // on /compare/, like a product comparison table. Every
-// tradition is rendered; the script shows the chosen ones. Without a choice
-// a hint asks for one.
+// tradition is rendered; the script shows the selected comparison columns.
 import type { CollectionEntry } from 'astro:content';
-import ProofLink from './ProofLink.astro';
 import OrthodoxClassification from './OrthodoxClassification.astro';
 import { DEFAULT_SELECTION } from '../lib/selection';
 import { sinceLines } from '../lib/rules';
@@ -46,21 +44,18 @@ const rowLabel: Record<(typeof rows)[number], string> = {
                   {sinceLines(since.label).map((line) => (
                     <p class="line">{line}</p>
                   ))}
-                  <ProofLink proof={since.proof} />
                 </>
               )}
               {row === 'adherents' && (
                 <>
                   <p class="line">{adherents.value}</p>
                   {adherents.scopeNote && <p class="line scope">{adherents.scopeNote}</p>}
-                  <ProofLink proof={adherents.proof} />
                 </>
               )}
               {row === 'scripture' && scripture.comparison && (
                 <>
                   <p class="line"><strong>Общее:</strong> {scripture.comparison.common}</p>
                   <p class="line"><strong>Различие:</strong> {scripture.comparison.difference}</p>
-                  <ProofLink proof={[...scripture.comparison.proof, ...scripture.proof]} />
                 </>
               )}
               {row === 'scripture' && !scripture.comparison && (
@@ -71,13 +66,11 @@ const rowLabel: Record<(typeof rows)[number], string> = {
                       <p class="line">{scripture.overview.text}</p>
                     </>
                   ) : <p class="line">{scripture.name}</p>}
-                  <ProofLink proof={scripture.proof} />
                 </>
               )}
               {row === 'self' && (
                 <>
                   <p class="line">{self_view.summary}</p>
-                  <ProofLink proof={self_view.proof} />
                 </>
               )}
               {row === 'family' && <OrthodoxClassification tradition={t.id} />}

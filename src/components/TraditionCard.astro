@@ -1,21 +1,7 @@
 ---
-// One tradition card in the "one picture of the religious world" grid
-// (docs/tasks/site-m2-main-page.md W3): colour chip with the name as text
-// (EDITORIAL.md's palette warnings require a direct text label next to
-// every coloured mark, never colour alone), "с ..." since label, scripture
-// translation, adherents, self-view, family (where sourced) and a footnote,
-// each backed by its own source links.
-// docs/tasks/site-m5-reading-polish.md W2: fields stack label-above-value
-// (Problems seen #2: a side label column squeezed the values) and every
-// source list collapses behind ProofLink's own "Источники" disclosure.
-// docs/tasks/site-m9-desktop-cards.md: on a desktop a card is a full-width
-// row with its fields in two columns, short facts paired with short ones
-// (since/adherents) and long with long (scripture/self-view); narrow
-// screens keep one stacked column.
 import type { CollectionEntry } from 'astro:content';
 import TraditionImage from './TraditionImage.astro';
 import OrthodoxClassification from './OrthodoxClassification.astro';
-import ProofLink from './ProofLink.astro';
 import { getFamilyByTradition } from '../lib/families';
 import { JW_NOTE_ID } from '../lib/jwNote';
 import { sinceLines } from '../lib/rules';
@@ -64,14 +50,12 @@ const family = getFamilyByTradition(tradition.id);
         {sinceLines(since.label).map((line) => (
           <p class="line">{line}</p>
         ))}
-        <ProofLink proof={since.proof} />
       </dd>
     </div>
     {adherents.display !== false && <div class="fact">
       <dt>Численность</dt>
       <dd>
         {adherents.value}
-        <ProofLink proof={adherents.proof} />
       </dd>
     </div>}
     <div class="fact">
@@ -83,14 +67,12 @@ const family = getFamilyByTradition(tradition.id);
             <p class="line">{scripture.overview.text}</p>
           </>
         ) : <p class="line">{scripture.name}</p>}
-        <ProofLink proof={scripture.proof} />
       </dd>
     </div>
     <div class="fact">
       <dt>Сама о себе</dt>
       <dd>
         {self_view.summary}
-        <ProofLink proof={self_view.proof} />
       </dd>
     </div>
     {family && (

@@ -12,13 +12,12 @@ import OrthodoxAssessment from './OrthodoxAssessment.astro';
 import OrthodoxClassification from './OrthodoxClassification.astro';
 import { disputeView } from '../lib/disputes';
 import MatrixPosition from './MatrixPosition.astro';
-import ProofLink from './ProofLink.astro';
 import SectionPage from '../layouts/SectionPage.astro';
-import { getDisputes, getOrderedMatrix, getOrderedViews } from '../lib/content';
+import { getDisputes, getOrderedMatrix } from '../lib/content';
 import { getAnalyses } from '../lib/analysis';
 import { JW_NOTE_ID } from '../lib/jwNote';
 import { getFamilyByTradition } from '../lib/families';
-import { sinceLines, TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, TRADITION_IDS } from '../lib/rules';
+import { sinceLines, TOPIC_ORDER, TOPIC_GROUPS, TOPIC_INTROS, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../lib/rules';
 
 // One tradition's own page: Orthodoxy's at /orthodoxy/ («Православная вера»,
 // the site's foundation), every other at /traditions/<id>/ (owner, 2026-10-01).
@@ -42,11 +41,6 @@ const disputes = (await getDisputes()).filter((entry) => disputeView({
   challengers: entry.data.challenges.map((part) => part.tradition),
   answerers: entry.data.answers.map((part) => part.tradition),
 }, [tradition.id]).visible);
-const views = await getOrderedViews();
-const outgoing = views.find((entry) => entry.id === tradition.id)?.data.documents ?? [];
-const incoming = views.filter((entry) => entry.id !== tradition.id).flatMap((entry) =>
-  entry.data.documents.filter((doc) => doc.about.includes(tradition.data.id)).map((doc) => ({ author: entry.id, doc })),
-);
 const lineage = parseLineage(lineageData);
 validateReferences(lineage);
 const chronology = profileChronology(lineage, tradition.data.id);
@@ -56,7 +50,6 @@ const associationLabels = {
 };
 // The legal note belongs to the Jehovah's Witnesses page only (owner, 2026-10-01).
 const showsJwNote = tradition.id === 'jw';
-
 
 ---
 
@@ -74,7 +67,6 @@ const showsJwNote = tradition.id === 'jw';
       <dt>Возникновение</dt>
       <dd>
         {sinceLines(since.label).map((line) => <p>{line}</p>)}
-        <ProofLink proof={since.proof} />
       </dd>
     </div>
     <div>
@@ -82,14 +74,12 @@ const showsJwNote = tradition.id === 'jw';
       <dd>
         <p>{adherents.value} ({adherents.year})</p>
         <p class="note">{adherents.scopeNote ?? adherents.method}</p>
-        <ProofLink proof={adherents.proof} />
       </dd>
     </div>
     <div>
       <dt>Писание</dt>
       <dd>
         <p>{scripture.overview?.text ?? scripture.name}</p>
-        <ProofLink proof={scripture.proof} />
       </dd>
     </div>
   </dl>
@@ -108,7 +98,6 @@ const showsJwNote = tradition.id === 'jw';
           <p class="chronology-date">{row.approx && 'ок. '}{yearFromCreation(row.year)} от С. М. · {row.approx && 'ок. '}{formatYearAd(row.year)}{row.year >= 0 && ' от Р. Х.'}</p>
           {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
           <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
-          {row.proof && <ProofLink proof={[row.proof]} />}
         </li>
       ))}
     </ol>
@@ -161,7 +150,6 @@ const showsJwNote = tradition.id === 'jw';
   )}
   <section id="disputes-title" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>
   <section id="views-title" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
-
 
 </SectionPage>
 

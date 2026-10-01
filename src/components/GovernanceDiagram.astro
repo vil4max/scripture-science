@@ -1,6 +1,5 @@
 ---
 import { getOrderedMatrix } from '../lib/content';
-import ProofLink from './ProofLink.astro';
 interface Props { tradition: string; }
 const { tradition } = Astro.props;
 const entry = (await getOrderedMatrix()).find((t) => t.id === tradition);
@@ -36,7 +35,6 @@ const LOCAL_CHURCHES = [
     <ul class="churches">{[1,2,3].map(() => <li><strong>Собрание</strong><br/>Совет старейшин</li>)}</ul>
     <p class="note">Показаны всемирное руководство и местные собрания; промежуточные уровни опущены.</p>
   </>}
-  <ProofLink proof={[...position.proof, ...position.unity.proof]}/>
 </figure>}
 <style>
   .governance { max-width: 880px; margin: 0; padding: 24px; border: 1px solid var(--line); border-radius: 12px; background: var(--surface); }

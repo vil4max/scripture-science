@@ -10,13 +10,12 @@ interface Props {
   title: string;
   lead?: string;
   jwNote?: boolean;
-  selectionBar?: boolean;
 }
 
-const { title, lead, jwNote = false, selectionBar = false } = Astro.props;
+const { title, lead, jwNote = false } = Astro.props;
 ---
 
-<Base title={title} description={lead} selectionBar={selectionBar}>
+<Base title={title} description={lead}>
   <main class="page">
     <header class="page-head">
       <h1>{title}</h1>

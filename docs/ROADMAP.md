@@ -7,11 +7,15 @@ task's state.
 
 ## In progress
 
-- **M26 — authorized delivery** (`docs/tasks/site-m26-orthodox-edition.md`): implemented and verified, with 15 foundations, 105 assessments, 13 disputed questions and 12 legacy topics recorded in the correction register. Orthodoxy is fixed first; Catholicism and Jehovah's Witnesses are the default comparison choices. The owner authorized one consolidated commit and push on 2026-09-27. The delivery gate passed 114 tests; the existing GitHub Pages workflow records deployment success separately. Independent theological acceptance is not claimed.
+- **Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`): owner authorized sequential implementation, verification, commits and pushes on 2026-10-01. Orthodox teaching remains the foundation; search, reading navigation, source discovery and editorial context are the next iterations.
 
 - **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01, not pushed. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
 
 ## Current baseline
+
+**Repository audit and conservative cleanup** (2026-10-01): implemented and verified; delivery authorized by the owner on 2026-10-01. The source catalogue includes evidence from all seven detailed analyses, keeps passage-level claim attribution and separates further reading and analysis-card coverage. Exact duplicates merge only in presentation; inactive renderers and the unused MDX integration are removed. Node.js 26 and the existing YAML parser are declared directly. `npm run verify` passes 145 Node tests and two Python tests, builds 16 pages, reports no Astro errors, warnings or hints, and checks internal links, anchors and duplicate IDs. Migration remains reproducible: 1028 source text nodes and 14 historical corrections. Desktop checks at 1280 and 1440 px cover both themes, comparison selection and reload persistence, source disclosures and legacy redirects. Existing routes and anchors, source data, images and research records remain intact. Sources HTML grew from 1,730,744 to 5,802,055 bytes (515,149 bytes with local gzip compression); complete evidence and attribution take priority over size. Sequential commits and pushes are now authorized in `docs/tasks/site-reading-improvements.md`.
+
+**M26 — historical delivery** (`docs/tasks/site-m26-orthodox-edition.md`): implemented and verified, with 15 foundations, 105 assessments, 13 disputed questions and 12 legacy topics recorded in the correction register. Orthodoxy is fixed first; Catholicism and Jehovah's Witnesses are the default comparison choices. The original brief records delivery authorization dated 2026-09-27; it does not authorize later changes. The delivery gate passed 114 tests; the existing GitHub Pages workflow records deployment success separately. Independent theological acceptance is not claimed.
 
 The earlier Bible guide, comparison reading changes and M25 atlas work were
 included in the site migration to this repository on 2026-09-27 (`db15715`).
@@ -36,11 +40,11 @@ and the canonical preview were preserved. See the M26 brief for verification.
   delivery does not establish independent ecclesiastical approval.
 - **Future delivery changes.** The existing remote is
   `https://github.com/vil4max/scripture-science.git`; the site uses GitHub Pages.
-  The current edition has explicit commit/push authorization. Later changes
-  retain their own delivery authorization boundary.
+  Any future commit or push requires its own current authorization.
 
 ## Backlog
 
+- **Source catalogue loading cost.** Measure the completed catalogue's browser loading and parsing cost before choosing a separate optimization task. Any reduction in repeated HTML must preserve complete evidence, usage attribution and existing anchors.
 - **Non-literal excerpts in existing data** found by the M33 writers; each
   keeps its analysis card `todo` until corrected in `src/data/matrix/` and
   `src/data/orthodox-assessments.json`: Judaism (toldot.com divine-name

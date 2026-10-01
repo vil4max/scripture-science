@@ -1,6 +1,5 @@
 ---
 import SourceLink from './SourceLink.astro';
-import ProofLink from './ProofLink.astro';
 
 interface Proof {
   url: string;
@@ -65,7 +64,6 @@ const quoted = /^«[\s\S]*»$/.test(quoteText) ? quoteText : `«${quoteText}»`;
     <p class="summary">{doc.summary}</p>
     <p class={`unity ${doc.unity.kind}`}>
       <span class="unity-label">{UNITY_LABEL[doc.unity.kind]}:</span> {doc.unity.note}
-      <ProofLink proof={doc.unity.proof} exclude={[doc.quote.url, ...doc.proof.map((item) => item.url)]} inline />
     </p>
     <blockquote class="quote">
       <p>{quoted}</p>
@@ -73,7 +71,6 @@ const quoted = /^«[\s\S]*»$/.test(quoteText) ? quoteText : `«${quoteText}»`;
       <cite>
         —{' '}
         <SourceLink url={doc.quote.url} title={doc.title_ru} />
-        <ProofLink proof={doc.proof} exclude={[doc.quote.url]} inline />
       </cite>
     </blockquote>
   </details>
@@ -133,11 +130,6 @@ const quoted = /^«[\s\S]*»$/.test(quoteText) ? quoteText : `«${quoteText}»`;
 
   .unity.partial .unity-label {
     color: var(--focus);
-  }
-
-  .unity :global(.proof-inline a) {
-    color: var(--focus);
-    text-decoration: none;
   }
 
   .summary {

@@ -32,8 +32,6 @@ const largest = rows[0].count;
 // every wide segment is labelled and the table lists all of them).
 const CONFESSION_ORDER = ['orthodox', 'catholics', 'independents', 'protestants', 'unaffiliated-christians'];
 const confessions = CONFESSION_ORDER.map((id) => data.branches.find((branch) => branch.id === id)!);
-const christians = data.groups.find((group) => group.id === 'christians')!;
-const christianWidth = (christians.count / data.population) * 100;
 const describe = (label: string, n: number) => `${label}: около ${count(n)}, ${percent(worldShare(n))} населения мира`;
 ---
 <section class="world-hierarchy" aria-labelledby="hierarchy-title">

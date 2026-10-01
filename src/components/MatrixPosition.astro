@@ -2,7 +2,6 @@
 import type { CollectionEntry } from 'astro:content';
 
 import SourceLink from './SourceLink.astro';
-import ProofLink from './ProofLink.astro';
 import { UNITY_LABEL_RU, positionSummaryText } from '../lib/rules';
 
 interface Props {
@@ -40,17 +39,8 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   {summary && position.unity?.kind === 'divided' && (
     <p class={`unity ${position.unity.kind}`}>
       <span class="unity-label">{UNITY_LABEL_RU[position.unity.kind]}</span><span>: {position.unity.note}</span>
-      <ProofLink
-        proof={position.unity.proof}
-        exclude={[position.quote?.url, position.scripture?.url, ...position.proof.map((item) => item.url)].filter(
-          (u): u is string => Boolean(u),
-        )}
-        inline
-      />
     </p>
   )}
-  {/* Detailed reading keeps quotes open, set apart by style; the attribution is the link to
-  the source (owner, 2026-09-26). */}
   {position.quote && !quoteInSummary && (
     <blockquote class="quote">
       <p>«{position.quote.text_ru ?? position.quote.text}»</p>
@@ -58,11 +48,6 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
         —{' '}
         <SourceLink url={position.quote.url} title={position.quote.source} />
         {position.quote.translation && <span class="translation"> · {position.quote.translation}</span>}
-        <ProofLink
-          proof={position.proof}
-          exclude={[position.quote.url, position.scripture?.url].filter((u): u is string => Boolean(u))}
-          inline
-        />
       </cite>
     </blockquote>
   )}
@@ -79,17 +64,8 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   {position.quote && quoteInSummary && <cite class="inline-source">
     <SourceLink url={position.quote.url} title={position.quote.source} />
     {position.quote.translation && <span class="translation"> · {position.quote.translation}</span>}
-    <ProofLink proof={position.proof} exclude={[position.quote.url, position.scripture?.url].filter((u): u is string => Boolean(u))} inline />
   </cite>}
   {!position.quote && !position.scripture && position.proof.length > 0 && <p class="inline-source">Основание: <SourceLink url={position.proof[0].url} title={position.proof[0].title} /></p>}
-  {!position.quote && (
-    <span>
-    <ProofLink
-      proof={position.proof}
-      exclude={[position.scripture?.url].filter((u): u is string => Boolean(u))}
-    />
-    </span>
-  )}
 
   </EvidenceTag>}
 </div>
@@ -130,11 +106,6 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
 
   .unity.divided .unity-label {
     color: var(--focus);
-  }
-
-  .unity :global(.proof-inline a) {
-    color: var(--focus);
-    text-decoration: none;
   }
 
   /* An open quote: set apart by a rule and italics, attributed with a link

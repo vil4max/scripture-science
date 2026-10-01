@@ -1,10 +1,5 @@
 ---
-// The terms box (EDITORIAL.md principle 5): each term the site's own voice
-// uses or deliberately avoids, defined from a reference-tier source.
-// Renders nothing while src/data/terms.yaml hasn't landed yet
-// (docs/tasks/site-m2-main-page.md "Data availability").
 import type { CollectionEntry } from 'astro:content';
-import ProofLink from './ProofLink.astro';
 
 interface Props {
   terms: CollectionEntry<'terms'>[];
@@ -27,7 +22,6 @@ const { terms } = Astro.props;
           <dd>
             <p>{entry.data.definition}</p>
             <p class="notes">{entry.data.notes}</p>
-            <ProofLink proof={entry.data.proof} />
           </dd>
         </div>
       ))}

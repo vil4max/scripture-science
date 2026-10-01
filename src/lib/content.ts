@@ -5,21 +5,7 @@ import { getCollection, getEntry } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import { TOPIC_ORDER, checkTopic, orderByAge } from './rules';
 
-/**
- * Traditions being compared, ordered older-first (EDITORIAL.md principle 2).
- * `ids` restricts the set for a page that compares a specific subset (e.g. a
- * pair page); omit it to order every tradition in the collection.
- *
- * Age comes from the tradition's `matrix` entry (docs/tasks/site-m2-main-page.md
- * W1: matrix is the single source of truth for `since`). A tradition without
- * a matrix entry yet - six of eight, at this slice's base
- * (docs/tasks/site-m2-main-page.md "Data availability") - has no age to
- * derive any more (`traditions.yaml` is presentation-only now), so it keeps
- * the position it was given in the caller's `ids` array instead of an
- * invented one; a caller with no matrix data and no `ids` gets whatever
- * order the content store returns. See "Conflicts found" in the Writer's
- * final report for this slice.
- */
+/** Legacy presentation entries ordered by matrix age; missing ages retain the requested order. */
 export async function getOrderedTraditions(
   ids?: string[],
 ): Promise<CollectionEntry<'traditions'>[]> {
@@ -49,14 +35,7 @@ export async function getOrderedTraditions(
   return decorated.map((d) => d.entry);
 }
 
-/**
- * Every tradition with a matrix entry (docs/tasks/site-m3-matrix-content.md),
- * ordered older-first with the eight-tradition tie-break rule
- * (EDITORIAL.md principle 2; src/lib/rules.ts `orderByAge`). Only the
- * matrix files that exist are returned - a tradition still being written
- * (docs/tasks/site-m2-main-page.md "Data availability") is simply absent,
- * not rendered incomplete.
- */
+/** Matrix entries ordered by historical age with the shared tie-break rule. */
 export async function getOrderedMatrix(): Promise<CollectionEntry<'matrix'>[]> {
   const all = await getCollection('matrix');
   const wrapped = all.map((entry) => ({
@@ -93,13 +72,7 @@ export async function getSection(id: string): Promise<CollectionEntry<'sections'
   return entry;
 }
 
-/**
- * How each tradition officially views the others (EDITORIAL.md principle 9),
- * ordered older-first by matrix age where known. `src/data/views-of-others.yaml`
- * is still being written (docs/tasks/site-m2-main-page.md "Data
- * availability"): while it is absent this returns an empty list, and the
- * page section it backs renders nothing rather than failing the build.
- */
+/** Attributed documents ordered by their issuing tradition's historical age. */
 export async function getOrderedViews(): Promise<CollectionEntry<'views'>[]> {
   const all = await getCollection('views');
   const matrixById = new Map((await getCollection('matrix')).map((m) => [m.id, m.data]));
@@ -122,21 +95,13 @@ export async function getOrderedViews(): Promise<CollectionEntry<'views'>[]> {
   return decorated.map((d) => d.entry);
 }
 
-/**
- * Verified disputes between traditions (EDITORIAL.md principle 10), in the
- * order of their topics; a dispute still marked `todo` is not published.
- */
+/** Publish verified disputes in comparison-topic order. */
 export async function getDisputes(): Promise<CollectionEntry<'disputes'>[]> {
   const all = await getCollection('disputes');
   const rank = (topic: string) => TOPIC_ORDER.indexOf(topic as (typeof TOPIC_ORDER)[number]);
   return all.filter((d) => d.data.status === 'verified').sort((a, b) => rank(a.data.topic) - rank(b.data.topic));
 }
 
-/**
- * The terms box (EDITORIAL.md principle 5). `src/data/terms.yaml` is still
- * being written - see `getOrderedViews` above for the same "renders
- * nothing while absent" contract.
- */
 export async function getTerms(): Promise<CollectionEntry<'terms'>[]> {
   return getCollection('terms');
 }
