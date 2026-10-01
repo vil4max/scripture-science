@@ -31,9 +31,10 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
 <section class="world-hierarchy" aria-labelledby="hierarchy-title">
   <h2 id="hierarchy-title">Сколько последователей у религий · ≈ 2026</h2>
   <div class="headline">
-    <p class="figure">≈ {count(data.population)}</p>
-    <p class="figure-label">население мира, 2026 год — 100 %</p>
+    <p class="figure-label">Всё население мира, 2026 год</p>
+    <p class="figure">≈ {count(data.population)} человек</p>
   </div>
+  <p class="split">Как оно делится по религиям — от всего населения мира (100 %):</p>
 
   <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; числа — в таблице ниже">
     {stack.map((group) => <span class="segment" style={`flex-grow:${group.count};background:var(${group.color})`} title={describe(group.label, group.count)} data-hierarchy-id={group.id}></span>)}
@@ -66,9 +67,10 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
 <style>
   .world-hierarchy { grid-column: 1 / -1; --world-folk: #527c67; --world-independent: #3979a8; }
   h2 { margin: 0 0 16px; }
-  .headline { display: flex; align-items: baseline; gap: 16px; flex-wrap: wrap; margin-bottom: 16px; }
-  .figure { margin: 0; font-size: 48px; font-weight: 700; line-height: 1; }
+  .headline { margin-bottom: 20px; }
+  .figure { margin: 4px 0 0; font-size: 40px; font-weight: 700; line-height: 1.1; }
   .figure-label { margin: 0; color: var(--muted); font-size: 16px; }
+  .split { margin: 0 0 10px; }
   .world-bar { display: flex; gap: 2px; height: 28px; margin-bottom: 24px; }
   .segment { min-width: 2px; flex-basis: 0; }
   .segment:first-child { border-radius: 4px 0 0 4px; }
