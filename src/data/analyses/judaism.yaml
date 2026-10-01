@@ -1,0 +1,2324 @@
+# Curated analysis of judaism (docs/tasks/site-m33-jw-analysis.md); Orthodox sources from Azbyka,
+# the tradition's teaching from its own documents. Validated for full evidence coverage.
+# Detailed analysis: Orthodoxy and Judaism (Orthodox, Conservative and Reform streams marked where they differ).
+# Card order inside a group follows the reading order of the analysis; `topic` links a card from the comparison.
+# Source rules: docs/SOURCES.md. Quotation excerpts are exact copies from the cited pages (accent marks included).
+tradition: judaism
+lead: 'Все расхождения православного учения и учения иудаизма — по тезисам: учение Церкви, учение иудаизма (с различиями ортодоксального, консервативного и реформистского течений), православный ответ.'
+authorityNote: 'Среди документов, на которые опирается этот разбор, нет акта Русской Православной Церкви, посвящённого иудаизму отдельно: Основные принципы отношения к инославию (2000) говорят об инославных христианах, а Основы социальной концепции (2000) касаются Израиля и Церкви лишь в связи с темой нации (II.1, II.4). Православная позиция здесь изложена по Писанию, Символу веры и катехизису свт. Филарета; пояснения энциклопедии «Азбука веры» и мнения отдельных авторов подписаны как таковые. Иудейское учение дано по иудейским источникам; заявления отдельных групп (например, «Дабру эмет») не обязательны для всего иудаизма.'
+groups:
+  - id: foundations
+    title: 'Общее основание: Писание, Бог и Имя'
+    cards:
+      - id: tanakh-old-testament
+        title: Танах и Ветхий Завет
+        topic: scripture
+        church:
+          text: Ветхий Завет — священные книги, написанные до рождества Христова; Церковь приняла их от ветхозаветной Церкви еврейской и читает как приготовление ко Христу. Книги Нового Завета, по вере Церкви, раскрывают то, что Ветхий Завет обещал и прообразовал.
+          proof:
+            - url: https://azbyka.ru/bibliya
+              title: 'Азбука веры. Библия: состав и язык библейских книг'
+              tier: reference
+              excerpt: 'Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг.'
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+              title: 'Свт. Филарет Московский. Пространный катехизис, О Священном Писании: число ветхозаветных книг'
+              tier: official
+              excerpt: двадцать две
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Святой Кирилл Иерусалимский, святой Афанасий Великий и святой Иоанн Дамаскин принимают число Священных книг Ветхого Завета – двадцать две
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В Новом Завете двадцать семь книг
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 32 (ч. 1, Священное Писание)
+              tier: official
+              excerpt: новозаветная христианская Церковь приняла ветхозаветные Священные книги от ветхозаветной Церкви еврейской
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 28 (ч. 1, Священное Писание)
+              tier: official
+              excerpt: Ветхий Завет состоял в том, что Бог обещал даровать людям Божественного Спасителя и готовил их к Его принятию
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Канон иудаизма — Танах: Тора (Пятикнижие Моисея), Невиим (Пророки) и Ктувим (Писания), 24 книги, составляющие Письменную Тору. Все течения признают один и тот же Танах; они расходятся в статусе Устной Торы.'
+          proof:
+            - url: https://toldot.com/Tanah.html
+              title: Танах — Еврейская Библия | Толдот.ру
+              tier: official
+              excerpt: 'Само слово «Танах» — это аббревиатура трех слов: Тора (Пятикнижие Моисея, Хумаш), Невиим (Пророки), Ктувим (Писания)'
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общее основание реально: Пятикнижие Церковь вместе с Христом называет законом Моисеевым (Лк 24:44), а апостол Павел говорит об иудеях, что «им вверено слово Божие» (Рим 3:2). Для православного христианина Танах — не чужая книга, а часть его Писания.'
+            - 'Разный счёт книг не всегда означает разные тексты: святые Кирилл Иерусалимский, Афанасий Великий и Иоанн Дамаскин принимали 22 книги Ветхого Завета «в соответствии с тем, как их считают евреи» (Катехизис свт. Филарета). Русская православная классификация насчитывает в Ветхом Завете 50 книг, включая книги, которых нет в еврейском каноне.'
+            - 'Главное различие — Новый Завет: в канон Танаха он не входит. Церковь читает Ветхий Завет в свете Христа: «Исследуйте Писания… они свидетельствуют о Мне» (Ин 5:39).'
+            - 'Это чтение не отменяет почтения к Танаху: «Новый Завет в Ветхом скрывается, Ветхий Завет в Новом раскрывается» — слова блж. Августина, приводимые в энциклопедии «Азбука веры».'
+          proof:
+            - url: https://azbyka.ru/biblia/?Lk.24:44&r
+              title: Лк. 24:44 — Синодальный перевод
+              tier: official
+              excerpt: написанному о Мне в законе Моисеевом и в пророках и псалмах
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.3:2&r
+              title: Рим. 3:2 — Синодальный перевод
+              tier: official
+              excerpt: им вверено слово Божие
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.5:39&r
+              title: Ин. 5:39 — Синодальный перевод
+              tier: official
+              excerpt: они свидетельствуют о Мне
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 37 (ч. 1, Священное Писание)
+              tier: official
+              excerpt: Сам Иисус Христос дает этим книгам общее наименование – Закона Моисеева
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 35 (ч. 1, Священное Писание)
+              tier: official
+              excerpt: они назначены отцами для чтения вступающих в Церковь
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/vetxij-zavet
+              title: Азбука веры. Ветхий Завет
+              tier: reference
+              excerpt: Новый Завет в Ветхом скрывается, Ветхий Завет в Новом раскрывается
+              accessed: '2026-10-01'
+        more:
+          - title: Ветхий Завет
+            url: https://azbyka.ru/vetxij-zavet
+            kind: encyclopedia
+          - title: Новый Завет
+            url: https://azbyka.ru/novyj-zavet
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Священном Писании'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+            kind: church
+        legacy: []
+        status: verified
+      - id: one-god-trinity
+        title: Единый Бог и Троица
+        topic: god
+        church:
+          text: 'Бог один по существу и троичен в Лицах: Отец, Сын и Святой Дух — Троица единосущная и нераздельная. Церковь исповедует то же единство Бога, что и Писание Израиля, но вместе с тем — Троицу, открытую во Христе.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§90–94: единосущная Троица'
+              tier: official
+              excerpt: 'Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух'
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §§86–90
+              tier: official
+              excerpt: Бог один по существу, но троичен в лицах
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная'
+              accessed: '2026-09-25'
+        tradition:
+          text: 'Иудаизм исповедует строгий монотеизм: Творец — один, бестелесный, не имеющий подобия. Эта вера выражена во втором и третьем принципах Рамбама и ежедневно провозглашается в «Шма Исраэль». Учения о Троице иудаизм не принимает.'
+          proof:
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: Творец, благословенно имя Его, — Один, и нет в мире цельности, подобной абсолютной цельности Его
+              accessed: '2026-09-25'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: благословенно имя Его, нематериален и ему несвойственны присущие материи состояния, и что у Него вообще нет никакого подобия
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Сходство подлинное: «Слушай, Израиль: Господь, Бог наш, Господь един есть» (Втор 6:4) Христос Сам называет первой из всех заповедей (Мк 12:29). Православная Церковь не учит о трёх богах.'
+            - Различие — в том, как раскрыто это единство. Крещение «во имя Отца и Сына и Святого Духа» (Мф 28:19) — одно имя, а благословение апостола называет вместе Христа, Отца и Духа (2 Кор 13:13).
+            - Катехизис свт. Филарета отмечает, что о Троице говорится и в Ветхом Завете, «но не так ясно» (вопрос 92), и приводит места Пс 32:6 и Ис 6:3. Это церковное толкование; иудейское чтение тех же мест иное.
+            - Бог по существу бестелесен («Бог есть Дух»), с этим согласны и Рамбам, и катехизис; различие начинается там, где Церковь исповедует, что Сын Божий воплотился (см. карточку «Воплощение и божество Иисуса»).
+          proof:
+            - url: https://azbyka.ru/biblia/?Deut.6:4&r
+              title: Втор. 6:4 — Синодальный перевод
+              tier: official
+              excerpt: Господь, Бог наш, Господь един есть
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.12:29&r
+              title: Мк. 12:29 — Синодальный перевод
+              tier: official
+              excerpt: 'первая из всех заповедей: слушай, Израиль! Господь Бог наш есть Господь единый'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.28:19&r
+              title: Мф. 28:19 — Синодальный перевод
+              tier: official
+              excerpt: крестя их во имя Отца и Сына и Святого Духа
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?2Cor.13:13&r
+              title: 2 Кор. 13:13 — Синодальный перевод
+              tier: official
+              excerpt: Благодать Господа нашего Иисуса Христа, и любовь Бога Отца, и общение Святаго Духа со всеми вами
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 92
+              tier: official
+              excerpt: О Святой Троице говорится и в Ветхом Завете, но не так ясно
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 86
+              tier: official
+              excerpt: Бог есть Дух вечный, всеблагой, всеведущий
+              accessed: '2026-10-01'
+        more:
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Боге и Троице'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+        legacy: []
+        status: verified
+      - id: name-of-god
+        title: Имя Бога
+        topic: name-of-god
+        church:
+          text: Бог открылся Моисею как «Сущий», и святые отцы видят в этом имени наиболее свойственное Богу; вместе с тем имена Бога не говорят о Нём исчерпывающе. «Господь» — тоже одно из имён Божиих. Имя Иисус («Яхве спасает») само содержит священное имя Божие.
+          proof:
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: понятие об именах, Исх. 3:14'
+              tier: reference
+              excerpt: имена Бога не говорят о Нем исчерпывающе
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §135
+              tier: official
+              excerpt: Имя Господь есть одно из имён Божиих.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Бог есть Дух вечный, всеблагой, всеведущий, всеправедный, всемогущий, вездесущий, неизменяемый, вседовольный, всеблаженный
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Бог называется Вседержителем потому, что Он всё, что ни есть, содержит в Своей силе и в Своей воле
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: священное имя Божие в Ветхом Завете'
+              tier: reference
+              excerpt: иудеи из благоговения вообще перестали произносить это имя
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: имя Христово'
+              tier: reference
+              excerpt: в самом имени Мессии присутствует священное имя Божие и обозначается Его спасительная сила
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Собственное Имя Бога — четыре буквы, Йуд-Кей-Вав-Кей — из уважения не произносят так, как оно написано: в молитве и при чтении Торы читают «Адонай» («Господь»), а вне молитвы пользуются почтительными обозначениями, например «Всевышний».'
+          proof:
+            - url: https://toldot.com/urava/ask/urava_5809.html
+              title: Как зовут Б-га? | Толдот.ру
+              tier: official
+              excerpt: Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)
+              accessed: '2026-09-25'
+            - url: https://toldot.com/urava/ask/urava_5809.html
+              title: Как зовут Б-га? | Толдот.ру
+              tier: official
+              excerpt: Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Благоговение перед Именем общее: третья заповедь запрещает употреблять имя Божие всуе (Исх 20:7). Энциклопедия «Азбука веры» прямо отмечает, что иудеи после вавилонского плена из благоговения перестали произносить это имя.'
+            - 'Православная молитва не зависит от восстановления одного произношения: энциклопедия «Азбука веры» сообщает, что правильное произношение священного имени было забыто, а чтение «Яхве» — научная реконструкция. Синодальный перевод передаёт открытое Моисею имя словами «Сущий» (Исх 3:14) и «Господь» (Исх 3:15).'
+            - 'Для Церкви «Господь» — имя Божие, принадлежащее и Христу: «всякий язык исповедал, что Господь Иисус Христос» (Флп 2:11). Различие здесь не в почтении к имени, а в том, о Ком оно исповедуется.'
+            - 'Имя «Иисус» — еврейское «Иешуа», «Яхве спасает» (Мф 1:21): православное чтение видит в нём исполнение обетования о Спасителе.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Ex.20:7&r
+              title: Исх. 20:7 — Синодальный перевод
+              tier: official
+              excerpt: Не произноси имени Господа, Бога твоего, напрасно
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ex.3:14&r
+              title: Исх. 3:14 — Синодальный перевод
+              tier: official
+              excerpt: 'Бог сказал Моисею: Я есмь Сущий'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ex.3:15&r
+              title: Исх. 3:15 — Синодальный перевод
+              tier: official
+              excerpt: Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Phil.2:11&r
+              title: Флп. 2:11 — Синодальный перевод
+              tier: official
+              excerpt: и всякий язык исповедал, что Господь Иисус Христос в славу Бога Отца
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.1:21&r
+              title: Мф. 1:21 — Синодальный перевод
+              tier: official
+              excerpt: наречешь Ему имя Иисус, ибо Он спасет людей Своих от грехов их
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: священное имя Божие в Ветхом Завете'
+              tier: reference
+              excerpt: правильное произношение священного имени было забыто
+              accessed: '2026-10-01'
+        more:
+          - title: Божественные имена
+            url: https://azbyka.ru/bozhestvennye-imena
+            kind: encyclopedia
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+        legacy: []
+        status: todo
+        todo: 'Proof matrix/judaism.yaml name-of-god (toldot.com urava_5809): the stored excerpt «Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)» is not on the page; the page reads «Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)». The literal sentence is added next to it; the stored proof and matrix quote need correcting.'
+      - id: holy-spirit
+        title: Дух Божий и Святой Дух
+        topic: spirit
+        church:
+          text: 'Святой Дух — Лицо Святой Троицы: Господь, животворящий, исходящий от Отца, «глаголавшаго пророки». Учение об исхождении Духа от Отца Церковь не изменяет и не дополняет.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§237–240: Божество и исхождение Святого Духа'
+              tier: official
+              excerpt: Учение об исхождении Святого Духа от Отца не может быть подвержено какому-либо изменению или дополнению.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Святой Дух исповедуем исходящим от Отца и именуем Его Духом Отца; от Сына же не исповедуем исхождение Святого Духа
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/simvol_very
+              title: Никео-Цареградский Символ веры, член 8
+              tier: official
+              excerpt: глаголавшаго пророки
+              accessed: '2026-10-01'
+        tradition:
+          text: «Дух Божий» (руах Элохим) упоминается уже в рассказе о сотворении мира, но в иудаизме не развивается в отдельную ипостась, сопоставимую с христианским учением о Святом Духе. Справочные издания говорят о настойчивом утверждении иудаизма о единстве Бога.
+          proof:
+            - url: https://www.sefaria.org/api/texts/Genesis.1.2?context=0
+              title: Genesis 1:2 | Sefaria (JPS 2023 translation)
+              tier: reference
+              excerpt: a wind from God sweeping over the water
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Слова общие, и это не случайно: «Дух Божий носился над водою» (Быт 1:2) читается и в Танахе, и в Ветхом Завете. Церковь исповедует в Духе Того же Бога, Который говорил через пророков (2 Пет 1:21).'
+            - 'В Новом Завете Дух назван Лицом, посылаемым от Отца: «Дух истины, Который от Отца исходит» (Ин 15:26); апостол Павел говорит: «хорошо Дух Святой сказал отцам нашим через пророка Исаию» (Деян 28:25).'
+            - 'Церковь читает и ветхозаветные места так: пророк говорит, что Израиль «огорчили Святаго Духа Его» (Ис 63:10). Это христианское толкование; иудейское чтение понимает «дух Божий» иначе.'
+            - Совпадение слов не означает совпадения смысла. Православие исповедует Духа Господом Животворящим, поклоняемым наравне с Отцом и Сыном (Символ веры, член 8); иудаизм этого не принимает.
+          proof:
+            - url: https://azbyka.ru/biblia/?Gen.1:2&r
+              title: Быт. 1:2 — Синодальный перевод
+              tier: official
+              excerpt: и Дух Божий носился над водою
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?2Pet.1:21&r
+              title: 2 Пет. 1:21 — Синодальный перевод
+              tier: official
+              excerpt: изрекали его святые Божии человеки, будучи движимы Духом Святым
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.15:26&r
+              title: Ин. 15:26 — Синодальный перевод
+              tier: official
+              excerpt: Дух истины, Который от Отца исходит
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.28:25&r
+              title: Деян. 28:25 — Синодальный перевод
+              tier: official
+              excerpt: хорошо Дух Святой сказал отцам нашим через пророка Исаию
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Is.63:10&r
+              title: Ис. 63:10 — Синодальный перевод
+              tier: official
+              excerpt: огорчили Святаго Духа Его
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/simvol_very
+              title: Никео-Цареградский Символ веры, член 8
+              tier: official
+              excerpt: Иже со Отцем и Сыном спокланя́ема и ссла́вима
+              accessed: '2026-10-01'
+        more:
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Святом Духе'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+          - title: Символ веры
+            url: https://azbyka.ru/simvol_very
+            kind: church
+        legacy: []
+        status: todo
+        todo: 'Proof matrix/judaism.yaml spirit (Sefaria Genesis 1:2, JPS 2023): the stored excerpt «a wind from God sweeping over the water» is not literal in the API text — a footnote marker and note («a wind from» + footnote + «God sweeping over the water») are inserted in the middle of the phrase. The source line is correct; the excerpt should be given without the footnote.'
+  - id: messiah-jesus
+    title: Мессия и Иисус из Назарета
+    cards:
+      - id: messiah
+        title: 'Мессия: пришёл или ожидается'
+        topic: jesus
+        church:
+          text: 'Для Церкви Иисус — обетованный Мессия: имя Христос означает Помазанник, и Его человеческой природе безмерно сообщены все дары Святого Духа — Ему в высочайшей степени принадлежат ведение Пророка, святость Первосвященника и могущество Царя. Церковь исповедует, что Мессия уже пришёл и совершил дело спасения.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Имя Христос означает Помазанник и оно произошло от помазания священным миром
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §134
+              tier: official
+              excerpt: Его человеческой природе безмерно сообщены все дары Святого Духа.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/messiya
+              title: Азбука веры. Мессия
+              tier: reference
+              excerpt: Поэтому Он и был назван Мессией или, что то же, Помазанником
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Иудаизм ожидает ещё не пришедшего Машиаха: по двенадцатому принципу Рамбама, «хотя он задерживается», его ждут каждый день. Иудейские источники описывают его как человека из плоти и крови, который восстановит царство Давида, построит Храм, соберёт рассеянных и приведёт к Богу все народы; Иисуса из Назарета они Мессией не признают.'
+          proof:
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: пророчество Моше-Рабейну, пусть душа его покоится в мире, — истина и что он — величайший из всех пророков, бывших до него и пришедших после него
+              accessed: '2026-09-25'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры (Рамбам) | Толдот.ру
+              tier: official
+              excerpt: Безоговорочно верю в приход Машиаха, и, хотя он задерживается, я всё же каждый день буду ждать его
+              accessed: '2026-10-01'
+            - url: https://toldot.com/messia-mashiach.html
+              title: Мессия (Еврейский Спаситель) и лже-Мессия — Машиах и псевдо-Машиах | Толдот.ру
+              tier: official
+              excerpt: Еврейский Машиах — еврейский человек из плоти и крови, рождённый от обычных людей
+              accessed: '2026-10-01'
+            - url: https://toldot.com/messia-mashiach.html
+              title: Мессия (Еврейский Спаситель) и лже-Мессия — Машиах и псевдо-Машиах | Толдот.ру
+              tier: official
+              excerpt: Самое главное, еврейский Машиах приведёт к Б-гу все народы земли
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: restoring the kingdom of David to its former glory, achieving victory in battle against Israel’s enemies, rebuilding the temple
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: if he is killed, it’s known that he is not the one that was promised by the Torah
+              accessed: '2026-10-01'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
+              title: Mishneh Torah, Kings and Wars 11 (Touger translation) — Sefaria
+              tier: official
+              excerpt: all the deeds of Jesus of Nazareth and that Ishmaelite who arose after him will only serve to prepare the way for Mashiach's coming
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Общее слово не случайно: «Мессия» (Машиах) и «Христос» — одно и то же слово, «Помазанник»; ожидание избавителя из рода Давида — общее наследие. Энциклопедия «Азбука веры» отмечает, что и в самом иудаизме представления о Мессии различаются.'
+            - 'Церковь видит исполнение в Иисусе. Самарянке, говорящей «знаю, что придет Мессия», Он отвечает: «это Я, Который говорю с тобою» (Ин 4:25–26); на пути в Эммаус «из всех пророков изъяснял им сказанное о Нём во всем Писании» (Лк 24:27).'
+            - Христианское чтение пророчеств — о Вифлееме (Мих 5:2), о страдании за грехи (Ис 53:5) — изложено в энциклопедии «Азбука веры»; иудейские источники определяют Мессию иначе — по делам, которые перечисляет Рамбам (победа, восстановление Храма, собирание рассеянных).
+            - 'Честная граница: по Рамбаму, Мессия определяется делами — победа, восстановление Храма, собирание рассеянных; Церковь же исповедует, что Христос уже пришёл, и ожидает Его второго пришествия. Сам Рамбам пишет, что деяния Иисуса из Назарета (в том же тексте речь идёт и о Мухаммаде) лишь подготавливают путь для прихода Машиаха.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Jn.4:25&r
+              title: Ин. 4:25 — Синодальный перевод
+              tier: official
+              excerpt: знаю, что придет Мессия, то есть Христос
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.4:26&r
+              title: Ин. 4:26 — Синодальный перевод
+              tier: official
+              excerpt: это Я, Который говорю с тобою
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.24:27&r
+              title: Лк. 24:27 — Синодальный перевод
+              tier: official
+              excerpt: из всех пророков изъяснял им сказанное о Нем во всем Писании
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mic.5:2&r
+              title: Мих. 5:2 — Синодальный перевод
+              tier: official
+              excerpt: И ты, Вифлеем-Ефрафа, мал ли ты между тысячами Иудиными
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Is.53:5&r
+              title: Ис. 53:5 — Синодальный перевод
+              tier: official
+              excerpt: Но Он изъязвлен был за грехи наши и мучим за беззакония наши
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: При том, что вера в грядущего Мессию составляет важнейшую особенность религиозных воззрений иудаистов, их представления о его образе и статусе различаются
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/bozhestvennye-imena
+              title: 'Азбука веры. Божие имя и божественные имена: имя Христово'
+              tier: reference
+              excerpt: 'Слово «Христос» является эквивалентом еврейского слова «Машиах» (отсюда: Мессия) и означает «Помазанник»'
+              accessed: '2026-10-01'
+        more:
+          - title: Мессия
+            url: https://azbyka.ru/messiya
+            kind: encyclopedia
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: Душеполезный разговор христианина с иудеем о пришествии Мессии (А. Алексеев)
+            url: https://azbyka.ru/otechnik/Aleksandr_Alekseev/torzhestvo-hristianskogo-uchenija-nad-ucheniem-talmuda/
+            kind: author
+        legacy: []
+        status: verified
+      - id: incarnation
+        title: Воплощение и божество Иисуса
+        topic: jesus
+        church:
+          text: 'Сын Божий воплотился: принял плоть человеческую, кроме греха, и стал человеком, не переставая быть Богом. В Господе Иисусе Христе два естества — Божественное и человеческое, нераздельно и неслиянно, — и одно Лицо: Богочеловек.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§180–181: природы и Ипостась Христа'
+              tier: official
+              excerpt: В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе, одним словом – Богочеловек
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 176
+              tier: official
+              excerpt: Под словом воплощение подразумевается то, что Сын Божий принял на Себя плоть человеческую, кроме греха, и сделался человеком, не переставая быть Богом
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Иудаизм исповедует Творца нематериальным: у Него нет никакого подобия (третий принцип Рамбама). Иисуса из Назарета иудейские авторитетные источники не признают ни Мессией, ни божеством. Справочное издание My Jewish Learning прямо говорит, что вера в божество Иисуса трудно совместима с настойчивым утверждением иудаизма о единстве Бога.'
+          proof:
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: a belief hard to reconcile with Judaism’s insistence on God’s oneness
+              accessed: '2026-09-26'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: благословенно имя Его, нематериален и ему несвойственны присущие материи состояния, и что у Него вообще нет никакого подобия
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: some Jews at the time found the idea that the divine could take on human form compatible with their tradition
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Церковь согласна с Рамбамом в главном: Бог по существу бестелесен — «Бог есть Дух» (катехизис, вопрос 86). Поэтому воплощение — не превращение Бога в материю, а восприятие Сыном человеческого естества: «Слово стало плотию» (Ин 1:14), «в Нем обитает вся полнота Божества телесно» (Кол 2:9).'
+            - 'Это не человек, ставший богом, и не второй бог: Символ веры исповедует Сына «Бога истинна от Бога истинна», единосущным Отцу. Единство Бога при этом не нарушается — таково исповедание Церкви, и в этом состоит главное расхождение с иудаизмом.'
+            - 'Основание — слово апостолов: «Бог явился во плоти» (1 Тим 3:16); Христос, «будучи образом Божиим, не почитал хищением быть равным Богу» (Флп 2:6).'
+            - 'Честно отметить и то, что My Jewish Learning пишет о современниках Иисуса: некоторые иудеи того времени находили мысль о божественном, принявшем человеческий облик, совместимой со своей традицией.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Jn.1:14&r
+              title: Ин. 1:14 — Синодальный перевод
+              tier: official
+              excerpt: И Слово стало плотию, и обитало с нами
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:9&r
+              title: Кол. 2:9 — Синодальный перевод
+              tier: official
+              excerpt: в Нем обитает вся полнота Божества телесно
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Tim.3:16&r
+              title: 1 Тим. 3:16 — Синодальный перевод
+              tier: official
+              excerpt: Бог явился во плоти
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Phil.2:6&r
+              title: Флп. 2:6 — Синодальный перевод
+              tier: official
+              excerpt: будучи образом Божиим, не почитал хищением быть равным Богу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/simvol_very
+              title: Никео-Цареградский Символ веры, член 2
+              tier: official
+              excerpt: Бога истинна от Бога истинна, рожде́нна, несотворе́нна, единосущна Отцу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 86
+              tier: official
+              excerpt: Бог есть Дух вечный, всеблагой, всеведущий
+              accessed: '2026-10-01'
+        more:
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Сыне Божием'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: oral-torah-tradition
+        title: Устная Тора, Талмуд и Предание
+        topic: authority
+        church:
+          text: Священное Предание Церкви — апостольская проповедь и весь спасительный апостольский опыт, переданные Церкви; оно нужно для правильного понимания Писания, которое следует понимать согласно толкованию Православной Церкви и святых отцов.
+          proof:
+            - url: https://azbyka.ru/predanie-svyashhennoe
+              title: Азбука веры. Священное Предание, определение 2
+              tier: reference
+              excerpt: вся апостольская проповедь, весь спасительный апостольский опыт вообще, переданные Церкви
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: понимать его следует согласно толкованию Православной Церкви и святых отцов
+              accessed: '2026-09-25'
+        tradition:
+          text: Письменную Тору дополняет Устная Тора, отражённая в Талмуде и передаваемая, по преданию, от Моисея через цепь поколений. Ортодоксальный иудаизм следует традиционному раввинистическому толкованию; в консервативном иудаизме раввины коллективно определяют направление через Раввинскую ассамблею; реформистское течение подчёркивает осознанный выбор человека.
+          proof:
+            - url: https://toldot.com/talmud.html
+              title: Талмуд — Устная Тора | Толдот.ру
+              tier: official
+              excerpt: упорядоченной записью Устной Торы (часть Торы, которая была дана еврейскому народу в устной форме и передавалась устно из поколения в поколение)
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/orthodox-judaism/
+              title: Orthodox Judaism | My Jewish Learning
+              tier: reference
+              excerpt: Orthodox Judaism is more resistant than its liberal counterparts to the idea that biblical mandates can change in response to changing social circumstances
+              accessed: '2026-09-25'
+            - url: https://www.rabbinicalassembly.org/about-us/conservative-masorti
+              title: Conservative/Masorti | The Rabbinical Assembly
+              tier: official
+              excerpt: Each rabbi serves as halakhic authority for his or her community, and our rabbis collectively give direction through the Rabbinical Assembly
+              accessed: '2026-09-25'
+            - url: https://urj.org/what-we-believe/what-is-reform-judaism
+              title: What is Reform Judaism? | Union for Reform Judaism
+              tier: official
+              excerpt: strive to make thoughtful choices about how we put our values into action
+              accessed: '2026-09-25'
+            - url: https://www.sefaria.org/api/texts/Pirkei_Avot.1.1?context=0
+              title: Pirkei Avot 1:1 — Sefaria
+              tier: official
+              excerpt: Moses received the Torah at Sinai and transmitted it to Joshua
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее: ни Церковь, ни иудаизм не читают Писание в одиночку — обе традиции хранят авторитетное толкование. Но источник авторитета разный: для Церкви это апостольское свидетельство о Христе («держите предания, которым вы научены», 2 Фес 2:15), для иудаизма — цепь от Синая к мудрецам (Авот 1:1).'
+            - 'Христос осуждает конкретные случаи, когда предание отменяет заповедь: «зачем и вы преступаете заповедь Божию ради предания вашего?» (Мф 15:3). Он же говорит: «на Моисеевом седалище сели книжники и фарисеи» и «всё, что они велят вам соблюдать, соблюдайте и делайте» (Мф 23:2–3), — это не общий приговор раввинистическому преданию.'
+            - 'Устная Тора не тождественна Священному Преданию Церкви: она относится к иному строю — к Торе Синая и её законоучению, а не к свидетельству апостолов.'
+            - 'Внутри иудаизма нет единой позиции: ортодоксия, масорти и реформистское движение по-разному оценивают власть традиции. При сравнении всегда нужно указывать, о каком течении идёт речь.'
+          proof:
+            - url: https://azbyka.ru/biblia/?2Thes.2:15&r
+              title: 2 Фес. 2:15 — Синодальный перевод
+              tier: official
+              excerpt: стойте и держите предания, которым вы научены
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.15:3&r
+              title: Мф. 15:3 — Синодальный перевод
+              tier: official
+              excerpt: зачем и вы преступаете заповедь Божию ради предания вашего
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.7:8&r
+              title: Мк. 7:8 — Синодальный перевод
+              tier: official
+              excerpt: оставив заповедь Божию, держитесь предания человеческого
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.23:2&r
+              title: Мф. 23:2 — Синодальный перевод
+              tier: official
+              excerpt: на Моисеевом седалище сели книжники и фарисеи
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.23:3&r
+              title: Мф. 23:3 — Синодальный перевод
+              tier: official
+              excerpt: всё, что они велят вам соблюдать, соблюдайте и делайте
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 18 (ч. 1, Священное Предание)
+              tier: official
+              excerpt: Церковь Бога живаго, столп и утверждение истины
+              accessed: '2026-10-01'
+        more:
+          - title: Священное Предание
+            url: https://azbyka.ru/predanie-svyashhennoe
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Священном Предании и Писании'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+            kind: church
+        legacy: []
+        status: verified
+  - id: law-salvation
+    title: Закон, грех и спасение
+    cards:
+      - id: law-and-commandments
+        title: Закон Моисеев и заповеди (мицвот)
+        topic: rules
+        church:
+          text: Христос пришёл не нарушить закон, а исполнить его. Десять заповедей даны народу израильскому, но обязательны и для христиан, потому что это тот же закон, который написан в сердцах всех людей; ветхозаветный обрядовый закон с пришествием Христа, по учению Церкви, утратил силу закона.
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.5:17&r
+              title: Мф. 5:17 — Синодальный перевод
+              tier: official
+              excerpt: не нарушить пришел Я, но исполнить
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 486
+              tier: official
+              excerpt: Заповеди эти даны народу израильскому, но и нам следует поступать по ним
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: С Пришествием Христа и заключением Нового Завета между Богом и человеком ветхозаветный обрядовый закон утратил силу закона
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Иудаизм исповедует, что Тора дана Богом на Синае и не изменится: по девятому принципу Рамбама, Творец не даст никакой другой Торы. Из 613 заповедей около пятидесяти посвящены пище. Консервативный иудаизм настаивает на соблюдении традиции; реформистское течение исторически ставит этическое выше обрядового.'
+          proof:
+            - url: https://toldot.com/kashrut.html
+              title: Кашрут — кошерное и некошерное | Толдот.ру
+              tier: official
+              excerpt: Из 613 заповедей, данных нашему народу Творцом, около пятидесяти посвящены вопросам питания
+              accessed: '2026-09-25'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры (Рамбам) | Толдот.ру
+              tier: official
+              excerpt: Безоговорочно верю в то, что Тора эта не претерпит никаких изменений и что Творец, благословенно имя Его, не даст нам никакой другой Торы
+              accessed: '2026-10-01'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Foundations_of_the_Torah.9.1?context=0
+              title: Mishneh Torah, Foundations of the Torah 9:1 (Touger translation) — Sefaria
+              tier: official
+              excerpt: remaining forever without change, addition, or diminishment
+              accessed: '2026-10-01'
+            - url: https://www.rabbinicalassembly.org/about-us/conservative-masorti
+              title: Conservative/Masorti | The Rabbinical Assembly
+              tier: official
+              excerpt: Conservative Judaism insists on observance of tradition
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общая основа прочна: две главные заповеди — любовь к Богу (Втор 6:5) и к ближнему (Лев 19:18) — Христос называет теми, на которых «утверждается весь закон и пророки» (Мф 22:37–40). Православный и иудей читают в этом месте одни и те же слова Торы.'
+            - Различие — в судьбе обрядового закона. По слову апостолов, закон был «детоводителем ко Христу» (Гал 3:24), а праздники, субботы и различения в пище — «тень будущего, а тело – во Христе» (Кол 2:16–17); Апостольский собор не возложил на христиан из язычников бремени закона (Деян 15:28–29).
+            - 'Для иудаизма это означало бы изменение Торы: по Рамбаму, Тора остаётся навсегда без изменения, дополнения и сокращения (Основы Торы 9:1). Расхождение — в основаниях, а не в уважении к заповеди.'
+            - 'Церковь при этом не считает иудейскую праведность внешней: энциклопедия «Азбука веры» называет такое представление ошибочным и отмечает, что, по пониманию самих иудеев, исполнение заповедей — и долг, и выражение любви к Богу.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Deut.6:5&r
+              title: Втор. 6:5 — Синодальный перевод
+              tier: official
+              excerpt: и люби Господа, Бога твоего, всем сердцем твоим
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.22:40&r
+              title: Мф. 22:40 — Синодальный перевод
+              tier: official
+              excerpt: на сих двух заповедях утверждается весь закон и пророки
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Gal.3:24&r
+              title: Гал. 3:24 — Синодальный перевод
+              tier: official
+              excerpt: закон был для нас детоводителем ко Христу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:17&r
+              title: Кол. 2:17 — Синодальный перевод
+              tier: official
+              excerpt: это есть тень будущего, а тело – во Христе
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.15:28&r
+              title: Деян. 15:28 — Синодальный перевод
+              tier: official
+              excerpt: угодно Святому Духу и нам не возлагать на вас никакого бремени более
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Согласно пониманию самих иудеев, исполнение заповедей – это и долг, и выражение любви к Богу
+              accessed: '2026-10-01'
+        more:
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о десяти заповедях'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: verified
+      - id: kashrut-blood
+        title: Кашрут и пищевые запреты
+        topic: rules
+        church:
+          text: 'Христианину не вменяются ветхозаветные пищевые ограничения: к кошерной пище Церковь предлагает относиться спокойно. Вместе с тем Церковь сохраняет апостольское воздержание от крови и удавленины, закреплённое канонами.'
+          proof:
+            - url: https://azbyka.ru/pravo/shestoj-vselenskij-sobor-67/
+              title: Правило 67 Трулльского Собора (691) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: Божественное Писание заповедало нам воздерживаться от крови, удавленины и блуда
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/63-apostolskoe-pravilo/
+              title: Правило 63 святых Апостолов — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: съест мясо с кровью души его, или звероядину, или мертвечину, да будет извержен, ибо это запретил закон
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: поскольку в Новом Завете не существует таких пищевых ограничений
+              accessed: '2026-10-01'
+        tradition:
+          text: Кашрут — законы дозволенной и недозволенной пищи, включая запрет крови, — составляет около пятидесяти из 613 заповедей Торы. Эти законы даны, по Толдот.ру, Творцом; многие евреи реформистского направления от них отказались.
+          proof:
+            - url: https://toldot.com/kashrut.html
+              title: Кашрут — кошерное и некошерное | Толдот.ру
+              tier: official
+              excerpt: Из 613 заповедей, данных нашему народу Творцом, около пятидесяти посвящены вопросам питания
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: many Jews decided to jettison kashrut [Jewish dietary laws]
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Здесь есть настоящее сходство: запрет употреблять кровь — общий. Энциклопедия «Азбука веры» напоминает, что он строго соблюдается в иудаизме (Лев 17:14), а апостольское постановление и каноны Церкви (Деян 15:29; 63-е апостольское правило; 67-е правило Трулльского собора) сохраняют воздержание от крови.'
+            - 'Различие касается самой пищи. По слову Христа, «ничто, извне входящее в человека, не может осквернить его» (Мк 7:18); Петру открыто: «что Бог очистил, того ты не почитай нечистым» (Деян 10:15); «Царствие Божие не пища и питие» (Рим 14:17).'
+            - 'My Jewish Learning читает Мк 7 иначе: слова об очищении всякой пищи — это, по мнению автора, истолкование евангелиста, а не обязательно намерение Иисуса; Иисус и первые его последователи-иудеи продолжали соблюдать закон.'
+            - 'Церковь не требует презрения к кашруту: спокойное отношение к кошерной пище означает уважение к людям, для которых это заповедь Божия.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Mk.7:18&r
+              title: Мк. 7:18 — Синодальный перевод
+              tier: official
+              excerpt: ничто, извне входящее в человека, не может осквернить его
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.10:15&r
+              title: Деян. 10:15 — Синодальный перевод
+              tier: official
+              excerpt: что Бог очистил, того ты не почитай нечистым
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.14:17&r
+              title: Рим. 14:17 — Синодальный перевод
+              tier: official
+              excerpt: Царствие Божие не пища и питие
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.15:29&r
+              title: Деян. 15:29 — Синодальный перевод
+              tier: official
+              excerpt: воздерживаться от идоложертвенного и крови, и удавленины, и блуда
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: употребление в пищу любой крови строго запрещено иудейским законом
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: this is Mark’s extrapolation and not necessarily Jesus’ intention
+              accessed: '2026-10-01'
+        more:
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: Правило 63 святых Апостолов
+            url: https://azbyka.ru/pravo/63-apostolskoe-pravilo/
+            kind: church
+        legacy: []
+        status: verified
+      - id: love-neighbour-civil-law
+        title: Любовь к ближнему и закон страны
+        topic: rules
+        church:
+          text: Все люди — наши ближние, потому что все — создания единого Бога; наибольшая заповедь закона — любовь к Богу и к ближнему. Христиане призваны быть законопослушными гражданами земного отечества.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§489–492: любовь к Богу и ближнему'
+              tier: official
+              excerpt: Все люди являются нашими ближними. Потому что все – создания единого Бога
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Наша любовь к Государю и Отечеству должна простираться до готовности отдать за них свою жизнь
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/pravo/shestoj-vselenskij-sobor-67/
+              title: Правило 67 Трулльского Собора (691) — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: Божественное Писание заповедало нам воздерживаться от крови, удавленины и блуда
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/pravo/63-apostolskoe-pravilo/
+              title: Правило 63 святых Апостолов — «Церковное право», «Азбука веры»
+              tier: official
+              excerpt: съест мясо с кровью души его, или звероядину, или мертвечину, да будет извержен, ибо это запретил закон
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+              title: Основы социальной концепции Русской Православной Церкви (Архиерейский Собор 2000), IX.1
+              tier: official
+              excerpt: Христиане призваны быть законопослушными гражданами земного отечества
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Иудаизм регулирует и общественную жизнь по галахе. В делах, не относящихся к религиозной и семейной жизни, действует принцип «дина де-малхута дина»: закон страны проживания обязателен для евреев, а в некоторых случаях даже предпочитается еврейскому закону.'
+          proof:
+            - url: https://eleven.co.il/judaism/religious-law/11435/
+              title: Дина де-малхута дина | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: закон страны, в которой проживают евреи, обязателен для них, а в некоторых случаях даже предпочитается еврейскому закону
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общий источник: любовь к Богу и к ближнему (Втор 6:5; Лев 19:18) — слова Торы, и Христос подтверждает их как наибольшие (Мф 22:37–40). Церковь не противопоставляет Тору нравственности: заповедь о ближнем у неё та же.'
+            - 'Согласие есть и в отношении к государству: апостол требует: «Всякая душа да будет покорна высшим властям» (Рим 13:1), а иудаизм ввёл правило дина де-малхута дина — закон страны обязателен. Основания у них разные, а практический вывод близкий.'
+            - Различие — в строе заповедей. Православие различает нравственную заповедь, ветхозаветное обрядовое предписание и церковный пост; любовь к ближнему и ответственность перед Богом не сводятся к пищевой дозволенности или галахическому регулированию.
+            - Катехизис прямо говорит, что «все люди являются нашими ближними» — без ограничения по вере и народу.
+          proof:
+            - url: https://azbyka.ru/biblia/?Lev.19:18&r
+              title: Лев. 19:18 — Синодальный перевод
+              tier: official
+              excerpt: люби ближнего твоего, как самого себя
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.22:39&r
+              title: Мф. 22:39 — Синодальный перевод
+              tier: official
+              excerpt: возлюби ближнего твоего, как самого себя
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.13:1&r
+              title: Рим. 13:1 — Синодальный перевод
+              tier: official
+              excerpt: Всякая душа да будет покорна высшим властям
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 489
+              tier: official
+              excerpt: На сих двух заповедях утверждается весь закон и пророки
+              accessed: '2026-10-01'
+        more:
+          - title: Основы социальной концепции РПЦ
+            url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+            kind: church
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о любви к ближнему'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: verified
+      - id: sin-human-nature
+        title: Грех и природа человека
+        topic: salvation
+        church:
+          text: Грех вошёл в людей от диавола через непослушание Адама; от греха произошли проклятие и смерть. Все люди умирают, потому что происходят от заражённого грехом Адама и сами грешат. Сын Божий пришёл спасти людей от греха, проклятия и смерти.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 166
+              tier: official
+              excerpt: все умирают, потому что происходят от заражённого грехом Адама, и сами грешат
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 153
+              tier: official
+              excerpt: Сын Божий пришёл на землю спасти людей от греха, проклятия и смерти
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 155
+              tier: official
+              excerpt: Бог, по благодати своей, при сотворении человека дал ему волю, естественно расположенную любить Бога, но притом свободную
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Электронная еврейская энциклопедия: книга Бытия усматривает причину греха не в природе человека, а в пагубном влиянии внешней злой силы; человек способен и обязан преодолеть влечение к греху, обладает свободой выбора и несёт полную ответственность за свои поступки.'
+          proof:
+            - url: https://eleven.co.il/judaism/religious-ethics/11300/
+              title: грех — Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Книга Бытия усматривает причину греха не в природе человека, а в пагубном влиянии внешней злой силы
+              accessed: '2026-10-01'
+            - url: https://eleven.co.il/judaism/religious-ethics/11300/
+              title: грех — Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Человек способен и обязан преодолеть влечение к греху
+              accessed: '2026-10-01'
+            - url: https://eleven.co.il/judaism/religious-ethics/11300/
+              title: грех — Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: поэтому несет полную ответственность за свои поступки
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее немалое: человек свободен и ответственен. Каину сказано: грех «влечет тебя к себе, но ты господствуй над ним» (Быт 4:7); пророк учит: «сын не понесет вины отца» (Иез 18:20); катехизис тоже говорит, что воля человека дана свободной.'
+            - Различие — в последствиях падения. Катехизис говорит, что смерть перешла на потомков Адама («как одним человеком грех вошел в мир, и грехом смерть», Рим 5:12); иудейская энциклопедия, излагая Пятикнижие, подчёркивает личную ответственность и видит причину греха не в природе человека, а во внешней злой силе.
+            - 'Это не просто разные слова, а разное устроение вопроса: Церковь исповедует, что от греха, проклятия и смерти избавляет Христос, а иудейский источник выводит из свободы и ответственности путь покаяния.'
+            - Сравнивая, нужно помнить, что первородный грех — термин христианского богословия; в приведённом иудейском источнике говорится о влечении к греху, свободе выбора и покаянии.
+          proof:
+            - url: https://azbyka.ru/biblia/?Gen.4:7&r
+              title: Быт. 4:7 — Синодальный перевод
+              tier: official
+              excerpt: у дверей грех лежит; он влечет тебя к себе, но ты господствуй над ним
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ezek.18:20&r
+              title: Иез. 18:20 — Синодальный перевод
+              tier: official
+              excerpt: сын не понесет вины отца
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.5:12&r
+              title: Рим. 5:12 — Синодальный перевод
+              tier: official
+              excerpt: как одним человеком грех вошел в мир, и грехом смерть
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 167
+              tier: official
+              excerpt: Как одним человеком грех вошел в мир, и грехом смерть, так и смерть перешла во всех человеков
+              accessed: '2026-10-01'
+        more:
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о грехопадении'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: salvation-grace-works
+        title: 'Путь спасения: заповеди и благодать'
+        topic: salvation
+        church:
+          text: Спасение в православном понимании — уподобление Богу и духовное единение с Ним; оно совершается как соработничество (синергия) Бога и человека и связано с воплощением, Крестом и воскресением Спасителя. Для спасения нужно не только веровать, но и исповедовать православную веру.
+          proof:
+            - url: https://azbyka.ru/spasenie
+              title: 'Азбука веры. Спасение: определение и условия спасения'
+              tier: reference
+              excerpt: уподобление Богу и духовное единение с Ним
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/sinergiya
+              title: Азбука веры. Синергия
+              tier: reference
+              excerpt: соработничество Бога и человека в деле достижения спасения
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/obozhenie
+              title: Азбука веры. Обожение
+              tier: reference
+              excerpt: процесс уподобления верующего Богу и единения с Богом.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Для спасения нужно не только веровать, но и исповедовать православную веру
+              accessed: '2026-09-25'
+        tradition:
+          text: 'Творец, по одиннадцатому принципу Рамбама, отвечает добром соблюдающим Его заповеди и карает нарушающих их. Путь — жизнь по Торе и заповедям: консервативный иудаизм настаивает на соблюдении традиции, реформистский исторически ставит этическое выше обрядового. О спасении одной лишь верой иудаизм не учит.'
+          proof:
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: Творец, благословенно имя Его, отвечает добром соблюдающим Его заповеди и карает тех, кто их нарушает
+              accessed: '2026-09-25'
+            - url: https://www.rabbinicalassembly.org/about-us/conservative-masorti
+              title: Conservative/Masorti | The Rabbinical Assembly
+              tier: official
+              excerpt: Conservative Judaism insists on observance of tradition
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Православие тоже не учит спасению одной лишь верой: «и вера без дел мертва» (Иак 2:26). Поэтому в самом Православии есть слово о синергии — соработничестве человека с Богом, а не о пассивном ожидании.'
+            - Расхождение — в основании спасения. «Благодатью вы спасены через веру, и сие не от вас, Божий дар» (Еф 2:8); «все согрешили… получая оправдание даром, по благодати Его, искуплением во Христе Иисусе» (Рим 3:23–24).
+            - Для иудаизма путь — исполнение заповедей и покаяние; для Церкви нравственное усилие человека не устраняет необходимости Искупителя, но ведёт к соединению с Ним (обожению).
+            - 'Это сопоставление нельзя вести по схеме противопоставления закона и благодати: и Православие, и иудаизм признают, что заповедь есть дар Божий; различие — в том, кем и как совершается освобождение от греха и смерти.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Jac.2:26&r
+              title: Иак. 2:26 — Синодальный перевод
+              tier: official
+              excerpt: как тело без духа мертво, так и вера без дел мертва
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Eph.2:8&r
+              title: Еф. 2:8 — Синодальный перевод
+              tier: official
+              excerpt: благодатью вы спасены через веру, и сие не от вас, Божий дар
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.3:24&r
+              title: Рим. 3:24 — Синодальный перевод
+              tier: official
+              excerpt: получая оправдание даром, по благодати Его, искуплением во Христе Иисусе
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 204
+              tier: official
+              excerpt: Своей крестной смертью Он избавил нас от греха, проклятия и смерти
+              accessed: '2026-10-01'
+        more:
+          - title: Спасение
+            url: https://azbyka.ru/spasenie
+            kind: encyclopedia
+          - title: Синергия
+            url: https://azbyka.ru/sinergiya
+            kind: encyclopedia
+          - title: Обожение
+            url: https://azbyka.ru/obozhenie
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: sacrifice-atonement
+        title: Жертва и искупление
+        topic: salvation
+        church:
+          text: Церковь исповедует, что Господь Иисус Христос принёс Себя в жертву за всех людей и Своей крестной смертью избавил нас от греха, проклятия и смерти. Эту единую жертву Церковь вспоминает в Евхаристии, возвещая смерть Господню, «доколе Он придет».
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 204
+              tier: official
+              excerpt: Своей крестной смертью Он избавил нас от греха, проклятия и смерти
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 207
+              tier: official
+              excerpt: Господь Иисус Христос принёс Себя в жертву за всех людей и всем приобрёл благодать и спасение
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.11:26&r
+              title: 1 Кор. 11:26 — Синодальный перевод
+              tier: official
+              excerpt: доколе Он придет
+              accessed: '2026-10-01'
+        tradition:
+          text: 'После разрушения Храма жертвоприношения не совершаются. По Рамбаму, ныне, когда нет Храма и жертвенника искупления, остаётся лишь раскаяние (тшува), и раскаяние искупает все грехи; Йом Кипур искупает кающихся. Электронная еврейская энциклопедия: искупление достигается только искренним раскаянием, а проступки против ближнего требуют возмещения ущерба и прощения.'
+          proof:
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Repentance.1.3?context=0
+              title: Mishneh Torah, Repentance 1:3 (Moznaim translation) — Sefaria
+              tier: official
+              excerpt: At present, when the Temple does not exist and there is no altar of atonement, there remains nothing else aside from Teshuvah
+              accessed: '2026-10-01'
+            - url: https://eleven.co.il/judaism/religious-ethics/11300/
+              title: грех — Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Искупление грехов достигается только искренним раскаянием
+              accessed: '2026-10-01'
+            - url: https://eleven.co.il/judaism/religious-ethics/11300/
+              title: грех — Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Но проступки против ближнего не подлежат искуплению даже в День Всепрощения
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/
+              title: What Do Jews Believe About Jesus? | My Jewish Learning
+              tier: reference
+              excerpt: if he is killed, it’s known that he is not the one that was promised by the Torah
+              accessed: '2026-10-01'
+            - url: https://toldot.com/pesach.html
+              title: Песах | Толдот.ру
+              tier: official
+              excerpt: пасхальная жертва и сопутствующая ей жертва Хагига — в наше время исполнены быть не могут
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общая основа в Писании Израиля: «жертва Богу — дух сокрушенный» (Пс 50:19), «милости хочу, а не жертвы» (Ос 6:6) — Христос напоминает эти слова (Мф 9:13). Покаяние — общий путь к Богу, и Церковь не умаляет иудейское слово о тшуве.'
+            - 'Различие — в том, что приносит прощение. Для Церкви ветхозаветные жертвы были прообразом: «Кровь Христа… очистит совесть нашу» (Евр 9:14); Христос «принеся одну жертву за грехи, навсегда воссел одесную Бога» (Евр 10:12); Иоанн Креститель говорит о Нём: «Агнец Божий, Который берет на Себя грех мира» (Ин 1:29).'
+            - 'Иудаизм не связывает искупление со смертью Мессии: по Рамбаму, о котором пишет My Jewish Learning, убитый Мессия — не тот, о ком говорила Тора; сегодня, по Рамбаму, остаётся раскаяние, а Йом Кипур искупает кающихся.'
+            - 'Честно признать: и для иудея, и для православного христианина без покаяния нет прощения; расходятся в ответе на вопрос, довольно ли покаяния без Искупителя.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Ps.50:19&r
+              title: Пс. 50:19 — Синодальный перевод
+              tier: official
+              excerpt: Жертва Богу – дух сокрушенный
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hos.6:6&r
+              title: Ос. 6:6 — Синодальный перевод
+              tier: official
+              excerpt: Ибо Я милости хочу, а не жертвы
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.9:14&r
+              title: Евр. 9:14 — Синодальный перевод
+              tier: official
+              excerpt: Кровь Христа, Который Духом Святым принес Себя непорочного Богу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Hebr.10:12&r
+              title: Евр. 10:12 — Синодальный перевод
+              tier: official
+              excerpt: принеся одну жертву за грехи, навсегда воссел одесную Бога
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.1:29&r
+              title: Ин. 1:29 — Синодальный перевод
+              tier: official
+              excerpt: вот Агнец Божий, Который берет на Себя грех мира
+              accessed: '2026-10-01'
+        more:
+          - title: Искупление
+            url: https://azbyka.ru/iskuplenie
+            kind: encyclopedia
+          - title: Жертва
+            url: https://azbyka.ru/zhertva
+            kind: encyclopedia
+        legacy: []
+        status: verified
+  - id: worship-calendar
+    title: Богослужение, праздники, пост и образы
+    cards:
+      - id: prayer-sacraments
+        title: Молитва, синагога и таинства
+        topic: worship
+        church:
+          text: 'Богослужение Церкви — Таинства: Крещение, Миропомазание, Евхаристия, Покаяние, Священство, Брак, Елеосвящение. В Евхаристии верующий под видом хлеба и вина вкушает подлинные Тело и Кровь Христовы. Христос исполнил ветхозаветные прообразы; Крещение и Евхаристия вводят человека в жизнь Нового Завета.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §312: Таинство Причащения'
+              tier: official
+              excerpt: под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/prichastie
+              title: 'Азбука веры. Причастие: Таинство Евхаристии и преложение Даров'
+              tier: reference
+              excerpt: они становятся Телом и Кровью Христовыми
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов) — Азбука веры
+              tier: official
+              excerpt: подробно рассказывается о 7-ми таинствах Церкви (Крещение, Миропомазание, Евхаристия, Покаяние, Священство, Брак, Елеосвящение)
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§289–291: Крещение младенцев'
+              tier: official
+              excerpt: Младенцев крестят по вере родителей и восприемников
+              accessed: '2026-09-27'
+        tradition:
+          text: Молитва, по пятому принципу Рамбама, обращена только к Творцу — Ему и никому другому. Из 613 заповедей Торы около пятидесяти посвящены пище; консервативный иудаизм настаивает на соблюдении традиции, а реформистское течение исторически ставит этическое выше обрядового.
+          proof:
+            - url: https://toldot.com/kashrut.html
+              title: Кашрут — кошерное и некошерное | Толдот.ру
+              tier: official
+              excerpt: Из 613 заповедей, данных нашему народу Творцом, около пятидесяти посвящены вопросам питания
+              accessed: '2026-09-25'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: Творцу, благословенно имя Его, следует молиться, — Ему, и никому другому
+              accessed: '2026-09-25'
+            - url: https://www.rabbinicalassembly.org/about-us/conservative-masorti
+              title: Conservative/Masorti | The Rabbinical Assembly
+              tier: official
+              excerpt: Conservative Judaism insists on observance of tradition
+              accessed: '2026-10-01'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: Historically, it has emphasized the ethical aspects of Jewish tradition over its ritual requirements
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общее наследие молитвы — Псалтирь: в Церкви она, по катехизису, «всегда используется в богослужении». Христос Сам, «по обыкновению Своему, в день субботний» входил в синагогу (Лк 4:16), а первые христиане «каждый день единодушно пребывали в храме и, преломляя по домам хлеб, принимали пищу» (Деян 2:46).'
+            - 'Новое в Церкви — Евхаристия, установленная на Тайной вечере: «сие есть Тело Мое… сия чаша есть Новый Завет в Моей Крови» (Лк 22:19–20). Она не аналог синагогальной молитвы и не сводится к исполнению заповедей.'
+            - 'Единство молитвы только Богу общее: и Церковь поклоняется одному Богу. Почитание ангелов и святых она не считает нарушением этого, «поскольку мы почитаем благодать Божию, в них обитающую и действующую» (катехизис, вопрос 511).'
+            - Формы и язык богослужения различаются; Церковь не оценивает синагогальную молитву по меркам таинств, а показывает, что Христос исполняет ветхозаветные прообразы.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 42 (ч. 1, Священное Писание)
+              tier: official
+              excerpt: Псалтирь всегда используется в богослужении
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.4:16&r
+              title: Лк. 4:16 — Синодальный перевод
+              tier: official
+              excerpt: по обыкновению Своему, в день субботний в синагогу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.2:46&r
+              title: Деян. 2:46 — Синодальный перевод
+              tier: official
+              excerpt: каждый день единодушно пребывали в храме
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.22:20&r
+              title: Лк. 22:20 — Синодальный перевод
+              tier: official
+              excerpt: сия чаша есть Новый Завет в Моей Крови
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 511
+              tier: official
+              excerpt: поскольку мы почитаем благодать Божию, в них обитающую и действующую
+              accessed: '2026-10-01'
+        more:
+          - title: Причастие
+            url: https://azbyka.ru/prichastie
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского: о Таинствах'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+        legacy: []
+        status: verified
+      - id: sabbath-sunday
+        title: Суббота и воскресенье
+        topic: holy-days
+        church:
+          text: Церковь празднует каждую седмицу не седьмой, а первый день — воскресный, со времени воскресения Христа. Суббота как день недели в христианской Церкви большим праздником не празднуется, но в память о сотворении мира отличается от других дней освобождением от поста.
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§535–536: воскресный день'
+              tier: official
+              excerpt: День воскресный празднуется со времени воскресения Христа.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: В христианской Церкви празднуется через каждые шесть дней седьмой, только не последний из семи дней
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 533
+              tier: official
+              excerpt: в память о сотворении мира и в продолжение первоначального празднования отличается от прочих дней освобождением от поста
+              accessed: '2026-10-01'
+        tradition:
+          text: 'Шаббат — седьмой день, заповеданный Торой после шести дней творения: в этот день запрещена работа. Соблюдение Шаббата осталось чисто еврейской заповедью.'
+          proof:
+            - url: https://toldot.com/shabbat.html
+              title: Шаббат — Еврейская Суббота | Толдот.ру
+              tier: official
+              excerpt: Тора называет субботу праздником, в который запрещено делать работу
+              accessed: '2026-10-01'
+            - url: https://toldot.com/shabbat.html
+              title: Шаббат — Еврейская Суббота | Толдот.ру
+              tier: official
+              excerpt: заповедь соблюдать субботу установлена Всевышним, Который, закончив за шесть дней Творение мира, благословил и освятил седьмой день
+              accessed: '2026-10-01'
+            - url: https://toldot.com/shabbat.html
+              title: Шаббат — Еврейская Суббота | Толдот.ру
+              tier: official
+              excerpt: Соблюдение шаббата осталось чисто еврейской заповедью
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Основа общая: «помни день субботний, чтобы святить его» (Исх 20:8) — творение и покой седьмого дня; Церковь хранит это воспоминание и по сей день, не празднуя субботу как день недели, но и не умаляя её значения.'
+            - 'Христос о субботе: «суббота для человека, а не человек для субботы», «Сын Человеческий есть Господин и субботы» (Мк 2:27–28). Он не отменял покой, а показал его цель.'
+            - 'Апостольская практика: «в первый же день недели, когда ученики собрались для преломления хлеба» (Деян 20:7); «день воскресный» упомянут в Откровении (Откр 1:10).'
+            - 'Апостол Павел говорит, что субботы и праздники — «тень будущего» (Кол 2:16–17): это христианское чтение; иудаизм же видит в Шаббате вечную заповедь народа.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Ex.20:8&r
+              title: Исх. 20:8 — Синодальный перевод
+              tier: official
+              excerpt: Помни день субботний, чтобы святить его
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.2:27&r
+              title: Мк. 2:27 — Синодальный перевод
+              tier: official
+              excerpt: суббота для человека, а не человек для субботы
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mk.2:28&r
+              title: Мк. 2:28 — Синодальный перевод
+              tier: official
+              excerpt: посему Сын Человеческий есть Господин и субботы
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.20:7&r
+              title: Деян. 20:7 — Синодальный перевод
+              tier: official
+              excerpt: В первый же день недели, когда ученики собрались для преломления хлеба
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Apok.1:10&r
+              title: Откр. 1:10 — Синодальный перевод
+              tier: official
+              excerpt: Я был в духе в день воскресный
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:16&r
+              title: Кол. 2:16 — Синодальный перевод
+              tier: official
+              excerpt: никто да не осуждает вас за пищу, или питие, или за какой-нибудь праздник, или новомесячие, или субботу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Col.2:17&r
+              title: Кол. 2:17 — Синодальный перевод
+              tier: official
+              excerpt: это есть тень будущего, а тело – во Христе
+              accessed: '2026-10-01'
+        more:
+          - title: Суббота
+            url: https://azbyka.ru/subbota
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о четвёртой заповеди'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: verified
+      - id: passover-pascha
+        title: Песах и Пасха
+        topic: holy-days
+        church:
+          text: 'Праздник Воскресения Христова, Пасха, — праздник праздников и предначинание вечной жизни; важнейшие церковные праздники установлены в память о событиях спасительного воплощения Сына Божия. Ветхозаветный Песах Церковь считает прообразом: пасхальный агнец служил прообразом Христа.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Праздник Воскресения Христова, Пасха, праздник праздников, предначинание вечного праздника, вечного блаженства
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Важнейшие праздники – это праздники, установленные в память о главных событиях, относящихся к спасительному для нас воплощению Сына Божия
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: а затем установленные в честь Пресвятой Богородицы как послужившей тайне воплощения
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/paskha
+              title: Азбука веры. Пасха
+              tier: reference
+              excerpt: Христианский праздник Пасхи имеет свой прототип в Ветхом Завете
+              accessed: '2026-10-01'
+        tradition:
+          text: Песах — праздник в память об Исходе из Египта. В наше время исполняются две заповеди пасхальной ночи — есть мацу и рассказывать об Исходе (Агада); пасхальная жертва исполнена быть не может, потому что нет Храма.
+          proof:
+            - url: https://toldot.com/holidays.html
+              title: Еврейские праздники | Энциклопедия иудаизма онлайн на Толдот.ру
+              tier: official
+              excerpt: Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват
+              accessed: '2026-09-25'
+            - url: https://toldot.com/pesach.html
+              title: Песах | Толдот.ру
+              tier: official
+              excerpt: Маца и рассказ об Исходе — это две заповеди Торы, которые мы исполняем и в наше время
+              accessed: '2026-10-01'
+            - url: https://toldot.com/pesach.html
+              title: Песах | Толдот.ру
+              tier: official
+              excerpt: пасхальная жертва и сопутствующая ей жертва Хагига — в наше время исполнены быть не могут
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Общая память — Исход: «как установление вечное празднуйте его» (Исх 12:14). Энциклопедия «Азбука веры» подчёркивает, что христианский праздник имеет своим прототипом ветхозаветный.'
+            - 'Христос Сам совершил пасхальную вечерю: «очень желал Я есть с вами сию пасху прежде Моего страдания» (Лк 22:15); апостол говорит: «Пасха наша, Христос, заклан за нас» (1 Кор 5:7); Иоанн Креститель говорит о Нём: «Агнец Божий» (Ин 1:29).'
+            - 'Содержание праздников различно, и энциклопедия «Азбука веры» говорит об этом прямо: иудейская Пасха отлична от Пасхи Христовой, хотя их связывает прообразовательная связь.'
+            - Христианская Пасха — воскресение Христово, иудейский Песах — освобождение из Египта; даты тоже определяются по разным правилам. Это разные праздники с общим корнем.
+          proof:
+            - url: https://azbyka.ru/biblia/?Ex.12:14&r
+              title: Исх. 12:14 — Синодальный перевод
+              tier: official
+              excerpt: И да будет вам день сей памятен
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.22:15&r
+              title: Лк. 22:15 — Синодальный перевод
+              tier: official
+              excerpt: очень желал Я есть с вами сию пасху прежде Моего страдания
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.5:7&r
+              title: 1 Кор. 5:7 — Синодальный перевод
+              tier: official
+              excerpt: Пасха наша, Христос, заклан за нас
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.1:29&r
+              title: Ин. 1:29 — Синодальный перевод
+              tier: official
+              excerpt: вот Агнец Божий, Который берет на Себя грех мира
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/paskha
+              title: Азбука веры. Пасха
+              tier: reference
+              excerpt: Несмотря на то, что содержание иудейского Праздника Пасхи отлично от содержания Пасхи Христовой
+              accessed: '2026-10-01'
+        more:
+          - title: Пасха
+            url: https://azbyka.ru/paskha
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о праздниках'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: todo
+        todo: 'Proof matrix/judaism.yaml holy-days (toldot.com/holidays.html): the excerpt «Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват» is a run of navigation link labels without spaces in the page text (it matches only as a rendered list of links). It is an acceptable existing proof but not a literal sentence; consider replacing it with a sentence of the article.'
+      - id: fasting
+        title: 'Пост: Йом Кипур и Великий пост'
+        topic: fasting
+        church:
+          text: 'Православный пост ведёт к жизни во Христе и связан с церковным годом: важнейший — Великий пост, сорок дней, потому что постился Сам Господь; в среду и пятницу постятся в память о предании и страданиях Христа. Перед Причастием соблюдается евхаристический пост.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: 'Свт. Филарет. Пространный катехизис, §§540–543: посты'
+              tier: official
+              excerpt: Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §539
+              tier: official
+              excerpt: Важнейшим постом является Великий пост, или святая Четыредесятница
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §540
+              tier: official
+              excerpt: Великий пост называется Четыредесятницей потому, что продолжается сорок дней, исключая неделю страдания Христа (Страстную седмицу)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §541
+              tier: official
+              excerpt: Великий пост продолжается сорок дней, поскольку Сам Господь Иисус Христос постился сорок дней
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §542
+              tier: official
+              excerpt: Поститься положено в среду – в воспоминание предания Господа нашего Иисуса Христа на страдание, а в пятницу – в память самих Его страданий и смерти
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543
+              tier: official
+              excerpt: Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить следующие за этими постами праздники
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543
+              tier: official
+              excerpt: а пост в память святых апостолов – для подражания апостолам, которые постились, готовя себя для дела Евангельской проповеди
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §524
+              tier: official
+              excerpt: Вторая заповедь, запрещая чревоугодие, учит воздержанию и посту
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: к скоромным продуктам относятся любые продовольственные продукты, имеющие в своем составе плоть или продукты жизнедеятельности теплокровных животных, такие как (молоко, яйца)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: Рыба и морепродукты занимают особое срединное место между постной и скоромной пищей
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/skoromnaya-pishha
+              title: Скоромная пища — православная энциклопедия «Азбука веры»
+              tier: reference
+              excerpt: Рыба и морепродукты (которые разрешаются в рамках менее строгих форм поста)
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/
+              title: Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Пост в форме воздержания от скоромной пищи и удаления от развлечений, сопровождаемый усердной молитвой и покаянием, традиционно предваряет причащение Святых Таин
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/ob-uchastii-vernyh-v-evharistii/
+              title: Об участии верных в Евхаристии — документ Архиерейского Собора Русской Православной Церкви 2016 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Евхаристический пост в строгом смысле слова – полное воздержание от пищи и питья с полуночи до Святого Причащения
+              accessed: '2026-09-26'
+        tradition:
+          text: 'Главный пост — Йом Кипур, День Искупления (10 тишрея): воздержание от еды и питья с дополнительными ограничениями; другие общие посты связаны с памятью о бедствиях народа (3 тишрея, 10 тевета, 17 тамуза, 9 ава, 13 адара). Дни поста предназначены для раскаяния и исправления дел.'
+          proof:
+            - url: https://toldot.com/iomkipur.html
+              title: Йом Кипур — День Искупления | Толдот.ру
+              tier: official
+              excerpt: Йом Кипур выпадает на 10-е число еврейского месяца Тишрей
+              accessed: '2026-09-26'
+            - url: https://toldot.com/iomkipur.html
+              title: Йом Кипур — День Искупления | Толдот.ру
+              tier: official
+              excerpt: Хотя Йом Кипур — это тяжелый пост, который длится чуть больше суток и в который обязаны поститься все евреи
+              accessed: '2026-09-26'
+            - url: https://www.sefaria.org/api/texts/Mishnah_Yoma.8.1?context=0
+              title: Mishnah Yoma 8:1, William Davidson Edition (English) — Sefaria
+              tier: official
+              excerpt: in eating and in drinking, and in bathing, and in smearing oil on one’s body, and in wearing shoes, and in conjugal relations
+              accessed: '2026-09-26'
+            - url: https://toldot.com/iomkipur.html
+              title: Йом Кипур — День Искупления | Толдот.ру
+              tier: official
+              excerpt: Обувь из кожи запрещена, даже если кожа в ней присутствует только выше подошвы
+              accessed: '2026-09-26'
+            - url: https://eleven.co.il/judaism/cult/13291/
+              title: Пост | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Пост Иом-Киппура и Девятого ава длится с захода солнца накануне и до наступления темноты на следующий день
+              accessed: '2026-09-26'
+            - url: https://eleven.co.il/judaism/cult/13291/
+              title: Пост | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Девятое ава — в память о разрушении Первого (II Ц. 25:8–9; Иер. 52:12–13) и Второго храмов
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: Мудрецы установили следующие даты как общие для всего еврейского народа посты
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: 3-е тишрея (пост Гедальи), 10-е тевета (Асара бетевет), 17-е тамуза (Шваэсре бетамуз), 9 ава (Тиша беав)
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: 13-е адара — день «Таанит Эстер» («пост Эстер»)
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: Все посты (кроме Тиша Беав) начинаются с самым началом рассвета и продолжаются до появления звёзд
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: В дни общественных постов запрещено есть и пить
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: В дни таанит цибур (кроме Тиша Беав и Йом Кипур) разрешается пить и есть беременным или кормящим женщинам и больным
+              accessed: '2026-09-26'
+            - url: https://toldot.com/post.html
+              title: Еврейские посты. Законы и обычаи | Толдот.ру
+              tier: official
+              excerpt: Дни поста предназначены для раскаяния, раздумий о своём духовном состоянии и необходимости исправить свои деяния
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Общий корень — покаяние: «обратитесь ко Мне всем сердцем своим в посте, плаче и рыдании» (Иоил 2:12). Йом Кипур установлен Торой: «смиряйте души ваши» (Лев 16:29, 31); катехизис Церкви напоминает, что и в Ветхом Завете подразумевались дни поста, как день очищения.'
+            - 'Истинный пост пророки связывают со справедливостью: «разреши оковы неправды» и «раздели с голодным хлеб твой» (Ис 58:6–7). С этим согласно и Евангелие: постящийся должен явиться «не пред людьми, но пред Отцом твоим» (Мф 6:18).'
+            - 'Христос предполагает пост как часть жизни учеников: «придут дни, когда отнимется у них жених, и тогда будут поститься» (Мф 9:15). Православный пост связан с церковным годом и с жизнью во Христе.'
+            - 'Поэтому различие — не в часах без пищи, а в календаре и основании: нельзя оценивать православный пост только числом часов или строгостью запрета питья, как нельзя и иудейский Йом Кипур приравнивать к Великому посту.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Joel.2:12&r
+              title: Иоил. 2:12 — Синодальный перевод
+              tier: official
+              excerpt: обратитесь ко Мне всем сердцем своим в посте, плаче и рыдании
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lev.16:31&r
+              title: Лев. 16:31 — Синодальный перевод
+              tier: official
+              excerpt: 'это суббота покоя для вас, смиряйте души ваши: это постановление вечное'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Is.58:6&r
+              title: Ис. 58:6 — Синодальный перевод
+              tier: official
+              excerpt: 'Вот пост, который Я избрал: разреши оковы неправды'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Is.58:7&r
+              title: Ис. 58:7 — Синодальный перевод
+              tier: official
+              excerpt: раздели с голодным хлеб твой
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.6:18&r
+              title: Мф. 6:18 — Синодальный перевод
+              tier: official
+              excerpt: чтобы явиться постящимся не пред людьми, но пред Отцом твоим
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.9:15&r
+              title: Мф. 9:15 — Синодальный перевод
+              tier: official
+              excerpt: Но придут дни, когда отнимется у них жених, и тогда будут поститься
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 537
+              tier: official
+              excerpt: Под наименованием седьмого дня, или субботы, в Ветхозаветной Церкви подразумевались и другие дни, установленные для празднования или для поста
+              accessed: '2026-10-01'
+        more:
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о постах'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+          - title: Скоромная пища
+            url: https://azbyka.ru/skoromnaya-pishha
+            kind: encyclopedia
+        legacy: []
+        status: verified
+      - id: asceticism-monasticism
+        title: Аскеза и монашество
+        topic: fasting
+        church:
+          text: Монашество — добровольный путь всецелого посвящения себя Богу через принятие обетов; главные обеты — послушание, нестяжание и целомудрие. Церковь видит в нём особый образ христианского жительства, а не обязанность для всех.
+          proof:
+            - url: https://azbyka.ru/monashestvo
+              title: 'Азбука веры. Монашество: обеты и духовная жизнь'
+              tier: reference
+              excerpt: всецело посвятивший себя Богу через принятие обетов
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+              title: Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: особый образ христианского жительства, заключающийся во всецелом посвящении себя на служение Богу
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+              title: Положение о монастырях и монашествующих — документ Архиерейского Собора Русской Православной Церкви 2017 г. (текст на «Азбуке веры»)
+              tier: official
+              excerpt: Главными из этих обетов являются послушание, нестяжание и целомудрие
+              accessed: '2026-09-26'
+        tradition:
+          text: 'Иудаизм, по справочным изданиям, не поощряет монашеский идеал безбрачия и аскетизма: аскетизм никогда не занимал существенного места в еврейской религии, а крайнее воздержание Рамбам называет дурным путём. Радость земной жизни, данной Богом, считается частью служения.'
+          proof:
+            - url: https://ru.wikipedia.org/wiki/%D0%9C%D0%BE%D0%BD%D0%B0%D1%88%D0%B5%D1%81%D1%82%D0%B2%D0%BE
+              title: Монашество — Википедия
+              tier: reference
+              excerpt: Иудаизм не поощряет монашеский идеал безбрачия и аскетизма
+              accessed: '2026-09-26'
+            - url: https://eleven.co.il/judaism/religious-ethics/10308/
+              title: Аскетизм | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: Аскетизм никогда не занимал существенного места в еврейской религии
+              accessed: '2026-09-26'
+            - url: https://eleven.co.il/judaism/religious-ethics/10308/
+              title: Аскетизм | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: они рассматривают аскетизм и отшельничество как противоречащие стремлению Бога дать людям возможность наслаждаться дарованной им земной жизнью
+              accessed: '2026-09-26'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Human_Dispositions.3.1?context=0
+              title: Mishneh Torah, Human Dispositions (Hilchot De'ot) 3:1, trans. Eliyahu Touger — Sefaria
+              tier: official
+              excerpt: he will not eat meat, nor drink wine, nor live in a pleasant home, nor wear fine clothing
+              accessed: '2026-09-26'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Human_Dispositions.3.1?context=0
+              title: Mishneh Torah, Human Dispositions (Hilchot De'ot) 3:1, trans. Eliyahu Touger — Sefaria
+              tier: official
+              excerpt: This, too, is a bad path and it is forbidden to walk upon it
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Здесь различие подлинное: иудаизм не поощряет монашеский идеал безбрачия. Православие не требует монашества от всех: о воздержании ради Царства Небесного Христос говорит «Кто может вместить, да вместит» (Мф 19:12).'
+            - 'Но корни посвящения есть и в Писании Израиля: назорейство — обет воздержания от вина и крепких напитков, «чтобы посвятить себя в назореи Господу» (Чис 6:2–3); Иоанн Креститель, чья пища «были акриды и дикий мёд» (Мф 3:4).'
+            - 'Монашество в Православии основано на слове Христа: «если хочешь быть совершенным, пойди, продай имение твоё и раздай нищим» (Мф 19:21). Это добровольный совет.'
+            - 'Церковь не противопоставляет иудейскую жизнь монашеству как худшую или лучшую: речь о разных призваниях.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Mt.19:12&r
+              title: Мф. 19:12 — Синодальный перевод
+              tier: official
+              excerpt: Кто может вместить, да вместит
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Num.6:2&r
+              title: Чис. 6:2 — Синодальный перевод
+              tier: official
+              excerpt: чтобы посвятить себя в назореи Господу
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Num.6:3&r
+              title: Чис. 6:3 — Синодальный перевод
+              tier: official
+              excerpt: то он должен воздержаться от вина и крепкого напитка
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.3:4&r
+              title: Мф. 3:4 — Синодальный перевод
+              tier: official
+              excerpt: а пищею его были акриды и дикий мед
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.19:21&r
+              title: Мф. 19:21 — Синодальный перевод
+              tier: official
+              excerpt: если хочешь быть совершенным, пойди, продай имение твое и раздай нищим
+              accessed: '2026-10-01'
+        more:
+          - title: Монашество
+            url: https://azbyka.ru/monashestvo
+            kind: encyclopedia
+          - title: Положение о монастырях и монашествующих (Архиерейский Собор 2017)
+            url: https://azbyka.ru/otechnik/dokumenty/polozhenie-o-monastyrjah-i-monashestvuyushhih/
+            kind: church
+        legacy: []
+        status: verified
+      - id: images-icons
+        title: Образы и иконы
+        topic: images
+        church:
+          text: 'Православие не изображает невидимую Божественную сущность. Иметь священные изображения не запрещено: иконы — изображения Бога, явившегося во плоти, Господа Иисуса Христа, Пречистой Его Матери и святых. Честь, воздаваемая образу, переходит на Первообраз, а глядя на икону, следует умом видеть Бога и святых.'
+          proof:
+            - url: https://azbyka.ru/ikonopochitanie
+              title: 'Азбука веры. Иконопочитание: основной тезис'
+              tier: reference
+              excerpt: Честь, воздаваемая образу, переходит на Первообраз
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Иметь какие бы то ни было священные изображения вовсе не запрещается
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Глядя на иконы, следует умом видеть Бога и святых, на них изображённых
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: 'Свт. Филарет. Пространный катехизис, §§184–189: Приснодева и Богородица'
+              tier: official
+              excerpt: Пресвятая Мария действительно всегда пребывала и пребывает Девой
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/bogorodica
+              title: Богородица — раздел о католическом догмате непорочного зачатия и православных объяснениях очищения
+              tier: reference
+              excerpt: Согласно одним, предочищение Её Духом Святым
+              accessed: '2026-09-27'
+        tradition:
+          text: Тора запрещает изготовление изваяний и изображений для поклонения (Исх 20:4); эта заповедь связана с верой в бестелесность Бога, которая — один из принципов веры иудаизма. Запрет идолопоклонства — один из самых строгих.
+          proof:
+            - url: https://www.sefaria.org/api/texts/Exodus.20.4?context=0
+              title: Exodus 20:4 | Sefaria (JPS 2023 translation)
+              tier: reference
+              excerpt: You shall not make for yourself a sculptured image, or any likeness of what is in the heavens above
+              accessed: '2026-09-26'
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: благословенно имя Его, нематериален и ему несвойственны присущие материи состояния, и что у Него вообще нет никакого подобия
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общее — запрет идолов: вторая заповедь запрещает поклоняться идолам как мнимым божествам, и Православие это признаёт (катехизис, вопросы 512–513).'
+            - Сам Моисей, через которого дана заповедь, получил повеление поставить в скинии золотых херувимов (Исх 25:18–20); поэтому, по катехизису, священные изображения не запрещены, если их не боготворят.
+            - 'Основание иконы — воплощение: «Слово стало плотию… и мы видели славу Его» (Ин 1:14). Иудаизм не принимает воплощение, поэтому и основание запрета образов у него иное — бестелесность Бога.'
+            - 'Различие не отрицает почтения к заповеди: и Церковь, и иудаизм исходят из того, что Бога нельзя ограничить изображением; Церковь изображает Его только в том, как Он Сам явился людям во Христе.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 513
+              tier: official
+              excerpt: Вторая заповедь запрещает поклоняться идолам как мнимым божествам или как изображениям ложных богов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 514
+              tier: official
+              excerpt: Иметь какие бы то ни было священные изображения вовсе не запрещается
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Ex.25:18&r
+              title: Исх. 25:18 — Синодальный перевод
+              tier: official
+              excerpt: сделай из золота двух херувимов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.1:14&r
+              title: Ин. 1:14 — Синодальный перевод
+              tier: official
+              excerpt: И Слово стало плотию, и обитало с нами
+              accessed: '2026-10-01'
+        more:
+          - title: Иконопочитание
+            url: https://azbyka.ru/ikonopochitanie
+            kind: encyclopedia
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 3: о второй заповеди'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+            kind: church
+        legacy: []
+        status: verified
+  - id: last-things
+    title: Воскресение и последние времена
+    cards:
+      - id: resurrection-afterlife
+        title: Воскресение мёртвых и жизнь будущего века
+        topic: afterlife
+        church:
+          text: 'Церковь исповедует воскресение мёртвых: тела умерших, соединившись с душами, оживут и станут духовны и бессмертны; за ним следуют Суд и жизнь будущего века. Души праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства.'
+          proof:
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, О членах 11 и 12 Символа веры
+              tier: official
+              excerpt: во свете, покое и предначинании вечного блаженства
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 11: воскресение мёртвых'
+              tier: official
+              excerpt: Чаю воскресения мертвых
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Душам умерших с верой, но не успевших принести достойных плодов покаяния, для достижения блаженного воскресения могут помочь возносимые за них молитвы
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 363
+              tier: official
+              excerpt: Воскресение мёртвых, которого мы ожидаем – это действие всемогущества Божия, через которое тела умерших людей, соединившись опять с их душами, оживут и станут духовны и бессмертны
+              accessed: '2026-10-01'
+        tradition:
+          text: Классическая еврейская эсхатология включает веру в воскресение мёртвых (тринадцатый принцип Рамбама) и «олам ха-ба» — грядущий мир. Реформистское движение в 1885 году в Питтсбургской платформе официально отказалось от учений о телесном воскресении, рае и аде; этот документ не описывает всех современных иудеев.
+          proof:
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: Безоговорочно верю в то, что мёртвые вернутся к жизни
+              accessed: '2026-09-25'
+            - url: https://eleven.co.il/judaism/theology/13061/
+              title: Олам ха-ба | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: олам ха-ба в иудаизме состоит в вере в воскресение из мертвых
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Здесь согласие подлинное: классический иудаизм и Церковь исповедуют воскресение мёртвых. Оно известно уже Писанию Израиля: «многие из спящих в прахе земли пробудятся, одни для жизни вечной» (Дан 12:2); Марфа говорит: «знаю, что воскреснет в воскресение, в последний день» (Ин 11:24); фарисеи, по Деяниям, «признают» воскресение (Деян 23:8).'
+            - 'Основание для Церкви — воскресение Христа: «Христос воскрес из мертвых, первенец из умерших» (1 Кор 15:20). Воскресение понимается как действительное, телесное.'
+            - 'Различие внутри иудаизма: документ 1885 года нельзя считать описанием всех современных иудеев. При сравнении необходимо указывать автора и время иудейского документа и не смешивать разные направления.'
+            - Церковь, кроме того, учит о состоянии душ до всеобщего воскресения и о пользе молитвы за умерших; в иудейских текстах «олам ха-ба» (грядущий мир) связан с воскресением, но мудрецы по-разному понимают его содержание, поэтому сравнивать надо осторожно.
+          proof:
+            - url: https://azbyka.ru/biblia/?Dan.12:2&r
+              title: Дан. 12:2 — Синодальный перевод
+              tier: official
+              excerpt: многие из спящих в прахе земли пробудятся, одни для жизни вечной
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Jn.11:24&r
+              title: Ин. 11:24 — Синодальный перевод
+              tier: official
+              excerpt: знаю, что воскреснет в воскресение, в последний день
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.23:8&r
+              title: Деян. 23:8 — Синодальный перевод
+              tier: official
+              excerpt: а фарисеи признают и то и другое
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Cor.15:20&r
+              title: 1 Кор. 15:20 — Синодальный перевод
+              tier: official
+              excerpt: Но Христос воскрес из мертвых, первенец из умерших
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, вопрос 369
+              tier: official
+              excerpt: Души умерших праведников до всеобщего воскресения пребывают во свете, покое и предначинании вечного блаженства
+              accessed: '2026-10-01'
+        more:
+          - title: Символ веры
+            url: https://azbyka.ru/simvol_very
+            kind: church
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о членах 11 и 12'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+        legacy: []
+        status: verified
+      - id: messianic-age-second-coming
+        title: Мессианская эпоха и второе пришествие
+        topic: end-times
+        church:
+          text: Христос уже совершил дело спасения, и Церковь ожидает Его возвращения во славе — «судить живых и мертвых, царству Которого не будет конца». Когда Господь придёт, неизвестно; в Слове Божием открыты лишь некоторые признаки.
+          proof:
+            - url: https://azbyka.ru/simvol_very
+              title: 'Никео-Цареградский Символ веры, член 7: Пришествие и Суд'
+              tier: official
+              excerpt: царству Которого не будет конца
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, О седьмом члене Символа веры
+              tier: official
+              excerpt: Когда Господь Иисус Христос придет нас судить неизвестно
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'В слове Божием открыты некоторые признаки приближения пришествия Христа, а именно: уменьшение веры и любви между людьми'
+              accessed: '2026-09-25'
+        tradition:
+          text: 'Иудаизм ждёт ещё не пришедшего Машиаха — каждый день, хотя он задерживается. Мудрецы расходятся в том, является ли мессианская эпоха лишь преддверием грядущего мира или чем-то иным: будущий золотой век, о котором говорили пророки, — только время Мессии, а об «олам ха-ба» сказано «никакое око не видело».'
+          proof:
+            - url: https://toldot.com/13PrintsipovVery.html
+              title: 13 принципов веры | Толдот.ру
+              tier: official
+              excerpt: Безоговорочно верю в приход Машиаха, и, хотя он задерживается, я всё же каждый день буду ждать его
+              accessed: '2026-09-25'
+            - url: https://eleven.co.il/judaism/theology/13061/
+              title: Олам ха-ба | Электронная еврейская энциклопедия
+              tier: reference
+              excerpt: будущий золотой век, о котором говорили библейские пророки, — это только время Мессии, а об олам ха-ба сказано «никакое око не видело»
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Общее слово «Мессия» не означает согласия о Его личности. Энциклопедия «Азбука веры» формулирует это так: представители современного иудаизма ожидают лишь первого пришествия Мессии, тогда как христиане — второго.'
+            - 'Христианское ожидание основано на слове Писания: ангелы говорят ученикам, что Иисус «придет таким же образом, как вы видели Его восходящим на небо» (Деян 1:11), а день и час «никто не знает, ни Ангелы небесные, а только Отец Мой один» (Мф 24:36).'
+            - 'Общая надежда — на то, что все народы придут к познанию Бога: Церковь читает пророчество «пойдут многие народы» (Ис 2:3) как призвание всех народов в Церковь Христову (энциклопедия «Азбука веры»), а иудейский источник говорит, что Машиах «приведёт к Б-гу все народы земли».'
+            - 'Различие остаётся: иудаизм ждёт Машиаха — царя и человека из плоти и крови, Церковь исповедует Христа, Который придёт судить живых и мертвых.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Act.1:11&r
+              title: Деян. 1:11 — Синодальный перевод
+              tier: official
+              excerpt: придет таким же образом, как вы видели Его восходящим на небо
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Mt.24:36&r
+              title: Мф. 24:36 — Синодальный перевод
+              tier: official
+              excerpt: О дне же том и часе никто не знает, ни Ангелы небесные, а только Отец Мой один
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Is.2:3&r
+              title: Ис. 2:3 — Синодальный перевод
+              tier: official
+              excerpt: 'И пойдут многие народы и скажут: придите, и взойдем на гору Господню'
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Представители современного иудаизма ожидают лишь первого пришествия Мессии, тогда как христиане – второго
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/messiya
+              title: Азбука веры. Мессия
+              tier: reference
+              excerpt: Как Исаия, так и Михей подчеркнули, что в Церковь Христову будут призваны все без исключения народы
+              accessed: '2026-10-01'
+            - url: https://toldot.com/messia-mashiach.html
+              title: Мессия (Еврейский Спаситель) и лже-Мессия — Машиах и псевдо-Машиах | Толдот.ру
+              tier: official
+              excerpt: Самое главное, еврейский Машиах приведёт к Б-гу все народы земли
+              accessed: '2026-10-01'
+            - url: https://toldot.com/messia-mashiach.html
+              title: Мессия (Еврейский Спаситель) и лже-Мессия — Машиах и псевдо-Машиах | Толдот.ру
+              tier: official
+              excerpt: Еврейский Машиах — еврейский человек из плоти и крови, рождённый от обычных людей
+              accessed: '2026-10-01'
+        more:
+          - title: Символ веры
+            url: https://azbyka.ru/simvol_very
+            kind: church
+          - title: Мессия
+            url: https://azbyka.ru/messiya
+            kind: encyclopedia
+        legacy: []
+        status: verified
+  - id: people-church
+    title: Народ Божий, Церковь и течения иудаизма
+    cards:
+      - id: israel-new-israel
+        title: 'Народ Божий: Израиль и Церковь'
+        topic: organisation
+        church:
+          text: Ветхозаветный народ израильский был прообразом народа Божия — новозаветной Церкви Христовой; искупительный подвиг Христа положил начало Церкви как новому человечеству — духовному потомству Авраама. Единство нового народа обеспечивается не национальной общностью, а верой во Христа и Крещением.
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+              title: Основы социальной концепции Русской Православной Церкви (Архиерейский Собор 2000), II.1
+              tier: official
+              excerpt: Ветхозаветный народ израильский был прообразом народа Божия – новозаветной Церкви Христовой
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+              title: Основы социальной концепции Русской Православной Церкви (Архиерейский Собор 2000), II.1
+              tier: official
+              excerpt: Единство этого нового народа обеспечивается не национальной, культурной или языковой общностью, но верой во Христа и Крещением
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/izrail
+              title: Азбука веры. Израиль
+              tier: reference
+              excerpt: Под Новым Израилем понимается Церковь Христова
+              accessed: '2026-10-01'
+        tradition:
+          text: Иудаизм ведёт свою историю от завета Бога с Авраамом и от дарования Торы на Синае. Реформистский иудаизм сохраняет веру в Завет между Богом и Израилем. В заявлении «Дабру эмет» иудейские учёные пишут, что Бог заключил завет с народом Израиля, и называют христианство верой, возникшей внутри иудаизма, но не его продолжением.
+          proof:
+            - url: https://toldot.com/Tanah.html
+              title: Танах — Еврейская Библия | Толдот.ру
+              tier: official
+              excerpt: 6 сивана 2448 г. по еврейскому летоисчислению (соответствует 1312 году до н.э.)
+              accessed: '2026-09-25'
+            - url: https://urj.org/what-we-believe/what-is-reform-judaism
+              title: What is Reform Judaism? | Union for Reform Judaism
+              tier: official
+              excerpt: Reform Judaism maintains faith in the Covenant between God and Israel
+              accessed: '2026-09-25'
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+              title: 'Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations'
+              tier: reference
+              excerpt: God established a covenant with the people Israel
+              accessed: '2026-10-01'
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+              title: 'Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations'
+              tier: reference
+              excerpt: We do not see it as an extension of Judaism
+              accessed: '2026-10-01'
+        answer:
+          points:
+            - 'Основа общая: Бог избрал Израиль и заключил с ним завет. Апостол Павел говорит об Израильтянах: «которым принадлежат усыновление и слава, и заветы, и законоположение, и богослужение, и обетования» (Рим 9:4); Христос «по плоти» от них (Рим 9:5).'
+            - 'Церковь видит себя продолжением и исполнением этого избрания: «вы – род избранный… некогда не народ, а ныне народ Божий» (1 Пет 2:9–10); «если же вы Христовы, то вы семя Авраамово» (Гал 3:29). В официальном документе Церкви это выражено словами о прообразе.'
+            - 'Но это не отвержение народа: «неужели Бог отверг народ Свой? Никак» (Рим 11:1); «дары и призвание Божие непреложны» (Рим 11:29); «весь Израиль спасется» (Рим 11:26). Свт. Лука Крымский, цитируемый энциклопедией «Азбука веры», пишет: «О конечной судьбе Израиля мы ничего не знаем».'
+            - 'Иудаизм не видит в Церкви нового Израиля: «Дабру эмет» уважает христианство как веру, возникшую внутри иудаизма, но не как его продолжение. Расхождение в том, кто наследует обетования, остаётся.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Rom.9:4&r
+              title: Рим. 9:4 — Синодальный перевод
+              tier: official
+              excerpt: которым принадлежат усыновление и слава, и заветы, и законоположение, и богослужение, и обетования
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Pet.2:9&r
+              title: 1 Пет. 2:9 — Синодальный перевод
+              tier: official
+              excerpt: Но вы – род избранный
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Pet.2:10&r
+              title: 1 Пет. 2:10 — Синодальный перевод
+              tier: official
+              excerpt: некогда не народ, а ныне народ Божий
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Gal.3:29&r
+              title: Гал. 3:29 — Синодальный перевод
+              tier: official
+              excerpt: Если же вы Христовы, то вы семя Авраамово и по обетованию наследники
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.11:1&r
+              title: Рим. 11:1 — Синодальный перевод
+              tier: official
+              excerpt: неужели Бог отверг народ Свой? Никак
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.11:29&r
+              title: Рим. 11:29 — Синодальный перевод
+              tier: official
+              excerpt: Ибо дары и призвание Божие непреложны
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.11:26&r
+              title: Рим. 11:26 — Синодальный перевод
+              tier: official
+              excerpt: и так весь Израиль спасется
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/bogoizbrannyj-narod
+              title: Азбука веры. Богоизбранный народ (цитата свт. Луки Крымского)
+              tier: reference
+              excerpt: О конечной судьбе Израиля мы ничего не знаем
+              accessed: '2026-10-01'
+        more:
+          - title: Израиль
+            url: https://azbyka.ru/izrail
+            kind: encyclopedia
+          - title: Богоизбранный народ
+            url: https://azbyka.ru/bogoizbrannyj-narod
+            kind: encyclopedia
+          - title: Тайна Израиля
+            url: https://azbyka.ru/tajna-izrailya
+            kind: author
+            author: диакон Андрей
+          - title: Основы социальной концепции РПЦ, глава II
+            url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+            kind: church
+        legacy: []
+        status: verified
+      - id: rabbi-priest
+        title: Раввин и священник
+        topic: organisation
+        church:
+          text: 'Священство Церкви связано со Христом, апостольским преемством и Таинствами. Церковь едина: Иисус Христос — единственная глава единственной Церкви, а священноначалием, которое может действовать от имени всей Кафолической Церкви, является Вселенский Собор. Раввина нельзя описывать как православного священника с другим названием.'
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Архиерейский Собор РПЦ, 2000. Основные принципы отношения к инославию, §§1.1–1.3, 7.1
+              tier: official
+              excerpt: Православная Церковь есть истинная Церковь Христова
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/simvol_very
+              title: Никео-Цареградский Символ веры, члены 1–12
+              tier: official
+              excerpt: Во Единую Святую, Соборную
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Свт. Филарет Московский. Пространный катехизис, §§256–257; об иерархии
+              tier: official
+              excerpt: Иисус Христос есть единственная глава единственной Церкви.
+              accessed: '2026-09-27'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: 'Церковь одна, однако имеются отдельные и самостоятельные Церкви, например: Иерусалимская, Антиохийская, Александрийская, Константинопольская, Российская'
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов)
+              tier: official
+              excerpt: Священноначалием, которое может действовать от имени всей Кафолической Церкви, является Вселенский Собор
+              accessed: '2026-09-25'
+        tradition:
+          text: 'У иудаизма нет единого духовенства: раввин — учитель и галахический авторитет, получающий смиху (посвящение) в виде письменного документа, а не через возложение рук, как в древности. Ортодоксальные раввины получают смиху в ешивах; консервативное, реформистское и реконструктивистское движения рукополагают через свои семинарии, в том числе женщин.'
+          proof:
+            - url: https://jewishvirtuallibrary.org/rabbinic-ordination-semikha
+              title: Rabbinic Ordination (Semikha) | Jewish Virtual Library
+              tier: reference
+              excerpt: the practice of rabbinic ordination does not include any "laying of the hands," but a written document
+              accessed: '2026-09-25'
+            - url: https://jewishvirtuallibrary.org/rabbinic-ordination-semikha
+              title: Rabbinic Ordination (Semikha) | Jewish Virtual Library
+              tier: reference
+              excerpt: The Reconstructionist, Reform, and Conservative movements all ordain women for the Rabbinate
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - 'Сходство честно признать: священническое служение и преемство есть и в Писании Израиля. «Никто сам собою не приемлет этой чести, но призываемый Богом, как и Аарон» (Евр 5:4).'
+            - 'В Церкви служение передаётся рукоположением: дарование «дано тебе по пророчеству с возложением рук священства» (1 Тим 4:14); апостолы, «рукоположив же им пресвитеров к каждой церкви, они помолились с постом» (Деян 14:23).'
+            - 'Роли различны: раввин — учитель Торы и судья по галахе, без Храма и жертвы; священник Церкви совершает Таинства, прежде всего Евхаристию. Это разные религиозные устройства.'
+            - 'Внутри иудаизма единого порядка нет: ортодоксальная смиха и семинарские посвящения других движений различаются, в том числе в отношении к женщинам.'
+          proof:
+            - url: https://azbyka.ru/biblia/?Hebr.5:4&r
+              title: Евр. 5:4 — Синодальный перевод
+              tier: official
+              excerpt: И никто сам собою не приемлет этой чести, но призываемый Богом, как и Аарон
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?1Tim.4:14&r
+              title: 1 Тим. 4:14 — Синодальный перевод
+              tier: official
+              excerpt: с возложением рук священства
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.14:23&r
+              title: Деян. 14:23 — Синодальный перевод
+              tier: official
+              excerpt: Рукоположив же им пресвитеров к каждой церкви
+              accessed: '2026-10-01'
+        more:
+          - title: Основные принципы отношения Русской Православной Церкви к инославию (2000)
+            url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+            kind: church
+          - title: 'Пространный катехизис свт. Филарета Московского, ч. 1: о Церкви'
+            url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
+            kind: church
+        legacy: []
+        status: verified
+      - id: judaism-movements
+        title: Течения иудаизма
+        topic: organisation
+        church:
+          text: Православная энциклопедия отмечает, что современный иудаизм неоднороден и представлен течениями, которые сильно отличаются в вероучении и практиках. Общие для большинства течений черты — монотеизм, вера в Завет, авторитет Танаха и Талмуда, исполнение заповедей, ожидание Мессии, вера в ангелов и в воскресение мёртвых.
+          proof:
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Современный иудаизм неоднороден и представлен различными течениями, которые сильно отличаются в вероучении и практиках
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Для большинства течений характерны следующие, объединяющие их особенности
+              accessed: '2026-10-01'
+        tradition:
+          text: Ортодоксальный иудаизм менее склонен считать, что предписания меняются вместе с обществом. В консервативном иудаизме (масорти) раввины коллективно определяют направление через Раввинскую ассамблею. Реформистский иудаизм говорит о постоянно развивающейся Торе и традиции и делает акцент на осознанном личном выборе.
+          proof:
+            - url: https://www.myjewishlearning.com/article/orthodox-judaism/
+              title: Orthodox Judaism | My Jewish Learning
+              tier: reference
+              excerpt: Orthodox Judaism is more resistant than its liberal counterparts to the idea that biblical mandates can change in response to changing social circumstances
+              accessed: '2026-09-25'
+            - url: https://www.rabbinicalassembly.org/about-us/conservative-masorti
+              title: Conservative/Masorti | The Rabbinical Assembly
+              tier: official
+              excerpt: Each rabbi serves as halakhic authority for his or her community, and our rabbis collectively give direction through the Rabbinical Assembly
+              accessed: '2026-09-25'
+            - url: https://urj.org/what-we-believe/what-is-reform-judaism
+              title: What is Reform Judaism? | Union for Reform Judaism
+              tier: official
+              excerpt: strive to make thoughtful choices about how we put our values into action
+              accessed: '2026-09-25'
+            - url: https://urj.org/what-we-believe/what-is-reform-judaism
+              title: What is Reform Judaism? | Union for Reform Judaism
+              tier: official
+              excerpt: in the teachings of an ever-evolving Torah and tradition
+              accessed: '2026-09-25'
+        answer:
+          points:
+            - Расхождения внутри иудаизма касаются статуса Устной Торы и галахи, кашрута, роли женщин-раввинов и эсхатологии (Питтсбургская платформа 1885 года отказалась от учения о телесном воскресении). Поэтому об иудаизме нельзя говорить как об одной позиции без уточнения, о каком течении речь.
+            - 'Общее есть и у всех течений: один и тот же Танах, вера в единого Бога и в Завет между Богом и Израилем. Именно с этим общим основанием Церковь и сопоставляет своё учение.'
+            - 'Православная оценка относится к учению, а не к людям: Основные принципы Русской Православной Церкви (2000) требуют относиться с христианской любовью к людям, исповедующим ошибочные, с точки зрения Церкви, взгляды. Этот документ написан об инославных христианах; сайт применяет тот же принцип тона к людям другой веры.'
+          proof:
+            - url: https://jewishvirtuallibrary.org/rabbinic-ordination-semikha
+              title: Rabbinic Ordination (Semikha) | Jewish Virtual Library
+              tier: reference
+              excerpt: The Reconstructionist, Reform, and Conservative movements all ordain women for the Rabbinate
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: many Jews decided to jettison kashrut [Jewish dietary laws]
+              accessed: '2026-09-25'
+            - url: https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%BD%D0%B0%D1%85
+              title: Танах — Википедия (русская)
+              tier: reference
+              excerpt: По содержанию c Танахом совпадает Ветхий Завет христианской Библии
+              accessed: '2026-09-25'
+            - url: https://urj.org/what-we-believe/what-is-reform-judaism
+              title: What is Reform Judaism? | Union for Reform Judaism
+              tier: official
+              excerpt: Reform Judaism maintains faith in the Covenant between God and Israel
+              accessed: '2026-09-25'
+            - url: https://www.myjewishlearning.com/article/reform-judaism/
+              title: Reform Judaism | My Jewish Learning
+              tier: reference
+              excerpt: formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell
+              accessed: '2026-09-25'
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/
+              title: Основные принципы отношения Русской Православной Церкви к инославию (Архиерейский Собор 2000), §7.1
+              tier: official
+              excerpt: православные призваны с христианской любовью относиться к людям, их исповедующим
+              accessed: '2026-10-01'
+        more:
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: Краткое введение в иудаизм (В. С. Стрелов)
+            url: https://azbyka.ru/kratkoe-vvedenie-v-iudaizm
+            kind: author
+        legacy: []
+        status: verified
+      - id: respect-no-hostility
+        title: Уважение к людям и отказ от вражды
+        topic: rules
+        church:
+          text: Православной этике противоречит деление народов на лучших и худших, принижение какой-либо этнической или гражданской нации. Обвинение иудеев в ритуальных убийствах энциклопедия «Азбука веры» называет абсурдным и грехом клеветы.
+          proof:
+            - url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+              title: Основы социальной концепции Русской Православной Церкви (Архиерейский Собор 2000), II.4
+              tier: official
+              excerpt: Православной этике противоречит деление народов на лучшие и худшие, принижение какой-либо этнической или гражданской нации
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Это обвинение абсурдно хотя бы потому
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/iudaizm
+              title: Азбука веры. Иудаизм
+              tier: reference
+              excerpt: Такие обвинения являются грехом клеветы
+              accessed: '2026-10-01'
+        tradition:
+          text: Иудейские источники о христианстве говорят по-разному. Рамбам спрашивает, может ли быть больший камень преткновения, чем христианство, и вместе с тем пишет, что деяния Иисуса из Назарета лишь подготавливают путь для Машиаха. «Дабру эмет» (2000, иудейские учёные разных течений) утверждает, что евреи и христиане поклоняются одному Богу; заявление ортодоксальных раввинов (2015) называет появление христианства желанным Творцом итогом. Это заявления групп, а не определения всего иудаизма.
+          proof:
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+              title: 'Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations'
+              tier: reference
+              excerpt: Jews and Christians worship the same God
+              accessed: '2026-10-01'
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+              title: 'Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations'
+              tier: reference
+              excerpt: Christian worship is not a viable religious choice for Jews
+              accessed: '2026-10-01'
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/to-do-the-will-of-our-father-in-heaven-toward-a-partnership-between-jews-and-christians
+              title: To Do the Will of Our Father in Heaven — Council of Centers on Jewish-Christian Relations
+              tier: reference
+              excerpt: the emergence of Christianity in human history is neither an accident nor an error, but the willed divine outcome and gift to the nations
+              accessed: '2026-10-01'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
+              title: Mishneh Torah, Kings and Wars 11 (Touger translation) — Sefaria
+              tier: official
+              excerpt: Can there be a greater stumbling block than Christianity? All the prophets spoke of Mashiach as the redeemer of Israel
+              accessed: '2026-09-26'
+            - url: https://www.sefaria.org/api/texts/Mishneh_Torah,_Kings_and_Wars.11?context=0
+              title: Mishneh Torah, Kings and Wars 11 (Touger translation) — Sefaria
+              tier: official
+              excerpt: all the deeds of Jesus of Nazareth and that Ishmaelite who arose after him will only serve to prepare the way for Mashiach's coming
+              accessed: '2026-09-26'
+        answer:
+          points:
+            - 'Основание уважения — в Писании: об Израильтянах Павел говорит, что «в отношении к избранию, возлюбленные Божии ради отцов» (Рим 11:28). Церковь исповедует, что Христос «по плоти» — от Израиля (Рим 9:5).'
+            - 'На Кресте Христос молится: «Отче! прости им, ибо не знают, что делают» (Лк 23:34); апостол Пётр говорит: «вы, как и начальники ваши, сделали это по неведению» (Деян 3:17).'
+            - 'Расхождения называются честно и без вражды: «Дабру эмет» говорит, что христианское богослужение не является приемлемым выбором для иудеев, а христиане знают Бога через Иисуса Христа. Церковь не скрывает своих расхождений, но не делает из них повода для вражды.'
+            - Православная критика направлена на учения и положения, а не на людей и не на народ; обвинения в ритуальных убийствах, по словам энциклопедии, — клевета.
+          proof:
+            - url: https://azbyka.ru/biblia/?Rom.11:28&r
+              title: Рим. 11:28 — Синодальный перевод
+              tier: official
+              excerpt: а в отношении к избранию, возлюбленные Божии ради отцов
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Rom.9:5&r
+              title: Рим. 9:5 — Синодальный перевод
+              tier: official
+              excerpt: их и отцы, и от них Христос по плоти
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Lk.23:34&r
+              title: Лк. 23:34 — Синодальный перевод
+              tier: official
+              excerpt: Отче! прости им, ибо не знают, что делают
+              accessed: '2026-10-01'
+            - url: https://azbyka.ru/biblia/?Act.3:17&r
+              title: Деян. 3:17 — Синодальный перевод
+              tier: official
+              excerpt: вы, как и начальники ваши, сделали это по неведению
+              accessed: '2026-10-01'
+            - url: https://www.ccjr.us/dialogika-resources/documents-and-statements/jewish/dabru-emet
+              title: 'Dabru Emet: A Jewish Statement on Christians and Christianity — Council of Centers on Jewish-Christian Relations'
+              tier: reference
+              excerpt: Christians know and serve God through Jesus Christ and the Christian tradition
+              accessed: '2026-10-01'
+        more:
+          - title: Иудаизм
+            url: https://azbyka.ru/iudaizm
+            kind: encyclopedia
+          - title: Основы социальной концепции РПЦ, II.4
+            url: https://azbyka.ru/otechnik/dokumenty/osnovy-sotsialnoj-kontseptsii-russkoj-pravoslavnoj-tserkvi/
+            kind: church
+          - title: Краткий обзор отношений православия и иудаизма
+            url: https://azbyka.ru/otechnik/Georgij_Maksimov/kratkij-obzor-otnoshenij-pravoslavija-i-iudaizma/
+            kind: author
+            author: священник Георгий Максимов
+        legacy: []
+        status: verified
