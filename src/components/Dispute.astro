@@ -17,7 +17,7 @@ const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(i
   const part = supplied.find(part => part.tradition === id);
   if (!part) return [];
   return [{ id, position: { ...part, topic: dispute.data.topic, status: dispute.data.status },
-    role: id === 'orthodoxy' ? 'Православный ответ' : 'В чём отличие: позиция по этому вопросу' }];
+    role: id === 'orthodoxy' ? 'Православный ответ' : 'Позиция традиции по этому вопросу' }];
 });
 ---
 <aside id={`question-${dispute.id}`} class="dispute" data-dispute hidden={comparison && !initial.visible}

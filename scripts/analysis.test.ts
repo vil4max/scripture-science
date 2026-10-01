@@ -26,7 +26,7 @@ for (const tradition of curated) {
     const cards = [...page.matchAll(/<article class="card"[\s\S]*?<\/article>/g)].map((match) => match[0]);
     assert.equal(cards.length, cardIds.length);
     for (const card of cards) {
-      for (const label of ['Учение Церкви', 'Учение: ', 'Православный ответ']) assert.ok(card.includes(label), label);
+      for (const label of ['Учение Православной Церкви', 'Учение: ', 'Православный ответ']) assert.ok(card.includes(label), label);
     }
   });
 

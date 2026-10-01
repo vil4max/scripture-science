@@ -29,7 +29,7 @@ export interface CatalogEntry {
 }
 
 export const EVIDENCE_ROLE_LABELS = {
-  church: 'Учение Церкви',
+  church: 'Учение Православной Церкви',
   tradition: 'Учение традиции',
   answer: 'Православный ответ',
 } as const;

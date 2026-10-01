@@ -43,7 +43,7 @@ const questions = [
       data-search={[question.title, names.get(question.tradition), TOPIC_TITLES_RU[question.topic as TopicId], question.search].join(' ')}>
       <p class="context">{question.tradition === 'orthodoxy' ? 'Православное основание' : `Православный разбор: ${names.get(question.tradition)}`} · {TOPIC_TITLES_RU[question.topic as TopicId]}</p>
       <h2><a href={question.href} data-carry-selection>{question.title}</a></h2>
-      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Церкви: ' : 'Самоописание традиции: '}</strong>{question.text}</p>
+      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Православной Церкви: ' : 'Самоописание традиции: '}</strong>{question.text}</p>
       {question.pending && <p class="pending">Есть сведения, требующие уточнения; пояснение — в разборе.</p>}
     </li>)}
   </ol>

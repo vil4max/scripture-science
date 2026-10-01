@@ -15,7 +15,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
   <h4>{card.title}</h4>
   {card.status === 'todo' && <details class="pending"><summary>Уточняется: что требует проверки</summary><p>{card.readerNote ?? card.todo}</p></details>}
   <div class="block church">
-    <p class="label">Учение Церкви</p>
+    <p class="label">Учение Православной Церкви</p>
     <p>{card.church.text}</p>
   </div>
   <div class="block tradition" style={`border-left-color:var(${accent})`}>

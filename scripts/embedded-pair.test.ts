@@ -61,7 +61,7 @@ test('comparison keeps theses and links each tradition to its analysis; history 
 test('reading approaches from the pair summary are a Scripture and Tradition card', () => {
   const card = legacyBySlug.get('summary');
   assert.equal(card, legacyBySlug.get('kto-tolkuet-pisanie'));
-  assert.match(analysis, new RegExp(`id="${card}"[^>]*>[\\s\\S]*?Учение Церкви[\\s\\S]*?Учение: Свидетели Иеговы[\\s\\S]*?Православный ответ`));
+  assert.match(analysis, new RegExp(`id="${card}"[^>]*>[\\s\\S]*?Учение Православной Церкви[\\s\\S]*?Учение: Свидетели Иеговы[\\s\\S]*?Православный ответ`));
 });
 
 test('bibliography and correction catalog live on the reference page', () => {
