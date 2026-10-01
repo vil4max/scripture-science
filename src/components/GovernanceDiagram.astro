@@ -19,9 +19,19 @@ const LOCAL_CHURCHES = [
     <p class="principle">Самостоятельное управление Поместных Церквей</p>
     <ol class="churches numbered">{LOCAL_CHURCHES.map((name) => <li>{name}</li>)}</ol>
     <p class="note">Все Поместные Церкви по схеме «<a href="https://azbyka.ru/shemy/pomestnye-pravoslavnye-cerkvi.shtml" target="_blank" rel="noopener noreferrer">Поместные Православные Церкви</a>» («Азбука веры», в порядке схемы): их 16, из них 15 — до 2022 года, когда к ним добавилась Македонская Церковь. Нет общей иерархии административного руководства.</p>
-    <div class="council"><strong>Вселенский Собор</strong><br/>Может действовать от имени всей Церкви — согласно катехизису. Это не постоянно действующий центральный офис.</div>
+    <div class="council">
+      <strong>Вселенский Собор</strong>
+      <p>Собрание пастырей и учителей Церкви «по возможности, со всей вселенной» для утверждения истинного учения и благочиния; согласно катехизису, только он может действовать от имени всей Церкви. Это событие, а не постоянный центральный орган.</p>
+      <ul>
+        <li><b>Почему «вселенский».</b> Название — от «вселенная»: на нём присутствуют главы Поместных Церквей или их представители и епископы, представляющие полноту Церкви, а его определения обязательны для всех Поместных Церквей. Собор, решающий вопрос одной Церкви, называется Поместным.</li>
+        <li><b>Как принимается решение.</b> Не по большинству голосов, а по Писанию и Преданию: «угодно Святому Духу и нам» (Деян 15:28); образец — Иерусалимский Собор апостолов (Деян 15).</li>
+        <li><b>Что делает Собор вселенским.</b> Не только созыв: решения должны быть приняты всеми Поместными Церквами с течением времени (рецепция). Соборы, принявшие решения против Евангелия и Предания, Церковь отвергла.</li>
+        <li><b>Их было семь.</b> Никейский (325), Константинопольский (381), Эфесский (431), Халкидонский (451), Константинопольский II (553), Константинопольский III (680), Никейский II (787).</li>
+      </ul>
+      <p class="council-sources">Источники: <a href="https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12" target="_blank" rel="noopener noreferrer">свт. Филарет, Пространный катехизис, §§69–72</a>; <a href="https://azbyka.ru/vselenskie-sobory" target="_blank" rel="noopener noreferrer">«Вселенские Соборы», «Азбука веры»</a>.</p>
+    </div>
   </> : <>
-    <div class="council"><strong>Руководящий совет</strong><br/>Руководство деятельностью во всём мире</div>
+    <div class="council plain"><strong>Руководящий совет</strong><br/>Руководство деятельностью во всём мире</div>
     <p class="connector" aria-hidden="true">↓</p>
     <ul class="churches">{[1,2,3].map(() => <li><strong>Собрание</strong><br/>Совет старейшин</li>)}</ul>
     <p class="note">Показаны всемирное руководство и местные собрания; промежуточные уровни опущены.</p>
@@ -36,6 +46,12 @@ const LOCAL_CHURCHES = [
   .churches.numbered li { counter-increment: church; padding: 12px 10px; font-size: 15px; }
   .churches.numbered li::before { content: counter(church) ". "; color: var(--muted); }
   .churches li { flex: 1 1 160px; padding: 16px; border: 1px solid var(--line); border-top: 3px solid var(--focus); border-radius: 6px; text-align: center; font-size: 16px; }
-  .council { text-align: center; background: var(--bg); padding: 16px; border: 1px dashed var(--muted); border-radius: 6px; margin-top: 24px; font-size: 16px; }
+  .council { background: var(--bg); padding: 16px 20px; border: 1px dashed var(--muted); border-radius: 6px; margin-top: 24px; font-size: 16px; }
+  .council > strong { display: block; text-align: center; font-size: 18px; }
+  .council p { margin: 8px 0; }
+  .council ul { margin: 10px 0 0; padding-left: 20px; display: grid; gap: 8px; }
+  .council.plain { text-align: center; }
+  .council.plain > strong { display: inline; font-size: inherit; }
+  .council-sources { font-size: 14px; color: var(--muted); }
   .connector { text-align: center; font-size: 28px; margin: 4px; } .note { font-size: 14px; color: var(--muted); }
 </style>
