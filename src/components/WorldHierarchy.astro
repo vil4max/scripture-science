@@ -4,6 +4,19 @@ import { hierarchySlices, point, ringPath } from '../lib/worldHierarchy';
 
 const { parents, children } = hierarchySlices(data.groups, data.branches);
 const percent = (n: number) => `${n.toFixed(1).replace('.', ',')} %`;
+// Russian short counts: «2,67 млрд», «912 млн», «15,8 млн».
+const count = (n: number) => n >= 1e9
+  ? `${(n / 1e9).toFixed(2).replace('.', ',')} млрд`
+  : `${(n / 1e6).toFixed(n >= 1e8 ? 0 : 1).replace('.', ',')} млн`;
+const worldShare = (n: number) => (n / data.population) * 100;
+const countById = new Map([...data.groups, ...data.branches].map((item) => [item.id, item.count]));
+const countOf = (id: string) => countById.get(id) ?? 0;
+// The table states each figure against the world population; Christian
+// branch estimates overlap (data.method), so they are listed, not summed.
+const rows = [...data.groups].sort((a, b) => b.count - a.count).map((group) => ({
+  ...group,
+  branches: group.id === 'christians' ? [...data.branches].sort((a, b) => b.count - a.count) : [],
+}));
 const christianShare = percent(parents.find((group) => group.id === 'christians')!.share);
 const labels = [
   ...children.map((child) => ({ ...child, layer: 'branch' as const })),
@@ -29,9 +42,8 @@ for (const right of [true, false]) {
 }
 const all = [...parents, ...children.map((child) => ({ ...child, share: child.worldShare }))];
 const description = (id: string) => {
-  const leaf = children.find((child) => child.id === id);
   const group = all.find((item) => item.id === id)!;
-  return `${group.label}: ${leaf ? 'около ' : ''}${percent(group.share)} населения мира${leaf ? `; ${percent(leaf.share)} христиан` : ''}. 2026 год, приблизительная оценка.`;
+  return `${group.label}: около ${count(countOf(id))}, ${percent(worldShare(countOf(id)))} населения мира. 2026 год, приблизительная оценка.`;
 };
 ---
 <section class="world-hierarchy" aria-labelledby="hierarchy-title">
@@ -42,7 +54,7 @@ const description = (id: string) => {
       <svg viewBox="-480 -320 960 640" role="group" aria-label="Религии мира и состав христианства, приблизительная оценка на 2026 год">
         {parents.map((group) => <path d={ringPath(group.start, group.end, 68, 178)} fill={`var(${group.color})`} data-hierarchy-id={group.id} data-description={description(group.id)} role="button" tabindex="0" aria-pressed="false" aria-label={description(group.id)}><title>{description(group.id)}</title></path>)}
         {children.map((group) => <path d={ringPath(group.start, group.end, 184, 252)} fill={`var(${group.color})`} data-hierarchy-id={group.id} data-description={description(group.id)} role="button" tabindex="0" aria-pressed="false" aria-label={description(group.id)}><title>{description(group.id)}</title></path>)}
-        <g class="centre" aria-hidden="true"><text y="-3">2026</text><text y="23" class="small">весь мир</text></g>
+        <g class="centre" aria-hidden="true"><text y="-3">{count(data.population)}</text><text y="21" class="small">население мира</text><text y="41" class="small">2026</text></g>
         <text x="90" y="-70" class="parent-label" text-anchor="middle" aria-hidden="true">Христиане<tspan x="90" dy="18">≈ {christianShare}</tspan></text>
         {labels.map((label) => {
           const outerRadius = label.layer === 'branch' ? 258 : 184;
@@ -56,12 +68,24 @@ const description = (id: string) => {
             {!label.inside && <polyline points={`${x},${y} ${label.right ? 278 : -278},${label.y} ${anchor},${label.y}`} aria-hidden="true"/>}
             <text class:list={{ inset: label.inside, orthodox: label.id === 'orthodox' }} x={textX} y={textY} text-anchor={label.inside ? 'middle' : label.right ? 'start' : 'end'} data-hierarchy-id={label.id} data-description={description(label.id)}>
               {name.map((line, i) => <tspan x={textX} dy={i ? 18 : 0}>{line}</tspan>)}
-              <tspan class="value" x={textX} dy="21">≈ {percent(label.worldShare)}</tspan>
+              <tspan class="value" x={textX} dy="21">≈ {percent(worldShare(countOf(label.id)))}{!label.inside && ` · ${count(countOf(label.id))}`}</tspan>
             </text>
           </g>;
         })}
       </svg>
     </div>
+    <table class="counts">
+      <caption>Численность и доля населения мира · 2026, приблизительная оценка</caption>
+      <thead><tr><th scope="col">Группа</th><th scope="col">Численность</th><th scope="col">Доля населения мира</th></tr></thead>
+      <tbody>
+        {rows.map((row) => <>
+          <tr><th scope="row">{row.label}</th><td>≈ {count(row.count)}</td><td>{percent(worldShare(row.count))}</td></tr>
+          {row.branches.map((branch) => <tr class="branch"><th scope="row">{branch.label}</th><td>≈ {count(branch.count)}</td><td>{percent(worldShare(branch.count))}</td></tr>)}
+        </>)}
+      </tbody>
+      <tfoot><tr><th scope="row">Население мира</th><td>≈ {count(data.population)}</td><td>100 %</td></tr></tfoot>
+    </table>
+    <p class="note">Оценки христианских ветвей частично пересекаются: часть людей учтена в нескольких ветвях, поэтому их сумма больше общего числа христиан. На диаграмме ветви показаны в пропорции.</p>
     <p class="selection" aria-live="polite" aria-atomic="true">Христиане — около {christianShare} населения мира. Внешние сектора показывают приблизительный состав христианства.</p>
 
   </figure>
@@ -94,10 +118,19 @@ const description = (id: string) => {
   text[aria-pressed="true"] { font-weight: 700; text-decoration: underline; }
   text:focus-visible { outline: 2px solid var(--focus); }
   .value { font-size: 16px; fill: var(--muted); } polyline { fill: none; stroke: var(--muted); stroke-width: 1; pointer-events: none; }
-  .centre { text-anchor: middle; } .centre text { font-size: 28px; font-weight: 700; } .centre .small { font-size: 16px; font-weight: 400; }
+  .centre { text-anchor: middle; } .centre text { font-size: 22px; font-weight: 700; } .centre .small { font-size: 16px; font-weight: 400; }
   .inset { font-size: 16px; font-weight: 700; }
   .inset, .inset .value, .parent-label { fill: white; stroke: #18202c; stroke-width: 2.5px; paint-order: stroke fill; stroke-linejoin: round; }
   .inset.orthodox, .inset.orthodox .value { font-size: 13px; }
   .parent-label { fill: white; font-size: 14px; font-weight: 700; pointer-events: none; }
+  .counts { width: 100%; max-width: 640px; margin: 24px 0 8px; border-collapse: collapse; font-size: 16px; }
+  .counts caption { text-align: left; font-weight: 700; margin-bottom: 8px; }
+  .counts th, .counts td { padding: 6px 10px; border-bottom: 1px solid var(--line); text-align: right; font-weight: 400; }
+  .counts th[scope="row"], .counts thead th:first-child { text-align: left; }
+  .counts thead th { color: var(--muted); font-size: 14px; }
+  .counts .branch th { padding-left: 28px; color: var(--muted); }
+  .counts .branch td { color: var(--muted); }
+  .counts tfoot th, .counts tfoot td { font-weight: 700; border-bottom: none; }
+  .note { font-size: 14px; color: var(--muted); }
   .selection { min-height: 1.6em; padding: 12px 16px; background: var(--surface); border-left: 3px solid var(--focus); }
 </style>
