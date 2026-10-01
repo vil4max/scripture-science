@@ -47,17 +47,20 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   </div>
   <p class="split">Как оно делится по религиям — от всего населения мира (100 %):</p>
 
-  <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; числа — в таблице ниже">
-    {stack.map((group) => <span class="segment" style={`flex-grow:${group.count};background:var(${group.color})`} title={describe(group.label, group.count)} data-hierarchy-id={group.id}></span>)}
+  <div class="bracket-row" aria-hidden="true">
+    <span class="bracket" style={`width:${christianWidth}%`}>Христиане ≈ {count(christians.count)} · {percent(christianWidth)}</span>
   </div>
-  <div class="zoom" style={`--christian-width:${christianWidth}%;--christian-color:var(${christians.color})`} aria-hidden="true"></div>
-  <div class="world-bar confessions" role="img" aria-label="Христиане по конфессиям: православные, католики, независимые церкви, протестанты, вне церковных объединений; числа — в таблице ниже">
-    {confessions.map((branch) => <span class="segment" style={`flex-grow:${branch.count};background:var(${branch.color})`} title={describe(branch.label, branch.count)} data-hierarchy-id={branch.id}></span>)}
+  <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; христиане разделены по конфессиям; числа — в таблице ниже">
+    {stack.map((group) => group.id === 'christians'
+      ? <span class="segment christian-group" style={`flex-grow:${group.count}`} data-hierarchy-id={group.id}>
+          {confessions.map((branch) => <span class="slice" style={`flex-grow:${branch.count};background:var(${branch.color})`} title={`${describe(branch.label, branch.count)}; внутри христиан — в пропорции ветвей`} data-hierarchy-id={branch.id}></span>)}
+        </span>
+      : <span class="segment" style={`flex-grow:${group.count};background:var(${group.color})`} title={describe(group.label, group.count)} data-hierarchy-id={group.id}></span>)}
   </div>
-  <div class="confession-labels" aria-hidden="true">
-    {confessions.map((branch) => <span style={`flex-grow:${branch.count}`}>{branch.share >= 8 && <><strong>{branch.label}</strong> ≈ {count(branch.count)}</>}</span>)}
-  </div>
-  <p class="confessions-title">Нижняя полоса — христиане по конфессиям, в пропорции ветвей (их оценки частично пересекаются).</p>
+  <ul class="legend" aria-label="Христиане по конфессиям">
+    {confessions.map((branch) => <li><span class="chip" style={`background:var(${branch.color})`} aria-hidden="true"></span>{branch.label} <span class="legend-count">≈ {count(branch.count)}</span></li>)}
+  </ul>
+  <p class="confessions-title">Христианский сегмент разделён по конфессиям в пропорции ветвей: их оценки частично пересекаются. Остальные цвета — в таблице.</p>
 
   <table class="counts">
     <caption class="visually-hidden">Численность последователей религий и их доля населения мира, 2026 год</caption>
@@ -91,11 +94,16 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   .figure-label { margin: 0; color: var(--muted); font-size: 16px; }
   .split { margin: 0 0 10px; }
   .world-bar { display: flex; gap: 2px; height: 28px; }
-  .zoom { height: 32px; margin: 2px 0; clip-path: polygon(0 0, var(--christian-width) 0, 100% 100%, 0 100%); background: color-mix(in srgb, var(--christian-color) 45%, transparent); }
   .confessions-title { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
-  .confession-labels { display: flex; gap: 2px; margin: 6px 0 8px; font-size: 14px; line-height: 1.3; color: var(--muted); }
-  .confession-labels span { flex-basis: 0; min-width: 0; }
-  .confession-labels strong { display: block; color: var(--ink); font-weight: 700; }
+  .bracket-row { height: 30px; position: relative; }
+  /* A line over the Christian segment, labelled, marks the group the slices belong to. */
+  .bracket { position: absolute; left: 0; bottom: 4px; box-sizing: border-box; padding-bottom: 3px; border-bottom: 2px solid var(--muted); font-size: 14px; font-weight: 700; white-space: nowrap; }
+  .christian-group { display: flex; gap: 1px; background: var(--bg); }
+  .slice { flex-basis: 0; min-width: 2px; }
+  .christian-group .slice:first-child { border-radius: 4px 0 0 4px; }
+  .legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 10px 0 6px; padding: 0; list-style: none; font-size: 14px; }
+  .legend .chip { margin-right: 6px; }
+  .legend-count { color: var(--muted); }
   .segment { min-width: 2px; flex-basis: 0; }
   .segment:first-child { border-radius: 4px 0 0 4px; }
   .segment:last-child { border-radius: 0 4px 4px 0; }
