@@ -30,7 +30,7 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
   if (head) {
     let slots = ['orthodoxy', 'catholicism', 'jw'];
     const selects = [...head.querySelectorAll<HTMLSelectElement>('[data-slot]')];
-    const publishHeight = () => document.documentElement.style.setProperty('--comparison-header-h', `${head.offsetHeight}px`);
+    const publishHeight = () => document.documentElement.style.setProperty('--comparison-header-h', `${getComputedStyle(head).position === 'sticky' ? head.offsetHeight : 0}px`);
     new ResizeObserver(publishHeight).observe(head);
     publishHeight();
     onSelection((ids) => {
@@ -73,5 +73,5 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
   .fixed { display: flex; align-items: center; padding: 6px 0; font-size: 18px; min-height: 36px; }
   select { width: 100%; min-width: 0; padding: 6px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
   select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-  @media (max-width: 600px) { .colhead { position: static; } .slots { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
+  @media (max-width: 760px) { .colhead { position: static; } .slots { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
 </style>

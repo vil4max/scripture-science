@@ -144,4 +144,12 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
   .counts tfoot th, .counts tfoot td { font-weight: 700; border-bottom: none; }
   .note { max-width: 90ch; font-size: 14px; color: var(--muted); }
   .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  @media (max-width: 760px) {
+    .bar-col { display: none; }
+    .counts th, .counts td { padding: 8px 4px; }
+    .counts th { white-space: normal; overflow-wrap: anywhere; }
+    .counts .branch th { padding-left: 16px; }
+    .counts thead th:last-child { max-width: 80px; }
+  }
 </style>

@@ -226,7 +226,12 @@ const family = getFamilyByTradition(tradition.id);
       margin-left: 0;
     }
   }
-
+  @media (max-width: 760px) {
+    .card { padding: 16px; }
+    .card-body { grid-template-columns: minmax(0, 1fr); }
+    .card-title { flex-wrap: wrap; }
+    .add { min-height: 44px; white-space: normal; }
+  }
 </style>
 
 <script>

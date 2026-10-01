@@ -1,6 +1,6 @@
 # Reading and evidence improvements
 
-State: in progress
+State: implemented and verified
 Parallelism: none
 
 ## Authorized scope
@@ -43,7 +43,8 @@ configuration changes are authorized.
   viewpoint. Other traditions' self-descriptions and Orthodox assessments
   remain visually and semantically distinguishable.
 - Question search reaches existing cards and handles empty/no-match queries.
-- Local navigation remains usable at 1280 and 1440 px in both themes.
+- Local navigation remains usable at 1280 and 1440 px in both themes and at
+  375, 390 and 430 px for iPhone reading.
 - Comparison choices and slot order survive reading, reload and return.
 - Source filters apply to the same proof usage: a topic, tradition and role
   cannot accidentally match unrelated usages of the same URL.
@@ -112,3 +113,32 @@ tests, 18 pages and zero Astro diagnostics. Browser checks confirmed the guide
 links, open dispute and Russian pending notes. Iteration 3: 35df129, pushed.
 The first 390 px inspection demonstrated that the desktop local contents
 compresses the article; iteration 5 addresses this measured failure.
+
+### Iteration 5 — iPhone reading
+
+Narrow screens use a collapsible site menu and a sticky, collapsible analysis
+contents list. Question jumps close the list and keep the heading below it.
+Comparison topics and facts stack in the selected order, with Orthodoxy first
+and each tradition named locally. The tall comparison selector stops sticking
+on phones. Search controls, source disclosures and question navigation have
+larger touch areas. Reference layouts, country details, Bible guidance and
+the timeline fit a narrow reading column. The population table wraps labels;
+its redundant inline bar column is hidden on phones, with all counts and
+shares retained alongside the world chart.
+
+Validation: Node.js 26 npm run verify passed 150 Node tests, two Python tests,
+18 pages and zero Astro errors, warnings or hints. Internal links, anchors and
+duplicate IDs pass; migration preserves 1028 source nodes and 14 corrections.
+Browser viewport checks at 375, 390 and 430 px cover both themes, menu,
+contents jumps, question text, source filtering/disclosure, search, comparison
+order and reload persistence, population table, country selection, Bible and
+history. The inspected pages have no horizontal overflow. Desktop regression
+checks at 1280 and 1440 px preserve the sidebar and local contents. Physical
+iPhone/Safari testing was not run; the available browser provided viewport
+simulation. No device or Safari-specific result is implied.
+
+Final Sources HTML: 5,075,730 bytes (489,379 bytes gzip), compared with the
+original incomplete baseline of 1,730,744 bytes and the complete iteration-1
+catalogue of 5,802,055 bytes. Iteration 4: 37af71f, pushed; GitHub Pages reports
+successful deployment for each of iterations 1–4. Iteration 5 uses the same
+authorized commit/push and deployment workflow.

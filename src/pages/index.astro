@@ -57,4 +57,10 @@ const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'ortho
   .foundation-intro { margin: 0 0 16px; color: var(--muted); }
   #world, #geography { min-width: 0; scroll-margin-top: 24px; }
   #geography { border-top: 1px solid var(--line); padding-top: 32px; }
+
+  @media (max-width: 760px) {
+    .entry-actions { grid-template-columns: minmax(0, 1fr); }
+    .entry-actions a { padding: 14px 16px; }
+    #foundation { padding: 18px 16px; }
+  }
 </style>

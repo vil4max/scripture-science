@@ -29,9 +29,9 @@ direction. Then return to this repository.
 - Skill profile: core
 - Marker: `.agents/project-context.yaml` (local)
 - Runtime: none; Node.js 26 with npm
-- Device scope: desktop only (owner, 2026-09-26, `docs/DECISIONS.md`
-  "Desktop-only scope"). No 375px check and no separate mobile layout in a
-  task's acceptance criteria going forward.
+- Device scope: desktop and iPhone reading (owner, 2026-10-01,
+  `docs/DECISIONS.md` "Confessional reading and iPhone scope"). The later
+  request supersedes the historical desktop-only reading boundary.
 - Product: a Russian-language static site — one picture of the religious world
   (a continuous Orthodox Church timeline and comparisons grounded in Orthodox
   teaching, with separately attributed statements from other traditions), with

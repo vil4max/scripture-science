@@ -83,7 +83,7 @@ const jwIndex = traditions.findIndex((t) => t.id === 'jw');
   .topic-group { margin: 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 26px; scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px); }
 
   .topic[hidden] { display: none; }
-  .topic { scroll-margin-top: calc(var(--comparison-header-h, var(--selection-bar-h, 0px)) + 16px); }
+  .topic { scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px); }
   .layout {
     display: grid;
     gap: 32px;
@@ -97,8 +97,7 @@ const jwIndex = traditions.findIndex((t) => t.id === 'jw');
   .topic h4 {
     font-size: 21px;
     margin: 0 0 16px;
-    /* Clears the pinned selection bar when a sidebar link jumps here. */
-    scroll-margin-top: calc(var(--selection-bar-h, 0px) + 16px);
+    scroll-margin-top: calc(var(--comparison-header-h, 0px) + 16px);
   }
 
   .grid {
@@ -180,6 +179,13 @@ const jwIndex = traditions.findIndex((t) => t.id === 'jw');
     .grid.cols .block {
       grid-template-columns: minmax(0, 1fr);
     }
+  }
+
+  @media (max-width: 760px) {
+    .grid.cols { display: flex; flex-direction: column; }
+    .grid.cols .block { padding: 18px 16px; min-width: 0; overflow-wrap: anywhere; }
+    .grid.cols .block:not([data-foundation-column]) { border-left: 0; border-top: 1px solid var(--line); }
+    .grid.cols .who { display: flex; }
   }
 </style>
 

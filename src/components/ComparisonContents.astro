@@ -30,4 +30,10 @@ import { TOPIC_GROUPS, TOPIC_TITLES_RU } from '../lib/rules';
   .topic-links li::marker { color: var(--group-accent); }
   .topic-links a { color: var(--muted); text-decoration-color: color-mix(in srgb, var(--muted) 55%, transparent); text-underline-offset: 3px; }
   .topic-links a:hover, .topic-links a:focus-visible { color: var(--focus); text-decoration-color: currentColor; }
+
+  @media (max-width: 760px) {
+    .groups { grid-template-columns: minmax(0, 1fr); }
+    .topic-links { font-size: 16px; }
+    .topic-links a { display: inline-block; padding: 6px 0; }
+  }
 </style>

@@ -38,7 +38,8 @@ const rowLabel: Record<(typeof rows)[number], string> = {
         {traditions.map((t) => {
           const { since, scripture, adherents, self_view } = t.data;
           return (
-            <div class="cell" data-trad={t.id} data-foundation-column={t.id === 'orthodoxy' ? '' : undefined} hidden={!DEFAULT_SELECTION.includes(t.id)} style={`grid-column:${DEFAULT_SELECTION.indexOf(t.id)+1};grid-row:2`}>
+            <div class="cell" data-trad={t.id} data-foundation-column={t.id === 'orthodoxy' ? '' : undefined} hidden={!DEFAULT_SELECTION.includes(t.id)} style={`order:${DEFAULT_SELECTION.indexOf(t.id)};grid-column:${DEFAULT_SELECTION.indexOf(t.id)+1};grid-row:2`}>
+              <p class="mobile-name">{t.data.name}</p>
               {row === 'since' && (
                 <>
                   {sinceLines(since.label).map((line) => (
@@ -98,6 +99,7 @@ const rowLabel: Record<(typeof rows)[number], string> = {
       for (const cell of root.querySelectorAll<HTMLElement>('.cell')) {
         const index = slots.indexOf(cell.dataset.trad ?? '');
         cell.hidden = index === -1;
+        cell.style.order = String(index);
         cell.style.gridColumn = String(index + 1);
         cell.style.gridRow = '2';
       }
@@ -221,5 +223,12 @@ const rowLabel: Record<(typeof rows)[number], string> = {
     font-size: 14px;
     color: var(--focus);
     white-space: nowrap;
+  }
+
+  .mobile-name { display: none; }
+  @media (max-width: 760px) {
+    .frow { display: flex; flex-direction: column; }
+    .mobile-name { display: block; font-weight: 700; margin: 0 0 10px; }
+    .cell:not([data-foundation-column]) { border-left: 0; border-top: 1px solid var(--line); }
   }
 </style>

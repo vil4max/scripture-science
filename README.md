@@ -30,8 +30,9 @@ npm run verify    # Build, type checks, tests, local links and source fidelity
 - `source/`: preserved original document; migration data stays reproducible.
 - `docs/research/`: verification records; `docs/ROADMAP.md`: current status.
 
-Site text is Russian; code and technical documentation are English. Desktop
-layouts are the supported device scope.
+Site text is Russian; code and technical documentation are English. Reading
+layouts support desktop and narrow iPhone viewports, with a collapsible menu
+and contents list and vertically stacked comparisons on small screens.
 
 ## Sources
 

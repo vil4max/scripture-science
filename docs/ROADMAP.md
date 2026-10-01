@@ -7,11 +7,26 @@ task's state.
 
 ## In progress
 
-- **Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`): owner authorized sequential implementation, verification, commits and pushes on 2026-10-01. Orthodox teaching remains the foundation; question search and reading navigation are implemented and verified (148 Node tests, 17 pages); source discovery and compact entry points also pass verification (150 Node tests); the confessional reading guide and ten readable pending notes also pass (18 pages). The owner-requested iPhone iteration is in progress.
-
-- **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01 and included in the owner-authorized push. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
+No implementation iteration is currently open. Remaining evidence and
+independent editorial review are listed below.
 
 ## Current baseline
+
+**Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`,
+2026-10-01): all five owner-authorized iterations are implemented and verified.
+The site explicitly keeps Orthodox teaching as its foundation, adds 207
+searchable question links and persistent reading navigation, a filtered source
+catalogue with exact usage attribution, a reading guide and ten readable
+pending-verification notes. Desktop and iPhone layouts retain the same content,
+URLs and comparison choices. Node.js 26 `npm run verify`: 150 Node tests, two
+Python tests, 18 pages and zero Astro diagnostics; links and migration fidelity
+pass. Browser checks cover 375, 390, 430, 1280 and 1440 px and both themes;
+physical iPhone/Safari testing is not claimed. Sources HTML is 5,075,730 bytes
+(489,379 gzip), retaining all evidence. Iterations 1–4 are committed, pushed
+and successfully deployed; the iPhone iteration follows the same authorized
+publication workflow.
+
+**M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01 and included in the owner-authorized push. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
 
 **Repository audit and conservative cleanup** (2026-10-01): implemented and verified; delivery authorized by the owner on 2026-10-01. The source catalogue includes evidence from all seven detailed analyses, keeps passage-level claim attribution and separates further reading and analysis-card coverage. Exact duplicates merge only in presentation; inactive renderers and the unused MDX integration are removed. Node.js 26 and the existing YAML parser are declared directly. `npm run verify` passes 145 Node tests and two Python tests, builds 16 pages, reports no Astro errors, warnings or hints, and checks internal links, anchors and duplicate IDs. Migration remains reproducible: 1028 source text nodes and 14 historical corrections. Desktop checks at 1280 and 1440 px cover both themes, comparison selection and reload persistence, source disclosures and legacy redirects. Existing routes and anchors, source data, images and research records remain intact. Sources HTML grew from 1,730,744 to 5,802,055 bytes (515,149 bytes with local gzip compression); complete evidence and attribution take priority over size. Sequential commits and pushes are now authorized in `docs/tasks/site-reading-improvements.md`.
 

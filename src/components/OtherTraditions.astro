@@ -19,4 +19,6 @@ const topCountries = (group: string) => {
 </section>
 <style>
   #other-traditions { scroll-margin-top: 100px; } .other-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; } article { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; } h3 { margin: 0; font-size: 24px; } p { font-size: 17px; } .origin,.geography { color: var(--muted); font-size: 15px; } .geography { border-top: 1px solid var(--line); padding-top: 12px; }
+
+  @media (max-width: 760px) { .other-grid { grid-template-columns: minmax(0, 1fr); } article { padding: 18px; } }
 </style>

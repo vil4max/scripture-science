@@ -52,4 +52,9 @@ const LOCAL_CHURCHES = [
   .council.plain > strong { display: inline; font-size: inherit; }
   .council-sources { font-size: 14px; color: var(--muted); }
   .connector { text-align: center; font-size: 28px; margin: 4px; } .note { font-size: 14px; color: var(--muted); }
+
+  @media (max-width: 760px) {
+    .governance { padding: 16px; }
+    .churches.numbered { grid-template-columns: minmax(0, 1fr); }
+  }
 </style>

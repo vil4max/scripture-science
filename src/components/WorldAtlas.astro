@@ -110,4 +110,6 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
   #country-detail :global(.bar-value) { text-align: right; font-variant-numeric: tabular-nums; }
   #country-detail :global(.bar-fill) { display: block; height: 100%; }
   #country-detail :global(.largest) { font-weight: 700; }
+
+  @media (max-width: 760px) { #country-detail :global(dl > div) { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
 </style>

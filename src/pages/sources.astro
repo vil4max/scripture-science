@@ -474,4 +474,12 @@ const description = 'Значения слов, пояснения к данны
     color: var(--muted);
     font-style: italic;
   }
+
+  @media (max-width: 760px) {
+    .page { padding: 28px 16px 48px; grid-template-columns: minmax(0, 1fr); gap: 32px; overflow-wrap: anywhere; }
+    .reference-sections { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+    table.coverage { font-size: 14px; }
+    table.coverage th, table.coverage td { padding: 8px 4px; }
+    .reference-sections a { display: inline-block; padding: 5px 0; }
+  }
 </style>

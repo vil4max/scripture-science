@@ -1,9 +1,8 @@
 ---
 // Sitewide sidebar (docs/tasks/site-m13-sidebar-sections.md): the site's
 // sections as pages, the current one highlighted, and the theme switch.
-// Below 1000px it becomes a top bar with the same links in a row; nothing
-// folds or nests (owner, 2026-09-26: «не усложняй вложением»); the religions
-// group is a second flat list under a small label.
+// Desktop keeps the flat sidebar. On narrow screens, the same links use
+// an expandable menu (owner requested iPhone reading, 2026-10-01).
 import ThemeSwitch from './ThemeSwitch.astro';
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
@@ -55,7 +54,8 @@ const isCurrent = (path: string) =>
   <div class="side-inner">
     <a class="search-link" href={withBase('search/')} data-carry-selection>Найти вопрос</a>
     <a class="brand" href={withBase()}>Православный взгляд на религии мира</a>
-    <div class="site-nav" role="navigation" aria-label="Разделы сайта">
+    <button class="menu-toggle" type="button" aria-controls="site-sections site-religions site-reference site-theme" aria-expanded="true" hidden>Меню</button>
+    <div id="site-sections" class="site-nav" role="navigation" aria-label="Разделы сайта">
       <ul>
         {
           sections.map((s) => (
@@ -68,7 +68,7 @@ const isCurrent = (path: string) =>
         }
       </ul>
     </div>
-    <div class="religions site-nav" role="navigation" aria-label="Религии">
+    <div id="site-religions" class="religions site-nav" role="navigation" aria-label="Религии">
       <p class="group-label">Религии</p>
       <ul>
         {
@@ -83,7 +83,7 @@ const isCurrent = (path: string) =>
         }
       </ul>
     </div>
-    <div class="reference site-nav" role="navigation" aria-label="Термины и источники">
+    <div id="site-reference" class="reference site-nav" role="navigation" aria-label="Термины и источники">
       <ul>
         {
           reference.map((s) => (
@@ -96,7 +96,7 @@ const isCurrent = (path: string) =>
         }
       </ul>
     </div>
-    <div class="theme">
+    <div id="site-theme" class="theme">
       <ThemeSwitch />
     </div>
   </div>
@@ -105,6 +105,20 @@ const isCurrent = (path: string) =>
 <script>
   import { getSelection } from '../lib/selection-client';
   getSelection();
+  const sidebar = document.querySelector<HTMLElement>('.site-side')!;
+  const toggle = sidebar.querySelector<HTMLButtonElement>('.menu-toggle')!;
+  const narrow = matchMedia('(max-width: 760px)');
+  const setOpen = (open: boolean) => {
+    sidebar.dataset.menuOpen = String(open);
+    toggle.setAttribute('aria-expanded', String(open));
+  };
+  const resizeMenu = () => { toggle.hidden = !narrow.matches; setOpen(!narrow.matches); };
+  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
+  sidebar.addEventListener('keydown', (event) => {
+    if (event.key === 'Escape' && narrow.matches) { setOpen(false); toggle.focus(); }
+  });
+  narrow.addEventListener('change', resizeMenu);
+  resizeMenu();
 </script>
 
 <style>
@@ -266,5 +280,19 @@ const isCurrent = (path: string) =>
     .group-label {
       display: none;
     }
+  }
+
+  @media (max-width: 760px) {
+    .side-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 16px; gap: 10px; }
+    .brand { grid-column: 1 / -1; grid-row: 1; font-size: 20px; }
+    .search-link { grid-column: 1; grid-row: 2; min-height: 44px; display: flex; align-items: center; }
+    .menu-toggle { grid-column: 2; grid-row: 2; min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 8px; font: inherit; color: var(--ink); background: var(--bg); }
+    .menu-toggle[hidden] { display: none; }
+    .site-nav, .theme { grid-column: 1 / -1; }
+    .site-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
+    .site-nav a { min-height: 44px; display: flex; align-items: center; }
+    .religions, .reference { border-left: 0; border-top: 1px solid var(--line); padding: 8px 0 0; }
+    .site-side[data-menu-open='false'] .site-nav, .site-side[data-menu-open='false'] .theme { display: none; }
+    .theme :global(button) { min-height: 44px; }
   }
 </style>

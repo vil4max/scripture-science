@@ -196,6 +196,11 @@ const pageContent = await Astro.slots.render('default');
     outline-offset: 2px;
   }
 
+  @media (max-width: 760px) {
+    main summary { min-height: 44px; padding-block: 10px; font-size: 16px; }
+    main select, main input { min-height: 44px; font-size: 16px; }
+  }
+
   @media (prefers-reduced-motion: no-preference) {
     html {
       scroll-behavior: smooth;

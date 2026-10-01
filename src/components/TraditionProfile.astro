@@ -110,6 +110,8 @@ const showsJwNote = tradition.id === 'jw';
     <p class="analysis-lead">{curated.lead} <a href={withBase('reading/')} data-carry-selection>Как различать учение, объяснение автора и оценку</a>.</p>
     <p class="analysis-authority">{curated.authorityNote}{tradition.id === 'jw' && <sup><a href={`#${JW_NOTE_ID}`}>*</a></sup>}</p>
     <div class="reading-layout">
+    <details class="reading-toc" open>
+    <summary>Содержание разбора</summary>
     <nav class="analysis-contents" aria-label="Содержание разбора">
       <p class="contents-label">В этом разборе</p>
       <p class="reading-progress" aria-live="off">Вопросов: {cards.length}</p>
@@ -120,6 +122,7 @@ const showsJwNote = tradition.id === 'jw';
         </li>)}
       </ol>
     </nav>
+    </details>
     <div class="reading-body">
     {curated.groups.map((group) => <section class="analysis-group" id={group.id}>
       <h3>{group.title}</h3>
@@ -166,7 +169,8 @@ const showsJwNote = tradition.id === 'jw';
   .positions.curated { max-width: none; }
   .reading-layout { display: grid; grid-template-columns: minmax(0, 1fr) 220px; gap: 32px; align-items: start; }
   .reading-body { grid-column: 1; grid-row: 1; min-width: 0; }
-  .analysis-contents { grid-column: 2; grid-row: 1; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; border-left: 1px solid var(--line); padding-left: 16px; font-size: 14px; }
+  .reading-toc { grid-column: 2; grid-row: 1; position: sticky; top: 16px; max-height: calc(100vh - 32px); overflow-y: auto; border-left: 1px solid var(--line); padding-left: 16px; font-size: 14px; }
+  .reading-toc > summary { display: none; }
   .analysis-contents ol { margin: 0; padding: 0; list-style: none; display: grid; gap: 18px; }
   .contents-label { font-weight: 700; margin: 0; }
   .reading-progress { color: var(--muted); margin: 4px 0 16px; font-size: 13px; }
@@ -251,6 +255,17 @@ const showsJwNote = tradition.id === 'jw';
   dd p {
     margin: 0;
   }
+
+  @media (max-width: 760px) {
+    .reading-layout { grid-template-columns: minmax(0, 1fr); gap: 20px; }
+    .reading-body { grid-column: 1; grid-row: 2; }
+    .reading-toc { grid-column: 1; grid-row: 1; position: sticky; top: 0; z-index: 12; max-height: 60vh; max-height: 60dvh; padding: 0; background: var(--surface); border: 1px solid var(--line); border-radius: 6px; }
+    .reading-toc > summary { display: list-item; cursor: pointer; padding: 12px 16px; min-height: 48px; font-size: 16px; font-weight: 700; color: var(--focus); }
+    .analysis-contents { padding: 0 16px 16px; }
+    .analysis-contents a { padding: 8px 0; min-height: 40px; font-size: 16px; }
+    .analysis-group, .reading-body :global(.card) { scroll-margin-top: 72px; }
+    .profile-facts { padding-left: 12px; }
+  }
 </style>
 
 <script>
@@ -265,6 +280,16 @@ const showsJwNote = tradition.id === 'jw';
   window.addEventListener('hashchange', revealQuestion);
   revealQuestion();
   const contents = document.querySelector<HTMLElement>('.analysis-contents');
+  const toc = document.querySelector<HTMLDetailsElement>('.reading-toc');
+  const narrow = matchMedia('(max-width: 760px)');
+  if (toc) {
+    const resizeContents = () => { toc.open = !narrow.matches; };
+    narrow.addEventListener('change', resizeContents);
+    contents?.addEventListener('click', (event) => {
+      if (narrow.matches && (event.target as HTMLElement).closest('a')) toc.open = false;
+    });
+    resizeContents();
+  }
   if (contents) {
     const cards = [...document.querySelectorAll<HTMLElement>('.reading-body article.card')];
     const links = [...contents.querySelectorAll<HTMLAnchorElement>('a')];
@@ -281,10 +306,10 @@ const showsJwNote = tradition.id === 'jw';
       });
       contents.querySelector('.reading-progress')!.textContent = `Вопрос ${cards.indexOf(active) + 1} из ${cards.length}`;
       const link = links.find((link) => link.hash === `#${current}`);
-      if (link) {
-        const box = contents.getBoundingClientRect();
+      if (link && toc?.open && !narrow.matches) {
+        const box = toc.getBoundingClientRect();
         const item = link.getBoundingClientRect();
-        if (item.top < box.top || item.bottom > box.bottom) contents.scrollTop += item.top - box.top - 60;
+        if (item.top < box.top || item.bottom > box.bottom) toc.scrollTop += item.top - box.top - 60;
       }
     };
     window.addEventListener('scroll', () => {
