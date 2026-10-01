@@ -14,11 +14,8 @@ const count = (n: number) => n >= 1e9
   : `${(n / 1e6).toFixed(n >= 1e8 ? 0 : 1).replace('.', ',')} млн`;
 const worldShare = (n: number) => (n / data.population) * 100;
 
-// Segment order of the world bar, not by size: it keeps the three muted
-// colours (unaffiliated, other, folk) apart. Palette validator, light and
-// dark: worst adjacent CVD dE 12.3, normal-vision dE 16.1; hindus fall below
-// 3:1 on the dark surface, relieved by the labelled table.
-const STACK_ORDER = ['christians', 'muslims', 'unaffiliated', 'hindus', 'buddhists', 'other-religions', 'jews', 'folk'];
+// World bar in descending order of size.
+const STACK_ORDER = ['christians', 'muslims', 'hindus', 'unaffiliated', 'folk', 'buddhists', 'other-religions', 'jews'];
 const stack = STACK_ORDER.map((id) => data.groups.find((group) => group.id === id)!);
 // Sub-rows: Christian branches (their estimates overlap, data.method: listed,
 // never summed) and the agnostics and atheists that make up the nonreligious.
@@ -113,7 +110,7 @@ const describe = (label: string, n: number) => `${label}: около ${count(n)}
 </script>
 
 <style>
-  .world-hierarchy { grid-column: 1 / -1; --world-folk: #527c67; --world-independent: #3979a8; }
+  .world-hierarchy { grid-column: 1 / -1; --world-independent: #3979a8; --world-christians-unaffiliated: #a39484; }
   h2 { margin: 0 0 16px; }
   .headline { margin-bottom: 14px; }
   .figure { margin: 4px 0 0; font-size: 40px; font-weight: 700; line-height: 1.1; }

@@ -241,7 +241,7 @@
       "label": "Вне церковных объединений",
       "count": 141756000,
       "share": 5.103498529678603,
-      "color": "--world-christians",
+      "color": "--world-christians-unaffiliated",
       "proof": [
         {
           "url": "https://www.worldchristiandatabase.org/static/downloads/Status-of-Global-Christianity-2026.2b54be19fc0c.pdf",
