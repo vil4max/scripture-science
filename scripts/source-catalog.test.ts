@@ -2,7 +2,7 @@
 import { test } from 'node:test';
 // @ts-expect-error - node types are not installed.
 import assert from 'node:assert/strict';
-import { buildSourceCatalog, collectAnalysisSources, collectProofs, filterSourceCatalog, proofKey, uniqueProofs, type CatalogProof } from '../src/lib/sourceCatalog.ts';
+import { buildSourceCatalog, collectAnalysisSources, collectProofs, filterSourceCatalog, matchesCatalogUsage, sourceAnchor, proofKey, uniqueProofs, type CatalogProof } from '../src/lib/sourceCatalog.ts';
 // @ts-expect-error - node types are not installed.
 import { readFileSync, readdirSync } from 'node:fs';
 // @ts-expect-error - the existing YAML parser has no separately installed types.
@@ -64,6 +64,27 @@ test('catalogue grouping retains the exact claim usages of each passage', () => 
   const selected = filterSourceCatalog(entries, (usage) => usage.traditionId === 'jw' && usage.role === 'answer');
   assert.deepEqual(selected[0].references, [{ proof: sample, usages: [answer] }]);
   assert.equal(entries[0].references.length, 2);
+});
+
+test('source filters must match the same usage, including its query context', () => {
+  const first = { traditionId: 'jw', topic: 'god', role: 'church' as const, section: 'Analysis', cardTitle: 'Троица' };
+  const second = { traditionId: 'islam', topic: 'images', role: 'tradition' as const, section: 'Analysis', cardTitle: 'Иконы' };
+  const filter = { query: '', tradition: 'jw', topic: 'images', role: 'tradition' };
+  assert.ok(![first, second].some((usage) => matchesCatalogUsage(usage, filter, 'Same source')));
+  assert.ok(matchesCatalogUsage(first, { query: 'Троица', tradition: 'jw', topic: 'god', role: 'church' }, 'Same source'));
+  assert.ok(!matchesCatalogUsage(first, { query: 'Иконы', tradition: 'jw', topic: '', role: '' }, 'Same source'));
+  assert.equal(sourceAnchor(sample.url), sourceAnchor(sample.url));
+  assert.notEqual(sourceAnchor(sample.url), sourceAnchor(`${sample.url}#other`));
+});
+
+test('each source has one canonical disclosure and every compact evidence link resolves', () => {
+  const html: string = readFileSync('dist/sources/index.html', 'utf8');
+  const ids = [...html.matchAll(/id="(source-[a-f0-9]+)"/g)].map((match) => match[1]);
+  assert.ok(ids.length > 870);
+  assert.equal(new Set(ids).size, ids.length);
+  const targets = [...html.matchAll(/href="#(source-[a-f0-9]+)"/g)].map((match) => match[1]);
+  assert.ok(targets.length > 0);
+  for (const id of targets) assert.ok(ids.includes(id));
 });
 
 const analyses: Parameters<typeof collectAnalysisSources>[0] = readdirSync('src/data/analyses')

@@ -1,3 +1,5 @@
+import { matchesSearch } from './search.ts';
+
 export interface CatalogProof {
   url: string;
   title: string;
@@ -39,6 +41,22 @@ export const READING_KIND_LABELS = {
   conference: 'итоговый документ конференции',
   testimony: 'свидетельство',
 } as const;
+
+export function sourceAnchor(url: string): string {
+  // Stable across catalogue sorting and additions; uniqueness is checked at build time.
+  let hash = 0xcbf29ce484222325n;
+  for (const character of url) hash = BigInt.asUintN(64, (hash ^ BigInt(character.codePointAt(0)!)) * 0x100000001b3n);
+  return `source-${hash.toString(16)}`;
+}
+
+export interface CatalogFilter { query: string; topic: string; tradition: string; role: string; }
+
+export function matchesCatalogUsage(usage: CatalogUsage, filter: CatalogFilter, proofText: string): boolean {
+  return (!filter.topic || usage.topic === filter.topic)
+    && (!filter.tradition || usage.traditionId === filter.tradition)
+    && (!filter.role || usage.role === filter.role)
+    && matchesSearch(`${proofText} ${usage.traditionName ?? ''} ${usage.section} ${usage.cardTitle ?? ''}`, filter.query);
+}
 
 export function proofKey(proof: CatalogProof): string {
   return JSON.stringify([proof.url, proof.title, proof.tier, proof.excerpt, proof.accessed]);

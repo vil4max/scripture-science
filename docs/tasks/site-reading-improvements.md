@@ -28,6 +28,10 @@ same comparison without losing the selected columns.
    existing sourced content; expose pending-verification reasons and name the
    scope of represented branches. Preserve unresolved evidence as pending.
 
+5. Follow-up authorized by the owner on 2026-10-01: make reading comfortable
+   on iPhone as well, checking narrow viewports and repairing reading, search,
+   contents, evidence and comparison layouts.
+
 Each iteration owns its code, focused checks and documentation. Later steps
 depend on the previous step's local verification and commit. Publication uses
 the existing main branch and GitHub Pages workflow; no workflow or host
@@ -52,8 +56,8 @@ configuration changes are authorized.
 
 Keep original HTML, migration inputs, research, used images and unique content.
 Use existing Astro and browser primitives without new dependencies. Preserve
-the nine pre-existing local commits. No history rewrite, force push or mobile
-redesign. Source tier describes the publisher; it is not ecclesiastical
+the nine pre-existing local commits. No history rewrite or force push. The later iPhone request supersedes the
+earlier desktop-only boundary for these reading improvements. Source tier describes the publisher; it is not ecclesiastical
 approval. External quotation problems remain marked until actually resolved.
 
 ## Evidence
@@ -75,3 +79,20 @@ tests and 17 pages, with no Astro diagnostics. Browser checks at 1280 px
 (light) and 1440 px (dark) confirmed search, source disclosure, active contents
 and selection preservation through question navigation, return and reload.
 Iteration 1 was committed as 83121ab and pushed successfully.
+
+### Iteration 3 — evidence discovery and page entry points
+
+The complete catalogue has one canonical disclosure per URL, with exact
+passages and usage attribution. Search combines topic, analysis tradition,
+role and source tier without cross-matching unrelated usages. Existing
+section anchors remain; compact source links open the canonical disclosure
+and clear a conflicting filter. The homepage has three task entry points and
+a compact Orthodox foundation; comparison selectors remain visible in a
+shorter sticky header.
+
+Validation: Node.js 26 npm run verify passed 150 Node tests, two Python tests
+and 17 pages, with no Astro diagnostics. Browser checks confirmed intersecting
+filters, no results, reset, canonical disclosure and desktop overflow.
+Sources HTML: 5,074,931 bytes; gzip: 489,175 bytes. Browser navigation
+timing was unavailable through the provided UI inspection API; no loading-time
+improvement is claimed from byte size alone. Iteration 2: 5ef9fdb, pushed.

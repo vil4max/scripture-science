@@ -5,8 +5,9 @@ import classifications from '../data/orthodox-classifications.json';
 import ViewTile from '../components/ViewTile.astro';
 import { withBase } from '../lib/paths';
 import { getFamilies } from '../lib/families';
-import { buildSourceCatalog, collectAnalysisSources, collectProofs, collectTextSources, filterSourceCatalog, READING_KIND_LABELS, type CatalogRecord } from '../lib/sourceCatalog';
+import { buildSourceCatalog, collectAnalysisSources, collectProofs, collectTextSources, filterSourceCatalog, sourceAnchor, READING_KIND_LABELS, type CatalogRecord } from '../lib/sourceCatalog';
 import SourceCatalogList from '../components/SourceCatalogList.astro';
+import SourceFilters from '../components/SourceFilters.astro';
 import { getAnalyses, profileHref } from '../lib/analysis';
 import countries from '../data/world-countries.json';
 import christianTraditions from '../data/world-christian-traditions.json';
@@ -129,16 +130,7 @@ for (const record of assessments) {
   }
 }
 const entries = buildSourceCatalog(raw);
-
-const tierOrder = ['official', 'reference', 'news'] as const;
-const tierLabel: Record<(typeof tierOrder)[number], string> = {
-  official: 'Официальные источники',
-  reference: 'Справочные источники',
-  news: 'СМИ и НКО',
-};
-const byTier = new Map(tierOrder.map((tier) => [tier, entries.map((entry) => ({
-  url: entry.url, references: entry.references.filter(({ proof }) => proof.tier === tier),
-})).filter((entry) => entry.references.length > 0)]));
+if (new Set(entries.map((entry) => sourceAnchor(entry.url))).size !== entries.length) throw new Error('Duplicate source anchor');
 
 const byTradition = new Map(
   traditions.map((tradition) => [
@@ -196,6 +188,13 @@ const description = 'Значения слов, пояснения к данны
       </nav>
     </header>
 
+    <section id="by-tier">
+      <h2>Найти источник</h2>
+      <p>Фильтр «Разбор традиции» выбирает, к какому разбору относится выдержка. В нём могут использоваться и собственные документы традиции, и православные источники.</p>
+      <SourceFilters traditions={traditions.map((entry) => ({ id: entry.id, name: entry.data.name }))} />
+      <SourceCatalogList entries={entries} detailed />
+    </section>
+
     <section id="terms" aria-labelledby="terms-title">
       <h2 id="terms-title">Термины</h2>
       <TermsBox terms={terms} />
@@ -208,16 +207,16 @@ const description = 'Значения слов, пояснения к данны
         const records = assessments.filter(record => record.topic === topic);
         return <section id={`sources-${topic}`}><h3>{TOPIC_TITLES_RU[topic]}</h3><p>{foundation.doctrine?.authority}</p>
           <details class="source-topic"><summary>Православное учение: места и проверочные выдержки</summary>
-            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === 'orthodoxy' && usage.topic === topic && usage.section === 'Сравнение')} detailed />
+            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === 'orthodoxy' && usage.topic === topic && usage.section === 'Сравнение')} />
           </details>
           {records.map(record => <details class="source-topic">
             <summary>{namesById.get(record.tradition)}: учение и православный ответ</summary>
             <p><strong>В чём отличие:</strong> {record.difference}</p>
             <p><strong>Православный ответ:</strong> {record.response}</p>
             <h4>Документы традиции</h4>
-            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === record.tradition && usage.topic === topic && usage.section === 'Православная оценка' && usage.role === 'tradition')} detailed />
+            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === record.tradition && usage.topic === topic && usage.section === 'Православная оценка' && usage.role === 'tradition')} />
             <h4>Основание ответа</h4><p>{record.authority}</p>
-            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === record.tradition && usage.topic === topic && usage.section === 'Православная оценка' && usage.role === 'answer')} detailed />
+            <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === record.tradition && usage.topic === topic && usage.section === 'Православная оценка' && usage.role === 'answer')} />
           </details>)}
           <details class="source-topic"><summary>Источники подробных разборов</summary>
             <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.topic === topic && Boolean(usage.cardId))} />
@@ -370,22 +369,6 @@ const description = 'Значения слов, пояснения к данны
       </table>
     </section>
 
-    <section id="by-tier">
-      <h2>По уровню источника</h2>
-      {
-        tierOrder.map((tier) => {
-          const tierEntries = byTier.get(tier) ?? [];
-          return (
-            tierEntries.length > 0 && (
-              <div class="tier-group">
-                <h3>{tierLabel[tier]}</h3>
-                <SourceCatalogList entries={tierEntries} detailed />
-              </div>
-            )
-          );
-        })
-      }
-    </section>
 
     <section id="texts">
       <h2>Цитируемые тексты и переводы</h2>

@@ -1,0 +1,92 @@
+---
+import { TOPIC_ORDER, TOPIC_TITLES_RU } from '../lib/rules';
+import { EVIDENCE_ROLE_LABELS } from '../lib/sourceCatalog';
+interface Props { traditions: { id: string; name: string }[]; }
+---
+<form class="source-filters" role="search" aria-label="Поиск источников" hidden>
+  <label class="query" for="source-query">Название, выдержка или вопрос<input id="source-query" type="search" name="q" placeholder="Например: Символ веры, крещение" /></label>
+  <label for="source-topic">Тема<select id="source-topic" name="topic"><option value="">Все темы</option>{TOPIC_ORDER.map((topic) => <option value={topic}>{TOPIC_TITLES_RU[topic]}</option>)}</select></label>
+  <label for="source-tradition">Разбор традиции<select id="source-tradition" name="tradition"><option value="">Все традиции</option>{Astro.props.traditions.map((entry) => <option value={entry.id}>{entry.name}</option>)}</select></label>
+  <label for="source-role">Что обосновывает<select id="source-role" name="role"><option value="">Любое назначение</option>{Object.entries(EVIDENCE_ROLE_LABELS).map(([id, label]) => <option value={id}>{label}</option>)}</select></label>
+  <label for="source-tier">Вид источника<select id="source-tier" name="tier"><option value="">Все виды</option><option value="official">Официальные источники</option><option value="reference">Справочные источники</option><option value="news">СМИ и НКО</option></select></label>
+  <button type="reset">Сбросить фильтры</button>
+</form>
+<p class="source-count" role="status" aria-live="polite"></p>
+<p data-source-empty hidden>Источники не найдены. Измените запрос или сбросьте фильтры.</p>
+<noscript>Все источники доступны ниже. Для поиска по названию или выдержке можно использовать поиск браузера.</noscript>
+<script>
+  import { matchesCatalogUsage, type CatalogUsage, type CatalogFilter } from '../lib/sourceCatalog';
+  const root = document.querySelector<HTMLElement>('#by-tier')!;
+  const form = root.querySelector<HTMLFormElement>('form')!;
+  const controls = [...form.querySelectorAll<HTMLInputElement | HTMLSelectElement>('input, select')];
+  const entries = [...root.querySelectorAll<HTMLElement>('[data-source-entry]')].map((element) => ({
+    element,
+    references: [...element.querySelectorAll<HTMLElement>('[data-source-reference]')].map((reference) => ({
+      element: reference,
+      text: `${element.querySelector('a')?.getAttribute('href')} ${reference.querySelector('.excerpt')?.textContent} ${reference.querySelector('.meta')?.textContent}`,
+      usages: [...reference.querySelectorAll<HTMLElement>('[data-source-usage]')].map((usage) => ({
+        element: usage, data: { traditionId: usage.dataset.tradition, topic: usage.dataset.topic, role: usage.dataset.role as CatalogUsage['role'], section: usage.textContent ?? '' },
+      })),
+    })),
+  }));
+  const update = (writeUrl = true) => {
+    const values = Object.fromEntries(controls.map((control) => [control.name, control.value.trim()]));
+    const filter: CatalogFilter = { query: values.q, topic: values.topic, tradition: values.tradition, role: values.role };
+    let urls = 0, passages = 0;
+    for (const entry of entries) {
+      let visible = false;
+      for (const reference of entry.references) {
+        let used = false;
+        for (const usage of reference.usages) {
+          usage.element.hidden = Boolean(values.tier && reference.element.dataset.tier !== values.tier) || !matchesCatalogUsage(usage.data, filter, reference.text);
+          used ||= !usage.element.hidden;
+        }
+        reference.element.hidden = !used;
+        if (used) { visible = true; passages++; }
+      }
+      entry.element.hidden = !visible;
+      if (visible) urls++;
+    }
+    root.querySelector('.source-count')!.textContent = `Документов: ${urls}. Выдержок: ${passages}.`;
+    root.querySelector<HTMLElement>('[data-source-empty]')!.hidden = urls > 0;
+    if (writeUrl) {
+      const url = new URL(location.href);
+      for (const control of controls) {
+        const key = `source-${control.name}`;
+        if (control.value.trim()) url.searchParams.set(key, control.value.trim());
+        else url.searchParams.delete(key);
+      }
+      history.replaceState(history.state, '', url);
+    }
+  };
+  const clear = () => { controls.forEach((control) => { control.value = ''; }); update(); };
+  const reveal = () => {
+    const target = document.getElementById(location.hash.slice(1));
+    if (!target?.matches('[data-source-entry]')) return;
+    if (controls.some((control) => control.value)) clear();
+    target.querySelector('details')!.open = true;
+    requestAnimationFrame(() => target.scrollIntoView());
+  };
+  const restore = () => {
+    const params = new URLSearchParams(location.search);
+    controls.forEach((control) => { control.value = params.get(`source-${control.name}`) ?? ''; });
+    update(false);
+    reveal();
+  };
+  form.hidden = false;
+  form.addEventListener('input', () => update());
+  form.addEventListener('submit', (event) => { event.preventDefault(); update(); });
+  form.addEventListener('reset', clear);
+  window.addEventListener('hashchange', reveal);
+  window.addEventListener('popstate', restore);
+  restore();
+</script>
+<style>
+  .source-filters { display: flex; flex-wrap: wrap; gap: 12px; align-items: end; padding: 20px; border: 1px solid var(--line); border-radius: 10px; background: var(--surface); }
+  .source-filters[hidden] { display: none; }
+  label { display: grid; gap: 6px; font-size: 14px; min-width: 0; max-width: 100%; }
+  .query { flex: 1 1 100%; }
+  input, select, button { font: inherit; color: var(--ink); background: var(--bg); border: 1px solid var(--line); border-radius: 6px; padding: 10px; min-width: 0; max-width: 100%; }
+  button { cursor: pointer; }
+  .source-count { color: var(--muted); font-size: 15px; }
+</style>

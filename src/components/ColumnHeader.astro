@@ -63,15 +63,15 @@ const alphabetical = traditions.filter(tradition => tradition.id !== 'orthodoxy'
   }
 </script>
 <style>
-  .colhead { position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 12px 0; border-bottom: 1px solid var(--line); }
+  .colhead { position: sticky; top: 0; z-index: 10; background: var(--bg); padding: 6px 0; border-bottom: 1px solid var(--line); }
   .slots { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); }
-  .colcell { display: grid; gap: 6px; min-width: 0; border-top: 3px solid var(--slot-color, var(--line)); padding: 8px 14px 12px; }
+  .colcell { display: grid; gap: 4px; min-width: 0; border-top: 3px solid var(--slot-color, var(--line)); padding: 6px 12px; }
   .colcell + .colcell { border-left: 1px solid var(--line); }
   .foundation { background: color-mix(in srgb, var(--t-orthodoxy) 10%, var(--surface)); }
   .colcell span { font-size: 13px; color: var(--muted); }
   .profile { font-size: 14px; }
-  .fixed { display: flex; align-items: center; padding: 12px 0; font-size: 18px; min-height: 48px; }
-  select { width: 100%; min-width: 0; padding: 12px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
+  .fixed { display: flex; align-items: center; padding: 6px 0; font-size: 18px; min-height: 36px; }
+  select { width: 100%; min-width: 0; padding: 6px 8px; font: inherit; font-size: 16px; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 8px; cursor: pointer; }
   select:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
   @media (max-width: 600px) { .colhead { position: static; } .slots { grid-template-columns: minmax(0, 1fr); gap: 8px; } }
 </style>

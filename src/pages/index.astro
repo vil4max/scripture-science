@@ -6,6 +6,7 @@ import { getOrderedMatrix } from '../lib/content';
 import OtherTraditions from '../components/OtherTraditions.astro';
 import WorldHierarchy from '../components/WorldHierarchy.astro';
 import WorldAtlas from '../components/WorldAtlas.astro';
+import { withBase } from '../lib/paths';
 import SectionPage from '../layouts/SectionPage.astro';
 
 const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'orthodoxy')!;
@@ -16,6 +17,11 @@ const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'ortho
   lead="Православное учение → В чём отличие → Православный ответ."
 >
   <p class="scope-note">Православное учение изложено по Священному Писанию, Священному Преданию и церковным вероучительным документам. Другие религии и движения описаны по их собственным источникам; различия сопровождаются православной оценкой.</p>
+  <nav class="entry-actions" aria-label="С чего начать">
+    <a href={withBase('search/')} data-carry-selection><strong>Изучить вопрос</strong><span>Найти тему и православный разбор</span></a>
+    <a href={withBase('compare/')} data-carry-selection><strong>Сравнить учения</strong><span>Православие и две выбранные традиции</span></a>
+    <a href="#traditions"><strong>Выбрать традицию</strong><span>История, самоописание и православная оценка</span></a>
+  </nav>
   <div class="overview-nav" role="navigation" aria-label="На этой странице">
     <a href="#foundation">Основание</a>
     <a href="#world">Масштабы</a>
@@ -26,7 +32,7 @@ const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'ortho
   <section id="foundation" aria-labelledby="foundation-title">
     <h2 id="foundation-title">Основание: Православная Церковь</h2>
     <p class="foundation-intro">Все остальные религии и движения на сайте рассматриваются в сравнении с православным учением.</p>
-    <TraditionCard tradition={orthodoxy} color="--t-orthodoxy" headingLevel={3} />
+    <details class="foundation-details"><summary>Краткие сведения: история, Писание и устройство</summary><TraditionCard tradition={orthodoxy} color="--t-orthodoxy" headingLevel={3} /></details>
     <p><a href={profileHref('orthodoxy')}>Православная вера: учение по темам, хронология, устройство →</a></p>
   </section>
   <div id="world"><WorldHierarchy /></div>
@@ -37,6 +43,13 @@ const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'ortho
 </SectionPage>
 
 <style>
+  .entry-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+  .entry-actions a { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; }
+  .entry-actions a:hover { border-color: var(--focus); }
+  .entry-actions strong { display: block; font-size: 19px; }
+  .entry-actions span { display: block; margin-top: 6px; font-size: 15px; color: var(--muted); }
+  .foundation-details { margin-top: 16px; }
+  .foundation-details summary { cursor: pointer; color: var(--focus); font-size: 15px; margin-bottom: 12px; }
   .overview-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
   .overview-nav a { color: var(--muted); text-underline-offset: 4px; }
   #foundation { padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 12px; scroll-margin-top: 24px; }
