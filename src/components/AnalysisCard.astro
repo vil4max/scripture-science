@@ -2,7 +2,7 @@
 import type { CollectionEntry } from 'astro:content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
-import { READING_KIND_LABELS, uniqueProofs } from '../lib/sourceCatalog';
+import { EVIDENCE_ROLE_LABELS, proofKey, READING_KIND_LABELS, uniqueProofs } from '../lib/sourceCatalog';
 
 type Card = CollectionEntry<'analyses'>['data']['groups'][number]['cards'][number];
 interface Props { card: Card; tradition: string; traditionName: string; previous?: Pick<Card, 'id' | 'title'>; next?: Pick<Card, 'id' | 'title'>; }
@@ -12,7 +12,8 @@ const accent = TRADITION_COLOR_TOKEN[tradition as keyof typeof TRADITION_COLOR_T
 const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...card.answer.proof]);
 ---
 <article class="card" id={card.id} data-topic={card.topic} data-legacy={card.legacy.length > 0 ? card.legacy.join(' ') : undefined}>
-  <h4>{card.title}{card.status === 'todo' && <span class="todo" title={card.todo}>уточняется</span>}</h4>
+  <h4>{card.title}</h4>
+  {card.status === 'todo' && <details class="pending"><summary>Уточняется: что требует проверки</summary><p>{card.readerNote ?? card.todo}</p></details>}
   <div class="block church">
     <p class="label">Учение Церкви</p>
     <p>{card.church.text}</p>
@@ -35,6 +36,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
   {proofs.length > 0 && <details class="proof">
     <summary>Источники</summary>
     <ul>{proofs.map((source) => <li>
+      <span class="source-role">{(['church', 'tradition', 'answer'] as const).filter((role) => card[role].proof.some((item) => proofKey(item) === proofKey(source))).map((role) => EVIDENCE_ROLE_LABELS[role]).join(' · ')}</span>
       <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
     </li>)}</ul>
   </details>}
@@ -47,7 +49,8 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
 <style>
 .card { border-top: 1px solid var(--line); padding: 24px 0 8px; scroll-margin-top: 24px; }
 h4 { margin: 0 0 16px; font-size: 22px; }
-.todo { margin-left: 12px; font-size: 13px; font-weight: 400; color: var(--muted); border: 1px solid var(--line); border-radius: 4px; padding: 1px 6px; vertical-align: middle; }
+.pending { margin: 0 0 16px; padding: 12px; border: 1px solid var(--line); border-left: 3px solid var(--focus); border-radius: 4px; font-size: 15px; }
+.source-role { display: block; color: var(--muted); font-size: 13px; font-weight: 700; }
 .block { max-width: var(--measure); margin: 0 0 14px; padding-left: 14px; border-left: 3px solid var(--line); }
 .church { border-left-color: var(--t-orthodoxy); }
 .answer { border-left-color: var(--t-orthodoxy); }

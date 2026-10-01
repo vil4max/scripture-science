@@ -283,3 +283,14 @@ tradition self-views move to their respective profiles. This supersedes the
 two-column timeline presentation, not the underlying evidence or profile data.
 Branch ancestry and selection highlighting must remain intact. Verify epoch
 separation, event ordering, profile self-views and the existing project gate.
+
+## 2026-10-01 — Confessional reading and iPhone scope
+
+The owner reaffirmed that the site is an Orthodox account, proceeds from the
+truth of Orthodox faith, and should present other religions through their own
+statements alongside the Orthodox assessment. Search and reading aids retain
+that hierarchy.
+
+The owner subsequently requested comfortable reading on iPhone. This
+supersedes the desktop-only acceptance boundary for the current reading
+improvements: narrow viewport reading and navigation are now in scope.

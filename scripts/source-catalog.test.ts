@@ -143,6 +143,12 @@ test('analysis coverage preserves pending cards and further reading stays separa
     const data = yaml.load(readFileSync(`src/data/analyses/${analysis.tradition}.yaml`, 'utf8'));
     const cards = data.groups.flatMap((group: { cards: { status: string; more?: { url: string }[] }[] }) => group.cards);
     const todo = cards.filter((card: { status: string }) => card.status === 'todo').length;
+    const page: string = readFileSync(`dist/traditions/${analysis.tradition}/index.html`, 'utf8');
+    for (const card of data.groups.flatMap((group: { cards: unknown[] }) => group.cards)) {
+      if (card.status === 'todo') {
+        assert.ok(page.includes(escapeHtml(card.readerNote ?? card.todo)), `Missing visible pending reason: ${analysis.tradition}/${card.id}`);
+      }
+    }
     const row = html.match(new RegExp(`<tr data-tradition="${analysis.tradition}"[\\s\\S]*?</tr>`))?.[0] ?? '';
     assert.ok(row.includes(`${cards.length - todo} / ${cards.length}`), analysis.tradition);
     assert.ok(row.includes(`${todo} / ${cards.length}`), analysis.tradition);

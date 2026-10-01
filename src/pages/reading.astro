@@ -1,0 +1,80 @@
+---
+import SectionPage from '../layouts/SectionPage.astro';
+import { getDisputes, getOrderedMatrix } from '../lib/content';
+import { profileHref } from '../lib/analysis';
+import { withBase } from '../lib/paths';
+import type { TopicId } from '../lib/rules';
+
+const matrix = await getOrderedMatrix();
+const orthodox = matrix.find((entry) => entry.id === 'orthodoxy')!;
+const terms: { title: string; topic: TopicId }[] = [
+  { title: 'Церковь', topic: 'organisation' }, { title: 'Предание', topic: 'authority' },
+  { title: 'Благодать и спасение', topic: 'salvation' }, { title: 'Канон Писания', topic: 'scripture' },
+];
+const examples = (await getDisputes()).filter((entry) => ['monasticism', 'images', 'scripture-and-tradition'].includes(entry.id));
+---
+<SectionPage title="Как читать сравнение" lead="От православного основания — к пониманию чужого учения и проверке аргументов.">
+  <section id="perspective">
+    <h2>Православная вера — основание и мерило</h2>
+    <p>Этот сайт исходит из истинности православной веры. Учение Церкви задаёт основание сравнения и оценку расхождений. Чтобы понимать религиозный мир целостно, мы также показываем, что другие религии говорят о себе в собственных документах.</p>
+    <ol class="reading-order">
+      <li><strong>Учение Церкви.</strong> Сначала прочитайте православное основание вопроса.</li>
+      <li><strong>Учение другой традиции.</strong> Посмотрите её собственное утверждение и документ, которому оно принадлежит.</li>
+      <li><strong>Православный ответ.</strong> Проследите, где именно расходятся учения и на чём основана оценка.</li>
+      <li><strong>Источник и контекст.</strong> Откройте выдержку, затем исходный документ; учитывайте автора, дату и границы утверждения.</li>
+    </ol>
+    <p><a href={withBase('search/')} data-carry-selection>Найти вопрос →</a></p>
+  </section>
+  <section id="authority">
+    <h2>Кто говорит и каков статус утверждения</h2>
+    <dl>
+      <div><dt>Догмат и церковное учение</dt><dd>В православном основании указан конкретный источник: Писание, Символ веры, соборное определение или катехизис. Смотрите формулировку авторитета рядом с темой.</dd></div>
+      <div><dt>Практика Поместной Церкви</dt><dd>Правила и их применение читаются с указанием той Церкви, к которой относится документ.</dd></div>
+      <div><dt>Объяснение автора</dt><dd>Авторские толкования и энциклопедические пояснения приводятся с именем автора или названием издания.</dd></div>
+      <div><dt>Сопоставление редакции</dt><dd>Православный ответ соединяет приведённые положения и показывает расхождение. Его аргументацию можно проверить по отдельно указанным источникам.</dd></div>
+      <div><dt>Официальный источник другой традиции</dt><dd>Пометка «официальный» указывает на издателя документа. Истинность изложенного учения оценивается с православной позиции.</dd></div>
+      <div><dt>Статус проверки</dt><dd>«Подтверждено» и «уточняется» обозначают состояние работы с источниками в базе сайта. У незавершённых карточек раскрывается причина уточнения. Дата обращения относится к указанной выдержке.</dd></div>
+    </dl>
+    <p><a href={withBase('sources/#coverage')} data-carry-selection>Посмотреть покрытие и источники →</a></p>
+  </section>
+  <section id="meanings">
+    <h2>Одно слово: сначала выясните значение</h2>
+    <p>Начните с православного определения, затем откройте конкретный разбор. Сопоставляйте содержание утверждения и его основание.</p>
+    {terms.map(({ title, topic }) => {
+      const position = orthodox.data.positions.find((entry) => entry.topic === topic)!;
+      return <article id={`meaning-${topic}`}>
+        <h3>{title}</h3><p class="label">Православное учение</p><p>{position.summary}</p>
+        <p class="authority">{position.doctrine?.authority}</p>
+        <p class="routes"><a href={profileHref('orthodoxy', `topic-${topic}`)} data-carry-selection>Обоснование</a> · <a href={withBase(`search/?topic=${topic}`)} data-carry-selection>Как понимают другие традиции</a> · <a href={withBase(`sources/#sources-${topic}`)} data-carry-selection>Выдержки из источников</a></p>
+      </article>;
+    })}
+  </section>
+  <section id="context">
+    <h2>Разбирать конкретный вопрос в его контексте</h2>
+    <p>В каждом примере начните с основания, затем прочитайте возражение и ответ целиком. Внутренние различия отмечены у соответствующего участника спора.</p>
+    {examples.map(({ id, data }) => <article>
+      <h3>{data.title}</h3><p class="label">Православное основание</p><p>{data.orthodoxFoundation}</p>
+      <p class="authority">{data.authority}</p>
+      <p class="routes">Разбор и позиции участников: {data.challenges.map((part, index) => <>{index > 0 && ' · '}<a href={profileHref(part.tradition, `question-${id}`)} data-carry-selection>{matrix.find((entry) => entry.id === part.tradition)?.data.name}</a></>)}</p>
+    </article>)}
+  </section>
+  <section id="scope">
+    <h2>Уточняйте, какая община представлена</h2>
+    <p>В разборе протестантизма каждое утверждение нужно читать вместе с названием исповедания: лютеранского, реформатского, англиканского, баптистского или пятидесятнического. Их документы и внутренние расхождения указаны <a href={profileHref('protestantism', 'positions-title')} data-carry-selection>в подробном разборе</a>.</p>
+    <p>В разборе ислама суннитские и шиитские различия обозначены там, где их называют используемые источники. <a href={profileHref('islam', 'positions-title')} data-carry-selection>Посмотреть границы разбора и документы</a>.</p>
+    <p>Карта и статистика показывают распространение религий. Для понимания вероучения переходите к описанию конкретной традиции, её источникам и православной оценке.</p>
+  </section>
+</SectionPage>
+<style>
+  section { max-width: var(--measure); scroll-margin-top: 24px; }
+  p, li, dd { line-height: 1.65; }
+  article { border-top: 1px solid var(--line); padding: 20px 0; }
+  h3 { margin: 0 0 12px; }
+  .label { font-size: 14px; font-weight: 700; color: var(--focus); }
+  .authority, .routes { font-size: 15px; }
+  .authority { color: var(--muted); }
+  dl { display: grid; gap: 20px; }
+  dt { font-weight: 700; }
+  dd { margin: 4px 0 0; }
+  .reading-order li + li { margin-top: 12px; }
+</style>

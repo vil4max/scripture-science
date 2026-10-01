@@ -326,6 +326,7 @@ const analysisCard = z
     legacy: z.array(z.string()).default([]),
     status: z.enum(['verified', 'todo']),
     todo: z.string().optional(),
+    readerNote: z.string().min(1).optional(),
   })
   .superRefine((card, ctx) => {
     if (card.status === 'todo' && !card.todo) {

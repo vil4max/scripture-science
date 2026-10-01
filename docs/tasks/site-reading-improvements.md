@@ -96,3 +96,19 @@ filters, no results, reset, canonical disclosure and desktop overflow.
 Sources HTML: 5,074,931 bytes; gzip: 489,175 bytes. Browser navigation
 timing was unavailable through the provided UI inspection API; no loading-time
 improvement is claimed from byte size alone. Iteration 2: 5ef9fdb, pushed.
+
+### Iteration 4 — confessional reading context
+
+Added a reading guide that explicitly states the Orthodox foundation,
+distinguishes source authority and claim status, and routes four key terms and
+three disputed questions to existing sourced material. Dispute anchors open
+their discussion. All ten pending cards now have concise Russian reader notes;
+original technical notes, proof records and pending statuses remain intact.
+Card evidence identifies its role in the argument. No external quotations were
+newly verified or promoted to verified status.
+
+Validation: npm run verify on Node.js 26 passed 150 Node tests, two Python
+tests, 18 pages and zero Astro diagnostics. Browser checks confirmed the guide
+links, open dispute and Russian pending notes. Iteration 3: 35df129, pushed.
+The first 390 px inspection demonstrated that the desktop local contents
+compresses the article; iteration 5 addresses this measured failure.

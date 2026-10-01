@@ -278,6 +278,7 @@ groups:
             kind: encyclopedia
         legacy: []
         status: todo
+        readerNote: "Сохранённая выдержка об имени Бога сокращена с изменением начала фразы. В источнике начало звучит: «Из уважения к этому Имени мы не произносим его так, как оно написано». Полное предложение добавлено; прежняя цитата ещё требует исправления."
         todo: 'Proof matrix/judaism.yaml name-of-god (toldot.com urava_5809): the stored excerpt «Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)» is not on the page; the page reads «Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)». The literal sentence is added next to it; the stored proof and matrix quote need correcting.'
       - id: holy-spirit
         title: Дух Божий и Святой Дух
@@ -354,6 +355,7 @@ groups:
             kind: church
         legacy: []
         status: todo
+        readerNote: "В тексте Быт. 1:2 на Sefaria между словами английской выдержки находится сноска. Нужно отделить текст стиха от примечания и уточнить оформление цитаты."
         todo: 'Proof matrix/judaism.yaml spirit (Sefaria Genesis 1:2, JPS 2023): the stored excerpt «a wind from God sweeping over the water» is not literal in the API text — a footnote marker and note («a wind from» + footnote + «God sweeping over the water») are inserted in the middle of the phrase. The source line is correct; the excerpt should be given without the footnote.'
   - id: messiah-jesus
     title: Мессия и Иисус из Назарета
@@ -1420,6 +1422,7 @@ groups:
             kind: church
         legacy: []
         status: todo
+        readerNote: "Выдержка о праздниках составлена из названий ссылок в меню источника. Это перечень, а не предложение статьи; требуется более точное подтверждение из основного текста."
         todo: 'Proof matrix/judaism.yaml holy-days (toldot.com/holidays.html): the excerpt «Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват» is a run of navigation link labels without spaces in the page text (it matches only as a rendered list of links). It is an acceptable existing proof but not a literal sentence; consider replacing it with a sentence of the article.'
       - id: fasting
         title: 'Пост: Йом Кипур и Великий пост'

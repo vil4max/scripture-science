@@ -2,7 +2,7 @@
 
 The site is «Православный взгляд на религии мира»: an Orthodox Christian account for adult readers. This contract supersedes the earlier neutral, symmetrical editorial edition (owner, 2026-09-27; site-m26-orthodox-edition.md).
 
-1. **Orthodox foundation.** State Orthodox teaching in the site's own voice. Follow the sequence: Orthodox teaching, the specific difference, the Orthodox answer.
+1. **Orthodox foundation.** The site proceeds from the truth of the Orthodox faith; accurate self-description serves understanding and Orthodox assessment (owner reaffirmed 2026-10-01). State Orthodox teaching in the site's own voice. Follow the sequence: Orthodox teaching, the specific difference, the Orthodox answer.
 2. **Accurate attribution.** Describe other traditions through their own documents. Their descriptions and the Orthodox assessment are separate records. Similar wording does not establish complete doctrinal agreement.
 3. **Authority matters.** Scripture read in the Church, the Creed, conciliar definitions and received catechetical teaching establish the foundation. Azbyka hosts these sources and explanatory works; hosting alone confers no doctrinal authority. Label local practice and an individual author's opinion explicitly.
 4. **Source fidelity.** Preserve exact definitions and brief quotations in context; distinguish quotations from explanatory paraphrase. Never invent a quotation, date, judgement or consensus. Sources and verification follow SOURCES.md.

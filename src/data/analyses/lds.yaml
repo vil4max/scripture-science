@@ -556,6 +556,7 @@ groups:
             kind: encyclopedia
         legacy: []
         status: todo
+        readerNote: "Формулировка сохранённой английской выдержки отличается от страницы: «receive the gift» вместо «have received». Исправленный вариант добавлен к источникам; прежнюю запись ещё нужно согласовать с оригиналом."
         todo: "Pre-existing proof in matrix/lds.yaml and orthodox-assessments.json (spirit, \"receive the gift of the Holy Ghost through the proper priesthood authority\") is not literally on the page: the page says \"have received the Holy Ghost through the proper priesthood authority\". A corrected proof is added; fix the data, then mark verified."
   - id: man-and-salvation
     title: "Человек и спасение"
@@ -1091,6 +1092,7 @@ groups:
             kind: author
         legacy: []
         status: todo
+        readerNote: "Одна из сохранённых выдержек соединяет названия нескольких библейских ссылок. Этот фрагмент не подтверждает утверждение сам по себе; требуется подходящий связный отрывок."
         todo: "Pre-existing scripture proof (\"Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith 1:3\", topics/salvation) is a stitched fragment of a scripture-reference list, not a contiguous passage on the page, and does not support the claim. Replace it in the data, then mark verified."
       - id: great-apostasy
         title: "Церковь Христова: «Великое отступничество» и «Восстановление»"
@@ -1231,6 +1233,7 @@ groups:
             kind: church
         legacy: []
         status: todo
+        readerNote: "Фраза о прекращении существования истинной Церкви была связана со страницей о Первом видении, хотя находится на общей странице о Восстановлении. Правильная ссылка добавлена; прежняя привязка ещё требует исправления."
         todo: "Pre-existing proof \"the true Church of Jesus Christ ceased to exist\" is attached to https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng, but the phrase is on https://www.churchofjesuschrist.org/topics/restoration?lang=eng (a corrected proof is added). Fix the URL in matrix/lds.yaml and orthodox-assessments.json, then mark verified."
       - id: priesthood
         title: "Священство: Ааронов и Мелхиседеков порядки"
