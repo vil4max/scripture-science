@@ -397,7 +397,7 @@ const description = 'Значения слов, пояснения к данны
       <h2>Данные карты и фотографии</h2>
       <p>Статистика: <a href="https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/">Pew — Religious Composition by Country, 2010–2020</a> (201 страна и территория; обращение 2026-09-26).</p>
       <p>Географическая подложка: <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/">Natural Earth, 1:110m</a>, <a href="https://www.naturalearthdata.com/about/terms-of-use/">public domain</a>. Подписи и границы схематические.</p>
-      <ul>{media.map((item) => <li id={`media-${item.id}`}><a href={item.source}>{item.caption}</a> — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (обращение {item.accessed}). {item.changes === 'No edits; Wikimedia thumbnail.' ? 'Без изменений; уменьшенная копия Wikimedia.' : item.changes}</li>)}</ul>
+      <ul>{media.map((item) => <li id={`media-${item.id}`}>{item.source.startsWith('http') ? <a href={item.source}>{item.caption}</a> : <>{item.caption} ({item.source})</>} — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (обращение {item.accessed}). {item.changes === 'No edits; Wikimedia thumbnail.' ? 'Без изменений; уменьшенная копия Wikimedia.' : item.changes}</li>)}</ul>
     </section>
 
 

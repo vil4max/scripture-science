@@ -93,7 +93,7 @@ const showsJwNote = tradition.id === 'jw';
       </dd>
     </div>
   </dl>
-  <TraditionImage id={tradition.id} />
+  <TraditionImage id={tradition.id === 'orthodoxy' ? 'orthodoxy-all-saints' : tradition.id} />
   <section class="profile-section" aria-labelledby="chronology-title">
     <h2 id="chronology-title">Хронология</h2>
     {selfView && <aside>

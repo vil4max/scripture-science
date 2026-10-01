@@ -5,11 +5,11 @@ interface Props { id: string; compact?: boolean; }
 const { id, compact = false } = Astro.props;
 const picture = media.find((item) => item.id === id);
 ---
-{picture && <figure class:list={['tradition-image', { compact }]}>
+{picture && <figure class:list={['tradition-image', { compact, tall: picture.height > picture.width * 1.3 }]}>
   <a href={withBase(`sources/#media-${id}`)} aria-label={`Фотография и сведения об авторе: ${picture.caption}`}><img src={withBase(picture.file)} alt={picture.caption} width={picture.width} height={picture.height} loading="lazy" decoding="async"/></a>
   <figcaption>{picture.caption}</figcaption>
 </figure>}
 <style>
-  figure { margin: 0; max-width: 720px; } img { display: block; width: 100%; height: 340px; object-fit: contain; background: color-mix(in srgb, var(--ink) 5%, var(--surface)); border-radius: 8px; } .compact img { height: 210px; }
+  figure { margin: 0; max-width: 720px; } img { display: block; width: 100%; height: 340px; object-fit: contain; background: color-mix(in srgb, var(--ink) 5%, var(--surface)); border-radius: 8px; } .compact img { height: 210px; } .tall:not(.compact) img { height: 560px; }
   figcaption { font-size: 14px; line-height: 1.45; margin-top: 10px; }
 </style>
