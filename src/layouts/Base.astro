@@ -76,12 +76,14 @@ const pageContent = await Astro.slots.render('default');
     --page: 1200px;
     /* Tradition identity colours, in age order. The set passes the dataviz
        palette validator on #ffffff (light) and #1a2029 (dark); its CVD and
-       contrast warnings oblige direct text labels next to every coloured mark. */
+       contrast warnings oblige direct text labels next to every coloured mark.
+       Protestantism is a plum, not a coral (owner, 2026-10-01): the coral
+       looked like Catholic pink beside it on the confession bar and the map. */
     --t-judaism: #2a78d6;
     --t-orthodoxy: #eda100;
     --t-catholicism: #e87ba4;
     --t-islam: #008300;
-    --t-protestantism: #e34948;
+    --t-protestantism: #7d3c98;
     --t-lds: #1baf7a;
     --t-adventism: #eb6834;
     --t-jw: #4a3aa7;
@@ -90,7 +92,7 @@ const pageContent = await Astro.slots.render('default');
        bar, the map; owner, 2026-10-01): Christians a bright red (#fc0339, owner), Muslims keep
        their tradition green --t-islam, Jews keep --t-judaism blue, and the
        rest follow the rainbow (Hindus orange, folk religions yellow,
-       Buddhists teal, other religions violet); the nonreligious stay a
+       Buddhists teal, other religions brown; violet is Protestantism's); the nonreligious stay a
        neutral grey. Red beside green is hard for some colour-blind readers:
        every segment keeps its gap, its place in the size order and a name
        in the labels, legend or table. */
@@ -100,7 +102,7 @@ const pageContent = await Astro.slots.render('default');
     --world-folk: #cfae13;
     --world-other-christians: #a39484;
     --world-buddhists: #048ea6;
-    --world-other-religions: #8b5cc8;
+    --world-other-religions: #8a5a3c;
   }
 
   @media (prefers-color-scheme: dark) {
@@ -116,7 +118,7 @@ const pageContent = await Astro.slots.render('default');
       --t-orthodoxy: #c98500;
       --t-catholicism: #d55181;
       --t-islam: #008300;
-      --t-protestantism: #e66767;
+      --t-protestantism: #b078cc;
       --t-lds: #199e70;
       --t-adventism: #d95926;
       --t-jw: #9085e9;
@@ -127,7 +129,7 @@ const pageContent = await Astro.slots.render('default');
       --world-folk: #e3c32f;
       --world-other-christians: #a39484;
       --world-buddhists: #048ea6;
-      --world-other-religions: #a47ae0;
+      --world-other-religions: #b5835d;
     }
   }
 
@@ -143,7 +145,7 @@ const pageContent = await Astro.slots.render('default');
     --t-orthodoxy: #c98500;
     --t-catholicism: #d55181;
     --t-islam: #008300;
-    --t-protestantism: #e66767;
+    --t-protestantism: #b078cc;
     --t-lds: #199e70;
     --t-adventism: #d95926;
     --t-jw: #9085e9;
@@ -154,7 +156,7 @@ const pageContent = await Astro.slots.render('default');
     --world-folk: #e3c32f;
     --world-other-christians: #a39484;
     --world-buddhists: #048ea6;
-    --world-other-religions: #a47ae0;
+    --world-other-religions: #b5835d;
   }
 
   *,
