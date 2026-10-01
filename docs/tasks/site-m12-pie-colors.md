@@ -31,4 +31,4 @@ its slices can only be told apart by their labels.
 Owned: `src/components/WorldComposition.astro`, new `--world-*` tokens in
 `src/layouts/Base.astro`. No data changes, no new dependencies.
 
-> Superseded 2026-10-01 (owner): each religion group now has one fixed colour used everywhere, Christians a soft red, Muslims green, the rest the rainbow, in descending order of size; see the comment in `src/layouts/Base.astro`.
+> Superseded 2026-10-01 (owner): each religion group now has one fixed colour used everywhere, Christians red (#fc0339 from 2026-10-01), Muslims green, the rest the rainbow, in descending order of size; see the comment in `src/layouts/Base.astro`.
