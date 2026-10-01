@@ -3,7 +3,6 @@ import { test } from 'node:test';
 // @ts-expect-error - node types are not installed.
 import assert from 'node:assert/strict';
 import data from '../src/data/world-hierarchy-2026.json' with { type: 'json' };
-import { hierarchySlices, ringPath } from '../src/lib/worldHierarchy.ts';
 
 test('2026 estimates keep population totals and explicitly normalize Christian weights', () => {
   assert.equal(data.year, 2026);
@@ -24,19 +23,4 @@ test('2026 estimates keep population totals and explicitly normalize Christian w
     assert.ok(proof.excerpt.split(/\s+/).length <= 25);
     assert.match(proof.url, /Status-of-Global-Christianity-2026/);
   }
-});
-
-test('child arcs exactly tile the Christian parent and conserve its world share', () => {
-  const { parents, children } = hierarchySlices(data.groups, data.branches);
-  const parent = parents.find((g) => g.id === 'christians')!;
-  assert.ok(Math.abs(parents.at(-1)!.end - 360) < 1e-10);
-  assert.equal(children[0].start, parent.start);
-  assert.ok(Math.abs(children.at(-1)!.end - parent.end) < 1e-10);
-  assert.ok(Math.abs(children.reduce((sum, g) => sum + g.worldShare, 0) - parent.share) < 1e-10);
-  children.forEach((child, i) => {
-    if (i) assert.equal(child.start, children[i - 1].end);
-    assert.ok(child.end > child.start);
-    assert.doesNotMatch(ringPath(child.start, child.end, 134, 190), /NaN|Infinity/);
-  });
-  assert.ok(children.find((g) => g.id === 'catholics')!.worldShare > 14);
 });
