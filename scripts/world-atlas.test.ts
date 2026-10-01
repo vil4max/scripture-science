@@ -40,3 +40,28 @@ test('ties, empty populations and small shares are not presented as certain majo
   assert.equal(countryShare(1,10000), '<0,1 %');
   assert.equal(countryShare(0,10000), '0,0 %');
 });
+
+test('Christians are split by tradition without changing the population and the map reads as expected', async () => {
+  const { splitGroups, worldRows } = await import('../src/lib/worldAtlas.ts');
+  const groups = JSON.parse(readFileSync(new URL('../src/data/world-composition.json', import.meta.url), 'utf8'));
+  const get = (id: string) => data.countries.find((c: {id: string}) => c.id === id);
+  for (const country of data.countries) {
+    const split = splitGroups(data.groups, country);
+    assert.ok(split.split, country.name);
+    const before = country.counts.reduce((a: number, b: number) => a + b, 0);
+    const after = split.counts.reduce((a: number, b: number) => a + b, 0);
+    assert.ok(Math.abs(before - after) < 1, country.name);
+    assert.ok(!split.ids.includes('christians'));
+  }
+  const winner = (id: string) => { const s = splitGroups(data.groups, get(id)); return largestGroup(s.counts, s.ids); };
+  assert.equal(winner('RUS'), 'orthodox');
+  assert.equal(winner('GRC'), 'orthodox');
+  assert.equal(winner('BRA'), 'catholics');
+  assert.equal(winner('USA'), 'protestants');
+  assert.equal(winner('SAU'), 'muslims');
+  const rows = worldRows(groups, data);
+  assert.deepEqual(rows.slice(0, 4).map((r: {id: string}) => r.id), ['catholics', 'protestants', 'orthodox', 'other-christians']);
+  const christians = groups.find((g: {id: string}) => g.id === 'christians').share;
+  const sum = rows.slice(0, 4).reduce((a: number, r: {share: number}) => a + r.share, 0);
+  assert.ok(Math.abs(sum - christians) < 1.5, `${sum} vs ${christians}`);
+});

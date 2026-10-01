@@ -2,31 +2,42 @@
 import data from '../data/world-countries.json';
 import shapes from '../data/world-shapes.json';
 import groups from '../data/world-composition.json';
-import { WORLD_COLORS, largestGroup, formatShare } from '../lib/worldAtlas';
+import { TRADITION_LABELS, WORLD_COLORS, largestGroup, formatShare, splitGroups, worldRows } from '../lib/worldAtlas';
 const byId = new Map(data.countries.map((country) => [country.id, country]));
-const labels = new Map(groups.map((group) => [group.id, group.label]));
+const labels = new Map<string, string>([...groups.map((group): [string, string] => [group.id, group.label]), ...Object.entries(TRADITION_LABELS)]);
+// Each country coloured by its largest group, Christians split by tradition.
+const largestOf = (country: { id: string; counts: number[] }) => {
+  const split = splitGroups(data.groups, country);
+  return largestGroup(split.counts, split.ids);
+};
+const rows = worldRows(groups, data);
+const legendGroups = [
+  ...Object.entries(TRADITION_LABELS).filter(([id]) => id !== 'other-christians').map(([id, label]) => ({ id, label })),
+  ...groups.filter((group) => group.id !== 'christians'),
+  { id: 'other-christians', label: TRADITION_LABELS['other-christians'] },
+];
 const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 'ru'));
 ---
 <section class="atlas" aria-labelledby="atlas-title">
   <h2 id="atlas-title">Где распространены религии</h2>
-  <p class="key">Последние глобально сопоставимые данные — за 2020 год; отчёт опубликован Pew Research Center в 2025 году. Цвет — крупнейшая группа населения, даже если её доля меньше половины. Площадь страны не показывает число верующих.</p>
+  <p class="key">Последние глобально сопоставимые данные — за 2020 год; отчёт опубликован Pew Research Center в 2025 году. Цвет — крупнейшая группа населения, даже если её доля меньше половины; христиане разделены на католиков, протестантов, православных и других по оценке Pew на 2010 год. Площадь страны не показывает число верующих.</p>
   <svg viewBox="0 0 720 300" aria-labelledby="map-title map-desc" role="group">
     <title id="map-title">Крупнейшие религиозные группы по странам, 2020 год</title>
     <desc id="map-desc">Выберите страну на карте или в списке под ней. Штриховка: нет сопоставленных данных. Границы — схематическая подложка Natural Earth.</desc>
     <defs><pattern id="no-data" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="var(--surface)"/><path d="M0 0L5 5" stroke="var(--muted)" stroke-width="0.8"/></pattern></defs>
     {shapes.map((shape) => {
       const country = byId.get(shape.id);
-      const largest = country && largestGroup(country.counts, data.groups);
+      const largest = country && largestOf(country);
       const label = `${shape.name}: ${largest ? labels.get(largest) : 'нет сопоставленных данных'}`;
       return <path d={shape.path} fill={largest ? `var(${WORLD_COLORS[largest]})` : 'url(#no-data)'} data-country={country ? country.id : undefined} role={country ? 'button' : undefined} tabindex={country ? 0 : undefined} aria-label={label}><title>{label}</title></path>;
     })}
   </svg>
-  <ul class="legend">{groups.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет сопоставленных данных</li></ul>
+  <ul class="legend">{legendGroups.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет сопоставленных данных</li></ul>
   <label for="atlas-country">Весь мир, страна или территория</label>
   <select id="atlas-country"><option value="">Весь мир</option>{ordered.map((country) => <option value={country.id}>{country.name}</option>)}</select>
   <div id="country-detail" aria-live="polite">
     <h3>Весь мир · 2020</h3>
-    <dl>{[...groups].sort((a, b) => b.share - a.share).map((group) => <div class:list={{ largest: group.id === largestGroup(groups.map((g) => g.share), groups.map((g) => g.id)) }}>
+    <dl>{[...rows].sort((a, b) => b.share - a.share).map((group) => <div class:list={{ largest: group.id === largestGroup(rows.map((g) => g.share), rows.map((g) => g.id)) }}>
       <dt>{group.label}</dt><dd><span class="bar-track" aria-hidden="true"><span class="bar-fill" style={`width:${group.share}%;background:var(${WORLD_COLORS[group.id]})`}/></span><span class="bar-value">{formatShare(group.share)}</span></dd>
     </div>)}</dl>
   </div>
@@ -34,7 +45,7 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
 <script>
   import data from '../data/world-countries.json';
   import groups from '../data/world-composition.json';
-  import { countryShare, formatShare, largestGroup, WORLD_COLORS } from '../lib/worldAtlas';
+  import { TRADITION_LABELS, countryShare, formatShare, largestGroup, splitGroups, worldRows, WORLD_COLORS } from '../lib/worldAtlas';
   const select = document.querySelector<HTMLSelectElement>('#atlas-country');
   const detail = document.querySelector<HTMLElement>('#country-detail');
   function buildList(rows: { id: string; label: string; value: string; share: number }[], largest: string | null) {
@@ -59,8 +70,9 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
     select.value = '';
     document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.remove('selected'));
     const heading = document.createElement('h3'); heading.textContent = 'Весь мир · 2020';
-    const largest = largestGroup(groups.map((group) => group.share), groups.map((group) => group.id));
-    const list = buildList(groups.map((group) => ({ id: group.id, label: group.label, value: formatShare(group.share), share: group.share })), largest);
+    const rows = worldRows(groups, data);
+    const largest = largestGroup(rows.map((row) => row.share), rows.map((row) => row.id));
+    const list = buildList(rows.map((row) => ({ id: row.id, label: row.label, value: formatShare(row.share), share: row.share })), largest);
     detail.replaceChildren(heading, list);
   }
   function showCountry(id: string) {
@@ -71,8 +83,9 @@ const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 
     document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.toggle('selected', path.dataset.country === id));
     detail.replaceChildren();
     const heading = document.createElement('h3'); heading.textContent = `${country.name} · 2020`;
-    const largest = largestGroup(country.counts, data.groups);
-    const list = buildList(data.groups.map((groupId, index) => ({ id: groupId, label: groups.find((g) => g.id === groupId)?.label ?? groupId, value: countryShare(country.counts[index], country.total), share: country.counts[index] / country.total * 100 })), largest);
+    const split = splitGroups(data.groups, country);
+    const largest = largestGroup(split.counts, split.ids);
+    const list = buildList(split.ids.map((groupId, index) => ({ id: groupId, label: TRADITION_LABELS[groupId] ?? groups.find((g) => g.id === groupId)?.label ?? groupId, value: countryShare(split.counts[index], country.total), share: split.counts[index] / country.total * 100 })), largest);
     detail.append(heading, list);
     if (!largest) { const note = document.createElement('p'); note.textContent = 'Нет единственной крупнейшей группы.'; detail.append(note); }
   }
