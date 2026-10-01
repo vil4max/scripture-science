@@ -18,6 +18,9 @@ accept that the site may be blocked in Russia.
 - Pages that describe Jehovah's Witnesses carry, at the first mention, the note
   below; the wording is final once the decision's legal grounds are checked
   against the decision text (`docs/research/VERIFICATION.md`).
+  **Superseded 2026-10-01 (owner):** the note stands only on the Jehovah's
+  Witnesses page (`/traditions/jw/`); other tradition pages and the comparison
+  do not repeat it. The sources page keeps its «Правовая справка» section.
 - No legal advice was sought; the facts behind this entry are in
   `docs/research/prior-art-russian.md`, section 4.
 

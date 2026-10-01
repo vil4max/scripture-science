@@ -54,15 +54,13 @@ const selfView = lineage.selfViews.find((view) => view.tradition === tradition.i
 const associationLabels = {
   own: '', ancestor: 'Общая предыстория', union: 'Уния', epoch: 'Собственная хронология традиции',
 };
-const mentionsJw = tradition.id === 'jw'
-  || disputes.some((entry) => [...entry.data.challenges, ...entry.data.answers].some((part) => part.tradition === 'jw'))
-  || outgoing.some((doc) => doc.about.includes('jw'))
-  || incoming.some(({ author, doc }) => author === 'jw' || doc.about.includes('jw'));
+// The legal note belongs to the Jehovah's Witnesses page only (owner, 2026-10-01).
+const showsJwNote = tradition.id === 'jw';
 
 
 ---
 
-<SectionPage title={title ?? name} lead={full_name === name ? undefined : full_name} jwNote={mentionsJw}>
+<SectionPage title={title ?? name} lead={full_name === name ? undefined : full_name} jwNote={showsJwNote}>
   <dl slot="header-details" class="profile-facts" style={`--tradition-color: var(${color})`}>
     {family && (
       <div>
