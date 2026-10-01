@@ -9,7 +9,7 @@ task's state.
 
 - **M26 — authorized delivery** (`docs/tasks/site-m26-orthodox-edition.md`): implemented and verified, with 15 foundations, 105 assessments, 13 disputed questions and 12 legacy topics recorded in the correction register. Orthodoxy is fixed first; Catholicism and Jehovah's Witnesses are the default comparison choices. The owner authorized one consolidated commit and push on 2026-09-27. The delivery gate passed 114 tests; the existing GitHub Pages workflow records deployment success separately. Independent theological acceptance is not claimed.
 
-- **M33 — detailed analysis of Jehovah's Witnesses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): implemented 2026-10-01, awaiting owner review and commit. The Jehovah's Witnesses page (`/traditions/jw/`) carries 35 curated cards covering all 15 comparison topics and every retired pair topic (one card, «Проповедь и отчёты», is `todo`). The comparison is theses only, every column linking to the tradition's page; disputes moved to those pages. Navigation: «Религии мира» (home, opening with the Orthodox foundation block), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
+- **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01, not pushed. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
 
 ## Current baseline
 
@@ -41,9 +41,17 @@ and the canonical preview were preserved. See the M26 brief for verification.
 
 ## Backlog
 
-- Curated analysis cards (M33 format) for Catholicism, Protestantism,
-  Adventists, Latter-day Saints, Islam and Judaism; their profiles keep the
-  topic-by-topic positions with evidence until then.
+- **Non-literal excerpts in existing data** found by the M33 writers; each
+  keeps its analysis card `todo` until corrected in `src/data/matrix/` and
+  `src/data/orthodox-assessments.json`: Judaism (toldot.com divine-name
+  quote, Sefaria Genesis 1:2, toldot holidays page), Islam (Qur'an 17:85 and
+  4:157 wording, mosmechet.ru Eid spacing), Latter-day Saints (apostasy
+  quote on the wrong page, Holy Ghost wording, a stitched reference list),
+  Protestantism (Exodus 3:15 e/yo spelling). Also the Jehovah's Witnesses
+  «Проповедь и отчёты» card: the date of the reporting change is unsourced.
+- Data doubts to check: mosmechet.ru pages belong to the Historical Mosque,
+  not the Cathedral Mosque; «99 имён» in the Islam matrix has no Qur'anic
+  number; the Dabru Emet signatory count in views-of-others is unchecked.
 
 ## Known issues (not scheduled)
 
