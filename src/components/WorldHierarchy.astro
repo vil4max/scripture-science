@@ -1,155 +1,53 @@
 ---
-// How many people follow each religion (owner, 2026-10-01: show the world
-// population, every count and every share in full). Thirteen classes are
-// too many for labelled arcs, so the block is a headline figure, one
-// part-to-whole bar of the world and a table whose rows carry their own
-// bars; the table is also the accessible view of the bar.
-import data from '../data/world-hierarchy-2026.json';
+import composition from '../data/world-composition.json';
+import population from '../data/world-countries.json';
+import { atlasView, formatShare, WORLD_COLORS } from '../lib/worldAtlas';
 import { withBase } from '../lib/paths';
-
-const percent = (n: number) => `${n.toFixed(1).replace('.', ',')} %`;
-// Russian short counts: «2,67 млрд», «912 млн», «15,8 млн».
-const count = (n: number) => n >= 1e9
-  ? `${(n / 1e9).toFixed(2).replace('.', ',')} млрд`
-  : `${(n / 1e6).toFixed(n >= 1e8 ? 0 : 1).replace('.', ',')} млн`;
-const worldShare = (n: number) => (n / data.population) * 100;
-
-// World bar in descending order of size.
-const STACK_ORDER = ['christians', 'muslims', 'hindus', 'unaffiliated', 'folk', 'buddhists', 'other-religions', 'jews'];
-const stack = STACK_ORDER.map((id) => data.groups.find((group) => group.id === id)!);
-// Sub-rows: Christian branches (their estimates overlap, data.method: listed,
-// never summed) and the agnostics and atheists that make up the nonreligious.
-const rows = [...data.groups].sort((a, b) => b.count - a.count).map((group) => ({
-  ...group,
-  branches: group.id === 'christians'
-    ? [...data.branches].sort((a, b) => b.count - a.count)
-    : (group.subgroups ?? []).map((sub) => ({ ...sub, color: group.color })),
-}));
-const largest = rows[0].count;
-// Christian confessions under the Christian segment. Branch estimates
-// overlap, so the bar shows their proportions, not disjoint counts. Order
-// keeps neighbours apart (validator: light pass; dark protan dE 6.1, so
-// every wide segment is labelled and the table lists all of them).
-const CONFESSION_ORDER = ['orthodox', 'catholics', 'independents', 'protestants', 'unaffiliated-christians'];
-const confessions = CONFESSION_ORDER.map((id) => data.branches.find((branch) => branch.id === id)!);
-const describe = (label: string, n: number) => `${label}: около ${count(n)}, ${percent(worldShare(n))} населения мира`;
+const world = atlasView('religions');
+const christian = atlasView('christian');
+const populationCount = (population.countries.reduce((sum, country) => sum + country.total, 0) / 1e9).toFixed(2).replace('.', ',');
 ---
-<section class="world-hierarchy" aria-labelledby="hierarchy-title">
-  <h2 id="hierarchy-title">Религиозный состав населения мира, 2026 (оценка)</h2>
-  <div class="headline">
-    <p class="figure-label">Всё население мира, 2026 год</p>
-    <p class="figure">≈ {count(data.population)} человек</p>
-  </div>
-
-  <div class="bracket-row" aria-hidden="true" data-fit-labels>
-    {stack.map((group) => <span class="bracket" style={`flex-grow:${group.count}`} data-variants={JSON.stringify([
-      `${group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} ≈ ${count(group.count)} · ${percent(worldShare(group.count))}`,
-      `${group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} · ${percent(worldShare(group.count))}`,
-      percent(worldShare(group.count)),
-    ])}>{percent(worldShare(group.count))}</span>)}
-  </div>
-  <div class="world-bar" role="img" aria-label="Состав населения мира по религиям, 2026 год, приблизительная оценка; христиане разделены по конфессиям; числа — в таблице ниже">
-    {stack.map((group) => group.id === 'christians'
-      ? <span class="segment christian-group" style={`flex-grow:${group.count}`} data-hierarchy-id={group.id}>
-          {confessions.map((branch) => <span class="slice" style={`flex-grow:${branch.count};background:var(${branch.color})`} title={`${describe(branch.label, branch.count)}; внутри христиан — в пропорции ветвей`} data-hierarchy-id={branch.id}></span>)}
-        </span>
-      : <span class="segment" style={`flex-grow:${group.count};background:var(${group.color})`} title={describe(group.label, group.count)} data-hierarchy-id={group.id}></span>)}
-  </div>
-  <ul class="legend" aria-label="Христиане по конфессиям">
-    {confessions.map((branch) => <li><span class="chip" style={`background:var(${branch.color})`} aria-hidden="true"></span>{branch.label} <span class="legend-count">≈ {count(branch.count)}</span></li>)}
-  </ul>
-  <ul class="legend" aria-label="Остальные группы">
-    {stack.filter((group) => group.id !== 'christians').map((group) => <li><span class="chip" style={`background:var(${group.color})`} aria-hidden="true"></span>{group.id === 'unaffiliated' ? 'Нерелигиозные' : group.label} <span class="legend-count">{percent(worldShare(group.count))}</span></li>)}
-  </ul>
-  <p class="confessions-title">Христианский сегмент разделён по конфессиям в пропорции ветвей: их оценки частично пересекаются. Полные числа — в таблице.</p>
-
-  <table class="counts">
-    <caption class="visually-hidden">Численность последователей религий и их доля населения мира, 2026 год</caption>
-    <thead><tr><th scope="col">Религия</th><th scope="col" class="bar-col"><span class="visually-hidden">Доля, наглядно</span></th><th scope="col">Численность</th><th scope="col">Доля населения мира</th></tr></thead>
-    <tbody>
-      {rows.map((row) => <>
-        <tr data-hierarchy-id={row.id} title={describe(row.label, row.count)}>
-          <th scope="row"><span class="chip" style={`background:var(${row.color})`} aria-hidden="true"></span>{row.label}</th>
-          <td class="bar-col"><span class="bar" style={`width:${(row.count / largest) * 100}%;background:var(${row.color})`}></span></td>
-          <td>≈ {count(row.count)}</td>
-          <td>{percent(worldShare(row.count))}</td>
-        </tr>
-        {row.branches.map((branch) => <tr class="branch" data-hierarchy-id={branch.id} title={describe(branch.label, branch.count)}>
-          <th scope="row"><span class="chip" style={`background:var(${branch.color})`} aria-hidden="true"></span>{branch.label}</th>
-          <td class="bar-col"><span class="bar" style={`width:${(branch.count / largest) * 100}%;background:var(${branch.color})`}></span></td>
-          <td>≈ {count(branch.count)}</td>
-          <td>{percent(worldShare(branch.count))}</td>
-        </tr>)}
-      </>)}
-    </tbody>
-    <tfoot><tr><th scope="row">Население мира</th><td class="bar-col"></td><td>≈ {count(data.population)}</td><td>100 %</td></tr></tfoot>
+<section id="world" aria-labelledby="hierarchy-title">
+  <h2 id="hierarchy-title">Мир религий в целом</h2>
+  <p class="figure">≈ {populationCount} млрд <span>человек в сводке</span></p>
+  <p>Сначала сравним крупные группы. Все христиане здесь объединены: католики, протестанты и другие направления не добавляются к ним повторно.</p>
+  <table class="counts" data-population-summary="world">
+    <caption>Приблизительная численность и доля всего населения</caption>
+    <thead><tr><th scope="col">Группа</th><th scope="col">Численность</th><th scope="col">Доля</th></tr></thead>
+    <tbody>{world.rows.map((row) => <tr data-group={row.id}>
+      <th scope="row"><span class="chip" style={`background:var(${WORLD_COLORS[row.id]})`} aria-hidden="true"/>{row.label}<span class="track" aria-hidden="true"><span style={`width:${row.share}%;background:var(${WORLD_COLORS[row.id]})`}/></span></th>
+      <td>≈ {composition.find((group) => group.id === row.id)!.count}</td><td>{formatShare(row.share)}</td>
+    </tr>)}</tbody>
   </table>
-  <p class="note">Христианские ветви показаны внутри христиан, агностики и атеисты — внутри нерелигиозных. Оценки христианских ветвей частично пересекаются — часть людей учтена в нескольких ветвях, — поэтому сумма ветвей больше общего числа христиан. Источник: World Christian Database, Status of Global Christianity 2026; <a href={withBase('sources/#world-methodology')}>способ подсчёта</a>.</p>
 </section>
-
-<script>
-  // Fullest label that fits its segment: name + count + share, name + share,
-  // share only, or nothing for the smallest (the tooltip and table still have it).
-  const fit = (row: HTMLElement) => {
-    for (const label of row.querySelectorAll<HTMLElement>('.bracket')) {
-      const variants: string[] = JSON.parse(label.dataset.variants ?? '[]');
-      label.textContent = '';
-      for (const text of variants) {
-        label.textContent = text;
-        if (label.scrollWidth <= label.clientWidth) break;
-        label.textContent = '';
-      }
-    }
-  };
-  for (const row of document.querySelectorAll<HTMLElement>('[data-fit-labels]')) {
-    fit(row);
-    new ResizeObserver(() => fit(row)).observe(row);
-  }
-</script>
-
+<section id="christian-composition" aria-labelledby="christian-composition-title">
+  <h2 id="christian-composition-title">Внутри христианства</h2>
+  <p>Теперь меняем масштаб: 100 % — все христиане в отдельном исследовании Pew. Эти доли показывают внутреннее соотношение направлений; к мировым долям выше их прибавлять нельзя.</p>
+  <dl class="branches">{christian.rows.map((row) => <div data-group={row.id}>
+    <dt><span class="chip" style={`background:var(${WORLD_COLORS[row.id]})`} aria-hidden="true"/>{row.label}</dt>
+    <dd><span class="track" aria-hidden="true"><span style={`width:${row.share}%;background:var(${WORLD_COLORS[row.id]})`}/></span><strong>{formatShare(row.share)}</strong></dd>
+  </div>)}</dl>
+  <p class="note">Pew объединяет православных и древневосточные церкви в одну статистическую категорию. Это не утверждение об их церковном единстве. В «другие христианские направления» входят группы, называющие себя христианскими; православная оценка их учения дана в разборах.</p>
+  <p><a href={withBase('geography/')} data-carry-selection>Посмотреть распространение на карте →</a></p>
+</section>
+<p id="data-note" class="note">Приблизительная сводка по открытым источникам, доступным на 2026 год. Даты исходных оценок различаются; мировые доли и внутренний состав христианства показаны каждый в рамках своего исследования. <a href={withBase('sources/#map-method')} data-carry-selection>Источники, точные даты и способы подсчёта</a>. <a href={withBase('sources/#world-methodology')} data-carry-selection>Дополнительная оценка World Christian Database</a>.</p>
 <style>
-  .world-hierarchy { grid-column: 1 / -1; --world-independent: #3979a8; --world-christians-unaffiliated: #a39484; }
-  h2 { margin: 0 0 16px; }
-  .headline { margin-bottom: 14px; }
-  .figure { margin: 4px 0 0; font-size: 40px; font-weight: 700; line-height: 1.1; }
-  .figure-label { margin: 0; color: var(--muted); font-size: 16px; }
-  .world-bar { display: flex; gap: 2px; height: 28px; }
-  .confessions-title { margin: 0 0 24px; font-size: 14px; color: var(--muted); }
-  /* One labelled line over each world segment, aligned with it (same order,
-     growth and gap); the script shows the fullest label that fits. */
-  .bracket-row { display: flex; gap: 2px; height: auto; margin-bottom: 4px; }
-  .bracket { flex-basis: 0; min-width: 0; overflow: hidden; box-sizing: border-box; padding-bottom: 3px; border-bottom: 2px solid var(--muted); font-size: 14px; font-weight: 700; white-space: nowrap; }
-  .bracket:empty { border-bottom-color: transparent; }
-  .christian-group { display: flex; gap: 1px; background: var(--bg); }
-  .slice { flex-basis: 0; min-width: 2px; }
-  .christian-group .slice:first-child { border-radius: 4px 0 0 4px; }
-  .legend { display: flex; flex-wrap: wrap; gap: 4px 18px; margin: 10px 0 6px; padding: 0; list-style: none; font-size: 14px; }
-  .legend .chip { margin-right: 6px; }
-  .legend-count { color: var(--muted); }
-  .segment { min-width: 2px; flex-basis: 0; }
-  .segment:first-child { border-radius: 4px 0 0 4px; }
-  .segment:last-child { border-radius: 0 4px 4px 0; }
-  .counts { width: 100%; border-collapse: collapse; font-size: 16px; }
-  .counts th, .counts td { padding: 7px 10px; border-bottom: 1px solid var(--line); text-align: right; font-weight: 400; white-space: nowrap; }
-  .counts th[scope="row"], .counts thead th:first-child { text-align: left; }
-  .counts thead th { color: var(--muted); font-size: 14px; }
-  .counts tbody tr:hover { background: var(--surface); }
-  .bar-col { width: 45%; }
-  .counts td.bar-col { text-align: left; }
-  .bar { display: block; height: 12px; min-width: 2px; border-radius: 0 4px 4px 0; }
-  .chip { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 8px; }
-  .counts .branch th { padding-left: 34px; color: var(--muted); }
-  .counts .branch td { color: var(--muted); }
-  .counts .branch .bar { height: 8px; }
-  .counts tfoot th, .counts tfoot td { font-weight: 700; border-bottom: none; }
-  .note { max-width: 90ch; font-size: 14px; color: var(--muted); }
-  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
-
-  @media (max-width: 760px) {
-    .bar-col { display: none; }
-    .counts th, .counts td { padding: 8px 4px; }
-    .counts th { white-space: normal; overflow-wrap: anywhere; }
-    .counts .branch th { padding-left: 16px; }
-    .counts thead th:last-child { max-width: 80px; }
-  }
+  section { scroll-margin-top: 24px; }
+  p { max-width: 78ch; }
+  .figure { font-size: 36px; font-weight: 700; margin: 14px 0; }
+  .figure span { font-size: 17px; font-weight: 400; color: var(--muted); }
+  .counts { width: 100%; border-collapse: collapse; font-size: 17px; }
+  caption { text-align: left; margin: 8px 0 16px; color: var(--muted); font-size: 15px; }
+  th, td { padding: 14px 10px; border-bottom: 1px solid var(--line); text-align: right; font-weight: 400; }
+  th:first-child { text-align: left; width: 60%; } td { white-space: nowrap; }
+  thead { color: var(--muted); font-size: 14px; }
+  .chip { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 8px; }
+  .track { display: block; height: 10px; background: color-mix(in srgb, var(--muted) 12%, transparent); border-radius: 3px; overflow: hidden; }
+  th .track { margin-top: 10px; }
+  .track > span { display: block; height: 100%; }
+  .branches { display: grid; gap: 20px; max-width: 800px; }
+  dt { margin-bottom: 8px; } dd { display: grid; grid-template-columns: minmax(0, 1fr) 80px; align-items: center; gap: 16px; margin: 0; }
+  dd strong { text-align: right; font-variant-numeric: tabular-nums; }
+  .note { font-size: 15px; color: var(--muted); }
+  @media (max-width: 760px) { th, td { padding: 12px 4px; font-size: 16px; } th:first-child { width: auto; } .figure { font-size: 30px; } }
 </style>

@@ -1,66 +1,51 @@
 ---
-import FamilyOverview from '../components/FamilyOverview.astro';
-import TraditionCard from '../components/TraditionCard.astro';
-import { profileHref } from '../lib/analysis';
-import { getOrderedMatrix } from '../lib/content';
-import OtherTraditions from '../components/OtherTraditions.astro';
-import WorldHierarchy from '../components/WorldHierarchy.astro';
-import WorldAtlas from '../components/WorldAtlas.astro';
 import { withBase } from '../lib/paths';
+import { HOME_SECTION_TARGETS } from '../lib/homeSections';
 import SectionPage from '../layouts/SectionPage.astro';
-
-const orthodoxy = (await getOrderedMatrix()).find((entry) => entry.id === 'orthodoxy')!;
+const chapters = [
+  { path: 'religions/', title: 'Знакомство с религиями', text: 'Кто есть кто, что традиции говорят о себе и какие исторические связи их соединяют.' },
+  { path: 'timeline/', title: 'Возникновение и развитие', text: 'Как складывались религии и движения, что происходило раньше и в какой исторической среде.' },
+  { path: 'numbers/', title: 'Современный религиозный мир', text: 'Масштабы религий и внутренний состав христианства — в понятных числах.' },
+  { path: 'geography/', title: 'Религии на карте', text: 'Где живут их последователи и как различается состав стран.' },
+  { path: 'differences/', title: 'Сходства и основные различия', text: 'Общие корни и понятия, разные источники авторитета и разные ответы на главные вопросы.' },
+  { path: 'compare/', title: 'Подробное сравнение', text: 'Учение Православной Церкви, позиция другой традиции и православный ответ — по темам.' },
+];
 ---
-
-<SectionPage
-  title="Православный взгляд на религии мира"
-  lead="Православное учение → Что говорят о себе другие религии → Православная оценка различий."
->
-  <p class="scope-note">Сайт исходит из истинности православной веры. Православное учение изложено по Священному Писанию, Священному Преданию и церковным вероучительным документам. Другие религии и движения описаны по их собственным источникам; различия сопровождаются православной оценкой.</p>
-  <nav class="entry-actions" aria-label="С чего начать">
-    <a href={withBase('search/')} data-carry-selection><strong>Изучить вопрос</strong><span>Найти тему и православный разбор</span></a>
-    <a href={withBase('compare/')} data-carry-selection><strong>Сравнить учения</strong><span>Православие и две выбранные традиции</span></a>
-    <a href="#traditions"><strong>Выбрать традицию</strong><span>История, самоописание и православная оценка</span></a>
-  </nav>
-  <div class="overview-nav" role="navigation" aria-label="На этой странице">
-    <a href="#foundation">Основание</a>
-    <a href="#world">Масштабы</a>
-    <a href="#geography">География</a>
-    <a href="#traditions">Авраамические религии</a>
-    <a href="#other-traditions">Другие религии</a>
-  </div>
+<SectionPage title="Православный взгляд на религии мира" lead="От первого знакомства — к пониманию истории, связей и различий.">
   <section id="foundation" aria-labelledby="foundation-title">
-    <h2 id="foundation-title">Основание: Православная Церковь</h2>
-    <p class="foundation-intro">Все остальные религии и движения на сайте рассматриваются в сравнении с православным учением.</p>
-    <details class="foundation-details"><summary>Краткие сведения: история, Писание и устройство</summary><TraditionCard tradition={orthodoxy} color="--t-orthodoxy" headingLevel={3} /></details>
-    <p><a href={profileHref('orthodoxy')}>Православная вера: учение по темам, хронология, устройство →</a></p>
+    <h2 id="foundation-title">Откуда мы смотрим</h2>
+    <p>Сайт исходит из истинности православной веры. Начнём с общей картины: познакомимся с религиями, увидим их исторические связи, сходства и различия. Затем перейдём к вопросам, которые требуют внимательного разбора.</p>
+    <p>Православное учение служит основанием сравнения. Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как устроен разбор</a>.</p>
+    <a class="start" href={withBase('religions/')} data-carry-selection>Начать знакомство →</a>
   </section>
-  <div id="world"><WorldHierarchy /></div>
-  <div id="geography"><WorldAtlas /></div>
-
-  <FamilyOverview />
-  <OtherTraditions />
+  <section aria-labelledby="chapters-title"><h2 id="chapters-title">Маршрут чтения</h2>
+    <ol class="chapters">{chapters.map((chapter) => <li><a href={withBase(chapter.path)} data-carry-selection>{chapter.title}</a><p>{chapter.text}</p></li>)}</ol>
+  </section>
+  <p class="direct">Уже есть конкретный вопрос? <a href={withBase('search/')} data-carry-selection>Найти разбор</a>. Основание для углублённого чтения — <a href={withBase('orthodoxy/')} data-carry-selection>православное учение по темам</a>.</p>
+  {Object.entries(HOME_SECTION_TARGETS).map(([id, target]) => <p id={id} class="legacy-target">Раздел перенесён: <a href={withBase(target)} data-carry-selection>открыть на отдельной странице →</a></p>)}
 </SectionPage>
-
+<script>
+  import { HOME_SECTION_TARGETS } from '../lib/homeSections';
+  import { withBase } from '../lib/paths';
+  const followSection = () => {
+    const target = HOME_SECTION_TARGETS[location.hash.slice(1)];
+    if (!target) return;
+    const url = new URL(withBase(target), location.origin);
+    url.search = location.search;
+    location.replace(url.href);
+  };
+  followSection();
+  addEventListener('hashchange', followSection);
+</script>
 <style>
-  .entry-actions { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
-  .entry-actions a { padding: 16px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; text-decoration: none; }
-  .entry-actions a:hover { border-color: var(--focus); }
-  .entry-actions strong { display: block; font-size: 19px; }
-  .entry-actions span { display: block; margin-top: 6px; font-size: 15px; color: var(--muted); }
-  .foundation-details { margin-top: 16px; }
-  .foundation-details summary { cursor: pointer; color: var(--focus); font-size: 15px; margin-bottom: 12px; }
-  .overview-nav { display: flex; flex-wrap: wrap; gap: 12px 24px; font-size: 15px; }
-  .overview-nav a { color: var(--muted); text-underline-offset: 4px; }
-  #foundation { padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 12px; scroll-margin-top: 24px; }
-  #foundation h2 { margin: 0 0 8px; }
-  .foundation-intro { margin: 0 0 16px; color: var(--muted); }
-  #world, #geography { min-width: 0; scroll-margin-top: 24px; }
-  #geography { border-top: 1px solid var(--line); padding-top: 32px; }
-
-  @media (max-width: 760px) {
-    .entry-actions { grid-template-columns: minmax(0, 1fr); }
-    .entry-actions a { padding: 14px 16px; }
-    #foundation { padding: 18px 16px; }
-  }
+  #foundation { max-width: 78ch; border-left: 4px solid var(--t-orthodoxy); padding-left: 24px; }
+  .start { display: inline-flex; min-height: 48px; align-items: center; padding: 8px 20px; border: 1px solid var(--focus); border-radius: 8px; margin-top: 8px; font-weight: 700; }
+  .chapters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; padding: 0; list-style: none; counter-reset: chapter; }
+  .chapters li { counter-increment: chapter; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .chapters a { font-size: 20px; font-weight: 700; text-underline-offset: 4px; }
+  .chapters a::before { content: counter(chapter) '. '; color: var(--muted); }
+  .chapters p { margin: 10px 0 0; font-size: 16px; color: var(--muted); }
+  .direct { max-width: 78ch; }
+  .legacy-target { display: none; } .legacy-target:target { display: block; }
+  @media (max-width: 760px) { .chapters { grid-template-columns: minmax(0, 1fr); } #foundation { padding-left: 16px; } }
 </style>

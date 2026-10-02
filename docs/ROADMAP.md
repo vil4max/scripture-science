@@ -7,10 +7,25 @@ task's state.
 
 ## In progress
 
-No implementation iteration is currently open. Remaining evidence and
-independent editorial review are listed below.
+No implementation iteration is currently open. The reading journey and
+demographic consistency work is verified; the owner authorized remote delivery
+on 2026-10-02. GitHub Actions records the publication result for each commit.
 
 ## Current baseline
+
+**Progressive reading and demographic consistency**
+(`docs/tasks/site-demographic-consistency.md`, 2026-10-01): a short homepage
+leads to introduction, origins/development, numbers, map, similarities and
+differences, and detailed comparison. Four new pages separate these levels.
+Christians are one world category; internal Christian estimates have their own
+denominator and never project older shares onto newer populations. Original
+dates remain in Sources, with one approximate-data note in the reading route.
+Legacy fragments and selection parameters survive. Chronologies use Byzantine
+creation years before AD 1 and Christian-era notation thereafter, with an
+explicit calendar key and unchanged source excerpts. Node.js 26 verify passes
+155 Node tests, two Python tests and 22 pages, with zero Astro diagnostics.
+Desktop and iPhone viewport checks pass; physical Safari was not tested.
+The owner authorized committing and pushing this iteration on 2026-10-02.
 
 **Reading and evidence improvements** (`docs/tasks/site-reading-improvements.md`,
 2026-10-01): all five owner-authorized iterations are implemented and verified.
@@ -22,9 +37,7 @@ URLs and comparison choices. Node.js 26 `npm run verify`: 150 Node tests, two
 Python tests, 18 pages and zero Astro diagnostics; links and migration fidelity
 pass. Browser checks cover 375, 390, 430, 1280 and 1440 px and both themes;
 physical iPhone/Safari testing is not claimed. Sources HTML is 5,075,730 bytes
-(489,379 gzip), retaining all evidence. Iterations 1–4 are committed, pushed
-and successfully deployed; the iPhone iteration follows the same authorized
-publication workflow.
+(489,379 gzip), retaining all evidence. All five iterations are committed, pushed and successfully deployed.
 
 **M33 — detailed analyses and thesis comparison** (`docs/tasks/site-m33-jw-analysis.md`): committed 2026-10-01 and included in the owner-authorized push. Every compared tradition's page carries curated analysis cards (Jehovah's Witnesses 35, Catholicism 31, Protestantism 26, Judaism, Islam, Latter-day Saints and Adventists 25 each), each covering all 15 topics and every comparison proof. The comparison is theses only; disputes moved to tradition pages. Navigation: «Религии мира» (home, with the Orthodox foundation block and the religions table), «Православная вера» (`/orthodoxy/`), «Сравнение», «История», «Священное Писание».
 

@@ -1,0 +1,16 @@
+---
+import SectionPage from '../layouts/SectionPage.astro';
+import JourneyNav from '../components/JourneyNav.astro';
+import FamilyOverview from '../components/FamilyOverview.astro';
+import OtherTraditions from '../components/OtherTraditions.astro';
+import { withBase } from '../lib/paths';
+---
+<SectionPage title="Знакомство с религиями" lead="Начнём с названий и смысла: что каждая традиция говорит о себе и как её учение рассматривается с православной позиции.">
+  <JourneyNav />
+  <p>Основание нашего рассмотрения — <a href={withBase('orthodoxy/')} data-carry-selection>православная вера</a>. Здесь достаточно понять общий круг традиций. Краткие сведения раскрываются в карточках; названия ведут к подробным разборам.</p>
+  <nav class="contents" aria-label="Группы религий"><a href="#traditions">Авраамические религии</a> · <a href="#other-traditions">Другие религии</a></nav>
+  <FamilyOverview />
+  <OtherTraditions />
+  <JourneyNav footer />
+</SectionPage>
+<style>.contents a { display: inline-flex; min-height: 44px; align-items: center; }</style>

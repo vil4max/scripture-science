@@ -10,7 +10,7 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
 <section id="traditions" aria-labelledby="families-title" class="families">
   <h2 id="families-title">Авраамические религии</h2>
   <p class="order-note">Основные традиции — по времени возникновения, от древних к более поздним.</p>
-  <p class="intro">{overview.introduction.text}</p>
+  <aside class="connections"><h3>Что связывает эти традиции</h3><p class="intro">{overview.introduction.text}</p></aside>
   <section class="family" aria-labelledby="judaism-title">
     <h3 id="judaism-title">Иудаизм</h3>
     <p class="intro">{overview.judaism.text}</p>
@@ -18,12 +18,13 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
   </section>
   <section class="family christian" aria-labelledby="christian-title">
     <h3 id="christian-title">Христианство и связанные с ним движения</h3>
-    <aside class="development-note" aria-labelledby="development-title">
-      <h4 id="development-title">Как развивается линия разделений</h4>
+    <details class="development-note">
+      <summary id="development-title">Исторические связи и появление новых движений</summary>
       <p>{overview.christianDevelopment.text}</p>
-    </aside>
+    </details>
     {overview.groups.map((group) => <section class="doctrine-group" data-doctrine-group={group.id} aria-labelledby={`${group.id}-title`}>
       <h4 id={`${group.id}-title`}>{group.title}</h4>
+      {group.id === 'trinitarian' && <p class="connection-label">Общее исповедание и границы сходства</p>}
       <p class="intro">{group.text}</p>
       <div class="cards">{group.ids.map((id) => <TraditionCard tradition={card(id)} color={color(id)} headingLevel={5} introduceCommonName />)}</div>
     </section>)}
@@ -36,12 +37,15 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
 </section>
 <style>
   .order-note { color: var(--muted); font-size: 15px; margin: 8px 0 20px; }
+  .connections { border-left: 3px solid var(--focus); padding: 4px 20px; background: var(--surface); }
+  .connections h3 { font-size: 21px; }
+  .connection-label { color: var(--focus); font-weight: 700; font-size: 15px; }
   .intro { max-width: 80ch; }
   .family { margin-top: 36px; }
   .family > h3 { font-size: 30px; margin: 0 0 12px; }
   .christian { padding: 24px; border: 1px solid var(--line); border-left: 4px solid var(--focus); border-radius: 12px; }
   .development-note { margin: 20px 0 28px; padding: 20px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
-  .development-note h4 { font-size: 20px; }
+  .development-note summary { font-size: 20px; cursor: pointer; color: var(--focus); }
   .doctrine-group { margin-top: 28px; }
   .doctrine-group + .doctrine-group { border-top: 1px solid var(--line); padding-top: 28px; }
   h4 { font-size: 23px; margin: 0 0 12px; }

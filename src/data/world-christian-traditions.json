@@ -3,7 +3,7 @@
  "title": "Pew Research Center, Global Christianity: A Report on the Size and Distribution of the World's Christian Population (2011), table \"Christian Traditions by Region and Country\"",
  "url": "https://www.pewresearch.org/wp-content/uploads/sites/20/2011/12/Christianity-fullreport-web.pdf",
  "accessed": "2026-10-01",
- "note": "Estimated 2010 Christians by tradition, rounded by Pew; a value printed as \"< N\" is stored as N/2. Used only for the share of each tradition within a country's Christians; the number of Christians is the 2020 count in world-countries.json. Macao uses the Macau row; Curaçao, which Pew counted inside the former Netherlands Antilles, uses that row.",
+ "note": "Estimated 2010 Christians by tradition, rounded by Pew; a value printed as \"< N\" is stored as N/2. Used only within the original Christian population of this historical study, without projection onto 2020 counts. Macao uses the Macau row. The Curaçao record retains the former Netherlands Antilles proxy from the earlier import for provenance; the current map excludes that proxy because it is not an island-specific estimate.",
  "traditions": [
   "catholics",
   "protestants",

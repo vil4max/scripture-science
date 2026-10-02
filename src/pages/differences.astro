@@ -1,0 +1,30 @@
+---
+import SectionPage from '../layouts/SectionPage.astro';
+import JourneyNav from '../components/JourneyNav.astro';
+import { getOrderedMatrix } from '../lib/content';
+import { withBase } from '../lib/paths';
+import overview from '../data/family-overview.json';
+const orthodox = (await getOrderedMatrix()).find((entry) => entry.id === 'orthodoxy')!;
+const questions = [
+  { topic: 'authority', title: 'На каком основании принимают учение?', intro: 'Начнём с источника авторитета. Чтобы понять ответ традиции, выясним, на какие тексты и чьё толкование она опирается.' },
+  { topic: 'god', title: 'Что понимают под словом «Бог»?', intro: 'Одинаковое слово ещё не означает одинаковое учение. Сопоставим содержание утверждений, начиная с православного исповедания.' },
+  { topic: 'salvation', title: 'В чём видят спасение человека?', intro: 'Следующий вопрос связывает веру с жизнью: от чего спасается человек и как понимается его отношение к Богу?' },
+  { topic: 'organisation', title: 'Что считают Церковью?', intro: 'Здесь рассмотрим связь веры, Предания и церковного единства. Устройство общины нужно читать вместе с её учением о Церкви.' },
+];
+---
+<SectionPage title="Сходства и основные различия" lead="Сначала увидим связи и общие понятия, затем разберёмся, почему ответы на главные вопросы расходятся.">
+  <JourneyNav />
+  <section id="connections"><h2>Что связывает традиции</h2><h3>Общие имена и историческая память</h3><p>{overview.introduction.text}</p><h3>Общее утверждение — следующий шаг к сравнению</h3><p>{overview.groups.find((group) => group.id === 'trinitarian')!.text}</p><p><a href={withBase('sources/#overview-notes')} data-carry-selection>Источники этих сопоставлений</a> · <a href={withBase('timeline/')} data-carry-selection>Исторические связи</a></p></section>
+  <section><h2>Как искать причину различий</h2><p>Мы уже познакомились с традициями, проследили их историю и увидели распространение. Теперь вернёмся к смыслу. В каждом вопросе сначала прочитаем православное основание, затем — собственное утверждение другой традиции, после — православный разбор расхождения.</p><p>Для понимания различия полезно проверить три вещи: одинаково ли понимаются слова, признаётся ли один и тот же источник авторитета и какое событие или спор объясняет возникновение позиции. Согласие в одном утверждении ещё не означает согласия во всём учении.</p></section>
+  {questions.map((question) => {
+    const position = orthodox.data.positions.find((entry) => entry.topic === question.topic)!;
+    return <section id={question.topic}>
+      <h2>{question.title}</h2><p>{question.intro}</p>
+      <div class="foundation"><h3>Православное основание</h3><p>{position.summary}</p><p class="authority">{position.doctrine?.authority}</p></div>
+      <p><a href={withBase(`compare/#topic-${question.topic}`)} data-carry-selection>Сопоставить с выбранными традициями →</a> · <a href={withBase(`sources/#sources-${question.topic}`)} data-carry-selection>Источники</a></p>
+    </section>;
+  })}
+  <p>Дальше можно выбрать две традиции для сравнения или <a href={withBase('search/')} data-carry-selection>найти конкретный вопрос</a>. В подробных разборах отдельно показаны учение Православной Церкви, позиция другой традиции и православный ответ.</p>
+  <JourneyNav footer />
+</SectionPage>
+<style>section { max-width: var(--measure); scroll-margin-top: 24px; } .foundation { border-left: 3px solid var(--t-orthodoxy); padding: 4px 20px; background: var(--surface); } h3 { font-size: 18px; } .authority { color: var(--muted); font-size: 15px; }</style>

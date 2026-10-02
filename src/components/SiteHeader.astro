@@ -1,21 +1,23 @@
 ---
-// Sitewide sidebar (docs/tasks/site-m13-sidebar-sections.md): the site's
-// sections as pages, the current one highlighted, and the theme switch.
-// Desktop keeps the flat sidebar. On narrow screens, the same links use
-// an expandable menu (owner requested iPhone reading, 2026-10-01).
+// The reading route goes from introduction to history and present-day data;
+// detailed questions remain directly accessible from the same mobile menu.
 import ThemeSwitch from './ThemeSwitch.astro';
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
 // Orthodoxy is the site's foundation, so it has its own item; the other
-// traditions' pages open from «Религии мира» and the comparison
+// traditions' pages open from the introduction and comparison
 // (owner, 2026-10-01).
 const sections = [
-  { path: '', label: 'Религии мира' },
+  { path: '', label: 'Начало' },
+  { path: 'religions/', label: 'Знакомство с религиями' },
+  { path: 'timeline/', label: 'Возникновение и история' },
+  { path: 'numbers/', label: 'Мир в цифрах' },
+  { path: 'geography/', label: 'Религии на карте' },
+  { path: 'differences/', label: 'Сходства и различия' },
   { path: 'orthodoxy/', label: 'Православная вера' },
-  { path: 'compare/', label: 'Сравнение' },
-  { path: 'timeline/', label: 'История' },
+  { path: 'compare/', label: 'Подробное сравнение' },
   { path: 'bible/', label: 'Священное Писание' },
 ];
 // The pages of the other traditions, by age, in short names (owner,
@@ -40,7 +42,7 @@ const reference = [
 ];
 
 // Compare paths with one trailing slash, so "/religion-map" and
-// "/religion-map/" both mark «Религии мира» as current.
+// "/religion-map/" both mark the homepage as current.
 const normalise = (p: string) => p.replace(/\/*$/, '/');
 const here = normalise(Astro.url.pathname);
 // The detailed pair documents are part of «Сравнение»

@@ -105,5 +105,5 @@ test('sinceLines shows each dated step on its own line, Pentecost first for the 
     'ок. 33 г. · Пятидесятница',
     '1054 г. · разделение с Западной (Католической) Церковью',
   ]);
-  assert.deepEqual(sinceLines('622 г. н.э. · Хиджра'), ['622 г. н.э. · Хиджра']);
+  assert.deepEqual(sinceLines('622 г. от Р. Х. · Хиджра'), ['622 г. от Р. Х. · Хиджра']);
 });

@@ -255,7 +255,12 @@ export function yearFromCreation(year: number, fromSeptember = false): number {
 
 /** A year before or after the Nativity, in the site's Russian wording. */
 export function formatYearAd(year: number): string {
-  return year < 0 ? `${-year} г. до Р.Х.` : `${year} г.`;
+  if (year === 0) throw new Error('There is no year 0 in historical dating');
+  return year < 0 ? `${-year} г. до Р. Х.` : `${year} г. от Р. Х.`;
+}
+
+export function formatHistoricalYear(year: number): string {
+  return year < 0 ? `${yearFromCreation(year)} г. от С. М.` : formatYearAd(year);
 }
 
 // --- Chronicle rows (M11) --------------------------------------------------
@@ -353,7 +358,7 @@ export function buildChronicleRows(lineage: Lineage, biblical: readonly { id: st
       year: o.from,
       approx: o.approx,
       title: o.label,
-      text: o.description ?? (o.to !== undefined ? `до ${o.approx ? 'ок. ' : ''}${formatYearAd(o.to)}` : ''),
+      text: o.description ?? (o.to !== undefined ? `до ${o.approx ? 'ок. ' : ''}${formatHistoricalYear(o.to)}` : ''),
       proof: o.proof[0],
       rank: 0,
     });

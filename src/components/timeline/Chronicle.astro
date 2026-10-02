@@ -9,6 +9,7 @@ const contextByRow = new Map(chapters.filter((chapter) => chapter.timelineRow &&
 import {
   assignBranchColumns,
   buildChronicleRows,
+  formatHistoricalYear,
   parseLineage,
   validateReferences,
   type ChronicleRow,
@@ -18,7 +19,6 @@ import {
 const lineage = parseLineage(lineageData);
 validateReferences(lineage);
 const rows = buildChronicleRows(lineage, biblical).filter((row) => row.kind !== 'epoch');
-const formatYear = (year: number) => year < 0 ? `${-year} г. до н. э.` : `${year} г. н. э.`;
 const branches = assignBranchColumns(lineage, rows);
 const nodeById = new Map(lineage.nodes.map((n) => [n.id, n]));
 
@@ -181,7 +181,7 @@ const today = new Date();
 ---
 
 <div class="chronicle" data-chronicle>
-  <p class="biblical-key"><strong>От Сотворения мира — по библейской линии.</strong> Для этой шкалы принята византийская хронология, представленная в «Хронологии Септуагинты». Вера в сотворение мира Богом — церковное учение; конкретное вычисление лет от Сотворения мира — хронологическая традиция.</p>
+  <p class="biblical-key"><strong>Как читать даты.</strong> Ранние события обозначены годами от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). Для библейской линии использована «Хронология Септуагинты». Вера в сотворение мира Богом — церковное учение; конкретное вычисление лет от Сотворения мира — хронологическая традиция. Для дат без месяца принят отсчёт января–августа; с сентября византийский год увеличивается на один.</p>
   <div class="testament-key" aria-label="Библейское повествование">
     <span class="old">Ветхий Завет · от Сотворения мира</span>
     <span class="new">Новый Завет · от Рождества Христова</span>
@@ -198,7 +198,7 @@ const today = new Date();
           <li class={`row ${row.kind}${index === 0 ? ' start' : ''}${row.id === 'catholicism' ? ' major-schism' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
             <span class="ad" id={row.id === 'early-christianity' ? 'history-orthodoxy' : undefined}>
               {about}
-              {formatYear(row.year)}
+              {formatHistoricalYear(row.year)}
             </span>
             <span class="graph" aria-hidden="true">
               {segmentsAt(index).map((s) => (
@@ -223,7 +223,7 @@ const today = new Date();
               {testamentOf(row) && <span class="biblical-label">{testamentOf(row) === 'old' ? 'Ветхий Завет' : 'Новый Завет'}</span>}
               {row.kind === 'node' && <span class="chip" style={`background:${chipColorOfNode(nodeById.get(row.id)!)}`} aria-hidden="true" />}
               <b class="title">{row.title}</b>
-              {row.text && <span class="event"> — {row.text.replaceAll('до Р.Х.', 'до н. э.')}</span>}
+              {row.text && <span class="event"> — {row.text}</span>}
               {row.todo && <span class="todo"> (уточняется)</span>}
               {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
               {context && <span class="context">{context.timelineText}</span>}
@@ -238,7 +238,7 @@ const today = new Date();
       })
     }
     <li class="divider now" id="history-today">
-      <span class="ad">{formatYear(today.getFullYear())}</span>
+      <span class="ad">{formatHistoricalYear(today.getFullYear())}</span>
       <span class="graph" aria-hidden="true">
         {nowSegments.map((s) => (
           <span class={`seg top-dot${s.trunk ? ' main-trunk' : ''}`} data-hl={s.hl} style={`left:${s.x - (s.trunk ? 2.5 : 1)}px; background:${s.color}; --dot-y:${DOT_Y}px`} />
@@ -285,7 +285,7 @@ const today = new Date();
   .ad {
     font-variant-numeric: tabular-nums;
     text-align: right;
-    white-space: nowrap;
+    white-space: normal;
   }
 
   .ad {

@@ -29,7 +29,7 @@ const family = getFamilyByTradition(tradition.id);
 <article class="card">
   <Heading class="card-title">
     <span class="chip" style={`background:var(${color})`} aria-hidden="true"></span>
-    <a class="profile-link" href={profileHref(tradition.id)}>{name}{introduceCommonName && common_name ? ` (${common_name})` : ''}</a>
+    <a class="profile-link" href={profileHref(tradition.id)} data-carry-selection>{name}{introduceCommonName && common_name ? ` (${common_name})` : ''}</a>
     {withJwFootnote && (
       <sup>
         <a href={`#${JW_NOTE_ID}`}>*</a>
@@ -41,6 +41,8 @@ const family = getFamilyByTradition(tradition.id);
   </Heading>
   {full_name !== name && <p class="full-name">{full_name}</p>}
 
+  <details class="card-details">
+  <summary>Познакомиться: история, Писание и самоописание</summary>
   <div class="card-body">
   <TraditionImage id={tradition.id} compact />
   <dl>
@@ -85,9 +87,11 @@ const family = getFamilyByTradition(tradition.id);
     )}
   </dl>
   </div>
+  </details>
 </article>
 
 <style>
+  .card-details summary { cursor: pointer; color: var(--focus); min-height: 44px; display: list-item; align-content: center; margin-top: 12px; }
   .card-body { display: grid; grid-template-columns: 220px minmax(0,1fr); gap: 24px; margin-top: 20px; align-items: start; }
   .card-body dl { margin-top: 0; }
   .card {

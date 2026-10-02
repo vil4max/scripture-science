@@ -1,115 +1,147 @@
 ---
 import data from '../data/world-countries.json';
 import shapes from '../data/world-shapes.json';
-import groups from '../data/world-composition.json';
-import { TRADITION_LABELS, WORLD_COLORS, largestGroup, formatShare, splitGroups, worldRows } from '../lib/worldAtlas';
+import { atlasLegend, atlasView, WORLD_COLORS } from '../lib/worldAtlas';
+import { withBase } from '../lib/paths';
 const byId = new Map(data.countries.map((country) => [country.id, country]));
-const labels = new Map<string, string>([...groups.map((group): [string, string] => [group.id, group.label]), ...Object.entries(TRADITION_LABELS)]);
-// Each country coloured by its largest group, Christians split by tradition.
-const largestOf = (country: { id: string; counts: number[] }) => {
-  const split = splitGroups(data.groups, country);
-  return largestGroup(split.counts, split.ids);
-};
-const rows = worldRows(groups, data);
-const legendGroups = [
-  ...Object.entries(TRADITION_LABELS).filter(([id]) => id !== 'other-christians').map(([id, label]) => ({ id, label })),
-  ...groups.filter((group) => group.id !== 'christians'),
-  { id: 'other-christians', label: TRADITION_LABELS['other-christians'] },
-];
 const ordered = [...data.countries].sort((a, b) => a.name.localeCompare(b.name, 'ru'));
+const legend = atlasLegend('religions');
 ---
 <section class="atlas" aria-labelledby="atlas-title">
   <h2 id="atlas-title">Где распространены религии</h2>
-  <p class="key">Последние глобально сопоставимые данные — за 2020 год; отчёт опубликован Pew Research Center в 2025 году. Цвет — крупнейшая группа населения, даже если её доля меньше половины; христиане разделены на католиков, протестантов, православных и других по оценке Pew на 2010 год. Площадь страны не показывает число верующих.</p>
+  <fieldset class="modes" hidden>
+    <legend>Что показать на карте</legend>
+    <label><input type="radio" name="atlas-mode" value="religions" checked /> Религии в целом</label>
+    <label><input type="radio" name="atlas-mode" value="christian" /> Христианские направления</label>
+  </fieldset>
+  <p class="key" id="atlas-key">Цвет — крупнейшая религиозная группа среди всех жителей страны, даже если её доля меньше половины. Христиане объединены. Площадь страны не показывает число верующих.</p>
+  <p class="key" id="christian-scope" hidden>Категория «Православные и древневосточные церкви» объединена в статистике Pew. Она не означает церковного единства. Доли внутри христианства взяты из отдельного исследования.</p>
   <svg viewBox="0 0 720 300" aria-labelledby="map-title map-desc" role="group">
-    <title id="map-title">Крупнейшие религиозные группы по странам, 2020 год</title>
-    <desc id="map-desc">Выберите страну на карте или в списке под ней. Штриховка: нет сопоставленных данных. Границы — схематическая подложка Natural Earth.</desc>
+    <title id="map-title">Крупнейшие религиозные группы по странам</title>
+    <desc id="map-desc">Выберите страну на карте или в списке под ней. Штриховка: нет сопоставленных данных или нет единственной крупнейшей группы. Границы — схематическая подложка Natural Earth.</desc>
     <defs><pattern id="no-data" width="5" height="5" patternUnits="userSpaceOnUse"><rect width="5" height="5" fill="var(--surface)"/><path d="M0 0L5 5" stroke="var(--muted)" stroke-width="0.8"/></pattern></defs>
     {shapes.map((shape) => {
       const country = byId.get(shape.id);
-      const largest = country && largestOf(country);
-      const label = `${shape.name}: ${largest ? labels.get(largest) : 'нет сопоставленных данных'}`;
-      return <path d={shape.path} fill={largest ? `var(${WORLD_COLORS[largest]})` : 'url(#no-data)'} data-country={country ? country.id : undefined} role={country ? 'button' : undefined} tabindex={country ? 0 : undefined} aria-label={label}><title>{label}</title></path>;
+      const largest = country && atlasView('religions', country.id).largest;
+      const label = `${shape.name}: ${largest ? legend.find((row) => row.id === largest)?.label : 'нет сопоставленных данных'}`;
+      return <path d={shape.path} fill={largest ? `var(${WORLD_COLORS[largest]})` : 'url(#no-data)'} data-country={country?.id} data-country-name={shape.name} role={country ? 'button' : undefined} tabindex={country ? 0 : undefined} aria-label={label}><title>{label}</title></path>;
     })}
   </svg>
-  <ul class="legend">{legendGroups.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет сопоставленных данных</li></ul>
-  <label for="atlas-country">Весь мир, страна или территория</label>
-  <select id="atlas-country"><option value="">Весь мир</option>{ordered.map((country) => <option value={country.id}>{country.name}</option>)}</select>
-  <div id="country-detail" aria-live="polite">
-    <h3>Весь мир · 2020</h3>
-    <dl>{[...rows].sort((a, b) => b.share - a.share).map((group) => <div class:list={{ largest: group.id === largestGroup(rows.map((g) => g.share), rows.map((g) => g.id)) }}>
-      <dt>{group.label}</dt><dd><span class="bar-track" aria-hidden="true"><span class="bar-fill" style={`width:${group.share}%;background:var(${WORLD_COLORS[group.id]})`}/></span><span class="bar-value">{formatShare(group.share)}</span></dd>
-    </div>)}</dl>
+  <ul class="legend" id="atlas-legend">{legend.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет данных или единственной крупнейшей группы</li></ul>
+  <div class="country-control" hidden>
+    <label for="atlas-country">Весь мир, страна или территория</label>
+    <select id="atlas-country"><option value="">Весь мир</option>{ordered.map((country) => <option value={country.id}>{country.name}</option>)}</select>
   </div>
+  <div id="country-detail" aria-live="polite">
+    <h3>Весь мир</h3>
+    <p>Карта показывает географию. <a href={withBase('numbers/#world')} data-carry-selection>Численность и мировые доли — в отдельном обзоре</a>.</p>
+    <p>Выберите страну, чтобы увидеть состав её населения.</p>
+  </div>
+  <noscript>Для выбора страны и христианских направлений включите JavaScript. Общая карта религий доступна выше.</noscript>
+  <p class="method"><a href={withBase('numbers/#data-note')} data-carry-selection>О приблизительных данных</a> · <a href={withBase('sources/#map-method')} data-carry-selection>Источники и методология</a></p>
 </section>
 <script>
-  import data from '../data/world-countries.json';
-  import groups from '../data/world-composition.json';
-  import { TRADITION_LABELS, countryShare, formatShare, largestGroup, splitGroups, worldRows, WORLD_COLORS } from '../lib/worldAtlas';
-  const select = document.querySelector<HTMLSelectElement>('#atlas-country');
-  const detail = document.querySelector<HTMLElement>('#country-detail');
-  function buildList(rows: { id: string; label: string; value: string; share: number }[], largest: string | null) {
-    const list = document.createElement('dl');
-    rows.sort((a, b) => b.share - a.share).forEach(({ id, label, value, share }) => {
-      const row = document.createElement('div');
-      const name = document.createElement('dt'); name.textContent = label;
-      const dd = document.createElement('dd');
-      const number = document.createElement('span'); number.className = 'bar-value'; number.textContent = value;
-      if (id === largest) row.className = 'largest';
-      const track = document.createElement('span'); track.className = 'bar-track'; track.setAttribute('aria-hidden', 'true');
-      const bar = document.createElement('span'); bar.className = 'bar-fill';
-      bar.style.width = `${Math.min(100, Math.max(0, share))}%`;
-      bar.style.background = `var(${WORLD_COLORS[id]})`;
-      track.append(bar); dd.append(track, number);
-      row.append(name, dd); list.append(row);
-    });
-    return list;
+  import { atlasLegend, atlasView, formatShare, WORLD_COLORS, type AtlasMode } from '../lib/worldAtlas';
+  import { withBase } from '../lib/paths';
+  import { getSelection } from '../lib/selection-client';
+  import { hrefWithReadingContext } from '../lib/readingContext';
+  const root = document.querySelector<HTMLElement>('.atlas')!;
+  const select = root.querySelector<HTMLSelectElement>('#atlas-country')!;
+  const detail = root.querySelector<HTMLElement>('#country-detail')!;
+  let mode: AtlasMode = 'religions';
+  function update() {
+    const view = atlasView(mode, select.value);
+    const title = document.createElement('h3'); title.textContent = view.title;
+    const basis = document.createElement('p'); basis.className = 'basis';
+    basis.textContent = mode === 'religions' ? 'Доли от всего населения.' : 'Приблизительные доли среди христиан, а не всего населения.';
+    detail.replaceChildren(title, basis);
+    if (!select.value && mode === 'religions') {
+      const link = document.createElement('a'); link.href = hrefWithReadingContext(withBase('numbers/#world'), getSelection(), location.href);
+      link.textContent = 'Численность и мировые доли →'; link.setAttribute('data-carry-selection', '');
+      const hint = document.createElement('p'); hint.textContent = 'Выберите страну, чтобы увидеть состав её населения.';
+      detail.append(link, hint);
+    } else if (!select.value && mode === 'christian') {
+      const link = document.createElement('a'); link.href = hrefWithReadingContext(withBase('numbers/#christian-composition'), getSelection(), location.href);
+      link.textContent = 'Состав христианства в мире →'; link.setAttribute('data-carry-selection', '');
+      const hint = document.createElement('p'); hint.textContent = 'Выберите страну, чтобы увидеть соотношение христианских направлений внутри неё.';
+      detail.append(link, hint);
+    } else if (!view.rows.length) {
+      const message = document.createElement('p');
+      message.textContent = select.value === 'CUW' && mode === 'christian'
+        ? 'В источнике Кюрасао включён в бывшие Нидерландские Антильские острова; отдельной оценки нет.' : 'Нет сопоставленных данных.';
+      detail.append(message);
+    } else {
+      const list = document.createElement('dl');
+      for (const row of view.rows) {
+        const item = document.createElement('div'); item.dataset.group = row.id;
+        if (row.id === view.largest) item.className = 'largest';
+        const term = document.createElement('dt'); term.textContent = row.label;
+        const value = document.createElement('dd');
+        const number = document.createElement('span'); number.className = 'bar-value'; number.textContent = formatShare(row.share);
+        const track = document.createElement('span'); track.className = 'bar-track'; track.setAttribute('aria-hidden', 'true');
+        const bar = document.createElement('span'); bar.className = 'bar-fill';
+        bar.style.width = `${Math.min(100, Math.max(0, row.share))}%`; bar.style.background = `var(${WORLD_COLORS[row.id]})`;
+        track.append(bar); value.append(track, number); item.append(term, value); list.append(item);
+      }
+      detail.append(list);
+      if (!view.largest) { const note = document.createElement('p'); note.textContent = 'Нет единственной крупнейшей группы.'; detail.append(note); }
+    }
+    root.querySelector<HTMLElement>('#atlas-key')!.textContent = mode === 'religions'
+      ? 'Цвет — крупнейшая религиозная группа среди всех жителей страны, даже если её доля меньше половины. Христиане объединены. Площадь страны не показывает число верующих.'
+      : 'Цвет — крупнейшее направление только среди христиан страны. Даже в стране с малым числом христиан карта показывает их внутренний состав, а не религию большинства жителей.';
+    root.querySelector<HTMLElement>('#christian-scope')!.hidden = mode !== 'christian';
+    root.querySelector('#map-title')!.textContent = mode === 'religions' ? 'Крупнейшие религиозные группы по странам' : 'Крупнейшие направления среди христиан каждой страны';
+    const legend = root.querySelector('#atlas-legend')!;
+    legend.replaceChildren();
+    for (const row of [...atlasLegend(mode), { id: 'missing', label: 'Нет данных или единственной крупнейшей группы' }]) {
+      const item = document.createElement('li'); const chip = document.createElement('span');
+      if (row.id === 'missing') chip.className = 'missing'; else chip.style.background = `var(${WORLD_COLORS[row.id]})`;
+      item.append(chip, document.createTextNode(row.label)); legend.append(item);
+    }
+    for (const path of root.querySelectorAll<SVGElement>('[data-country]')) {
+      const countryView = atlasView(mode, path.dataset.country!);
+      const leader = countryView.rows.find((row) => row.id === countryView.largest);
+      const label = `${path.dataset.countryName}: ${leader ? `${leader.label} — ${formatShare(leader.share)} ${mode === 'christian' ? 'среди христиан' : 'населения'}` : 'нет данных или единственной крупнейшей группы'}`;
+      path.setAttribute('fill', leader ? `var(${WORLD_COLORS[leader.id]})` : 'url(#no-data)');
+      path.setAttribute('aria-label', label); path.querySelector('title')!.textContent = label;
+      path.classList.toggle('selected', path.dataset.country === select.value);
+      path.setAttribute('aria-pressed', String(path.dataset.country === select.value));
+    }
   }
-  function showWorld() {
-    if (!detail || !select) return;
-    select.value = '';
-    document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.remove('selected'));
-    const heading = document.createElement('h3'); heading.textContent = 'Весь мир · 2020';
-    const rows = worldRows(groups, data);
-    const largest = largestGroup(rows.map((row) => row.share), rows.map((row) => row.id));
-    const list = buildList(rows.map((row) => ({ id: row.id, label: row.label, value: formatShare(row.share), share: row.share })), largest);
-    detail.replaceChildren(heading, list);
+  for (const control of root.querySelectorAll<HTMLElement>('.modes, .country-control')) control.hidden = false;
+  root.querySelectorAll<HTMLInputElement>('[name="atlas-mode"]').forEach((input) => input.addEventListener('change', () => { mode = input.value === 'christian' ? 'christian' : 'religions'; update(); }));
+  select.addEventListener('change', update);
+  for (const path of root.querySelectorAll<SVGElement>('[data-country]')) {
+    const choose = () => { select.value = path.dataset.country!; update(); };
+    path.addEventListener('click', choose);
+    path.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); choose(); } });
   }
-  function showCountry(id: string) {
-    const country = data.countries.find((item) => item.id === id);
-    if (!country) { showWorld(); return; }
-    if (!detail || !select) return;
-    select.value = country.id;
-    document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => path.classList.toggle('selected', path.dataset.country === id));
-    detail.replaceChildren();
-    const heading = document.createElement('h3'); heading.textContent = `${country.name} · 2020`;
-    const split = splitGroups(data.groups, country);
-    const largest = largestGroup(split.counts, split.ids);
-    const list = buildList(split.ids.map((groupId, index) => ({ id: groupId, label: TRADITION_LABELS[groupId] ?? groups.find((g) => g.id === groupId)?.label ?? groupId, value: countryShare(split.counts[index], country.total), share: split.counts[index] / country.total * 100 })), largest);
-    detail.append(heading, list);
-    if (!largest) { const note = document.createElement('p'); note.textContent = 'Нет единственной крупнейшей группы.'; detail.append(note); }
-  }
-  showCountry(select?.value ?? '');
-  select?.addEventListener('change', () => showCountry(select.value));
-  document.querySelectorAll<SVGElement>('[data-country]').forEach((path) => {
-    path.addEventListener('click', () => showCountry(path.dataset.country!));
-    path.addEventListener('keydown', (event) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); showCountry(path.dataset.country!); } });
-  });
+  mode = root.querySelector<HTMLInputElement>('[name="atlas-mode"]:checked')?.value === 'christian' ? 'christian' : 'religions';
+  update();
 </script>
 <style>
-  .atlas { min-width: 0; } .atlas h2 { font-size: 21px; margin: 0 0 12px; } .key { color: var(--muted); font-size: 14px; }
+  .atlas { min-width: 0; } .key, .method { color: var(--muted); font-size: 16px; max-width: 80ch; }
+  .modes { display: flex; flex-wrap: wrap; gap: 8px 24px; border: 0; padding: 0; margin: 16px 0; }
+  .modes[hidden] { display: none; }
+  .modes legend { font-weight: 700; margin-bottom: 8px; }
+  .modes label { display: flex; align-items: center; gap: 8px; min-height: 44px; cursor: pointer; }
   svg { display: block; width: 100%; height: auto; margin: 24px 0; background: color-mix(in srgb, var(--focus) 3%, var(--bg)); border-radius: 8px; }
-  svg path[data-country] { cursor: pointer; } svg > path { stroke: var(--bg); stroke-width: .45; } svg path[data-country]:hover,svg path[data-country]:focus,svg path.selected { stroke: var(--ink); stroke-width: 1.8; outline: none; }
-  .legend { padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 5px 14px; font-size: 13px; } .legend li { display: flex; gap: 6px; align-items: center; } .legend span { width: 10px; height: 10px; flex-shrink: 0; border-radius: 2px; } .missing { background: repeating-linear-gradient(45deg,var(--muted) 0 1px,var(--surface) 1px 4px); }
-  label { display: block; font-size: 14px; margin-top: 20px; } select { font: inherit; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 8px; width: 100%; border-radius: 6px; }
-  #country-detail :global(h3) { font-size: 20px; margin: 24px 0 16px; }
-  #country-detail :global(dl) { margin: 0 0 24px; font-size: 15px; }
-  #country-detail :global(dl > div) { display: grid; grid-template-columns: 250px minmax(0, 1fr); align-items: center; gap: 16px; padding-block: 6px; }
-  #country-detail :global(dd) { display: grid; grid-template-columns: minmax(0, 1fr) 72px; align-items: center; gap: 12px; margin: 0; white-space: nowrap; }
+  svg path[data-country] { cursor: pointer; } svg > path { stroke: var(--bg); stroke-width: .45; }
+  svg path[data-country]:hover, svg path[data-country]:focus, svg path.selected { stroke: var(--ink); stroke-width: 1.8; outline: none; }
+  .legend { padding: 0; list-style: none; display: flex; flex-wrap: wrap; gap: 8px 16px; font-size: 15px; }
+  .legend :global(li) { display: flex; gap: 6px; align-items: center; }
+  .legend :global(span) { width: 10px; height: 10px; flex-shrink: 0; border-radius: 2px; }
+  .legend :global(.missing) { background: repeating-linear-gradient(45deg,var(--muted) 0 1px,var(--surface) 1px 4px); }
+  .country-control > label { display: block; margin: 20px 0 8px; }
+  select { font: inherit; font-size: 16px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 12px; width: 100%; border-radius: 6px; }
+  #country-detail :global(h3) { font-size: 23px; margin: 24px 0 12px; }
+  #country-detail :global(.basis) { color: var(--muted); }
+  #country-detail :global(dl) { margin: 0 0 24px; font-size: 16px; }
+  #country-detail :global(dl > div) { display: grid; grid-template-columns: minmax(180px, 1fr) minmax(0, 2fr); align-items: center; gap: 16px; padding-block: 8px; }
+  #country-detail :global(dd) { display: grid; grid-template-columns: minmax(0, 1fr) 76px; align-items: center; gap: 12px; margin: 0; white-space: nowrap; }
   #country-detail :global(.bar-track) { height: 14px; background: color-mix(in srgb, var(--muted) 10%, transparent); border-radius: 3px; overflow: hidden; }
   #country-detail :global(.bar-value) { text-align: right; font-variant-numeric: tabular-nums; }
   #country-detail :global(.bar-fill) { display: block; height: 100%; }
   #country-detail :global(.largest) { font-weight: 700; }
-
   @media (max-width: 760px) { #country-detail :global(dl > div) { grid-template-columns: minmax(0, 1fr); gap: 4px; } }
 </style>

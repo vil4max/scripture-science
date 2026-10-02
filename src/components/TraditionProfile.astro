@@ -1,7 +1,7 @@
 ---
 import lineageData from '../data/lineage.json';
 import { profileChronology } from '../lib/profileChronology';
-import { parseLineage, validateReferences, formatYearAd, yearFromCreation } from '../lib/timeline';
+import { parseLineage, validateReferences, formatHistoricalYear } from '../lib/timeline';
 import { withBase } from '../lib/paths';
 import { type CollectionEntry } from 'astro:content';
 import TraditionImage from './TraditionImage.astro';
@@ -90,13 +90,13 @@ const showsJwNote = tradition.id === 'jw';
     {selfView && <aside>
       <h3>Как традиция понимает своё происхождение</h3>
       <p>{selfView.summary}</p>
-      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatYearAd(gap.from)}–{formatYearAd(gap.to)}: {gap.label}.</p>)}
+      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatHistoricalYear(gap.from)}–{formatHistoricalYear(gap.to)}: {gap.label}.</p>)}
     </aside>}
-    <p class="chronology-key">Годы от Сотворения мира — по византийской эре; рядом — годы от Рождества Христова.</p>
+    <p class="chronology-key">Ранние события — от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). Для дат без месяца принят отсчёт января–августа.</p>
     <ol class="chronology">
       {chronology.map((row) => (
         <li data-chronology-id={row.id}>
-          <p class="chronology-date">{row.approx && 'ок. '}{yearFromCreation(row.year)} от С. М. · {row.approx && 'ок. '}{formatYearAd(row.year)}{row.year >= 0 && ' от Р. Х.'}</p>
+          <p class="chronology-date">{row.approx && 'ок. '}{formatHistoricalYear(row.year)}</p>
           {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
           <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
         </li>

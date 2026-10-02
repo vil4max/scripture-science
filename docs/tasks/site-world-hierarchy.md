@@ -1,6 +1,9 @@
 # World composition with Christian subdivisions
 
-State: latest single-diagram approximation implemented and reviewed on desktop.
+State: historical implementation, superseded by
+`site-demographic-consistency.md` on 2026-10-01. The records below retain the
+earlier chart decisions; the active reading pages no longer normalize WCD
+branch weights into a population sector.
 Earlier desktop review below applies only to the superseded 2010 diagram.
 Owner approved the two-level diagram and a consistently dated historical
 fallback on 2026-09-26. Assignee: Codex. Parallelism: 1. No push.

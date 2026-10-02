@@ -8,11 +8,11 @@ import overview from '../src/data/family-overview.json' with { type: 'json' };
 import media from '../src/data/media.json' with { type: 'json' };
 import { collectProofs } from '../src/lib/sourceCatalog.ts';
 
-test('homepage keeps eight unique comparison actions in doctrinal groups', () => {
-  const html = readFileSync('dist/index.html', 'utf8');
+test('introduction keeps seven unique comparison actions in doctrinal groups', () => {
+  const html = readFileSync('dist/religions/index.html', 'utf8');
   const ids = [...html.matchAll(/data-add-compare="([^"]+)"/g)].map((match) => match[1]);
-  assert.equal(ids.length, 8);
-  assert.equal(new Set(ids).size, 8);
+  assert.equal(ids.length, 7);
+  assert.equal(new Set(ids).size, 7);
   const trinitarian = html.split('data-doctrine-group="trinitarian"')[1].split('data-doctrine-group="nontrinitarian"')[0];
   assert.match(trinitarian, /data-add-compare="adventism"/);
   assert.doesNotMatch(trinitarian, /data-add-compare="(?:lds|jw)"/);
@@ -20,7 +20,7 @@ test('homepage keeps eight unique comparison actions in doctrinal groups', () =>
 });
 
 test('source relocation preserves every image credit and new overview proof', () => {
-  const html = readFileSync('dist/index.html', 'utf8');
+  const html = readFileSync('dist/religions/index.html', 'utf8');
   const sources = readFileSync('dist/sources/index.html', 'utf8');
   for (const item of media) {
     assert.ok(sources.includes(`id="media-${item.id}"`));
@@ -37,14 +37,12 @@ test('source relocation preserves every image credit and new overview proof', ()
   assert.match(sources, /id="legal-context"/);
 });
 
-test('homepage presents the revised Orthodox framing and current source context', () => {
-  const html = readFileSync('dist/index.html', 'utf8');
+test('introduction presents the Orthodox framing and current source context', () => {
+  const html = readFileSync('dist/religions/index.html', 'utf8');
   assert.match(html, /Православная классификация/);
   assert.match(html, />Подробнее</);
   assert.doesNotMatch(html, /Основание классификации/);
   assert.doesNotMatch(html, /исходное исповедание (?:этого )?сайта/);
-  assert.match(html, /Последние глобально сопоставимые данные — за 2020 год/);
-  assert.match(html, /отчёт опубликован Pew Research Center в 2025 году/);
   assert.match(html, /Псевдохристианские реставрационистские движения/);
   assert.match(html, /замена непрерывного церковного Предания поздней реконструкцией/);
   assert.match(html, /Святые последних дней \(мормоны\)/);
@@ -57,7 +55,7 @@ test('homepage presents the revised Orthodox framing and current source context'
 });
 
 test('colloquial tradition names appear only in the introductory overview', () => {
-  const homepage = readFileSync('dist/index.html', 'utf8');
+  const homepage = readFileSync('dist/religions/index.html', 'utf8');
   assert.equal(homepage.match(/Свидетели Иеговы \(иеговисты\)/g)?.length, 1);
   assert.equal(homepage.match(/Святые последних дней \(мормоны\)/g)?.length, 1);
 

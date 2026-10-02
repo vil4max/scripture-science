@@ -14,6 +14,7 @@ import {
   AXIS_MIN_YEAR,
   buildChronicleRows,
   buildForest,
+  formatHistoricalYear,
   formatYearAd,
   MIN_LABEL_FONT_PX,
   nodeEventText,
@@ -38,7 +39,9 @@ test('historical rows retain branch spans after religious epochs are separated',
   assert.doesNotMatch(html, /class="history-guide"/);
   assert.ok(readFileSync('dist/sources/index.html', 'utf8').includes('Начало мира в религиозных традициях'));
   assert.doesNotMatch(historyHtml, /class="am"|data-selfview|row epoch/);
-  assert.ok(historyHtml.includes('до н. э.'));
+  assert.ok(historyHtml.includes('1 г. от С. М.'));
+  assert.ok(historyHtml.includes('33 г. от Р. Х.'));
+  assert.doesNotMatch(historyHtml, /н\.\s?э\./);
   assert.ok(historyHtml.includes('без нулевого года'));
   assert.doesNotMatch(historyHtml, /divider era|Начало нашей эры — отсчёт/);
   for (const view of lineage.selfViews) {
@@ -135,8 +138,17 @@ test('years from the Creation follow the Byzantine era (year 1 = 5509/5508 BC, J
   assert.equal(yearFromCreation(2026), 7534);
   assert.equal(yearFromCreation(2026, true), 7535);
   assert.throws(() => yearFromCreation(0));
-  assert.equal(formatYearAd(-5508), '5508 г. до Р.Х.');
-  assert.equal(formatYearAd(1054), '1054 г.');
+  assert.equal(formatYearAd(-5508), '5508 г. до Р. Х.');
+  assert.equal(formatYearAd(1054), '1054 г. от Р. Х.');
+});
+
+test('historical display changes era at AD 1 without introducing year zero', () => {
+  assert.equal(formatHistoricalYear(-5508), '1 г. от С. М.');
+  assert.equal(formatHistoricalYear(-1), '5508 г. от С. М.');
+  assert.equal(formatHistoricalYear(1), '1 г. от Р. Х.');
+  assert.equal(formatHistoricalYear(2026), '2026 г. от Р. Х.');
+  assert.throws(() => formatHistoricalYear(0));
+  assert.throws(() => formatYearAd(0));
 });
 
 test('the chronicle has one row per dated item, oldest first, starting with the Byzantine creation epoch', () => {
@@ -239,7 +251,7 @@ test('the rendered chronicle keeps a strong Orthodox trunk, varied branches and 
   assert.match(html, /row node major-schism/);
   assert.match(html, /Пятидесятница — явление Церкви и продолжение единой Священной истории/);
   assert.doesNotMatch(html, /Начало нашей эры — отсчёт от Рождества Христова/);
-  assert.match(html, /перед ним идёт 1 год до н\. э\., без нулевого года/);
+  assert.match(html, /Перед 1 годом от Рождества Христова идёт 1 год до Р\. Х\., без нулевого года/);
   assert.match(html, /Великий раскол: отпадение Рима/);
   assert.match(html, /Начало протестантизма · Реформация/);
   assert.match(html, /замена канонической принадлежности/);

@@ -4,7 +4,7 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import data from '../src/data/world-hierarchy-2026.json' with { type: 'json' };
 
-test('2026 estimates keep population totals and explicitly normalize Christian weights', () => {
+test('the retained 2026 source dataset preserves its totals and historical weights', () => {
   assert.equal(data.year, 2026);
   assert.equal(data.edition, 2026);
   assert.equal(data.groups.reduce((sum, g) => sum + g.count, 0), data.population);

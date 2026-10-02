@@ -1,0 +1,24 @@
+---
+import { withBase } from '../lib/paths';
+const steps = [
+  { path: 'religions/', label: 'Знакомство' },
+  { path: 'timeline/', label: 'Возникновение и история' },
+  { path: 'numbers/', label: 'Численность' },
+  { path: 'geography/', label: 'Карта' },
+  { path: 'differences/', label: 'Сходства и различия' },
+  { path: 'compare/', label: 'Подробное сравнение' },
+];
+const current = steps.findIndex((step) => Astro.url.pathname === withBase(step.path));
+const next = steps[current + 1];
+interface Props { footer?: boolean; }
+---
+{Astro.props.footer ? next && <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее: {next.label.toLowerCase()} →</a></nav> :
+<nav class="journey" aria-label="Маршрут чтения"><ol>{steps.map((step, index) => <li><a href={withBase(step.path)} aria-current={index === current ? 'page' : undefined} data-carry-selection><span>{index + 1}</span> {step.label}</a></li>)}</ol></nav>}
+<style>
+  ol { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; padding: 0; margin: 0; }
+  a { display: inline-flex; gap: 6px; align-items: center; min-height: 44px; text-underline-offset: 4px; }
+  .journey { padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .journey a { color: var(--muted); } .journey a[aria-current='page'] { color: var(--focus); font-weight: 700; }
+  span { font-variant-numeric: tabular-nums; }
+  .next { border-top: 1px solid var(--line); padding-top: 20px; }
+</style>

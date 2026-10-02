@@ -45,3 +45,15 @@ evidence duplicates merge in presentation while passages, dates and claim
 attribution remain distinct. Further reading and analysis-card verification
 coverage are identified separately. Automated checks establish structural
 integrity; they do not establish theological correctness or recheck live sources.
+
+## Reading route
+
+The homepage introduces a progressive route: `/religions/`, `/timeline/`,
+`/numbers/`, `/geography/`, `/differences/`, then `/compare/` and the existing
+tradition analyses. Old homepage fragments redirect to the moved sections
+without losing comparison parameters.
+
+The world overview and religion map share Pew categories; Christianity is
+counted once. Christian map mode uses its original within-Christian estimates,
+never multiplied by newer population totals. Precise dates and the separate
+WCD estimates stay in Sources; reading pages use one approximate-data note.

@@ -6,6 +6,7 @@ import Comparison from '../components/Comparison.astro';
 import ComparisonContents from '../components/ComparisonContents.astro';
 import TraditionCompare from '../components/TraditionCompare.astro';
 import SectionPage from '../layouts/SectionPage.astro';
+import JourneyNav from '../components/JourneyNav.astro';
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
@@ -20,6 +21,7 @@ const colorById = new Map(
   title="Сравнение"
   lead="Православное учение → Что говорят о себе другие религии → Православная оценка различий. Православие всегда показано первым; две другие традиции можно выбрать."
 >
+  <JourneyNav />
   <section id="views" aria-labelledby="views-title">
     <header class="views-heading">
       <h2 id="views-title">Отношения между традициями</h2>

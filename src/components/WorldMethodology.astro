@@ -1,9 +1,22 @@
+---
+import data from '../data/world-hierarchy-2026.json';
+const count = (value: number) => new Intl.NumberFormat('ru').format(value);
+---
 <section id="world-methodology">
-      <h2>Диаграмма: оценка на 2026 год</h2>
-      <p>Округлённые оценки World Christian Database за 2026 год.</p>
-      <details><summary>Как читать приблизительные доли</summary>
-        <p>Доли религий рассчитаны от оценки населения мира. Народные религии объединяют две категории источника; другие религии — остаток до общего населения.</p>
-        <p>Сумма пяти христианских категорий в источнике выше общего числа христиан. Для наглядности их веса приведены к 100 % христианского сектора: это схематичные пропорции, а не точный подсчёт непересекающихся групп. Протестанты включают англикан; независимые церкви показаны отдельно. Категории карты Pew могут отличаться.</p>
-        <p>«Вне церковных объединений» — это не то же самое, что «Независимые церкви»: сюда источник относит тех, кто называет себя христианами, но не состоит ни в одной церкви или деноминации, включая тайных верующих там, где открыто исповедовать веру небезопасно.</p>
-      </details>
-    </section>
+  <h2>Дополнительная оценка World Christian Database</h2>
+  <p>Оценки на 2026 год сохранены отдельно от сводки Pew. Разные годы, определения принадлежности и способы подсчёта не позволяют читать их как одну сопоставимую серию.</p>
+  <details><summary>Численность и методология WCD</summary>
+    <p>Население мира: {count(data.population)}. Народные религии объединяют две категории источника; другие религии — остаток до общего населения.</p>
+    <table><caption>Оценка населения по группам, WCD, 2026</caption><thead><tr><th scope="col">Группа</th><th scope="col">Человек</th></tr></thead><tbody>{data.groups.map((group) => <><tr><th scope="row">{group.label}</th><td>{count(group.count)}</td></tr>{(group.subgroups ?? []).map((sub) => <tr><th scope="row">В том числе: {sub.label.toLowerCase()}</th><td>{count(sub.count)}</td></tr>)}</>)}</tbody></table>
+    <table><caption>Христианские категории в исходном отчёте</caption><thead><tr><th scope="col">Категория WCD</th><th scope="col">Человек</th></tr></thead><tbody>{data.branches.map((branch) => <tr><th scope="row">{branch.id === 'orthodox' ? 'Orthodox (категория WCD)' : branch.label}</th><td>{count(branch.count)}</td></tr>)}</tbody></table>
+    <p>Сумма пяти христианских категорий выше общего числа христиан в отчёте. Эти строки сохранены как отдельные оценки: мы не складываем их и не превращаем в доли единого сектора. Само превышение не доказывает причину расхождения.</p>
+    <p>Протестанты включают англикан; независимые церкви указаны отдельно. «Вне церковных объединений» — часть широкого определения христиан, не состоящая в церковных объединениях. Это не название независимых церквей.</p>
+    <p><a href={data.proof[0].url}>World Christian Database — Status of Global Christianity 2026</a>.</p>
+  </details>
+</section>
+<style>
+  summary { cursor: pointer; color: var(--focus); min-height: 44px; align-content: center; }
+  table { width: 100%; border-collapse: collapse; margin: 20px 0; font-size: 16px; }
+  th, td { padding: 8px 4px; border-bottom: 1px solid var(--line); text-align: left; font-weight: 400; }
+  td { text-align: right; white-space: nowrap; } caption { text-align: left; font-weight: 700; }
+</style>

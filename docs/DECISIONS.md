@@ -294,3 +294,34 @@ that hierarchy.
 The owner subsequently requested comfortable reading on iPhone. This
 supersedes the desktop-only acceptance boundary for the current reading
 improvements: narrow viewport reading and navigation are now in scope.
+
+
+## 2026-10-01 — Progressive reading and demographic grouping
+
+The owner requested a narrative in the voice of an Orthodox teacher: first
+introduce religions, then their origins and development, contemporary numbers
+and maps, shared features and reasons for differences, and finally deeper
+comparisons. The owner corrected “history of divisions” to a history of origins.
+Orthodox teaching remains the foundation; other traditions retain their own
+attributed descriptions.
+
+The owner chose introduction first with separate numbers and map pages, and
+requested one approximate-data note referring to open sources available in
+2026 instead of repeated years. Original observation dates remain in sources.
+Christians form one category in world comparisons; internal Christian groups
+are shown separately. The implementation must not mix dates to manufacture
+confessional populations or equate a statistical category with ecclesial unity.
+
+
+## 2026-10-01 — Christian and Byzantine date notation
+
+The owner requested “от Рождества Христова” / “от Р. Х.” for Christian-era
+dates and “от Сотворения мира” for earlier chronology. The timeline and profile
+chronologies therefore use Byzantine creation years before AD 1 and Christian
+years from AD 1 onward, in one column. This supersedes the BCE/CE display in
+“One historical date column”; stored event years and their ordering stay intact.
+The date key identifies the Byzantine era and its existing January–August
+conversion for dates without months. Historical estimates of the Nativity and
+other traditions' creation epochs remain attributed; source excerpts and
+migration originals are unchanged. Author-written reference dates use
+“до Р. Х.” where a common calendar is needed for source comparison.

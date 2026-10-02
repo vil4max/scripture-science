@@ -7,7 +7,7 @@
       "start": {
         "year": -1200,
         "approx": true,
-        "label": "ок. 1200 г. до н.э. (приблизительно)",
+        "label": "ок. 1200 г. до Р. Х. (приблизительно)",
         "proof": [
           {
             "url": "https://www.encyclopedia.com/environment/encyclopedias-almanacs-transcripts-and-maps/israelite-religion",
@@ -34,7 +34,7 @@
       "kind": "branch",
       "start": {
         "year": 70,
-        "label": "70 г. н.э. · школа в Явне",
+        "label": "70 г. от Р. Х. · школа в Явне",
         "proof": [
           {
             "url": "https://jewishvirtuallibrary.org/yochanan-ben-zakkai",
@@ -73,7 +73,7 @@
       "start": {
         "year": 33,
         "approx": true,
-        "label": "ок. 33 г. н.э. · Пятидесятница",
+        "label": "ок. 33 г. от Р. Х. · Пятидесятница",
         "proof": [
           {
             "url": "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/",
@@ -989,7 +989,7 @@
       "id": "byzantine-era",
       "tradition": "orthodoxy",
       "year": -5508,
-      "label": "Сотворение мира по византийской эре (православная традиция) — 5508 г. до н.э.",
+      "label": "Сотворение мира по византийской эре (православная традиция) — 5508 г. до Р. Х.",
       "proof": [
         {
           "url": "https://orthodoxwiki.org/Byzantine_Creation_Era",
@@ -1004,7 +1004,7 @@
       "id": "jewish-anno-mundi",
       "tradition": "judaism",
       "year": -3761,
-      "label": "Сотворение мира по еврейскому летоисчислению (анно мунди) — 3761 г. до н.э.",
+      "label": "Сотворение мира по еврейскому летоисчислению (анно мунди) — 3761 г. до Р. Х.",
       "proof": [
         {
           "url": "https://www.haaretz.com/jewish/2015-10-07/ty-article/3761-bce-the-world-is-created/0000017f-e4be-d7b2-a77f-e7bf482b0000",
@@ -1018,7 +1018,7 @@
     {
       "id": "ussher-chronology",
       "year": -4004,
-      "label": "Сотворение мира по хронологии архиепископа Ашера (англиканская традиция, XVII в.) — 4004 г. до н.э.",
+      "label": "Сотворение мира по хронологии архиепископа Ашера (англиканская традиция, XVII в.) — 4004 г. до Р. Х.",
       "proof": [
         {
           "url": "https://www.encyclopedia.com/people/philosophy-and-religion/protestant-christianity-biographies/james-ussher",
@@ -1033,7 +1033,7 @@
       "id": "jw-adam-created",
       "tradition": "jw",
       "year": -4026,
-      "label": "Сотворение Адама по хронологии Свидетелей Иеговы — 4026 г. до н.э.",
+      "label": "Сотворение Адама по хронологии Свидетелей Иеговы — 4026 г. до Р. Х.",
       "proof": [
         {
           "url": "https://wol.jw.org/en/wol/d/r1/lp-e/1102013279",
