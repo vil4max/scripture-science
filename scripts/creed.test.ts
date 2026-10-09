@@ -4,7 +4,9 @@ import { test } from 'node:test';
 import assert from 'node:assert/strict';
 // @ts-expect-error - node types are not installed.
 import { readFileSync } from 'node:fs';
-import { CREED_ARTICLES, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../src/lib/creed.ts';
+import { CREED_ARTICLES, CREED_EXTRAS_AFTER, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../src/lib/creed.ts';
+// @ts-expect-error - js-yaml has no separately installed TypeScript declarations.
+import * as yaml from 'js-yaml';
 import { TOPIC_ORDER } from '../src/lib/rules.ts';
 
 // The Creed is the framework of the comparison (owner, 2026-10-09).
@@ -22,8 +24,12 @@ test('the comparison opens with the Creed part, quoting its articles before the 
   const html: string = readFileSync('dist/compare/index.html', 'utf8');
   const creedPart = html.slice(html.indexOf('id="part-creed"'), html.indexOf('id="part-other"'));
   const order = [...creedPart.matchAll(/<section class="question"[^>]*id="topic-([^"]+)"/g)].map((match) => match[1]);
-  assert.deepEqual(order, CREED_TOPICS.flatMap((topic): string[] => topic === 'jesus' ? [topic, 'theotokos'] : [topic]));
+  const extraIds = (yaml.load(readFileSync('src/data/extra-questions.yaml', 'utf8')) as { id: string }[]).map((entry) => entry.id);
+  assert.deepEqual(order, CREED_TOPICS.flatMap((topic): string[] => [topic, ...(CREED_EXTRAS_AFTER[topic] ?? []).filter((id) => extraIds.includes(id))]));
+  assert.ok(order.indexOf('theotokos') === order.indexOf('jesus') + 1);
   assert.deepEqual(creedArticlesFor('theotokos').map((article) => article.n), [3]);
+  assert.deepEqual(creedArticlesFor('church-names').map((article) => article.n), [9]);
+  assert.deepEqual(creedArticlesFor('baptism').map((article) => article.n), [10]);
   const god = creedPart.slice(creedPart.indexOf('id="topic-god"'), creedPart.indexOf('class="pair"'));
   assert.ok(god.indexOf('Творца небу и земли, видимым же всем и невидимым') < god.indexOf('Простыми словами'));
   assert.match(god, /Творец неба и земли/);

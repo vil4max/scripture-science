@@ -21,7 +21,9 @@
     { "n": 12, "text": "И жизни будущаго века. Аминь." }
   ],
   "extras": {
-    "theotokos": [3]
+    "theotokos": [3],
+    "church-names": [9],
+    "baptism": [10]
   },
   "topics": {
     "god": [1],

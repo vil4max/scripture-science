@@ -20,7 +20,11 @@ and a page «Богослужение и молитва» (services, the daily, 
 rhythm, prayer at home, the Psalter, then the full prayer texts). Published on
 2026-10-09 (owner: «Пуш»); the daily, weekly and yearly rhythm and two further
 prayers («Царю Небесный», the Jesus Prayer) followed the same day (owner:
-«Да»).
+«Да»). Then published (owner: «Пуш»): the Liturgy as the centre of the
+Orthodox answers, example prayers of each religion, «Православная Церковь» in
+every difference line, and two Creed questions — the names of the Church and
+the other communities (article 9) and Baptism, a like rite with a different
+meaning (article 10).
 
 **M34 — reading for a newcomer** (`docs/tasks/site-m34-newcomer-reading.md`,
 2026-10-09): a readable glossary with inline hints, a «С чего начать» page,

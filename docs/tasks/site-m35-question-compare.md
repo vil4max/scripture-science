@@ -4,7 +4,9 @@ State: the question-first comparison, the Creed-based revision and the page
 «Богослужение и молитва» with the prayer texts are published (2026-10-09,
 owner: «Пуш»); the question on the daily, weekly and yearly rhythm and two
 further prayers («Царю Небесный», the Jesus Prayer) followed the same day
-(owner: «Да»)
+(owner: «Да»), then the Liturgy as the centre, example prayers, the Orthodox
+Church named in difference lines, the names of the Church and Baptism
+(owner: «Пуш»)
 
 ## Authorization and scope
 
@@ -80,12 +82,29 @@ without a chooser.
   «Что такое Крещение и Таинства?». Gaps are stated, not filled: no
   specific Jewish teaching on Mary and no official Adventist statement were
   found; the Adventist position cites a Dialogue article as an author's view.
+- In Orthodoxy the Liturgy is the centre and everything is built around it
+  (owner): the Orthodox answers on worship and on the daily, weekly and
+  yearly rhythm open with it (catechism §314, Acts 20:7).
+- «Какими словами молятся: примеры молитв» (owner: «Как молятся остальные?»,
+  «Примеры молитв можно для сравнения») quotes short exact excerpts of each
+  tradition's characteristic prayers — the Shema, al-Fatiha in Krachkovsky's
+  translation, «Радуйся, Мария», the Latter-day Saint sacrament prayer — next
+  to the Orthodox ones; «Богородице Дево, радуйся» joins the prayer texts for
+  the comparison. English source wording is paraphrased in Russian.
 - How services and prayer are done is reference data (owner): any reliable
   description may establish it, not only official sites (`docs/SOURCES.md`,
   "Practice descriptions"); the worship part was re-researched on that basis.
 - Difference lines are neutral (owner): they name the difference («…, а
-  Церковь …» or «Здесь согласие: …») without evaluative words; the evaluation
-  belongs to the Orthodox response. All 105 lines follow this pattern.
+  Православная Церковь …» or «Здесь согласие: …») without evaluative words;
+  the evaluation belongs to the Orthodox response. «Церковь» alone was
+  unclear beside other churches (owner), so every difference line that
+  speaks of the Church names the Orthodox Church (a test checks it), and a
+  question «Как себя называют: Церковь и другие общины» after article 9
+  explains the word and each community's self-name.
+- «Крещение: похожий обряд — разный смысл» after article 10 (owner: the
+  immersion looks the same, the meaning differs): the outward form and the
+  meaning of baptism in every tradition, the Orthodox Sacrament quoted from
+  Filaret's catechism.
 - All 105 `difference` lines were reviewed; 45 that restated the tradition's
   teaching or carried an editorial caveat were rewritten to name the
   difference («…, а Церковь …» or an explicit agreement), paraphrasing the

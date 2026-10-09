@@ -8,7 +8,8 @@ import { assessments, validateAssessments } from '../src/lib/orthodox.ts';
 import { legacyPairDestination } from '../src/lib/legacyPairRoute.ts';
 import { DEFAULT_SELECTION } from '../src/lib/selection.ts';
 import { TOPIC_ORDER } from '../src/lib/rules.ts';
-import { CREED_TOPICS, OTHER_TOPICS } from '../src/lib/creed.ts';
+import { CREED_EXTRAS_AFTER, CREED_TOPICS, OTHER_TOPICS } from '../src/lib/creed.ts';
+import { WORSHIP_QUESTIONS } from '../src/lib/worship.ts';
 // @ts-expect-error - js-yaml has no separately installed TypeScript declarations.
 import * as yaml from 'js-yaml';
 
@@ -27,6 +28,20 @@ test('105 separately sourced assessments are complete and malformed coverage fai
     const profile = readFileSync(`dist/traditions/${record.tradition}/index.html`, 'utf8');
     assert.ok(profile.includes(`data-assessment="${record.id}"`) || profile.includes(`data-topic="${record.topic}"`), record.id);
     assert.equal(record.assessmentAuthority, 'editorial-application');
+  }
+});
+// «Церковь» alone was unclear next to other churches (owner, 2026-10-09): a
+// difference line that speaks of the Church names the Orthodox Church.
+test('every difference line that mentions the Church names the Orthodox Church', () => {
+  const extras = yaml.load(readFileSync('src/data/extra-questions.yaml', 'utf8')) as { id: string; traditions: Record<string, { difference: string }> }[];
+  const lines = [
+    ...assessments.map((record) => [record.id, record.difference]),
+    ...extras.flatMap((entry) => Object.entries(entry.traditions).map(([tradition, side]) => [`${entry.id}/${tradition}`, side.difference])),
+  ];
+  for (const [id, line] of lines) if (/Церк/.test(line)) assert.match(line, /Православн/, id);
+  // A bulk rename once dropped the space after the word.
+  for (const file of ['src/data/orthodox-assessments.json', 'src/data/extra-questions.yaml']) {
+    assert.doesNotMatch(readFileSync(file, 'utf8'), /Церковь(?!ю)[а-яё]/, file);
   }
 });
 // Every question: the Orthodox answer, then seven tradition pairs with only
@@ -55,13 +70,13 @@ const checkQuestions = (page: string, order: string[]) => {
   assert.equal((page.match(/data-pick="/g) ?? []).length, 7);
 };
 test('server output opens every question with the Orthodox answer, then one chosen tradition', () => {
-  // Creed (the Theotokos after Jesus Christ, article 3), then the other differences.
-  const creed = CREED_TOPICS.flatMap((topic): string[] => topic === 'jesus' ? [topic, 'theotokos'] : [topic]);
-  checkQuestions(html, [...creed, ...OTHER_TOPICS]);
-  // Worship and prayer have their own page (owner, 2026-10-09); a question
-  // appears once its data exists.
+  // A question outside the fifteen topics appears once its data exists.
   const extraIds = (yaml.load(readFileSync('src/data/extra-questions.yaml', 'utf8')) as { id: string }[]).map((entry) => entry.id);
-  checkQuestions(readFileSync('dist/worship/index.html', 'utf8'), ['services', 'schedule', 'private-prayer', 'psalter'].filter((id) => extraIds.includes(id)));
+  // Creed (the Theotokos after Jesus Christ, the names after the Church), then the other differences.
+  const creed = CREED_TOPICS.flatMap((topic): string[] => [topic, ...(CREED_EXTRAS_AFTER[topic] ?? []).filter((id) => extraIds.includes(id))]);
+  checkQuestions(html, [...creed, ...OTHER_TOPICS]);
+  // Worship and prayer have their own page (owner, 2026-10-09).
+  checkQuestions(readFileSync('dist/worship/index.html', 'utf8'), WORSHIP_QUESTIONS.filter((id) => extraIds.includes(id)));
   for (const topic of TOPIC_ORDER) assert.ok(html.includes(`href="#topic-${topic}"`), topic);
   assert.ok(!html.includes('data-comparison-slots') && !html.includes('data-slot='));
   assert.ok(html.indexOf('id="views"') < html.indexOf('data-question-compare'));

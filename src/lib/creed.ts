@@ -21,6 +21,19 @@ export const OTHER_TOPICS = TOPIC_ORDER.filter((topic) => !CREED_TOPICS.includes
 // Theotokos in article 3 («и Марии Девы»).
 const EXTRA_ARTICLES = creed.extras as Record<string, number[]>;
 
+/**
+ * Where those questions stand in the Creed part (owner, 2026-10-09): the
+ * Theotokos after Jesus Christ, the names of the Church and the other
+ * communities after the Church, Baptism — a like rite with a different
+ * meaning — after the Sacraments. Each appears once its entry exists in
+ * src/data/extra-questions.yaml.
+ */
+export const CREED_EXTRAS_AFTER: Partial<Record<TopicId, string[]>> = {
+  jesus: ['theotokos'],
+  organisation: ['church-names'],
+  worship: ['baptism'],
+};
+
 /** The Creed articles a comparison question rests on; none for practice-only topics. */
 export function creedArticlesFor(question: TopicId | string): CreedArticle[] {
   const numbers = TOPIC_ARTICLES[question as TopicId] ?? EXTRA_ARTICLES[question] ?? [];

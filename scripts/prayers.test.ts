@@ -21,7 +21,7 @@ test('«Богослужение и молитва» carries the prayers with th
   assert.ok(worship.indexOf('id="part-worship"') < worship.indexOf('id="prayers"'), 'questions first, then the texts');
   for (const id of ids) assert.ok(texts.includes(`id="${id}"`), id);
   assert.ok(read('compare').includes('worship/#simvol-very'));
-  for (const id of ['otche-nash', 'psalom-50', 'dostojno-est', 'tsaryu-nebesnyj', 'iisusova-molitva']) assert.ok(worship.includes(`worship/#${id}`), id);
+  for (const id of ['otche-nash', 'psalom-50', 'dostojno-est', 'tsaryu-nebesnyj', 'iisusova-molitva', 'bogorodice-devo']) assert.ok(worship.includes(`worship/#${id}`), id);
   assert.ok(read('compare').includes('worship/#tsaryu-nebesnyj'), 'the Holy Spirit question links its prayer');
   assert.ok(!read('compare').includes('prayers/#'));
 });

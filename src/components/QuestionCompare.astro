@@ -6,10 +6,11 @@
 // difference on the same question in one line each.
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { analysisCardsForTopic, profileHref } from '../lib/analysis';
-import { CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
+import { CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { withBase } from '../lib/paths';
 import { DEFAULT_SELECTION } from '../lib/selection';
+import { WORSHIP_QUESTIONS } from '../lib/worship';
 import { positionSummaryText, TOPIC_QUESTIONS_RU, type TopicId } from '../lib/rules';
 
 interface Props {
@@ -39,7 +40,8 @@ const PRAYER_LINKS: Partial<Record<string, { id: string; title: string }[]>> = {
   services: [{ id: 'otche-nash', title: '«Отче наш»' }, { id: 'simvol-very', title: 'Символ веры' }],
   'private-prayer': [{ id: 'tsaryu-nebesnyj', title: '«Царю Небесный»' }, { id: 'otche-nash', title: '«Отче наш»' }, { id: 'iisusova-molitva', title: 'Иисусова молитва' }, { id: 'psalom-50', title: 'Псалом 50' }, { id: 'dostojno-est', title: '«Достойно есть»' }],
   spirit: [{ id: 'tsaryu-nebesnyj', title: '«Царю Небесный» — молитва Святому Духу' }],
-  theotokos: [{ id: 'dostojno-est', title: '«Достойно есть»' }],
+  'prayer-words': [{ id: 'otche-nash', title: '«Отче наш»' }, { id: 'iisusova-molitva', title: 'Иисусова молитва' }, { id: 'bogorodice-devo', title: '«Богородице Дево, радуйся»' }],
+  theotokos: [{ id: 'bogorodice-devo', title: '«Богородице Дево, радуйся»' }, { id: 'dostojno-est', title: '«Достойно есть»' }],
   psalter: [{ id: 'psalom-50', title: 'Псалом 50' }],
 };
 const chosenByDefault = DEFAULT_SELECTION[1];
@@ -103,18 +105,19 @@ const extraQuestion = (entry: CollectionEntry<'extraQuestions'>): Question => ({
 
 const extras = await getCollection('extraQuestions');
 const extra = (id: string) => extras.filter((entry) => entry.id === id).map(extraQuestion);
-// The Theotokos follows Jesus Christ: article 3 names «Марии Девы» (owner).
+// The Theotokos follows Jesus Christ (article 3 names «Марии Девы»), the
+// names of the Church follow the Church (owner).
 const creedQuestions: Question[] = [];
 for (const topic of CREED_TOPICS) {
   creedQuestions.push(await topicQuestion(topic));
-  if (topic === 'jesus') creedQuestions.push(...extra('theotokos'));
+  creedQuestions.push(...(CREED_EXTRAS_AFTER[topic] ?? []).flatMap(extra));
 }
 const otherQuestions = await Promise.all(OTHER_TOPICS.map(topicQuestion));
 // Worship and prayer are compared on their own page (owner, 2026-10-09):
-// common worship, the daily, weekly and yearly rhythm, prayer at home and the
-// Psalter.
+// common worship, the daily, weekly and yearly rhythm, prayer at home,
+// example prayers and the Psalter.
 const PARTS = page === 'worship'
-  ? [{ id: 'part-worship', title: 'Как служат и молятся', questions: ['services', 'schedule', 'private-prayer', 'psalter'].flatMap(extra) }]
+  ? [{ id: 'part-worship', title: 'Как служат и молятся', questions: WORSHIP_QUESTIONS.flatMap(extra) }]
   : [
     { id: 'part-creed', title: 'Символ веры: что говорят другие религии', questions: creedQuestions },
     { id: 'part-other', title: 'Другие различия', questions: otherQuestions },
