@@ -348,10 +348,10 @@ sections as their first step.
 The owner found three columns hard to read and asked to compare Orthodoxy with
 one chosen religion, question by question, and to see one question across all
 religions. The comparison page is replaced (owner's choice): each topic is a
-question, the Orthodox answer comes first, then the chosen tradition's own
-teaching, a visible one-line difference and the highlighted Orthodox answer;
-only the analysis links and sources fold (owner, after reading the first
-version). «Этот вопрос у всех» lists one difference line
+question in three separate blocks: the Orthodox teaching, the chosen
+tradition's teaching, then where they part together with the highlighted
+Orthodox answer; only the analysis links and sources fold (owner, after
+reading the first versions). «Этот вопрос у всех» lists one difference line
 per tradition. Jehovah's Witnesses is the default choice. This supersedes the
 two selectable columns of EDITORIAL.md principle 8 and the column slots of
 site-m14-selection.md.

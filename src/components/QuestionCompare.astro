@@ -1,8 +1,8 @@
 ---
 // Question-first comparison (docs/tasks/site-m35-question-compare.md): each
-// topic is a question; the Orthodox teaching comes first, then the one chosen
-// tradition's own teaching, «В чём разница» and the Orthodox answer; only the
-// analysis links and sources fold. «Этот вопрос у всех» lists every tradition's
+// topic is a question in three blocks: the Orthodox teaching, the chosen
+// tradition's teaching, then where they part and the Orthodox answer; only
+// the analysis links and sources fold. «Этот вопрос у всех» lists every tradition's
 // difference on the same question in one line each.
 import type { CollectionEntry } from 'astro:content';
 import { analysisCardsForTopic, profileHref } from '../lib/analysis';
@@ -83,14 +83,15 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
             <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${question.topic}`)} data-carry-selection>Обоснование →</a></p>
           </div>
 
-          {question.sides.map(({ tradition, position, record, cards }) => <div class="side tradition" data-trad={tradition.id} data-assessment={record.id} hidden={tradition.id !== chosenByDefault} style={`--accent:${color(tradition.id)}`}>
+          {question.sides.map(({ tradition, position, record, cards }) => <div class="pair" data-trad={tradition.id} data-assessment={record.id} hidden={tradition.id !== chosenByDefault}>
+          <div class="side tradition" style={`--accent:${color(tradition.id)}`}>
             <p class="who"><span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{TEACHING_LABELS[tradition.id] ?? `Учение: ${tradition.data.name}`}</p>
             <p class="thesis">{positionSummaryText(position) ?? 'Источник уточняется.'}</p>
-            <p class="difference"><strong>В чём разница.</strong> {record.difference}</p>
-            <div class="answer">
-              <p class="label">Православный ответ</p>
-              <p>{record.response}</p>
-            </div>
+          </div>
+          <div class="side verdict">
+            <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Где расходятся — православный ответ</p>
+            <p class="difference">{record.difference}</p>
+            <p class="response">{record.response}</p>
             <details class="more">
               <summary>Разбор по вопросам и источники</summary>
               <p class="analysis">{cards.length > 0
@@ -103,6 +104,7 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
               </ul>
               <p class="all-sources"><a href={withBase(`sources/#sources-${question.topic}`)}>Все источники по теме</a></p>
             </details>
+          </div>
           </div>)}
 
           <ol class="all-list" aria-label={`${TOPIC_QUESTIONS_RU[question.topic]} — все религии`}>
@@ -151,14 +153,16 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
   .side p:last-child { margin-bottom: 0; }
   .who { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--muted); }
   .thesis { font-size: 17px; }
-  .difference { padding-top: 8px; border-top: 1px solid var(--line); }
   .foundation-link, .analysis, .all-sources { font-size: 15px; }
   .label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-top: 8px !important; }
-  /* The Orthodox answer stays in view and stands out (owner, 2026-10-09);
-     only the analysis links and sources fold. */
-  .answer { margin: 0 0 8px; padding: 8px 12px; border-left: 3px solid var(--t-orthodoxy); background: color-mix(in srgb, var(--t-orthodoxy) 10%, var(--surface)); }
-  .answer .label { margin-top: 0 !important; color: var(--ink); }
-  .answer p:last-child { margin-bottom: 0; }
+  /* Three blocks per question (owner, 2026-10-09): Orthodox teaching, the
+     chosen tradition's teaching, then where they part and the Orthodox
+     answer, which stands out; only analysis links and sources fold. */
+  .pair { display: grid; gap: 12px; }
+  .pair[hidden] { display: none; }
+  .side.verdict { border-left-color: var(--t-orthodoxy); background: color-mix(in srgb, var(--t-orthodoxy) 9%, var(--surface)); }
+  .side.verdict .who { color: var(--ink); }
+  .difference { font-size: 17px; font-weight: 700; }
   .more > summary { cursor: pointer; color: var(--focus); font-weight: 700; font-size: 15px; padding: 4px 0; }
   .more[open] > summary { margin-bottom: 8px; }
   .sources { margin: 0 0 8px; padding-left: 20px; font-size: 14px; }
@@ -169,7 +173,7 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
   .all-list li + li { border-top: 1px solid var(--line); }
   .row-pick { border-radius: 4px; padding: 4px 8px; min-height: 36px; font-weight: 700; text-align: left; justify-content: flex-start; }
   .row-text { line-height: 1.55; }
-  .qc[data-view='all'] .side.tradition { display: none; }
+  .qc[data-view='all'] .pair { display: none; }
   .qc[data-view='all'] .all-list { display: block; }
 
   @media (max-width: 760px) {
@@ -195,7 +199,7 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
   const root = document.querySelector<HTMLElement>('[data-question-compare]');
   if (root) {
     const picks = [...root.querySelectorAll<HTMLButtonElement>('[data-pick]')];
-    const sides = [...root.querySelectorAll<HTMLElement>('.side.tradition')];
+    const pairs = [...root.querySelectorAll<HTMLElement>('.pair')];
     const viewButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-view-button]')];
     const toc = root.querySelector<HTMLDetailsElement>('.qc-toc');
     const narrow = matchMedia('(max-width: 760px)');
@@ -218,7 +222,7 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
     onSelection((ids) => {
       const chosen = ids[1] ?? '';
       root.dataset.chosen = chosen;
-      sides.forEach((side) => { side.hidden = side.dataset.trad !== chosen; });
+      pairs.forEach((pair) => { pair.hidden = pair.dataset.trad !== chosen; });
       picks.forEach((pick) => pick.setAttribute('aria-pressed', String(pick.dataset.pick === chosen)));
       if (!chosen) setView('all', false);
     });

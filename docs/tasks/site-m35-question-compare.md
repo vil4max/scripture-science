@@ -40,6 +40,10 @@ without a chooser.
 - The ROC 2000 principle on love for people is one line above the questions.
 - The chosen side is labelled as that tradition's teaching on the question
   («Учение Свидетелей Иеговы»), not a self-description (owner).
+- Each question has three separate blocks (owner): the Orthodox teaching; the
+  chosen tradition's teaching; «Где расходятся — православный ответ» with the
+  difference line and the Orthodox response, ending with the folded analysis
+  links and sources.
 - All 105 `difference` lines were reviewed; 45 that restated the tradition's
   teaching or carried an editorial caveat were rewritten to name the
   difference («…, а Церковь …» or an explicit agreement), paraphrasing the
