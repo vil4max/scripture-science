@@ -1,6 +1,10 @@
 # M35 — question-first comparison
 
-State: implemented and verified; the owner authorized committing and pushing on 2026-10-09
+State: the question-first comparison, the Creed-based revision and the page
+«Богослужение и молитва» with the prayer texts are published (2026-10-09,
+owner: «Пуш»); the question on the daily, weekly and yearly rhythm and two
+further prayers are being sourced, and publishing them waits for the owner's
+word
 
 ## Authorization and scope
 
@@ -44,6 +48,44 @@ without a chooser.
   chosen tradition's teaching; «Где расходятся — православный ответ» with the
   difference line and the Orthodox response, ending with the folded analysis
   links and sources.
+- The Nicene-Constantinopolitan Creed is the key to the Orthodox side (owner):
+  each question quotes its Creed articles under the Orthodox answer
+  (`src/data/creed.json`, exact text from Filaret's catechism §67, checked
+  against the page on 2026-10-09; practice-only topics quote none), the
+  Orthodox short answers follow the Creed (God first as Creator of all things
+  visible and invisible, then the Trinity). A first «Символ веры — основа
+  сравнения» box above the questions was replaced by the Creed part below.
+- The page becomes «Символ веры и различия» (owner): part one follows the
+  Creed — God the Father and Creator (1), Jesus Christ (2–6), for our
+  salvation (3–4), the Second Coming and the age to come (7, 12), the Holy
+  Spirit (8), the Church (9), Baptism (10), the resurrection of the dead (11);
+  each question opens with the Creed text, then «Простыми словами». Part two,
+  «Другие различия», holds the topics the Creed does not address. The third
+  block is «Православный взгляд на расхождение».
+- The full prayer texts (owner) — the Creed, the Lord's Prayer, «Достойно
+  есть», Psalm 50 and further prayers — in Church Slavonic and Russian, with
+  a plain explanation and verified sources (`src/data/prayers.yaml`), close
+  the page «Богослужение и молитва»; the comparisons link to them («Символ
+  веры полностью», «Молитвы полностью»). They first had a page of their own,
+  «Молитвы»; its address forwards (owner: «Молитвы в раздел богослужение и
+  молитвы»).
+- Questions outside the fifteen topics live in `src/data/extra-questions.yaml`
+  with the Orthodox teaching and all seven traditions in the same three
+  blocks. The Theotokos sits in the Creed part after Jesus Christ, quoting
+  article 3 («и Марии Девы», owner); the Holy Spirit keeps its own section
+  (article 8). The page «Богослужение и молитва» (owner) compares common
+  worship, the daily, weekly and yearly rhythm (Islam's own schedule of five
+  prayers and so on), prayer at home (the prayer rule, preparation for
+  Communion, akathists) and the Psalter; the article 10 question is renamed
+  «Что такое Крещение и Таинства?». Gaps are stated, not filled: no
+  specific Jewish teaching on Mary and no official Adventist statement were
+  found; the Adventist position cites a Dialogue article as an author's view.
+- How services and prayer are done is reference data (owner): any reliable
+  description may establish it, not only official sites (`docs/SOURCES.md`,
+  "Practice descriptions"); the worship part was re-researched on that basis.
+- Difference lines are neutral (owner): they name the difference («…, а
+  Церковь …» or «Здесь согласие: …») without evaluative words; the evaluation
+  belongs to the Orthodox response. All 105 lines follow this pattern.
 - All 105 `difference` lines were reviewed; 45 that restated the tradition's
   teaching or carried an editorial caveat were rewritten to name the
   difference («…, а Церковь …» or an explicit agreement), paraphrasing the
@@ -52,9 +94,15 @@ without a chooser.
 
 ## Acceptance
 
-- Fifteen questions in topic order; in each, the Orthodox side first, seven
-  tradition sides with only the default visible on the server, the difference
-  and the Orthodox answer before the fold, seven lines in «Этот вопрос у всех».
+- «Символ веры и различия»: the Creed (its twelve articles all quoted, the
+  Theotokos after Jesus Christ), then «Другие различия». «Богослужение и
+  молитва»: services, the daily, weekly and yearly rhythm, prayer at home and
+  the Psalter, then the prayer texts. In each question, the Orthodox side
+  first, seven tradition sides with only the default visible on the server,
+  the difference and the Orthodox answer before the fold, seven lines in
+  «Этот вопрос у всех».
+- The prayer texts are in Church Slavonic and Russian, and the comparisons
+  link to each of them; the old «Молитвы» address forwards to the same prayer.
 - Node.js 26 `npm run verify` passes; desktop and 390 px checks of choosing,
   switching views, choosing from a line, anchors and no horizontal overflow.
 
@@ -66,3 +114,16 @@ removed with their module), two Python tests, 23 pages, zero Astro
 diagnostics, links and text fidelity pass. Browser: desktop and 390 px; the
 phone page is about 13,700 px instead of 40,900; no horizontal overflow;
 choosing from «Этот вопрос у всех» switches the tradition and view.
+
+2026-10-09, Creed-based revision, Node.js 26: `npm run verify` — 167 Node
+tests (Creed articles and part order, prayers page and its links, question
+order with the Theotokos after Jesus Christ and the worship part), two Python
+tests, 24 pages, links and text fidelity pass. Browser: the worship part on
+desktop and at 375 px, anchors land on the question, no horizontal overflow.
+The worship and private-prayer excerpts were checked as exact substrings of
+the fetched pages (PDFs through `pdftotext`). After the re-research from
+reference descriptions, all 228 proofs of the two entries were rechecked the
+same way (none missing); `npm run verify` — 168 Node tests, 24 pages.
+The page «Богослужение и молитва»: 375 px without horizontal overflow; the old
+«Молитвы» address opens the same prayer (checked with Psalm 50 and «Достойно
+есть»).

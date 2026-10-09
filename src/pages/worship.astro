@@ -1,0 +1,35 @@
+---
+// «Богослужение и молитва» (owner, 2026-10-09): how each religion worships
+// and prays — common worship, the daily, weekly and yearly rhythm, prayer at
+// home, the Psalter — compared with the Orthodox practice in the same three
+// blocks as the Creed comparison, then the full Orthodox prayer texts.
+import BackToTop from '../components/BackToTop.astro';
+import PrayerTexts from '../components/PrayerTexts.astro';
+import QuestionCompare from '../components/QuestionCompare.astro';
+import SectionPage from '../layouts/SectionPage.astro';
+import { getOrderedMatrix } from '../lib/content';
+import { withBase } from '../lib/paths';
+import { TRADITION_COLOR_TOKEN } from '../lib/rules';
+
+const traditions = await getOrderedMatrix();
+const colorById = new Map(
+  traditions.map((t) => [t.id, TRADITION_COLOR_TOKEN[t.id as keyof typeof TRADITION_COLOR_TOKEN]]),
+);
+---
+
+<SectionPage
+  title="Богослужение и молитва"
+  lead="Как служат и молятся в каждой религии: общее богослужение, распорядок дня, недели и года, молитва дома и Псалтирь. Полные тексты православных молитв — в конце страницы."
+>
+  <p class="note">В каждом вопросе сначала — православная практика, затем — выбранная религия и православный взгляд на расхождение. Чему религии учат о Боге, Христе и спасении — в разделе <a href={withBase('compare/')} data-carry-selection>«Символ веры и различия»</a>.</p>
+  <section id="topics" aria-label="Богослужение и молитва">
+    <QuestionCompare traditions={traditions} colorById={colorById} page="worship" extraToc={[{ href: '#prayers', title: 'Молитвы полностью' }]} />
+  </section>
+  <PrayerTexts />
+  <BackToTop />
+</SectionPage>
+
+<style>
+  .note { max-width: var(--measure); margin: 0; padding-left: 14px; border-left: 4px solid var(--t-orthodoxy); color: var(--muted); font-size: 15px; line-height: 1.6; }
+  .note a { color: var(--focus); }
+</style>

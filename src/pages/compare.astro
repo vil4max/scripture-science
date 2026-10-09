@@ -3,8 +3,8 @@ import CompareAnchors from '../components/CompareAnchors.astro';
 import BackToTop from '../components/BackToTop.astro';
 import QuestionCompare from '../components/QuestionCompare.astro';
 import SectionPage from '../layouts/SectionPage.astro';
-import JourneyNav from '../components/JourneyNav.astro';
 import { getOrderedMatrix } from '../lib/content';
+import { CREED_SOURCE } from '../lib/creed';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
@@ -15,18 +15,17 @@ const colorById = new Map(
 ---
 
 <SectionPage
-  title="Сравнение"
-  lead="Пятнадцать главных вопросов веры. На каждый — сначала ответ Православной Церкви, затем учение выбранной религии и в чём разница."
+  title="Символ веры и различия"
+  lead="Символ веры — краткое исповедание православной веры. По каждому его члену: что говорят другие религии и православный взгляд на расхождение. Затем — другие различия, о которых Символ веры не говорит."
 >
-  <JourneyNav />
-  <p id="views" class="views-note">Отвергая ошибочные учения, христианин призван любить людей, которые их исповедуют (<a href="https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/">Основные принципы отношения РПЦ к инославию, 2000, §§1.1, 7.1</a>). Ответные документы других традиций — в <a href={withBase('sources/#relations-documents')}>справочных материалах</a>.</p>
+  <p id="views" class="views-note">Символ веры составили отцы I и II Вселенских Соборов; <a href={withBase('worship/#simvol-very')}>полный текст</a> — в разделе «Богослужение и молитва» (<a href={CREED_SOURCE.url} target="_blank" rel="noopener noreferrer">{CREED_SOURCE.title}</a>). Отвергая ошибочные учения, христианин призван любить людей, которые их исповедуют (<a href="https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/">Основные принципы отношения РПЦ к инославию, 2000, §§1.1, 7.1</a>).</p>
 
   <CompareAnchors />
-  <section id="topics" aria-label="Вопросы сравнения">
+  <section id="topics" aria-label="Символ веры и различия">
     <QuestionCompare traditions={traditions} colorById={colorById} />
   </section>
 
-  <p class="reference-link">Подробные разборы каждой религии — на её странице; исторические события — в разделе <a href={withBase('timeline/')}>«История»</a>; источники — в <a href={withBase('sources/')}>справочном разделе</a>.</p>
+  <p class="reference-link">Как служат и молятся в каждой религии — в разделе <a href={withBase('worship/')} data-carry-selection>«Богослужение и молитва»</a>; подробные разборы каждой религии — на её странице; исторические события — в разделе <a href={withBase('timeline/')}>«История»</a>; источники и ответные документы других традиций — в <a href={withBase('sources/#relations-documents')}>справочном разделе</a>.</p>
   <BackToTop />
 </SectionPage>
 

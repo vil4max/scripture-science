@@ -1,0 +1,1837 @@
+# Extra comparison questions (Theotokos, Psalter, services, private prayer):
+# Orthodox answer first, then each tradition's own teaching, the difference,
+# and the Orthodox response.
+# Source rules: docs/SOURCES.md. Proof entries marked accessed 2026-10-09 were
+# fetched and checked as exact substrings of the page text on that date; older
+# dates belong to entries reused from the matrix, analyses and assessments.
+- id: theotokos
+  question: "Кто такая Богородица и почему её почитают?"
+  orthodox:
+    short: "Богородица — Пресвятая Дева Мария, Мать Иисуса Христа. Церковь называет Её так, потому что Её Сын — истинный Бог, чтит Её Приснодевой, выше Херувимов и Серафимов, и просит Её молитв."
+    detail: "Имя «Богородица» исповедует веру о Христе: родившийся от Неё — Бог. III Вселенский Собор утвердил это в 431 году. Церковь просит Марию о молитвах, как и других святых, а гимн «Достойно есть» славит Её как Матерь нашего Бога."
+    proof:
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §§184–189: Приснодева и Богородица"
+        tier: official
+        excerpt: "Пресвятая Мария действительно всегда пребывала и пребывает Девой"
+        accessed: "2026-09-27"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+        tier: official
+        excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+        accessed: "2026-10-01"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет Московский. Пространный катехизис, §188: достоинство Девы Марии"
+        tier: official
+        excerpt: "Православная Церковь чтит Её превыше Херувимов и Серафимов"
+        accessed: "2026-10-01"
+      - url: "https://azbyka.ru/bogorodica"
+        title: "Богородица (Пресвятая Дева Мария) — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Догмат о Богоматеринстве получил окончательное закрепление на III Вселенском Соборе, состоявшемся в 431 году"
+        accessed: "2026-10-01"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+        tier: official
+        excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+        accessed: "2026-10-01"
+      - url: "https://azbyka.ru/bogorodica"
+        title: "Богородица (Пресвятая Дева Мария) — энциклопедия «Азбука веры», «О молитвенном обращении к Богородице „спаси нас!“»"
+        tier: reference
+        excerpt: "Откликаясь на наши молитвы, Богородица, как Пренепорочная Матерь Христа, может помочь нам ходатайством"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/dostojno-est"
+        title: "Достойно есть — энциклопедия «Азбука веры» (церковнославянский текст и русский перевод гимна)"
+        tier: reference
+        excerpt: "Поистине достойно прославлять Тебя, Богородицу, всегда блаженную и непорочную и Матерь Бога нашего"
+        accessed: "2026-10-09"
+  traditions:
+    judaism:
+      teaching: "Иудаизм не признаёт Иисуса из Назарета Мессией, а веру в Его божественность трудно согласовать с единством Бога (так объясняет My Jewish Learning). Отдельного учения о Марии в найденных иудейских источниках нет, а стих Ис 7:14 раввин с сайта Aish относит к современнице пророка, а не к Марии."
+      difference: "Иудаизм не признаёт Иисуса Мессией и не учит о Марии как о Матери Бога, а Церковь исповедует Её Богородицей и просит Её молитв."
+      response: "Церковь называет Марию Богородицей, потому что родившийся от Неё — истинный Бог (катехизис, §187). Ис 7:14 она читает по Синодальному переводу — «Дева» — и вслед за евангелистом Матфеем относит это к Марии (Мф 1:22–23); к святым Церковь обращается за молитвенной помощью, а молитву приносят они Богу (§261)."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: reference
+          excerpt: "This does not mean, however, that they believe, as Christians do, that he was raised from the dead or was the messiah"
+          accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/what-do-jews-believe-about-jesus/"
+          title: "What Do Jews Believe About Jesus? | My Jewish Learning"
+          tier: reference
+          excerpt: "a belief hard to reconcile with Judaism’s insistence on God’s oneness"
+          accessed: "2026-09-26"
+        - url: "https://toldot.com/13PrintsipovVery.html"
+          title: "13 принципов веры, п. 5 — Толдот.ру"
+          tier: official
+          excerpt: "Творцу, благословенно имя Его, следует молиться, — Ему, и никому другому"
+          accessed: "2026-09-25"
+        - url: "https://aish.com/does-isaiah-714-refer-to-a-virgin-birth/"
+          title: "Does Isaiah 7:14 Refer to a Virgin Birth? — Aish, «Ask the Rabbi» (ответ раввина Aish; пересказывает иудейские комментарии, Раши и Радак)"
+          tier: reference
+          excerpt: "Isaiah is thus clearly referring to a contemporary woman"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/biblia/?Is.7:14&r"
+          title: "Ис. 7:14 — Синодальный перевод"
+          tier: official
+          excerpt: "се, Дева во чреве приимет и родит Сына, и нарекут имя Ему: Еммануил"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.1:22-23&r"
+          title: "Мф. 1:22–23 — Синодальный перевод"
+          tier: official
+          excerpt: "се, Дева во чреве приимет и родит Сына, и нарекут имя Ему Еммануил, что значит: с нами Бог"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+          tier: official
+          excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+          accessed: "2026-10-01"
+    catholicism:
+      teaching: "Катехизис Католической Церкви исповедует Марию Матерью Божией и Приснодевой. Католики верят также, что Она с первого мгновения была сохранена от первородного греха (догмат 1854 г.), после земной жизни взята телом и душой в небесную славу, и просят Её заступничества."
+      difference: "Католики, как и Церковь, исповедуют Марию Богородицей и Приснодевой, а догмат 1854 г. о Её непорочном зачатии Церковь не принимает."
+      response: "Церковь высоко чтит святость Богородицы, но, по «Азбуке веры», никогда не учила, что Она была изначально свободна от первородного греха. Успение Богородицы Церковь празднует, а догмат о Её взятии на небо, по оценке прот. М. Козлова и Д. Огицкого, принят в 1950 г. папой без Собора."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §509"
+          tier: official
+          excerpt: "Мария воистину есть «Матерь Божия», ибо Она есть Матерь Сына Божия предвечного, вочеловечившегося, Который Сам есть Бог"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §510"
+          tier: official
+          excerpt: "Девой — кормя Его грудью, Девой присно"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §491"
+          tier: official
+          excerpt: "Преблаженная Дева Мария была с первого мгновения Своего зачатия, по исключительной благодати и благоволению Всемогущего Бога, в предвидении заслуг Иисуса Христа"
+          accessed: "2026-10-01"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §966"
+          tier: official
+          excerpt: "была взята телом и душой в небесную славу"
+          accessed: "2026-10-01"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §969"
+          tier: official
+          excerpt: "Своим многообразным заступничеством Она и далее продолжает содействовать получению нами даров вечного спасения"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §971"
+          tier: official
+          excerpt: "моля Ее о помощи во всех опасностях и нуждах"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/bogorodica"
+          title: "Богородица — энциклопедия «Азбука веры», «Что такое „непорочное зачатие Богородицы“?»"
+          tier: reference
+          excerpt: "Православная Церковь, высоко оценивая достоинства Божьей Матери, тем не менее никогда не учила, что Она была изначально свободна от первородного греха"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/bogoslovie/zapadnoe-hristianstvo-vzgljad-s-vostoka/2"
+          title: "Прот. Максим Козлов, Д. П. Огицкий. «Западное христианство: взгляд с Востока», гл. II «Римский католицизм»"
+          tier: reference
+          excerpt: "принятого также без какого-либо Собора в 1950 г. папой Пием XII"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/bogoslovie/zapadnoe-hristianstvo-vzgljad-s-vostoka/2"
+          title: "Прот. Максим Козлов, Д. П. Огицкий. «Западное христианство: взгляд с Востока», гл. II «Римский католицизм» (песнопение Успения)"
+          tier: reference
+          excerpt: "Ангели, успение Пречистыя видевшие, удивишася: како Дева восходит от земли на небо"
+          accessed: "2026-10-01"
+    islam:
+      teaching: "Коран чтит Марьям (Марию): ангелы говорят ей, что Аллах «избрал тебя, очистил и возвысил над женщинами миров» (3:42), а сын у неё родится, хотя её «не касался ни один мужчина» (3:47). Иса, сын Марьям, — только посланник Аллаха (5:75), а в 5:116 он отрицает, что велел людям принимать его и его мать «двумя богами наряду с Аллахом»."
+      difference: "Ислам чтит Марьям как избранную деву и мать пророка Исы, а Церковь исповедует Марию Богородицей, Матерью воплотившегося Бога."
+      response: "Церковь не обожествляет Марию: Она — сотворённое существо, но превосходит благодатью и достоинством всякое сотворённое существо (катехизис, §188). Богородицей Её называют потому, что родившийся от Неё был в самом зачатии и рождении истинным Богом (§187)."
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:42"
+          title: "Коран 3:42, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Аллах избрал тебя, очистил и возвысил над женщинами миров"
+          accessed: "2026-10-01"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:47"
+          title: "Коран 3:47, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Как я могу иметь сына, если меня не касался ни один мужчина"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:75"
+          title: "Коран 5:75, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Мессия, сын Марьям (Марии), был всего лишь посланником"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:116"
+          title: "Коран 5:116, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Примите меня и мою мать двумя богами наряду с Аллахом"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §188: достоинство Девы Марии"
+          tier: official
+          excerpt: "превосходит благодатью и приближением к Богу, а, следовательно, и достоинством всякое сотворённое существо"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §187: почему Мария — Богородица"
+          tier: official
+          excerpt: "родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+    protestantism:
+      teaching: "Лютеранская «Формула согласия» учит, что Мария родила истинного Сына Божия и потому по праву называется матерью Бога, а «Апология» одобряет почитание святых, но говорит, что Писание не учит их призывать. Реформатское Вестминстерское исповедание велит поклоняться Богу, «а не ангелам, святым или другим творениям», баптисты в вероучении 1985 г. пишут, что Христос родился от девы Марии, а у англикан взгляды на призывание святых разные."
+      difference: "Лютеране называют Марию матерью Бога, но протестанты в целом не молятся Марии и святым (у англикан взгляды разные), а Церковь исповедует Её Богородицей и просит Её молитв."
+      response: "Церковь призывает святых как членов небесной Церкви: они приносят Богу молитвы верующих (катехизис, §261), а основание — Священное Предание (§262). VII Вселенский Собор определил почитать святых и «просить их ходатайства, так как они могут нас приближать к Богу»."
+      proof:
+        - url: "https://bookofconcord.org/epitome/person-of-christ/"
+          title: "Формула согласия, Эпитоме, VIII «О Лице Христа», §7 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "therefore she also is rightly called and truly is the mother of God"
+          accessed: "2026-10-09"
+        - url: "https://bookofconcord.org/defense/of-the-invocation-of-saints/"
+          title: "Апология Аугсбургского исповедания, ст. XXI «О призывании святых», §4 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "Our Confession approves honors to the saints"
+          accessed: "2026-10-09"
+        - url: "https://bookofconcord.org/defense/of-the-invocation-of-saints/"
+          title: "Апология Аугсбургского исповедания, ст. XXI «О призывании святых», §10 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "Scripture does not teach the invocation of the saints, or that we are to ask the saints for aid"
+          accessed: "2026-10-09"
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры, глава 21, §2: поклонение"
+          tier: official
+          excerpt: "а не ангелам, святым или другим творениям"
+          accessed: "2026-10-01"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, раздел «Иисус Христос»"
+          tier: official
+          excerpt: "Иисус Христос зачат от Духа Святого, родился от девы Марии, соединив в Себе божественное естество с человеческим"
+          accessed: "2026-10-01"
+        - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
+          title: "Англиканство — St Andrew's Anglican Church, Moscow"
+          tier: official
+          excerpt: "молитва к святым и Деве Марии заменила молитву ко Христу"
+          accessed: "2026-10-01"
+        - url: "https://web.archive.org/web/20250808200651/https://www.walsinghamanglican.org.uk/the-national-pilgrimage/"
+          title: "Past National Pilgrimages — Anglican Shrine of Our Lady of Walsingham (архивная копия от 2025-08-08)"
+          tier: official
+          excerpt: "Our Lady of Walsingham, pray for us."
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+          tier: official
+          excerpt: "приносят к Богу молитвы верующих, живущих на земле"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §262: основание призывания святых"
+          tier: official
+          excerpt: "Правило Церкви, пребывающей на земле, призывать в молитве святых Церкви небесной, основано на Священном Предании"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_12"
+          title: "VII Вселенский Собор, деяние четвёртое — «Деяния Вселенских Соборов», том 7, «Азбука веры»"
+          tier: official
+          excerpt: "а равно и просить их ходатайства, так как они могут нас приближать к Богу"
+          accessed: "2026-09-26"
+    lds:
+      teaching: "В Книге Мормона Нефий видит в Назарете деву, «самую красивую и прекрасную среди всех других дев», и узнаёт, что она — «мать Сына Божьего по плоти» (1 Неф. 11:13–18); Алма называет её по имени: Христос родится от Марии (Алма 7:10). Церковь Иисуса Христа Святых последних дней учит молиться только Богу, Небесному Отцу, во имя Иисуса Христа."
+      difference: "Святые последних дней чтят Марию как деву и мать Сына Божьего, но молятся только Небесному Отцу, а Церковь исповедует Её Богородицей и просит Её молитв."
+      response: "Церковь называет Марию Богородицей, потому что родившийся от Неё — истинный Бог (катехизис, §187). Просьба о молитвах святых — молитва земной Церкви к небесной (§261), а не поклонение им: Церковь почитает благодать Божию, обитающую в святых, и через них просит помощи у Бога (§511)."
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=rus"
+          title: "1 Нефий 11:13–15 — Книга Мормона, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Деву – самую красивую и прекрасную среди всех других дев"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/scriptures/bofm/1-ne/11?lang=rus"
+          title: "1 Нефий 11:18 — Книга Мормона, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "мать Сына Божьего по плоти"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/scriptures/bofm/alma/7?lang=rus"
+          title: "Алма 7:10 — Книга Мормона, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Он родится от Марии в земле Иерусалима, земле наших праотцов"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "We should pray to Him and no one else."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/ensign/2019/01/mary-the-mother-of-jesus?lang=eng"
+          title: "Gaye Strathearn. Mary, the Mother of Jesus — Ensign, January 2019 (статья в журнале Церкви; автор — проф. БЮУ)"
+          tier: reference
+          excerpt: "Mary, the mother of Jesus, is one of the few women mentioned in scripture and the only one whose life and ministry were prophesied about centuries before her birth"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+          tier: official
+          excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет. Пространный катехизис, §511: почитание Ангелов и святых"
+          tier: official
+          excerpt: "правильное почитание Ангелов и святых, поскольку мы почитаем благодать Божию, в них обитающую и действующую, и через них просим помощи у Бога"
+          accessed: "2026-10-01"
+    adventism:
+      teaching: "Основы вероучения адвентистов говорят, что Иисус «зачат Святым Духом и рождён девой Марией». По статье в журнале Dialogue (издание Церкви; автор — сотрудница Adventist Review), адвентисты считают Марию избранной Богом матерью Спасителя, но отвергают почитание Её личности, веру в Её посредничество на небе и учение о непорочном зачатии."
+      difference: "Адвентисты видят в Марии избранную мать Спасителя, но не почитают и не призывают Её, а Церковь исповедует Её Богородицей и просит Её молитв."
+      response: "Церковь называет Марию Богородицей, потому что родившийся от Неё — истинный Бог (катехизис, §187). Церковь чтит Её выше Херувимов и Серафимов как Мать Господа (§188) и празднует Её Успение: в песнопении праздника ангелы дивятся, как Дева «восходит от земли на небо»."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 4 «Сын» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "Он был зачат Святым Духом и рождён девой Марией"
+          accessed: "2026-10-09"
+        - url: "https://www.dialogue.adventist.org/601/who-was-mary"
+          title: "Jean Sequeira. Who was Mary? — Dialogue 11:3 (1999), журнал адвентистского служения студентам (AMiCUS)"
+          tier: reference
+          excerpt: "Seventh-day Adventists, along with our Catholic friends, believe Mary was chosen by God to play a unique role as mother of the Saviour."
+          accessed: "2026-10-09"
+        - url: "https://www.dialogue.adventist.org/601/who-was-mary"
+          title: "Jean Sequeira. Who was Mary? — Dialogue 11:3 (1999), журнал адвентистского служения студентам (AMiCUS)"
+          tier: reference
+          excerpt: "we reject the veneration of Mary’s person, including the belief that she is in heaven and acts as a mediator between the sinner and the Saviour"
+          accessed: "2026-10-09"
+        - url: "https://www.dialogue.adventist.org/601/who-was-mary"
+          title: "Jean Sequeira. Who was Mary? — Dialogue 11:3 (1999), журнал адвентистского служения студентам (AMiCUS)"
+          tier: reference
+          excerpt: "Adventists also reject the concept of the immaculate conception."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §188: достоинство Девы Марии"
+          tier: official
+          excerpt: "Православная Церковь чтит Её превыше Херувимов и Серафимов"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/bogoslovie/zapadnoe-hristianstvo-vzgljad-s-vostoka/2"
+          title: "Прот. Максим Козлов, Д. П. Огицкий. «Западное христианство: взгляд с Востока», гл. II «Римский католицизм» (песнопение Успения)"
+          tier: reference
+          excerpt: "Ангели, успение Пречистыя видевшие, удивишася: како Дева восходит от земли на небо"
+          accessed: "2026-10-01"
+    jw:
+      teaching: "Свидетели Иеговы не называют Марию Богородицей: по их учению, она родила «Сына Всевышнего», а не самого Бога, и особого почитания не заслуживает, а у Марии и Иосифа были и другие дети. Молиться, как они учат, следует только Богу, во имя Иисуса Христа."
+      difference: "Свидетели Иеговы не называют Марию Богородицей и молятся только Богу, а Церковь исповедует Её Богородицей и Приснодевой и просит молитв святых."
+      response: "Церковь называет Марию Богородицей, потому что родившийся от Неё — истинный Бог (катехизис, §187), и так определил VII Вселенский Собор: Она «родила по плоти Единого от Святой Троицы». Слова «братья Господни» (Мк 6:3), по прот. О. Стеняеву, указывают на детей праведного Иосифа, а Церковь исповедует Марию Приснодевой (§184)."
+      proof:
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/мать-мария-богородица-теотокос/"
+          title: "«Является ли Мария Богородицей?» — Ответы на библейские вопросы, jw.org"
+          tier: official
+          excerpt: "она родила «Сына Всевышнего», или «Сына Бога», а не самого Бога"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/мать-мария-богородица-теотокос/"
+          title: "«Является ли Мария Богородицей?» — Ответы на библейские вопросы, jw.org"
+          tier: official
+          excerpt: "Не говорится в ней и о том, что христиане должны поклоняться Марии или почитать ее"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/мать-мария-богородица-теотокос/"
+          title: "«Является ли Мария Богородицей?» — Ответы на библейские вопросы, jw.org"
+          tier: official
+          excerpt: "Мария никогда не говорила, что она Богоматерь"
+          accessed: "2026-10-01"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/мать-мария-богородица-теотокос/"
+          title: "«Является ли Мария Богородицей?» — Ответы на библейские вопросы, jw.org"
+          tier: official
+          excerpt: "У Марии и ее мужа Иосифа были и другие дети"
+          accessed: "2026-10-01"
+        - url: "https://www.jw.org/ru/библейские-учения/вопросы/нужно-ли-молиться-святым/"
+          title: "«Нужно ли молиться святым?» — Ответы на библейские вопросы, jw.org"
+          tier: official
+          excerpt: "Нет. В Библии говорится, что молиться следует только Богу и делать это нужно во имя Иисуса Христа."
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/pravila/dejanija-vselenskikh-soborov-tom7/1_15"
+          title: "Деяния Вселенских Соборов, т. 7, Деяние седьмое, гл. 15: определение VII Вселенского собора (787)"
+          tier: official
+          excerpt: "которая действительно и поистине есть Богородица, так как она родила по плоти Единого от Святой Троицы"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§184–189: Приснодева и Богородица"
+          tier: official
+          excerpt: "Пресвятая Мария действительно всегда пребывала и пребывает Девой"
+          accessed: "2026-09-27"
+        - url: "https://azbyka.ru/otechnik/Oleg_Stenyaev/disput-so-svideteljami-iegovy/"
+          title: "Прот. О. Стеняев. «Диспут со „Свидетелями Иеговы“», разд. о Деве Марии"
+          tier: reference
+          excerpt: "Выражение «братья Господни» – есть свидетельство о детях праведного Иосифа"
+          accessed: "2026-10-01"
+
+- id: psalter
+  question: "Как относятся к Псалтири?"
+  orthodox:
+    short: "Псалтирь — книга псалмов, песен и молитв царя Давида и других авторов, часть Священного Писания. В Православной Церкви её читают за богослужением больше, чем любую другую священную книгу, и делят для чтения на 20 кафизм."
+    detail: "По Уставу вся Псалтирь прочитывается за неделю, а в Великий пост — дважды. Псалом 50 — покаянный: он звучит на службах трижды за сутки и входит в утренние молитвы. Номера многих псалмов в церковнославянской и русской Библиях на единицу меньше, чем в еврейской и западных (Пс 50 здесь — Пс 51 там)."
+    proof:
+      - url: "https://azbyka.ru/psaltir"
+        title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+        tier: reference
+        excerpt: "Псалтирь более всех других священных книг употребляется при богослужении"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/psaltir"
+        title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+        tier: reference
+        excerpt: "По Уставу церковному вся Псалтирь должна быть прочитана по порядку в течение седмицы, а во время Великого Поста – дважды за седмицу"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/psaltir"
+        title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+        tier: reference
+        excerpt: "В церковном употреблении Псалтирь разделяется на 20 частей"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov/?p=12737"
+        title: "Псалом 50 — Молитвослов «Азбука веры», толкования псалма 50"
+        tier: reference
+        excerpt: "Псалом 50 – самый известный псалом; его известность обусловлена и покаянным содержанием, и частым употреблением в богослужении"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov/?p=12737"
+        title: "Псалом 50 — Молитвослов «Азбука веры», толкования псалма 50"
+        tier: reference
+        excerpt: "только в рамках служб суточного круга он читается 3 раза в течение суток: на повечерии, утрене и 3-м часе"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov/?p=12737"
+        title: "Псалом 50 — Молитвослов «Азбука веры», толкования псалма 50"
+        tier: reference
+        excerpt: "Также псалом 50 входит в состав последований, составляющих келейное правило: в утренние молитвы"
+        accessed: "2026-10-09"
+      - url: "https://pravoslavie.ru/7074.html"
+        title: "Иеромонах Иов (Гумеров). Почему номера русских псалмов не соответствуют номерам английских? — Православие.Ru"
+        tier: reference
+        excerpt: "Нумерация псалмов в Псалтири, переведенной на западноевропейские языки, не совпадает с нумерацией псалмов в Псалтири на церковнославянском и на русском языках"
+        accessed: "2026-10-09"
+  traditions:
+    judaism:
+      teaching: "Книга Псалмов (на иврите — Теилим) — часть еврейской Библии: по My Jewish Learning, отрывки из неё составляют большую часть ежедневной утренней молитвы и пятничной встречи субботы в синагоге."
+      difference: "Иудаизм молится псалмами как хвалой и молитвой к Богу, а Церковь, кроме того, видит во многих псалмах пророчества о Христе."
+      response: "Церковь тоже молится псалмами, но считает, что многие из них пророчески говорят о Христе и Его царстве: на Псалтирь ссылается Сам Христос (Лк 24:44), а Его слова на кресте повторяют Пс 21:2."
+      proof:
+        - url: "https://www.myjewishlearning.com/article/say-tehillim-psalms-live-with-my-jewish-learning/"
+          title: "Watch Our Weekly Tehillim (Psalms) Recitation | My Jewish Learning"
+          tier: reference
+          excerpt: "Selections from Psalms show up everywhere in Jewish liturgy, forming a major part of the daily morning service and the Friday evening Kabbalat Shabbat service welcoming Shabbat."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Цитирование Псалтири в Новом Завете»"
+          tier: reference
+          excerpt: "Множество псалмов христианское предание рассматривает как пророчества о Христе и царстве Христовом"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.24:44&r"
+          title: "Лк. 24:44 — Синодальный перевод"
+          tier: official
+          excerpt: "написанному о Мне в законе Моисеевом и в пророках и псалмах"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Цитирование Псалтири в Новом Завете»"
+          tier: reference
+          excerpt: "повторяет Пс.21:2"
+          accessed: "2026-10-09"
+    catholicism:
+      teaching: "Катехизис Католической Церкви называет Псалмы шедеврами ветхозаветной молитвы, а Псалтирь — книгой, в которой слово Божие становится молитвой человека. Молитва псалмов входит в Литургию часов, которую Катехизис называет «общественная молитва Церкви» (КЦЦ 1174, 1177)."
+      difference: "Здесь согласие: католики, как и Церковь, молятся псалмами за богослужением и видят в них молитву, нашедшую полное осуществление во Христе."
+      response: "Православная Церковь тоже молится Псалтирью за богослужением: по Уставу вся она читается по порядку за неделю, а в церковном употреблении делится на 20 кафизм."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2585"
+          tier: official
+          excerpt: "Псалмы (т.е. «Хваления») представляют собой шедевры ветхозаветной молитвы"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2587"
+          tier: official
+          excerpt: "Псалтирь — книга, в которой слово Божие становится молитвой человека"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2586"
+          tier: official
+          excerpt: "Псалмы, моления которых нашли свое полное осуществление в Христе, остаются существенной составляющей молитвы Его Церкви"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1174"
+          tier: official
+          excerpt: "общественная молитва Церкви"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1177"
+          tier: official
+          excerpt: "Гимны и прошения Литургии Часов вводят молитву псалмов во время Церкви"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "По Уставу церковному вся Псалтирь должна быть прочитана по порядку в течение седмицы, а во время Великого Поста – дважды за седмицу"
+          accessed: "2026-10-09"
+    islam:
+      teaching: "Коран говорит, что Аллах даровал Давуду (Давиду) Забур, и в переводе Э. Кулиева это слово разъяснено как «Псалтирь» (4:163; 17:55). О себе Коран говорит, что он ниспослан в подтверждение прежних Писаний (5:48)."
+      difference: "Ислам признаёт Забур (Псалтирь) Писанием, данным Давуду, а Церковь читает Псалтирь за богослужением и дома."
+      response: "Церковь видит в Псалтири книгу Священного Писания, написанную по вдохновению Святого Духа, и образец сердечной молитвы; Новый Завет часто цитирует её."
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:163"
+          title: "Коран 4:163, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Давуду (Давиду) же Мы даровали Забур (Псалтирь)"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:55"
+          title: "Коран 17:55, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "А Давуду (Давиду) Мы даровали Забур (Псалтирь)"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:48"
+          title: "Коран 5:48, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Мы ниспослали тебе Писание с истиной в подтверждение прежних Писаний"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "написана по вдохновению Святого Духа"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Цитирование Псалтири в Новом Завете»"
+          tier: reference
+          excerpt: "Псалтирь – книга, часто цитируемая в Новом Завете"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Цитаты о псалтири»"
+          tier: reference
+          excerpt: "Псалтирь и сегодня остается в частом употреблении как при богослужениях, так и в повседневной жизни"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "Значительная часть содержания Псалтири представляет собой образцовые формы сердечной, возвышенной, благоговейной молитвы"
+          accessed: "2026-10-09"
+    protestantism:
+      teaching: "Вестминстерское исповедание (реформаты) относит пение псалмов с благодатью в сердце к общему духовному служению Богу. В англиканском Молитвеннике 1662 г. Псалтирь прочитывается целиком раз в месяц на утренней и вечерней молитве."
+      difference: "Протестанты читают и поют псалмы за богослужением: англикане прочитывают Псалтирь за месяц, а Церковь читает её всю за неделю по 20 кафизмам."
+      response: "Церковь читает и поёт псалмы на каждой службе: в шестопсалмии, на часах, в прокимнах, а рядовое чтение Псалтири по Уставу охватывает всю книгу за седмицу."
+      proof:
+        - url: "https://www.ireformed.org/westminster-confession-of-faith"
+          title: "Вестминстерское исповедание веры, глава 21, §5: поклонение"
+          tier: official
+          excerpt: "с благодатью в сердце воспевать псалмы"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/order-how-psalter-appointed-be"
+          title: "The Order how the Psalter is appointed to be read — Book of Common Prayer (1662), The Church of England"
+          tier: official
+          excerpt: "The Psalter shall be read through once every Month, as it is there appointed, both for Morning and Evening Prayer."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "для каждого богослужения применены особые псалмы, которые поются или читаются либо в целом виде (например, на шестопсалмии и часах)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "По Уставу церковному вся Псалтирь должна быть прочитана по порядку в течение седмицы, а во время Великого Поста – дважды за седмицу"
+          accessed: "2026-10-09"
+    lds:
+      teaching: "Церковь Иисуса Христа Святых последних дней признаёт Библию, в том числе Псалмы, словом Божьим в той мере, в какой она переведена правильно (Символы веры, ст. 8), а её Библейский словарь называет Псалтирь самой христианской по внутреннему смыслу книгой Ветхого Завета. Особого порядка чтения Псалтири за богослужением в найденных официальных источниках нет."
+      difference: "Святые последних дней признают Псалмы словом Божьим в составе Библии, а Церковь, кроме того, читает всю Псалтирь за богослужением по установленному уставу."
+      response: "Церковь учит, что Псалтирь, как и все книги Священного Писания, написана по вдохновению Святого Духа, и по Уставу читает её за богослужением по кафизмам."
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/scriptures/pgp/a-of-f/1?lang=rus"
+          title: "Символы веры 1:8 — Драгоценная жемчужина, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Мы верим, что Библия – слово Божье в той мере, в какой она переведена правильно"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/scriptures/bd/psalms?lang=eng"
+          title: "Bible Dictionary: «Psalms» — Scriptures, The Church of Jesus Christ of Latter-day Saints"
+          tier: official
+          excerpt: "No book of the Old Testament is more Christian in its inner sense or more fully attested as such by the use made of it than the Psalms."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "написана по вдохновению Святого Духа"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "В церковном употреблении Псалтирь разделяется на 20 частей"
+          accessed: "2026-10-09"
+    adventism:
+      teaching: "Первое положение вероучения адвентистов: Священное Писание, состоящее из Ветхого и Нового Заветов, есть Слово Божье; Псалмы входят в Ветхий Завет. Особого порядка чтения Псалтири за богослужением в найденных адвентистских источниках нет."
+      difference: "Адвентисты признают Псалмы Словом Божьим в составе Ветхого Завета, а Церковь, кроме того, читает всю Псалтирь за богослужением по установленному уставу."
+      response: "Церковь видит в Псалтири Слово Божье, написанное по вдохновению Святого Духа, и по Уставу читает её за богослужением по кафизмам; псалмы — образец сердечной молитвы."
+      proof:
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 1 «Священное Писание» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "Священное Писание, состоящее из Ветхого и Нового Заветов, есть Слово Божье"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "написана по вдохновению Святого Духа"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "Значительная часть содержания Псалтири представляет собой образцовые формы сердечной, возвышенной, благоговейной молитвы"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "По Уставу церковному вся Псалтирь должна быть прочитана по порядку в течение седмицы, а во время Великого Поста – дважды за седмицу"
+          accessed: "2026-10-09"
+    jw:
+      teaching: "Свидетели Иеговы называют книгу Псалмов боговдохновенным сборником песен, которым пользовались служители Иеговы в древности, и делят её на пять частей: Пс 1–41, 42–72, 73–89, 90–106 и 107–150."
+      difference: "Здесь согласие: Свидетели Иеговы, как и Церковь, считают Псалмы боговдохновенной книгой Писания, а деление Псалтири на 20 кафизм для богослужения принято в Церкви."
+      response: "Церковь тоже считает Псалтирь Священным Писанием, написанным по вдохновению Святого Духа, и по Уставу читает её за богослужением, разделяя на 20 кафизм."
+      proof:
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1101990080"
+          title: "Книга Библии номер 19 — Псалмы (публикация si, с. 112–118) — Онлайн-библиотека Сторожевой башни, wol.jw.org"
+          tier: official
+          excerpt: "боговдохновенный сборник песен, которым пользовались истинные служители Иеговы в древнее время"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1200003572"
+          title: "«Псалмы, книга Библии» — «Понимание Писания», том 2 (it-2), wol.jw.org"
+          tier: official
+          excerpt: "Сборник священных песен, состоящий, очевидно, из пяти частей"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "написана по вдохновению Святого Духа"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/psaltir"
+          title: "Псалтирь — энциклопедия «Азбука веры», раздел «Псалтирь в церковном богослужении»"
+          tier: reference
+          excerpt: "В церковном употреблении Псалтирь разделяется на 20 частей"
+          accessed: "2026-10-09"
+
+- id: services
+  question: "Как устроено богослужение?"
+  orthodox:
+    short: "Основа православного богослужения — Божественная литургия, на которой совершается Евхаристия. Вокруг неё — службы суточного круга (вечерня, утреня, часы, повечерие) и годовой круг праздников и постов; это общая молитва Церкви, с пением."
+    detail: "За Литургией звучат молитвы и песнопения, читают отрывки из Апостола и Евангелия, священник произносит проповедь, а затем верующие причащаются Телом и Кровью Христовыми под видом хлеба и вина. Литургия состоит из трёх частей: проскомидии (приготовления хлеба и вина), литургии оглашённых (молитвы, песнопения, чтения Писания) и литургии верных, за которой совершается Причащение. Катехизис называет Причащение главной и существенной частью христианского богослужения, а слово «литургия» означает общественное служение. Суточный круг составляют вечерня, повечерие, полунощница, утреня и часы (в приходах, как правило, повечерие и полунощницу не служат), годовой круг — праздники, памяти святых и посты. В Русской Церкви служат на церковнославянском языке, но язык богослужения — дело традиции, а не догматики: в других Поместных Церквах служат на местных языках."
+    proof:
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+        tier: official
+        excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+        accessed: "2026-10-01"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §316: слово «литургия»"
+        tier: official
+        excerpt: "Слово литургия значит общественное служение"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §332: Литургия оглашённых"
+        tier: official
+        excerpt: "Литургия оглашённых состоит из молитв, песнопений, чтения книг Апостольских и Евангелия"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §334: Литургия верных"
+        tier: official
+        excerpt: "Часть Литургии, за которой совершается Таинство Причащения, называется Литургией верных."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения"
+        tier: official
+        excerpt: "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/liturgiya"
+        title: "Литургия — энциклопедия «Азбука веры», раздел «Три части Литургии»"
+        tier: reference
+        excerpt: "Проскомидия, во время которой приготовляется вино и хлеб (просфоры) для Евхаристии"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/liturgiya"
+        title: "Литургия — энциклопедия «Азбука веры», раздел «Три части Литургии»"
+        tier: reference
+        excerpt: "На этой части могли присутствовать оглашенные, которые слушали чтения из Евангелия и Апостола."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/propoved"
+        title: "Проповедь — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Проповедь священника – неотъемлемая часть православного богослужения."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/liturgiya"
+        title: "Литургия — энциклопедия «Азбука веры», раздел «Три вида Литургии»"
+        tier: reference
+        excerpt: "В наше время общеупотребительны три вида Божественной Литургии"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+        title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+        tier: reference
+        excerpt: "Церковное богослужение циклично, и литургисты говорят о трех кругах богослужения: суточном, седмичном и годовом"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+        title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+        tier: reference
+        excerpt: "Он включает в себя восемь отдельных служб: вечерню, повечерие, полунощницу, утреню, 1-й час, 3-й час, 6-й час и 9-й час"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Суточный круг» (приходская практика)"
+        tier: reference
+        excerpt: "в нашей приходской традиции из перечисленных служб опускаются, как правило, повечерие и полунощница"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Годовой круг богослужения»"
+        tier: reference
+        excerpt: "его составляют праздники и памяти святых с фиксированными датами"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+        title: "Свт. Филарет Московский. Пространный катехизис, §537: праздники и посты"
+        tier: official
+        excerpt: "следует соблюдать, кроме воскресного дня, и другие, во славу Божию и в честь Пресвятой Богородицы и прочих святых установленные праздники и посты"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+        title: "Свт. Филарет Московский. Пространный катехизис, §503: внешнее богопочитание"
+        tier: official
+        excerpt: "участвовать в общественном богослужении"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/cerkovnoslavyanskij-yazyk"
+        title: "Церковнославянский язык — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "современный богослужебный язык Русской Православной Церкви"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/cerkovnoslavyanskij-yazyk"
+        title: "Церковнославянский язык — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Язык богослужения относится к области традиции, а не догматики, в разных Поместных церквах используются местные языки"
+        accessed: "2026-10-09"
+  traditions:
+    judaism:
+      teaching: "Три ежедневные молитвы — утренняя (Шахарит), дневная (Минха) и вечерняя (Маарив); после разрушения Храма молитва заменила жертвоприношения. Главные части утренней — «Шма» и «Амида»: Амиду читают про себя, затем вслух повторяет кантор (хазан) от имени общины. Для полной службы нужен миньян — десять взрослых мужчин. Тору читают вслух по понедельникам и четвергам, в праздники и в субботу (в субботу — недельную главу)."
+      difference: "Иудаизм предписывает три ежедневные молитвы и чтение Торы в синагоге и не приносит жертв после разрушения Храма, а Церковь на Литургии читает Апостол и Евангелие, совершает Евхаристию и каждую седмицу празднует воскресенье, день Воскресения Христа."
+      response: "Христос Сам входил в синагогу «по обыкновению Своему» (Лк 4:16), и за Литургией Церкви тоже читают Священное Писание — книги Апостольские и Евангелие (катехизис, §332). На Тайной вечере Христос установил Евхаристию: «сие творите в Мое воспоминание» (Лк 22:19); главная часть богослужения Церкви — Причащение за Литургией (§314). В книге Деяний сказано: «В первый же день недели, когда ученики собрались для преломления хлеба» (Деян 20:7)."
+      proof:
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Кто установил Утреннюю молитву?»"
+          tier: reference
+          excerpt: "Три ежедневные молитвы — Шахарит, Минха и Маарив (или Арвит) — были установлены нашими праотцами Авраамом, Ицхаком и Яаковом"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Структура молитвы Шахарит»"
+          tier: reference
+          excerpt: "Главные части Шахарит — это молитвы «Шма, Исраэль» («Слушай, Израиль») и «Амида» («Стояние»)."
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Структура молитвы Шахарит»"
+          tier: reference
+          excerpt: "Молящиеся сначала читают Амиду про себя, затем ведущий — хазан (кантор) — произносит ее от имени всей общины."
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Структура молитвы Шахарит»"
+          tier: reference
+          excerpt: "В будние дни и только в миньяне (группе из десяти взрослых мужчин в возрасте бар-мицва и старше) после Амиды произносят Таханун"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Структура молитвы Шахарит»"
+          tier: reference
+          excerpt: "После этого в понедельник и четверг, а также в Рош-Ходеш, в посты, в Субботу и в праздничные дни читают Тору."
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Структура молитвы Шахарит»"
+          tier: reference
+          excerpt: "читают Тору. В будние дни и обычные Субботы читают недельную главу Пятикнижия"
+          accessed: "2026-10-09"
+        - url: "https://www.myjewishlearning.com/article/shaharit-minhah-and-maariv/"
+          title: "Daily Prayer: Shacharit, Mincha and Maariv | My Jewish Learning"
+          tier: reference
+          excerpt: "On Mondays and Thursday, the Torah is read in public minyanim (groups of 10 or more)."
+          accessed: "2026-10-09"
+        - url: "https://www.jewishvirtuallibrary.org/jsource/Judaism/services.html"
+          title: "Jewish Prayers: The Daily Services | Jewish Virtual Library"
+          tier: reference
+          excerpt: "is required for a complete religious service"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, вводная часть"
+          tier: reference
+          excerpt: "После разрушения Храма, по решению еврейских мудрецов, обязательные молитвы утром и днем заменили"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.4:16&r"
+          title: "Лк. 4:16 — Синодальный перевод"
+          tier: official
+          excerpt: "по обыкновению Своему, в день субботний в синагогу"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §332: Литургия оглашённых"
+          tier: official
+          excerpt: "Литургия оглашённых состоит из молитв, песнопений, чтения книг Апостольских и Евангелия"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.22:19&r"
+          title: "Лк. 22:19 — Синодальный перевод"
+          tier: official
+          excerpt: "сие творите в Мое воспоминание"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/biblia/?Act.20:7&r"
+          title: "Деян. 20:7 — Синодальный перевод"
+          tier: official
+          excerpt: "В первый же день недели, когда ученики собрались для преломления хлеба"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+    catholicism:
+      teaching: "Центр богослужения — Месса: Евхаристия — «источник и вершина всей христианской жизни» (КЦЦ 1324), и в воскресенье верные обязаны быть на ней (КЦЦ 2180). Месса состоит из Литургии Слова (чтения, проповедь, общая молитва) и Евхаристической Литургии (приношение хлеба и вина, освящение, Причащение; КЦЦ 1346). По миссалу 1970 года её разрешено служить на национальных языках. В латинском обряде хлеб пресный (опресноки), а мирян обычно причащают одним хлебом (кан. 926; КЦЦ 1390)."
+      difference: "Католики, как и Церковь, ставят Евхаристию в центр богослужения, но в латинском обряде служат на опресноках и мирян обычно причащают одним хлебом, а Церковь служит на квасном хлебе и причащает верующих под видом хлеба и вина."
+      response: "Церковь тоже называет Причащение главной и существенной частью богослужения (катехизис, §314), но совершает Литургию на квасном хлебе: по «Азбуке веры», все евангелисты, говоря о Евхаристии, говорят именно о квасном хлебе. Верующие причащаются под видом хлеба и вина (§312), а о чаше Господь сказал: «пейте из нее все» (Мф 26:27). В Церкви общеупотребительны три вида Божественной Литургии: свт. Иоанна Златоуста, свт. Василия Великого и Преждеосвященных Даров."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1324"
+          tier: official
+          excerpt: "Евхаристия — «источник и вершина всей христианской жизни»"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2180"
+          tier: official
+          excerpt: "В воскресенье и в другие дни предписанных праздников верные обязаны участвовать в Святой Мессе"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1346: структура Мессы"
+          tier: official
+          excerpt: "собрание, Литургия Слова с чтениями, проповедью и всеобщей молитвой"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1346: структура Мессы"
+          tier: official
+          excerpt: "Евхаристическая Литургия с приношением хлеба и вина, освящением во время благодарения и Причащением"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1390: причащение под одним видом"
+          tier: official
+          excerpt: "Причащение только под одним видом — хлеба — позволяет полностью получить плод благодати Евхаристии"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1390: причащение под одним видом"
+          tier: official
+          excerpt: "этот способ Причащения законным образом установился как наиболее обычный в латинском обряде"
+          accessed: "2026-10-09"
+        - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann879-958_en.html"
+          title: "Code of Canon Law (Vatican, англ.), кн. IV, кан. 926: пресный хлеб"
+          tier: official
+          excerpt: "According to the ancient tradition of the Latin Church, the priest is to use unleavened bread in the eucharistic celebration whenever he offers it."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Месса"
+          title: "Месса — Википедия (ru), раздел «История»"
+          tier: reference
+          excerpt: "В 1969 была провозглашена ревизия, опубликованная в римском миссале в 1970."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Месса"
+          title: "Месса — Википедия (ru), раздел «История»"
+          tier: reference
+          excerpt: "Главными нововведениями Novus Ordo стали: разрешение использования национальных языков"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения"
+          tier: official
+          excerpt: "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/evharistologiya"
+          title: "Евхаристология — энциклопедия «Азбука веры», раздел «Основные положения православной евхаристологии»"
+          tier: reference
+          excerpt: "Евхаристия должна совершаться на квасном хлебе, поскольку все евангелисты говорят именно о квасном хлебе."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.26:27&r"
+          title: "Мф. 26:27 — Синодальный перевод"
+          tier: official
+          excerpt: "пейте из нее все"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/liturgiya"
+          title: "Литургия — энциклопедия «Азбука веры», раздел «Три вида Литургии»"
+          tier: reference
+          excerpt: "В наше время общеупотребительны три вида Божественной Литургии"
+          accessed: "2026-10-09"
+    islam:
+      teaching: "Намаз — пять молитв в день в предписанное время (Коран 4:103): утренняя, полуденная, предвечерняя, вечерняя и ночная, из двух–четырёх ракаатов (циклов). Перед молитвой совершают омовение и становятся лицом к Каабе; ракаат — стояние, чтение Корана, поясной и земной поклоны. Общую молитву ведёт имам, остальные повторяют за ним. В пятницу в полдень мужчины собираются в мечети: имам читает две проповеди (хутба) и ведёт молитву из двух ракаатов (Коран 62:9)."
+      difference: "Ислам предписывает пять намазов в день лицом к Каабе, с поясными и земными поклонами, и пятничную общую молитву с проповедью, а Церковь совершает Литургию с Евхаристией, ведёт суточный, седмичный и годовой круги служб и празднует воскресенье."
+      response: "Церковь тоже молится в течение суток — по кругу из восьми служб — и собирается в воскресенье, день Воскресения Христа (катехизис, §535). Её главное богослужение — Литургия: Христос на Тайной вечере повелел «сие творите в Мое воспоминание» (Лк 22:19), и за Литургией совершается Причащение (§314)."
+      proof:
+        - url: "https://mosmechet.ru/5stolpov"
+          title: "5 столпов ислама | Историческая мечеть г. Москвы, столп №2"
+          tier: official
+          excerpt: "Намаз – совершение ежедневной пятикратной молитвы"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:103"
+          title: "Коран 4:103, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "намаз предписан верующим в определенное время"
+          accessed: "2026-10-01"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=62:9"
+          title: "Коран 62:9, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Когда призывают на намаз в пятничный день, то устремляйтесь к поминанию Аллаха и оставьте торговлю"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), вводный раздел"
+          tier: reference
+          excerpt: "утренняя двухракаатная молитва (фаджр); полуденная четырёхракаатная молитва (зухр); предвечерняя четырёхракаатная молитва (аср); вечерняя трёхракаатная молитва (магриб); ночная четырёхракаатная молитва (иша)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Условия»"
+          tier: reference
+          excerpt: "Ритуальная чистота: совершение малого омовения, купания или таяммума."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Условия»"
+          tier: reference
+          excerpt: "Обращение лицом в сторону Каабы."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Столпы»"
+          tier: reference
+          excerpt: "Стояние (кыям). При способности стоять"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Столпы»"
+          tier: reference
+          excerpt: "Рецитация Корана (кыраат) в виде слышимого чтения"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Столпы»"
+          tier: reference
+          excerpt: "Поясной поклон (руку’)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Столпы»"
+          tier: reference
+          excerpt: "Земной поклон (суджуд)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Формы совершения намаза» (коллективный намаз)"
+          tier: reference
+          excerpt: "В коллективном намазе один из молящихся назначается имамом и ведёт молитву, а все остальные молящиеся совершают все действия за ним."
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Время совершения – это время полуденной молитвы (Зухр). Совершается только в мечетях и местах, специально отведенных для молитвы-намаза."
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Пятничная молитва является обязательной только для мужчин."
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Затем проповедник, цитируя Священный Коран и Сунну, обращается с проповедью"
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Вторая проповедь более коротка, чем первая"
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Два ракяата фарда выполняются в точном соответствии с порядком выполнения двух ракяатов фарда утренней молитвы. Имам проводит молитву вслух."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Хутба"
+          title: "Хутба — Википедия (ru), вводный абзац"
+          tier: reference
+          excerpt: "речь, выступление или проповедь, совершаемые имамом во время пятничного полуденного богослужения в мечети"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+          title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+          tier: reference
+          excerpt: "Он включает в себя восемь отдельных служб: вечерню, повечерие, полунощницу, утреню, 1-й час, 3-й час, 6-й час и 9-й час"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.22:19&r"
+          title: "Лк. 22:19 — Синодальный перевод"
+          tier: official
+          excerpt: "сие творите в Мое воспоминание"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-01"
+    protestantism:
+      teaching: "Служба зависит от церкви. Лютеране и англикане (Церковь Англии) служат по литургическому порядку: чтения из Библии, проповедь, причащение хлебом и вином. У евангельских христиан-баптистов (ЕХБ) воскресное собрание строится вокруг проповеди, общего пения и молитв, а Вечеря Господня — как правило, раз в месяц. У пятидесятников — музыкальное «прославление», проповедь, молитвы друг за друга, «на языках» и за исцеление больных; Вечеря — иногда."
+      difference: "Лютеране и Церковь Англии служат по литургическому порядку с причащением, баптисты и пятидесятники строят собрание вокруг проповеди и видят в Вечере Господней воспоминание, а Церковь совершает Литургию, на которой хлеб и вино прелагаются в Тело и Кровь Христовы."
+      response: "Церковь учит, что в Причащении верующий под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа (катехизис, §312), а не только вспоминает Тайную вечерю; Господь сказал: «если не будете есть Плоти Сына Человеческого и пить Крови Его, то не будете иметь в себе жизни» (Ин 6:53)."
+      proof:
+        - url: "https://bookofconcord.org/augsburg-confession/of-the-mass/"
+          title: "Аугсбургское исповедание, ст. XXIV «О Мессе», §1 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "Falsely are our churches accused of abolishing the Mass"
+          accessed: "2026-10-09"
+        - url: "https://bookofconcord.org/augsburg-confession/of-the-mass/"
+          title: "Аугсбургское исповедание, ст. XXIV «О Мессе», §§2–3 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "Nearly all the usual ceremonies are also preserved, save that the parts sung in Latin are interspersed here and there with German hymns"
+          accessed: "2026-10-09"
+        - url: "https://bookofconcord.org/augsburg-confession/of-the-mass/"
+          title: "Аугсбургское исповедание, ст. XXIV «О Мессе», §5 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "The people are accustomed to partake of the Sacrament together, if any be fit for it"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/node/14990"
+          title: "The Eucharist — The Church of England"
+          tier: official
+          excerpt: "The Eucharist is at the heart of Christian worship."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/node/14990"
+          title: "The Eucharist — The Church of England, порядок Евхаристии"
+          tier: official
+          excerpt: "At a celebration of the Eucharist, the community gathers, asks God’s forgiveness for its sins, listens to readings from the Bible including a reading from one of the Gospels. A sermon may be preached and the community prays together."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/node/14990"
+          title: "The Eucharist — The Church of England, порядок Евхаристии"
+          tier: official
+          excerpt: "Bread and wine are brought to the holy table (also called ‘the altar’), the priest prays the Eucharistic Prayer"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Divine_Service_(Lutheran)"
+          title: "Divine Service (Lutheran) — Wikipedia (англ.), раздел «Service of the Word»"
+          tier: reference
+          excerpt: "The Sermon usually relates to the lessons of the day."
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Divine_Service_(Lutheran)"
+          title: "Divine Service (Lutheran) — Wikipedia (англ.), раздел «Service of the Sacrament»"
+          tier: reference
+          excerpt: "The congregation is to remain kneeling in adoration during the distribution."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Лютеранство"
+          title: "Лютеранство — Википедия (ru), раздел «Вероучение»"
+          tier: reference
+          excerpt: "Особенностью лютеранского причастия внутри западной традиции является то, что потиром причащаются все верующие, а не только священники."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "Основное богослужение проходит в воскресенье"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "Главной частью богослужений является проповедь."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "Воскресные богослужения включают также пение псалмов, в том числе общее пение всех присутствующих"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "а также молитвы (в том числе общие молитвы всех присутствующих)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "Вечеря Господня, как правило, совершается один раз в месяц (обычно в первое воскресенье месяца)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/pjatidesjatniki"
+          title: "Пятидесятники — энциклопедия «Азбука веры», раздел «Религиозные практики пятидесятников»"
+          tier: reference
+          excerpt: "центральной его частью является проповедь, а также сопутствующая музыкальная (или музыкально-танцевальная) часть"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/pjatidesjatniki"
+          title: "Пятидесятники — энциклопедия «Азбука веры», раздел «Религиозные практики пятидесятников»"
+          tier: reference
+          excerpt: "включая молитвы друг за друга и молитвы «на языках»"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/pjatidesjatniki"
+          title: "Пятидесятники — энциклопедия «Азбука веры», раздел «Религиозные практики пятидесятников»"
+          tier: reference
+          excerpt: "Иногда совершается «вечеря Господня»."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Пятидесятники"
+          title: "Пятидесятники — Википедия (ru), раздел «Общие сведения»"
+          tier: reference
+          excerpt: "молитва за исцеление больных, рукоположение, омовение ног (во время причастия)"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Pentecostalism"
+          title: "Pentecostalism — Wikipedia (англ.), раздел «Worship»"
+          tier: reference
+          excerpt: "gestalt made up of prayer, singing, sermon, the operation of the gifts of the Spirit, altar intercession, offering, announcements, testimonies, musical specials, Scripture reading, and occasionally the Lord's supper"
+          accessed: "2026-10-09"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, разд. 16 «О Вечере Господней»"
+          tier: official
+          excerpt: "Вечеря Господня (Хлебопреломление) есть заповедь Иисуса Христа для воспоминания и возвещения Его страданий и смерти на кресте"
+          accessed: "2026-10-09"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, разд. 17 «О воскресном дне»"
+          tier: official
+          excerpt: "днем, посвященным изучению Слова Божия, пребыванию в молитве, участию в богослужениях"
+          accessed: "2026-10-09"
+        - url: "https://ag.org/-/media/AGORG/Beliefs/Fundamental-Truths/Statement-of-Fundamental-Truths.pdf"
+          title: "Statement of Fundamental Truths, ст. 6 «The Ordinances of the Church», (b) Holy Communion — Assemblies of God (США)"
+          tier: official
+          excerpt: "a memorial of His suffering and death (1 Corinthians 11:26)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения"
+          tier: official
+          excerpt: "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни."
+          accessed: "2026-09-27"
+        - url: "https://azbyka.ru/biblia/?Jn.6:53&r"
+          title: "Ин. 6:53 — Синодальный перевод"
+          tier: official
+          excerpt: "если не будете есть Плоти Сына Человеческого и пить Крови Его, то не будете иметь в себе жизни"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/cerkovnoslavyanskij-yazyk"
+          title: "Церковнославянский язык — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Язык богослужения относится к области традиции, а не догматики, в разных Поместных церквах используются местные языки"
+          accessed: "2026-10-09"
+    lds:
+      teaching: "Каждое воскресенье Святые последних дней собираются на причастное собрание: вступительная и заключительная молитвы, несколько гимнов и проповеди, которые готовят сами члены Церкви. Главная часть — причастие: кусочек хлеба и стаканчик воды в память об искупительной жертве Христа. Затем второй час учёбы: Первоначальное общество для детей, Воскресная школа для взрослых (в определённые воскресенья). Обряды храма, например дар (endowment) и запечатление брака, совершаются отдельно, в храмах."
+      difference: "Святые последних дней проводят еженедельное причастное собрание с молитвами, гимнами и выступлениями членов и причащаются хлебом и водой, а Церковь совершает Литургию, на которой хлеб и вино прелагаются в Тело и Кровь Христовы."
+      response: "Церковь учит, что за Литургией хлеб и вино прелагаются в истинное Тело и истинную Кровь Христову (катехизис, §336), а Причащение — главная часть богослужения (§314). Господь на Тайной вечере говорил о «плоде виноградном» (Мф 26:29), и Церковь причащает под видом хлеба и вина (§312)."
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament-meeting?lang=eng"
+          title: "Sacrament Meeting — Topics and Questions (2025), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "A sacrament meeting is a weekly worship service in The Church of Jesus Christ of Latter-day Saints"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament-meeting?lang=eng"
+          title: "Sacrament Meeting — Topics and Questions (2025), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "This is the sacred ordinance of partaking of bread and water to remember Jesus Christ and His atoning sacrifice for us"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament-meeting?lang=eng"
+          title: "Sacrament Meeting — Topics and Questions (2025), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Sacrament meetings are typically held on Sundays in Church meetinghouses around the world."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/welcome/what-to-expect?lang=rus"
+          title: "Чего ожидать в церкви, раздел «Причастное собрание» — Церковь Иисуса Христа Святых последних дней (рус.)"
+          tier: official
+          excerpt: "Собрание включает вступительную и заключительную молитвы, исполнение нескольких гимнов и проповеди, подготовленные членами Церкви."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/welcome/what-to-expect?lang=rus"
+          title: "Чего ожидать в церкви, раздел «Причастное собрание» — Церковь Иисуса Христа Святых последних дней (рус.)"
+          tier: official
+          excerpt: "Во время причастия мы вспоминаем об Иисусе Христе, беря небольшой кусочек хлеба и стаканчик воды"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/welcome/what-to-expect?lang=rus"
+          title: "Чего ожидать в церкви, раздел «Уроки» — Церковь Иисуса Христа Святых последних дней (рус.)"
+          tier: official
+          excerpt: "Помимо причастного собрания людям предлагается остаться на второй час обучения в более узком кругу."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/welcome/what-to-expect?lang=rus"
+          title: "Чего ожидать в церкви, раздел «Уроки» — Церковь Иисуса Христа Святых последних дней (рус.)"
+          tier: official
+          excerpt: "Дети идут в Первоначальное общество"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/welcome/what-to-expect?lang=rus"
+          title: "Чего ожидать в церкви, раздел «Уроки» — Церковь Иисуса Христа Святых последних дней (рус.)"
+          tier: official
+          excerpt: "В определенные воскресенья все взрослые посещают Воскресную школу"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament?lang=eng"
+          title: "Sacrament — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Today the sacrament is an ordinance in which Church members partake of bread and water in remembrance of Jesus Christ’s atoning sacrifice"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+          title: "Temples — Topics and Questions, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "One ordinance received in the temple is called the endowment"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+          title: "Temples — Topics and Questions, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Another temple ordinance is celestial marriage."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §336: прелагание Даров"
+          tier: official
+          excerpt: "после троекратного благословения хлеба и вина они прелагаются или пресуществляются в истинное Тело Христово и в истинную Кровь Христову"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/biblia/?Mt.26:29&r"
+          title: "Мф. 26:29 — Синодальный перевод"
+          tier: official
+          excerpt: "не буду пить от плода сего виноградного"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения"
+          tier: official
+          excerpt: "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни."
+          accessed: "2026-09-27"
+    adventism:
+      teaching: "В субботу утром адвентисты сначала собираются на Субботнюю школу — изучение Библии в небольших группах по «Уроку субботней школы», затем, после перерыва, на богослужение: его центр — проповедь, а также общее пение, чтение Писания, молитвы и пожертвования. Руководство Церкви (Church Manual) не задаёт строгого порядка службы. Вечеря Господня обычно раз в квартал: сначала омовение ног, затем пресный хлеб и несброженный виноградный сок."
+      difference: "Адвентисты собираются в субботу на изучение Библии (Субботнюю школу) и богослужение с проповедью и обычно раз в квартал совершают Вечерю Господню с омовением ног, а Церковь служит Литургию с Причащением и празднует воскресенье, день Воскресения Христова."
+      response: "Церковь празднует воскресенье со времени воскресения Христа (катехизис, §535); в книге Деяний сказано: «В первый же день недели, когда ученики собрались для преломления хлеба» (Деян 20:7), а апостол Иоанн упоминает «день воскресный» (Откр 1:10). Средоточие богослужения Церкви — Причащение, которое совершается за Литургией (§§314–315)."
+      proof:
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Sabbath School"
+          tier: official
+          excerpt: "The Sabbath School, one of our most important services, is the church at study"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Worship Service"
+          tier: official
+          excerpt: "The Sabbath worship service is the most important church meeting"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Communion Service"
+          tier: official
+          excerpt: "The communion service customarily is celebrated once per quarter"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Communion Service"
+          tier: official
+          excerpt: "The service includes the ordinance of foot-washing followed by the Lord’s Supper"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Form of Service"
+          tier: official
+          excerpt: "The Sabbath morning service has two main divisions: the congregational response in praise and adoration, expressed in song, prayer, and gifts, and the message from the Word of God."
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Form of Service"
+          tier: official
+          excerpt: "There is no set form or order for public worship."
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Unleavened Bread and Unfermented Wine"
+          tier: official
+          excerpt: "only unfermented grape juice and unleavened bread are appropriate for use in the communion service"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Церковь_адвентистов_седьмого_дня"
+          title: "Церковь адвентистов седьмого дня — Википедия (ru), раздел «Богослужение»"
+          tier: reference
+          excerpt: "Основное еженедельное богослужение происходит в субботу, обычно начиная с субботней школы, которая представляет собой структурированное время изучения Библии в небольших группах в церкви."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Церковь_адвентистов_седьмого_дня"
+          title: "Церковь адвентистов седьмого дня — Википедия (ru), раздел «Богослужение»"
+          tier: reference
+          excerpt: "Адвентисты используют официально выпущенный «Урок субботней школы», в котором каждый квартал рассматривается определённый библейский текст или доктрина."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Церковь_адвентистов_седьмого_дня"
+          title: "Церковь адвентистов седьмого дня — Википедия (ru), раздел «Богослужение»"
+          tier: reference
+          excerpt: "После небольшого перерыва община снова собирается на церковную службу в типичном евангелическом формате, центральным элементом которой является проповедь."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Церковь_адвентистов_седьмого_дня"
+          title: "Церковь адвентистов седьмого дня — Википедия (ru), раздел «Богослужение»"
+          tier: reference
+          excerpt: "Совместное пение, чтение Священных Писаний, молитвы и пожертвования"
+          accessed: "2026-10-09"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 20 «Суббота» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "дня особого поклонения и служения"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Act.20:7&r"
+          title: "Деян. 20:7 — Синодальный перевод"
+          tier: official
+          excerpt: "В первый же день недели, когда ученики собрались для преломления хлеба"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Apok.1:10&r"
+          title: "Откр. 1:10 — Синодальный перевод"
+          tier: official
+          excerpt: "Я был в духе в день воскресный"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-01"
+    jw:
+      teaching: "Свидетели Иеговы собираются в Залах Царства два раза в неделю; встречи открыты для всех, начинаются и заканчиваются песней и молитвой. В будни — «Наша христианская жизнь и служение»: речь и чтение Библии, упражнения в проповеди, изучение Библии в вопросах и ответах. В выходные — публичная речь и изучение журнала «Сторожевая башня». Раз в год — Вечеря воспоминания: хлеб и вино принимают лишь те, кто, по их учению, призван в небесное Царство; остальные — наблюдатели."
+      difference: "Свидетели Иеговы собираются дважды в неделю на беседы по Библии, не имеют духовенства и раз в год отмечают Вечерю воспоминания, где хлеб и вино принимают лишь призванные в небесное Царство, а Церковь имеет священство и совершает Литургию, за которой причащаются верующие."
+      response: "Церковь учит, что Причащение — не только ежегодная память: Господь повелел «сие творите в Мое воспоминание» (Лк 22:19) и подал чашу со словами «пейте из нее все» (Мф 26:27), а верующий, подготовившийся покаянием, постом и молитвой (катехизис, §338), вкушает подлинные Тело и Кровь Христа (§312; Ин 6:53). Священство — одно из семи Таинств Церкви (§282), а апостолы рукополагали пресвитеров «к каждой церкви» (Деян 14:23)."
+      proof:
+        - url: "https://www.jw.org/ru/свидетели-иеговы/встречи/"
+          title: "О встречах Свидетелей Иеговы — jw.org, «Как проходят наши встречи?»"
+          tier: official
+          excerpt: "Два раза в неделю Свидетели Иеговы проводят встречи для поклонения Богу"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/встречи/"
+          title: "О встречах Свидетелей Иеговы — jw.org, «Как проходят наши встречи?»"
+          tier: official
+          excerpt: "Встречи начинаются и заканчиваются песней и молитвой"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/встречи/"
+          title: "О встречах Свидетелей Иеговы — jw.org, «Как проходят наши встречи?»"
+          tier: official
+          excerpt: "Мы приглашаем на них всех."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в будние дни»"
+          tier: official
+          excerpt: "Каждую неделю в Зале Царства проходит встреча «Наша христианская жизнь и служение»."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в будние дни»"
+          tier: official
+          excerpt: "Первая часть этой встречи, которая называется «Сокровища из Слова Бога», знакомит нас с историческим фоном и контекстом библейского повествования"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в будние дни»"
+          tier: official
+          excerpt: "Вторая часть встречи называется «Оттачиваем навыки служения»."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в будние дни»"
+          tier: official
+          excerpt: "Бо́льшая её часть — это изучение Библии в собрании, которое, подобно изучению «Сторожевой башни», проводится в форме вопросов и ответов."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в выходные дни»"
+          tier: official
+          excerpt: "Если докладчиков достаточно, публичная речь произносится в собрании каждую неделю."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в выходные дни»"
+          tier: official
+          excerpt: "Вторая часть встречи в выходные дни — изучение «Сторожевой башни»."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Ужин Господа»"
+          tier: official
+          excerpt: "Это не мистический ритуал, а символический ужин, в котором участвуют те, кто призваны стать сонаследниками Христа в его небесном Царстве"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Ужин Господа»"
+          tier: official
+          excerpt: "Остальные христиане и интересующиеся люди приглашаются на Ужин Господа в качестве наблюдателей."
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/вечеря-воспоминания/"
+          title: "Вечеря воспоминания смерти Иисуса Христа — jw.org"
+          tier: official
+          excerpt: "Раз в год Свидетели Иеговы проводят церемонию в память о смерти Иисуса Христа"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/"
+          title: "«Во что верят Свидетели Иеговы?» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "старейшины не составляют особое сословие — духовенство и не получают платы за свое служение"
+          accessed: "2026-09-25"
+        - url: "https://azbyka.ru/biblia/?Lk.22:19&r"
+          title: "Лк. 22:19 — Синодальный перевод"
+          tier: official
+          excerpt: "сие творите в Мое воспоминание"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §312: Таинство Причащения"
+          tier: official
+          excerpt: "под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни."
+          accessed: "2026-09-27"
+        - url: "https://azbyka.ru/biblia/?Jn.6:53&r"
+          title: "Ин. 6:53 — Синодальный перевод"
+          tier: official
+          excerpt: "если не будете есть Плоти Сына Человеческого и пить Крови Его, то не будете иметь в себе жизни"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §282: семь Таинств"
+          tier: official
+          excerpt: "Таинств – семь"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Act.14:23&r"
+          title: "Деян. 14:23 — Синодальный перевод"
+          tier: official
+          excerpt: "Рукоположив же им пресвитеров к каждой церкви, они помолились с постом"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.26:27&r"
+          title: "Мф. 26:27 — Синодальный перевод"
+          tier: official
+          excerpt: "пейте из нее все"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §338: подготовка к Причащению"
+          tier: official
+          excerpt: "Приступающий к Таинству Причащения должен испытать (открыть) перед Богом свою совесть и очистить её покаянием в грехах, чему способствуют пост и молитва"
+          accessed: "2026-10-09"
+
+- id: private-prayer
+  question: "Как молятся дома?"
+  orthodox:
+    short: "Дома читают молитвенное правило: минимум — утренние и вечерние молитвы из молитвослова. Перед Причастием — Последование ко Святому Причащению; можно читать акафисты, молиться Иисусовой молитвой, перед иконами и своими словами."
+    detail: "Правило бывает общим для всех или индивидуальным — его подбирает духовник; тексты утренних и вечерних молитв есть в Православном молитвослове, например на «Азбуке веры». Накануне Причастия читают Последование ко Святому Причащению и соблюдают пост (с полуночи воздерживаются от еды и питья), а чтение трёх канонов — благочестивая традиция, но не обязанность. Новые акафисты, по статье «Азбуки веры», за богослужением по Уставу не положены, но их рекомендуют для келейного, то есть домашнего, чтения; в течение дня тихо творят Иисусову молитву, а перед иконами, по катехизису, следует умом видеть Бога и святых, на них изображённых."
+    proof:
+      - url: "https://azbyka.ru/molitvennoe-pravilo"
+        title: "Молитвенное правило — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "минимально – утренние и вечерние"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvennoe-pravilo"
+        title: "Молитвенное правило — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "рекомендуемые тексты можно найти в молитвослове"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvennoe-pravilo"
+        title: "Молитвенное правило — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "подбираемым для верующего духовником с учетом его духовного состояния, сил и занятости"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov"
+        title: "Молитвослов «Азбука веры», раздел «Самое популярное»"
+        tier: reference
+        excerpt: "Молитвы утренние"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov"
+        title: "Молитвослов «Азбука веры», раздел «Самое популярное»"
+        tier: reference
+        excerpt: "Молитвы на сон грядущим"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/podgotovka-k-prichastiyu"
+        title: "Как готовиться ко Святому Причащению — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Для молитвенной подготовки ко Святому Причащению накануне причастия следует прочитать: Последование ко Святому Причащению"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/podgotovka-k-prichastiyu"
+        title: "Как готовиться ко Святому Причащению — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Накануне причастия с 12 часов ночи начинается строгий пост – полное воздержание от питья и еды"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/podgotovka-k-prichastiyu"
+        title: "Как готовиться ко Святому Причащению — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Существует, кроме того, благочестивая традиция (но не обязанность) чтения трёх канонов перед принятием Святых Христовых Таин"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+        title: "Свт. Филарет. Пространный катехизис, §338: подготовка к Причащению"
+        tier: official
+        excerpt: "Приступающий к Таинству Причащения должен испытать (открыть) перед Богом свою совесть и очистить её покаянием в грехах, чему способствуют пост и молитва"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/akafist"
+        title: "Акафист — энциклопедия «Азбука веры», раздел «Современное употребление акафистов» (мнение автора статьи)"
+        tier: reference
+        excerpt: "Все новые акафисты законного литургического употребления не имеют"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/akafist"
+        title: "Акафист — энциклопедия «Азбука веры», раздел «Современное употребление акафистов» (мнение автора статьи)"
+        tier: reference
+        excerpt: "можно рекомендовать их для келейного чтения"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvennoe-pravilo"
+        title: "Молитвенное правило — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "Во время же работы дома или в пути произносите тихо"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/iisusova-molitva"
+        title: "Иисусова молитва — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "краткая покаянная молитва"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+        title: "Свт. Филарет Московский. Пространный катехизис, §518: как поклоняться иконам"
+        tier: official
+        excerpt: "Глядя на иконы, следует умом видеть Бога и святых, на них изображённых"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvoslov"
+        title: "Молитвослов «Азбука веры», раздел «Можно ли молиться своими словами?»"
+        tier: reference
+        excerpt: "Можно ли молиться своими словами? Нужно! Одно не исключает другого"
+        accessed: "2026-10-09"
+  traditions:
+    judaism:
+      teaching: "День начинается с молитвы «Модэ ани» (благодарность за то, что Бог вернул душу), омовения рук и утренних благословений. Мужчины носят одежду с кистями (цицит); перед утренней молитвой женатые мужчины закутываются в талит, а с возраста бар-мицвы в будни надевают тфилин. Шма — единственная молитва, данная как заповедь Торы: её читают утром, вечером и перед сном. Перед едой и после неё произносят благословения; для полной службы нужен миньян (десять взрослых), поэтому вне его еврей молится сам."
+      difference: "Иудаизм предписывает начинать день с молитвы благодарности, читать Шма утром и вечером и произносить благословения перед едой и после неё, а Церковь читает утренние и вечерние молитвы по молитвослову и в течение дня молится кратко, например Иисусовой молитвой."
+      response: "Христос научил молиться и втайне: «войди в комнату твою и, затворив дверь твою, помолись Отцу твоему» (Мф 6:6), и дал молитву «Отче наш» (Мф 6:9). Церковь тоже молится утром и вечером по молитвослову, а в течение дня — кратко, например Иисусовой молитвой («Азбука веры»)."
+      proof:
+        - url: "https://toldot.com/main/shmaIsrael.html"
+          title: "Шма Исраэль — Толдот.ру"
+          tier: reference
+          excerpt: "единственная из всех молитв, данная как заповедь Торы"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/shmaIsrael.html"
+          title: "Шма Исраэль — Толдот.ру"
+          tier: reference
+          excerpt: "Обычно ее читают утром и вечером, во время утренней молитвы Шахарит и в вечерней Маарив"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/shmaIsrael.html"
+          title: "Шма Исраэль — Толдот.ру"
+          tier: reference
+          excerpt: "Кроме того, принято читать Шма перед сном"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/shmaIsrael.html"
+          title: "Шма Исраэль — Толдот.ру"
+          tier: reference
+          excerpt: "А если еврей молится не в миньяне"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/blagoslovenieEda.html"
+          title: "Благословения на еду — Толдот.ру"
+          tier: reference
+          excerpt: "Согласно еврейскому закону, мы произносим благословения и до, и после еды."
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/blagoslovenieEda.html"
+          title: "Благословения на еду — Толдот.ру"
+          tier: reference
+          excerpt: "Перед едой установлены отдельные благословения на различные виды пищи"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Начало нового дня в еврейском миропонимании»"
+          tier: reference
+          excerpt: "Пробуждаясь, мы говорим молитву «Модэ ани»"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Начало нового дня в еврейском миропонимании»"
+          tier: reference
+          excerpt: "омыв руки от ночной нечистоты, мы произносим различные благословения"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Начало нового дня в еврейском миропонимании»"
+          tier: reference
+          excerpt: "Мужчинам заповедано носить одежду с кистями — цицит"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Начало нового дня в еврейском миропонимании»"
+          tier: reference
+          excerpt: "женатые мужчины (у сефардов также мальчики начиная с возраста бар-мицвы) закутываются в талит"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, раздел «Начало нового дня в еврейском миропонимании»"
+          tier: reference
+          excerpt: "Мужчины и мальчики, начиная с возраста бар-мицвы, в будние дни также накладывают ручной и головной тфилин"
+          accessed: "2026-10-09"
+        - url: "https://www.jewishvirtuallibrary.org/jsource/Judaism/services.html"
+          title: "Jewish Prayers: The Daily Services | Jewish Virtual Library"
+          tier: reference
+          excerpt: "is required for a complete religious service"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.6:6&r"
+          title: "Мф. 6:6 — Синодальный перевод"
+          tier: official
+          excerpt: "Ты же, когда молишься, войди в комнату твою и, затворив дверь твою, помолись Отцу твоему, Который втайне"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.6:9&r"
+          title: "Мф. 6:9 — Синодальный перевод"
+          tier: official
+          excerpt: "Молитесь же так: Отче наш, сущий на небесах"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "минимально – утренние и вечерние"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Во время же работы дома или в пути произносите тихо"
+          accessed: "2026-10-09"
+    catholicism:
+      teaching: "Катехизис Католической Церкви перечисляет ежедневные ритмы молитвы: утренняя и вечерняя молитвы, молитвы перед едой и после неё, Литургия Часов (КЦЦ 2698). Для личной молитвы он советует «молитвенный уголок» со Священным Писанием и иконами, называет христианскую семью первым местом обучения молитве, а Розарий — «сжатым изложением всего Евангелия» (КЦЦ 2691, 2685, 971)."
+      difference: "Здесь согласие: католики, как и Церковь, молятся утром и вечером, перед едой, дома и всей семьёй, перед священными изображениями, а Розарий — особая богородичная молитва католиков."
+      response: "Церковь тоже молится утром и вечером, перед едой и всей семьёй: семейная молитва — разновидность церковной и дополняет личную; наиболее распространены правила по Православному молитвослову, по Часослову и правило прп. Серафима Саровского. К Богородице Церковь молится, в частности, акафистом: Акафист Пресвятой Богородице Устав предписывает петь в 5-ю субботу Великого поста, а другие акафисты читают дома."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2698"
+          tier: official
+          excerpt: "утренняя и вечерняя молитвы, молитвы перед едой и после нее, Литургия Часов"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2691"
+          tier: official
+          excerpt: "для личной молитвы таким местом может быть «молитвенный уголок» со Священным Писанием и иконами"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2685"
+          tier: official
+          excerpt: "Христианская семья является первым местом обучения молитве"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §971"
+          tier: official
+          excerpt: "в молитве Святого Розария, «сжатом изложении всего Евангелия»"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Семейная молитва – это разновидность церковной, общественной"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Общая молитва рекомендуется перед вкушением пищи"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Молитвенное правило преподобного Серафима Саровского"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/akafist"
+          title: "Акафист — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Литургическое употребление акафиста Пресвятой Богородице предписано нашим Типиконом в 5-ю субботу Великого поста"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/akafist"
+          title: "Акафист — энциклопедия «Азбука веры», раздел «Современное употребление акафистов» (мнение автора статьи)"
+          tier: reference
+          excerpt: "можно рекомендовать их для келейного чтения"
+          accessed: "2026-10-09"
+    islam:
+      teaching: "Намаз предписан в определённое время (Коран 4:103), но совершать его можно не только в мечети: по хадису из «Сахих» аль-Бухари, земля сделана для Пророка и его последователей местом молитвы, и они могут молиться там, где застало время молитвы. Кроме намаза, верующий обращается к Аллаху с личной мольбой — дуа: «Взывайте ко Мне, и Я отвечу вам» (Коран 40:60) — и повторяет формулы поминания Аллаха, например тасбих «субхан-Аллах»: в конце каждого намаза его произносят 33 раза, а для счёта пользуются чётками."
+      difference: "Ислам предписывает намаз в определённое время, который можно совершать где угодно, личную мольбу (дуа) и повторение формул поминания Аллаха (тасбих), а Церковь читает утренние и вечерние молитвы по молитвослову и молится также своими словами."
+      response: "Церковь тоже молится не только в установленное время: апостол велит молиться «во всякое время духом» (Еф 6:18) и «непрестанно» (1 Фес 5:17). Свою молитву христианин обращает к Отцу так, как научил Христос (Мф 6:9), а её суть — «возношение ума и сердца к Богу» (катехизис, §387)."
+      proof:
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:103"
+          title: "Коран 4:103, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "намаз предписан верующим в определенное время"
+          accessed: "2026-10-01"
+        - url: "https://ihadis.com/en/bukhari/hadith/438"
+          title: "Сахих аль-Бухари, хадис 438 (кн. 8, гл. 56), англ. перевод — ihadis.com"
+          tier: reference
+          excerpt: "Therefore my followers can pray wherever the time of a prayer is due"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=40:60"
+          title: "Коран 40:60, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Взывайте ко Мне, и Я отвечу вам"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Тасбих"
+          title: "Тасбих — Википедия (ru), раздел «Употребление»"
+          tier: reference
+          excerpt: "Тасбих употребляется в различных молитвах (намазах или зикрах). В конце каждого намаза 33 раза повторяется субхан-Аллах"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Тасбих"
+          title: "Тасбих — Википедия (ru), раздел «Употребление»"
+          tier: reference
+          excerpt: "Позднее, с этой целью стали применяться чётки, которые также называются «тасбихами»"
+          accessed: "2026-10-09"
+        - url: "https://mosmechet.ru/5stolpov"
+          title: "5 столпов ислама | Историческая мечеть г. Москвы, столп №2"
+          tier: official
+          excerpt: "Во время молитвы читают суры Корана и мольбы (дуа)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Eph.6:18&r"
+          title: "Еф. 6:18 — Синодальный перевод"
+          tier: official
+          excerpt: "молитесь во всякое время духом"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?1Thes.5:17&r"
+          title: "1 Фес. 5:17 — Синодальный перевод"
+          tier: official
+          excerpt: "Непрестанно молитесь."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.6:9&r"
+          title: "Мф. 6:9 — Синодальный перевод"
+          tier: official
+          excerpt: "Молитесь же так: Отче наш, сущий на небесах"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/3"
+          title: "Свт. Филарет Московский. Пространный катехизис, §387: что такое молитва"
+          tier: official
+          excerpt: "Молитва есть возношение ума и сердца к Богу"
+          accessed: "2026-10-01"
+    protestantism:
+      teaching: "Лютеранский Малый катехизис велит главе семьи учить домашних молиться утром и вечером: перекреститься, прочесть Символ веры и «Отче наш». Баптисты (ЕХБ) называют молитву средством общения человека с Богом и учат в ней открывать Богу свои желания, а Церковь Англии предлагает утреннюю, вечернюю и ночную молитву и простой порядок дневной и ночной молитвы (Time to Pray). У многих пятидесятников молитва «на языках» — важная часть личных ежедневных молитв."
+      difference: "Лютеране и Церковь Англии предлагают утреннюю и вечернюю молитву по заданному порядку, баптисты учат открывать желания Богу в свободной молитве, пятидесятники нередко молятся и «на языках», а Церковь читает правило из молитвослова и молится также своими словами."
+      response: "Церковь тоже призывает молиться своими словами, не отвергая готовых молитв: молитвословия, составленные святыми, могут стать своими собственными. Молитвенное правило нужно, потому что одного вдохновения и импровизации недостаточно, а молиться чужими словами нас учит Сам Христос, Чьи возгласы на кресте — строки из псалмов."
+      proof:
+        - url: "https://bookofconcord.org/small-catechism/daily-prayers/"
+          title: "Малый катехизис Лютера, «Daily Prayers» (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "How the head of the family should teach his household to pray morning and evening"
+          accessed: "2026-10-09"
+        - url: "https://bookofconcord.org/small-catechism/daily-prayers/"
+          title: "Малый катехизис Лютера, «Daily Prayers», утренняя молитва (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "Then, kneeling or standing, repeat the Creed and the Lord’s Prayer."
+          accessed: "2026-10-09"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, разд. 9 «Молитва»"
+          tier: official
+          excerpt: "Молитва есть средство общения человека с Богом"
+          accessed: "2026-10-09"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, разд. 9 «Молитва»"
+          tier: official
+          excerpt: "В молитве мы открываем свои желания Богу"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/prayer-and-worship/join-us-in-daily-prayer"
+          title: "Join us in Daily Prayer — The Church of England"
+          tier: official
+          excerpt: "A fuller range of services: Morning, Evening and Night Prayer in Contemporary and Traditional form"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/prayer-and-worship/join-us-in-daily-prayer"
+          title: "Join us in Daily Prayer — The Church of England"
+          tier: official
+          excerpt: "A simple pattern of Day and Night Prayer"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Pentecostalism"
+          title: "Pentecostalism — Wikipedia (англ.), раздел «Tongues and interpretation»"
+          tier: reference
+          excerpt: "This type of tongue speaking forms an important part of many Pentecostals' personal daily devotions."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvoslov"
+          title: "Молитвослов «Азбука веры», раздел «Можно ли молиться своими словами?»"
+          tier: reference
+          excerpt: "Можно ли молиться своими словами? Нужно! Одно не исключает другого"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvoslov"
+          title: "Молитвослов «Азбука веры», раздел «Можно ли молиться своими словами?»"
+          tier: reference
+          excerpt: "могут претворяться в свои собственные"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "В молитве же, как и во всяком большом и трудном деле, одного «вдохновения», «настроения» и импровизации недостаточно"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "В том, чтобы молиться чужими словами, пример нам – Сам Господь Иисус Христос"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Его молитвенные возгласы во время крестных страданий – строки из псалмов"
+          accessed: "2026-10-09"
+    lds:
+      teaching: "Церковь Иисуса Христа Святых последних дней учит молиться Небесному Отцу и никому другому, во имя Иисуса Христа. Личную молитву следует совершать по меньшей мере утром и вечером, а семейную — утром и вечером всей семьёй."
+      difference: "Святые последних дней молятся лично и всей семьёй утром и вечером, обращаясь только к Небесному Отцу во имя Иисуса Христа, а Церковь молится и Господу Иисусу Христу, и просит молитв Богородицы и святых."
+      response: "Церковь обращается и ко Христу — в Иисусовой молитве, — потому что Он Сам истинный Бог (катехизис, §187), и просит святых о молитвах: это молитва земной Церкви к небесной (§261)."
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "We should pray to Him and no one else."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Ye must always pray unto the Father in my name."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), раздел «Personal Prayer», Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "At least every morning and every night, we should find a place that is free from distractions and kneel in humility and commune with our Heavenly Father"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), раздел «Family Prayer», Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Every morning and every evening, we should kneel together in humility, giving each family member frequent opportunities to say the prayer"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/iisusova-molitva"
+          title: "Иисусова молитва — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "краткая покаянная молитва"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+          tier: official
+          excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+          accessed: "2026-10-01"
+    adventism:
+      teaching: "Руководство Церкви (Church Manual) призывает хранить привычку ежедневного изучения Библии и молитвы, называет христианский дом домом молитвы и приводит совет Э. Уайт собирать семью вокруг алтаря Божьего. По основам вероучения, христиане растут, общаясь с Богом ежедневно в молитве и питаясь Его Словом."
+      difference: "Адвентисты призывают к ежедневной молитве и изучению Библии лично и в семье, а Церковь читает утренние и вечерние молитвы из молитвослова, акафисты и правило перед Причащением."
+      response: "Церковь тоже учит молиться ежедневно и всей семьёй: семейная молитва — разновидность церковной и не заменяет личной, а лишь дополняет её. Основа и домашнего, и церковного богослужения — Священное Писание («Азбука веры»)."
+      proof:
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Bible Study and Prayer"
+          tier: official
+          excerpt: "We must maintain the habit of devotional Bible study and prayer"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Bible Study and Prayer"
+          tier: official
+          excerpt: "Only as we daily talk to God in prayer and listen to His voice"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Bible Study and Prayer"
+          tier: official
+          excerpt: "A Christian home is a house of prayer"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Bible Study and Prayer (цитата Э. Уайт, MH 393)"
+          tier: official
+          excerpt: "Fathers and mothers, however pressing your business, do not fail to gather your family around God’s altar"
+          accessed: "2026-10-09"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 11 «Рост во Христе» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "общаясь с Ним ежедневно в молитве, питаясь Его Словом, размышляя над ним и Его Промыслом, воздавая Ему хвалу"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "Семейная молитва – это разновидность церковной, общественной"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "и поэтому не заменяет молитву индивидуальную, а лишь дополняет её"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvoslov"
+          title: "Молитвослов «Азбука веры», раздел «Молитва и Священное Писание»"
+          tier: reference
+          excerpt: "Православное богослужение, как церковное, так и домашнее, основано на Священном Писании"
+          accessed: "2026-10-09"
+    jw:
+      teaching: "Свидетели Иеговы учат молиться только Иегове и через Иисуса Христа; молиться, по их словам, можно в любом месте и в любое время, при этом важно быть искренним и не повторять одни и те же фразы. Каждую неделю они выделяют время для семейного поклонения — обсуждения духовных тем в непринуждённой обстановке."
+      difference: "Свидетели Иеговы молятся только Иегове через Иисуса Христа и каждую неделю выделяют время для семейного поклонения, а Церковь молится по молитвослову, обращается и ко Христу, и просит молитв святых."
+      response: "Церковь молится и Господу Иисусу Христу — в Иисусовой молитве, — потому что Он, по катехизису, истинный Бог (§187), и просит молитв святых как членов небесной Церкви (§261). Повторение слов в молитве не запрещено: Сам Христос в Гефсиманском саду «помолился в третий раз, сказав то же слово» (Мф 26:44)."
+      proof:
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102015157"
+          title: "«Как нужно молиться Богу?» — книга «Чему на самом деле учит Библия?», гл. 17, wol.jw.org"
+          tier: official
+          excerpt: "Из этого можно сделать вывод, что молиться нужно только Иегове и через Иисуса Христа."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102015157"
+          title: "«Как нужно молиться Богу?» — книга «Чему на самом деле учит Библия?», гл. 17, wol.jw.org"
+          tier: official
+          excerpt: "Молиться можно в любом месте и в любое время."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102015157"
+          title: "«Как нужно молиться Богу?» — книга «Чему на самом деле учит Библия?», гл. 17, wol.jw.org"
+          tier: official
+          excerpt: "Не нужно повторять одни и те же фразы всё снова и снова"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102012151"
+          title: "«Что такое семейное поклонение?» — jl, урок 10, wol.jw.org"
+          tier: official
+          excerpt: "С этой целью Свидетели Иеговы каждую неделю выделяют время для семейного поклонения — обсуждения духовных тем в непринужденной обстановке"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/iisusova-molitva"
+          title: "Иисусова молитва — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "краткая покаянная молитва"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §187: Богородица"
+          tier: official
+          excerpt: "Она достойно наречена Богородицей, потому что родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет Московский. Пространный катехизис, §261: общение земной и небесной Церкви"
+          tier: official
+          excerpt: "Верующие из земной Церкви, принося молитву Богу, обращаются также за помощью к святым из Церкви небесной"
+          accessed: "2026-10-01"
+        - url: "https://azbyka.ru/biblia/?Mt.26:44&r"
+          title: "Мф. 26:44 — Синодальный перевод"
+          tier: official
+          excerpt: "помолился в третий раз, сказав то же слово"
+          accessed: "2026-10-09"

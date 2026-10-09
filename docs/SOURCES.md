@@ -5,6 +5,7 @@
 - **Orthodox foundation:** Scripture, the Nicene-Constantinopolitan Creed, conciliar definitions, received catechisms and Church documents hosted on Azbyka. Record the actual work, author or ecclesiastical body and passage. The portal is a host, not a substitute for authority.
 - **Orthodox explanation:** Azbyka encyclopaedia articles and named theological authors. Distinguish explanations and individual opinions from dogma, Church teaching and local practice.
 - **Other traditions:** their primary statements of belief and official texts establish what they teach. An Orthodox critique does not replace their attributed self-description.
+- **Practice descriptions:** how services and prayer are done in practice is reference data (owner, 2026-10-09). Any reliable description may establish it — encyclopaedias, religious-studies works, Azbyka articles on other confessions, a community's or congregation's descriptive pages, Wikipedia when nothing better covers the point — stored with tier `reference` and named in the text when it is one author's account. Doctrine still comes from the tradition's own statements.
 - **History and demographics:** primary documents and scholarly/statistical reference sources with dates and counting scope. A demographic grouping is not an ecclesiological classification.
 - **Legal facts:** primary legal documents; keep legal status separate from theological assessment.
 

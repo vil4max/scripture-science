@@ -1,0 +1,13 @@
+---
+// The prayers moved to «Богослужение и молитва» (owner, 2026-10-09); the
+// published address forwards to the same prayer there.
+import Base from '../layouts/Base.astro';
+import { withBase } from '../lib/paths';
+---
+<Base title="Молитвы"><main class="page"><h1>Молитвы перенесены</h1><p>Полные тексты молитв теперь в разделе «Богослужение и молитва».</p><a id="moved" href={withBase('worship/#prayers')} data-carry-selection>Открыть: Богослужение и молитва</a></main></Base>
+<script>
+  import { withBase } from '../lib/paths';
+  import { prayersDestination } from '../lib/legacyRoutes';
+  location.replace(prayersDestination(location.href, withBase('')));
+</script>
+<style>.page { max-width: var(--measure); margin: 0 auto; padding: 40px 16px; }</style>

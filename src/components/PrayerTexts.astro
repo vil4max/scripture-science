@@ -1,0 +1,56 @@
+---
+// The full Orthodox prayer texts the comparison refers to, in Church Slavonic
+// and Russian, each with a plain explanation and its sources; shown on
+// «Богослужение и молитва» (owner, 2026-10-09).
+import { getCollection } from 'astro:content';
+
+const prayers = (await getCollection('prayers')).sort((a, b) => a.data.order - b.data.order);
+---
+<section id="prayers" class="prayers" aria-labelledby="prayers-title">
+  <h2 id="prayers-title">Молитвы полностью</h2>
+  <p class="lead-in">Основные православные молитвы: на церковнославянском, как их читают в храме и дома, и в русском переводе.</p>
+  <nav class="prayer-index" aria-label="Молитвы">
+    <ul>{prayers.map((prayer) => <li><a href={`#${prayer.id}`}>{prayer.data.title}</a></li>)}</ul>
+  </nav>
+  {prayers.map((prayer) => <section class="prayer" id={prayer.id} aria-labelledby={`${prayer.id}-title`} data-no-terms>
+    <h3 id={`${prayer.id}-title`}>{prayer.data.title}</h3>
+    <p class="about">{prayer.data.about}</p>
+    <div class="texts">
+      {prayer.data.text_cs && <div class="text"><p class="label">На церковнославянском</p><p class="body">{prayer.data.text_cs}</p></div>}
+      {prayer.data.text_ru && <div class="text"><p class="label">{prayer.data.text_ru_label ?? 'Русский перевод'}</p><p class="body">{prayer.data.text_ru}</p></div>}
+    </div>
+    {prayer.data.note && <p class="note">{prayer.data.note}</p>}
+    <details class="proof">
+      <summary>Источники</summary>
+      <ul>{prayer.data.proof.map((source) => <li>
+        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+      </li>)}</ul>
+    </details>
+  </section>)}
+</section>
+
+<style>
+  .prayers { display: grid; gap: 20px; scroll-margin-top: 24px; }
+  .prayers > h2 { margin: 0; padding-top: 12px; border-top: 2px solid var(--line); }
+  .lead-in { margin: 0; max-width: var(--measure); color: var(--muted); }
+  .prayer-index ul { list-style: none; margin: 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px 18px; font-size: 17px; }
+  .prayer { max-width: 110ch; scroll-margin-top: 24px; border-top: 1px solid var(--line); padding-top: 20px; }
+  .prayer h3 { margin: 0 0 8px; font-size: 22px; }
+  .about { max-width: var(--measure); line-height: 1.6; color: var(--muted); }
+  .texts { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 16px 32px; margin: 12px 0; }
+  .text { padding: 12px 16px; border-left: 3px solid var(--t-orthodoxy); background: var(--surface); border-radius: 0 6px 6px 0; }
+  .label { margin: 0 0 6px; font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); }
+  .body { margin: 0; white-space: pre-line; font-size: 18px; line-height: 1.7; }
+  .note { max-width: var(--measure); font-size: 15px; color: var(--muted); }
+  .proof { font-size: 15px; max-width: var(--measure); }
+  .proof summary { cursor: pointer; color: var(--focus); font-weight: 700; }
+  .proof ul { padding-left: 20px; }
+  .accessed { color: var(--muted); }
+  @media (max-width: 760px) {
+    .prayer-index a { display: inline-flex; min-height: 40px; align-items: center; }
+    .proof summary { min-height: 44px; display: list-item; padding: 10px 0; }
+    .proof { overflow-wrap: anywhere; font-size: 16px; }
+    .body { font-size: 17px; }
+    .prayers, .prayer { scroll-margin-top: 72px; }
+  }
+</style>

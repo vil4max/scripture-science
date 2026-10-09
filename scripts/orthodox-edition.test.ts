@@ -8,6 +8,9 @@ import { assessments, validateAssessments } from '../src/lib/orthodox.ts';
 import { legacyPairDestination } from '../src/lib/legacyPairRoute.ts';
 import { DEFAULT_SELECTION } from '../src/lib/selection.ts';
 import { TOPIC_ORDER } from '../src/lib/rules.ts';
+import { CREED_TOPICS, OTHER_TOPICS } from '../src/lib/creed.ts';
+// @ts-expect-error - js-yaml has no separately installed TypeScript declarations.
+import * as yaml from 'js-yaml';
 
 const html: string = readFileSync('dist/compare/index.html', 'utf8');
 test('105 separately sourced assessments are complete and malformed coverage fails', () => {
@@ -26,9 +29,12 @@ test('105 separately sourced assessments are complete and malformed coverage fai
     assert.equal(record.assessmentAuthority, 'editorial-application');
   }
 });
-test('server output opens every question with the Orthodox answer, then one chosen tradition', () => {
-  const questions = [...html.matchAll(/<section class="question"[^>]*id="topic-([^"]+)"[\s\S]*?<\/section>/g)];
-  assert.deepEqual(questions.map(m => m[1]), [...TOPIC_ORDER]);
+// Every question: the Orthodox answer, then seven tradition pairs with only
+// the default one visible, each in three blocks, and seven lines in «Этот
+// вопрос у всех».
+const checkQuestions = (page: string, order: string[]) => {
+  const questions = [...page.matchAll(/<section class="question"[^>]*id="topic-([^"]+)"[\s\S]*?<\/section>/g)];
+  assert.deepEqual(questions.map(m => m[1]), order);
   for (const [question] of questions) {
     const first = question.match(/<div class="side [^"]+"[^>]*>/)![0];
     assert.match(first, /data-trad="orthodoxy"/);
@@ -46,7 +52,16 @@ test('server output opens every question with the Orthodox answer, then one chos
     }
     assert.equal((question.match(/data-pick-row=/g) ?? []).length, 7, 'one line per tradition in «Этот вопрос у всех»');
   }
-  assert.equal((html.match(/data-pick="/g) ?? []).length, 7);
+  assert.equal((page.match(/data-pick="/g) ?? []).length, 7);
+};
+test('server output opens every question with the Orthodox answer, then one chosen tradition', () => {
+  // Creed (the Theotokos after Jesus Christ, article 3), then the other differences.
+  const creed = CREED_TOPICS.flatMap((topic): string[] => topic === 'jesus' ? [topic, 'theotokos'] : [topic]);
+  checkQuestions(html, [...creed, ...OTHER_TOPICS]);
+  // Worship and prayer have their own page (owner, 2026-10-09); a question
+  // appears once its data exists.
+  const extraIds = (yaml.load(readFileSync('src/data/extra-questions.yaml', 'utf8')) as { id: string }[]).map((entry) => entry.id);
+  checkQuestions(readFileSync('dist/worship/index.html', 'utf8'), ['services', 'schedule', 'private-prayer', 'psalter'].filter((id) => extraIds.includes(id)));
   for (const topic of TOPIC_ORDER) assert.ok(html.includes(`href="#topic-${topic}"`), topic);
   assert.ok(!html.includes('data-comparison-slots') && !html.includes('data-slot='));
   assert.ok(html.indexOf('id="views"') < html.indexOf('data-question-compare'));

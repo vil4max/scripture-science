@@ -279,6 +279,43 @@ const terms = defineCollection({
   }),
 });
 
+// Full prayer texts the comparisons refer to, in Church Slavonic and Russian,
+// in file order; shown at the end of «Богослужение и молитва» (/worship/).
+const prayers = defineCollection({
+  loader: file('src/data/prayers.yaml', { parser: keyedArrayParser('id', { withOrder: true }) }),
+  schema: z.object({
+    order: z.number().int(),
+    title: z.string(),
+    about: z.string(),
+    text_cs: z.string().optional(),
+    text_ru: z.string().optional(),
+    text_ru_label: z.string().optional(),
+    note: z.string().optional(),
+    proof: z.array(proof).min(1),
+  }).refine((prayer) => prayer.text_cs || prayer.text_ru, 'a prayer needs a text'),
+});
+
+// Comparison questions outside the fifteen topics, with the same three
+// blocks: the Theotokos in the Creed part, worship and prayer in their own.
+const extraSide = z.object({
+  teaching: z.string(),
+  difference: z.string(),
+  response: z.string(),
+  proof: z.array(proof).min(1),
+});
+const extraQuestions = defineCollection({
+  loader: file('src/data/extra-questions.yaml', { parser: keyedArrayParser('id', { withOrder: true }) }),
+  schema: z.object({
+    order: z.number().int(),
+    question: z.string(),
+    orthodox: z.object({ short: z.string().max(260), detail: z.string().optional(), proof: z.array(proof).min(1) }),
+    traditions: z.object({
+      judaism: extraSide, catholicism: extraSide, islam: extraSide, protestantism: extraSide,
+      lds: extraSide, adventism: extraSide, jw: extraSide,
+    }),
+  }),
+});
+
 // «С чего начать» (/basics/): short sourced sections for a reader with no
 // religious education, in reading order.
 const basics = defineCollection({
@@ -411,6 +448,8 @@ export const collections = {
   disputes,
   terms,
   basics,
+  prayers,
+  extraQuestions,
   topics,
   sections,
 };

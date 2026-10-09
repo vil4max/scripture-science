@@ -4,19 +4,25 @@
 // tradition's teaching, then where they part and the Orthodox answer; only
 // the analysis links and sources fold. «Этот вопрос у всех» lists every tradition's
 // difference on the same question in one line each.
-import type { CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import { analysisCardsForTopic, profileHref } from '../lib/analysis';
+import { CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { withBase } from '../lib/paths';
 import { DEFAULT_SELECTION } from '../lib/selection';
-import { positionSummaryText, TOPIC_GROUPS, TOPIC_ORDER, TOPIC_QUESTIONS_RU } from '../lib/rules';
+import { positionSummaryText, TOPIC_QUESTIONS_RU, type TopicId } from '../lib/rules';
 
 interface Props {
   traditions: CollectionEntry<'matrix'>[];
   colorById: Map<string, string>;
+  // «Символ веры и различия» or «Богослужение и молитва» (owner, 2026-10-09:
+  // worship and prayer have their own page, with the prayers).
+  page?: 'compare' | 'worship';
+  // Further entries for the contents, such as the prayer texts below.
+  extraToc?: { href: string; title: string }[];
 }
 
-const { traditions, colorById } = Astro.props;
+const { traditions, colorById, page = 'compare', extraToc = [] } = Astro.props;
 const SHORT_NAMES: Record<string, string> = {
   judaism: 'Иудаизм', catholicism: 'Католичество', islam: 'Ислам', protestantism: 'Протестантизм',
   lds: 'Святые последних дней', adventism: 'Адвентисты', jw: 'Свидетели Иеговы',
@@ -28,22 +34,90 @@ const TEACHING_LABELS: Record<string, string> = {
   protestantism: 'Учение протестантов', lds: 'Учение Святых последних дней', adventism: 'Учение адвентистов',
   jw: 'Учение Свидетелей Иеговы',
 };
+// Full prayer texts on /worship/ that an Orthodox answer refers to.
+const PRAYER_LINKS: Partial<Record<string, { id: string; title: string }[]>> = {
+  services: [{ id: 'otche-nash', title: '«Отче наш»' }, { id: 'simvol-very', title: 'Символ веры' }],
+  'private-prayer': [{ id: 'otche-nash', title: '«Отче наш»' }, { id: 'psalom-50', title: 'Псалом 50' }, { id: 'dostojno-est', title: '«Достойно есть»' }],
+  theotokos: [{ id: 'dostojno-est', title: '«Достойно есть»' }],
+  psalter: [{ id: 'psalom-50', title: 'Псалом 50' }],
+};
 const chosenByDefault = DEFAULT_SELECTION[1];
 const orthodoxy = traditions.find((tradition) => tradition.id === 'orthodoxy')!;
 const others = traditions.filter((tradition) => tradition.id !== 'orthodoxy');
 const color = (id: string) => `var(${colorById.get(id) ?? '--t-other'})`;
+const creedLabel = (numbers: number[]) => {
+  if (numbers.length === 1) return `${numbers[0]}-й член`;
+  const contiguous = numbers.every((n, i) => i === 0 || n === numbers[i - 1] + 1);
+  return contiguous ? `члены ${numbers[0]}–${numbers[numbers.length - 1]}` : `члены ${numbers.join(' и ')}`;
+};
 
-const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
+type Proof = { url: string; title: string };
+interface Side {
+  tradition: (typeof others)[number];
+  assessment?: string;
+  teaching: string;
+  difference: string;
+  response: string;
+  cards?: { title: string; href: string }[];
+  proofs: Proof[];
+}
+interface Question {
+  id: string;
+  title: string;
+  creed: ReturnType<typeof creedArticlesFor>;
+  short: string;
+  detail?: string;
+  foundationHref?: string;
+  sourcesHref?: string;
+  sides: Side[];
+}
+
+// A comparison topic: the Orthodox position and the assessments per tradition.
+const topicQuestion = async (topic: TopicId): Promise<Question> => {
   const foundation = orthodoxy.data.positions.find((position) => position.topic === topic)!;
   if (!foundation.short) throw new Error(`Orthodox position without a short answer: ${topic}`);
   const sides = await Promise.all(others.map(async (tradition) => {
     const position = tradition.data.positions.find((item) => item.topic === topic)!;
     const record = orthodoxAssessment(tradition.id, topic);
     if (!record) throw new Error(`Missing assessment: ${tradition.id}/${topic}`);
-    return { tradition, position, record, cards: await analysisCardsForTopic(tradition.id, topic) };
+    return {
+      tradition, assessment: record.id, teaching: positionSummaryText(position) ?? 'Источник уточняется.',
+      difference: record.difference, response: record.response,
+      cards: await analysisCardsForTopic(tradition.id, topic), proofs: [...position.proof, ...record.proof],
+    };
   }));
-  return { topic, number: index + 1, foundation, sides };
-}));
+  return {
+    id: topic, title: TOPIC_QUESTIONS_RU[topic], creed: creedArticlesFor(topic), short: foundation.short,
+    foundationHref: profileHref('orthodoxy', `topic-${topic}`), sourcesHref: withBase(`sources/#sources-${topic}`), sides,
+  };
+};
+// A question outside the fifteen topics (src/data/extra-questions.yaml).
+const extraQuestion = (entry: CollectionEntry<'extraQuestions'>): Question => ({
+  id: entry.id, title: entry.data.question, creed: creedArticlesFor(entry.id), short: entry.data.orthodox.short, detail: entry.data.orthodox.detail,
+  sides: others.map((tradition) => {
+    const side = entry.data.traditions[tradition.id as keyof typeof entry.data.traditions];
+    return { tradition, teaching: side.teaching, difference: side.difference, response: side.response, proofs: [...entry.data.orthodox.proof, ...side.proof] };
+  }),
+});
+
+const extras = await getCollection('extraQuestions');
+const extra = (id: string) => extras.filter((entry) => entry.id === id).map(extraQuestion);
+// The Theotokos follows Jesus Christ: article 3 names «Марии Девы» (owner).
+const creedQuestions: Question[] = [];
+for (const topic of CREED_TOPICS) {
+  creedQuestions.push(await topicQuestion(topic));
+  if (topic === 'jesus') creedQuestions.push(...extra('theotokos'));
+}
+const otherQuestions = await Promise.all(OTHER_TOPICS.map(topicQuestion));
+// Worship and prayer are compared on their own page (owner, 2026-10-09):
+// common worship, the daily, weekly and yearly rhythm, prayer at home and the
+// Psalter.
+const PARTS = page === 'worship'
+  ? [{ id: 'part-worship', title: 'Как служат и молятся', questions: ['services', 'schedule', 'private-prayer', 'psalter'].flatMap(extra) }]
+  : [
+    { id: 'part-creed', title: 'Символ веры: что говорят другие религии', questions: creedQuestions },
+    { id: 'part-other', title: 'Другие различия', questions: otherQuestions },
+  ];
 ---
 <div class="qc" data-comparison data-question-compare data-view="one" data-chosen={chosenByDefault}>
   <div class="qc-bar">
@@ -63,56 +137,68 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
     <details class="qc-toc" open>
       <summary>Вопросы</summary>
       <nav aria-label="Вопросы сравнения">
-        {TOPIC_GROUPS.map((group) => <div class="toc-group">
-          <p class="toc-title"><a href={`#group-${group.id}`}>{group.title}</a></p>
-          <ol>{group.topics.map((topic) => <li><a href={`#topic-${topic}`}>{TOPIC_QUESTIONS_RU[topic]}</a></li>)}</ol>
+        {PARTS.map((part) => <div class="toc-group">
+          <p class="toc-title"><a href={`#${part.id}`}>{part.title}</a></p>
+          <ol>{part.questions.map((question) => <li><a href={`#topic-${question.id}`}>{question.title}</a></li>)}</ol>
         </div>)}
+        {extraToc.map((entry) => <div class="toc-group"><p class="toc-title"><a href={entry.href}>{entry.title}</a></p></div>)}
       </nav>
     </details>
 
     <div class="qc-body">
-      {TOPIC_GROUPS.map((group) => <>
-        <h2 class="qc-group" id={`group-${group.id}`}>{group.title}</h2>
-        {questions.filter((question) => group.topics.includes(question.topic)).map((question) => <section class="question" id={`topic-${question.topic}`} aria-labelledby={`question-title-${question.topic}`}>
-          <p class="q-meta">Вопрос {question.number} из {TOPIC_ORDER.length}</p>
-          <h3 id={`question-title-${question.topic}`}>{TOPIC_QUESTIONS_RU[question.topic]}</h3>
+      {PARTS.map((part) => <>
+        <h2 class="qc-group" id={part.id}>{part.title}</h2>
+        {part.questions.map((question) => <section class="question" id={`topic-${question.id}`} aria-labelledby={`question-title-${question.id}`}>
+          <p class="q-meta">{question.creed.length > 0 ? `Символ веры, ${creedLabel(question.creed.map((article) => article.n))}` : part.title}</p>
+          <h3 id={`question-title-${question.id}`}>{question.title}</h3>
 
           <div class="side orthodox" data-trad="orthodoxy" data-foundation-column>
-            <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Православное учение</p>
-            <p class="thesis">{question.foundation.short}</p>
-            <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${question.topic}`)} data-carry-selection>Обоснование →</a></p>
+            {question.creed.length > 0 ? <>
+              <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Символ веры</p>
+              <blockquote class="creed">
+                {question.creed.map((article) => <p>{question.creed.length > 1 && <span class="creed-n">{article.n}.</span>} {article.text}</p>)}
+                <cite><a href={withBase('worship/#simvol-very')}>Символ веры полностью</a> · <a href={CREED_SOURCE.url} target="_blank" rel="noopener noreferrer">{CREED_SOURCE.title}</a></cite>
+              </blockquote>
+              <p class="thesis"><span class="plain-label">Простыми словами.</span> {question.short}</p>
+              {question.detail && <p>{question.detail}</p>}
+            </> : <>
+              <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Православное учение</p>
+              <p class="thesis">{question.short}</p>
+              {question.detail && <p>{question.detail}</p>}
+            </>}
+            {PRAYER_LINKS[question.id] && <p class="prayer-links">Молитвы полностью: {PRAYER_LINKS[question.id]!.map((prayer, index) => <>{index > 0 && ' · '}<a href={withBase(`worship/#${prayer.id}`)}>{prayer.title}</a></>)}</p>}
+            {question.foundationHref && <p class="foundation-link"><a href={question.foundationHref} data-carry-selection>Обоснование →</a></p>}
           </div>
 
-          {question.sides.map(({ tradition, position, record, cards }) => <div class="pair" data-trad={tradition.id} data-assessment={record.id} hidden={tradition.id !== chosenByDefault}>
-          <div class="side tradition" style={`--accent:${color(tradition.id)}`}>
-            <p class="who"><span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{TEACHING_LABELS[tradition.id] ?? `Учение: ${tradition.data.name}`}</p>
-            <p class="thesis">{positionSummaryText(position) ?? 'Источник уточняется.'}</p>
+          {question.sides.map((side) => <div class="pair" data-trad={side.tradition.id} data-assessment={side.assessment} hidden={side.tradition.id !== chosenByDefault}>
+          <div class="side tradition" style={`--accent:${color(side.tradition.id)}`}>
+            <p class="who"><span class="dot" style={`background:${color(side.tradition.id)}`} aria-hidden="true"></span>{TEACHING_LABELS[side.tradition.id] ?? `Учение: ${side.tradition.data.name}`}</p>
+            <p class="thesis">{side.teaching}</p>
           </div>
           <div class="side verdict">
-            <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Где расходятся — православный ответ</p>
-            <p class="difference">{record.difference}</p>
-            <p class="response">{record.response}</p>
+            <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Православный взгляд на расхождение</p>
+            <p class="difference">{side.difference}</p>
+            <p class="response">{side.response}</p>
             <details class="more">
-              <summary>Разбор по вопросам и источники</summary>
-              <p class="analysis">{cards.length > 0
-                ? <>Разбор по вопросам: {cards.map((card, index) => <>{index > 0 && ' · '}<a href={card.href} data-carry-selection>{card.title}</a></>)}</>
-                : <a href={profileHref(tradition.id)} data-carry-selection>Подробный разбор традиции →</a>}</p>
+              <summary>{side.cards ? 'Разбор по вопросам и источники' : 'Источники'}</summary>
+              {side.cards && <p class="analysis">{side.cards.length > 0
+                ? <>Разбор по вопросам: {side.cards.map((card, index) => <>{index > 0 && ' · '}<a href={card.href} data-carry-selection>{card.title}</a></>)}</>
+                : <a href={profileHref(side.tradition.id)} data-carry-selection>Подробный разбор традиции →</a>}</p>}
               <p class="label">Источники</p>
               <ul class="sources">
-                {position.proof.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}
-                {record.proof.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}
+                {side.proofs.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}
               </ul>
-              <p class="all-sources"><a href={withBase(`sources/#sources-${question.topic}`)}>Все источники по теме</a></p>
+              {question.sourcesHref && <p class="all-sources"><a href={question.sourcesHref}>Все источники по теме</a></p>}
             </details>
           </div>
           </div>)}
 
-          <ol class="all-list" aria-label={`${TOPIC_QUESTIONS_RU[question.topic]} — все религии`}>
-            {question.sides.map(({ tradition, record }) => <li style={`--accent:${color(tradition.id)}`}>
-              <button type="button" class="row-pick" data-pick-row={tradition.id}>
-                <span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[tradition.id] ?? tradition.data.name}
+          <ol class="all-list" aria-label={`${question.title} — все религии`}>
+            {question.sides.map((side) => <li style={`--accent:${color(side.tradition.id)}`}>
+              <button type="button" class="row-pick" data-pick-row={side.tradition.id}>
+                <span class="dot" style={`background:${color(side.tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[side.tradition.id] ?? side.tradition.data.name}
               </button>
-              <span class="row-text">{record.difference}</span>
+              <span class="row-text">{side.difference}</span>
             </li>)}
           </ol>
         </section>)}
@@ -153,7 +239,13 @@ const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
   .side p:last-child { margin-bottom: 0; }
   .who { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--muted); }
   .thesis { font-size: 17px; }
-  .foundation-link, .analysis, .all-sources { font-size: 15px; }
+  .foundation-link, .analysis, .all-sources, .prayer-links { font-size: 15px; }
+  .creed { margin: 0 0 10px; padding: 0; font-size: 17px; }
+  .creed p { margin: 0 0 4px !important; font-style: italic; line-height: 1.55; }
+  .plain-label { font-weight: 700; }
+  .creed-n { font-style: normal; color: var(--muted); }
+  .creed cite { display: block; font-style: normal; font-size: 13px; }
+  .creed cite a { color: var(--muted); }
   .label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-top: 8px !important; }
   /* Three blocks per question (owner, 2026-10-09): Orthodox teaching, the
      chosen tradition's teaching, then where they part and the Orthodox
