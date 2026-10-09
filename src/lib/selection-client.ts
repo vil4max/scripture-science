@@ -29,11 +29,23 @@ function store(ids: string[]): void {
   }
 }
 
-function syncPage(ids: string[]): void {
+// Replacing the address while the page loads cancels the browser's own jump
+// to the fragment, so a link such as terms/#filioque would open at the top.
+function restoreFragment(): void {
+  if (!location.hash) return;
+  const jump = () => document.getElementById(decodeURIComponent(location.hash.slice(1)))?.scrollIntoView({ behavior: 'instant' });
+  if (document.readyState === 'complete') jump();
+  else addEventListener('load', jump, { once: true });
+}
+
+function syncPage(ids: string[], initial = false): void {
   document.documentElement.dataset.selection = ids.join(' ');
   document.documentElement.dataset.selectionCount = String(ids.length);
   const url = hrefWithSelection(location.href, ids);
-  if (url !== location.href) history.replaceState(history.state, '', url);
+  if (url !== location.href) {
+    history.replaceState(history.state, '', url);
+    if (initial) restoreFragment();
+  }
   document.querySelectorAll<HTMLAnchorElement>('a[data-carry-selection]').forEach((a) => {
     a.href = hrefWithReadingContext(a.getAttribute('href') ?? '', ids, location.href);
   });
@@ -45,7 +57,7 @@ export function getSelection(): string[] {
   const params = new URLSearchParams(location.search);
   current = parseSelection(params.has(SELECTION_PARAM) ? params.get(SELECTION_PARAM) : params.has('slots') ? params.get('slots') : readStored());
   store(current);
-  syncPage(current);
+  syncPage(current, true);
   return current;
 }
 
