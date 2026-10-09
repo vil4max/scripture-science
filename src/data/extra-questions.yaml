@@ -1835,3 +1835,621 @@
           tier: official
           excerpt: "помолился в третий раз, сказав то же слово"
           accessed: "2026-10-09"
+
+- id: schedule
+  question: "Когда молятся: день, неделя, год"
+  orthodox:
+    short: "Церковные сутки начинаются вечером: вечерня, утреня, часы, Литургия; дома читают утренние и вечерние молитвы. В неделе особый день — воскресенье; среда и пятница постные. В году — Пасха, двунадесятые праздники, четыре многодневных поста."
+    detail: "По церковной традиции сутки начинаются вечером. Суточный круг — это восемь служб: вечерня, повечерие, полунощница, утреня и четыре часа (первый, третий, шестой и девятый); в приходах повечерие и полунощницу, как правило, не служат, а Литургия — особая служба, которая в этот круг не входит. Дома минимум — утренние и вечерние молитвы. Каждое воскресенье празднуют Воскресение Христово, а среда и пятница посвящены Крестной смерти Христа, и в эти дни, как правило, постятся. Год строится вокруг Пасхи — главного церковного праздника, двенадцати двунадесятых праздников и четырёх многодневных постов: Великого, Петрова (Апостольского), Успенского и Рождественского."
+    proof:
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Суточный круг»"
+        tier: reference
+        excerpt: "В церковной традиции началом суток считается вечер."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+        title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+        tier: reference
+        excerpt: "Он включает в себя восемь отдельных служб: вечерню, повечерие, полунощницу, утреню, 1-й час, 3-й час, 6-й час и 9-й час"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Суточный круг» (приходская практика)"
+        tier: reference
+        excerpt: "в нашей приходской традиции из перечисленных служб опускаются, как правило, повечерие и полунощница"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Суточный круг» (место Литургии)"
+        tier: reference
+        excerpt: "литургия не входит в суточный круг, но является особым богослужением"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/molitvennoe-pravilo"
+        title: "Молитвенное правило — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "минимально – утренние и вечерние"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+        title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+        tier: official
+        excerpt: "День воскресный празднуется со времени воскресения Христа."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+        title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Седмичный круг»"
+        tier: reference
+        excerpt: "среда и пятница – Крестная смерть Христа"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+        title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+        tier: reference
+        excerpt: "Однодневные посты совершают в среды и пятницы (кроме Сплошных седмиц)"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/paskha"
+        title: "Пасха — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "главный церковный Праздник Светлого Воскресения Христова"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/dvunadesyatye-prazdniki"
+        title: "Двунадесятые праздники — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "12-ть важнейших"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+        title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+        tier: reference
+        excerpt: "Четыре многодневных поста положены Церковью перед великими праздниками."
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+        title: "Посты Православной Церкви — энциклопедия «Азбука веры», Великий пост"
+        tier: reference
+        excerpt: "установленный в память сорокадневного поста Спасителя в иудейской пустыне"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/petrov-post"
+        title: "Петров пост — энциклопедия «Азбука веры»"
+        tier: reference
+        excerpt: "народное название одного из четырёх многодневных постов Церкви"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+        title: "Посты Православной Церкви — энциклопедия «Азбука веры», Успенский пост"
+        tier: reference
+        excerpt: "Успенский пост – с 14 по 28 августа"
+        accessed: "2026-10-09"
+      - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+        title: "Посты Православной Церкви — энциклопедия «Азбука веры», Рождественский пост"
+        tier: reference
+        excerpt: "Рождественский пост – с 28 ноября по 7 января"
+        accessed: "2026-10-09"
+  traditions:
+    judaism:
+      teaching: "Три ежедневные молитвы: утренняя (Шахарит), послеполуденная (Минха) и вечерняя (Маарив). Шаббат, день покоя, длится от заката в пятницу до появления звёзд в субботу вечером. Главные праздники года — Песах, Шавуот и Суккот, Рош ха-Шана (Новый год) и Йом Кипур (День Искупления), в который молятся и постятся."
+      difference: "Иудаизм молится трижды в день, чтит субботу, седьмой день недели, и отмечает Песах, Шавуот, Суккот, Рош ха-Шана и Йом Кипур, а Церковь празднует воскресенье, день Воскресения Христова, и Пасху как главный праздник года."
+      response: "Христос Сам входил в синагогу «по обыкновению Своему, в день субботний» (Лк 4:16), а Воскресение произошло «по прошествии же субботы, на рассвете первого дня недели» (Мф 28:1). Поэтому ученики, по книге Деяний, собирались «в первый же день недели» (Деян 20:7), и Церковь празднует воскресенье со времени воскресения Христа (катехизис, §535)."
+      proof:
+        - url: "https://toldot.com/main/Shaharit.html"
+          title: "Шахарит — Толдот.ру, вводный абзац"
+          tier: reference
+          excerpt: "одна из трех обязательных еврейских молитв, наряду с послеполуденной Минхой и вечерней Маарив"
+          accessed: "2026-10-09"
+        - url: "https://www.myjewishlearning.com/article/shaharit-minhah-and-maariv/"
+          title: "Daily Prayer: Shacharit, Mincha and Maariv | My Jewish Learning"
+          tier: reference
+          excerpt: "Shacharit (the morning service), Mincha (the afternoon service), and Maariv (the evening service)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Шаббат"
+          title: "Шаббат — Википедия (ru), раздел «Зажигание свечей»"
+          tier: reference
+          excerpt: "согласно еврейской традиции, наступает с заходом солнца в пятницу"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Shabbat"
+          title: "Shabbat — Wikipedia (англ.), вводный раздел"
+          tier: reference
+          excerpt: "until the appearance of three stars in the sky on Saturday night"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/shabbat.html"
+          title: "Шаббат — Еврейская Суббота — Толдот.ру"
+          tier: reference
+          excerpt: "Традиционно Шаббат — это день отдыха, день субботнего покоя"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/holidays.html"
+          title: "Еврейские праздники — Толдот.ру, вводный раздел"
+          tier: reference
+          excerpt: "Песах, Шавуот и Сукот, судные дни — Рош аШана (Новый год) и Йом Кипур (День Искупления)"
+          accessed: "2026-10-09"
+        - url: "https://toldot.com/holidays.html"
+          title: "Еврейские праздники — Толдот.ру, раздел о Йом Кипуре"
+          tier: reference
+          excerpt: "Евреи всего мира проводят этот день в молитвах и посте."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.4:16&r"
+          title: "Лк. 4:16 — Синодальный перевод"
+          tier: official
+          excerpt: "по обыкновению Своему, в день субботний"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.28:1&r"
+          title: "Мф. 28:1 — Синодальный перевод"
+          tier: official
+          excerpt: "По прошествии же субботы, на рассвете первого дня недели"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Act.20:7&r"
+          title: "Деян. 20:7 — Синодальный перевод"
+          tier: official
+          excerpt: "В первый же день недели, когда ученики собрались для преломления хлеба"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+    catholicism:
+      teaching: "Литургия Часов освящает весь день: главные её часы — утренняя молитва (лауды) и вечерня, а перед сном — повечерие. По традиции верные читают и Ангелус — молитву утром, в полдень и вечером. В воскресенье католики обязаны быть на Мессе, а пятница, в память смерти Господа, — день покаяния, обычно с воздержанием от мяса. Год строится вокруг Пасхи: Адвент, Рождество, Великий пост, Пасха."
+      difference: "Здесь во многом согласие: католики, как и Церковь, молятся в течение суток, собираются в воскресенье и строят год вокруг Пасхи, но постным днём недели считают пятницу, а Церковь — среду и пятницу."
+      response: "Церковь тоже молится в течение суток — по кругу из восьми служб — и называет Пасху «праздников праздником и торжеством торжеств» («Азбука веры»). Среда и пятница в Церкви — дни поста, а перед великими праздниками она держит четыре многодневных поста: Великий, Петров, Успенский и Рождественский."
+      proof:
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1174: Литургия Часов"
+          tier: official
+          excerpt: "составлена таким образом, чтобы все течение дня и ночи было освящено хвалой Богу"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Литургия_часов"
+          title: "Литургия часов — Википедия (ru), раздел «Структура часов»"
+          tier: reference
+          excerpt: "Условно часы можно разделить на «большие» (вечерня и утреня) и малые."
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Литургия_часов"
+          title: "Литургия часов — Википедия (ru), раздел «Состав»: утреня и лауды"
+          tier: reference
+          excerpt: "хвалы утренние"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Литургия_часов"
+          title: "Литургия часов — Википедия (ru), раздел «Состав»: повечерие (комплеторий)"
+          tier: reference
+          excerpt: "Совершается перед отходом ко сну."
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Angelus"
+          title: "Angelus — Wikipedia (англ.), вводный раздел"
+          tier: reference
+          excerpt: "traditionally recited in Roman Catholic churches, convents, monasteries and by the faithful three times a day"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §2180"
+          tier: official
+          excerpt: "В воскресенье и в другие дни предписанных праздников верные обязаны участвовать в Святой Мессе"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1438: дни покаяния"
+          tier: official
+          excerpt: "каждая пятница в память смерти Господа"
+          accessed: "2026-10-09"
+        - url: "https://www.vatican.va/archive/cod-iuris-canonici/eng/documents/cic_lib4-cann1244-1253_en.html"
+          title: "Code of Canon Law (Vatican, англ.), кн. IV, кан. 1251: воздержание по пятницам"
+          tier: official
+          excerpt: "Abstinence from meat, or from some other food as determined by the Episcopal Conference, is to be observed on all Fridays"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1095: Адвент, Великий пост, Пасха"
+          tier: official
+          excerpt: "Церковь, в особенности в период Адвента, Великого поста, а главное — в Пасхальную ночь"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1171: праздники Воплощения"
+          tier: official
+          excerpt: "Это особенно относится к циклу праздников, связанных с тайной Воплощения (Благовещение, Рождество Христово, Богоявление)"
+          accessed: "2026-10-09"
+        - url: "http://web.archive.org/web/20260422005102/https://ccconline.ru/"
+          title: "Катехизис Католической Церкви (ccconline.ru, архивная копия), §1169: Пасха"
+          tier: official
+          excerpt: "Пасха не просто один из праздников: она «Праздник праздников»"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+          title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+          tier: reference
+          excerpt: "Он включает в себя восемь отдельных служб: вечерню, повечерие, полунощницу, утреню, 1-й час, 3-й час, 6-й час и 9-й час"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/paskha"
+          title: "Пасха — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "«праздников праздник и торжество торжеств»"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Однодневные посты совершают в среды и пятницы (кроме Сплошных седмиц)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Четыре многодневных поста положены Церковью перед великими праздниками."
+          accessed: "2026-10-09"
+    islam:
+      teaching: "Мусульмане совершают пять намазов в день: фаджр на рассвете, зухр после полудня, аср в предвечернее время, магриб после заката и иша ночью. В пятницу в полдень мужчины собираются в мечети на общую молитву с проповедью. В месяц Рамадан верующие постятся в светлое время суток, от рассвета до ночи; его завершает Ураза-байрам, а через два с лишним месяца отмечают Курбан-байрам — праздник окончания хаджа."
+      difference: "Ислам предписывает пять намазов в течение суток, пятничную общую молитву и месячный пост в Рамадан, а Церковь совершает вечерню и утреню, празднует воскресенье, день Воскресения Христова, и постится по средам и пятницам и в четыре многодневных поста."
+      response: "Церковь тоже молится в течение суток: апостол Павел велит «Непрестанно молитесь» (1 Фес 5:17), а псалмопевец говорит: «Вечером и утром и в полдень буду умолять и вопиять» (Пс 54:18). Верующие собираются в воскресенье — день Воскресения Христа (катехизис, §535); пост Церковь держит по средам и пятницам и в четыре многодневных поста («Азбука веры»)."
+      proof:
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), вводный раздел"
+          tier: reference
+          excerpt: "утренняя двухракаатная молитва (фаджр); полуденная четырёхракаатная молитва (зухр); предвечерняя четырёхракаатная молитва (аср); вечерняя трёхракаатная молитва (магриб); ночная четырёхракаатная молитва (иша)"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Пять ежедневных молитв»: фаджр"
+          tier: reference
+          excerpt: "может исполняться, когда первые лучи солнца освещают горизонт, и продолжается до восхода солнца"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Пять ежедневных молитв»: зухр"
+          tier: reference
+          excerpt: "может выполняться сразу после прохождения солнцем середины неба"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Пять ежедневных молитв»: аср"
+          tier: reference
+          excerpt: "начинается, когда тень от предметов становится больше их длины"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Пять ежедневных молитв»: магриб"
+          tier: reference
+          excerpt: "по мнению суннитов может выполняться после заката, когда солнце исчезает из виду"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Намаз"
+          title: "Намаз — Википедия (ru), раздел «Пять ежедневных молитв»: иша"
+          tier: reference
+          excerpt: "выполняется от наступления темноты и до рассвета"
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Время совершения – это время полуденной молитвы (Зухр). Совершается только в мечетях и местах, специально отведенных для молитвы-намаза."
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Пятничная молитва является обязательной только для мужчин."
+          accessed: "2026-10-09"
+        - url: "https://umma.ru/pyatnichnyj-namaz-poryadok-vypolneniya"
+          title: "Пятничный намаз. Порядок выполнения — umma.ru (исламский портал, статья Ш. Аляутдинова)"
+          tier: reference
+          excerpt: "Затем проповедник, цитируя Священный Коран и Сунну, обращается с проповедью"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185"
+          title: "Коран 2:185, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "Тот из вас, кого застанет этот месяц, должен поститься"
+          accessed: "2026-10-09"
+        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:187"
+          title: "Коран 2:187, перевод Э. Кулиева | Quran.com Content API"
+          tier: official
+          excerpt: "пока вы не сможете отличить белую нитку рассвета от черной, а затем поститесь до ночи"
+          accessed: "2026-10-09"
+        - url: "https://mosmechet.ru/5stolpov"
+          title: "5 столпов ислама | Историческая мечеть г. Москвы, столп №4"
+          tier: official
+          excerpt: "воздержания от еды, питья и интимной близости в светлое время суток"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Ураза-байрам"
+          title: "Ураза-байрам — Википедия (ru), вводный раздел"
+          tier: reference
+          excerpt: "отмечаемый в честь окончания поста в месяц Рамадан"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Курбан-байрам"
+          title: "Курбан-байрам — Википедия (ru), вводный раздел"
+          tier: reference
+          excerpt: "исламский праздник окончания хаджа"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Курбан-байрам"
+          title: "Курбан-байрам — Википедия (ru), вводный раздел: срок праздника"
+          tier: reference
+          excerpt: "отмечаемый через 68—70 дней после праздника Ураза-байрам"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?1Thes.5:17&r"
+          title: "1 Фес. 5:17 — Синодальный перевод"
+          tier: official
+          excerpt: "Непрестанно молитесь."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Ps.54:18&r"
+          title: "Пс. 54:18 — Синодальный перевод"
+          tier: official
+          excerpt: "Вечером и утром и в полдень буду умолять и вопиять"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Однодневные посты совершают в среды и пятницы (кроме Сплошных седмиц)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Четыре многодневных поста положены Церковью перед великими праздниками."
+          accessed: "2026-10-09"
+    protestantism:
+      teaching: "Порядок зависит от церкви. Лютеране причащаются в воскресные и праздничные дни, а лютеране и англикане держатся церковного года: Адвент, Рождество, Великий пост, Пасха. Англиканские священники и диаконы обязаны ежедневно читать утреннюю и вечернюю молитву. У баптистов (ЕХБ) главное богослужение — в воскресенье, а в течение недели проходят и другие собрания; главные праздники — Пасха и Рождество Христово."
+      difference: "Лютеране и англикане держатся церковного года, баптисты собираются главным образом в воскресенье, а Церковь, кроме воскресенья, хранит постные среду и пятницу, четыре многодневных поста и двунадесятые праздники."
+      response: "Церковь тоже строит год вокруг Пасхи и Рождества Христова, но хранит и другие дни: «кроме воскресного дня, и другие, во славу Божию и в честь Пресвятой Богородицы и прочих святых установленные праздники и посты» (катехизис, §537). Пост она держит по слову Христа: «придут дни, когда отнимется у них жених, и тогда будут поститься» (Мф 9:15)."
+      proof:
+        - url: "https://bookofconcord.org/augsburg-confession/of-the-mass/"
+          title: "Аугсбургское исповедание, ст. XXIV «О Мессе», §34 (Книга Согласия, bookofconcord.org, англ.)"
+          tier: official
+          excerpt: "we hold one communion every holy-day"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Liturgical_year"
+          title: "Liturgical year — Wikipedia (англ.), раздел «Western Christianity»: церковный год на Западе"
+          tier: reference
+          excerpt: "are also followed in many Protestant churches, including the Lutheran, Anglican, and other traditions"
+          accessed: "2026-10-09"
+        - url: "https://en.wikipedia.org/wiki/Liturgical_year"
+          title: "Liturgical year — Wikipedia (англ.), раздел «Western Christianity»: времена года"
+          tier: reference
+          excerpt: "Generally, the seasons in liturgical western Christianity are Advent, Christmas, Ordinary Time (Time after Epiphany), Lent, Easter, and Ordinary Time (Time after Pentecost)."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/concerning-service-church"
+          title: "Concerning the Service of the Church — Book of Common Prayer (1662), The Church of England"
+          tier: official
+          excerpt: "all Priests and Deacons are to say daily the Morning and Evening Prayer either privately or openly"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Богослужения»"
+          tier: reference
+          excerpt: "Основное богослужение проходит в воскресенье; в течение остальной недели, как правило, также имеют место различные собрания."
+          accessed: "2026-10-09"
+        - url: "https://baptist-volga.ru/verouchenie-baptistov"
+          title: "Вероучение ЕХБ 1985 года, разд. 17 «О воскресном дне»"
+          tier: official
+          excerpt: "днем, посвященным изучению Слова Божия, пребыванию в молитве, участию в богослужениях"
+          accessed: "2026-10-09"
+        - url: "https://ru.wikipedia.org/wiki/Евангельские_христиане-баптисты"
+          title: "Евангельские христиане-баптисты — Википедия (ru), раздел «Основные праздники»"
+          tier: reference
+          excerpt: "Главными праздниками евангельских христиан-баптистов, как и остальных христиан, являются Пасха и Рождество Христово."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §537: праздники и посты"
+          tier: official
+          excerpt: "следует соблюдать, кроме воскресного дня, и другие, во славу Божию и в честь Пресвятой Богородицы и прочих святых установленные праздники и посты"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.9:15&r"
+          title: "Мф. 9:15 — Синодальный перевод"
+          tier: official
+          excerpt: "Но придут дни, когда отнимется у них жених, и тогда будут поститься."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Однодневные посты совершают в среды и пятницы (кроме Сплошных седмиц)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/dvunadesyatye-prazdniki"
+          title: "Двунадесятые праздники — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "12-ть важнейших"
+          accessed: "2026-10-09"
+    lds:
+      teaching: "Святые последних дней молятся утром и вечером лично и всей семьёй. Каждое воскресенье проходит причастное собрание. Раз в месяц, в воскресенье, они постятся: два приёма пищи подряд обходятся без еды и воды, а сэкономленные деньги отдают нуждающимся. Раз в неделю семья проводит «домашний вечер» (home evening), и Церковь оставляет понедельничные вечера свободными от собраний. Пасха для них — праздник Воскресения Христа."
+      difference: "Святые последних дней молятся утром и вечером, собираются на причастное собрание в воскресенье и раз в месяц постятся, а Церковь совершает суточный круг служб, постится по средам и пятницам и в четыре многодневных поста и празднует Пасху как главный праздник года."
+      response: "Церковь тоже молится утром и вечером, а семейная молитва в ней не заменяет личную, а лишь дополняет её («Азбука веры»). Воскресенье Церковь посвящает Воскресению Христа (катехизис, §535), а пост держит чаще, чем раз в месяц: по средам и пятницам и в четыре многодневных поста."
+      proof:
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), раздел «Personal Prayer», Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "At least every morning and every night, we should find a place that is free from distractions and kneel in humility"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/prayer?lang=eng"
+          title: "Prayer — Topics and Questions (2023), раздел «Family Prayer», Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Every morning and every evening, we should kneel together in humility"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament-meeting?lang=eng"
+          title: "Sacrament Meeting — Topics and Questions (2025), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "A sacrament meeting is a weekly worship service in The Church of Jesus Christ of Latter-day Saints"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament-meeting?lang=eng"
+          title: "Sacrament Meeting — Topics and Questions (2025), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Sacrament meetings are typically held on Sundays in Church meetinghouses around the world."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings?lang=eng"
+          title: "Fasting and Fast Offerings — Topics and Questions, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "In the Church today, one Sabbath day each month is set aside for the purpose of fasting."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/fasting-and-fast-offerings?lang=eng"
+          title: "Fasting and Fast Offerings — Topics and Questions, Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Members of the Church go without food and water for two consecutive meals in a 24-hour period"
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/home-evening?lang=eng"
+          title: "Home Evening — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Home evening is a designated weekly time for individuals and families to study the gospel and spend time together."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/home-evening?lang=eng"
+          title: "Home Evening — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "Church leaders should keep Monday evenings free from Church meetings and activities."
+          accessed: "2026-10-09"
+        - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/easter?lang=eng"
+          title: "Easter — Topics and Questions (2023), Церковь Иисуса Христа Святых последних дней"
+          tier: official
+          excerpt: "For Latter-day Saints, Easter is a celebration of the promise of eternal life through Christ."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "минимально – утренние и вечерние"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/molitvennoe-pravilo"
+          title: "Молитвенное правило — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "и поэтому не заменяет молитву индивидуальную, а лишь дополняет её"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Однодневные посты совершают в среды и пятницы (кроме Сплошных седмиц)"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Четыре многодневных поста положены Церковью перед великими праздниками."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/paskha"
+          title: "Пасха — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "главный церковный Праздник Светлого Воскресения Христова"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+          title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+          tier: reference
+          excerpt: "Он включает в себя восемь отдельных служб: вечерню, повечерие, полунощницу, утреню, 1-й час, 3-й час, 6-й час и 9-й час"
+          accessed: "2026-10-09"
+    adventism:
+      teaching: "Главный день недели у адвентистов — суббота, седьмой день: от заката в пятницу до заката в субботу. Утром собираются на субботнюю школу (изучение Библии в группах) и богослужение с проповедью; в течение недели проходит молитвенное собрание. Дома ежедневно изучают Библию и молятся. Вечерю Господню обычно совершают раз в квартал, с омовением ног."
+      difference: "Адвентисты чтят субботу, седьмой день недели, как день покоя и богослужения, а Церковь празднует воскресенье, день Воскресения Христова, и хранит годовой круг праздников и постов."
+      response: "Церковь празднует воскресенье со времени воскресения Христа (катехизис, §535): Господь воскрес «на рассвете первого дня недели» (Мф 28:1), а по книге Деяний ученики собирались в этот день для преломления хлеба (Деян 20:7)."
+      proof:
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Sabbathkeeping"
+          tier: official
+          excerpt: "The seventh day of the week, from sunset Friday to sunset Saturday"
+          accessed: "2026-10-09"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 20 «Суббота» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "с вечера до вечера, от захода до захода солнца"
+          accessed: "2026-10-09"
+        - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+          title: "28 основ вероучения Церкви адвентистов седьмого дня, п. 20 «Суббота» — «Полное изложение доктрин» (mosadvent.ru)"
+          tier: official
+          excerpt: "дня особого поклонения и служения"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Sabbath School"
+          tier: official
+          excerpt: "The Sabbath School, one of our most important services, is the church at study"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Worship Service"
+          tier: official
+          excerpt: "The Sabbath worship service is the most important church meeting"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Worship Service, «Times of Meetings» (еженедельное молитвенное собрание)"
+          tier: official
+          excerpt: "A midweek meeting combined with the weekly prayer meeting."
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), «Standards of Christian Living»: Bible Study and Prayer"
+          tier: official
+          excerpt: "We must maintain the habit of devotional Bible study and prayer"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Communion Service"
+          tier: official
+          excerpt: "The communion service customarily is celebrated once per quarter"
+          accessed: "2026-10-09"
+        - url: "https://gc.adventist.org/wp-content/uploads/2025/10/Seventh-day_Adventist_Church_Manual-2025-10-13.pdf"
+          title: "Seventh-day Adventist Church Manual (Генеральная конференция АСД, PDF), гл. 11: Communion Service"
+          tier: official
+          excerpt: "The service includes the ordinance of foot-washing followed by the Lord’s Supper"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §535: воскресный день"
+          tier: official
+          excerpt: "День воскресный празднуется со времени воскресения Христа."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Mt.28:1&r"
+          title: "Мф. 28:1 — Синодальный перевод"
+          tier: official
+          excerpt: "По прошествии же субботы, на рассвете первого дня недели"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Act.20:7&r"
+          title: "Деян. 20:7 — Синодальный перевод"
+          tier: official
+          excerpt: "В первый же день недели, когда ученики собрались для преломления хлеба"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/bogosluzhebnye-krugi"
+          title: "Богослужебные круги — энциклопедия «Азбука веры», раздел «Годовой круг богослужения»"
+          tier: reference
+          excerpt: "его составляют праздники и памяти святых с фиксированными датами"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/posty-pravoslavnoj-cerkvi"
+          title: "Посты Православной Церкви — энциклопедия «Азбука веры», раздел «Посты Православной Церкви»"
+          tier: reference
+          excerpt: "Четыре многодневных поста положены Церковью перед великими праздниками."
+          accessed: "2026-10-09"
+    jw:
+      teaching: "Свидетели Иеговы собираются два раза в неделю: в будний день и в выходной. Раз в год, 14 нисана после захода солнца, они проводят Вечерю воспоминания смерти Христа. Рождество и Пасху не отмечают: по их учению, эти праздники изначально связаны с поклонением другим богам. Дни рождения не празднуют, потому что считают это неугодным Богу."
+      difference: "Свидетели Иеговы собираются дважды в неделю, раз в год отмечают Вечерю воспоминания и не празднуют Рождество и Пасху, а Церковь совершает Литургию, держит суточный, седмичный и годовой круги служб и празднует Рождество Христово и Пасху."
+      response: "Церковь празднует Рождество Христово как память о рождении Спасителя — «ибо ныне родился вам в городе Давидовом Спаситель» (Лк 2:11), а Пасху — как «праздников праздник и торжество торжеств» (свт. Григорий Богослов). Праздники и посты Церковь устанавливает «во славу Божию» (катехизис, §537)."
+      proof:
+        - url: "https://www.jw.org/ru/свидетели-иеговы/встречи/"
+          title: "О встречах Свидетелей Иеговы — jw.org, «Как проходят наши встречи?»"
+          tier: official
+          excerpt: "Два раза в неделю Свидетели Иеговы проводят встречи для поклонения Богу"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в будние дни»"
+          tier: official
+          excerpt: "Каждую неделю в Зале Царства проходит встреча «Наша христианская жизнь и служение»."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102014937"
+          title: "Встречи, которые побуждают «к любви и добрым делам» — книга «Организованы, чтобы исполнять волю Иеговы», гл. 7, wol.jw.org, раздел «Встреча в выходные дни»"
+          tier: official
+          excerpt: "Вторая часть встречи в выходные дни — изучение «Сторожевой башни»."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/1102005155"
+          title: "Вечеря воспоминания смерти Христа — событие, прославляющее Бога — wol.jw.org"
+          tier: official
+          excerpt: "Свидетели Иеговы отмечают Вечерю воспоминания один раз в год, 14 нисана, после захода солнца."
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/502019300?q=%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8"
+          title: "«Почему Свидетели Иеговы не отмечают некоторые праздники?» — wol.jw.org"
+          tier: official
+          excerpt: "Свидетели Иеговы не отмечают Рождество, Пасху и Первое мая"
+          accessed: "2026-10-09"
+        - url: "https://wol.jw.org/ru/wol/d/r2/lp-u/502019300?q=%D0%BF%D1%80%D0%B0%D0%B7%D0%B4%D0%BD%D0%B8%D0%BA%D0%B8"
+          title: "«Почему Свидетели Иеговы не отмечают некоторые праздники?» — wol.jw.org"
+          tier: official
+          excerpt: "так как изначально эти праздники были связаны с поклонением другим богам, а не Иегове"
+          accessed: "2026-10-09"
+        - url: "https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/дни-рождения/"
+          title: "«Почему Свидетели Иеговы не празднуют дни рождения?» — Часто задаваемые вопросы, jw.org"
+          tier: official
+          excerpt: "Свидетели Иеговы не празднуют дни рождения, поскольку считают, что это неугодно Богу."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/biblia/?Lk.2:11&r"
+          title: "Лк. 2:11 — Синодальный перевод"
+          tier: official
+          excerpt: "ибо ныне родился вам в городе Давидовом Спаситель"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/paskha"
+          title: "Пасха — энциклопедия «Азбука веры», вводный абзац (цитата свт. Григория Богослова)"
+          tier: reference
+          excerpt: "«праздников праздник и торжество торжеств»"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6"
+          title: "Свт. Филарет Московский. Пространный катехизис, §537: праздники и посты"
+          tier: official
+          excerpt: "следует соблюдать, кроме воскресного дня, и другие, во славу Божию и в честь Пресвятой Богородицы и прочих святых установленные праздники и посты"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+          title: "Свт. Филарет. Пространный катехизис, §§314–315: Причащение за Литургией"
+          tier: official
+          excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения."
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/sutochnyj-krug-bogosluzheniya"
+          title: "Суточный круг богослужения — энциклопедия «Азбука веры» (очерк А. С. Кашкина)"
+          tier: reference
+          excerpt: "Церковное богослужение циклично, и литургисты говорят о трех кругах богослужения: суточном, седмичном и годовом"
+          accessed: "2026-10-09"
+        - url: "https://azbyka.ru/dvunadesyatye-prazdniki"
+          title: "Двунадесятые праздники — энциклопедия «Азбука веры»"
+          tier: reference
+          excerpt: "12-ть важнейших"
+          accessed: "2026-10-09"

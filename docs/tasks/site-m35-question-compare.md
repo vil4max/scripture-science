@@ -3,8 +3,8 @@
 State: the question-first comparison, the Creed-based revision and the page
 «Богослужение и молитва» with the prayer texts are published (2026-10-09,
 owner: «Пуш»); the question on the daily, weekly and yearly rhythm and two
-further prayers are being sourced, and publishing them waits for the owner's
-word
+further prayers («Царю Небесный», the Jesus Prayer) followed the same day
+(owner: «Да»)
 
 ## Authorization and scope
 
@@ -127,3 +127,10 @@ same way (none missing); `npm run verify` — 168 Node tests, 24 pages.
 The page «Богослужение и молитва»: 375 px without horizontal overflow; the old
 «Молитвы» address opens the same prayer (checked with Psalm 50 and «Достойно
 есть»).
+
+2026-10-09, the rhythm question and two prayers: 110 + 15 excerpts checked as
+exact substrings of the fetched pages, the Church Slavonic texts against the
+prayer book with stress marks removed; `npm run verify` — 169 Node tests,
+25 pages; 375 px without overflow. Not included for lack of a source: the
+length of Great Lent, a Pentecostal weekly order, Adventist yearly feasts,
+Christmas for the Latter-day Saints.

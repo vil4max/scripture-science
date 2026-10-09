@@ -18,9 +18,9 @@ differences, comparing Orthodoxy with one chosen religion in three blocks, with
 «Этот вопрос у всех», neutral difference lines, the Theotokos under article 3,
 and a page «Богослужение и молитва» (services, the daily, weekly and yearly
 rhythm, prayer at home, the Psalter, then the full prayer texts). Published on
-2026-10-09 (owner: «Пуш») without the daily, weekly and yearly rhythm and two
-further prayers, which are being sourced; publishing them waits for the
-owner's word.
+2026-10-09 (owner: «Пуш»); the daily, weekly and yearly rhythm and two further
+prayers («Царю Небесный», the Jesus Prayer) followed the same day (owner:
+«Да»).
 
 **M34 — reading for a newcomer** (`docs/tasks/site-m34-newcomer-reading.md`,
 2026-10-09): a readable glossary with inline hints, a «С чего начать» page,
