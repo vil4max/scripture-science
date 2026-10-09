@@ -7,12 +7,20 @@ task's state.
 
 ## In progress
 
-**M35 — question-first comparison** (`docs/tasks/site-m35-question-compare.md`,
-2026-10-09): the comparison page shows Orthodoxy and one chosen religion
-question by question, with a visible difference line, folded Orthodox answer
-and sources, and «Этот вопрос у всех»; every difference line names the
-difference. Implemented and verified; the owner authorized committing and
-pushing on 2026-10-09.
+**Three-part reading route** (`docs/DECISIONS.md`, 2026-10-09): one route —
+«Основа», «Религии мира», «Сравнение» — in the menu, on the homepage and in a
+route bar on each page; «Сходства и различия» forwards to the comparison.
+Published on 2026-10-09 (owner: «Пуш»).
+
+**M35 — Creed-based comparison** (`docs/tasks/site-m35-question-compare.md`,
+2026-10-09): «Символ веры и различия» goes through the Creed and then the other
+differences, comparing Orthodoxy with one chosen religion in three blocks, with
+«Этот вопрос у всех», neutral difference lines, the Theotokos under article 3,
+and a page «Богослужение и молитва» (services, the daily, weekly and yearly
+rhythm, prayer at home, the Psalter, then the full prayer texts). Published on
+2026-10-09 (owner: «Пуш») without the daily, weekly and yearly rhythm and two
+further prayers, which are being sourced; publishing them waits for the
+owner's word.
 
 **M34 — reading for a newcomer** (`docs/tasks/site-m34-newcomer-reading.md`,
 2026-10-09): a readable glossary with inline hints, a «С чего начать» page,

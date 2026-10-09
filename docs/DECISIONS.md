@@ -351,7 +351,37 @@ religions. The comparison page is replaced (owner's choice): each topic is a
 question in three separate blocks: the Orthodox teaching, the chosen
 tradition's teaching, then where they part together with the highlighted
 Orthodox answer; only the analysis links and sources fold (owner, after
-reading the first versions). «Этот вопрос у всех» lists one difference line
+reading the first versions). The Creed, the short confession of the Orthodox
+faith, is the framework of the page, now «Символ веры и различия»: part one
+goes through the Creed article by article with what each religion says and
+the Orthodox view on the divergence; part two collects the other differences.
+Difference lines state the difference neutrally; evaluation stays in the
+Orthodox response (owner). The Theotokos is compared within the Creed
+(article 3). Worship and prayer have their own page, «Богослужение и
+молитва» (owner): common worship, the daily, weekly and yearly rhythm (Islam's
+five prayers, the Jewish three, the Orthodox daily cycle), prayer at home
+(morning and evening prayers, akathists) and the Psalter in the same three
+blocks, followed by the full Orthodox prayer texts, which moved there from a
+separate «Молитвы» page (its address forwards). «Этот вопрос у всех» lists one difference line
 per tradition. Jehovah's Witnesses is the default choice. This supersedes the
 two selectable columns of EDITORIAL.md principle 8 and the column slots of
 site-m14-selection.md.
+
+## 2026-10-09 — Three-part reading route
+
+On the iPhone the owner found the menu confusing, without a roadmap, and the
+comparison present twice. The menu, the homepage and a route bar on every
+route page now share one route in three numbered parts (`src/lib/route.ts`):
+«Основа» (С чего начать, Православная вера, Священное Писание),
+«Религии мира» (Знакомство, История, В цифрах, На карте) and «Сравнение»
+(Символ веры и различия, Богослужение и молитва, with each religion's page
+under them); the reference
+pages stay apart at the bottom. The Orthodox foundation comes first because
+the site reads every religion from it. «Сходства и различия» repeated the
+comparison's questions and the religions page's connections, so its address
+forwards to the same question on «Символ веры и различия». Phones and tablets
+up to 999 px open the route from one menu button. Within «Религии мира» the
+order of «Progressive reading and demographic grouping» stays; the shared
+features it asked for remain on the religions page («Что связывает эти
+традиции»), the reasons for differences on «Как читать сравнение» and in the
+comparison.
