@@ -7,6 +7,13 @@ task's state.
 
 ## In progress
 
+**M35 — question-first comparison** (`docs/tasks/site-m35-question-compare.md`,
+2026-10-09): the comparison page shows Orthodoxy and one chosen religion
+question by question, with a visible difference line, folded Orthodox answer
+and sources, and «Этот вопрос у всех»; every difference line names the
+difference. Implemented and verified; the owner authorized committing and
+pushing on 2026-10-09.
+
 **M34 — reading for a newcomer** (`docs/tasks/site-m34-newcomer-reading.md`,
 2026-10-09): a readable glossary with inline hints, a «С чего начать» page,
 familiar years beside Creation-era dates, explained classification labels, and

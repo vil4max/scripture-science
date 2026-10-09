@@ -16,15 +16,15 @@ test('question search handles Russian inflections, case, punctuation and multipl
   assert.ok(!matchesSearch('Учение о Троице', '<script>'));
 });
 
-test('reading links preserve all columns, their placement and the destination anchor', () => {
-  const current = 'https://example.test/scripture-science/compare/?t=orthodoxy,jw,islam&slots=orthodoxy,islam,jw#topic-god';
-  const href = hrefWithReadingContext('/scripture-science/traditions/jw/#trinity', ['orthodoxy', 'jw', 'islam'], current);
+test('reading links carry the chosen tradition and the destination anchor and drop old column slots', () => {
+  const current = 'https://example.test/scripture-science/compare/?t=orthodoxy,islam&slots=orthodoxy,islam,jw#topic-god';
+  const href = hrefWithReadingContext('/scripture-science/traditions/islam/#crucifixion', ['orthodoxy', 'islam'], current);
   const profile = new URL(href, current);
-  assert.equal(profile.searchParams.get('slots'), 'orthodoxy,islam,jw');
-  assert.equal(profile.hash, '#trinity');
-  const back = new URL(hrefWithReadingContext('/scripture-science/compare/?t=orthodoxy,jw#topic-god', ['orthodoxy', 'jw', 'islam'], profile.href), current);
-  assert.equal(back.searchParams.get('t'), 'orthodoxy,jw,islam');
-  assert.equal(back.searchParams.get('slots'), 'orthodoxy,islam,jw');
+  assert.equal(profile.searchParams.get('t'), 'orthodoxy,islam');
+  assert.equal(profile.searchParams.get('slots'), null);
+  assert.equal(profile.hash, '#crucifixion');
+  const back = new URL(hrefWithReadingContext('/scripture-science/compare/?t=orthodoxy,jw#topic-god', ['orthodoxy', 'islam'], profile.href), current);
+  assert.equal(back.searchParams.get('t'), 'orthodoxy,islam');
   assert.equal(back.hash, '#topic-god');
   assert.ok(!hrefWithReadingContext('/compare/?slots=old', ['orthodoxy', 'jw'], 'https://example.test/reading/').includes('slots='));
 });

@@ -26,32 +26,25 @@ test('105 separately sourced assessments are complete and malformed coverage fai
     assert.equal(record.assessmentAuthority, 'editorial-application');
   }
 });
-test('server output keeps a fixed Orthodox foundation column in every comparison row', () => {
-  const blocks = [...html.matchAll(/<article class="block"[^>]+>/g)].map(m => m[0]);
-  assert.equal(blocks.length, 120);
-  assert.equal(blocks.filter(b => !/\bhidden\b/.test(b)).length, 45);
-  for (const block of blocks) {
-    const id = block.match(/data-trad="([^"]+)"/)![1];
-    assert.equal(/\bhidden\b/.test(block), !DEFAULT_SELECTION.includes(id));
-    if (id === 'orthodoxy') {
-      assert.match(block, /grid-column:1/);
-      assert.match(block, /data-foundation-column/);
-    }
+test('server output opens every question with the Orthodox answer, then one chosen tradition', () => {
+  const questions = [...html.matchAll(/<section class="question"[^>]*id="topic-([^"]+)"[\s\S]*?<\/section>/g)];
+  assert.deepEqual(questions.map(m => m[1]), [...TOPIC_ORDER]);
+  for (const [question] of questions) {
+    const sides = [...question.matchAll(/<div class="side [^"]+"[^>]*>/g)].map(m => m[0]);
+    assert.equal(sides.length, 8);
+    assert.match(sides[0], /data-trad="orthodoxy"/);
+    assert.match(sides[0], /data-foundation-column/);
+    const visible = sides.slice(1).filter(side => !/\bhidden\b/.test(side));
+    assert.deepEqual(visible.map(side => side.match(/data-trad="([^"]+)"/)![1]), [DEFAULT_SELECTION[1]]);
+    assert.equal((question.match(/data-pick-row=/g) ?? []).length, 7, 'one line per tradition in «Этот вопрос у всех»');
+    const fold = question.indexOf('<details class="more"');
+    assert.ok(question.indexOf('class="difference"') < fold, 'the difference is visible before the fold');
+    assert.ok(question.indexOf('class="answer"') < fold, 'the Orthodox answer is visible before the fold');
   }
-  const factCells = [...html.matchAll(/<div class="cell"[^>]+>/g)].map(m => m[0]);
-  assert.equal(factCells.filter(cell => /data-trad="orthodoxy"/.test(cell)).length, 5);
-  assert.ok(factCells.filter(cell => /data-trad="orthodoxy"/.test(cell)).every(cell => /data-foundation-column/.test(cell)));
-  assert.match(html, /class="colcell foundation" data-foundation-column/);
-  const selects = [...html.matchAll(/<select[^>]*data-slot="(\d)"/g)].map(m => m[1]);
-  assert.deepEqual(selects, ['1', '2']);
-  assert.ok(!html.includes('Очистить колонку'));
-  assert.ok(!html.includes('<option value="">'));
-  assert.match(html, /aria-labelledby="comparison-contents-title"/);
+  assert.equal((html.match(/data-pick="/g) ?? []).length, 7);
   for (const topic of TOPIC_ORDER) assert.ok(html.includes(`href="#topic-${topic}"`), topic);
-  assert.match(html, /<header class="views-heading"/);
-  assert.ok(html.indexOf('id="views"') < html.indexOf('data-comparison-slots'));
-  assert.ok(!html.includes('Итоговый раздел'));
-  assert.ok(!html.includes('class="section-links"'));
+  assert.ok(!html.includes('data-comparison-slots') && !html.includes('data-slot='));
+  assert.ok(html.indexOf('id="views"') < html.indexOf('data-question-compare'));
   assert.match(html, /data-back-to-top/);
 });
 test('legacy pair destinations preserve parameters and resolve published anchors', () => {

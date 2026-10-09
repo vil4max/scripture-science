@@ -251,12 +251,6 @@ const family = getFamilyByTradition(tradition.id);
     }
   });
   for (const button of buttons) {
-    button.addEventListener('click', () => {
-      const { ids, refused } = toggleSelection(getSelection(), button.dataset.addCompare ?? '');
-      if (refused) {
-        button.textContent = 'Уже три — снимите одну';
-        window.setTimeout(() => (button.textContent = '+ В сравнение'), 2500);
-      } else setSelection(ids);
-    });
+    button.addEventListener('click', () => setSelection(toggleSelection(getSelection(), button.dataset.addCompare ?? '')));
   }
 </script>

@@ -100,6 +100,11 @@ const unityMark = z.object({
 const matrixPosition = z.object({
   topic: z.enum(TOPIC_ORDER),
   summary: z.string(),
+  // The Orthodox answer to the topic's question in one or two plain
+  // sentences, opening each question of the comparison; it paraphrases
+  // `summary`. Required for Orthodoxy: src/components/QuestionCompare.astro
+  // fails the build without it.
+  short: z.string().min(20).max(240).optional(),
   doctrine: z.object({ authority: z.string(), sections: z.array(z.object({ title: z.string(), text: z.string() })) }).optional(),
   quote: sourcedQuote.optional(),
   scripture: scriptureQuote.optional(),

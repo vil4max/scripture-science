@@ -83,6 +83,26 @@ export const TOPIC_TITLES_RU: Record<TopicId, string> = {
   rules: 'Нравственная жизнь и общество',
 };
 
+// Each topic as the question a reader asks, heading the comparison
+// (docs/tasks/site-m35-question-compare.md).
+export const TOPIC_QUESTIONS_RU: Record<TopicId, string> = {
+  god: 'Кто такой Бог?',
+  'name-of-god': 'Как называть Бога?',
+  jesus: 'Кто такой Иисус Христос?',
+  spirit: 'Кто такой Святой Дух?',
+  scripture: 'Какие книги священны?',
+  authority: 'Как правильно понимать Писание?',
+  salvation: 'Как человек спасается?',
+  afterlife: 'Что происходит после смерти?',
+  'end-times': 'Чем закончится история мира?',
+  worship: 'Как молятся и что такое Таинства?',
+  images: 'Можно ли почитать иконы, Богородицу и святых?',
+  'holy-days': 'Какие дни святы?',
+  fasting: 'Зачем и как постятся?',
+  organisation: 'Что такое Церковь и кто в ней служит?',
+  rules: 'Как жить: нравственность и общество',
+};
+
 /**
  * docs/tasks/site-m3-matrix-content.md: every matrix file must carry all
  * comparison topics, in this exact order. Throwing here (rather than sorting

@@ -29,5 +29,5 @@ export async function analysisCardsForTopic(tradition: string, topic: string) {
   return curated.data.groups
     .flatMap((group) => group.cards)
     .filter((card) => card.topic === topic)
-    .map((card) => ({ id: card.id, title: card.title, href: profileHref(tradition, card.id) }));
+    .map((card) => ({ id: card.id, title: card.title, short: card.short, href: profileHref(tradition, card.id) }));
 }

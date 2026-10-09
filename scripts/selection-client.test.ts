@@ -2,7 +2,6 @@
 import { test } from 'node:test';
 // @ts-expect-error - node types are not installed.
 import assert from 'node:assert/strict';
-import { comparisonSlots } from '../src/lib/comparisonSlots.ts';
 let instance = 0;
 
 test('browser state migrates legacy storage, survives reload and supports blocked storage', async () => {
@@ -22,22 +21,21 @@ test('browser state migrates legacy storage, survives reload and supports blocke
   try {
     globals.localStorage = { getItem: () => stored, setItem: (_key: string, value: string) => { stored = value; } };
     let client = await load();
-    assert.deepEqual(client.getSelection(), ['orthodoxy', 'jw', 'catholicism']);
-    assert.equal(stored, 'orthodoxy,jw,catholicism');
+    assert.deepEqual(client.getSelection(), ['orthodoxy', 'jw']);
+    assert.equal(stored, 'orthodoxy,jw');
     assert.equal(url.hash, '#topic-god'); assert.equal(url.searchParams.get('extra'), 'keep');
-    assert.ok(links[0].href.includes('t=orthodoxy%2Cjw%2Ccatholicism'));
-    url.searchParams.set('slots', 'orthodoxy,,jw');
-    client.setSelection(['orthodoxy', 'jw']);
+    assert.ok(links[0].href.includes('t=orthodoxy%2Cjw'));
+    client.setSelection(['orthodoxy', 'islam']);
     client = await load();
-    assert.deepEqual(comparisonSlots(client.getSelection(), url.searchParams.get('slots')), ['orthodoxy', 'catholicism', 'jw']);
+    assert.deepEqual(client.getSelection(), ['orthodoxy', 'islam']);
     url = new URL('https://example.test/scripture-science/compare/?t=judaism,islam#question-trinity');
     client = await load();
-    assert.deepEqual(client.getSelection(), ['orthodoxy', 'judaism', 'islam']);
+    assert.deepEqual(client.getSelection(), ['orthodoxy', 'judaism']);
     assert.equal(url.hash, '#question-trinity');
     globals.localStorage = { getItem() { throw Error('blocked'); }, setItem() { throw Error('blocked'); } };
     url = new URL('https://example.test/scripture-science/compare/');
     client = await load();
-    assert.deepEqual(client.getSelection(), ['orthodoxy', 'catholicism', 'jw']);
+    assert.deepEqual(client.getSelection(), ['orthodoxy', 'jw']);
     client.setSelection([]); assert.equal(url.searchParams.get('t'), 'orthodoxy');
     url = new URL('https://example.test/scripture-science/compare/?t=&slots=orthodoxy,,');
     client = await load(); assert.deepEqual(client.getSelection(), ['orthodoxy']);

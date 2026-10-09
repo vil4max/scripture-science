@@ -341,3 +341,17 @@ years carry the same year before the Nativity beside them, extending the date
 notation above without replacing it. The glossary stays in the reference group
 of the navigation (owner, 2026-09-26); «С чего начать» joins the reading
 sections as their first step.
+
+
+## 2026-10-09 — Question-first comparison of Orthodoxy and one religion
+
+The owner found three columns hard to read and asked to compare Orthodoxy with
+one chosen religion, question by question, and to see one question across all
+religions. The comparison page is replaced (owner's choice): each topic is a
+question, the Orthodox answer comes first, then the chosen tradition's own
+teaching, a visible one-line difference and the highlighted Orthodox answer;
+only the analysis links and sources fold (owner, after reading the first
+version). «Этот вопрос у всех» lists one difference line
+per tradition. Jehovah's Witnesses is the default choice. This supersedes the
+two selectable columns of EDITORIAL.md principle 8 and the column slots of
+site-m14-selection.md.

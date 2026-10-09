@@ -1,0 +1,249 @@
+---
+// Question-first comparison (docs/tasks/site-m35-question-compare.md): each
+// topic is a question; the Orthodox teaching comes first, then the one chosen
+// tradition's own teaching, «В чём разница» and the Orthodox answer; only the
+// analysis links and sources fold. «Этот вопрос у всех» lists every tradition's
+// difference on the same question in one line each.
+import type { CollectionEntry } from 'astro:content';
+import { analysisCardsForTopic, profileHref } from '../lib/analysis';
+import { orthodoxAssessment } from '../lib/orthodox';
+import { withBase } from '../lib/paths';
+import { DEFAULT_SELECTION } from '../lib/selection';
+import { positionSummaryText, TOPIC_GROUPS, TOPIC_ORDER, TOPIC_QUESTIONS_RU } from '../lib/rules';
+
+interface Props {
+  traditions: CollectionEntry<'matrix'>[];
+  colorById: Map<string, string>;
+}
+
+const { traditions, colorById } = Astro.props;
+const SHORT_NAMES: Record<string, string> = {
+  judaism: 'Иудаизм', catholicism: 'Католичество', islam: 'Ислам', protestantism: 'Протестантизм',
+  lds: 'Святые последних дней', adventism: 'Адвентисты', jw: 'Свидетели Иеговы',
+};
+// The chosen tradition's answer to the question, labelled as its teaching
+// (owner, 2026-10-09: the answer to the question, not a self-description).
+const TEACHING_LABELS: Record<string, string> = {
+  judaism: 'Учение иудаизма', catholicism: 'Учение Католической Церкви', islam: 'Учение ислама',
+  protestantism: 'Учение протестантов', lds: 'Учение Святых последних дней', adventism: 'Учение адвентистов',
+  jw: 'Учение Свидетелей Иеговы',
+};
+const chosenByDefault = DEFAULT_SELECTION[1];
+const orthodoxy = traditions.find((tradition) => tradition.id === 'orthodoxy')!;
+const others = traditions.filter((tradition) => tradition.id !== 'orthodoxy');
+const color = (id: string) => `var(${colorById.get(id) ?? '--t-other'})`;
+
+const questions = await Promise.all(TOPIC_ORDER.map(async (topic, index) => {
+  const foundation = orthodoxy.data.positions.find((position) => position.topic === topic)!;
+  if (!foundation.short) throw new Error(`Orthodox position without a short answer: ${topic}`);
+  const sides = await Promise.all(others.map(async (tradition) => {
+    const position = tradition.data.positions.find((item) => item.topic === topic)!;
+    const record = orthodoxAssessment(tradition.id, topic);
+    if (!record) throw new Error(`Missing assessment: ${tradition.id}/${topic}`);
+    return { tradition, position, record, cards: await analysisCardsForTopic(tradition.id, topic) };
+  }));
+  return { topic, number: index + 1, foundation, sides };
+}));
+---
+<div class="qc" data-comparison data-question-compare data-view="one" data-chosen={chosenByDefault}>
+  <div class="qc-bar">
+    <div class="picker" role="group" aria-label="С какой религией сравнить">
+      <span class="picker-label">Православие и</span>
+      {others.map((tradition) => <button type="button" class="pick" data-pick={tradition.id} aria-pressed={tradition.id === chosenByDefault ? 'true' : 'false'}>
+        <span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[tradition.id] ?? tradition.data.name}
+      </button>)}
+    </div>
+  </div>
+  <div class="views" role="group" aria-label="Вид сравнения">
+    <button type="button" class="view" data-view-button="one" aria-pressed="true">Православие и одна религия</button>
+    <button type="button" class="view" data-view-button="all" aria-pressed="false">Этот вопрос у всех</button>
+  </div>
+
+  <div class="qc-layout">
+    <details class="qc-toc" open>
+      <summary>Вопросы</summary>
+      <nav aria-label="Вопросы сравнения">
+        {TOPIC_GROUPS.map((group) => <div class="toc-group">
+          <p class="toc-title"><a href={`#group-${group.id}`}>{group.title}</a></p>
+          <ol>{group.topics.map((topic) => <li><a href={`#topic-${topic}`}>{TOPIC_QUESTIONS_RU[topic]}</a></li>)}</ol>
+        </div>)}
+      </nav>
+    </details>
+
+    <div class="qc-body">
+      {TOPIC_GROUPS.map((group) => <>
+        <h2 class="qc-group" id={`group-${group.id}`}>{group.title}</h2>
+        {questions.filter((question) => group.topics.includes(question.topic)).map((question) => <section class="question" id={`topic-${question.topic}`} aria-labelledby={`question-title-${question.topic}`}>
+          <p class="q-meta">Вопрос {question.number} из {TOPIC_ORDER.length}</p>
+          <h3 id={`question-title-${question.topic}`}>{TOPIC_QUESTIONS_RU[question.topic]}</h3>
+
+          <div class="side orthodox" data-trad="orthodoxy" data-foundation-column>
+            <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Православное учение</p>
+            <p class="thesis">{question.foundation.short}</p>
+            <p class="foundation-link"><a href={profileHref('orthodoxy', `topic-${question.topic}`)} data-carry-selection>Обоснование →</a></p>
+          </div>
+
+          {question.sides.map(({ tradition, position, record, cards }) => <div class="side tradition" data-trad={tradition.id} data-assessment={record.id} hidden={tradition.id !== chosenByDefault} style={`--accent:${color(tradition.id)}`}>
+            <p class="who"><span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{TEACHING_LABELS[tradition.id] ?? `Учение: ${tradition.data.name}`}</p>
+            <p class="thesis">{positionSummaryText(position) ?? 'Источник уточняется.'}</p>
+            <p class="difference"><strong>В чём разница.</strong> {record.difference}</p>
+            <div class="answer">
+              <p class="label">Православный ответ</p>
+              <p>{record.response}</p>
+            </div>
+            <details class="more">
+              <summary>Разбор по вопросам и источники</summary>
+              <p class="analysis">{cards.length > 0
+                ? <>Разбор по вопросам: {cards.map((card, index) => <>{index > 0 && ' · '}<a href={card.href} data-carry-selection>{card.title}</a></>)}</>
+                : <a href={profileHref(tradition.id)} data-carry-selection>Подробный разбор традиции →</a>}</p>
+              <p class="label">Источники</p>
+              <ul class="sources">
+                {position.proof.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}
+                {record.proof.map((source) => <li><a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a></li>)}
+              </ul>
+              <p class="all-sources"><a href={withBase(`sources/#sources-${question.topic}`)}>Все источники по теме</a></p>
+            </details>
+          </div>)}
+
+          <ol class="all-list" aria-label={`${TOPIC_QUESTIONS_RU[question.topic]} — все религии`}>
+            {question.sides.map(({ tradition, record }) => <li style={`--accent:${color(tradition.id)}`}>
+              <button type="button" class="row-pick" data-pick-row={tradition.id}>
+                <span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[tradition.id] ?? tradition.data.name}
+              </button>
+              <span class="row-text">{record.difference}</span>
+            </li>)}
+          </ol>
+        </section>)}
+      </>)}
+    </div>
+  </div>
+</div>
+
+<style>
+  /* minmax(0, 1fr): the horizontally scrolling chooser on phones must not
+     widen the page. */
+  .qc { display: grid; grid-template-columns: minmax(0, 1fr); gap: 16px; }
+  .qc-bar { position: sticky; top: 0; z-index: 15; margin: 0 -8px; padding: 10px 8px; background: var(--bg); border-bottom: 1px solid var(--line); }
+  .picker { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
+  .picker-label { flex: none; white-space: nowrap; font-weight: 700; margin-right: 4px; }
+  .pick, .view, .row-pick { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; min-height: 40px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .pick[aria-pressed='true'], .view[aria-pressed='true'] { border-color: var(--focus); color: var(--focus); font-weight: 700; box-shadow: inset 0 0 0 1px var(--focus); }
+  .views { display: flex; flex-wrap: wrap; gap: 8px; }
+  .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+
+  .qc-layout { display: grid; grid-template-columns: minmax(0, 1fr) 240px; gap: 32px; align-items: start; }
+  .qc-body { grid-column: 1; grid-row: 1; min-width: 0; display: grid; gap: 28px; }
+  .qc-toc { grid-column: 2; grid-row: 1; position: sticky; top: calc(var(--bar-h, 60px) + 16px); max-height: calc(100vh - var(--bar-h, 60px) - 32px); overflow-y: auto; border-left: 1px solid var(--line); padding-left: 16px; font-size: 14px; }
+  .qc-toc > summary { display: none; }
+  .toc-group + .toc-group { margin-top: 16px; }
+  .toc-title { margin: 0 0 6px; font-weight: 700; }
+  .qc-toc ol { margin: 0; padding-left: 18px; display: grid; gap: 4px; }
+  .qc-toc a { text-decoration: none; }
+  .qc-toc a:hover { text-decoration: underline; }
+
+  .qc-group { margin: 8px 0 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 24px; scroll-margin-top: calc(var(--bar-h, 60px) + 16px); }
+  .question { max-width: var(--measure); scroll-margin-top: calc(var(--bar-h, 60px) + 16px); display: grid; gap: 12px; }
+  .q-meta { margin: 0; color: var(--muted); font-size: 14px; }
+  .question h3 { margin: 0; font-size: 22px; }
+  .side { padding: 12px 16px; border: 1px solid var(--line); border-left: 4px solid var(--accent, var(--line)); border-radius: 6px; background: var(--surface); }
+  .side.orthodox { border-left-color: var(--t-orthodoxy); }
+  .side p { margin: 0 0 8px; line-height: 1.6; }
+  .side p:last-child { margin-bottom: 0; }
+  .who { display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: var(--muted); }
+  .thesis { font-size: 17px; }
+  .difference { padding-top: 8px; border-top: 1px solid var(--line); }
+  .foundation-link, .analysis, .all-sources { font-size: 15px; }
+  .label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-top: 8px !important; }
+  /* The Orthodox answer stays in view and stands out (owner, 2026-10-09);
+     only the analysis links and sources fold. */
+  .answer { margin: 0 0 8px; padding: 8px 12px; border-left: 3px solid var(--t-orthodoxy); background: color-mix(in srgb, var(--t-orthodoxy) 10%, var(--surface)); }
+  .answer .label { margin-top: 0 !important; color: var(--ink); }
+  .answer p:last-child { margin-bottom: 0; }
+  .more > summary { cursor: pointer; color: var(--focus); font-weight: 700; font-size: 15px; padding: 4px 0; }
+  .more[open] > summary { margin-bottom: 8px; }
+  .sources { margin: 0 0 8px; padding-left: 20px; font-size: 14px; }
+  .sources li + li { margin-top: 2px; }
+
+  .all-list { display: none; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
+  .all-list li { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 12px; align-items: start; padding: 10px 14px; border-left: 4px solid var(--accent); }
+  .all-list li + li { border-top: 1px solid var(--line); }
+  .row-pick { border-radius: 4px; padding: 4px 8px; min-height: 36px; font-weight: 700; text-align: left; justify-content: flex-start; }
+  .row-text { line-height: 1.55; }
+  .qc[data-view='all'] .side.tradition { display: none; }
+  .qc[data-view='all'] .all-list { display: block; }
+
+  @media (max-width: 760px) {
+    .qc-bar { margin: 0 -16px; padding: 8px 16px; }
+    .picker { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+    .picker::-webkit-scrollbar { display: none; }
+    .pick { flex: none; }
+    .qc-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
+    .qc-body { grid-row: 2; }
+    .qc-toc { grid-column: 1; grid-row: 1; position: static; max-height: none; border: 1px solid var(--line); border-radius: 6px; padding: 0 16px; background: var(--surface); }
+    .qc-toc > summary { display: list-item; cursor: pointer; padding: 12px 0; min-height: 48px; font-size: 16px; font-weight: 700; color: var(--focus); }
+    .qc-toc nav { padding-bottom: 12px; }
+    .qc-toc a { display: inline-block; padding: 6px 0; font-size: 16px; }
+    .all-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
+    .more > summary { min-height: 44px; display: list-item; padding: 10px 0; font-size: 16px; }
+    .sources { overflow-wrap: anywhere; }
+  }
+</style>
+
+<script>
+  import { getSelection, onSelection, setSelection } from '../lib/selection-client';
+
+  const root = document.querySelector<HTMLElement>('[data-question-compare]');
+  if (root) {
+    const picks = [...root.querySelectorAll<HTMLButtonElement>('[data-pick]')];
+    const sides = [...root.querySelectorAll<HTMLElement>('.side.tradition')];
+    const viewButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-view-button]')];
+    const toc = root.querySelector<HTMLDetailsElement>('.qc-toc');
+    const narrow = matchMedia('(max-width: 760px)');
+    // The sticky chooser wraps to one or two rows; headings and contents
+    // stop below its actual height.
+    const bar = root.querySelector<HTMLElement>('.qc-bar');
+    if (bar) new ResizeObserver(() => root.style.setProperty('--bar-h', `${bar.offsetHeight}px`)).observe(bar);
+
+    // The view is part of the address (?view=all), so a shared link opens it.
+    const setView = (view: string, record = true) => {
+      root.dataset.view = view === 'all' ? 'all' : 'one';
+      viewButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.viewButton === root.dataset.view)));
+      if (!record) return;
+      const url = new URL(location.href);
+      if (root.dataset.view === 'all') url.searchParams.set('view', 'all');
+      else url.searchParams.delete('view');
+      history.replaceState(history.state, '', url);
+    };
+
+    onSelection((ids) => {
+      const chosen = ids[1] ?? '';
+      root.dataset.chosen = chosen;
+      sides.forEach((side) => { side.hidden = side.dataset.trad !== chosen; });
+      picks.forEach((pick) => pick.setAttribute('aria-pressed', String(pick.dataset.pick === chosen)));
+      if (!chosen) setView('all', false);
+    });
+    setView(new URLSearchParams(location.search).get('view') === 'all' || !getSelection()[1] ? 'all' : 'one', false);
+
+    picks.forEach((pick) => pick.addEventListener('click', () => {
+      setSelection(['orthodoxy', pick.dataset.pick ?? '']);
+      setView('one');
+    }));
+    viewButtons.forEach((button) => button.addEventListener('click', () => setView(button.dataset.viewButton ?? 'one')));
+    // Choosing a religion from «Этот вопрос у всех» opens it on the same question.
+    root.addEventListener('click', (event) => {
+      const row = (event.target as HTMLElement).closest<HTMLButtonElement>('[data-pick-row]');
+      if (!row) return;
+      const question = row.closest<HTMLElement>('.question');
+      setSelection(['orthodoxy', row.dataset.pickRow ?? '']);
+      setView('one');
+      question?.scrollIntoView({ block: 'start' });
+    });
+
+    if (toc) {
+      const sync = () => { toc.open = !narrow.matches; };
+      narrow.addEventListener('change', sync);
+      toc.addEventListener('click', (event) => { if (narrow.matches && (event.target as HTMLElement).closest('a')) toc.open = false; });
+      sync();
+    }
+  }
+</script>
