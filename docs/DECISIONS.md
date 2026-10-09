@@ -325,3 +325,19 @@ conversion for dates without months. Historical estimates of the Nativity and
 other traditions' creation epochs remain attributed; source excerpts and
 migration originals are unchanged. Author-written reference dates use
 “до Р. Х.” where a common calendar is needed for source comparison.
+
+
+## 2026-10-09 — Reading for a newcomer
+
+The owner asked that a reader without religious education understand every
+difference without wading through long pages: short theses, plain language,
+not maximal detail. Each analysis card therefore opens with a one-sentence
+summary in the reading flow and folds its three positions, further reading and
+sources under it; every tradition page opens with «Главное», six to ten key
+differences linking to their cards. Summaries paraphrase the card's sourced
+content and introduce no claim. Glossary terms get inline hints on their first
+mention as progressive enhancement; the HTML text is unchanged. Creation-era
+years carry the same year before the Nativity beside them, extending the date
+notation above without replacing it. The glossary stays in the reference group
+of the navigation (owner, 2026-09-26); «С чего начать» joins the reading
+sections as their first step.

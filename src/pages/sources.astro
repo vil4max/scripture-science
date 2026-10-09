@@ -170,7 +170,7 @@ const description = 'Значения слов, пояснения к данны
 ---
 
 <Base title={title} description={description}>
-  <main class="page">
+  <main class="page" data-no-terms>
     <header>
       <h1>{title}</h1>
       <p class="lead">{description}</p>
@@ -197,6 +197,7 @@ const description = 'Значения слов, пояснения к данны
 
     <section id="terms" aria-labelledby="terms-title">
       <h2 id="terms-title">Термины</h2>
+      <p>Простые объяснения для чтения собраны в <a href={withBase('terms/')}>словаре</a>; здесь — справочный список с примечаниями.</p>
       <TermsBox terms={terms} />
     </section>
 

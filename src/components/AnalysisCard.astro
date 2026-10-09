@@ -13,7 +13,10 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
 ---
 <article class="card" id={card.id} data-topic={card.topic} data-legacy={card.legacy.length > 0 ? card.legacy.join(' ') : undefined}>
   <h4>{card.title}</h4>
+  <p class="short"><span class="short-label">Коротко.</span> {card.short}</p>
   {card.status === 'todo' && <details class="pending"><summary>Уточняется: что требует проверки</summary><p>{card.readerNote ?? card.todo}</p></details>}
+  <details class="card-body">
+  <summary>Подробно: учение Церкви, их учение и православный ответ</summary>
   <div class="block church">
     <p class="label">Учение Православной Церкви</p>
     <p>{card.church.text}</p>
@@ -41,6 +44,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
     </li>)}</ul>
   </details>}
   {card.topic && <p class="back"><a href={withBase(`compare/?t=orthodoxy,${tradition}#topic-${card.topic}`)} data-carry-selection>К сравнению по теме</a></p>}
+  </details>
   <nav class="adjacent" aria-label={`Соседние вопросы: ${card.title}`}>
     {previous && <a href={`#${previous.id}`} rel="prev">← {previous.title}</a>}
     {next && <a href={`#${next.id}`} rel="next">{next.title} →</a>}
@@ -48,7 +52,12 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
 </article>
 <style>
 .card { border-top: 1px solid var(--line); padding: 24px 0 8px; scroll-margin-top: 24px; }
-h4 { margin: 0 0 16px; font-size: 22px; }
+h4 { margin: 0 0 10px; font-size: 22px; }
+.short { max-width: var(--measure); margin: 0 0 12px; font-size: 18px; line-height: 1.55; }
+.short-label { font-weight: 700; }
+.card-body { margin: 0 0 4px; }
+.card-body > summary { margin: 0 0 14px; font-size: 15px; }
+.card-body[open] > summary { margin-bottom: 18px; }
 .pending { margin: 0 0 16px; padding: 12px; border: 1px solid var(--line); border-left: 3px solid var(--focus); border-radius: 4px; font-size: 15px; }
 .source-role { display: block; color: var(--muted); font-size: 13px; font-weight: 700; }
 .block { max-width: var(--measure); margin: 0 0 14px; padding-left: 14px; border-left: 3px solid var(--line); }
@@ -68,5 +77,7 @@ summary { cursor: pointer; color: var(--focus); font-weight: 700; }
 @media (max-width: 760px) {
   .proof { font-size: 16px; overflow-wrap: anywhere; }
   .back a, .adjacent a { display: inline-flex; align-items: center; min-height: 44px; font-size: 16px; }
+  .short { font-size: 17px; }
+  .card-body > summary { padding: 10px 0; font-size: 16px; }
 }
 </style>

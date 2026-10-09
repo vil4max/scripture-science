@@ -18,6 +18,11 @@ const chapters = [
     <p>Православное учение служит основанием сравнения. Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как устроен разбор</a>.</p>
     <a class="start" href={withBase('religions/')} data-carry-selection>Начать знакомство →</a>
   </section>
+  <aside class="newcomer" aria-labelledby="newcomer-title">
+    <h2 id="newcomer-title">Впервые читаете о христианстве?</h2>
+    <p>Начните с пяти минут: кто такой Христос, что такое Библия, Церковь и Таинства и почему христиане разделились. <a href={withBase('basics/')} data-carry-selection>Христианство коротко →</a></p>
+    <p>Трудные слова подчёркнуты пунктиром: нажмите на слово, чтобы увидеть простое объяснение. Все объяснения собраны в <a href={withBase('terms/')} data-carry-selection>словаре</a>.</p>
+  </aside>
   <section aria-labelledby="chapters-title"><h2 id="chapters-title">Маршрут чтения</h2>
     <ol class="chapters">{chapters.map((chapter) => <li><a href={withBase(chapter.path)} data-carry-selection>{chapter.title}</a><p>{chapter.text}</p></li>)}</ol>
   </section>
@@ -39,6 +44,10 @@ const chapters = [
 </script>
 <style>
   #foundation { max-width: 78ch; border-left: 4px solid var(--t-orthodoxy); padding-left: 24px; }
+  .newcomer { max-width: 78ch; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .newcomer h2 { margin: 0 0 8px; font-size: 21px; }
+  .newcomer p { margin: 8px 0 0; line-height: 1.6; }
+  .newcomer a { font-weight: 700; }
   .start { display: inline-flex; min-height: 48px; align-items: center; padding: 8px 20px; border: 1px solid var(--focus); border-radius: 8px; margin-top: 8px; font-weight: 700; }
   .chapters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; padding: 0; list-style: none; counter-reset: chapter; }
   .chapters li { counter-increment: chapter; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }

@@ -11,6 +11,7 @@ import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 // (owner, 2026-10-01).
 const sections = [
   { path: '', label: 'Начало' },
+  { path: 'basics/', label: 'С чего начать' },
   { path: 'religions/', label: 'Знакомство с религиями' },
   { path: 'timeline/', label: 'Возникновение и история' },
   { path: 'numbers/', label: 'Мир в цифрах' },
@@ -38,7 +39,8 @@ const religions = (await getOrderedMatrix())
 // «глоссарий источники это доп инфо которую можно опустить вниз»).
 const reference = [
   { path: 'reading/', label: 'Как читать сравнение' },
-  { path: 'sources/', label: 'Термины и источники' },
+  { path: 'terms/', label: 'Словарь' },
+  { path: 'sources/', label: 'Источники' },
 ];
 
 // Compare paths with one trailing slash, so "/religion-map" and

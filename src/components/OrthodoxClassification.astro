@@ -1,7 +1,27 @@
 ---
 import entries from '../data/orthodox-classifications.json';
+import { getTerms } from '../lib/content';
+import { withBase } from '../lib/paths';
 interface Props { tradition: string; }
 const entry = entries[Astro.props.tradition as keyof typeof entries];
+// Each label word is explained from the glossary
+// (docs/tasks/site-m34-newcomer-reading.md, outcome 6).
+const glossary = await getTerms();
+const explained = ((entry && 'terms' in entry ? entry.terms : []) as string[]).map((name) => {
+  const term = glossary.find((item) => item.data.term === name);
+  if (!term) throw new Error(`Classification term missing from the glossary: ${name}`);
+  return term.data;
+});
 ---
-{entry && <div class="classification"><strong>{entry.label}</strong><p>{entry.text}</p><a class="details" href={entry.url}>Подробнее</a></div>}
-<style>p { margin: 8px 0; line-height: 1.6; } .details { font-size: 14px; color: var(--focus); }</style>
+{entry && <div class="classification" data-no-terms>
+  <strong>{entry.label}</strong>
+  <p>{entry.text}</p>
+  {explained.map((term) => <p class="term-note"><span class="term-name">Что значит «{term.term}»?</span> {term.short} <a href={withBase(`terms/#${term.slug}`)}>В словаре</a></p>)}
+  <a class="details" href={entry.url}>Подробнее</a>
+</div>}
+<style>
+  p { margin: 8px 0; line-height: 1.6; }
+  .details { font-size: 14px; color: var(--focus); }
+  .term-note { font-size: 15px; color: var(--muted); }
+  .term-name { font-weight: 700; color: var(--ink); }
+</style>

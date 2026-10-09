@@ -1,0 +1,48 @@
+---
+// «С чего начать» (docs/tasks/site-m34-newcomer-reading.md, outcome 4): the
+// basics a reader without religious education needs before the comparison.
+import { getCollection } from 'astro:content';
+import SectionPage from '../layouts/SectionPage.astro';
+import { withBase } from '../lib/paths';
+
+const sections = (await getCollection('basics')).sort((a, b) => a.data.order - b.data.order);
+---
+<SectionPage title="С чего начать: христианство коротко" lead="Самое необходимое, чтобы читать сайт без подготовки. Пять минут чтения; трудные слова объясняются по нажатию и в словаре.">
+  <nav class="basics-contents" aria-label="Содержание">
+    <ol>{sections.map((section) => <li><a href={`#${section.id}`}>{section.data.title}</a></li>)}</ol>
+  </nav>
+  {sections.map((section) => <section id={section.id} class="basics-section" aria-labelledby={`${section.id}-title`}>
+    <h2 id={`${section.id}-title`}><span class="step">{section.data.order}</span> {section.data.title}</h2>
+    {section.data.points.map((point) => <p>{point}</p>)}
+    {section.data.next.length > 0 && <p class="next">{section.data.next.map((link, index) => <>{index > 0 && ' · '}<a href={withBase(link.href)} data-carry-selection>{link.label} →</a></>)}</p>}
+    <details class="proof">
+      <summary>Источники</summary>
+      <ul>{section.data.proof.map((source) => <li>
+        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+      </li>)}</ul>
+    </details>
+  </section>)}
+  <p class="continue"><a href={withBase('religions/')} data-carry-selection>Дальше: знакомство с религиями →</a></p>
+</SectionPage>
+
+<style>
+  .basics-contents, .basics-section, .continue { max-width: var(--measure); }
+  .basics-contents ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
+  .basics-section { scroll-margin-top: 24px; }
+  .basics-section h2 { display: flex; gap: 12px; align-items: baseline; }
+  .step { flex: none; display: inline-grid; place-items: center; width: 32px; height: 32px; border-radius: 50%; background: var(--t-orthodoxy); color: #fff; font-size: 16px; font-family: inherit; }
+  .basics-section p { line-height: 1.65; font-size: 18px; }
+  .next { font-size: 16px !important; }
+  .proof { font-size: 15px; }
+  .proof summary { cursor: pointer; color: var(--focus); font-weight: 700; }
+  .proof ul { padding-left: 20px; }
+  .accessed { color: var(--muted); }
+  .continue { font-size: 18px; font-weight: 700; }
+  @media (max-width: 760px) {
+    .basics-contents a, .next a { display: inline-flex; align-items: center; min-height: 40px; }
+    .proof summary { min-height: 44px; display: list-item; padding: 10px 0; }
+    .proof { overflow-wrap: anywhere; font-size: 16px; }
+    .basics-section { scroll-margin-top: 72px; }
+    .basics-section p { font-size: 17px; }
+  }
+</style>

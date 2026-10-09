@@ -102,6 +102,7 @@ export async function getDisputes(): Promise<CollectionEntry<'disputes'>[]> {
   return all.filter((d) => d.data.status === 'verified').sort((a, b) => rank(a.data.topic) - rank(b.data.topic));
 }
 
+/** Glossary entries in their file order: basic concepts in reading order first. */
 export async function getTerms(): Promise<CollectionEntry<'terms'>[]> {
-  return getCollection('terms');
+  return (await getCollection('terms')).sort((a, b) => a.data.order - b.data.order);
 }

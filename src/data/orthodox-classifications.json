@@ -13,7 +13,8 @@
     "path": "inoslavie",
     "authority": "Энциклопедия «Азбуки веры»: терминология",
     "title": "Инославие",
-    "url": "https://azbyka.ru/inoslavie"
+    "url": "https://azbyka.ru/inoslavie",
+    "terms": ["инославие"]
   },
   "protestantism": {
     "label": "Инославные христианские исповедания",
@@ -21,7 +22,8 @@
     "path": "inoslavie",
     "authority": "Энциклопедия «Азбуки веры»: терминология",
     "title": "Инославие",
-    "url": "https://azbyka.ru/inoslavie"
+    "url": "https://azbyka.ru/inoslavie",
+    "terms": ["инославие"]
   },
   "adventism": {
     "label": "Адвентисты седьмого дня · протестантское направление",
@@ -29,7 +31,8 @@
     "path": "protestantizm",
     "authority": "Энциклопедия «Азбуки веры»: классификация",
     "title": "Протестантизм",
-    "url": "https://azbyka.ru/protestantizm"
+    "url": "https://azbyka.ru/protestantizm",
+    "terms": ["адвентизм", "инославие"]
   },
   "jw": {
     "label": "Свидетели Иеговы · псевдохристианская секта",
@@ -37,7 +40,8 @@
     "path": "svideteli-iegovy",
     "authority": "Энциклопедия «Азбуки веры»: классификация",
     "title": "Свидетели Иеговы",
-    "url": "https://azbyka.ru/svideteli-iegovy"
+    "url": "https://azbyka.ru/svideteli-iegovy",
+    "terms": ["секта", "псевдохристианские движения"]
   },
   "lds": {
     "label": "Святые последних дней · псевдохристианское реставрационистское движение",
@@ -45,7 +49,8 @@
     "path": "otechnik/sekty/sekta-mormonov/",
     "authority": "Авторская богословская оценка: Виктор Антонов",
     "title": "Секта Мормонов",
-    "url": "https://azbyka.ru/otechnik/sekty/sekta-mormonov/"
+    "url": "https://azbyka.ru/otechnik/sekty/sekta-mormonov/",
+    "terms": ["псевдохристианские движения", "реставрационизм"]
   },
   "judaism": {
     "label": "Иноверие · иудаизм",
@@ -53,7 +58,8 @@
     "path": "iudaizm",
     "authority": "Энциклопедия «Азбуки веры»: объяснение",
     "title": "Иудаизм",
-    "url": "https://azbyka.ru/iudaizm"
+    "url": "https://azbyka.ru/iudaizm",
+    "terms": ["иноверие"]
   },
   "islam": {
     "label": "Иноверие · ислам",
@@ -61,6 +67,7 @@
     "path": "islam",
     "authority": "Энциклопедия «Азбуки веры»: объяснение",
     "title": "Ислам",
-    "url": "https://azbyka.ru/islam"
+    "url": "https://azbyka.ru/islam",
+    "terms": ["иноверие"]
   }
 }

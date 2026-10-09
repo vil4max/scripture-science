@@ -1,0 +1,476 @@
+# «С чего начать: христианство коротко» (/basics/, docs/tasks/site-m34-newcomer-reading.md,
+# outcome 4). Seven short sections for a reader with no religious education.
+# Paraphrase carries no quotation marks; Scripture and documents are quoted
+# exactly, and every section carries its own verified proof (docs/SOURCES.md).
+- id: christ-and-christians
+  order: 1
+  title: "Кто такой Иисус Христос и кто такие христиане"
+  points:
+    - "Христиане — это люди, которые верят в Иисуса Христа и идут за Ним. Так впервые назвали учеников Христа в городе Антиохии (Деяния апостолов, 11:26)."
+    - "Церковь учит: Иисус Христос — Сын Божий, ставший человеком. Он Бог и человек вместе."
+    - "Имя Иисус означает Спаситель: Он родился, чтобы спасти людей. Имя Христос означает Помазанник — так издавна называли царей, первосвященников и пророков."
+    - "Христиане верят: Христос был распят при Понтии Пилате, погребён и на третий день воскрес. Об этом сказано в Символе веры — о нём в пятом разделе."
+  proof:
+    - url: "https://azbyka.ru/biblia/?Act.11:26&r"
+      title: "Библия онлайн, Синодальный перевод — Азбука веры: Деян. 11:26"
+      tier: reference
+      excerpt: "ученики в Антиохии в первый раз стали называться Христианами"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §129: Сын Божий и человек Иисус"
+      tier: official
+      excerpt: "Сын Божий назван Иисусом, когда Он родился на земле как человек"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §181: Господь Иисус Христос — Бог и человек"
+      tier: official
+      excerpt: "В Господе Иисусе Христе не два, а одно лицо, Бог и человек вместе, одним словом – Богочеловек"
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §130: имя Иисус"
+      tier: official
+      excerpt: "Имя Иисус означает Спаситель"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §131: почему Он назван Иисусом"
+      tier: official
+      excerpt: "потому что Он родился спасти людей"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §132: имя Христос"
+      tier: official
+      excerpt: "Имя Христос означает Помазанник"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §133: кого называли Помазанниками"
+      tier: official
+      excerpt: "Помазанниками издревле называли царей, первосвященников и пророков"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, четвёртый член"
+      tier: official
+      excerpt: "Распятаго же за ны при Понтийстем Пилате, и страдавша и погребенна"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, пятый член"
+      tier: official
+      excerpt: "И воскресшаго в третий день по Писанием"
+      accessed: "2026-10-09"
+  next:
+    - label: "Православная вера"
+      href: "orthodoxy/"
+
+- id: bible
+  order: 2
+  title: "Библия: Ветхий и Новый Завет"
+  points:
+    - "Библия — собрание священных книг. По учению Церкви, их написал Святой Дух через пророков (посланников Бога) и апостолов (учеников Христа)."
+    - "Библия делится на две части. Ветхий Завет написан до Рождества Христова, Новый Завет — после. Завет — это союз Бога с людьми: в древнем союзе Бог обещал Спасителя, в новом даровал Его — Иисуса Христа."
+    - "В русском православном издании 77 книг: 50 ветхозаветных и 27 новозаветных. Одиннадцать ветхозаветных книг неканонические: они не входят в канон — перечень книг, признанных богодухновенными, то есть внушёнными Святым Духом."
+    - "Основу Нового Завета составляют четыре Евангелия. Это слово значит добрая, радостная весть: в них рассказано о жизни, учении, смерти и воскресении Христа."
+  proof:
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §19: что такое Священное Писание"
+      tier: official
+      excerpt: "Священным Писанием называются книги, написанные Святым Духом через освящённых от Бога людей"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/bibliya"
+      title: "Азбука веры. Библия: время написания и деление на Заветы"
+      tier: reference
+      excerpt: "– до Рождества Христова и после Его Рождения. Первые называются книгами Ветхого Завета, а вторые – книгами Нового Завета."
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §27: что такое Ветхий и Новый Завет"
+      tier: official
+      excerpt: "Ветхий и Новый Завет – это древний и новый союз Бога с человеком"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §28: Ветхий Завет"
+      tier: official
+      excerpt: "Ветхий Завет состоял в том, что Бог обещал даровать людям Божественного Спасителя"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §30: Новый Завет"
+      tier: official
+      excerpt: "Новый Завет состоит в том, что Бог действительно даровал людям Божественного Спасителя"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/bibliya"
+      title: "Азбука веры. Библия: состав и язык библейских книг"
+      tier: reference
+      excerpt: "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг."
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/bibliya"
+      title: "Азбука веры. Библия: одиннадцать неканонических книг"
+      tier: reference
+      excerpt: "не являются богодухновенными и не входят в канон Священного Писания Ветхого Завета"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §45: четыре Евангелия"
+      tier: official
+      excerpt: "Законоположительными книгами, лежащими в основании Нового Завета, являются четыре книги, составляющие Евангелие"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §46: что означает слово Евангелие"
+      tier: official
+      excerpt: "Слово Евангелие – греческое, оно означает благовестие, то есть добрую или радостную весть"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §47: о чём говорится в Евангелии"
+      tier: official
+      excerpt: "о Его крестной смерти, славном воскресении и вознесении на небо"
+      accessed: "2026-10-09"
+  next:
+    - label: "Священное Писание подробнее"
+      href: "bible/"
+    - label: "Словарь"
+      href: "terms/"
+
+- id: trinity
+  order: 3
+  title: "Бог Троица: один Бог в трёх Лицах"
+  points:
+    - "Христиане веруют в одного Бога. Церковь учит: Он один, но в трёх Лицах — Отец, Сын и Святой Дух. Это называется Троицей."
+    - "Каждое Лицо — истинный Бог, и всё же Бог один. Поэтому Троица — не три бога и не один Бог, который по-разному проявляется."
+    - "Лица различны: Сын предвечно (вне времени) рождается от Отца, а Святой Дух предвечно исходит от Отца."
+    - "Человеческий ум не может до конца постичь эту тайну. Церковь верит в неё, потому что так свидетельствует слово Божие."
+    - "Имена трёх Лиц Христос назвал ученикам: «Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа» (Евангелие от Матфея, 28:19)."
+  proof:
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §90: Троица"
+      tier: official
+      excerpt: "Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух, Троица единосущная и нераздельная"
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §95: достоинство Лиц Троицы"
+      tier: official
+      excerpt: "в этих трёх ипостасях явлен один триипостасный Бог"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §94: различие Лиц Троицы"
+      tier: official
+      excerpt: "Сын Божий предвечно рождается от Отца; Святой Дух предвечно исходит от Отца"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §93: можно ли постигнуть триединство Божие"
+      tier: official
+      excerpt: "Мы не постигаем этой внутренней тайны Божества, но верим в неё"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/biblia/?Mt.28:19&r"
+      title: "Библия онлайн, Синодальный перевод — Азбука веры: Мф. 28:19"
+      tier: reference
+      excerpt: "Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа"
+      accessed: "2026-10-09"
+  next:
+    - label: "Сходства и основные различия"
+      href: "differences/"
+
+- id: church-and-sacraments
+  order: 4
+  title: "Церковь и Таинства"
+  points:
+    - "Церковь — это Богом установленное общество людей, соединённых православной верой, законом Божиим, священноначалием (епископами и священниками) и Таинствами. Её Глава — Сам Иисус Христос."
+    - "Церковь открыто явилась миру в день Пятидесятницы, когда Святой Дух сошёл на апостолов."
+    - "Таинство — священное действие, в котором на человека тайно действует благодать, то есть спасительная сила Божия. В Церкви семь Таинств."
+    - "Крещение — Таинство рождения для духовной жизни. Человека трижды погружают в воду с призыванием Отца и Сына и Святого Духа: он умирает для греховной жизни и возрождается Святым Духом."
+    - "Причащение, или Евхаристия, — Таинство, в котором верующий под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни. Оно совершается на Литургии (слово значит общественное служение) и составляет главную часть богослужения."
+  proof:
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §250: что такое Церковь"
+      tier: official
+      excerpt: "Церковь есть Богом установленное общество людей, соединённых православной верой, законом Божиим, священноначалием и Таинствами"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.2: единство Церкви"
+      tier: official
+      excerpt: "у нее один Глава ― Господь Иисус Христос"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/biblia/?Act.2:1-4&r"
+      title: "Библия онлайн, Синодальный перевод — Азбука веры: Деян. 2:1"
+      tier: reference
+      excerpt: "При наступлении дня Пятидесятницы все они были единодушно вместе"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/biblia/?Act.2:1-4&r"
+      title: "Библия онлайн, Синодальный перевод — Азбука веры: Деян. 2:4"
+      tier: reference
+      excerpt: "И исполнились все Духа Святого"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/obzor-istorii-prazdnika-pyatidesyatnicy"
+      title: "«Обзор истории праздника Пятидесятницы»: завершение ветхозаветной истории спасения"
+      tier: reference
+      excerpt: "в Церкви Христовой, в которой нашла свое завершение ветхозаветная история спасения"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §281: что такое Таинство"
+      tier: official
+      excerpt: "Таинство есть священное действие, через которое тайным образом действует на человека благодать, или спасительная сила Божия"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §282: сколько всего Таинств"
+      tier: official
+      excerpt: "Таинств – семь"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §283: духовная сила Крещения"
+      tier: official
+      excerpt: "в Крещении человек таинственно рождается в жизнь духовную"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §285: что такое Крещение"
+      tier: official
+      excerpt: "при троекратном погружении тела в воду с призыванием Бога Отца и Сына и Святого Духа умирает для жизни плотской, греховной и возрождается Святым Духом в жизнь духовную"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §312: Причащение (Евхаристия)"
+      tier: official
+      excerpt: "Причащение (или Евхаристия) есть Таинство, в котором верующий под видом хлеба и вина вкушает подлинные Тело и Кровь Иисуса Христа для вечной жизни"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §314: место Причащения в богослужении"
+      tier: official
+      excerpt: "Таинство Причащения составляет главную и существенную часть христианского богослужения"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §315: Причащение совершается за Литургией"
+      tier: official
+      excerpt: "Таинство Причащения совершается за Литургией"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §316: что означает слово Литургия"
+      tier: official
+      excerpt: "Слово литургия значит общественное служение"
+      accessed: "2026-10-09"
+  next:
+    - label: "Православная вера"
+      href: "orthodoxy/"
+
+- id: tradition-and-creed
+  order: 5
+  title: "Священное Предание и Символ веры"
+  points:
+    - "Христос передал Своё учение ученикам словом и примером, а не книгой. Так же сначала проповедовали апостолы. Эта передача веры от поколения к поколению называется Священным Преданием: в него входят учение веры, закон Божий, Таинства и священные обряды."
+    - "Хранительница Предания — Церковь. Поэтому православные читают Библию вместе с Церковью: Предание помогает правильно понимать Писание."
+    - "Символ веры — кратко и точно изложенное содержание веры христиан. Его составили участники первого и второго Вселенских Соборов — собраний пастырей и учителей Церкви со всей вселенной. Соборы прошли в Никее (325 год) и в Константинополе (381 год)."
+    - "Символ веры начинается словами «Верую во единаго Бога Отца, Вседержителя, Творца небу и земли» и продолжается словами о Христе, Святом Духе, Церкви и жизни будущего века."
+  proof:
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §21: что древнее — Предание или Писание"
+      tier: official
+      excerpt: "Сам Господь наш Иисус Христос Божественное учение Своё и установления передал ученикам Своим словом и примером, а не книгой"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §21: как распространяли веру апостолы"
+      tier: official
+      excerpt: "Тем же способом и апостолы вначале распространяли веру и утверждали Церковь Христа"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §17: что такое Священное Предание"
+      tier: official
+      excerpt: "что словом и примером истинно верующие и чтущие Бога люди передают друг другу и предки передают своим потомкам: учение веры, закон Божий, Таинства и священные обряды"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §18: где хранится Священное Предание"
+      tier: official
+      excerpt: "Церковь, которая и есть хранительница Священного Предания"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+      title: "Свт. Филарет Московский. Пространный катехизис, §24: как пользоваться Священным Преданием в наше время"
+      tier: official
+      excerpt: "Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §66: что такое Символ веры"
+      tier: official
+      excerpt: "Символ веры есть кратко и точно описанный предмет веры христиан"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §68: кем составлен Символ веры"
+      tier: official
+      excerpt: "Учение о вере так изложили отцы первого и второго Вселенских Соборов"
+      accessed: "2026-09-26"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §68: даты первых двух Вселенских Соборов"
+      tier: official
+      excerpt: "1-й – Никейский (325 г.); 2-й – Константинопольский (381 г.)"
+      accessed: "2026-09-26"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §69: что такое Вселенский Собор"
+      tier: official
+      excerpt: "Вселенский Собор – это собрание пастырей и учителей христианской Кафолической Церкви, по возможности, со всей вселенной"
+      accessed: "2026-09-26"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, первый член"
+      tier: official
+      excerpt: "Верую во единаго Бога Отца, Вседержителя, Творца небу и земли"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, второй член"
+      tier: official
+      excerpt: "И во единаго Господа Иисуса Христа, Сына Божия"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, восьмой член"
+      tier: official
+      excerpt: "И в Духа Святаго, Господа, животворящаго"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, девятый член"
+      tier: official
+      excerpt: "Во едину Святую, Соборную и Апостольскую Церковь"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
+      title: "Свт. Филарет Московский. Пространный катехизис, §67: Символ веры, двенадцатый член"
+      tier: official
+      excerpt: "И жизни будущаго века"
+      accessed: "2026-10-09"
+  next:
+    - label: "Словарь"
+      href: "terms/"
+    - label: "Сходства и основные различия"
+      href: "differences/"
+
+- id: divisions
+  order: 6
+  title: "Почему христиане разделились"
+  points:
+    - "Христос заповедал христианам единство, но заповедь не раз нарушалась. Православная Церковь учит: Церковь Христова едина и единственна, поэтому разделение — это отход от неё, а не рождение новой Церкви."
+    - "В 1054 году от единства Православной Церкви отделилась Римская Церковь; от неё ведёт начало католицизм. Это называют Великим расколом — нарушением церковного единства. Дата условная: разрыв шёл постепенно."
+    - "В 1517 году выступление Мартина Лютера в Германии принято считать началом Реформации. Из неё выросли лютеранство, кальвинизм, англиканство и другие протестантские направления."
+    - "В XIX веке появились ещё три движения. В 1830 году организована Церковь Иисуса Христа Святых последних дней (в быту — мормоны), в 1863 году — Адвентисты седьмого дня. Свидетели Иеговы ведут начало от библейского кружка в Питтсбурге около 1870 года."
+    - "Были и более ранние разделения, в первом тысячелетии. Церковь учит, что она основана Христом и явлена миру в Пятидесятницу, а не возникла ни в одну из этих дат."
+  proof:
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.12: нарушения единства"
+      tier: official
+      excerpt: "На протяжении веков заповедь Христа о единстве неоднократно нарушалась"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.2: единство Церкви"
+      tier: official
+      excerpt: "Церковь Христова едина и единственна"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.13: отделение христианских сообществ"
+      tier: official
+      excerpt: "от единства с Православной Церковью отделялись не только индивидуальные христиане, но и целые христианские сообщества"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.13: разделения первого тысячелетия"
+      tier: official
+      excerpt: "Наиболее существенные разделения первого тысячелетия"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/pravoslavie"
+      title: "Азбука веры. Православие: когда появилось Православие? — 1054 год"
+      tier: reference
+      excerpt: "В 1054 году от единой Православной Церкви откололась Римская Церковь, далее от неё откололись протестанты."
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/katolicizm#kak-proizoshlo-otpadenie-rimsko-katolicheskoj-cerkvi-ot-vselenskogo-pravoslaviya"
+      title: "Энциклопедия «Азбуки веры»: отпадение Римской церкви от Вселенского Православия"
+      tier: reference
+      excerpt: "Римская Поместная церковь откололась от Вселенской Православной"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/katolicizm#kak-proizoshlo-otpadenie-rimsko-katolicheskoj-cerkvi-ot-vselenskogo-pravoslaviya"
+      title: "Энциклопедия «Азбуки веры»: 1054 год как условная дата Великой схизмы"
+      tier: reference
+      excerpt: "условная дата «Великой схизмы»"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/raskol"
+      title: "Азбука веры: раскол — определение"
+      tier: reference
+      excerpt: "нарушение церковного единства"
+      accessed: "2026-09-27"
+    - url: "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation"
+      title: "OpenStax World History — The Protestant Reformation"
+      tier: reference
+      excerpt: "The Protestant Reformation began in 1517, but its seeds had been sown years earlier."
+      accessed: "2026-09-27"
+    - url: "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation"
+      title: "OpenStax World History — The Protestant Reformation: Martin Luther"
+      tier: reference
+      excerpt: "Luther’s actions began the Protestant Reformation."
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.13: разделения западного христианства"
+      tier: official
+      excerpt: "приведшие к непрекращающемуся процессу образования множества христианских деноминаций"
+      accessed: "2026-10-09"
+    - url: "https://newsroom.churchofjesuschrist.org/facts-and-statistics"
+      title: "Facts and Statistics — Newsroom, The Church of Jesus Christ of Latter-day Saints"
+      tier: official
+      excerpt: "The Church of Jesus Christ of Latter-day Saints was organized in April 1830, when Joseph Smith met with a small group of believers"
+      accessed: "2026-09-25"
+    - url: "https://www.oikoumene.org/church-families/seventh-day-adventist-church"
+      title: "Seventh-day Adventist Church — World Council of Churches"
+      tier: reference
+      excerpt: "but was only formally organized in 1863"
+      accessed: "2026-10-09"
+    - url: "https://www.jw.org/en/library/books/Jehovahs-Witnesses-Proclaimers-of-Gods-Kingdom/You-Are-My-Witnesses-Says-Jehovah/Proclaiming-the-Lords-Return-1870-1914/"
+      title: "Proclaiming the Lord's Return (1870-1914) — Jehovah's Witnesses—Proclaimers of God's Kingdom (jw.org)"
+      tier: official
+      excerpt: "in 1870, fired by enthusiasm, he and a few acquaintances in Pittsburgh and nearby Allegheny got together and formed a class for Bible study"
+      accessed: "2026-09-25"
+    - url: "https://azbyka.ru/pravoslavie"
+      title: "Азбука веры. Православие: когда появилось Православие?"
+      tier: reference
+      excerpt: "было основано Иисусом Христом."
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/obzor-istorii-prazdnika-pyatidesyatnicy"
+      title: "«Обзор истории праздника Пятидесятницы»: завершение ветхозаветной истории спасения"
+      tier: reference
+      excerpt: "в Церкви Христовой, в которой нашла свое завершение ветхозаветная история спасения"
+      accessed: "2026-09-27"
+  next:
+    - label: "Возникновение и история"
+      href: "timeline/"
+    - label: "Католицизм"
+      href: "traditions/catholicism/"
+    - label: "Протестантизм"
+      href: "traditions/protestantism/"
+    - label: "Свидетели Иеговы"
+      href: "traditions/jw/"
+
+- id: how-to-read
+  order: 7
+  title: "Как читать этот сайт"
+  points:
+    - "Мерой для сравнения служит православное учение. В документе Архиерейского Собора (собрания епископов) Русской Церкви 2000 года сказано: «Православная Церковь есть истинная Церковь Христова»."
+    - "Другие традиции описаны по их собственным документам. Что учит сама традиция и как это оценивает Православие, показано отдельно."
+    - "Слова иноверие, инославие, раскол, ересь и секта — церковные понятия. Инославие — неправославные христианские исповедания, иноверие — нехристианские религии. Эти слова оценивают учение, а не людей."
+    - "Тот же документ призывает православных относиться с христианской любовью к людям, чьи взгляды они отвергают, и не допускает оскорблений в адрес инославных. Незнакомое слово ищите в словаре, ответы традиций — в сравнении."
+  proof:
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §1.1: истинная Церковь Христова"
+      tier: official
+      excerpt: "Православная Церковь есть истинная Церковь Христова"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000): принятие документа"
+      tier: official
+      excerpt: "Документ, принятый на Юбилейном Архиерейском Соборе 2000 года"
+      accessed: "2026-10-09"
+    - url: "https://azbyka.ru/inoslavie"
+      title: "Азбука веры: инославие — определение"
+      tier: reference
+      excerpt: "обобщенное наименование неправославных христианских исповеданий"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/otechnik/Lopuhin/pravoslavnaja-bogoslovskaja-entsiklopedija-ili-bogoslovskij-entsiklopedicheskij-slovar-tom-5-donskaja-eparhija-ifika/715"
+      title: "Православная богословская энциклопедия, т. V: Иноверцы — определение термина"
+      tier: reference
+      excerpt: "Под именем иноверцев в строгом смысле этого слова разумеются исповедующие нехристианские религии"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §7.1: любовь к людям"
+      tier: official
+      excerpt: "православные призваны с христианской любовью относиться к людям, их исповедующим"
+      accessed: "2026-09-27"
+    - url: "https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-pravoslavnoj-tserkvi-k-inoslaviyu/"
+      title: "Основные принципы отношения Русской Православной Церкви к инославию (2000), §7.1: оскорбления недопустимы"
+      tier: official
+      excerpt: "Недопустимы оскорбления в адрес инославных"
+      accessed: "2026-10-09"
+  next:
+    - label: "Словарь"
+      href: "terms/"
+    - label: "Знакомство с религиями"
+      href: "religions/"
+    - label: "Подробное сравнение"
+      href: "compare/"

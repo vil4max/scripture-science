@@ -10,6 +10,7 @@ import {
   assignBranchColumns,
   buildChronicleRows,
   formatHistoricalYear,
+  formatYearAd,
   parseLineage,
   validateReferences,
   type ChronicleRow,
@@ -181,7 +182,7 @@ const today = new Date();
 ---
 
 <div class="chronicle" data-chronicle>
-  <p class="biblical-key"><strong>Как читать даты.</strong> Ранние события обозначены годами от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). Для библейской линии использована «Хронология Септуагинты». Вера в сотворение мира Богом — церковное учение; конкретное вычисление лет от Сотворения мира — хронологическая традиция. Для дат без месяца принят отсчёт января–августа; с сентября византийский год увеличивается на один.</p>
+  <p class="biblical-key"><strong>Как читать даты.</strong> Ранние события обозначены годами от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). Под годом от Сотворения мира мелко указан тот же год в привычном счёте — до Рождества Христова (до Р. Х.). Для библейской линии использована «Хронология Септуагинты». Вера в сотворение мира Богом — церковное учение; конкретное вычисление лет от Сотворения мира — хронологическая традиция. Для дат без месяца принят отсчёт января–августа; с сентября византийский год увеличивается на один.</p>
   <div class="testament-key" aria-label="Библейское повествование">
     <span class="old">Ветхий Завет · от Сотворения мира</span>
     <span class="new">Новый Завет · от Рождества Христова</span>
@@ -199,6 +200,7 @@ const today = new Date();
             <span class="ad" id={row.id === 'early-christianity' ? 'history-orthodoxy' : undefined}>
               {about}
               {formatHistoricalYear(row.year)}
+              {row.year < 0 && <span class="ad-gloss">{about}{formatYearAd(row.year)}</span>}
             </span>
             <span class="graph" aria-hidden="true">
               {segmentsAt(index).map((s) => (
@@ -290,6 +292,13 @@ const today = new Date();
 
   .ad {
     color: var(--muted);
+  }
+
+  /* The same year in the familiar count, for readers who do not use the
+     Byzantine era (docs/tasks/site-m34-newcomer-reading.md). */
+  .ad-gloss {
+    display: block;
+    font-size: 13px;
   }
 
   .graph {

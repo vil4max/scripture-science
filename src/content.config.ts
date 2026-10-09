@@ -167,15 +167,17 @@ const matrix = defineCollection({
 // Reshapes a YAML file holding a top-level array (no `id`/`slug` field on
 // each item, as docs/tasks/site-m4-views-terms.md specifies) into the
 // id-keyed object astro/loaders' `file()` needs, keyed by `idField`.
-function keyedArrayParser(idField: string) {
+// With `withOrder`, each item also gets `order`, its position in the file,
+// because the collection itself is sorted by id.
+function keyedArrayParser(idField: string, { withOrder = false } = {}) {
   return (text: string) => {
     const parsed = yaml.load(text);
     if (!Array.isArray(parsed)) return parsed;
     const byId: Record<string, unknown> = {};
-    for (const item of parsed) {
+    parsed.forEach((item, index) => {
       const key = (item as Record<string, unknown>)[idField];
-      if (typeof key === 'string') byId[key] = item;
-    }
+      if (typeof key === 'string') byId[key] = withOrder ? { ...(item as object), order: index } : item;
+    });
     return byId;
   };
 }
@@ -251,14 +253,37 @@ const disputes = defineCollection({
     }),
 });
 
+// The glossary (/terms/, docs/tasks/site-m34-newcomer-reading.md): `basic`
+// concepts a newcomer needs first, then the confessional `classification`
+// terms. `short` is the plain one-line explanation shown in inline hints;
+// `match` holds case-sensitive regular expressions for the term's first
+// mention in reading text (none: the term gets no inline hint).
 const terms = defineCollection({
-  loader: file('src/data/terms.yaml', { parser: keyedArrayParser('term') }),
+  loader: file('src/data/terms.yaml', { parser: keyedArrayParser('term', { withOrder: true }) }),
   schema: z.object({
     term: z.string(),
+    order: z.number().int(),
+    slug: z.string().regex(/^[a-z0-9-]+$/),
+    group: z.enum(['basic', 'classification']),
+    short: z.string().min(10).max(220),
+    match: z.array(z.string()).default([]),
     use_on_site: z.boolean(),
     definition: z.string(),
     notes: z.string(),
-    proof: z.array(proof),
+    proof: z.array(proof).min(1),
+  }),
+});
+
+// «С чего начать» (/basics/): short sourced sections for a reader with no
+// religious education, in reading order.
+const basics = defineCollection({
+  loader: file('src/data/basics.yaml'),
+  schema: z.object({
+    order: z.number().int(),
+    title: z.string(),
+    points: z.array(z.string()).min(2).max(6),
+    proof: z.array(proof).min(1),
+    next: z.array(z.object({ label: z.string(), href: z.string() })).default([]),
   }),
 });
 
@@ -316,6 +341,9 @@ const analysisCard = z
   .object({
     id: z.string().regex(/^[a-z0-9-]+$/),
     title: z.string(),
+    // One plain-language sentence naming the difference, shown above the
+    // folded details; it paraphrases the card's sourced content only.
+    short: z.string().min(20).max(260),
     // The comparison topic whose column links to this card.
     topic: z.enum(TOPIC_ORDER).optional(),
     church: z.object({ text: z.string(), proof: z.array(proof) }),
@@ -346,6 +374,9 @@ const analyses = defineCollection({
       tradition: z.enum(TRADITION_IDS),
       lead: z.string(),
       authorityNote: z.string(),
+      // «Главное»: the key differences in reading order, each a paraphrase
+      // of the card it links to.
+      keyPoints: z.array(z.object({ text: z.string().min(20).max(260), card: z.string() })).min(6).max(10),
       groups: z.array(
         z.object({
           id: z.string().regex(/^[a-z0-9-]+$/),
@@ -358,6 +389,10 @@ const analyses = defineCollection({
       const ids = [...analysis.groups.map((g) => g.id), ...analysis.groups.flatMap((g) => g.cards.map((c) => c.id))];
       const duplicate = ids.find((id, index) => ids.indexOf(id) !== index);
       if (duplicate) ctx.addIssue({ code: 'custom', message: `duplicate analysis id: ${duplicate}` });
+      const cardIds = new Set(analysis.groups.flatMap((g) => g.cards.map((c) => c.id)));
+      for (const point of analysis.keyPoints) {
+        if (!cardIds.has(point.card)) ctx.addIssue({ code: 'custom', message: `key point links to a missing card: ${point.card}` });
+      }
     }),
 });
 
@@ -370,6 +405,7 @@ export const collections = {
   views,
   disputes,
   terms,
+  basics,
   topics,
   sections,
 };

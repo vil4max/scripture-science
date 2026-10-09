@@ -1,18 +1,76 @@
 ---
+// The glossary (docs/tasks/site-m34-newcomer-reading.md, outcome 2): basic
+// concepts first, then the terms the Church uses to classify other teachings.
+// Each entry keeps its plain explanation, fuller definition and sources; the
+// former `sources/#terms` list remains as the reference copy.
+import SectionPage from '../layouts/SectionPage.astro';
+import { getTerms } from '../lib/content';
 import { withBase } from '../lib/paths';
-const destination = withBase('sources/');
+
+const terms = await getTerms();
+// The index is alphabetical for lookup; the entries below keep reading order.
+const alphabetical = (entries: typeof terms) => [...entries].sort((a, b) => a.data.term.localeCompare(b.data.term, 'ru', { sensitivity: 'base' }));
+const groups = [
+  {
+    id: 'basic',
+    title: 'Основные понятия',
+    lead: 'Слова, без которых трудно читать о христианстве и других религиях.',
+    entries: terms.filter((entry) => entry.data.group === 'basic'),
+  },
+  {
+    id: 'classification',
+    title: 'Как Церковь называет другие учения',
+    lead: 'Эти слова описывают учение, а не людей: к последователям других религий Церковь призывает относиться с христианской любовью.',
+    entries: terms.filter((entry) => entry.data.group === 'classification'),
+  },
+];
 ---
-<html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>Термины и источники</title>
-    <link rel="canonical" href={`${destination}#terms`} />
-    <script is:inline define:vars={{ destination }}>
-      const target = new URL(destination, location.origin);
-      target.search = location.search;
-      target.hash = 'terms';
-      location.replace(target.href);
-    </script>
-  </head>
-  <body><p><a href={`${destination}#terms`}>Термины и источники</a></p></body>
-</html>
+<SectionPage title="Словарь" lead="Короткие объяснения слов, которые встречаются на сайте. Сначала — простое объяснение, ниже — полное определение и источник.">
+  <nav class="glossary-index" aria-label="Все термины" data-no-terms>
+    {groups.map((group) => <div>
+      <p class="index-title"><a href={`#${group.id}`}>{group.title}</a></p>
+      <ul>{alphabetical(group.entries).map((entry) => <li><a href={`#${entry.data.slug}`}>{entry.data.term}</a></li>)}</ul>
+    </div>)}
+  </nav>
+  {groups.map((group) => <section id={group.id} class="glossary-group" aria-labelledby={`${group.id}-title`} data-no-terms>
+    <h2 id={`${group.id}-title`}>{group.title}</h2>
+    <p class="group-lead">{group.lead}</p>
+    {group.entries.map((entry) => <article class="term" id={entry.data.slug}>
+      <h3>{entry.data.term}</h3>
+      <p class="plain">{entry.data.short}</p>
+      <p>{entry.data.definition}</p>
+      <p class="notes">{entry.data.notes}</p>
+      <details class="proof">
+        <summary>Источники</summary>
+        <ul>{entry.data.proof.map((source) => <li>
+          <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+        </li>)}</ul>
+      </details>
+    </article>)}
+  </section>)}
+  <p class="back"><a href={withBase('basics/')}>Христианство коротко: с чего начать →</a></p>
+</SectionPage>
+
+<style>
+  .glossary-index { display: grid; gap: 16px; max-width: var(--measure); }
+  .glossary-index ul { list-style: none; margin: 6px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 6px 14px; }
+  .glossary-index a { text-underline-offset: 3px; }
+  .index-title { margin: 0; font-weight: 700; }
+  .glossary-group { max-width: var(--measure); }
+  .group-lead { color: var(--muted); }
+  .term { border-top: 1px solid var(--line); padding: 18px 0 6px; scroll-margin-top: 24px; }
+  .term h3 { margin: 0 0 8px; font-size: 21px; }
+  .term p { line-height: 1.6; margin: 0 0 10px; }
+  .plain { font-size: 18px; font-weight: 700; }
+  .notes, .accessed { color: var(--muted); font-size: 15px; }
+  .proof { font-size: 15px; margin-bottom: 8px; }
+  .proof summary { cursor: pointer; color: var(--focus); font-weight: 700; }
+  .proof ul { padding-left: 20px; }
+  .term:target { background: color-mix(in srgb, var(--focus) 8%, transparent); }
+  @media (max-width: 760px) {
+    .glossary-index li a { display: inline-flex; align-items: center; min-height: 40px; }
+    .proof summary { min-height: 44px; display: list-item; padding: 10px 0; }
+    .proof { overflow-wrap: anywhere; font-size: 16px; }
+    .term { scroll-margin-top: 72px; }
+  }
+</style>

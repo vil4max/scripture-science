@@ -7,9 +7,11 @@ task's state.
 
 ## In progress
 
-No implementation iteration is currently open. The reading journey and
-demographic consistency work is verified; the owner authorized remote delivery
-on 2026-10-02. GitHub Actions records the publication result for each commit.
+**M34 — reading for a newcomer** (`docs/tasks/site-m34-newcomer-reading.md`,
+2026-10-09): a readable glossary with inline hints, a «С чего начать» page,
+familiar years beside Creation-era dates, explained classification labels, and
+on every tradition page a «Главное» block with one-line card summaries over
+folded details. Commits and pushes need the owner's word.
 
 ## Current baseline
 

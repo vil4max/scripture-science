@@ -1,5 +1,6 @@
 ---
 import SiteHeader from '../components/SiteHeader.astro';
+import TermHints from '../components/TermHints.astro';
 
 interface Props {
   title: string;
@@ -48,6 +49,7 @@ const pageContent = await Astro.slots.render('default');
         <Fragment set:html={pageContent} />
       </div>
     </div>
+    <TermHints />
   </body>
 </html>
 
