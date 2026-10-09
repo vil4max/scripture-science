@@ -161,8 +161,8 @@
       excerpt: "Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа"
       accessed: "2026-10-09"
   next:
-    - label: "Сходства и основные различия"
-      href: "differences/"
+    - label: "Кто такой Бог — в сравнении с другими религиями"
+      href: "compare/#topic-god"
 
 - id: church-and-sacraments
   order: 4
@@ -325,8 +325,8 @@
   next:
     - label: "Словарь"
       href: "terms/"
-    - label: "Сходства и основные различия"
-      href: "differences/"
+    - label: "Символ веры и различия"
+      href: "compare/"
 
 - id: divisions
   order: 6
@@ -472,5 +472,5 @@
       href: "terms/"
     - label: "Знакомство с религиями"
       href: "religions/"
-    - label: "Подробное сравнение"
+    - label: "Символ веры и различия"
       href: "compare/"

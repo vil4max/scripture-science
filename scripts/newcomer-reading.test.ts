@@ -42,10 +42,9 @@ test('every page carries the inline hint data and dialog once', () => {
   }
 });
 
-test('step zero is linked from the home page and the navigation', () => {
+test('«С чего начать» opens the route: the home page starts there', () => {
   const home = read('');
-  assert.match(home, /class="newcomer"/);
-  assert.ok(home.includes('/scripture-science/basics/'));
+  assert.match(home, /class="start"[^>]*href="\/scripture-science\/basics\/"|href="\/scripture-science\/basics\/"[^>]*class="start"/);
   const basics = read('basics');
   assert.ok((basics.match(/class="basics-section"/g) ?? []).length >= 5);
   assert.ok(basics.includes('class="proof"'));

@@ -4,6 +4,7 @@
 // lead and its content. `jwNote` is enabled only on the Jehovah's Witnesses
 // page, following docs/DECISIONS.md.
 import JwNote from '../components/JwNote.astro';
+import JourneyNav from '../components/JourneyNav.astro';
 import Base from './Base.astro';
 
 interface Props {
@@ -17,12 +18,14 @@ const { title, lead, jwNote = false } = Astro.props;
 
 <Base title={title} description={lead}>
   <main class="page">
+    <JourneyNav />
     <header class="page-head">
       <h1>{title}</h1>
       {lead && <p class="lead">{lead}</p>}
       <slot name="header-details" />
     </header>
     <slot />
+    <JourneyNav footer />
     {jwNote && <JwNote />}
   </main>
 </Base>

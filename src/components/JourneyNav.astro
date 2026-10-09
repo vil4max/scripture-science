@@ -1,24 +1,33 @@
 ---
+// Where this page sits on the reading route: the three parts, the steps of
+// the current part, and at the bottom the next step. Pages off the route
+// render nothing.
 import { withBase } from '../lib/paths';
-const steps = [
-  { path: 'religions/', label: 'Знакомство' },
-  { path: 'timeline/', label: 'Возникновение и история' },
-  { path: 'numbers/', label: 'Численность' },
-  { path: 'geography/', label: 'Карта' },
-  { path: 'differences/', label: 'Сходства и различия' },
-  { path: 'compare/', label: 'Подробное сравнение' },
-];
-const current = steps.findIndex((step) => Astro.url.pathname === withBase(step.path));
-const next = steps[current + 1];
+import { ROUTE, ROUTE_STEPS } from '../lib/route';
 interface Props { footer?: boolean; }
+const normalise = (p: string) => p.replace(/\/*$/, '/');
+const index = ROUTE_STEPS.findIndex((step) => normalise(withBase(step.path)) === normalise(Astro.url.pathname));
+const current = ROUTE_STEPS[index];
+const next = ROUTE_STEPS[index + 1];
 ---
-{Astro.props.footer ? next && <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее: {next.label.toLowerCase()} →</a></nav> :
-<nav class="journey" aria-label="Маршрут чтения"><ol>{steps.map((step, index) => <li><a href={withBase(step.path)} aria-current={index === current ? 'page' : undefined} data-carry-selection><span>{index + 1}</span> {step.label}</a></li>)}</ol></nav>}
+{current && (Astro.props.footer
+  ? next && <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее{next.part !== current.part && <> — часть {next.part + 1}, «{ROUTE[next.part].title}»</>}: {next.label} →</a></nav>
+  : <nav class="journey" aria-label="Маршрут чтения">
+      <ol class="parts">{ROUTE.map((part, partIndex) => <li><a href={withBase(part.steps[0].path)} aria-current={partIndex === current.part ? 'step' : undefined} data-carry-selection><span>{partIndex + 1}</span> {part.title}</a></li>)}</ol>
+      {ROUTE[current.part].steps.length > 1 && <ol class="steps">{ROUTE[current.part].steps.map((step) => <li><a href={withBase(step.path)} aria-current={step.path === current.path ? 'page' : undefined} data-carry-selection>{step.label}</a></li>)}</ol>}
+    </nav>)}
 <style>
-  ol { display: flex; flex-wrap: wrap; gap: 4px 18px; list-style: none; padding: 0; margin: 0; }
+  ol { display: flex; flex-wrap: wrap; list-style: none; padding: 0; margin: 0; }
   a { display: inline-flex; gap: 6px; align-items: center; min-height: 44px; text-underline-offset: 4px; }
-  .journey { padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
-  .journey a { color: var(--muted); } .journey a[aria-current='page'] { color: var(--focus); font-weight: 700; }
-  span { font-variant-numeric: tabular-nums; }
+  .journey { display: grid; gap: 4px; padding-bottom: 12px; border-bottom: 1px solid var(--line); font-size: 15px; }
+  .journey a { text-decoration: none; } .journey a:hover { text-decoration: underline; }
+  .parts { gap: 0 18px; }
+  .parts a { color: var(--muted); }
+  .parts a[aria-current='step'] { color: var(--ink); font-weight: 700; }
+  .parts span { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--line); font-size: 13px; font-variant-numeric: tabular-nums; }
+  .parts a[aria-current='step'] span { border-color: var(--focus); color: var(--focus); }
+  .steps { gap: 0 4px; }
+  .steps a { padding: 0 10px; border-radius: 8px; color: var(--muted); }
+  .steps a[aria-current='page'] { color: var(--ink); font-weight: 700; background: color-mix(in srgb, var(--ink) 8%, transparent); }
   .next { border-top: 1px solid var(--line); padding-top: 20px; }
 </style>

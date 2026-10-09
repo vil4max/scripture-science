@@ -1,32 +1,26 @@
 ---
 import { withBase } from '../lib/paths';
 import { HOME_SECTION_TARGETS } from '../lib/homeSections';
+import { ROUTE } from '../lib/route';
 import SectionPage from '../layouts/SectionPage.astro';
-const chapters = [
-  { path: 'religions/', title: 'Знакомство с религиями', text: 'Кто есть кто, что традиции говорят о себе и какие исторические связи их соединяют.' },
-  { path: 'timeline/', title: 'Возникновение и развитие', text: 'Как складывались религии и движения, что происходило раньше и в какой исторической среде.' },
-  { path: 'numbers/', title: 'Современный религиозный мир', text: 'Масштабы религий и внутренний состав христианства — в понятных числах.' },
-  { path: 'geography/', title: 'Религии на карте', text: 'Где живут их последователи и как различается состав стран.' },
-  { path: 'differences/', title: 'Сходства и основные различия', text: 'Общие корни и понятия, разные источники авторитета и разные ответы на главные вопросы.' },
-  { path: 'compare/', title: 'Подробное сравнение', text: 'Учение Православной Церкви, позиция другой традиции и православный ответ — по темам.' },
-];
 ---
-<SectionPage title="Православный взгляд на религии мира" lead="От первого знакомства — к пониманию истории, связей и различий.">
+<SectionPage title="Православный взгляд на религии мира" lead="Три части: основа православной веры, знакомство с религиями мира и сравнение по Символу веры.">
   <section id="foundation" aria-labelledby="foundation-title">
     <h2 id="foundation-title">Откуда мы смотрим</h2>
-    <p>Сайт исходит из истинности православной веры. Начнём с общей картины: познакомимся с религиями, увидим их исторические связи, сходства и различия. Затем перейдём к вопросам, которые требуют внимательного разбора.</p>
-    <p>Православное учение служит основанием сравнения. Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как устроен разбор</a>.</p>
-    <a class="start" href={withBase('religions/')} data-carry-selection>Начать знакомство →</a>
+    <p>Сайт исходит из истинности православной веры. Поэтому маршрут начинается с её основы, затем знакомит с религиями мира — кто есть кто, история, численность, карта — и заканчивается сравнением: по каждому члену Символа веры — что говорят другие религии.</p>
+    <p>Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как устроен разбор</a>.</p>
+    <a class="start" href={withBase(ROUTE[0].steps[0].path)} data-carry-selection>Начать с основы →</a>
+    <p class="tip">Трудные слова подчёркнуты пунктиром: нажмите на слово, чтобы увидеть простое объяснение. Все объяснения собраны в <a href={withBase('terms/')} data-carry-selection>словаре</a>.</p>
   </section>
-  <aside class="newcomer" aria-labelledby="newcomer-title">
-    <h2 id="newcomer-title">Впервые читаете о христианстве?</h2>
-    <p>Начните с пяти минут: кто такой Христос, что такое Библия, Церковь и Таинства и почему христиане разделились. <a href={withBase('basics/')} data-carry-selection>Христианство коротко →</a></p>
-    <p>Трудные слова подчёркнуты пунктиром: нажмите на слово, чтобы увидеть простое объяснение. Все объяснения собраны в <a href={withBase('terms/')} data-carry-selection>словаре</a>.</p>
-  </aside>
-  <section aria-labelledby="chapters-title"><h2 id="chapters-title">Маршрут чтения</h2>
-    <ol class="chapters">{chapters.map((chapter) => <li><a href={withBase(chapter.path)} data-carry-selection>{chapter.title}</a><p>{chapter.text}</p></li>)}</ol>
+  <section aria-labelledby="route-title"><h2 id="route-title">Маршрут чтения</h2>
+    <ol class="route">{ROUTE.map((part, partIndex) => (
+      <li class="part">
+        <h3><span>{partIndex + 1}</span>{part.title}</h3>
+        <ul>{part.steps.map((step) => <li><a href={withBase(step.path)} data-carry-selection>{step.label}</a><p>{step.text}</p></li>)}</ul>
+      </li>
+    ))}</ol>
   </section>
-  <p class="direct">Уже есть конкретный вопрос? <a href={withBase('search/')} data-carry-selection>Найти разбор</a>. Основание для углублённого чтения — <a href={withBase('orthodoxy/')} data-carry-selection>православное учение по темам</a>.</p>
+  <p class="direct">Уже есть конкретный вопрос? <a href={withBase('search/')} data-carry-selection>Найти разбор</a>.</p>
   {Object.entries(HOME_SECTION_TARGETS).map(([id, target]) => <p id={id} class="legacy-target">Раздел перенесён: <a href={withBase(target)} data-carry-selection>открыть на отдельной странице →</a></p>)}
 </SectionPage>
 <script>
@@ -44,17 +38,17 @@ const chapters = [
 </script>
 <style>
   #foundation { max-width: 78ch; border-left: 4px solid var(--t-orthodoxy); padding-left: 24px; }
-  .newcomer { max-width: 78ch; padding: 18px 22px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
-  .newcomer h2 { margin: 0 0 8px; font-size: 21px; }
-  .newcomer p { margin: 8px 0 0; line-height: 1.6; }
-  .newcomer a { font-weight: 700; }
   .start { display: inline-flex; min-height: 48px; align-items: center; padding: 8px 20px; border: 1px solid var(--focus); border-radius: 8px; margin-top: 8px; font-weight: 700; }
-  .chapters { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px 28px; padding: 0; list-style: none; counter-reset: chapter; }
-  .chapters li { counter-increment: chapter; padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
-  .chapters a { font-size: 20px; font-weight: 700; text-underline-offset: 4px; }
-  .chapters a::before { content: counter(chapter) '. '; color: var(--muted); }
-  .chapters p { margin: 10px 0 0; font-size: 16px; color: var(--muted); }
+  .tip { color: var(--muted); font-size: 16px; }
+  /* The route: three numbered parts, each a card listing its pages. */
+  .route { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; padding: 0; margin: 0; list-style: none; }
+  .part { padding: 18px; background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .part h3 { display: flex; align-items: center; gap: 10px; margin: 0 0 8px; font-size: 21px; }
+  .part h3 span { display: inline-grid; place-items: center; width: 30px; height: 30px; border-radius: 50%; border: 1px solid var(--focus); color: var(--focus); font-size: 15px; font-variant-numeric: tabular-nums; }
+  .part ul { display: grid; gap: 12px; padding: 0; margin: 0; list-style: none; }
+  .part a { display: inline-flex; min-height: 32px; align-items: center; font-size: 18px; font-weight: 700; text-underline-offset: 4px; }
+  .part p { margin: 2px 0 0; font-size: 15px; color: var(--muted); }
   .direct { max-width: 78ch; }
   .legacy-target { display: none; } .legacy-target:target { display: block; }
-  @media (max-width: 760px) { .chapters { grid-template-columns: minmax(0, 1fr); } #foundation { padding-left: 16px; } }
+  @media (max-width: 760px) { #foundation { padding-left: 16px; } }
 </style>

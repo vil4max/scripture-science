@@ -1,26 +1,14 @@
 ---
-// The reading route goes from introduction to history and present-day data;
-// detailed questions remain directly accessible from the same mobile menu.
+// The menu is the reading route (owner, 2026-10-09: on the iPhone the menu
+// was confusing, had no roadmap and showed the comparison twice): three
+// numbered parts in reading order, each religion's own page under the
+// comparison, and the reference pages apart at the bottom.
 import ThemeSwitch from './ThemeSwitch.astro';
 import { getOrderedMatrix } from '../lib/content';
 import { withBase } from '../lib/paths';
+import { ROUTE } from '../lib/route';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 
-// Orthodoxy is the site's foundation, so it has its own item; the other
-// traditions' pages open from the introduction and comparison
-// (owner, 2026-10-01).
-const sections = [
-  { path: '', label: 'Начало' },
-  { path: 'basics/', label: 'С чего начать' },
-  { path: 'religions/', label: 'Знакомство с религиями' },
-  { path: 'timeline/', label: 'Возникновение и история' },
-  { path: 'numbers/', label: 'Мир в цифрах' },
-  { path: 'geography/', label: 'Религии на карте' },
-  { path: 'differences/', label: 'Сходства и различия' },
-  { path: 'orthodoxy/', label: 'Православная вера' },
-  { path: 'compare/', label: 'Подробное сравнение' },
-  { path: 'bible/', label: 'Священное Писание' },
-];
 // The pages of the other traditions, by age, in short names (owner,
 // 2026-10-01: they need a way in from the menu). Each page holds that
 // tradition's detailed analysis.
@@ -35,74 +23,69 @@ const religions = (await getOrderedMatrix())
     label: SHORT_NAMES[tradition.id] ?? tradition.data.name,
     color: TRADITION_COLOR_TOKEN[tradition.data.id],
   }));
-// Reference pages sit at the bottom of the sidebar (owner, 2026-09-26:
-// «глоссарий источники это доп инфо которую можно опустить вниз»).
+// Reference pages sit at the bottom (owner, 2026-09-26: «глоссарий источники
+// это доп инфо которую можно опустить вниз»).
 const reference = [
   { path: 'reading/', label: 'Как читать сравнение' },
   { path: 'terms/', label: 'Словарь' },
   { path: 'sources/', label: 'Источники' },
 ];
 
-// Compare paths with one trailing slash, so "/religion-map" and
-// "/religion-map/" both mark the homepage as current.
+// Compare paths with one trailing slash, so "/scripture-science" and
+// "/scripture-science/" both mark the homepage as current.
 const normalise = (p: string) => p.replace(/\/*$/, '/');
 const here = normalise(Astro.url.pathname);
-// The detailed pair documents are part of «Сравнение»
-// (owner, 2026-09-26: one comparison section).
+// The retired pair documents are part of the comparison.
 const isCurrent = (path: string) =>
   normalise(withBase(path)) === here ||
   (path === 'compare/' && here.startsWith(normalise(withBase('pairs/'))));
+const last = ROUTE.length - 1;
 ---
 
 <aside class="site-side">
   <div class="side-inner">
-    <a class="search-link" href={withBase('search/')} data-carry-selection>Найти вопрос</a>
     <a class="brand" href={withBase()}>Православный взгляд на религии мира</a>
-    <button class="menu-toggle" type="button" aria-controls="site-sections site-religions site-reference site-theme" aria-expanded="true" hidden>Меню</button>
-    <div id="site-sections" class="site-nav" role="navigation" aria-label="Разделы сайта">
-      <ul>
-        {
-          sections.map((s) => (
-            <li>
-              <a href={withBase(s.path)} aria-current={isCurrent(s.path) ? 'page' : undefined} data-carry-selection>
-                {s.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div id="site-religions" class="religions site-nav" role="navigation" aria-label="Религии">
-      <p class="group-label">Религии</p>
-      <ul>
-        {
-          religions.map((r) => (
-            <li>
-              <a href={withBase(r.path)} aria-current={isCurrent(r.path) ? 'page' : undefined} data-carry-selection>
-                <span class="chip" style={`background:var(${r.color})`} aria-hidden="true" />
-                {r.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div id="site-reference" class="reference site-nav" role="navigation" aria-label="Термины и источники">
-      <ul>
-        {
-          reference.map((s) => (
-            <li>
-              <a href={withBase(s.path)} aria-current={isCurrent(s.path) ? 'page' : undefined} data-carry-selection>
-                {s.label}
-              </a>
-            </li>
-          ))
-        }
-      </ul>
-    </div>
-    <div id="site-theme" class="theme">
-      <ThemeSwitch />
-    </div>
+    <a class="search-link" href={withBase('search/')} data-carry-selection>Найти вопрос</a>
+    <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="true" hidden>Меню</button>
+    <nav id="site-menu" class="site-menu" aria-label="Разделы сайта">
+      <a class="home" href={withBase()} aria-current={isCurrent('') ? 'page' : undefined} data-carry-selection>Главная</a>
+      <ol class="parts">
+        {ROUTE.map((part, partIndex) => (
+          <li class="part">
+            <p class="part-title"><span class="part-number">{partIndex + 1}</span>{part.title}</p>
+            <ul class="steps">
+              {part.steps.map((step) => (
+                <li><a href={withBase(step.path)} aria-current={isCurrent(step.path) ? 'page' : undefined} data-carry-selection>{step.label}</a></li>
+              ))}
+            </ul>
+            {partIndex === last && (
+              <>
+                <p class="sub-title">Каждая религия подробно</p>
+                <ul class="religions">
+                  {religions.map((r) => (
+                    <li>
+                      <a href={withBase(r.path)} aria-current={isCurrent(r.path) ? 'page' : undefined} data-carry-selection>
+                        <span class="chip" style={`background:var(${r.color})`} aria-hidden="true" />
+                        {r.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </>
+            )}
+          </li>
+        ))}
+      </ol>
+      <div class="reference">
+        <p class="sub-title">Справка</p>
+        <ul>
+          {reference.map((s) => (
+            <li><a href={withBase(s.path)} aria-current={isCurrent(s.path) ? 'page' : undefined} data-carry-selection>{s.label}</a></li>
+          ))}
+        </ul>
+      </div>
+      <div class="theme"><ThemeSwitch /></div>
+    </nav>
   </div>
 </aside>
 
@@ -111,7 +94,7 @@ const isCurrent = (path: string) =>
   getSelection();
   const sidebar = document.querySelector<HTMLElement>('.site-side')!;
   const toggle = sidebar.querySelector<HTMLButtonElement>('.menu-toggle')!;
-  const narrow = matchMedia('(max-width: 760px)');
+  const narrow = matchMedia('(max-width: 999px)');
   const setOpen = (open: boolean) => {
     sidebar.dataset.menuOpen = String(open);
     toggle.setAttribute('aria-expanded', String(open));
@@ -134,11 +117,9 @@ const isCurrent = (path: string) =>
   .side-inner {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
     padding: 24px 20px;
   }
-
-  .search-link { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; text-decoration: none; }
 
   .brand {
     font-family: 'PT Serif', Georgia, serif;
@@ -148,7 +129,11 @@ const isCurrent = (path: string) =>
     text-decoration: none;
   }
 
-  .site-nav ul {
+  .search-link { padding: 8px 12px; border: 1px solid var(--line); border-radius: 8px; font-size: 16px; text-decoration: none; }
+
+  .site-menu { display: grid; gap: 14px; }
+
+  .site-menu ul, .parts {
     margin: 0;
     padding: 0;
     list-style: none;
@@ -156,9 +141,14 @@ const isCurrent = (path: string) =>
     gap: 2px;
   }
 
-  .site-nav a {
-    display: block;
-    padding: 8px 12px;
+  .parts { gap: 14px; }
+
+  .site-menu a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 40px;
+    padding: 6px 12px;
     border-radius: 8px;
     text-decoration: none;
     color: var(--muted);
@@ -166,26 +156,45 @@ const isCurrent = (path: string) =>
     line-height: 1.3;
   }
 
-  .site-nav a:hover {
+  .site-menu a:hover {
     color: var(--ink);
     background: color-mix(in srgb, var(--ink) 6%, transparent);
   }
 
-  .site-nav a[aria-current='page'] {
+  .site-menu a[aria-current='page'] {
     color: var(--ink);
     font-weight: 700;
     background: color-mix(in srgb, var(--ink) 10%, transparent);
   }
 
-  /* The religions group: a small label over a flat list with a colour dot
-  per tradition, no nesting. */
-  .religions {
-    border-top: 1px solid var(--line);
-    padding-top: 12px;
+  /* A part: its number and title as a heading, its pages indented under
+  it, so the menu reads as the route 1 → 2 → 3. */
+  .part-title {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 0 0 4px;
+    padding: 0 12px;
+    font-weight: 700;
+    color: var(--ink);
   }
 
-  .group-label {
-    margin: 0 0 6px;
+  .part-number {
+    display: inline-grid;
+    place-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: 1px solid var(--focus);
+    color: var(--focus);
+    font-size: 13px;
+    font-variant-numeric: tabular-nums;
+  }
+
+  .site-menu .steps { margin-left: 22px; border-left: 1px solid var(--line); padding-left: 6px; }
+
+  .sub-title {
+    margin: 10px 0 4px;
     padding: 0 12px;
     font-size: 12px;
     font-weight: 700;
@@ -194,13 +203,8 @@ const isCurrent = (path: string) =>
     color: var(--muted);
   }
 
-  .religions a {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 15px;
-    padding: 6px 12px;
-  }
+  .site-menu .religions { margin-left: 22px; padding-left: 6px; }
+  .religions a { font-size: 15px; }
 
   .chip {
     width: 10px;
@@ -209,26 +213,10 @@ const isCurrent = (path: string) =>
     flex: none;
   }
 
-  /* Terms and sources sit apart at the bottom, under a thin rule, with no
-  heading and no nesting (owner, 2026-09-26). */
-  .reference {
-    border-top: 1px solid var(--line);
-    padding-top: 12px;
-  }
-
-  .reference a {
-    font-size: 13px;
-    color: var(--muted);
-    padding: 8px;
-  }
-
-  .reference a[aria-current='page'] {
-    color: var(--muted);
-    font-weight: 400;
-    background: none;
-    text-decoration: underline;
-    text-underline-offset: 3px;
-  }
+  /* Terms and sources sit apart at the bottom, under a thin rule (owner,
+  2026-09-26). */
+  .reference { border-top: 1px solid var(--line); padding-top: 4px; }
+  .reference a { font-size: 14px; }
 
   /* Desktop: a fixed column the height of the window, beside the page. */
   @media (min-width: 1000px) {
@@ -238,65 +226,22 @@ const isCurrent = (path: string) =>
       height: 100vh;
       overflow-y: auto;
     }
-
-    .reference {
-      margin-top: auto;
-    }
-
-    .side-inner {
-      min-height: 100%;
-    }
   }
 
-  /* Narrower windows: a top bar with the same links in one wrapping row. */
+  /* Phones and tablets: a top bar with the title, search and a menu button
+  that opens the same route. */
   @media (max-width: 999px) {
-    .site-side {
-      border-right: none;
-      border-bottom: 1px solid var(--line);
-    }
-
-    .side-inner {
-      flex-direction: row;
-      flex-wrap: wrap;
-      align-items: center;
-      padding: 12px 16px;
-      gap: 8px 16px;
-    }
-
-    .site-nav ul {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 2px 4px;
-    }
-
-    /* Still a rule, not a heading or a nested menu (owner, 2026-09-26: «не
-    усложняй вложением») - just turned to match the row: a left border
-    instead of a top one, so terms/sources keep reading as extra material
-    next to the main sections, not one more section. */
-    .reference,
-    .religions {
-      border-top: none;
-      padding-top: 0;
-      border-left: 1px solid var(--line);
-      padding-left: 16px;
-    }
-
-    .group-label {
-      display: none;
-    }
-  }
-
-  @media (max-width: 760px) {
+    .site-side { border-right: none; border-bottom: 1px solid var(--line); }
     .side-inner { display: grid; grid-template-columns: minmax(0, 1fr) auto; padding: 16px; gap: 10px; }
-    .brand { grid-column: 1 / -1; grid-row: 1; font-size: 20px; }
-    .search-link { grid-column: 1; grid-row: 2; min-height: 44px; display: flex; align-items: center; }
-    .menu-toggle { grid-column: 2; grid-row: 2; min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 8px; font: inherit; color: var(--ink); background: var(--bg); }
+    .brand { grid-column: 1 / -1; }
+    .search-link { grid-column: 1; min-height: 44px; display: flex; align-items: center; }
+    .menu-toggle { grid-column: 2; min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 8px; font: inherit; color: var(--ink); background: var(--bg); }
     .menu-toggle[hidden] { display: none; }
-    .site-nav, .theme { grid-column: 1 / -1; }
-    .site-nav ul { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 4px; }
-    .site-nav a { min-height: 44px; display: flex; align-items: center; }
-    .religions, .reference { border-left: 0; border-top: 1px solid var(--line); padding: 8px 0 0; }
-    .site-side[data-menu-open='false'] .site-nav, .site-side[data-menu-open='false'] .theme { display: none; }
+    .site-menu { grid-column: 1 / -1; padding-top: 6px; }
+    .site-menu a { min-height: 44px; }
+    .site-menu .religions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .reference ul { display: flex; flex-wrap: wrap; gap: 0 4px; }
+    .site-side[data-menu-open='false'] .site-menu { display: none; }
     .theme :global(button) { min-height: 44px; }
   }
 </style>
