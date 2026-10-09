@@ -11,7 +11,8 @@ task's state.
 2026-10-09): a readable glossary with inline hints, a «С чего начать» page,
 familiar years beside Creation-era dates, explained classification labels, and
 on every tradition page a «Главное» block with one-line card summaries over
-folded details. Commits and pushes need the owner's word.
+folded details. Implemented and verified; the owner authorized committing
+and pushing on 2026-10-09. GitHub Actions records the publication result.
 
 ## Current baseline
 

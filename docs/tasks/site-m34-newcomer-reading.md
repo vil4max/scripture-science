@@ -1,6 +1,6 @@
 # M34 — reading for a newcomer without religious education
 
-State: implemented and verified locally; not committed
+State: implemented and verified; the owner authorized committing and pushing on 2026-10-09
 
 ## Authorization and scope
 
