@@ -22,11 +22,10 @@ const sections = (await getCollection('basics')).sort((a, b) => a.data.order - b
       </li>)}</ul>
     </details>
   </section>)}
-  <p class="continue"><a href={withBase('religions/')} data-carry-selection>Дальше: знакомство с религиями →</a></p>
 </SectionPage>
 
 <style>
-  .basics-contents, .basics-section, .continue { max-width: var(--measure); }
+  .basics-contents, .basics-section { max-width: var(--measure); }
   .basics-contents ol { margin: 0; padding-left: 22px; display: grid; gap: 6px; }
   .basics-section { scroll-margin-top: 24px; }
   .basics-section h2 { display: flex; gap: 12px; align-items: baseline; }
@@ -37,7 +36,6 @@ const sections = (await getCollection('basics')).sort((a, b) => a.data.order - b
   .proof summary { cursor: pointer; color: var(--focus); font-weight: 700; }
   .proof ul { padding-left: 20px; }
   .accessed { color: var(--muted); }
-  .continue { font-size: 18px; font-weight: 700; }
   @media (max-width: 760px) {
     .basics-contents a, .next a { display: inline-flex; align-items: center; min-height: 40px; }
     .proof summary { min-height: 44px; display: list-item; padding: 10px 0; }
