@@ -6,6 +6,7 @@ import { withBase } from '../lib/paths';
 import { type CollectionEntry } from 'astro:content';
 import TraditionImage from './TraditionImage.astro';
 import GovernanceDiagram from './GovernanceDiagram.astro';
+import { GOVERNANCE_TRADITIONS } from '../lib/governance';
 import AnalysisCard from './AnalysisCard.astro';
 import Dispute from './Dispute.astro';
 import OrthodoxAssessment from './OrthodoxAssessment.astro';
@@ -167,8 +168,8 @@ const showsJwNote = tradition.id === 'jw';
     })}
   </section>
   )}
-  <section id="disputes-title" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>
-  <section id="views-title" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
+  {GOVERNANCE_TRADITIONS.includes(tradition.id) && <section id="governance" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>}
+  <section id="sources-and-relations" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
 
 </SectionPage>
 

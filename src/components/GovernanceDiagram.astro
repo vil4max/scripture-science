@@ -1,10 +1,11 @@
 ---
 import { getOrderedMatrix } from '../lib/content';
+import { GOVERNANCE_TRADITIONS } from '../lib/governance';
 interface Props { tradition: string; }
 const { tradition } = Astro.props;
 const entry = (await getOrderedMatrix()).find((t) => t.id === tradition);
 const position = entry?.data.positions.find((p) => p.topic === 'organisation');
-const supported = ['orthodoxy','jw'].includes(tradition);
+const supported = GOVERNANCE_TRADITIONS.includes(tradition);
 // The order of the Azbyka scheme (https://azbyka.ru/shemy/pomestnye-pravoslavnye-cerkvi.shtml, 2026-10-01).
 const LOCAL_CHURCHES = [
   'Константинопольская', 'Александрийская', 'Антиохийская', 'Иерусалимская', 'Русская', 'Грузинская', 'Сербская', 'Румынская',
