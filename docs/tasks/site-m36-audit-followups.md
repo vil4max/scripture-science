@@ -1,8 +1,10 @@
 # M36 — site audit follow-ups (handoff)
 
-State: audit done and verified (2026-10-10); a first batch of quick fixes is
-committed locally, not published; the rest is the plan below. Publishing
-waits for the owner's word.
+State: audit done and verified (2026-10-10); the first batch of quick fixes is
+published (3ef46e3, owner: «Да делай»); the governance-section fix is
+committed locally (f5ffcd7), not published; work paused on the owner's
+instruction until the weekly limit resets (Mon 2026-10-13 07:00). The rest is
+the plan below. Publishing waits for the owner's word.
 
 ## Authorization and scope
 
@@ -55,8 +57,10 @@ Quick (S), in this order:
 1. Classification badges show their authority; rewrite the JW badge as an
    assessment with its real basis; LDS basis from the 1994 Bishops' Council
    act; glossary shorts «псевдохристианские», «секта» (G2-1, G2-2, G2-6, G2-7).
-2. Remove the empty «Церковное устройство и практика» section on six tradition
-   pages (V1-1, V2-1, S1-20).
+2. Done locally (f5ffcd7): the governance section shows only for the
+   Orthodox Church and Jehovah's Witnesses (V1-1, S1-20). Next: basics/ has a
+   second hard-coded «Дальше: знакомство с религиями» (src/pages/basics.astro:25)
+   that contradicts the route footer — remove it (S1-3).
 3. Attribute Russian Church practice as such: fast before Communion per the
    ROC 2016 document with its exceptions, reception rites, «в приходах Русской
    Церкви», «обычно» instead of «минимум» (G3-1, G3-4, G3-7, G3-12), and the
