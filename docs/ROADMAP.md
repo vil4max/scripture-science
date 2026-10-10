@@ -7,6 +7,12 @@ task's state.
 
 ## In progress
 
+**M36 — site audit follow-ups** (`docs/tasks/site-m36-audit-followups.md`,
+2026-10-10): 307 verified findings on terminology, visuals, navigation,
+content, sources and accessibility; a first batch of quick fixes is committed
+locally, publishing waits for the owner's word; the brief holds the plan and
+the owner decisions needed.
+
 **Three-part reading route** (`docs/DECISIONS.md`, 2026-10-09): one route —
 «Основа», «Религии мира», «Сравнение» — in the menu, on the homepage and in a
 route bar on each page; «Сходства и различия» forwards to the comparison.
