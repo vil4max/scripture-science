@@ -38,7 +38,14 @@ test('every difference line that mentions the Church names the Orthodox Church',
     ...assessments.map((record) => [record.id, record.difference]),
     ...extras.flatMap((entry) => Object.entries(entry.traditions).map(([tradition, side]) => [`${entry.id}/${tradition}`, side.difference])),
   ];
-  for (const [id, line] of lines) if (/Церк/.test(line)) assert.match(line, /Православн/, id);
+  // The line as a whole may still name it once and say «Церковь» later; these
+  // subject positions are where a bare «Церковь» reads as the other side's
+  // church (site audit 2026-10-10, T1-3). The word itself is discussed in
+  // «Как себя называют», so it is not banned outright.
+  for (const [id, line] of lines) {
+    if (/Церк/.test(line)) assert.match(line, /Православн/, id);
+    assert.doesNotMatch(line, /(?:, а|;|—) Церковь |(?<!Православная )Церковь не принимает|(?<!Православной )в Церкви\./, `${id}: ${line}`);
+  }
   // A bulk rename once dropped the space after the word.
   for (const file of ['src/data/orthodox-assessments.json', 'src/data/extra-questions.yaml']) {
     assert.doesNotMatch(readFileSync(file, 'utf8'), /Церковь(?!ю)[а-яё]/, file);

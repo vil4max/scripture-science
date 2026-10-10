@@ -26,8 +26,11 @@ const hints = (await getTerms())
   interface Hint { term: string; short: string; href: string; match: string[] }
 
   // Text in these places is never annotated: navigation and controls, headings,
-  // quotations and source lists, and anything already annotated.
-  const SKIP = 'a, button, summary, h1, h2, h3, h4, h5, h6, nav, header, script, style, svg, blockquote, q, cite, details.proof, .accessed, .term-hint, .term-hint-pop, [data-no-terms]';
+  // quotations and source lists, and anything already annotated. Hidden blocks,
+  // captions and another tradition's own teaching are skipped too: the glossary
+  // gives Orthodox definitions, which must not land on another church's name
+  // (site audit 2026-10-10, T1-2, S2-3).
+  const SKIP = 'a, button, summary, h1, h2, h3, h4, h5, h6, nav, header, script, style, svg, blockquote, q, cite, details.proof, .accessed, .term-hint, .term-hint-pop, [data-no-terms], [hidden], figcaption, select, option, label, .side.tradition';
   const LETTER = String.raw`[\p{L}\p{N}]`;
 
   const annotate = () => {

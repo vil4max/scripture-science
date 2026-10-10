@@ -320,6 +320,14 @@ const PARTS = page === 'worship'
       root.dataset.chosen = chosen;
       pairs.forEach((pair) => { pair.hidden = pair.dataset.trad !== chosen; });
       picks.forEach((pick) => pick.setAttribute('aria-pressed', String(pick.dataset.pick === chosen)));
+      // On a phone the chooser scrolls sideways; keep the chosen religion in
+      // view (the default, Jehovah's Witnesses, is the last chip).
+      const pressed = picks.find((pick) => pick.dataset.pick === chosen);
+      const picker = pressed?.parentElement;
+      if (pressed && picker && narrow.matches) {
+        const box = picker.getBoundingClientRect(), chip = pressed.getBoundingClientRect();
+        picker.scrollLeft += chip.left - box.left - (box.width - chip.width) / 2;
+      }
       if (!chosen) setView('all', false);
     });
     setView(new URLSearchParams(location.search).get('view') === 'all' || !getSelection()[1] ? 'all' : 'one', false);

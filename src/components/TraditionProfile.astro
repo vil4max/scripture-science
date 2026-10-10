@@ -87,7 +87,7 @@ const showsJwNote = tradition.id === 'jw';
   <TraditionImage id={tradition.id === 'orthodoxy' ? 'orthodoxy-all-saints' : tradition.id} />
   <section class="profile-section" aria-labelledby="chronology-title">
     <h2 id="chronology-title">Хронология</h2>
-    {selfView && <aside>
+    {selfView && <aside data-no-terms>
       <h3>Как традиция понимает своё происхождение</h3>
       <p>{selfView.summary}</p>
       {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatHistoricalYear(gap.from)}–{formatHistoricalYear(gap.to)}: {gap.label}.</p>)}
