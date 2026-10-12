@@ -81,7 +81,12 @@ Medium (M):
   work titles by URL prefix (S4-1, S4-2, T3-2, S4-15).
 - Group sources on compare/ and worship/ by URL and by side (S4-3, S4-4, S3-3).
 - Search covers the compare/ and worship/ questions, prayers and glossary
-  (S1-1, S2-12, S3-5).
+  (S1-1, S2-12, S3-5). Owner, 2026-10-12: search did not work for him on the
+  iPhone and should find by word («душа» for Jehovah's Witnesses); weigh
+  keeping it against simpler links. Checked the same day on the live site and
+  at 375 px: «душа свидетели» finds «Душа и смерть» (the earlier failure fits
+  glossary hints inside the form, fixed in 3ef46e3). Recommendation: keep the
+  client-side search, add these questions and lighten the page (0.9 MB).
 - Tradition pages get the route bar and an end block (S1-2, S1-5).
 - A head flag (`html.js`) so menus and contents do not flash open (V3-2,
   S1-12, S3-15); timeline readable on a phone without `scaleX` (V1-7, V2-4).
