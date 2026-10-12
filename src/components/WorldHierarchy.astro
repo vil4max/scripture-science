@@ -1,11 +1,15 @@
 ---
 import composition from '../data/world-composition.json';
 import population from '../data/world-countries.json';
+import wcd from '../data/world-hierarchy-2026.json';
 import { atlasView, formatShare, WORLD_COLORS } from '../lib/worldAtlas';
 import { withBase } from '../lib/paths';
 const world = atlasView('religions');
 const christian = atlasView('christian');
 const populationCount = (population.countries.reduce((sum, country) => sum + country.total, 0) / 1e9).toFixed(2).replace('.', ',');
+// Counts per branch from the separate WCD 2026 dataset (owner, 2026-10-12: the
+// number of Orthodox Christians, not only a share); its branches overlap.
+const people = (count: number) => count >= 1e9 ? `${(count / 1e9).toFixed(2).replace('.', ',')} млрд` : `${Math.round(count / 1e6)} млн`;
 ---
 <section id="world" aria-labelledby="hierarchy-title">
   <h2 id="hierarchy-title">Мир религий в целом</h2>
@@ -27,6 +31,9 @@ const populationCount = (population.countries.reduce((sum, country) => sum + cou
     <dt><span class="chip" style={`background:var(${WORLD_COLORS[row.id]})`} aria-hidden="true"/>{row.label}</dt>
     <dd><span class="track" aria-hidden="true"><span style={`width:${row.share}%;background:var(${WORLD_COLORS[row.id]})`}/></span><strong>{formatShare(row.share)}</strong></dd>
   </div>)}</dl>
+  <h3 id="christian-counts">Сколько это людей</h3>
+  <ul class="branch-counts">{wcd.branches.map((branch) => <li data-group={branch.id}><span class="chip" style={`background:var(${branch.color})`} aria-hidden="true"/>{branch.label}: <strong>≈ {people(branch.count)}</strong></li>)}</ul>
+  <p class="note">Численность — по World Christian Database на {wcd.year} год, другой оценке, чем доли Pew выше. Сумма больше числа всех христиан ({people(wcd.groups.find((group) => group.id === 'christians')!.count)}): часть людей учтена в двух направлениях. <a href={withBase('sources/#world-methodology')} data-carry-selection>Источник и способ подсчёта</a>.</p>
   <p class="note">Pew объединяет православных и древневосточные церкви в одну статистическую категорию. Это не утверждение об их церковном единстве. В «другие христианские направления» входят группы, называющие себя христианскими; православная оценка их учения дана в разборах.</p>
   <p><a href={withBase('geography/')} data-carry-selection>Посмотреть распространение на карте →</a></p>
 </section>
@@ -49,5 +56,7 @@ const populationCount = (population.countries.reduce((sum, country) => sum + cou
   dt { margin-bottom: 8px; } dd { display: grid; grid-template-columns: minmax(0, 1fr) 80px; align-items: center; gap: 16px; margin: 0; }
   dd strong { text-align: right; font-variant-numeric: tabular-nums; }
   .note { font-size: 15px; color: var(--muted); }
+  h3 { margin: 28px 0 10px; font-size: 20px; }
+  .branch-counts { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; font-size: 17px; }
   @media (max-width: 760px) { th, td { padding: 12px 4px; font-size: 16px; } th:first-child { width: auto; } .figure { font-size: 30px; } }
 </style>
