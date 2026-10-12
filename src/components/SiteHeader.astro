@@ -42,12 +42,13 @@ const isCurrent = (path: string) =>
 const last = ROUTE.length - 1;
 ---
 
-<aside class="site-side">
+<aside class="site-side" data-menu-open="false">
   <div class="side-inner">
     <a class="brand" href={withBase()}>Православный взгляд на религии мира</a>
     <a class="search-link" href={withBase('search/')} data-carry-selection>Найти вопрос</a>
     <button class="menu-toggle" type="button" aria-controls="site-menu" aria-expanded="true" hidden>Меню</button>
     <nav id="site-menu" class="site-menu" aria-label="Разделы сайта">
+      <div class="drawer-head"><span>Разделы сайта</span><button class="menu-close" type="button">Закрыть</button></div>
       <a class="home" href={withBase()} aria-current={isCurrent('') ? 'page' : undefined} data-carry-selection>Главная</a>
       <ol class="parts">
         {ROUTE.map((part, partIndex) => (
@@ -86,24 +87,45 @@ const last = ROUTE.length - 1;
       </div>
       <div class="theme"><ThemeSwitch /></div>
     </nav>
+    <button class="menu-backdrop" type="button" tabindex="-1" aria-label="Закрыть меню" hidden></button>
   </div>
+  <button class="menu-fab" type="button" aria-controls="site-menu" aria-expanded="false" hidden><span aria-hidden="true">☰</span> Меню</button>
 </aside>
 
 <script>
   import { getSelection } from '../lib/selection-client';
   getSelection();
+  // On phones and tablets the menu is a drawer over the page, reachable from
+  // a floating button anywhere on a long page (owner, 2026-10-12: navigation
+  // on the iPhone was inconvenient).
   const sidebar = document.querySelector<HTMLElement>('.site-side')!;
   const toggle = sidebar.querySelector<HTMLButtonElement>('.menu-toggle')!;
+  const fab = sidebar.querySelector<HTMLButtonElement>('.menu-fab')!;
+  const menu = sidebar.querySelector<HTMLElement>('#site-menu')!;
+  const close = sidebar.querySelector<HTMLButtonElement>('.menu-close')!;
+  const backdrop = sidebar.querySelector<HTMLButtonElement>('.menu-backdrop')!;
   const narrow = matchMedia('(max-width: 999px)');
+  let opener: HTMLElement = toggle;
   const setOpen = (open: boolean) => {
     sidebar.dataset.menuOpen = String(open);
-    toggle.setAttribute('aria-expanded', String(open));
+    for (const button of [toggle, fab]) button.setAttribute('aria-expanded', String(open));
+    const drawer = open && narrow.matches;
+    backdrop.hidden = !drawer;
+    document.documentElement.classList.toggle('menu-locked', drawer);
+    if (drawer) {
+      menu.querySelector<HTMLElement>('[aria-current="page"]')?.scrollIntoView({ block: 'center' });
+      close.focus();
+    }
   };
-  const resizeMenu = () => { toggle.hidden = !narrow.matches; setOpen(!narrow.matches); };
-  toggle.addEventListener('click', () => setOpen(toggle.getAttribute('aria-expanded') !== 'true'));
-  sidebar.addEventListener('keydown', (event) => {
-    if (event.key === 'Escape' && narrow.matches) { setOpen(false); toggle.focus(); }
-  });
+  const updateFab = () => { fab.hidden = !narrow.matches || window.scrollY < 300; };
+  const resizeMenu = () => { toggle.hidden = !narrow.matches; setOpen(!narrow.matches); updateFab(); };
+  for (const button of [toggle, fab]) button.addEventListener('click', () => { opener = button; setOpen(button.getAttribute('aria-expanded') !== 'true'); });
+  const shut = () => { if (!narrow.matches) return; setOpen(false); opener.focus(); };
+  close.addEventListener('click', shut);
+  backdrop.addEventListener('click', shut);
+  menu.addEventListener('click', (event) => { if ((event.target as HTMLElement).closest('a')) shut(); });
+  document.addEventListener('keydown', (event) => { if (event.key === 'Escape' && sidebar.dataset.menuOpen === 'true') shut(); });
+  window.addEventListener('scroll', updateFab, { passive: true });
   narrow.addEventListener('change', resizeMenu);
   resizeMenu();
 </script>
@@ -237,11 +259,37 @@ const last = ROUTE.length - 1;
     .search-link { grid-column: 1; min-height: 44px; display: flex; align-items: center; }
     .menu-toggle { grid-column: 2; min-height: 44px; padding: 8px 18px; border: 1px solid var(--line); border-radius: 8px; font: inherit; color: var(--ink); background: var(--bg); }
     .menu-toggle[hidden] { display: none; }
-    .site-menu { grid-column: 1 / -1; padding-top: 6px; }
+    /* The menu is a drawer from the left over the page, with a dimmed
+       backdrop; the page behind does not scroll while it is open. */
+    .site-menu {
+      position: fixed; top: 0; bottom: 0; left: 0; z-index: 60;
+      width: min(86vw, 340px); overflow-y: auto; overscroll-behavior: contain;
+      padding: 12px 12px 32px; background: var(--surface);
+      border-right: 1px solid var(--line); box-shadow: 0 0 32px color-mix(in srgb, #000 40%, transparent);
+    }
+    .drawer-head { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 4px 0 8px 12px; font-weight: 700; }
+    .menu-close { min-height: 44px; padding: 8px 14px; border: 1px solid var(--line); border-radius: 8px; font: inherit; color: var(--ink); background: var(--bg); }
+    .menu-backdrop { position: fixed; inset: 0; z-index: 55; border: 0; padding: 0; background: color-mix(in srgb, #000 45%, transparent); }
+    .menu-backdrop[hidden] { display: none; }
     .site-menu a { min-height: 44px; }
     .site-menu .religions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .reference ul { display: flex; flex-wrap: wrap; gap: 0 4px; }
     .site-side[data-menu-open='false'] .site-menu { display: none; }
     .theme :global(button) { min-height: 44px; }
+    :global(html.menu-locked) { overflow: hidden; }
+    .menu-fab {
+      position: fixed; left: 16px; bottom: 24px; z-index: 20;
+      display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 10px 14px;
+      border: 1px solid var(--focus); border-radius: 999px; color: var(--focus); background: var(--surface);
+      box-shadow: 0 8px 24px color-mix(in srgb, #000 35%, transparent); font: inherit; font-weight: 700; cursor: pointer;
+    }
+    .menu-fab[hidden] { display: none; }
+  }
+  @media (min-width: 1000px) {
+    .drawer-head, .menu-backdrop, .menu-fab { display: none; }
+  }
+  @media (max-width: 999px) and (prefers-reduced-motion: no-preference) {
+    .site-side[data-menu-open='true'] .site-menu { animation: drawer-in 0.18s ease-out; }
+    @keyframes drawer-in { from { transform: translateX(-100%); } }
   }
 </style>
