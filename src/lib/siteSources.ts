@@ -16,6 +16,7 @@ import world from '../data/world-composition.json';
 import lineage from '../data/lineage.json';
 import bible from '../data/bible-guide.json';
 import overview from '../data/family-overview.json';
+import classifications from '../data/orthodox-classifications.json';
 
 let cached: Promise<CatalogEntry[]> | undefined;
 
@@ -72,7 +73,11 @@ async function build(): Promise<CatalogEntry[]> {
   }
 
   for (const family of getFamilies()) {
-    for (const proof of family.proof) raw.push({ proof, usage: { traditionId: family.tradition, traditionName: namesById.get(family.tradition), section: 'Классификация' } });
+    for (const proof of family.proof) raw.push({ proof, usage: { traditionId: family.tradition, traditionName: namesById.get(family.tradition), section: 'Религиоведческая группировка' } });
+  }
+  // The badges' own sources (site audit G2-5, G2-16).
+  for (const [tradition, entry] of Object.entries(classifications)) {
+    for (const proof of entry.proof) raw.push({ proof: proof as CatalogRecord['proof'], usage: { traditionId: tradition, traditionName: namesById.get(tradition), section: 'Православная классификация' } });
   }
   for (const [section, data] of [
     ['Библейская линия: выбранная хронология', biblical], ['Авраамические религии', overview], ['Вводная история', history], ['Другие традиции', otherTraditions],

@@ -67,6 +67,16 @@ test('analysis key points and card summaries that mention the Church name the Or
     }
   }
 });
+// Each classification badge names its basis and carries an excerpt from it
+// (site audit G2-5).
+test('every classification badge rests on an excerpted source', () => {
+  const entries = JSON.parse(readFileSync('src/data/orthodox-classifications.json', 'utf8')) as Record<string, { label: string; authority: string; proof: { url: string; excerpt: string; accessed: string; tier: string }[] }>;
+  assert.equal(Object.keys(entries).length, 8);
+  for (const [id, entry] of Object.entries(entries)) {
+    assert.match(entry.label, / · /, id);
+    assert.ok(entry.proof.length > 0 && entry.proof.every((proof) => proof.url && proof.excerpt && proof.accessed && proof.tier), id);
+  }
+});
 // Every question: the Orthodox answer, then seven tradition pairs with only
 // the default one visible, each in three blocks, and seven lines in «Этот
 // вопрос у всех».

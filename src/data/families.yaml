@@ -1,5 +1,7 @@
-# The classification of each of the eight traditions, for the family line on
-# the tradition cards and the «Классификация» row of the comparison. It began
+# The scholarly grouping of each of the eight traditions; it decides whether a
+# profile shows the classification row (the badge itself comes from
+# orthodox-classifications.json) and lists its proofs in the source catalogue
+# as «Религиоведческая группировка» (site audit G2-16). It began
 # with the three nineteenth-century movements and Protestantism
 # (docs/tasks/site-m5-reading-polish.md W3) and covers every tradition since
 # the owner asked for no empty cells in the comparison (2026-09-26). `family`

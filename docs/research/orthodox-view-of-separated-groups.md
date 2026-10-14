@@ -45,7 +45,7 @@ https://azbyka.ru/otechnik/dokumenty/osnovnye-printsipy-otnoshenija-russkoj-prav
 
 ## Secondary source: «Азбука веры», article «Секта»
 
-«Секта», encyclopedia «Азбука веры», https://azbyka.ru/sekta — tier [official]
+«Секта», encyclopedia «Азбука веры», https://azbyka.ru/sekta — tier [reference]
 for the Orthodox view (an Orthodox encyclopedia portal, not a synodal document).
 Sections: origin and use of the term; the term in Russian theology; marks of
 sectarianism; causes of sects in Russia; secular Western theories; St Basil's

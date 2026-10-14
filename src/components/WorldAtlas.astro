@@ -53,7 +53,7 @@ const legend = atlasLegend('religions');
     const view = atlasView(mode, select.value);
     const title = document.createElement('h3'); title.textContent = view.title;
     const basis = document.createElement('p'); basis.className = 'basis';
-    basis.textContent = mode === 'religions' ? 'Доли от всего населения.' : 'Приблизительные доли среди христиан, а не всего населения.';
+    basis.textContent = mode === 'religions' ? `Доли от всего населения · Pew, ${view.year}.` : `Приблизительные доли среди христиан, а не всего населения · Pew, оценка на ${view.year} год.`;
     detail.replaceChildren(title, basis);
     if (!select.value && mode === 'religions') {
       const link = document.createElement('a'); link.href = hrefWithReadingContext(withBase('numbers/#world'), getSelection(), location.href);

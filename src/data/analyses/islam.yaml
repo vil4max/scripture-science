@@ -215,7 +215,7 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Кратко об исламе»
-              tier: official
+              tier: reference
               excerpt: Несмотря на то, что слово «Аллах» переводится с арабского как Бог, учение ислама принципиально отличается от Богооткровенного христианского учения
               accessed: '2026-10-01'
         more:
@@ -398,7 +398,7 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Основы вероучения ислама»
-              tier: official
+              tier: reference
               excerpt: Коран не признается христианами Словом Божьим и не обладает никаким авторитетом
               accessed: '2026-10-01'
             - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
@@ -469,7 +469,7 @@ groups:
           proof:
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Кратко об исламе»
-              tier: official
+              tier: reference
               excerpt: Но более поздние авторы выдвинули идею искажения самого текста. Причем обе эти позиции сохранились
               accessed: '2026-10-01'
             - url: https://quran.com/10/94?translations=45
@@ -479,7 +479,7 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «О проблемах, связанных с Кораном»
-              tier: official
+              tier: reference
               excerpt: христиане признают, что оригинал библейского текста не дошел до нас
               accessed: '2026-10-01'
         more:
@@ -556,12 +556,12 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Мухаммед – пророк ислама»
-              tier: official
+              tier: reference
               excerpt: С позиции христианства Мухаммед не является пророком
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Мухаммед – пророк ислама»
-              tier: official
+              tier: reference
               excerpt: он родился через шесть веков после Боговоплощения
               accessed: '2026-10-01'
         more:
@@ -1091,12 +1091,12 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Основы вероучения ислама»
-              tier: official
+              tier: reference
               excerpt: Матуридиты принимают учение о Божественном предопределении, однако не отрицают, что Аллах сотворил людей со свободой выбора
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Основы вероучения ислама»
-              tier: official
+              tier: reference
               excerpt: Представление о том, что Бог изначально предопределил кого-то к вечной погибели
               accessed: '2026-10-01'
         more:
@@ -1186,7 +1186,7 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Основы вероучения ислама»
-              tier: official
+              tier: reference
               excerpt: суфийские толкователи Корана трактуют эти аяты символически
               accessed: '2026-10-01'
         more:
@@ -1368,7 +1368,7 @@ groups:
           proof:
             - url: https://azbyka.ru/islam
               title: Ислам — православная энциклопедия «Азбука веры», раздел «Пять столпов мусульманского благочестия»
-              tier: official
+              tier: reference
               excerpt: Иногда это действие сравнивают с Таинством Крещения, принимая которое, человек присоединяется к Церкви. Однако такое сравнение очень условно.
               accessed: '2026-10-01'
             - url: https://azbyka.ru/biblia/?Jn.3:5&r

@@ -41,13 +41,13 @@ scripture:
       accessed: "2026-09-25"
     - url: "https://azbyka.ru/biblia/?Jn.3:16&r"
       title: "Евангелие от Иоанна 3:16 — Синодальный перевод (Азбука веры)"
-      tier: reference
+      tier: official
       excerpt: "Ибо так возлюбил Бог мир, что отдал Сына Своего Единородного, дабы всякий, верующий в Него, не погиб, но имел жизнь вечную"
       accessed: "2026-09-25"
 adherents:
-  value: "≈801 млн (37% христиан мира)"
-  year: 2011
-  method: "оценка Pew Research Center на основе данных Center for the Study of Global Christianity; протестантизм в широком определении (включая независимые и внеденоминационные церкви)"
+  value: "≈ 801 млн"
+  year: 2010
+  method: "оценка Pew Research Center на 2010 год (отчёт 2011 года) по данным Center for the Study of Global Christianity: 37 % христиан мира; протестантизм в широком определении, включая независимые и внеденоминационные церкви"
   proof:
     - url: "https://www.pewresearch.org/religion/2011/12/19/global-christianity-traditions/"
       title: "Christian Traditions — Pew Research Center"

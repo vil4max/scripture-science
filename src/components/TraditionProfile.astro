@@ -77,7 +77,7 @@ const showsJwNote = tradition.id === 'jw';
       </dd>
     </div>
     <div>
-      <dt>Численность</dt>
+      <dt>{adherents.scopeLabel ?? 'Численность'}</dt>
       <dd>
         <p>{adherents.value} ({adherents.year})</p>
         <p class="note">{adherents.scopeNote ?? adherents.method}</p>

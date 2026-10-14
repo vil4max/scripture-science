@@ -152,6 +152,8 @@ const matrix = defineCollection({
       // Shown beside a figure whose counting scope differs from the site's
       // classification (EDITORIAL.md principle 11).
       scopeNote: z.string().optional(),
+      // The heading for a figure whose scope is not the tradition itself (G1-14).
+      scopeLabel: z.string().optional(),
       value: z.string(),
       year: z.number().int(),
       method: z.string(),

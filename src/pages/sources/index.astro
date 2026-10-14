@@ -139,7 +139,7 @@ const description = 'Источники материалов сайта и по�
       <h2>Численность: даты и способы подсчёта</h2>
       <p>На страницах показаны округлённые оценки. Годы и способы подсчёта различаются: членство в организации не всегда означает то же, что религиозная самоидентификация.</p>
       {traditions.map(({ data }) => <article>
-        <h3>{data.adherents.display === false ? 'Восточные и Древневосточные православные церкви вместе (категория Pew)' : data.name}: {data.adherents.display === false ? '≈ 260 млн' : data.adherents.value} ({data.adherents.year})</h3>
+        <h3>{data.name}{data.adherents.scopeLabel && ` — ${data.adherents.scopeLabel.toLowerCase()}`}: {data.adherents.value} ({data.adherents.year})</h3>
         <p>{data.adherents.method}</p>
         <ul>{data.adherents.proof.map((proof) => <li><a href={proof.url}>{proof.title}</a></li>)}</ul>
       </article>)}

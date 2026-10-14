@@ -58,7 +58,7 @@ const family = getFamilyByTradition(tradition.id);
     {adherents.display !== false && <div class="fact">
       <dt>Численность</dt>
       <dd>
-        {adherents.value}
+        {adherents.value} <span class="adherents-year">({adherents.year})</span>
       </dd>
     </div>}
     <div class="fact">

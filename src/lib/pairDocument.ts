@@ -37,6 +37,8 @@ export async function getPairDocument() {
   const corrections = parseCorrections(correctionsData);
   const corrector = createCorrector(corrections);
   const navHtml = corrector.html(nav.data.html);
+  // Not rendered anywhere: the preserved header calls Pew's combined Orthodox
+  // category «крещёных … православных»; correct it before showing it (G1-13).
   const headerHtml = corrector.html(header.data.html);
   const toArchive = createArchiveLinker((await getCollection('sources')).map((s) => s.data));
   const sectionHtml = Object.fromEntries(
