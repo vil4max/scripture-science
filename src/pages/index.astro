@@ -2,14 +2,17 @@
 import { withBase } from '../lib/paths';
 import { HOME_SECTION_TARGETS } from '../lib/homeSections';
 import { ROUTE } from '../lib/route';
+import { getOrderedMatrix } from '../lib/content';
+import { SHORT_NAMES } from '../lib/names';
 import SectionPage from '../layouts/SectionPage.astro';
+const religions = (await getOrderedMatrix()).filter((entry) => entry.id !== 'orthodoxy');
 ---
-<SectionPage title="Православный взгляд на религии мира" lead="Три части: основа православной веры, знакомство с религиями мира и сравнение по Символу веры.">
+<SectionPage title="Православный взгляд на религии мира" lead="Три части: основа православной веры, знакомство с религиями мира и сравнение — по Символу веры и в богослужении и молитве.">
   <section id="foundation" aria-labelledby="foundation-title">
     <h2 id="foundation-title">Откуда мы смотрим</h2>
-    <p>Сайт исходит из истинности православной веры. Поэтому маршрут начинается с её основы, затем знакомит с религиями мира — кто есть кто, история, численность, карта — и заканчивается сравнением: по каждому члену Символа веры — что говорят другие религии.</p>
-    <p>Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как устроен разбор</a>.</p>
+    <p>Сайт исходит из истинности православной веры. Поэтому маршрут начинается с её основы, затем знакомит с религиями мира — кто есть кто, история, численность, карта — и заканчивается сравнением: по каждому члену Символа веры — что говорят другие традиции, а затем — как они служат и молятся.</p>
     <a class="start" href={withBase(ROUTE[0].steps[0].path)} data-carry-selection>Начать с основы →</a>
+    <p>Другие традиции представлены по их собственным источникам; православная оценка дана отдельно. <a href={withBase('reading/')} data-carry-selection>Как читать сравнение</a>.</p>
     <p class="tip">Трудные слова подчёркнуты пунктиром: нажмите на слово, чтобы увидеть простое объяснение. Все объяснения собраны в <a href={withBase('terms/')} data-carry-selection>словаре</a>.</p>
   </section>
   <section aria-labelledby="route-title"><h2 id="route-title">Маршрут чтения</h2>
@@ -17,6 +20,7 @@ import SectionPage from '../layouts/SectionPage.astro';
       <li class="part">
         <h3><span>{partIndex + 1}</span>{part.title}</h3>
         <ul>{part.steps.map((step) => <li><a href={withBase(step.path)} data-carry-selection>{step.label}</a><p>{step.text}</p></li>)}</ul>
+        {partIndex === ROUTE.length - 1 && <p class="religions">Каждая религия подробно: {religions.map((entry, index) => <>{index > 0 && ' · '}<a href={withBase(`traditions/${entry.id}/`)} data-carry-selection>{SHORT_NAMES[entry.id] ?? entry.data.name}</a></>)}</p>}
       </li>
     ))}</ol>
   </section>
@@ -38,6 +42,7 @@ import SectionPage from '../layouts/SectionPage.astro';
 </script>
 <style>
   #foundation { max-width: 78ch; border-left: 4px solid var(--t-orthodoxy); padding-left: 24px; }
+  .religions { margin: 12px 0 0; font-size: 15px; line-height: 1.8; }
   .start { display: inline-flex; min-height: 48px; align-items: center; padding: 8px 20px; border: 1px solid var(--focus); border-radius: 8px; margin-top: 8px; font-weight: 700; }
   .tip { color: var(--muted); font-size: 16px; }
   /* The route: three numbered parts, each a card listing its pages. */

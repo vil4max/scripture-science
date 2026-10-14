@@ -2,6 +2,8 @@
 // Where this page sits on the reading route: the three parts, the steps of
 // the current part, and at the bottom the next step. Pages off the route
 // render nothing.
+import { getOrderedMatrix } from '../lib/content';
+import { SHORT_NAMES } from '../lib/names';
 import { withBase } from '../lib/paths';
 import { ROUTE, ROUTE_STEPS } from '../lib/route';
 interface Props { footer?: boolean; }
@@ -9,7 +11,20 @@ const normalise = (p: string) => p.replace(/\/*$/, '/');
 const index = ROUTE_STEPS.findIndex((step) => normalise(withBase(step.path)) === normalise(Astro.url.pathname));
 const current = ROUTE_STEPS[index];
 const next = ROUTE_STEPS[index + 1];
+// A tradition's own page sits beside part 3 «Сравнение» (site audit S1-2):
+// the bar shows where it belongs, the footer leads on.
+const traditionId = Astro.url.pathname.match(/\/traditions\/([a-z]+)\/?$/)?.[1];
+const others = traditionId ? (await getOrderedMatrix()).filter((entry) => entry.id !== 'orthodoxy') : [];
+const position = others.findIndex((entry) => entry.id === traditionId);
+const comparePart = ROUTE.length - 1;
+const nextTradition = position >= 0 ? others[(position + 1) % others.length] : undefined;
 ---
+{position >= 0 && (Astro.props.footer
+  ? <nav class="next" aria-label="Продолжить чтение"><p><a href={withBase(`compare/?t=orthodoxy,${traditionId}`)} data-carry-selection>Сравнить по Символу веры: Православие и {SHORT_NAMES[traditionId!]} →</a></p><p><a href={withBase(`traditions/${nextTradition!.id}/`)} data-carry-selection>Следующая религия: {SHORT_NAMES[nextTradition!.id] ?? nextTradition!.data.name} →</a></p></nav>
+  : <nav class="journey" aria-label="Маршрут чтения">
+      <ol class="parts">{ROUTE.map((part, partIndex) => <li><a href={withBase(part.steps[0].path)} aria-current={partIndex === comparePart ? 'step' : undefined} data-carry-selection><span>{partIndex + 1}</span> {part.title}</a></li>)}</ol>
+      <ol class="steps">{ROUTE[comparePart].steps.map((step) => <li><a href={withBase(step.path)} data-carry-selection>{step.label}</a></li>)}<li><span class="here">Каждая религия подробно: {SHORT_NAMES[traditionId!]}</span></li></ol>
+    </nav>)}
 {current && (Astro.props.footer
   ? next
     ? <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее{next.part !== current.part && <> — часть {next.part + 1}, «{ROUTE[next.part].title}»</>}: {next.label} →</a></nav>
@@ -33,4 +48,6 @@ const next = ROUTE_STEPS[index + 1];
   .steps a { padding: 0 10px; border-radius: 8px; color: var(--muted); }
   .steps a[aria-current='page'] { color: var(--ink); font-weight: 700; background: color-mix(in srgb, var(--ink) 8%, transparent); }
   .next { border-top: 1px solid var(--line); padding-top: 20px; }
+  .next p { margin: 0; }
+  .here { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 8px; font-weight: 700; background: color-mix(in srgb, var(--ink) 8%, transparent); }
 </style>

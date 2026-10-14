@@ -5,7 +5,7 @@ scope_note: "Лютеране, реформаты, англикане, бапт�
 family: christianity
 since:
   year: 1530
-  label: "1530 г. · Аугсбургское вероисповедание"
+  label: "1517 г. · начало Реформации; 1530 г. · Аугсбургское вероисповедание"
   note: "Дата первого общего вероисповедания, представленного протестантскими князьями и городами императору; отдельные течения (реформатство, англиканство, баптизм, пятидесятничество) сложились позднее и на других территориях (см. positions)."
   proof:
     - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
@@ -13,6 +13,11 @@ since:
       tier: official
       excerpt: "Оно было представлено на рейхстаге в Аугсбурге, созванном императором Карлом V в 1530 г."
       accessed: "2026-09-25"
+    - url: "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation"
+      title: "OpenStax World History — The Protestant Reformation"
+      tier: reference
+      excerpt: "The Protestant Reformation began in 1517, but its seeds had been sown years earlier."
+      accessed: "2026-09-27"
 scripture:
   name: "Библия: 66-книжный протестантский канон"
   comparison:

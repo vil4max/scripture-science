@@ -25,7 +25,6 @@ import WorldMethodology from '../components/WorldMethodology.astro';
 import { JW_NOTE_TEXT } from '../lib/jwNote';
 import overview from '../data/family-overview.json';
 import Base from '../layouts/Base.astro';
-import TermsBox from '../components/TermsBox.astro';
 import { getDisputes, getOrderedMatrix, getOrderedViews, getTerms } from '../lib/content';
 import { TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../lib/rules';
 
@@ -165,8 +164,8 @@ const coverageByTopic = TOPIC_ORDER.map((topicId) => {
   return { topicId, title: TOPIC_TITLES_RU[topicId], verified, todo };
 });
 
-const title = 'Термины и источники';
-const description = 'Значения слов, пояснения к данным и источники материалов сайта.';
+const title = 'Источники';
+const description = 'Источники материалов сайта и пояснения к данным. Значения слов — в словаре.';
 ---
 
 <Base title={title} description={description}>
@@ -175,7 +174,6 @@ const description = 'Значения слов, пояснения к данны
       <h1>{title}</h1>
       <p class="lead">{description}</p>
       <nav class="reference-sections" aria-label="На этой странице">
-        <div><strong>Термины</strong><ul><li><a href="#terms">Словарь</a></li></ul></div>
         <div><strong>Пояснения по разделам</strong><ul>
           <li><a href="#adherents">Численность</a></li><li><a href="#map-method">Карта</a></li>
           <li><a href="#history-evidence">История и хронология</a></li>
@@ -197,8 +195,7 @@ const description = 'Значения слов, пояснения к данны
 
     <section id="terms" aria-labelledby="terms-title">
       <h2 id="terms-title">Термины</h2>
-      <p>Простые объяснения для чтения собраны в <a href={withBase('terms/')}>словаре</a>; здесь — справочный список с примечаниями.</p>
-      <TermsBox terms={terms} />
+      <p>Объяснения слов, определения и их источники собраны в <a href={withBase('terms/')}>словаре</a>.</p>
     </section>
 
     <section id="by-topic"><h2>Православное основание и источники по темам</h2>

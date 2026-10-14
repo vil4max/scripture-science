@@ -88,25 +88,6 @@ const showsJwNote = tradition.id === 'jw';
     </div>
   </dl>
   <TraditionImage id={tradition.id === 'orthodoxy' ? 'orthodoxy-all-saints' : tradition.id} />
-  <section class="profile-section" aria-labelledby="chronology-title">
-    <h2 id="chronology-title">Хронология</h2>
-    {selfView && <aside data-no-terms>
-      <h3>Как традиция понимает своё происхождение</h3>
-      <p>{selfView.summary}</p>
-      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatHistoricalYear(gap.from)}–{formatHistoricalYear(gap.to)}: {gap.label}.</p>)}
-    </aside>}
-    <p class="chronology-key">Ранние события — от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). В скобках — тот же год в привычном счёте до Рождества Христова. Для дат без месяца принят отсчёт января–августа.</p>
-    <ol class="chronology">
-      {chronology.map((row) => (
-        <li data-chronology-id={row.id}>
-          <p class="chronology-date">{row.approx && 'ок. '}{formatHistoricalYear(row.year)}{row.year < 0 && <span class="ad-gloss"> ({row.approx && 'ок. '}{formatYearAd(row.year)})</span>}</p>
-          {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
-          <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
-        </li>
-      ))}
-    </ol>
-    <a href={withBase('timeline/')}>Открыть общую хронологию</a>
-  </section>
   {curated ? (
   <section class="positions curated" aria-labelledby="positions-title">
     <h2 id="positions-title">Вера и практика: подробный разбор</h2>
@@ -150,6 +131,9 @@ const showsJwNote = tradition.id === 'jw';
   ) : (
   <section class="positions" aria-labelledby="positions-title">
     <h2 id="positions-title">{tradition.id === 'orthodoxy' ? 'Православное учение по темам' : 'Вера и практика: православное сопоставление'}</h2>
+    {tradition.id === 'orthodoxy' && <nav class="topic-contents" aria-label="Темы">
+      {TOPIC_GROUPS.map((group) => <div><p class="contents-label">{group.title}</p><ul>{group.topics.map((topicId) => <li><a href={`#topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</a></li>)}</ul></div>)}
+    </nav>}
     {TOPIC_ORDER.map((topicId) => {
       const position = tradition.data.positions.find((item) => item.topic === topicId);
       if (!position) throw new Error(`Missing profile position: ${tradition.id}/${topicId}`);
@@ -170,13 +154,41 @@ const showsJwNote = tradition.id === 'jw';
     })}
   </section>
   )}
+  <section class="profile-section" aria-labelledby="chronology-title">
+    <h2 id="chronology-title">Хронология</h2>
+    <details class="chronology-fold">
+    <summary>Показать события: {chronology.length}</summary>
+    {selfView && <aside data-no-terms>
+      <h3>{tradition.id === 'orthodoxy' ? 'Как Церковь понимает своё начало' : 'Как традиция понимает своё происхождение'}</h3>
+      <p>{selfView.summary}</p>
+      {(selfView.gaps ?? []).map((gap) => <p>Разрыв {formatHistoricalYear(gap.from)}–{formatHistoricalYear(gap.to)}: {gap.label}.</p>)}
+    </aside>}
+    <p class="chronology-key">Ранние события — от Сотворения мира (от С. М.) по византийской эре; с первого года христианского летосчисления — от Рождества Христова (от Р. Х.). В скобках — тот же год в привычном счёте до Рождества Христова. Для дат без месяца принят отсчёт января–августа.</p>
+    <ol class="chronology">
+      {chronology.map((row) => (
+        <li data-chronology-id={row.id}>
+          <p class="chronology-date">{row.approx && 'ок. '}{formatHistoricalYear(row.year)}{row.year < 0 && <span class="ad-gloss"> ({row.approx && 'ок. '}{formatYearAd(row.year)})</span>}</p>
+          {associationLabels[row.association] && <p class="association">{associationLabels[row.association]}</p>}
+          <p><strong>{row.title}</strong>{row.text && ` — ${row.text}`}{row.todo && <span class="association"> (уточняется)</span>}</p>
+        </li>
+      ))}
+    </ol>
+    </details>
+    <a href={withBase('timeline/')}>Открыть общую хронологию</a>
+  </section>
   {GOVERNANCE_TRADITIONS.includes(tradition.id) && <section id="governance" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>}
-  <section id="sources-and-relations" class="profile-section"><h2>Источники и отношения с другими</h2><p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p></section>
+  <section id="sources-and-relations" class="profile-section"><h2>Источники и отношения с другими</h2>{tradition.id === 'orthodoxy'
+    ? <p><a href={withBase('sources/#by-topic')}>Источники православного учения по темам</a> и <a href={withBase('sources/#relations-documents')}>отношение Православной Церкви к другим исповеданиям</a> собраны в справочном разделе.</p>
+    : <p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p>}</section>
 
 </SectionPage>
 
 <style>
   .analysis-lead, .analysis-authority { max-width: var(--measure); }
+  .topic-contents { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 12px 32px; margin: 0 0 24px; padding: 16px 20px; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); font-size: 15px; }
+  .topic-contents ul { margin: 4px 0 0; padding-left: 18px; }
+  .topic-contents li { padding: 2px 0; }
+  .chronology-fold > summary { cursor: pointer; color: var(--focus); font-weight: 700; min-height: 44px; display: flex; align-items: center; }
   .key-points { max-width: var(--measure); margin: 8px 0 32px; padding: 16px 20px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 6px; background: var(--surface); }
   .key-points h3 { margin: 0 0 4px; }
   .key-points-lead { margin: 0 0 12px; color: var(--muted); font-size: 15px; }
