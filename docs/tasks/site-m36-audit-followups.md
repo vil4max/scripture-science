@@ -53,18 +53,17 @@ keeps its own handoff, builds an improvement plan and applies the cheap fixes
 ## Plan (next, by effort)
 
 Quick (S), in this order:
-1. Done locally (b153f7a): badges show their basis, the JW badge is an
+1. Done and published (b153f7a): badges show their basis, the JW badge is an
    assessment with its real basis, the pseudo-Christian glossary short names
-   its origin (G2-1, G2-2, G2-6). Left: LDS basis from the 1994 Bishops'
-   Council act (G2-3) and the «секта» short with a doctrinal criterion and a
-   source (G2-7).
+   its origin (G2-1, G2-2, G2-6). Then (676ec83): the LDS badge rests
+   on the 1994 Bishops' Council act (G2-3) and the «секта» short has the
+   doctrinal criterion with its source (G2-7).
 2. Done and published (f5ffcd7, b388ec3): the governance section shows only
    for the Orthodox Church and Jehovah's Witnesses (V1-1, S1-20); basics/ keeps
    one next step (S1-3).
-3. Done locally (2839971): Russian Church practice attributed and the G3
-   fact fixes (G3-4…G3-9, G3-12, G3-17, G3-18). Left: the fast before
-   Communion per the ROC document with its exceptions and an official proof
-   (G3-1).
+3. Done and published (2839971): Russian Church practice attributed and the G3
+   fact fixes (G3-4…G3-9, G3-12, G3-17, G3-18). Then (676ec83): the preparation
+   for Communion follows the ROC 2016 document with its exceptions (G3-1).
 4. Claims beyond their excerpts (G4-2…G4-24): narrow the wording or add the
    excerpt.
 5. Names and capitalization per the terminology table in the report
