@@ -164,11 +164,11 @@ const PARTS = page === 'worship'
                 <cite><a href={withBase('worship/#simvol-very')}>Символ веры полностью</a> · <a href={CREED_SOURCE.url} target="_blank" rel="noopener noreferrer">{CREED_SOURCE.title}</a></cite>
               </blockquote>
               <p class="thesis"><span class="plain-label">Простыми словами.</span> {question.short}</p>
-              {question.detail && <p>{question.detail}</p>}
+              {question.detail?.split(/\n\n+/).map((paragraph) => <p>{paragraph}</p>)}
             </> : <>
               <p class="who"><span class="dot" style={`background:${color('orthodoxy')}`} aria-hidden="true"></span>Православное учение</p>
               <p class="thesis">{question.short}</p>
-              {question.detail && <p>{question.detail}</p>}
+              {question.detail?.split(/\n\n+/).map((paragraph) => <p>{paragraph}</p>)}
             </>}
             {PRAYER_LINKS[question.id] && <p class="prayer-links">Молитвы полностью: {PRAYER_LINKS[question.id]!.map((prayer, index) => <>{index > 0 && ' · '}<a href={withBase(`worship/#${prayer.id}`)}>{prayer.title}</a></>)}</p>}
             {question.foundationHref && <p class="foundation-link"><a href={question.foundationHref} data-carry-selection>Обоснование →</a></p>}
