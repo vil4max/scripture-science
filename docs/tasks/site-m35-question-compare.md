@@ -47,9 +47,9 @@ without a chooser.
 - The chosen side is labelled as that tradition's teaching on the question
   («Учение Свидетелей Иеговы»), not a self-description (owner).
 - Each question has three separate blocks (owner): the Orthodox teaching; the
-  chosen tradition's teaching; «Где расходятся — православный ответ» with the
-  difference line and the Orthodox response, ending with the folded analysis
-  links and sources.
+  chosen tradition's teaching; «Православный взгляд на расхождение» with the
+  difference line and the Orthodox response, then the analysis links and the
+  folded sources (owner, 2026-10-14).
 - The Nicene-Constantinopolitan Creed is the key to the Orthodox side (owner):
   each question quotes its Creed articles under the Orthodox answer
   (`src/data/creed.json`, exact text from Filaret's catechism §67, checked
@@ -98,7 +98,9 @@ without a chooser.
   Православная Церковь …» or «Здесь согласие: …») without evaluative words;
   the evaluation belongs to the Orthodox response. «Церковь» alone was
   unclear beside other churches (owner), so every difference line that
-  speaks of the Church names the Orthodox Church (a test checks it), and a
+  speaks of the Church names the Orthodox Church (`scripts/orthodox-edition.test.ts`
+  checks the difference lines and, since 2026-10-14, the analysis key points
+  and card summaries), and a
   question «Как себя называют: Церковь и другие общины» after article 9
   explains the word and each community's self-name.
 - «Крещение: похожий обряд — разный смысл» after article 10 (owner: the
@@ -107,7 +109,7 @@ without a chooser.
   Filaret's catechism.
 - All 105 `difference` lines were reviewed; 45 that restated the tradition's
   teaching or carried an editorial caveat were rewritten to name the
-  difference («…, а Церковь …» or an explicit agreement), paraphrasing the
+  difference («…, а Православная Церковь …» or an explicit agreement), paraphrasing the
   record's own sourced position and Orthodox response. Caveats remain in the
   analysis cards' answers.
 
@@ -116,7 +118,7 @@ without a chooser.
 - «Символ веры и различия»: the Creed (its twelve articles all quoted, the
   Theotokos after Jesus Christ), then «Другие различия». «Богослужение и
   молитва»: services, the daily, weekly and yearly rhythm, prayer at home and
-  the Psalter, then the prayer texts. In each question, the Orthodox side
+  the Psalter, example prayers («Примеры молитв»), then the prayer texts. In each question, the Orthodox side
   first, seven tradition sides with only the default visible on the server,
   the difference and the Orthodox answer before the fold, seven lines in
   «Этот вопрос у всех».

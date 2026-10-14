@@ -48,10 +48,14 @@ integrity; they do not establish theological correctness or recheck live sources
 
 ## Reading route
 
-The homepage introduces a progressive route: `/religions/`, `/timeline/`,
-`/numbers/`, `/geography/`, `/differences/`, then `/compare/` and the existing
-tradition analyses. Old homepage fragments redirect to the moved sections
-without losing comparison parameters.
+One reading route in three parts drives the menu, the homepage and a route
+bar on each page: «Основа» (`/basics/`, `/orthodoxy/`, `/bible/`), «Религии
+мира» (`/religions/`, `/timeline/`, `/numbers/`, `/geography/`) and
+«Сравнение» (`/compare/`, `/worship/`), with a detailed page for each
+tradition at `/traditions/<id>/`. The retired addresses `/differences/`,
+`/prayers/` and `/pairs/orthodoxy-jw/` forward to their new places; old
+homepage fragments redirect without losing comparison parameters. The full
+source catalogue is at `/sources/catalog/`.
 
 The world overview and religion map share Pew categories; Christianity is
 counted once. Christian map mode uses its original within-Christian estimates,

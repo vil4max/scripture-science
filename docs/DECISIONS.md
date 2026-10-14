@@ -393,9 +393,31 @@ On the iPhone the owner found navigation inconvenient. On screens up to
 top button or a floating menu button that appears on scroll; desktop keeps
 the sidebar.
 
+## 2026-10-14 — Audit decisions
+
+Before the freeze the owner asked to finish every audit fix («закончи все
+правки что есть — проект должен быть стабильным перед заморозкой и беклог
+чистым»; «продолжай и доделай всё, потом пуш») and answered the open
+questions:
+
+- «Православная Церковь» instead of a bare «Церковь» also in the key points
+  and card summaries of the tradition pages («Да, везде»); a test checks it.
+- The third block of every comparison pair and analysis card is
+  «Православный взгляд на расхождение».
+- In the Orthodox voice «Литургия» and «Таинство» take a capital; the parts
+  of the Liturgy and other traditions' rites take lowercase (EDITORIAL 12).
+- The remaining naming questions follow the audit's proposals («Решай сама
+  по аудиту»): the Adventist church name, «Свидетели» as a short form after
+  a full mention, the icons question without the Theotokos, the baptism
+  follow-up title, the Pew Orthodox figure on orthodoxy/ with its own
+  label, and new colours for the LDS and Jehovah's Witnesses that no longer
+  look like Islam and Protestantism.
+
+The closure of all 307 findings is in
+`docs/research/site-audit-2026-10-10-closure.md`.
+
 ## 2026-10-14 — Project frozen
 
 The owner put the project on hold («проект на фриз, хобби сейчас уходит на
-третий план»). The live site matches `main`. Open work stays in
-`docs/tasks/site-m36-audit-followups.md`; publishing still waits for the
-owner's word.
+третий план»). The live site matches `main` with the audit closed; nothing
+is in flight. Resume from `docs/tasks/site-m36-audit-followups.md`.

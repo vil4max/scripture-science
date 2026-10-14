@@ -8,18 +8,17 @@ task's state.
 ## Frozen
 
 The project is frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
-уходит на третий план»). The live site matches `main`; nothing is in flight.
-To resume, start from `docs/tasks/site-m36-audit-followups.md` (plan, what is
-left, owner decisions needed) and `docs/research/site-history-2026-10.md`
-(what was done in this stretch).
+уходит на третий план»), after the owner asked to finish every audit fix
+first. The live site matches `main`; nothing is in flight. To resume, start
+from `docs/research/site-audit-2026-10-10-closure.md` (what was left on
+purpose), `docs/tasks/site-m36-audit-followups.md` and
+`docs/research/site-history-2026-10.md`.
 
-## In progress (paused by the freeze)
+## Done in the last stretch (2026-10-09 to 2026-10-14)
 
-**M36 — site audit follow-ups** (`docs/tasks/site-m36-audit-followups.md`,
-2026-10-10): 307 verified findings on terminology, visuals, navigation,
-content, sources and accessibility; the quick fixes of plan items 1–3, 6 and
-7 and part of 4 and 5 are published; the brief holds what is left and the
-owner decisions needed.
+**M36 — site audit follow-ups** (`docs/tasks/site-m36-audit-followups.md`):
+all 307 verified findings closed; published (owner: «продолжай и доделай всё,
+потом пуш»).
 
 **Three-part reading route** (`docs/DECISIONS.md`, 2026-10-09): one route —
 «Основа», «Религии мира», «Сравнение» — in the menu, on the homepage and in a
@@ -108,18 +107,13 @@ and the canonical preview were preserved. See the M26 brief for verification.
 
 ## Backlog
 
-- **Source catalogue loading cost.** Measure the completed catalogue's browser loading and parsing cost before choosing a separate optimization task. Any reduction in repeated HTML must preserve complete evidence, usage attribution and existing anchors.
-- **Non-literal excerpts in existing data** found by the M33 writers; each
-  keeps its analysis card `todo` until corrected in `src/data/matrix/` and
-  `src/data/orthodox-assessments.json`: Judaism (toldot.com divine-name
-  quote, Sefaria Genesis 1:2, toldot holidays page), Islam (Qur'an 17:85 and
-  4:157 wording, mosmechet.ru Eid spacing), Latter-day Saints (apostasy
-  quote on the wrong page, Holy Ghost wording, a stitched reference list),
-  Protestantism (Exodus 3:15 e/yo spelling). Also the Jehovah's Witnesses
-  «Проповедь и отчёты» card: the date of the reporting change is unsourced.
-- Data doubts to check: mosmechet.ru pages belong to the Historical Mosque,
-  not the Cathedral Mosque; «99 имён» in the Islam matrix has no Qur'anic
-  number; the Dabru Emet signatory count in views-of-others is unchecked.
+Empty since 2026-10-14. Resolved before the freeze: the source catalogue
+moved to its own page (sources/ from 4.1 MB to 1.5 MB); the non-literal
+excerpts found by the M33 writers were corrected and their ten analysis
+cards marked verified, and the Jehovah's Witnesses reporting change is
+sourced (AP, 2023); the mosmechet.ru pages are named as the Historical
+Mosque, the Qur'an names count is no longer stated, and the unchecked Dabru
+Emet signatory count was removed.
 
 ## Known issues (not scheduled)
 

@@ -1,122 +1,59 @@
 # M36 — site audit follow-ups (handoff)
 
-State: frozen on 2026-10-14 (owner: «проект на фриз»). Audit done and
-verified (2026-10-10); published fixes: plan items 1–3, 6, 7 and part of 4
-and 5 (last deploy fff3d8f and the freeze record after it). The rest of the
-plan below is open; publishing still waits for the owner's word.
+State: done and frozen on 2026-10-14. All 307 audit findings are closed —
+fixed, partly fixed or declined with a reason — in
+`docs/research/site-audit-2026-10-10-closure.md`. The live site matches
+`main`; nothing is in flight.
 
 ## Authorization and scope
 
 2026-10-10, owner: «анализ сайта + пересмотр визуального сопровождения,
 полный аудит на соответствие терминов + предложения по улучшению»; then
-«продолжи и закончи»; this session is the main hobby session for the site and
-keeps its own handoff, builds an improvement plan and applies the cheap fixes
-(«Можешь план доработок себе построить. И если будет не дорого то и
-применить»). Also: «про Духа Святого надо проверить… чтобы не продублировался
-в разборе символа веры».
+«продолжи и закончи»; this session is the main hobby session for the site
+and keeps its own handoff. 2026-10-14: «заканчивай все — запиши отчет для
+истории — пуш — и проект на фриз», then «закончи все правки что есть —
+проект должен быть стабильным перед заморозкой и беклог чистым» and
+«продолжай и доделай всё, потом пуш». Owner decisions of 2026-10-14 are in
+`docs/DECISIONS.md` ("Audit decisions").
 
 ## Evidence
 
 - Workflow run `wf_a588de0e-d19` (all agents on Opus): 12 dimension auditors
   (terminology T1–T5, visuals V1–V3, site S1–S4), one skeptic per dimension,
-  a completeness critic and four gap auditors (G1 statistics, G2 confessional
-  classification, G3 Orthodox practice local vs general, G4 claim–excerpt
+  a completeness critic and four gap auditors (G1 statistics, G2
+  confessional classification, G3 Orthodox practice, G4 claim–excerpt
   support), then a synthesis.
-- 307 findings survived verification (208 confirmed, 99 partly): high 9,
-  medium 117, low 181; effort S 233, M 70, L 4. Full list:
-  `docs/research/site-audit-2026-10-10-findings.json` (id, dimension,
-  severity, effort, evidence, proposal, verifier note).
-- The owner-facing Russian report and raw results stay outside the repository
-  (`~/Developer/dev-bank/2026-10-10/scripture-science-site-audit/outputs/`).
-- Own measurements at 375 px: compare/ about 27,100 px (33 screens),
-  worship/ 29, traditions/jw 31; paragraphs up to about 1,570 characters on
-  compare/ and worship/; no visual on compare/, worship/, basics/, bible/;
-  dist/sources 5.3 MB, compare 0.9 MB, search 0.9 MB; no horizontal overflow.
+- 307 verified findings (208 confirmed, 99 partly): high 9, medium 117,
+  low 181. Full list: `docs/research/site-audit-2026-10-10-findings.json`.
+- The owner-facing Russian report and raw results stay outside the
+  repository (`~/Developer/dev-bank/2026-10-10/scripture-science-site-audit/outputs/`).
 
-## Applied (local commit, unpublished)
+## What changed (summary)
 
-- Holy Spirit not duplicated in the Creed part: the article 1 (God) lines and
-  responses point to the article 8 question instead of repeating the
-  Filioque, «Дух — сила» (JW) and divine bodies (LDS).
-- Glossary hints skip hidden pairs, captions, form controls, the chosen
-  tradition's teaching block and the self-description aside, so the Orthodox
-  definition of «Церковь» no longer lands on another church's name
-  (T1-2, T5-1, S2-3, T1-7, S3-1).
-- iPhone picker scrolls the chosen religion into view (V3-1).
-- Four difference lines with a bare «Церковь» fixed; the test also rejects
-  the ambiguous subject positions (T1-3, T2-3, S2-2).
-- Facts: the Liturgy has three parts in the glossary too (G3-2); Wednesday
-  fast for the betrayal, Friday for the Passion, catechism §542 (G3-3); the
-  baptism answer quotes article 10 exactly (G3-11); «прп. Иоанн Дамаскин»
-  (T3-4).
-
-## Plan (next, by effort)
-
-Quick (S), in this order:
-1. Done and published (b153f7a): badges show their basis, the JW badge is an
-   assessment with its real basis, the pseudo-Christian glossary short names
-   its origin (G2-1, G2-2, G2-6). Then (676ec83): the LDS badge rests
-   on the 1994 Bishops' Council act (G2-3) and the «секта» short has the
-   doctrinal criterion with its source (G2-7).
-2. Done and published (f5ffcd7, b388ec3): the governance section shows only
-   for the Orthodox Church and Jehovah's Witnesses (V1-1, S1-20); basics/ keeps
-   one next step (S1-3).
-3. Done and published (2839971): Russian Church practice attributed and the G3
-   fact fixes (G3-4…G3-9, G3-12, G3-17, G3-18). Then (676ec83): the preparation
-   for Communion follows the ROC 2016 document with its exceptions (G3-1).
-4. Claims beyond their excerpts: done for G4-2, G4-3, G4-4; left G4-5…G4-24
-   (narrow the wording or add the excerpt).
-5. Partly done (86c04d0: T1-10, T1-11, T3-12, T3-13, T4-1, T4-9, T4-10, T4-12,
-   T4-18, T4-19). Rest: names and capitalization per the terminology table in the report
-   (T1-4 «Таинство» in the Orthodox voice, T1-6/T4-2 Литургия, T1-10, T1-11,
-   T1-8, T2-1, T2-4, T2-6, T2-8, T2-9, T2-14, T3-5, T3-6, T3-10…T3-13, T4-12),
-   typos (T4-1, T4-6…T4-20), numbers with year and method (G1-3, G1-5, G1-6).
-6. Done (0ad993c): route end on worship/, 404 page, skip link (S1-4, S3-8,
-   S3-11). Left: contents for orthodoxy/ (S1-6), meta descriptions (S3-10).
-7. Done: long Orthodox details split into paragraphs (S2-8, S2-9).
-
-Medium (M):
-- Sources catalogue: add extra-questions, prayers and basics evidence, «Все
-  источники по теме» for the extra questions, clean link labels, canonical
-  work titles by URL prefix (S4-1, S4-2, T3-2, S4-15).
-- Group sources on compare/ and worship/ by URL and by side (S4-3, S4-4, S3-3).
-- Search covers the compare/ and worship/ questions, prayers and glossary
-  (S1-1, S2-12, S3-5). Owner, 2026-10-12: search did not work for him on the
-  iPhone and should find by word («душа» for Jehovah's Witnesses); weigh
-  keeping it against simpler links. Checked the same day on the live site and
-  at 375 px: «душа свидетели» finds «Душа и смерть» (the earlier failure fits
-  glossary hints inside the form, fixed in 3ef46e3). Recommendation: keep the
-  client-side search, add these questions and lighten the page (0.9 MB).
-- Tradition pages get the route bar and an end block (S1-2, S1-5).
-- A head flag (`html.js`) so menus and contents do not flash open (V3-2,
-  S1-12, S3-15); timeline readable on a phone without `scaleX` (V1-7, V2-4).
-- First visuals: a Creed map (12 articles → questions), the Orthodox daily
-  cycle around the Liturgy, Islam's five prayers vs morning and evening
-  prayers on one clock, a baptism comparison table (V2 proposals).
-- `lang="en"` on English excerpts (S3-13, S4-11); § numbers for about 390
-  Filaret proofs (T3-3, S4-8); images with srcset and WebP (V1-16, S3-14).
-
-Large (L):
-- Split sources/ (5.3 MB) into catalogue pages by tradition and topic,
-  keeping anchors (S3-2, S4-6).
-- Extend the «Православная Церковь» rule to analysis keyPoints and card
-  shorts (about 220 lines) once the owner decides (T1-1, T2-5, T4-7, S2-4).
-
-## Owner decisions needed
-
-- Extend EDITORIAL §8 («Православная Церковь») to the analysis pages?
-- Capitalization of the Liturgy's parts and of other traditions' rites
-  (T1-6, T4-2, T1-9).
-- Third block label: «Православный ответ» or «Православный взгляд на
-  расхождение» (S2-6).
-- Adventist self-name (T2-7) and the short «Свидетели» (T2-16).
-- Renaming the topics images and baptism (S2-10, S1-16); the 260 million
-  figure on orthodoxy/ (G1-2); the Rublev «Saviour» image (V1-9); a stronger
-  JW colour (V1-4).
+- Claims rest on their own excerpts (G4); terminology follows one table and
+  the owner's naming decisions, with tests for the Orthodox Church naming,
+  the Filaret catechism titles (one title, a § for every excerpt), one tier
+  per source URL and excerpted classification badges.
+- Navigation: tradition pages in the route with a next step, the analysis
+  before a folded chronology, contents on orthodoxy/, a homepage that leads
+  into each religion, cross-links between related questions, search over
+  the comparison and worship questions.
+- Sources: the filterable catalogue moved to `sources/catalog/` (sources/
+  from 4.1 MB to 1.5 MB), now complete with the extra questions, prayers and
+  basics; readable labels, Russian dates, `lang="en"` on English excerpts,
+  readable Qur'an links.
+- Visuals and phones: contrast, tap targets, no flash of open menus, a
+  timeline that narrows instead of squashing, a Creed map, the parts of the
+  Liturgy, the seven Sacraments, canon bars, a lineage tree, a week strip and
+  a baptism table, all from sourced data; phone-size image copies.
+- Statistics name their years and methods; classification badges cite the
+  2000 Council document (§6.3 criterion), the 1994 Council or a labelled
+  encyclopedia.
 
 ## Resume
 
-Start from this file and `docs/research/site-audit-2026-10-10-findings.json`
-(filter by id). Each fix: edit, `npm run verify` with Node 26
-(`PATH=/opt/homebrew/bin:$PATH`), browser check at 375 px, English
+Start from the closure file for what was deliberately left (the icon's
+source, the retired pair diagrams, new photos, a year-cycle visual, two
+code refactors). Each change: edit, `npm run verify` with Node 26
+(`PATH=/opt/homebrew/bin:$PATH`), a browser check at 375 px, an English
 Conventional Commit; publish only on the owner's word.

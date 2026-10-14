@@ -48,13 +48,29 @@ on 2026-10-14. Decisions are in `docs/DECISIONS.md`; open work is in
 - Search was checked on the live site and at 375 px and works; the
   recommendation is to keep it and extend it to the comparison questions.
 
+## Finishing the audit (2026-10-14)
+
+- The owner asked to finish every fix before the freeze and answered the
+  open questions (`docs/DECISIONS.md`, "Audit decisions"): «Православная
+  Церковь» on the tradition pages too, the label «Православный взгляд на
+  расхождение», the capitalisation of the Liturgy and the Sacraments, and
+  the remaining naming points by the audit's proposals.
+- Claims G4-5 to G4-25 rest on their own excerpts; the terminology table is
+  applied with tests (Church naming, one catechism title with a § for every
+  excerpt, one tier per URL, excerpted classification badges).
+- Navigation, search over the comparison questions, a lighter sources page
+  with a separate catalogue, canonical links and a sitemap, data years on
+  the statistics, sourced classification badges, contrast and phone fixes,
+  and new visuals from sourced data (Creed map, Liturgy parts, seven
+  Sacraments, canon bars, lineage tree, week strip, baptism table).
+- The ten analysis cards left «уточняется» since M33 are corrected and
+  verified; the roadmap backlog is empty.
+- Closure of all 307 findings: `docs/research/site-audit-2026-10-10-closure.md`.
+
 ## State at the freeze
 
-- Live site and `main` match; `npm run verify` passed on every published
-  commit (170 Node tests, 26 pages, zero Astro errors, links and text fidelity).
-- Open (see the handoff): claims G4-5…G4-24, the rest of the terminology
-  table, contents for orthodoxy/, meta descriptions, the sources catalogue and
-  page weight (sources/ 5.3 MB), search over the comparison questions,
-  tradition-page route bar, first diagrams, and three owner decisions
-  («Православная Церковь» on analysis pages, spelling of the Liturgy's parts,
-  the third block's label).
+- Live site and `main` match; `npm run verify` passes (177 Node tests,
+  27 pages, zero Astro errors, links and text fidelity).
+- Left on purpose (see the closure file): the source of the All Saints
+  icon, the retired pair page's diagrams, new photos, a year-cycle visual
+  and two code refactors.
