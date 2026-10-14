@@ -1,6 +1,7 @@
 ---
 import Chronicle from '../components/timeline/Chronicle.astro';
 import SectionPage from '../layouts/SectionPage.astro';
+import { withBase } from '../lib/paths';
 ---
 
 <SectionPage
@@ -8,4 +9,5 @@ import SectionPage from '../layouts/SectionPage.astro';
   lead="От Сотворения мира через Авраама и историю Израиля — к христианству, исламу и их направлениям. Другие религии показаны рядом для сопоставления."
 >
   <section id="detailed-chronology"><Chronicle /></section>
+  <p class="evidence-link"><a href={withBase('sources/#timeline-evidence')}>Источники дат и событий →</a></p>
 </SectionPage>

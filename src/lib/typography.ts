@@ -20,3 +20,11 @@ export function nbsp(text: string): string {
     .replace(/(§§?) (?=\d)/g, `$1${NBSP}`)
     .replace(/(\S) — /g, `$1${NBSP}— `);
 }
+
+// An English excerpt or title gets lang="en", so a screen reader switches
+// voice (site audit S3-13, S4-11).
+export function langOf(text: string): 'en' | undefined {
+  const latin = (text.match(/[A-Za-z]/g) ?? []).length;
+  const cyrillic = (text.match(/[А-Яа-яЁё]/g) ?? []).length;
+  return latin > cyrillic ? 'en' : undefined;
+}

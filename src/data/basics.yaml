@@ -69,7 +69,7 @@
     - "В русском православном издании 77 книг: 50 ветхозаветных и 27 новозаветных. Одиннадцать ветхозаветных книг неканонические: они не входят в канон — перечень книг, признанных богодухновенными, то есть внушёнными Святым Духом."
     - "Основу Нового Завета составляют четыре Евангелия. Это слово значит добрая, радостная весть: в них рассказано о жизни, учении, смерти и воскресении Христа."
   proof:
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §19: что такое Священное Писание"
       tier: official
       excerpt: "Священным Писанием называются книги, написанные Святым Духом через освящённых от Бога людей"
@@ -79,17 +79,17 @@
       tier: reference
       excerpt: "– до Рождества Христова и после Его Рождения. Первые называются книгами Ветхого Завета, а вторые – книгами Нового Завета."
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §27: что такое Ветхий и Новый Завет"
       tier: official
       excerpt: "Ветхий и Новый Завет – это древний и новый союз Бога с человеком"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §28: Ветхий Завет"
       tier: official
       excerpt: "Ветхий Завет состоял в том, что Бог обещал даровать людям Божественного Спасителя"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §30: Новый Завет"
       tier: official
       excerpt: "Новый Завет состоит в том, что Бог действительно даровал людям Божественного Спасителя"
@@ -104,17 +104,17 @@
       tier: reference
       excerpt: "не являются богодухновенными и не входят в канон Священного Писания Ветхого Завета"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §45: четыре Евангелия"
       tier: official
       excerpt: "Законоположительными книгами, лежащими в основании Нового Завета, являются четыре книги, составляющие Евангелие"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §46: что означает слово Евангелие"
       tier: official
       excerpt: "Слово Евангелие – греческое, оно означает благовестие, то есть добрую или радостную весть"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §47: о чём говорится в Евангелии"
       tier: official
       excerpt: "о Его крестной смерти, славном воскресении и вознесении на небо"
@@ -157,7 +157,7 @@
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/biblia/?Mt.28:19&r"
       title: "Библия онлайн, Синодальный перевод — Азбука веры: Мф 28:19"
-      tier: reference
+      tier: official
       excerpt: "Итак, идите, научите все народы, крестя их во имя Отца и Сына и Святого Духа"
       accessed: "2026-10-09"
   next:
@@ -186,12 +186,12 @@
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/biblia/?Act.2:1-4&r"
       title: "Библия онлайн, Синодальный перевод — Азбука веры: Деян 2:1"
-      tier: reference
+      tier: official
       excerpt: "При наступлении дня Пятидесятницы все они были единодушно вместе"
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/biblia/?Act.2:1-4&r"
       title: "Библия онлайн, Синодальный перевод — Азбука веры: Деян 2:4"
-      tier: reference
+      tier: official
       excerpt: "И исполнились все Духа Святого"
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/obzor-istorii-prazdnika-pyatidesyatnicy"
@@ -252,27 +252,27 @@
     - "Символ веры — кратко и точно изложенное содержание веры христиан. Его составили участники первого и второго Вселенских Соборов — собраний пастырей и учителей Церкви со всей вселенной. Соборы прошли в Никее (325 год) и в Константинополе (381 год)."
     - "Символ веры начинается словами «Верую во единаго Бога Отца, Вседержителя, Творца небу и земли» и продолжается словами о Христе, Святом Духе, Церкви и жизни будущего века."
   proof:
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §21: что древнее — Предание или Писание"
       tier: official
       excerpt: "Сам Господь наш Иисус Христос Божественное учение Своё и установления передал ученикам Своим словом и примером, а не книгой"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §21: как распространяли веру апостолы"
       tier: official
       excerpt: "Тем же способом и апостолы вначале распространяли веру и утверждали Церковь Христа"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §17: что такое Священное Предание"
       tier: official
       excerpt: "что словом и примером истинно верующие и чтущие Бога люди передают друг другу и предки передают своим потомкам: учение веры, закон Божий, Таинства и священные обряды"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §18: где хранится Священное Предание"
       tier: official
       excerpt: "Церковь, которая и есть хранительница Священного Предания"
       accessed: "2026-10-09"
-    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1"
+    - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3"
       title: "Свт. Филарет Московский. Пространный катехизис, §24: как пользоваться Священным Преданием в наше время"
       tier: official
       excerpt: "Священное Предание нужно и в наши дни для руководства к правильному пониманию Священного Писания"

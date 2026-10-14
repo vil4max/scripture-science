@@ -2610,7 +2610,7 @@ groups:
               accessed: 2026-09-25T00:00:00.000Z
             - url: https://azbyka.ru/predanie-svyashhennoe
               title: Азбука веры. Священное Предание, определение 2
-              tier: official
+              tier: reference
               excerpt: вся апостольская проповедь, весь спасительный апостольский опыт вообще, переданные Церкви
               accessed: 2026-09-27T00:00:00.000Z
             - url: https://azbyka.ru/biblia/?2Thes.2:15&r
@@ -2620,10 +2620,10 @@ groups:
               accessed: 2026-10-01T00:00:00.000Z
             - url: https://azbyka.ru/bibliya
               title: "Азбука веры. Библия: состав и язык библейских книг"
-              tier: official
+              tier: reference
               excerpt: "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг."
               accessed: 2026-09-27T00:00:00.000Z
-            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
               title: "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг"
               tier: official
               excerpt: двадцать две
@@ -2640,7 +2640,7 @@ groups:
               accessed: 2026-09-25T00:00:00.000Z
             - url: https://azbyka.ru/bibliya
               title: "Азбука веры. Библия: неканонические книги Ветхого Завета"
-              tier: official
+              tier: reference
               excerpt: не являются богодухновенными и не входят в канон Священного Писания Ветхого Завета
               accessed: 2026-10-01T00:00:00.000Z
         tradition:
@@ -2771,7 +2771,7 @@ groups:
               accessed: 2026-09-25T00:00:00.000Z
             - url: https://azbyka.ru/bibliya
               title: "Азбука веры. Библия: состав и язык библейских книг"
-              tier: official
+              tier: reference
               excerpt: "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг."
               accessed: 2026-09-27T00:00:00.000Z
         tradition:
@@ -2915,7 +2915,7 @@ groups:
               accessed: 2026-10-01T00:00:00.000Z
             - url: https://azbyka.ru/predanie-svyashhennoe
               title: Азбука веры. Священное Предание, определение 2
-              tier: official
+              tier: reference
               excerpt: вся апостольская проповедь, весь спасительный апостольский опыт вообще, переданные Церкви
               accessed: 2026-09-27T00:00:00.000Z
             - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3

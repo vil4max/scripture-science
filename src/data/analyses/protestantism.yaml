@@ -160,9 +160,9 @@ groups:
         tradition:
           text: Ни одно из рассмотренных вероучений — лютеранское, реформатское, баптистское, пятидесятническое — не содержит отдельного учения о произносимом имени Бога. Синодальный перевод, на котором, по РС ЕХБ, русские христиане читают Библию преимущественно, передаёт тетраграмматон словом «Господь» (Исх 3:15).
           proof:
-            - url: https://azbyka.ru/biblia/?Ex.3:15
+            - url: https://azbyka.ru/biblia/?Ex.3:15&r
               title: Исход 3:15 — Синодальный перевод (Азбука веры)
-              tier: reference
+              tier: official
               excerpt: Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки
               accessed: "2026-09-25"
             - url: https://bible150.ru/
@@ -176,9 +176,9 @@ groups:
             - Православие исповедует Бога, открывшего Себя во многих именах; слово «Господь» не является сокрытием Бога — предмет оценки смысл исповедания, а не одно написание.
             - Православная молитва не ставит познание Бога и спасение в зависимость от употребления только одной формы имени.
           proof:
-            - url: https://azbyka.ru/biblia/?Ex.3:15
+            - url: https://azbyka.ru/biblia/?Ex.3:15&r
               title: Исход 3:15 — Синодальный перевод (Азбука веры)
-              tier: reference
+              tier: official
               excerpt: Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки
               accessed: "2026-09-25"
         more:
@@ -424,17 +424,17 @@ groups:
               tier: official
               excerpt: Святой Кирилл Иерусалимский, святой Афанасий Великий и святой Иоанн Дамаскин принимают число Священных книг Ветхого Завета – двадцать две
               accessed: "2026-09-25"
-            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
               title: "Свт. Филарет Московский. Пространный катехизис, §31: Из скольких книг состоит Ветхий Завет и каковы названия этих книг?"
               tier: official
               excerpt: двадцать две
               accessed: "2026-09-27"
-            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
               title: "Свт. Филарет Московский. Пространный катехизис, §§34–35: книги, которых нет на еврейском языке"
               tier: official
               excerpt: потому что их нет на еврейском языке
               accessed: "2026-10-01"
-            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
               title: "Свт. Филарет Московский. Пространный катехизис, §35: принимать и эти книги"
               tier: official
               excerpt: Но мы должны принимать эти последние книги

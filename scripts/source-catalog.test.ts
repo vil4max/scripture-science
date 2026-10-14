@@ -79,11 +79,12 @@ test('source filters must match the same usage, including its query context', ()
 });
 
 test('each source has one canonical disclosure and every compact evidence link resolves', () => {
-  const html: string = readFileSync('dist/sources/index.html', 'utf8');
+  const html: string = readFileSync('dist/sources/catalog/index.html', 'utf8');
   const ids = [...html.matchAll(/id="(source-[a-f0-9]+)"/g)].map((match) => match[1]);
   assert.ok(ids.length > 870);
   assert.equal(new Set(ids).size, ids.length);
-  const targets = [...html.matchAll(/href="#(source-[a-f0-9]+)"/g)].map((match) => match[1]);
+  const index: string = readFileSync('dist/sources/index.html', 'utf8');
+  const targets = [...index.matchAll(/href="[^"]*sources\/catalog\/#(source-[a-f0-9]+)"/g)].map((match) => match[1]);
   assert.ok(targets.length > 0);
   for (const id of targets) assert.ok(ids.includes(id));
 });
@@ -112,7 +113,7 @@ test('every analysis proof keeps its tradition, topic, card and role', () => {
 const escapeHtml = (value: string) => value.replaceAll('&', '&amp;').replaceAll('<', '&lt;').replaceAll('>', '&gt;').replaceAll('"', '&quot;').replaceAll("'", '&#39;');
 
 test('the built source catalogue includes every analysis URL and links back to each card', () => {
-  const html: string = readFileSync('dist/sources/index.html', 'utf8');
+  const html: string = readFileSync('dist/sources/index.html', 'utf8') + readFileSync('dist/sources/catalog/index.html', 'utf8');
   for (const { proof, usage } of collectAnalysisSources(analyses, new Map())) {
     assert.ok(html.includes(`href="${escapeHtml(proof.url)}"`), proof.url);
     assert.ok(html.includes(`href="/scripture-science/traditions/${usage.traditionId}/#${usage.cardId}"`), usage.cardId);

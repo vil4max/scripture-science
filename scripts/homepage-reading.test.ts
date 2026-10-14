@@ -21,7 +21,8 @@ test('introduction keeps seven unique comparison actions in doctrinal groups', (
 
 test('source relocation preserves every image credit and new overview proof', () => {
   const html = readFileSync('dist/religions/index.html', 'utf8');
-  const sources = readFileSync('dist/sources/index.html', 'utf8');
+  // The catalogue moved to its own page (site audit S3-2); together they hold every record.
+  const sources = readFileSync('dist/sources/index.html', 'utf8') + readFileSync('dist/sources/catalog/index.html', 'utf8');
   for (const item of media) {
     assert.ok(sources.includes(`id="media-${item.id}"`));
     assert.ok(sources.includes(item.author));

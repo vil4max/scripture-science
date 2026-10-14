@@ -1,5 +1,6 @@
 ---
-import { innerQuotes, nbsp } from '../lib/typography';
+import { formatAccessed } from '../lib/citations';
+import { innerQuotes, langOf, nbsp } from '../lib/typography';
 import type { CollectionEntry } from 'astro:content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
@@ -41,7 +42,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
     <summary>Источники</summary>
     <ul>{proofs.map((source) => <li>
       <span class="source-role">{(['church', 'tradition', 'answer'] as const).filter((role) => card[role].proof.some((item) => proofKey(item) === proofKey(source))).map((role) => EVIDENCE_ROLE_LABELS[role]).join(' · ')}</span>
-      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{innerQuotes(source.excerpt)}» <span class="accessed">(просмотрено {source.accessed})</span>
+      <a href={source.url} target="_blank" rel="noopener noreferrer" lang={langOf(source.title)}>{source.title}</a>: <span lang={langOf(source.excerpt)}>«{innerQuotes(source.excerpt)}»</span> <span class="accessed">(дата обращения: {formatAccessed(source.accessed)})</span>
     </li>)}</ul>
   </details>}
   {card.topic && <p class="back"><a href={withBase(`compare/?t=orthodoxy,${tradition}#topic-${card.topic}`)} data-carry-selection>К сравнению по теме</a></p>}

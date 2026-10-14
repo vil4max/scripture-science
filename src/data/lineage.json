@@ -83,11 +83,11 @@
             "accessed": "2026-09-27"
           },
           {
-            "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
-            "title": "Деяния 2:1–4 (King James Version)",
+            "url": "https://azbyka.ru/biblia/?Act.2:1-4&r",
+            "title": "Деян 2:1–4 — Синодальный перевод",
             "tier": "official",
-            "excerpt": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
-            "accessed": "2026-09-25"
+            "excerpt": "При наступлении дня Пятидесятницы все они были единодушно вместе.",
+            "accessed": "2026-10-14"
           }
         ]
       },
@@ -102,11 +102,11 @@
             "accessed": "2026-09-27"
           },
           {
-            "url": "https://bible-api.com/acts%202:1-4?translation=kjv",
-            "title": "Деяния 2:1–4 (King James Version)",
+            "url": "https://azbyka.ru/biblia/?Act.2:1-4&r",
+            "title": "Деян 2:1–4 — Синодальный перевод",
             "tier": "official",
-            "excerpt": "And when the day of Pentecost was fully come, they were all with one accord in one place.",
-            "accessed": "2026-09-25"
+            "excerpt": "При наступлении дня Пятидесятницы все они были единодушно вместе.",
+            "accessed": "2026-10-14"
           },
           {
             "url": "https://azbyka.ru/obzor-istorii-prazdnika-pyatidesyatnicy",
@@ -330,11 +330,11 @@
         "label": "1517 г. · выступление Лютера",
         "proof": [
           {
-            "url": "https://www.history.com/this-day-in-history/october-31/martin-luther-posts-95-theses",
-            "title": "Martin Luther posts 95 theses — HISTORY",
-            "tier": "news",
-            "excerpt": "approaches the door of the Castle Church in Wittenberg, Germany, and nails a piece of paper to it containing the 95 revolutionary opinions",
-            "accessed": "2026-09-25"
+            "url": "https://openstax.org/books/world-history-volume-2/pages/5-1-the-protestant-reformation",
+            "title": "OpenStax World History — The Protestant Reformation",
+            "tier": "reference",
+            "excerpt": "In 1517, Luther, then a professor at the University of Wittenberg in Germany, became outraged",
+            "accessed": "2026-10-14"
           }
         ]
       },
@@ -1113,8 +1113,8 @@
       "summary": "Ислам описывает себя не как новую религию, а как завершение и восстановление единобожия, возвещавшегося более ранними пророками, в откровении, данном Мухаммаду.",
       "proof": [
         {
-          "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3",
-          "title": "Коран 5:3, перевод Э. Кулиева | Quran.com Content API",
+          "url": "https://quran.com/5/3?translations=45",
+          "title": "Коран 5:3, перевод Э. Кулиева | Quran.com",
           "tier": "official",
           "excerpt": "Сегодня Я ради вас усовершенствовал вашу религию, довел до конца Мою милость к вам и одобрил для вас в качестве религии ислам.",
           "accessed": "2026-09-25"
@@ -1202,11 +1202,11 @@
       "summary": "Свидетели Иеговы учат, что после смерти апостолов в христианстве возникло предсказанное отступничество, и что истинное поклонение было восстановлено начиная с библейского кружка 1870-х годов.",
       "proof": [
         {
-          "url": "https://bible-api.com/2%20peter%202:1?translation=kjv",
-          "title": "2-е Петра 2:1 (King James Version)",
-          "tier": "reference",
-          "excerpt": "there shall be false teachers among you, who privily shall bring in damnable heresies, even denying the Lord that bought them",
-          "accessed": "2026-09-25"
+          "url": "https://wol.jw.org/ru/wol/b/r2/lp-u/nwtsty/61/2",
+          "title": "2 Пет 2:1 — перевод «Новый мир», wol.jw.org",
+          "tier": "official",
+          "excerpt": "Однако как среди израильтян были лжепророки, так и у вас будут лжеучители",
+          "accessed": "2026-10-14"
         }
       ]
     }

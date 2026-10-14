@@ -1,0 +1,39 @@
+---
+// The full filterable source catalogue, moved off sources/ so that page stays
+// light enough for a phone (site audit 2026-10-10, S3-2, S4-6). Entry anchors
+// (#source-<hash>) are the same as before; sources/ forwards old links here.
+import BackToTop from '../../components/BackToTop.astro';
+import SourceCatalogList from '../../components/SourceCatalogList.astro';
+import SourceFilters from '../../components/SourceFilters.astro';
+import Base from '../../layouts/Base.astro';
+import { getOrderedMatrix } from '../../lib/content';
+import { withBase } from '../../lib/paths';
+import { getSiteSourceCatalog } from '../../lib/siteSources';
+
+const traditions = await getOrderedMatrix();
+const entries = await getSiteSourceCatalog();
+const title = 'Каталог источников';
+const description = 'Все источники сайта с проверочными выдержками и датами обращения; фильтры по теме, традиции, назначению и виду источника.';
+---
+<Base title={title} description={description}>
+  <main class="page" data-no-terms>
+    <header>
+      <p class="up"><a href={withBase('sources/')}>← Источники</a></p>
+      <h1>{title}</h1>
+      <p class="lead">{description}</p>
+    </header>
+    <section id="by-tier">
+      <p>Фильтр «Разбор традиции» выбирает, к какому разбору относится выдержка. В нём могут использоваться и собственные документы традиции, и православные источники ответа.</p>
+      <SourceFilters traditions={traditions.map((entry) => ({ id: entry.id, name: entry.data.name }))} />
+      <SourceCatalogList entries={entries} detailed />
+    </section>
+    <BackToTop />
+  </main>
+</Base>
+<style>
+  .page { max-width: var(--page); margin: 0 auto; padding: 40px 32px 64px; display: grid; gap: 24px; }
+  .up { margin: 0; font-size: 15px; }
+  h1 { margin: 0; }
+  .lead { color: var(--muted); }
+  @media (max-width: 760px) { .page { padding: 24px 16px 48px; } }
+</style>

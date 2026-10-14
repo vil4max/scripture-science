@@ -200,7 +200,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -1066,9 +1066,9 @@
     ],
     "positionProof": [
       {
-        "url": "https://azbyka.ru/biblia/?Ex.3:15",
+        "url": "https://azbyka.ru/biblia/?Ex.3:15&r",
         "title": "Исход 3:15 — Синодальный перевод (Азбука веры)",
-        "tier": "reference",
+        "tier": "official",
         "excerpt": "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки",
         "accessed": "2026-09-25"
       }
@@ -1196,7 +1196,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -2444,7 +2444,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -3308,15 +3308,15 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=112:1",
-        "title": "Коран 112:1, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/112/1?translations=45",
+        "title": "Коран 112:1, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Скажи: «Он - Аллах Единый,",
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=112:4",
-        "title": "Коран 112:4, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/112/4?translations=45",
+        "title": "Коран 112:4, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "и нет никого равного Ему».",
         "accessed": "2026-09-25"
@@ -3366,8 +3366,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=7:180",
-        "title": "Коран 7:180, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/7/180?translations=45",
+        "title": "Коран 7:180, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "У Аллаха - самые прекрасные имена. Посему взывайте к Нему посредством их",
         "accessed": "2026-09-25"
@@ -3417,15 +3417,15 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:157",
-        "title": "Коран 4:157, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/4/157?translations=45",
+        "title": "Коран 4:157, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха. Однако они не убили его и не распяли",
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171",
-        "title": "Коран 4:171, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/4/171?translations=45",
+        "title": "Коран 4:171, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Мессия Иса (Иисус), сын Марьям (Марии), является посланником Аллаха, Его Словом, которое Он послал Марьям (Марии), и духом от Него",
         "accessed": "2026-09-25"
@@ -3461,8 +3461,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:85",
-        "title": "Коран 17:85, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/17/85?translations=45",
+        "title": "Коран 17:85, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Они станут спрашивать тебя о духе. Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»",
         "accessed": "2026-09-25"
@@ -3489,7 +3489,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -3512,15 +3512,15 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:44",
-        "title": "Коран 5:44, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/5/44?translations=45",
+        "title": "Коран 5:44, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Мы ниспослали Таурат (Тору), в котором содержится верное руководство и свет",
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:55",
-        "title": "Коран 17:55, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/17/55?translations=45",
+        "title": "Коран 17:55, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "А Давуду (Давиду) Мы даровали Забур (Псалтирь)",
         "accessed": "2026-09-25"
@@ -3584,8 +3584,8 @@
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59",
-        "title": "Коран 4:59, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/4/59?translations=45",
+        "title": "Коран 4:59, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас",
         "accessed": "2026-09-25"
@@ -3649,8 +3649,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:82",
-        "title": "Коран 2:82, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/2/82?translations=45",
+        "title": "Коран 2:82, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "те, которые уверовали и совершали праведные деяния, окажутся обитателями Рая. Они пребудут там вечно",
         "accessed": "2026-09-25"
@@ -3700,8 +3700,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=23:100",
-        "title": "Коран 23:100, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/23/100?translations=45",
+        "title": "Коран 23:100, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Позади них будет преграда вплоть до того дня, когда они будут воскрешены",
         "accessed": "2026-09-25"
@@ -3744,8 +3744,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=43:61",
-        "title": "Коран 43:61, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/43/61?translations=45",
+        "title": "Коран 43:61, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "он (Иса, или Коран, или Мухаммад) является признаком Часа. Нисколько не препирайтесь по поводу него",
         "accessed": "2026-09-25"
@@ -3823,8 +3823,8 @@
         "accessed": "2026-09-26"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183",
-        "title": "Коран 2:183, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/2/183?translations=45",
+        "title": "Коран 2:183, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам",
         "accessed": "2026-09-25"
@@ -4081,8 +4081,8 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183",
-        "title": "Коран 2:183, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/2/183?translations=45",
+        "title": "Коран 2:183, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам",
         "accessed": "2026-09-26"
@@ -4102,15 +4102,15 @@
         "accessed": "2026-09-26"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:187",
-        "title": "Коран 2:187, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/2/187?translations=45",
+        "title": "Коран 2:187, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Ешьте и пейте, пока вы не сможете отличить белую нитку рассвета от черной, а затем поститесь до ночи",
         "accessed": "2026-09-26"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185",
-        "title": "Коран 2:185, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/2/185?translations=45",
+        "title": "Коран 2:185, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "А если кто болен или находится в пути, то пусть постится столько же дней в другое время",
         "accessed": "2026-09-26"
@@ -4151,8 +4151,8 @@
         "accessed": "2026-09-26"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:87",
-        "title": "Коран 5:87, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/5/87?translations=45",
+        "title": "Коран 5:87, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Не запрещайте блага, которые Аллах сделал дозволенными для вас, и не преступайте границы дозволенного",
         "accessed": "2026-09-26"
@@ -4323,22 +4323,22 @@
     ],
     "positionProof": [
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3",
-        "title": "Коран 5:3, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/5/3?translations=45",
+        "title": "Коран 5:3, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Вам запрещены мертвечина, кровь, мясо свиньи и то, над чем не было произнесено имя Аллаха",
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:90",
-        "title": "Коран 5:90, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/5/90?translations=45",
+        "title": "Коран 5:90, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "опьяняющие напитки, азартные игры, каменные жертвенники (или идолы) и гадальные стрелы являются скверной из деяний дьявола",
         "accessed": "2026-09-25"
       },
       {
-        "url": "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59",
-        "title": "Коран 4:59, перевод Э. Кулиева | Quran.com Content API",
+        "url": "https://quran.com/4/59?translations=45",
+        "title": "Коран 4:59, перевод Э. Кулиева | Quran.com",
         "tier": "official",
         "excerpt": "Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас",
         "accessed": "2026-09-25"
@@ -4597,7 +4597,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -5698,7 +5698,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",
@@ -6771,7 +6771,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1",
+        "url": "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3",
         "title": "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг",
         "tier": "official",
         "excerpt": "двадцать две",

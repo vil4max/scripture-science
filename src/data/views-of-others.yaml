@@ -189,7 +189,7 @@
       proof:
         - url: https://azbyka.ru/sekta
           title: Секта — Азбука веры
-          tier: official
+          tier: reference
           excerpt: единственный критерий, по которому можно определить сектантство, – это догматический критерий, искажение веры Церкви
           accessed: 2026-09-25
       status_check: verified
@@ -293,14 +293,14 @@
         text: O People of the Scripture, come to a word that is equitable between us and you - that we will not worship except Allāh and not associate anything with Him and not take one another as lords instead of Allāh.
         text_ru: "Скажи: «О люди Писания! Давайте придем к единому слову для нас и для вас, о том, что мы не будем поклоняться никому, кроме Аллаха, не будем приобщать к Нему никаких сотоварищей и не будем считать друг друга господами наряду с Аллахом»."
         translation: Перевод смыслов Эльмира Кулиева
-        url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:64
+        url: https://quran.com/3/64?translations=45
       proof:
-        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=5:5
+        - url: https://quran.com/5/5?translations=20
           title: Quran.com — перевод Saheeh International, 5:5
           tier: official
           excerpt: the food of those who were given the Scripture is lawful for you and your food is lawful for them
           accessed: 2026-09-25
-        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=2:62
+        - url: https://quran.com/2/62?translations=20
           title: Quran.com — перевод Saheeh International, 2:62
           tier: official
           excerpt: those [among them] who believed in Allāh and the Last Day and did righteousness - will have their reward with their Lord
@@ -326,9 +326,9 @@
         text: there is among them a party who alter the Scripture with their tongues so you may think it is from the Scripture, but it is [not].
         text_ru: "Среди них есть такие, которые искажают Писание своими языками, чтобы вы приняли за Писание то, что не относится к нему."
         translation: Перевод смыслов Эльмира Кулиева
-        url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:78
+        url: https://quran.com/3/78?translations=45
       proof:
-        - url: https://api.quran.com/api/v4/quran/translations/20?verse_key=3:78
+        - url: https://quran.com/3/78?translations=20
           title: Quran.com — перевод Saheeh International, 3:78
           tier: official
           excerpt: there is among them a party who alter the Scripture with their tongues so you may think it is from the Scripture

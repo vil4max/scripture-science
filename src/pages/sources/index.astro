@@ -1,33 +1,27 @@
 ---
-import BackToTop from '../components/BackToTop.astro';
-import { getPairDocument } from '../lib/pairDocument';
-import { assessments } from '../lib/orthodox';
-import classifications from '../data/orthodox-classifications.json';
-import ViewTile from '../components/ViewTile.astro';
-import { withBase } from '../lib/paths';
-import { getFamilies } from '../lib/families';
-import { buildSourceCatalog, collectAnalysisSources, collectProofs, collectTextSources, filterSourceCatalog, sourceAnchor, READING_KIND_LABELS, type CatalogRecord } from '../lib/sourceCatalog';
-import SourceCatalogList from '../components/SourceCatalogList.astro';
-import SourceFilters from '../components/SourceFilters.astro';
-import { getAnalyses, profileHref } from '../lib/analysis';
-import countries from '../data/world-countries.json';
-import christianTraditions from '../data/world-christian-traditions.json';
-import hierarchy from '../data/world-hierarchy-2026.json';
-import history from '../data/history-overview.json';
-import biblical from '../data/biblical-timeline.json';
-import otherTraditions from '../data/other-traditions.json';
-import world from '../data/world-composition.json';
-import lineage from '../data/lineage.json';
-import media from '../data/media.json';
-import bible from '../data/bible-guide.json';
-import CreationTraditions from '../components/timeline/CreationTraditions.astro';
-import WorldComposition from '../components/WorldComposition.astro';
-import WorldMethodology from '../components/WorldMethodology.astro';
-import { JW_NOTE_TEXT } from '../lib/jwNote';
-import overview from '../data/family-overview.json';
-import Base from '../layouts/Base.astro';
-import { getDisputes, getOrderedMatrix, getOrderedViews, getTerms } from '../lib/content';
-import { TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../lib/rules';
+import { formatAccessed } from '../../lib/citations';
+import BackToTop from '../../components/BackToTop.astro';
+import { getPairDocument } from '../../lib/pairDocument';
+import { assessments } from '../../lib/orthodox';
+import classifications from '../../data/orthodox-classifications.json';
+import ViewTile from '../../components/ViewTile.astro';
+import { withBase } from '../../lib/paths';
+import { collectTextSources, filterSourceCatalog, READING_KIND_LABELS } from '../../lib/sourceCatalog';
+import { getSiteSourceCatalog } from '../../lib/siteSources';
+import SourceCatalogList from '../../components/SourceCatalogList.astro';
+import { getAnalyses, profileHref } from '../../lib/analysis';
+import countries from '../../data/world-countries.json';
+import christianTraditions from '../../data/world-christian-traditions.json';
+import history from '../../data/history-overview.json';
+import media from '../../data/media.json';
+import CreationTraditions from '../../components/timeline/CreationTraditions.astro';
+import WorldComposition from '../../components/WorldComposition.astro';
+import WorldMethodology from '../../components/WorldMethodology.astro';
+import { JW_NOTE_TEXT } from '../../lib/jwNote';
+import overview from '../../data/family-overview.json';
+import Base from '../../layouts/Base.astro';
+import { getDisputes, getOrderedMatrix, getOrderedViews } from '../../lib/content';
+import { TOPIC_ORDER, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN } from '../../lib/rules';
 
 const { sectionHtml: pairSections, corrections: pairCorrections } = await getPairDocument();
 const traditions = await getOrderedMatrix();
@@ -39,7 +33,6 @@ const colorById = new Map(
 const views = await getOrderedViews();
 const namesById = new Map(traditions.map(entry => [entry.id, entry.data.name]));
 const orthodox = traditions.find(entry => entry.id === 'orthodoxy')!;
-const terms = await getTerms();
 const disputes = await getDisputes();
 const analyses = (await getAnalyses()).map((entry) => entry.data);
 const furtherReading = analyses.flatMap((analysis) => analysis.groups.flatMap((group) => group.cards.flatMap((card) =>
@@ -49,88 +42,7 @@ const textSources = [...new Map(
   collectTextSources([...traditions, ...views, ...disputes]).map((item) => [item.url, item]),
 ).values()].sort((a, b) => a.title.localeCompare(b.title, 'ru'));
 
-// Keep claim attribution before grouping by URL and deduplicating complete proof tuples.
-const raw: CatalogRecord[] = collectAnalysisSources(analyses, namesById);
-raw.push({
-  proof: {
-    url: countries.url, title: 'Pew — Country composition, 2020', tier: 'reference',
-    accessed: countries.accessed,
-    excerpt: 'This interactive table shows the religious makeup of 201 countries and territories.',
-  },
-  usage: { section: 'Карта религиозной принадлежности' },
-});
-
-for (const tradition of traditions) {
-  const t = tradition.data;
-  const traditionName = t.name;
-  for (const p of t.since.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'с …' } });
-  for (const p of t.scripture.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Писание' } });
-  for (const p of t.adherents.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Численность' } });
-  for (const p of t.self_view.proof) raw.push({ proof: p, usage: { traditionId: tradition.id, traditionName, section: 'Сама о себе' } });
-  for (const position of t.positions) {
-    for (const p of collectProofs(position)) {
-      raw.push({
-        proof: p,
-        usage: { traditionId: tradition.id, traditionName, topic: position.topic, section: 'Сравнение' },
-      });
-    }
-  }
-}
-
-for (const view of views) {
-  for (const doc of view.data.documents) {
-    for (const p of collectProofs(doc)) {
-      raw.push({
-        proof: p,
-        usage: { traditionId: view.id, traditionName: view.data.tradition, section: `взгляд на: ${doc.about.join(', ')}` },
-      });
-    }
-  }
-}
-
-for (const dispute of disputes) {
-  for (const part of [...dispute.data.challenges, ...dispute.data.answers]) {
-    const traditionName = traditions.find((t) => t.id === part.tradition)?.data.name;
-    for (const p of collectProofs(part)) {
-      raw.push({
-        proof: p,
-        usage: { traditionId: part.tradition, traditionName, topic: dispute.data.topic, section: `спорный вопрос «${dispute.data.title}»` },
-      });
-    }
-  }
-}
-
-for (const term of terms) {
-  for (const p of term.data.proof) {
-    raw.push({ proof: p, usage: { section: `термин «${term.data.term}»` } });
-  }
-}
-
-for (const family of getFamilies()) {
-  for (const proof of family.proof) raw.push({ proof, usage: {
-    traditionId: family.tradition,
-    traditionName: traditions.find((t) => t.id === family.tradition)?.data.name,
-    section: 'Классификация',
-  } });
-}
-for (const [section, data] of [
-  ['Библейская линия: выбранная хронология', biblical], ['Авраамические религии', overview], ['Вводная история', history], ['Другие традиции', otherTraditions],
-  ['Библия', bible],
-  ['Население мира', world], ['Религии и конфессии, оценка 2026', hierarchy], ['Подробная хронология', lineage],
-] as const) {
-  for (const proof of collectProofs(data)) raw.push({ proof, usage: { section } });
-}
-
-for (const record of assessments) {
-  for (const [role, proofs] of [['tradition', record.positionProof], ['answer', record.proof]] as const) {
-    for (const proof of collectProofs(proofs)) raw.push({ proof, usage: {
-      traditionId: record.tradition, traditionName: namesById.get(record.tradition),
-      topic: record.topic, section: 'Православная оценка', role,
-    } });
-  }
-}
-const entries = buildSourceCatalog(raw);
-if (new Set(entries.map((entry) => sourceAnchor(entry.url))).size !== entries.length) throw new Error('Duplicate source anchor');
+const entries = await getSiteSourceCatalog();
 
 const byTradition = new Map(
   traditions.map((tradition) => [
@@ -182,18 +94,15 @@ const description = 'Источники материалов сайта и по�
         </ul></div>
         <div><strong>Источники</strong><ul>
           <li><a href="#by-topic">Православное основание и источники по темам</a></li><li><a href="#by-tradition">По традициям</a></li><li><a href="#texts">Тексты и переводы</a></li>
-          <li><a href="#data-and-media">Данные и изображения</a></li><li><a href="#by-tier">Полный каталог</a></li><li><a href="#coverage">Покрытие</a></li><li><a href="#pair-reference">Материалы сравнения православия и Свидетелей Иеговы</a></li>
+          <li><a href="#data-and-media">Данные и изображения</a></li><li><a href={withBase('sources/catalog/')}>Полный каталог</a></li><li><a href="#timeline-evidence">Хронология и Библия</a></li><li><a href="#coverage">Покрытие</a></li><li><a href="#pair-reference">Материалы сравнения православия и Свидетелей Иеговы</a></li>
         </ul></div>
       </nav>
     </header>
 
     <section id="by-tier">
       <h2>Найти источник</h2>
-      <p>Фильтр «Разбор традиции» выбирает, к какому разбору относится выдержка. В нём могут использоваться и собственные документы традиции, и православные источники.</p>
-      <SourceFilters traditions={traditions.map((entry) => ({ id: entry.id, name: entry.data.name }))} />
-      <SourceCatalogList entries={entries} detailed />
+      <p>Полный каталог источников с фильтрами по теме, традиции, назначению и виду источника — на <a href={withBase('sources/catalog/')}>отдельной странице</a>: здесь он делал страницу слишком тяжёлой для телефона.</p>
     </section>
-
     <section id="terms" aria-labelledby="terms-title">
       <h2 id="terms-title">Термины</h2>
       <p>Объяснения слов, определения и их источники собраны в <a href={withBase('terms/')}>словаре</a>.</p>
@@ -243,6 +152,14 @@ const description = 'Источники материалов сайта и по�
       <p><a href={countries.url}>Pew Research Center — состав населения 201 страны и территории</a>. Подложка: Natural Earth.</p>
       <p>Деление христиан на католиков, протестантов, православных вместе с древневосточными церквями и других: <a href={christianTraditions.url}>Pew Research Center, «Global Christianity» (2011), таблица «Christian Traditions by Region and Country»</a>, оценка на 2010 год. Христианский режим карты использует только этот исторический срез: цвет обозначает крупнейшую категорию среди христиан страны, а доли рассчитаны от суммы четырёх категорий в этой же строке. Оценки Pew округлены, значения «&lt; N» в сохранённой таблице приблизительно представлены как N/2. Эти пропорции не переносятся на население 2020 года. Для Макао использована строка Macau. Для Кюрасао отдельной оценки нет: сохранённая строка бывших Нидерландских Антильских островов не используется как оценка острова.</p>
     </section>
+    <section id="timeline-evidence">
+      <h2>Источники хронологии и Библии</h2>
+      <p>Даты и события раздела «История религий» и страницы о Священном Писании подтверждены выдержками; каждая ссылка ведёт к записи каталога.</p>
+      <h3>Хронология</h3>
+      <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => ['Подробная хронология', 'Вводная история', 'Библейская линия: выбранная хронология', 'Авраамические религии', 'Другие традиции'].includes(usage.section))} />
+      <h3 id="bible-evidence">Священное Писание</h3>
+      <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.section === 'Библия')} />
+    </section>
     <section id="history-evidence">
       <h2>Археологические свидетельства</h2>
       <p>{history.find((chapter) => chapter.id === 'evidence')!.text}</p>
@@ -285,8 +202,9 @@ const description = 'Источники материалов сайта и по�
     <section id="pair-reference">
       <h2>Подробные материалы: православие и Свидетели Иеговы</h2>
       <details class="source-topic" id="pair-refs">
-        <summary>Библиография сравнения</summary>
-        <Fragment set:html={pairSections.refs} />
+        <summary>Библиография исходного сравнения (без проверочных выдержек)</summary>
+        {/* The preserved list carried a maintainer's note; readers get a caveat instead (site audit S4-13). */}
+        <Fragment set:html={pairSections.refs.replace(/<p class="note">[^<]*<\/p>/, '<p class="note">Цифры о численности и объёме литературы — оценки на дату составления исходного сравнения; проверочных выдержек к этому списку нет.</p>')} />
       </details>
       <details class="source-topic" id="pair-voices">
         <summary>Именные цитаты из исходного исследования</summary>
@@ -387,12 +305,17 @@ const description = 'Источники материалов сайта и по�
       <h2>Данные карты и фотографии</h2>
       <p>Статистика: <a href="https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/">Pew — Religious Composition by Country, 2010–2020</a> (201 страна и территория; обращение 2026-09-26).</p>
       <p>Географическая подложка: <a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/">Natural Earth, 1:110m</a>, <a href="https://www.naturalearthdata.com/about/terms-of-use/">public domain</a>. Подписи и границы схематические.</p>
-      <ul>{media.map((item) => <li id={`media-${item.id}`}>{item.source.startsWith('http') ? <a href={item.source}>{item.caption}</a> : <>{item.caption} ({item.source})</>} — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (обращение {item.accessed}). {item.changes}</li>)}</ul>
+      <ul>{media.map((item) => <li id={`media-${item.id}`}>{item.source.startsWith('http') ? <a href={item.source}>{item.caption}</a> : <>{item.caption} ({item.source})</>} — {item.author}, <a href={item.licenseUrl}>{item.license}</a> (дата обращения: {formatAccessed(item.accessed)}). {item.changes}</li>)}</ul>
     </section>
 
 
     <BackToTop />
   </main>
+  <script>
+    // Catalogue entries moved to sources/catalog/ (site audit S3-2); old links keep working.
+    import { withBase } from '../../lib/paths';
+    if (/^#source-[0-9a-f]+$/.test(location.hash)) location.replace(`${withBase('sources/catalog/')}${location.search}${location.hash}`);
+  </script>
 </Base>
 
 <script>

@@ -59,33 +59,33 @@ groups:
         tradition:
           text: 'Исламское вероучение держится таухида — абсолютного единобожия: Аллах «не родил и не был рожден, и нет никого равного Ему» (Коран 112:3–4). Коран прямо обращается к людям Писания: «не говорите: „Троица!“» (4:171), называет неверием слова «Аллах является третьим в троице» (5:73) и говорит, что Аллаху «не подобает иметь сына» (19:35).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=112:1
-              title: Коран 112:1, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/112/1?translations=45
+              title: Коран 112:1, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'Скажи: «Он - Аллах Единый,'
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=112:4
-              title: Коран 112:4, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/112/4?translations=45
+              title: Коран 112:4, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: и нет никого равного Ему».
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=112:3
-              title: Коран 112:3, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/112/3?translations=45
+              title: Коран 112:3, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Он не родил и не был рожден
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171
-              title: Коран 4:171, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/171?translations=45
+              title: Коран 4:171, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'не говорите: «Троица!». Прекратите, ведь так будет лучше для вас'
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:73
-              title: Коран 5:73, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/73?translations=45
+              title: Коран 5:73, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'Не уверовали те, которые говорят: «Аллах является третьим в троице»'
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=19:35
-              title: Коран 19:35, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/19/35?translations=45
+              title: Коран 19:35, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Не подобает Аллаху иметь сына
               accessed: '2026-10-01'
@@ -126,8 +126,8 @@ groups:
               tier: official
               excerpt: Сын Божий рождён, не сотворён
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:116
-              title: Коран 5:116, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/116?translations=45
+              title: Коран 5:116, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Примите меня и мою мать двумя богами наряду с Аллахом
               accessed: '2026-10-01'
@@ -181,18 +181,18 @@ groups:
         tradition:
           text: 'В исламе Бог называется «самыми прекрасными именами» (Коран 7:180): это имена-свойства, и призывать Его можно и как Аллаха, и как Милостивого (17:110). В числе того, что Коран отрицает о Боге, — наличие у Него сына: Аллаху «не подобает иметь сына» (19:35).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=7:180
-              title: Коран 7:180, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/7/180?translations=45
+              title: Коран 7:180, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: У Аллаха - самые прекрасные имена. Посему взывайте к Нему посредством их
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:110
-              title: Коран 17:110, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/110?translations=45
+              title: Коран 17:110, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Призывайте Аллаха или призывайте Милостивого
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=19:35
-              title: Коран 19:35, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/19/35?translations=45
+              title: Коран 19:35, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Не подобает Аллаху иметь сына
               accessed: '2026-10-01'
@@ -257,28 +257,28 @@ groups:
         tradition:
           text: 'Коран говорит о духе так: «Дух — от повеления моего Господа, а вам дано знать об этом очень мало» (17:85; переводчик добавляет в скобках, что «дух» здесь — «душа или Джибриль»). Мессия назван в Коране «духом от Него» (4:171); о Святом Духе сказано, что им был укреплён Иса (2:87), и в переводе Э. Кулиева в скобках поясняется, что это Джибриль (Гавриил).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:85
-              title: Коран 17:85, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/85?translations=45
+              title: Коран 17:85, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'Они станут спрашивать тебя о духе. Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»'
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171
-              title: Коран 4:171, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/171?translations=45
+              title: Коран 4:171, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: и духом от Него
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:87
-              title: Коран 2:87, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/87?translations=45
+              title: Коран 2:87, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: укрепили его Святым Духом (Джибрилем)
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=16:102
-              title: Коран 16:102, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/16/102?translations=45
+              title: Коран 16:102, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Святой Дух (Джибрил) спустил его (Коран) от твоего Господа
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:85
-              title: Коран 17:85, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/85?translations=45
+              title: Коран 17:85, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'Они станут спрашивать тебя о духе (душе или Джибриле). Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»'
               accessed: '2026-10-01'
@@ -336,7 +336,7 @@ groups:
               tier: reference
               excerpt: 'Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг.'
               accessed: '2026-09-27'
-            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
               title: "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг"
               tier: official
               excerpt: двадцать две
@@ -359,13 +359,13 @@ groups:
         tradition:
           text: 'Для мусульман Коран — заключительное откровение, ниспосланное Мухаммаду; вместе с тем ислам признаёт прежние Писания как ниспосланные Богом: Таурат (Тору), данный Мусе, Забур (Псалтирь), данный Дауду, и Инджиль (Евангелие), данный Исе (5:44; 17:55; 5:46). Мусульманские источники называют любой перевод Корана лишь «переводом смыслов»: как откровение Коран существует на арабском языке. Цитаты Корана на этой странице даны в переводе смыслов Э. Кулиева.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:44
-              title: Коран 5:44, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/44?translations=45
+              title: Коран 5:44, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Мы ниспослали Таурат (Тору), в котором содержится верное руководство и свет
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:55
-              title: Коран 17:55, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/55?translations=45
+              title: Коран 17:55, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: А Давуду (Давиду) Мы даровали Забур (Псалтирь)
               accessed: '2026-09-25'
@@ -374,13 +374,13 @@ groups:
               tier: official
               excerpt: ни один смысловой перевод, каким бы совершенным он ни был, не может сравниться с оригиналом Корана
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:46
-              title: Коран 5:46, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/46?translations=45
+              title: Коран 5:46, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Мы даровали ему Инджил (Евангелие), в котором было верное руководство и свет
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:4
-              title: Коран 3:4, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/4?translations=45
+              title: Коран 3:4, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Он также ниспослал Различение (Коран)
               accessed: '2026-10-01'
@@ -440,13 +440,13 @@ groups:
         tradition:
           text: 'Коран упрекает людей Писания: они «искажают слова, меняя их местами» (5:13), «пишут Писание собственными руками» (2:79). Что отсюда следует, — предмет мусульманского богословия: проф. Т. Ибрагим в статье, размещённой на сайте ДУМ РФ, доказывает, что речь идёт об искажении толкования, а не текста, и приводит слова Ибн Аббаса, переданные аль-Бухари: изменить текст Писаний Божьих никто не в силах. Это мнение автора, а не единый мусульманский вердикт.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:13
-              title: Коран 5:13, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/13?translations=45
+              title: Коран 5:13, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Они искажают слова, меняя их местами
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:79
-              title: Коран 2:79, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/79?translations=45
+              title: Коран 2:79, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Горе тем, которые пишут Писание собственными руками
               accessed: '2026-10-01'
@@ -472,8 +472,8 @@ groups:
               tier: official
               excerpt: Но более поздние авторы выдвинули идею искажения самого текста. Причем обе эти позиции сохранились
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=10:94
-              title: Коран 10:94, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/10/94?translations=45
+              title: Коран 10:94, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: спроси тех, кто начал читать Писание раньше тебя
               accessed: '2026-10-01'
@@ -517,8 +517,8 @@ groups:
         tradition:
           text: В исламе Мухаммад — «Посланник Аллаха и печать пророков (или последний из пророков)» (Коран 33:40). Мусульманские богословы читают этот аят как указание, что он последний в пророческой цепи; по исламскому мировоззрению, всякий, кто после него претендует на роль пророка, считается ложным (ДУМ РФ).
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=33:40
-              title: Коран 33:40, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/33/40?translations=45
+              title: Коран 33:40, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Посланник Аллаха и печать пророков (или последний из пророков)
               accessed: '2026-10-01'
@@ -534,8 +534,8 @@ groups:
             - 'Церковь проверяет любое учение исповеданием Христа: «всякий дух, который исповедует Иисуса Христа, пришедшего во плоти, есть от Бога» (1 Ин 4:2).'
             - 'Энциклопедия «Азбука веры» поясняет, что с позиции христианства Мухаммад не является пророком: он родился через шесть веков после Боговоплощения, когда Христос уже открыл полноту. Это оценка православных авторов, а не самоописание ислама.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:136
-              title: Коран 2:136, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/136?translations=45
+              title: Коран 2:136, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Мы не делаем различий между ними
               accessed: '2026-10-01'
@@ -607,23 +607,23 @@ groups:
         tradition:
           text: 'В исламе Иса (Иисус) — один из великих пророков и Мессия (аль-Масих), рождённый Девой Марьям по слову Бога. Коран называет его «посланником Аллаха, Его Словом… и духом от Него» (4:171), но не Богом и не Сыном Божиим: не уверовали «те, которые говорят: „Аллах — это Мессия, сын Марьям“» (5:72). Сам Иса, по Корану, говорит: «Поклоняйтесь Аллаху, моему Господу и вашему Господу» (5:117); его рождение без отца подобно сотворению Адама (3:59).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:171
-              title: Коран 4:171, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/171?translations=45
+              title: Коран 4:171, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Мессия Иса (Иисус), сын Марьям (Марии), является посланником Аллаха, Его Словом, которое Он послал Марьям (Марии), и духом от Него
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:72
-              title: Коран 5:72, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/72?translations=45
+              title: Коран 5:72, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'Не уверовали те, которые говорят: «Аллах - это Мессия, сын Марьям (Марии)»'
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:117
-              title: Коран 5:117, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/117?translations=45
+              title: Коран 5:117, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Поклоняйтесь Аллаху, моему Господу и вашему Господу
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:59
-              title: Коран 3:59, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/59?translations=45
+              title: Коран 3:59, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Иса (Иисус) перед Аллахом подобен Адаму
               accessed: '2026-10-01'
@@ -639,13 +639,13 @@ groups:
             - 'Божество Христа Церковь исповедует по Писанию: воскресшему Фома говорит «Господь мой и Бог мой!» (Ин 20:28), а Христос говорит: «Я и Отец – одно» (Ин 10:30).'
             - 'Признания Христа великим пророком и учителем для христианского исповедания недостаточно: Сын Божий совершил наше спасение «Своим учением, Своей жизнью, Своей смертью и Своим воскресением» (§193).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:45
-              title: Коран 3:45, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/45?translations=45
+              title: Коран 3:45, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Мессия Иса (Иисус), сын Марьям (Марии)
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:47
-              title: Коран 3:47, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/47?translations=45
+              title: Коран 3:47, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Как я могу иметь сына, если меня не касался ни один мужчина
               accessed: '2026-10-01'
@@ -719,18 +719,18 @@ groups:
         tradition:
           text: 'Коран приводит слова тех, кто сказал: «мы убили Мессию Ису», и отвечает: «они не убили его и не распяли, а это только показалось им» (4:157); «это Аллах вознес его к Себе» (4:158). Толкования различаются: на сайте онлайн-академии «Медина» говорится, что Коран отрицает смерть Исы на кресте, приводятся толкования, по которым вместо Исы был распят другой человек, и отмечено, что версий несколько. По Корану, Иса останется на небесах до приближения Судного дня.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:157
-              title: Коран 4:157, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/157?translations=45
+              title: Коран 4:157, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха. Однако они не убили его и не распяли
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:158
-              title: Коран 4:158, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/158?translations=45
+              title: Коран 4:158, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Это Аллах вознес его к Себе
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:157
-              title: Коран 4:157, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/157?translations=45
+              title: Коран 4:157, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Воистину, мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха». Однако они не убили его и не распяли, а это только показалось им
               accessed: '2026-10-01'
@@ -853,8 +853,8 @@ groups:
         tradition:
           text: 'В исламе вход в Рай понимается как следствие искренней веры (иман) вместе с праведными делами, по милости Бога: «те, которые уверовали и совершали праведные деяния, окажутся обитателями Рая» (Коран 2:82). Искупительной жертвы ислам не знает: по изложению сайта «Медина», миссия Исы состояла в том, чтобы указать людям верный путь, а не принести себя в жертву за грехи человечества, и «ни одна душа не понесет чужого бремени» (53:38). Коран говорит и о награде праведным иудеям и христианам (2:62), и о том, что иная религия помимо ислама «никогда не будет принята» (3:85).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:82
-              title: Коран 2:82, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/82?translations=45
+              title: Коран 2:82, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: те, которые уверовали и совершали праведные деяния, окажутся обитателями Рая. Они пребудут там вечно
               accessed: '2026-09-25'
@@ -863,18 +863,18 @@ groups:
               tier: official
               excerpt: а не в том, чтобы принести себя в жертву, чтобы искупить грехи человечества
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=53:38
-              title: Коран 53:38, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/53/38?translations=45
+              title: Коран 53:38, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Ни одна душа не понесет чужого бремени
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:62
-              title: Коран 2:62, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/62?translations=45
+              title: Коран 2:62, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: иудеям, христианам и сабиям, которые уверовали в Аллаха и в Последний день и поступали праведно, уготована награда у их Господа
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:85
-              title: Коран 3:85, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/85?translations=45
+              title: Коран 3:85, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: От того, кто ищет иную религию помимо ислама, это никогда не будет принято
               accessed: '2026-10-01'
@@ -955,23 +955,23 @@ groups:
         tradition:
           text: 'Коран рассказывает, что Адам ослушался Господа (20:121), но Господь принял его покаяние (2:37; 20:122) и наставил на прямой путь. Ответственность в исламе личная: «ни одна душа не понесет чужого бремени» (17:15). По изложению сайта «Медина», совершает грехи «каждый сын Адама», но человеку дана возможность каяться.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=20:121
-              title: Коран 20:121, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/20/121?translations=45
+              title: Коран 20:121, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Адам ослушался своего Господа и впал в заблуждение
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:37
-              title: Коран 2:37, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/37?translations=45
+              title: Коран 2:37, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Адам принял слова от своего Господа, и Он принял его покаяние
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=20:122
-              title: Коран 20:122, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/20/122?translations=45
+              title: Коран 20:122, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: принял его покаяние и наставил на прямой путь
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:15
-              title: Коран 17:15, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/15?translations=45
+              title: Коран 17:15, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Ни одна душа не понесет чужого бремени
               accessed: '2026-10-01'
@@ -1042,18 +1042,18 @@ groups:
         tradition:
           text: 'Вера в предопределение (кадар) — часть исламского вероучения: «Нас постигнет только то, что предписано нам Аллахом» (Коран 9:51), и вместе с тем «каждый человек избирает свой путь» (17:84), «кто хочет, пусть верует, а кто не хочет, пусть не верует» (18:29). Сайт «Медина» излагает суннитскую позицию как «золотую середину»: всё предопределено Богом, но человеку дана способность выбора. Шииты-имамиты, по Wikishia, включают «справедливость» в число принципов веры; их позиция по предопределению в использованных здесь источниках отдельно не изложена.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=9:51
-              title: Коран 9:51, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/9/51?translations=45
+              title: Коран 9:51, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Нас постигнет только то, что предписано нам Аллахом
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=17:84
-              title: Коран 17:84, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/17/84?translations=45
+              title: Коран 17:84, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Каждый человек избирает свой путь
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=18:29
-              title: Коран 18:29, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/18/29?translations=45
+              title: Коран 18:29, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Кто хочет, пусть верует, а кто не хочет, пусть не верует
               accessed: '2026-10-01'
@@ -1147,18 +1147,18 @@ groups:
         tradition:
           text: 'Ислам исповедует воскресение, Суд и воздаяние. После смерти душа пребывает в промежуточном состоянии («преграда», барзах): «позади них будет преграда вплоть до того дня, когда они будут воскрешены» (Коран 23:100). В День воскресения будут установлены справедливые Весы, и «ни с кем не поступят несправедливо» (21:47); итогом станут Рай или Ад.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=23:100
-              title: Коран 23:100, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/23/100?translations=45
+              title: Коран 23:100, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Позади них будет преграда вплоть до того дня, когда они будут воскрешены
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=36:51
-              title: Коран 36:51, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/36/51?translations=45
+              title: Коран 36:51, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Протрубят в Рог, и вот они устремляются к своему Господу из могил
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=21:47
-              title: Коран 21:47, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/21/47?translations=45
+              title: Коран 21:47, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: ни с кем не поступят несправедливо
               accessed: '2026-10-01'
@@ -1229,8 +1229,8 @@ groups:
         tradition:
           text: 'По распространённому толкованию аята 43:61, среди знамений Часа Коран называет Ису: он «является признаком Часа». По изложению сайта «Медина» (суннитская традиция), перед концом света явятся Махди и Даджаль, Иса спустится на землю у белого минарета в Дамаске, будет действовать рядом с Махди, затем умрёт, как все люди. В шиитском (имамитском) исламе конец времён связан с возвращением двенадцатого имама — Махди, который, по этому учению, жив и пребывает в сокрытии.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=43:61
-              title: Коран 43:61, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/43/61?translations=45
+              title: Коран 43:61, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: он (Иса, или Коран, или Мухаммад) является признаком Часа. Нисколько не препирайтесь по поводу него
               accessed: '2026-09-25'
@@ -1286,8 +1286,8 @@ groups:
               tier: official
               excerpt: Христос, воскреснув из мертвых, уже не умирает
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=7:187
-              title: Коран 7:187, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/7/187?translations=45
+              title: Коран 7:187, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: знание об этом принадлежит только моему Господу
               accessed: '2026-10-01'
@@ -1339,8 +1339,8 @@ groups:
               tier: official
               excerpt: Свидетельствую, что нет божества, кроме Аллаха и свидетельствую, что Мухаммад — посланник Аллаха
               accessed: '2026-09-26'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183
-              title: Коран 2:183, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/183?translations=45
+              title: Коран 2:183, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам
               accessed: '2026-09-25'
@@ -1420,13 +1420,13 @@ groups:
               tier: official
               excerpt: Мусульмане совершают молитву строго определённым образом, в предписанное время, сопровождают её соответствующими положениями тела. В разных религиозных школах эти нормы отличаются незначительно.
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:103
-              title: Коран 4:103, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/103?translations=45
+              title: Коран 4:103, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: намаз предписан верующим в определенное время
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=11:114
-              title: Коран 11:114, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/11/114?translations=45
+              title: Коран 11:114, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Совершай намаз в начале и конце дня и в некоторые часы ночи
               accessed: '2026-10-01'
@@ -1535,7 +1535,7 @@ groups:
               accessed: '2026-10-01'
             - url: https://azbyka.ru/ikonopochitanie
               title: 'Азбука веры. Иконопочитание: основной тезис'
-              tier: official
+              tier: reference
               excerpt: когда Боговоплощение открыло возможность иконопочитания
               accessed: '2026-10-01'
         more:
@@ -1577,23 +1577,23 @@ groups:
         tradition:
           text: 'В Коране Марьям (Мария) — избранная: ангелы говорят ей: «Аллах избрал тебя, очистил и возвысил над женщинами миров» (3:42); она «сберегла целомудрие» (66:12), сын родился у неё, хотя её «не касался мужчина» (19:20–21). Обращение с мольбой принадлежит Одному Богу: «Не взывайте же ни к кому наряду с Аллахом» (72:18).'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:42
-              title: Коран 3:42, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/42?translations=45
+              title: Коран 3:42, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Аллах избрал тебя, очистил и возвысил над женщинами миров
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=66:12
-              title: Коран 66:12, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/66/12?translations=45
+              title: Коран 66:12, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: которая сберегла целомудрие
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=19:20
-              title: Коран 19:20, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/19/20?translations=45
+              title: Коран 19:20, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Как у меня может быть мальчик, если меня не касался мужчина
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=72:18
-              title: Коран 72:18, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/72/18?translations=45
+              title: Коран 72:18, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Не взывайте же ни к кому наряду с Аллахом
               accessed: '2026-10-01'
@@ -1624,8 +1624,8 @@ groups:
               tier: official
               excerpt: родившийся от Неё был в самом зачатии и рождении от Неё, как есть и всегда, истинный Бог
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=3:45
-              title: Коран 3:45, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/3/45?translations=45
+              title: Коран 3:45, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: имя которому - Мессия Иса (Иисус), сын Марьям (Марии)
               accessed: '2026-10-01'
@@ -1683,8 +1683,8 @@ groups:
               tier: official
               excerpt: связан с событием, произошедшим с пророком Ибрахимом (Авраамом). Божественным Откровением ему было велено принести в жертву своего сына Исмаила
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=37:102
-              title: Коран 37:102, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/37/102?translations=45
+              title: Коран 37:102, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Я вижу во сне, что зарезаю тебя
               accessed: '2026-10-01'
@@ -1801,8 +1801,8 @@ groups:
         tradition:
           text: 'Пост в месяц Рамадан (саум) — один из пяти столпов ислама: от рассвета до заката воздерживаются от пищи, питья и половой близости. Коран говорит, что пост был предписан и прежним общинам (2:183); больным и путникам предусмотрены послабления (2:185), очень пожилым и немощным разрешено не поститься с выплатой «фидьи». Добровольные посты желательны (понедельник и четверг, дни Мухаррама), а в дни праздников Ураза-байрам и Курбан-байрам пост не допускается.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:183
-              title: Коран 2:183, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/183?translations=45
+              title: Коран 2:183, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: О те, которые уверовали! Вам предписан пост, подобно тому, как он был предписан вашим предшественникам
               accessed: '2026-09-26'
@@ -1816,13 +1816,13 @@ groups:
               tier: official
               excerpt: Пост – это воздержание от пищи, питья и половой близости от рассвета до захода солнца
               accessed: '2026-09-26'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:187
-              title: Коран 2:187, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/187?translations=45
+              title: Коран 2:187, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Ешьте и пейте, пока вы не сможете отличить белую нитку рассвета от черной, а затем поститесь до ночи
               accessed: '2026-09-26'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185
-              title: Коран 2:185, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/185?translations=45
+              title: Коран 2:185, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: А если кто болен или находится в пути, то пусть постится столько же дней в другое время
               accessed: '2026-09-26'
@@ -1868,8 +1868,8 @@ groups:
               tier: official
               excerpt: более усердным служением Ему и старательным воздержанием от грехов
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185
-              title: Коран 2:185, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/185?translations=45
+              title: Коран 2:185, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: В месяц рамадан был ниспослан Коран
               accessed: '2026-10-01'
@@ -1917,8 +1917,8 @@ groups:
         tradition:
           text: 'Ислам поощряет умеренность: «Не запрещайте блага, которые Аллах сделал дозволенными для вас» (5:87); аскеза (зухд) понимается как простая и благочестивая жизнь, а крайний аскетизм не поощряется. Суфизм иногда сравнивают с монашеством, но большинство суфийских орденов не призывает к безбрачию. О монашестве последователей Исы Коран говорит: «они выдумали сами. Мы не предписывали им этого» (57:27); переводчик приводит и второе прочтение этого места.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:87
-              title: Коран 5:87, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/87?translations=45
+              title: Коран 5:87, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Не запрещайте блага, которые Аллах сделал дозволенными для вас, и не преступайте границы дозволенного
               accessed: '2026-09-26'
@@ -1947,13 +1947,13 @@ groups:
               tier: reference
               excerpt: большинство суфийских орденов не призывают к безбрачию, а их последователи имеют семьи и детей
               accessed: '2026-09-26'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=57:27
-              title: Коран 57:27, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/57/27?translations=45
+              title: Коран 57:27, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: а монашество они выдумали сами. Мы не предписывали им этого
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=57:27
-              title: Коран 57:27, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/57/27?translations=45
+              title: Коран 57:27, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: (или Мы предписали им только стремиться к довольству Аллаха)
               accessed: '2026-10-01'
@@ -2014,18 +2014,18 @@ groups:
         tradition:
           text: Коран запрещает мертвечину, кровь, мясо свиньи и то, над чем не было произнесено имя Аллаха (5:3); опьяняющие напитки и азартные игры названы «скверной из деяний дьявола» (5:90). Еда людей Писания, по Корану, дозволена мусульманам (5:5).
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:3
-              title: Коран 5:3, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/3?translations=45
+              title: Коран 5:3, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Вам запрещены мертвечина, кровь, мясо свиньи и то, над чем не было произнесено имя Аллаха
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:90
-              title: Коран 5:90, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/90?translations=45
+              title: Коран 5:90, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: опьяняющие напитки, азартные игры, каменные жертвенники (или идолы) и гадальные стрелы являются скверной из деяний дьявола
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:5
-              title: Коран 5:5, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/5?translations=45
+              title: Коран 5:5, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Еда людей Писания также дозволена вам
               accessed: '2026-10-01'
@@ -2081,8 +2081,8 @@ groups:
         tradition:
           text: 'Коран предписывает: «Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас» (4:59) и говорит: «Нет принуждения в религии» (2:256). О войне правовые школы расходятся: по академическому источнику, ханафитская школа допускает войну с «неверными» шире, остальные суннитские школы считают правомерной только оборонительную войну. Шиитские взгляды в использованных здесь источниках не излагаются.'
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59
-              title: Коран 4:59, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/59?translations=45
+              title: Коран 4:59, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас
               accessed: '2026-09-25'
@@ -2091,8 +2091,8 @@ groups:
               tier: reference
               excerpt: войну с «неверными» (ханафитская школа) или только войну оборонительную, когда сами «неверные» нападают на мусульман
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=2:256
-              title: Коран 2:256, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/2/256?translations=45
+              title: Коран 2:256, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Нет принуждения в религии
               accessed: '2026-10-01'
@@ -2144,13 +2144,13 @@ groups:
         tradition:
           text: Коран разрешает мужчине жениться «на двух, трех, четырех», если он справедлив к ним, а при опасении несправедливости велит довольствоваться одной (4:3). Мусульманину дозволены также целомудренные женщины из числа людей Писания (5:5).
           proof:
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:3
-              title: Коран 4:3, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/3?translations=45
+              title: Коран 4:3, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: 'женитесь на других женщинах, которые нравятся вам: на двух, трех, четырех'
               accessed: '2026-10-01'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=5:5
-              title: Коран 5:5, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/5/5?translations=45
+              title: Коран 5:5, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: целомудренные женщины из числа тех, кому Писание было даровано до вас
               accessed: '2026-10-01'
@@ -2219,8 +2219,8 @@ groups:
               tier: official
               excerpt: руководство мусульманской общиной возлагается на имама, а имам назначается Богом
               accessed: '2026-09-25'
-            - url: https://api.quran.com/api/v4/quran/translations/45?verse_key=4:59
-              title: Коран 4:59, перевод Э. Кулиева | Quran.com Content API
+            - url: https://quran.com/4/59?translations=45
+              title: Коран 4:59, перевод Э. Кулиева | Quran.com
               tier: official
               excerpt: Повинуйтесь Аллаху, повинуйтесь Посланнику и обладающим влиянием среди вас
               accessed: '2026-09-25'

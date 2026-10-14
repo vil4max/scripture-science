@@ -146,23 +146,23 @@
       difference: "Ислам чтит Марьям как избранную деву и мать пророка Исы, а Православная Церковь исповедует Марию Богородицей, Матерью воплотившегося Бога."
       response: "Церковь не обожествляет Марию: Она — сотворённое существо, но превосходит благодатью и достоинством всякое сотворённое существо (катехизис, §188). Богородицей Её называют потому, что родившийся от Неё был в самом зачатии и рождении истинным Богом (§187)."
       proof:
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:42"
-          title: "Коран 3:42, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/3/42?translations=45"
+          title: "Коран 3:42, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Аллах избрал тебя, очистил и возвысил над женщинами миров"
           accessed: "2026-10-01"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:47"
-          title: "Коран 3:47, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/3/47?translations=45"
+          title: "Коран 3:47, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Как я могу иметь сына, если меня не касался ни один мужчина"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:75"
-          title: "Коран 5:75, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/5/75?translations=45"
+          title: "Коран 5:75, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Мессия, сын Марьям (Марии), был всего лишь посланником"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:116"
-          title: "Коран 5:116, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/5/116?translations=45"
+          title: "Коран 5:116, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Примите меня и мою мать двумя богами наряду с Аллахом"
           accessed: "2026-10-09"
@@ -474,18 +474,18 @@
       difference: "Ислам признаёт Забур (Псалтирь) Писанием, данным Давуду, а Православная Церковь читает Псалтирь за богослужением и дома."
       response: "Церковь видит в Псалтири книгу Священного Писания, написанную по вдохновению Святого Духа, и образец сердечной молитвы; Новый Завет часто цитирует её."
       proof:
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:163"
-          title: "Коран 4:163, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/4/163?translations=45"
+          title: "Коран 4:163, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Давуду (Давиду) же Мы даровали Забур (Псалтирь)"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=17:55"
-          title: "Коран 17:55, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/17/55?translations=45"
+          title: "Коран 17:55, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "А Давуду (Давиду) Мы даровали Забур (Псалтирь)"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:48"
-          title: "Коран 5:48, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/5/48?translations=45"
+          title: "Коран 5:48, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Мы ниспослали тебе Писание с истиной в подтверждение прежних Писаний"
           accessed: "2026-10-09"
@@ -867,13 +867,13 @@
           tier: official
           excerpt: "Намаз – совершение ежедневной пятикратной молитвы"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:103"
-          title: "Коран 4:103, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/4/103?translations=45"
+          title: "Коран 4:103, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "намаз предписан верующим в определенное время"
           accessed: "2026-10-01"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=62:9"
-          title: "Коран 62:9, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/62/9?translations=45"
+          title: "Коран 62:9, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Когда призывают на намаз в пятничный день, то устремляйтесь к поминанию Аллаха и оставьте торговлю"
           accessed: "2026-10-09"
@@ -1635,8 +1635,8 @@
       difference: "Ислам предписывает намаз в определённое время, который можно совершать где угодно, личную мольбу (дуа) и повторение формул поминания Аллаха (тасбих), а Православная Церковь читает утренние и вечерние молитвы по молитвослову и молится также своими словами."
       response: "Церковь тоже молится не только в установленное время: апостол велит молиться «во всякое время духом» (Еф 6:18) и «непрестанно» (1 Фес 5:17). Свою молитву христианин обращает к Отцу так, как научил Христос (Мф 6:9), а её суть — «возношение ума и сердца к Богу» (катехизис, §387)."
       proof:
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=4:103"
-          title: "Коран 4:103, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/4/103?translations=45"
+          title: "Коран 4:103, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "намаз предписан верующим в определенное время"
           accessed: "2026-10-01"
@@ -1645,8 +1645,8 @@
           tier: reference
           excerpt: "Therefore my followers can pray wherever the time of a prayer is due"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=40:60"
-          title: "Коран 40:60, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/40/60?translations=45"
+          title: "Коран 40:60, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Взывайте ко Мне, и Я отвечу вам"
           accessed: "2026-10-09"
@@ -2005,17 +2005,17 @@
           accessed: "2026-10-09"
         - url: "https://toldot.com/shabbat.html"
           title: "Шаббат — Еврейская Суббота — Толдот.ру"
-          tier: reference
+          tier: official
           excerpt: "Традиционно Шаббат — это день отдыха, день субботнего покоя"
           accessed: "2026-10-09"
         - url: "https://toldot.com/holidays.html"
           title: "Еврейские праздники — Толдот.ру, вводный раздел"
-          tier: reference
+          tier: official
           excerpt: "Песах, Шавуот и Сукот, судные дни — Рош аШана (Новый год) и Йом Кипур (День Искупления)"
           accessed: "2026-10-09"
         - url: "https://toldot.com/holidays.html"
           title: "Еврейские праздники — Толдот.ру, раздел о Йом Кипуре"
-          tier: reference
+          tier: official
           excerpt: "Евреи всего мира проводят этот день в молитвах и посте."
           accessed: "2026-10-09"
         - url: "https://azbyka.ru/biblia/?Lk.4:16&r"
@@ -2168,13 +2168,13 @@
           tier: reference
           excerpt: "Затем проповедник, цитируя Священный Коран и Сунну, обращается с проповедью"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:185"
-          title: "Коран 2:185, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/2/185?translations=45"
+          title: "Коран 2:185, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Тот из вас, кого застанет этот месяц, должен поститься"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=2:187"
-          title: "Коран 2:187, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/2/187?translations=45"
+          title: "Коран 2:187, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "пока вы не сможете отличить белую нитку рассвета от черной, а затем поститесь до ночи"
           accessed: "2026-10-09"
@@ -2843,7 +2843,7 @@
           accessed: "2026-10-09"
         - url: "https://azbyka.ru/simvol_very"
           title: "Азбука веры — Символ веры (энциклопедия): Литургия и утреннее правило"
-          tier: reference
+          tier: official
           excerpt: "читается ежедневно в составе утреннего молитвенного правила"
           accessed: "2026-10-09"
         - url: "https://azbyka.ru/molitvoslov/molitva-gospodnya-otche-nash.html"
@@ -3264,8 +3264,8 @@
           tier: reference
           excerpt: "в исламе — религиозная община"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=3:110"
-          title: "Коран 3:110, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/3/110?translations=45"
+          title: "Коран 3:110, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Вы являетесь лучшей из общин, появившейся на благо человечества"
           accessed: "2026-10-09"
@@ -3274,8 +3274,8 @@
           tier: reference
           excerpt: "и означает «место поклонения», «место совершения земного поклона»"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=72:18"
-          title: "Коран 72:18, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/72/18?translations=45"
+          title: "Коран 72:18, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Мечети принадлежат Аллаху"
           accessed: "2026-10-09"
@@ -3767,13 +3767,13 @@
           tier: official
           excerpt: "Веры в Единого и Единственного Всевышнего Аллаха и подтверждения пророческой миссии последнего Божьего Посланника Мухаммада (мир ему и благословение) достаточно для принятия ислама"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:6"
-          title: "Коран 5:6, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/5/6?translations=45"
+          title: "Коран 5:6, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Когда вы встаете на намаз, то умойте ваши лица и ваши руки до локтей, оботрите ваши головы и умойте ваши ноги до щиколоток"
           accessed: "2026-10-09"
-        - url: "https://api.quran.com/api/v4/quran/translations/45?verse_key=5:6"
-          title: "Коран 5:6, перевод Э. Кулиева | Quran.com Content API"
+        - url: "https://quran.com/5/6?translations=45"
+          title: "Коран 5:6, перевод Э. Кулиева | Quran.com"
           tier: official
           excerpt: "Аллах не хочет создавать для вас трудности, а хочет очистить вас"
           accessed: "2026-10-09"

@@ -26,7 +26,7 @@ azbyka-svideteli-iegovy:
   title: "Свидетели Иеговы — энциклопедия «Азбука веры»"
   publisher: "azbyka.ru"
   url: "https://azbyka.ru/svideteli-iegovy"
-  tier: official
+  tier: reference
 azbyka-hristologiya-si:
   title: "Игумен Герасим (Дьячков). Специфика христологии — azbyka.ru"
   publisher: "azbyka.ru"
@@ -51,7 +51,7 @@ azbyka-lozhnye-svidetelstva:
   title: "Свящ. Игорь Ефимов. Ложные свидетельства Свидетелей Иеговы — azbyka.ru"
   publisher: "azbyka.ru"
   url: "https://azbyka.ru/otechnik/sekty/lozhnye-svidetelstva-svidetelej-iegovy/2"
-  tier: official
+  tier: reference
 pravoslavie-stenyaev-disput-1:
   title: "Прот. Олег Стеняев. Диспут со «Свидетелями Иеговы» — pravoslavie.ru"
   publisher: "pravoslavie.ru"

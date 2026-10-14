@@ -3,6 +3,7 @@ import BibleCanon from '../components/BibleCanon.astro';
 import BibleFormation from '../components/BibleFormation.astro';
 import SectionPage from '../layouts/SectionPage.astro';
 import { getOrderedMatrix } from '../lib/content';
+import { withBase } from '../lib/paths';
 
 const traditions = await getOrderedMatrix();
 ---
@@ -14,4 +15,5 @@ const traditions = await getOrderedMatrix();
   <BibleFormation traditions={traditions}>
     <BibleCanon />
   </BibleFormation>
+  <p><a href={withBase('sources/#bible-evidence')}>Источники этой страницы →</a></p>
 </SectionPage>

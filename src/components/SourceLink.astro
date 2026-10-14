@@ -1,6 +1,15 @@
 ---
+// A citation under a quote: the full title, linked to the catalogue entry with
+// its excerpts and access date, or to the source itself when the catalogue has
+// no excerpt from it (site audit S4-5).
+import { withBase } from '../lib/paths';
+import { getSiteSourceCatalog } from '../lib/siteSources';
+import { sourceAnchor } from '../lib/sourceCatalog';
+import { langOf } from '../lib/typography';
 interface Props { url: string; title: string; }
-const { title } = Astro.props;
-const label = title.length > 90 ? `${title.slice(0, 86).replace(/\s+\S*$/, '')}…` : title;
+const { url, title } = Astro.props;
+const catalogued = (await getSiteSourceCatalog()).some((entry) => entry.url === url);
 ---
-<span title={title}>{label}</span>
+{catalogued
+  ? <a href={withBase(`sources/catalog/#${sourceAnchor(url)}`)} lang={langOf(title)}>{title}</a>
+  : <a href={url} target="_blank" rel="noopener noreferrer" lang={langOf(title)}>{title}</a>}

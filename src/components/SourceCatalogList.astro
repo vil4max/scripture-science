@@ -1,6 +1,7 @@
 ---
-import { innerQuotes } from '../lib/typography';
-import { citationTitle } from '../lib/citations';
+import { innerQuotes, langOf } from '../lib/typography';
+import { withBase } from '../lib/paths';
+import { accessedRange, catalogLabel, formatAccessed } from '../lib/citations';
 import { profileHref } from '../lib/analysis';
 import { EVIDENCE_ROLE_LABELS, sourceAnchor, type CatalogEntry } from '../lib/sourceCatalog';
 import { TOPIC_TITLES_RU, type TopicId } from '../lib/rules';
@@ -10,13 +11,13 @@ const tierLabels = { official: 'официальный источник', refere
 ---
 <ul class="catalog-list">
   {entries.map((entry) => <li id={detailed ? sourceAnchor(entry.url) : undefined} data-source-entry={detailed ? '' : undefined}>
-    <a href={detailed ? entry.url : `#${sourceAnchor(entry.url)}`} target={detailed ? '_blank' : undefined} rel={detailed ? 'noopener noreferrer' : undefined}>{citationTitle(entry.references.map(({ proof }) => proof))}</a>
-    {detailed && <span class="meta"> · обращение {[...new Set(entry.references.map(({ proof }) => proof.accessed))].join(', ')}</span>}
+    <a href={detailed ? entry.url : withBase(`sources/catalog/#${sourceAnchor(entry.url)}`)} target={detailed ? '_blank' : undefined} rel={detailed ? 'noopener noreferrer' : undefined} lang={langOf(catalogLabel(entry.references.map(({ proof }) => proof)))}>{catalogLabel(entry.references.map(({ proof }) => proof))}</a>
+    {detailed && <span class="meta"> · дата обращения: {accessedRange(entry.references.map(({ proof }) => proof.accessed))}</span>}
     {detailed && <details>
       <summary>Проверочные выдержки ({entry.references.length})</summary>
       {entry.references.map(({ proof, usages }) => <div class="evidence" data-source-reference data-tier={proof.tier}>
-        <p class="excerpt">«{innerQuotes(proof.excerpt)}»</p>
-        <p class="meta">{proof.title} · {tierLabels[proof.tier]} · {proof.accessed}</p>
+        <p class="excerpt" lang={langOf(proof.excerpt)}>«{innerQuotes(proof.excerpt)}»</p>
+        <p class="meta">{proof.title} · {tierLabels[proof.tier]} · {formatAccessed(proof.accessed)}</p>
         <ul class="usages">{usages.map((usage) => <li data-source-usage data-tradition={usage.traditionId} data-topic={usage.topic} data-role={usage.role}>
           {usage.traditionName && `${usage.traditionName} — `}
           {usage.topic && `${TOPIC_TITLES_RU[usage.topic as TopicId]} — `}

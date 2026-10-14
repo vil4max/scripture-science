@@ -31,14 +31,14 @@ scripture:
       tier: reference
       excerpt: "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг."
       accessed: 2026-09-27
-    - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+    - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
       title: "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг"
       tier: official
       excerpt: двадцать две
       accessed: 2026-09-27
     - url: https://azbyka.ru/biblia/?Jn.1:1&r
       title: Библия онлайн, Синодальный перевод — Азбука веры
-      tier: reference
+      tier: official
       excerpt: В начале было Слово, и Слово было у Бога, и Слово было Бог.
       accessed: 2026-09-25
     - url: https://pravoslavie.ru/47105.html
@@ -283,7 +283,7 @@ positions:
         tier: reference
         excerpt: "Библия включает в себя 77 книг: Ветхий Завет – 50 книг, Новый завет – 27 книг."
         accessed: 2026-09-27
-      - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1
+      - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/1_3
         title: "Свт. Филарет Московский. Пространный катехизис, §31: О Священном Писании: число ветхозаветных книг"
         tier: official
         excerpt: двадцать две

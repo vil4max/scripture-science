@@ -3027,5 +3027,12 @@
         198
       ]
     }
-  ]
+  ],
+  "proof": {
+    "url": "https://www.pewresearch.org/religion/feature/religious-composition-by-country-2010-2020/",
+    "title": "Pew Research Center — Religious composition by country, 2010–2020",
+    "tier": "reference",
+    "excerpt": "This interactive table shows the religious makeup of 201 countries and territories.",
+    "accessed": "2026-09-26"
+  }
 }

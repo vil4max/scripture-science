@@ -74,7 +74,13 @@ interface Props { traditions: { id: string; name: string }[]; }
     reveal();
   };
   form.hidden = false;
-  form.addEventListener('input', () => update());
+  // Typing waits for a pause before filtering 5,000 rows and writing the address (S3-22).
+  let typing: ReturnType<typeof setTimeout> | undefined;
+  form.addEventListener('input', (event) => {
+    clearTimeout(typing);
+    if ((event.target as HTMLElement).matches('input[type="search"]')) typing = setTimeout(() => update(), 150);
+    else update();
+  });
   form.addEventListener('submit', (event) => { event.preventDefault(); update(); });
   form.addEventListener('reset', clear);
   window.addEventListener('hashchange', reveal);

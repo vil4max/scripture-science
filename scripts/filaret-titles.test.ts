@@ -34,3 +34,21 @@ test('every Filaret catechism excerpt has the canonical title and a paragraph nu
     assert.match(proof.title, /^Свт\. Филарет Московский\. Пространный катехизис, §§?\d+(?:–\d+)?(?:: .+)?$/, `${proof.file}: ${proof.title}`);
   }
 });
+
+// One URL, one kind of source (site audit S4-9).
+test('every source URL carries one tier', () => {
+  const tiers = new Map<string, Set<string>>();
+  const collect = (node: unknown) => {
+    if (Array.isArray(node)) node.forEach(collect);
+    else if (node && typeof node === 'object') {
+      const record = node as Record<string, unknown>;
+      if (typeof record.url === 'string' && typeof record.tier === 'string') tiers.set(record.url, (tiers.get(record.url) ?? new Set()).add(record.tier));
+      Object.values(record).forEach(collect);
+    }
+  };
+  for (const file of files('src/data')) {
+    const text = readFileSync(file, 'utf8');
+    collect(file.endsWith('.json') ? JSON.parse(text) : yaml.load(text));
+  }
+  for (const [url, kinds] of tiers) assert.equal(kinds.size, 1, `${url}: ${[...kinds].join(', ')}`);
+});

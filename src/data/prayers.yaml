@@ -40,17 +40,17 @@
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия)"
-      tier: reference
+      tier: official
       excerpt: "краткое и точное изложение основ христианского вероучения, составленное и утвержденное на 1-м и 2-м Вселенских Соборах"
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия): число членов"
-      tier: reference
+      tier: official
       excerpt: "Весь Символ веры состоит из 12 членов (предложений)"
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия): Когда появился Символ веры?"
-      tier: reference
+      tier: official
       excerpt: "На Первом Вселенском Соборе были сформулированы первые семь членов Символа, на Втором – следующие пять."
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12"
@@ -60,17 +60,17 @@
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия): Символ веры — не молитва"
-      tier: reference
+      tier: official
       excerpt: "Символ веры – не молитва (а исповедание веры)."
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия): Крещение"
-      tier: reference
+      tier: official
       excerpt: "Символ веры произносится принимающим Крещение"
       accessed: "2026-10-09"
     - url: "https://azbyka.ru/simvol_very"
       title: "Азбука веры — Символ веры (энциклопедия): Литургия и утреннее правило"
-      tier: reference
+      tier: official
       excerpt: "Символ веры соборно поется верующими в храме за Литургией, читается ежедневно в составе утреннего молитвенного правила"
       accessed: "2026-10-09"
 

@@ -23,7 +23,7 @@ test('built reading pages have no numbered citations or page bibliographies', ()
     const html = readFileSync(`dist/${path}`, 'utf8');
     assert.doesNotMatch(html, /href="#source-\d+"|class="page-sources"/, String(path));
   }
-  const sources = readFileSync('dist/sources/index.html', 'utf8');
+  const sources = readFileSync('dist/sources/index.html', 'utf8') + readFileSync('dist/sources/catalog/index.html', 'utf8');
   const bible = JSON.parse(readFileSync('src/data/bible-guide.json', 'utf8'));
   for (const { url } of collectTextSources(bible)) assert.ok(sources.includes(url), url);
   assert.ok(sources.includes('Численность: даты и способы подсчёта'));

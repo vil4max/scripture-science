@@ -39,7 +39,7 @@ scripture:
       tier: official
       excerpt: "Христиане России до сих продолжают читать Библию преимущественно в этом переводе"
       accessed: "2026-09-25"
-    - url: "https://azbyka.ru/biblia/?Jn.3:16"
+    - url: "https://azbyka.ru/biblia/?Jn.3:16&r"
       title: "Евангелие от Иоанна 3:16 — Синодальный перевод (Азбука веры)"
       tier: reference
       excerpt: "Ибо так возлюбил Бог мир, что отдал Сына Своего Единородного, дабы всякий, верующий в Него, не погиб, но имел жизнь вечную"
@@ -116,7 +116,7 @@ positions:
       kind: shared
       note: "ни одно из рассмотренных вероучений не учит о произносимом имени Бога; Синодальный перевод передаёт тетраграмматон словом «Господь» (Исх 3:15)."
       proof:
-        - url: "https://azbyka.ru/biblia/?Ex.3:15"
+        - url: "https://azbyka.ru/biblia/?Ex.3:15&r"
           title: "Исход 3:15 — Синодальный перевод (Азбука веры)"
           tier: "official"
           excerpt: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам"
@@ -124,11 +124,11 @@ positions:
     scripture:
       ref: "Исх 3:15"
       text: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки"
-      url: "https://azbyka.ru/biblia/?Ex.3:15"
+      url: "https://azbyka.ru/biblia/?Ex.3:15&r"
     proof:
-      - url: "https://azbyka.ru/biblia/?Ex.3:15"
+      - url: "https://azbyka.ru/biblia/?Ex.3:15&r"
         title: "Исход 3:15 — Синодальный перевод (Азбука веры)"
-        tier: reference
+        tier: official
         excerpt: "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки"
         accessed: "2026-09-25"
     status: verified

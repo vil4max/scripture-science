@@ -1,5 +1,6 @@
 ---
-import { innerQuotes } from '../lib/typography';
+import { formatAccessed } from '../lib/citations';
+import { innerQuotes, langOf } from '../lib/typography';
 // The full Orthodox prayer texts the comparison refers to, in Church Slavonic
 // and Russian, each with a plain explanation and its sources; shown on
 // «Богослужение и молитва» (owner, 2026-10-09).
@@ -24,7 +25,7 @@ const prayers = (await getCollection('prayers')).sort((a, b) => a.data.order - b
     <details class="proof">
       <summary>Источники</summary>
       <ul>{prayer.data.proof.map((source) => <li>
-        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{innerQuotes(source.excerpt)}» <span class="accessed">(просмотрено {source.accessed})</span>
+        <a href={source.url} target="_blank" rel="noopener noreferrer" lang={langOf(source.title)}>{source.title}</a>: <span lang={langOf(source.excerpt)}>«{innerQuotes(source.excerpt)}»</span> <span class="accessed">(дата обращения: {formatAccessed(source.accessed)})</span>
       </li>)}</ul>
     </details>
   </section>)}
