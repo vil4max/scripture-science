@@ -177,6 +177,11 @@ positions:
           tier: "official"
           excerpt: "Эта законная взаимодополняемость, если она не становится предметом обострения, не затрагивает существа веры в реальность той же исповедуемой тайны"
           accessed: "2026-09-26"
+        - url: "https://azbyka.ru/otechnik/konfessii/hristianskoe-verouchenie-dogmaticheskie-teksty-uchitelstva-tserkvi-3-20-vv/4_74"
+          title: "«Христианское вероучение. Догматические тексты учительства Церкви III–XX вв.» (рус. пер., «Азбука веры»), булла «Laetentur Coeli» (1439), «Декрет для греков»"
+          tier: "reference"
+          excerpt: "как от Одного, так и от Другого как от единого начала и единого дуновения"
+          accessed: "2026-10-14"
     quote:
       text: "Латинская традиция Символа веры исповедует, что Дух исходит «от Отца и Сына (Filioque)»."
       source: "Катехизис Католической Церкви, §246"
@@ -187,6 +192,11 @@ positions:
         tier: official
         excerpt: "Латинская традиция Символа веры исповедует, что Дух исходит «от Отца и Сына (Filioque)»"
         accessed: "2026-09-25"
+      - url: "https://azbyka.ru/otechnik/konfessii/hristianskoe-verouchenie-dogmaticheskie-teksty-uchitelstva-tserkvi-3-20-vv/4_74"
+        title: "«Христианское вероучение. Догматические тексты учительства Церкви III–XX вв.» (рус. пер., «Азбука веры»), булла «Laetentur Coeli» (1439), «Декрет для греков»"
+        tier: reference
+        excerpt: "как от Одного, так и от Другого как от единого начала и единого дуновения"
+        accessed: "2026-10-14"
     status: verified
 
   - topic: scripture

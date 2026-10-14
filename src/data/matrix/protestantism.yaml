@@ -105,7 +105,7 @@ positions:
         accessed: "2026-09-26"
     status: verified
   - topic: name-of-god
-    summary: "Ни одно из рассмотренных течений не имеет отдельного учения о священном произносимом имени Бога. Основные русские переводы, которыми пользуются протестанты (Синодальный, Новый русский), передают библейский тетраграмматон словом «Господь», а не транслитерированным именем."
+    summary: "Ни одно из рассмотренных течений не имеет отдельного учения о священном произносимом имени Бога. Синодальный перевод, которым пользуются и русскоязычные протестанты, передаёт библейский тетраграмматон словом «Господь», а не транслитерированным именем."
     unity:
       kind: shared
       note: "ни одно из рассмотренных вероучений не учит о произносимом имени Бога; Синодальный перевод передаёт тетраграмматон словом «Господь» (Исх. 3:15)."
@@ -233,7 +233,7 @@ positions:
         accessed: "2026-09-25"
     status: verified
   - topic: authority
-    summary: "Лютеранство и реформатство признают за Писанием единственный высший авторитет, а за собственными вероисповедными текстами (Книга Согласия, Вестминстерское исповедание) — лишь подчинённую, толковательную роль. Баптистское (РС ЕХБ) и пятидесятническое (РЦХВЕ) вероучения прямо называют свои исповедания не обязательным символом веры, а вспомогательным материалом; толкование Писания в них — дело поместной церкви. Англиканство (via media) сочетает высший авторитет Библии с ролью церковного предания и разума."
+    summary: "Лютеранство и реформатство признают за Писанием единственный высший авторитет, а за собственными вероисповедными текстами (Книга Согласия, Вестминстерское исповедание) — лишь подчинённую, толковательную роль. Баптистское вероучение (РС ЕХБ) принято «в качестве вспомогательного материала для духовного воспитания верующих». Англиканство (via media) сочетает высший авторитет Библии с ролью церковного предания и разума."
     unity:
       kind: shared
       note: "высший авторитет Писания признают лютеране, реформаты и англикане; англикане при этом толкуют Библию с опорой на традиции и разум."
@@ -273,6 +273,16 @@ positions:
         tier: official
         excerpt: "Дух Святой, говорящий в Писании, есть единственный высший Судия, к Которому должно обращаться за разрешением всех спорных вопросов"
         accessed: "2026-09-25"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+        title: "Тридцать девять статей (Articles of Religion), Книга общих молитв — The Church of England, статья VI"
+        tier: official
+        excerpt: "Holy Scripture containeth all things necessary to salvation"
+        accessed: "2026-10-14"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+        title: "Тридцать девять статей (Articles of Religion), Книга общих молитв — The Church of England, статья XX"
+        tier: official
+        excerpt: "although the Church be a witness and a keeper of holy Writ"
+        accessed: "2026-10-14"
       - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
         title: "Англиканство — St Andrew's Anglican Church, Moscow"
         tier: official
@@ -320,6 +330,11 @@ positions:
         tier: official
         excerpt: "одни люди и ангелы предопределены к вечной жизни, а другие предназначены к вечной смерти"
         accessed: "2026-09-25"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+        title: "Тридцать девять статей (Articles of Religion), Книга общих молитв — The Church of England, статья XI"
+        tier: official
+        excerpt: "we are justified by Faith only is a most wholesome Doctrine"
+        accessed: "2026-10-14"
       - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
         title: "Англиканство — St Andrew's Anglican Church, Moscow"
         tier: official
@@ -426,6 +441,16 @@ positions:
       source: "Вероучение ЕХБ 1985 года, раздел «О водном крещении»"
       url: "https://baptist-volga.ru/verouchenie-baptistov"
     proof:
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание, артикул IX «О Крещении»"
+        tier: official
+        excerpt: "Следует также крестить детей, которые в Крещении поручаются Богу и принимаются Им"
+        accessed: "2026-10-14"
+      - url: "https://web.archive.org/web/20260308112323/https://rchve.ru/o-nas/verouchenie/3841-ispovedanie-very-rts-khve"
+        title: "Исповедание веры РЦХВЕ, раздел 6 «Постановления Христа для Церкви»"
+        tier: official
+        excerpt: "Причастие, состоящее из хлеба и плода виноградного, представляет собой символ единства Церкви, напоминает о Христовых страданиях и смерти"
+        accessed: "2026-10-14"
       - url: "https://baptist-volga.ru/verouchenie-baptistov"
         title: "Вероучение ЕХБ 1985 года, разделы «О водном крещении» и «О Вечере Господней»"
         tier: official
@@ -441,6 +466,11 @@ positions:
         tier: official
         excerpt: "должны быть крещены во имя Отца, Сына и Святого Духа посредством полного погружения в воду"
         accessed: "2026-09-26"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+        title: "Тридцать девять статей (Articles of Religion), Книга общих молитв — The Church of England, статья XXV"
+        tier: official
+        excerpt: "There are two Sacraments ordained of Christ our Lord in the Gospel, that is to say, Baptism, and the Supper of the Lord"
+        accessed: "2026-10-14"
       - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
         title: "Англиканство — St Andrew's Anglican Church, Moscow"
         tier: official
@@ -560,11 +590,16 @@ positions:
         tier: official
         excerpt: "первый день недели был днем, в который Иисус Христос воскрес для оправдания нашего"
         accessed: "2026-09-25"
-      - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
-        title: "Англиканство — St Andrew's Anglican Church, Moscow"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/common-worship/churchs-year/rules"
+        title: "Common Worship: The Church's Year, Rules — The Church of England"
         tier: official
-        excerpt: "Она может быть традиционной, с облачениями, процессиями, ладаном и упором на Евхаристие"
-        accessed: "2026-09-25"
+        excerpt: "The weekdays of Lent and every Friday in the year are days of discipline and self denial"
+        accessed: "2026-09-26"
+      - url: "https://web.archive.org/web/20260308213117/https://www.elkras.ru/vo_chto_veryat_liuterane/verouchitelnye_knigi/kniga_soglasiya/augsburgskoe_veroispovedanie.jdx"
+        title: "Аугсбургское вероисповедание — Евангелическо-Лютеранская Церковь России (архив)"
+        tier: official
+        excerpt: "соблюдением воскресных дней, дней Пасхи и Пятидесятницы и иных подобных дней и праздников"
+        accessed: "2026-09-26"
     status: verified
   - topic: fasting
     summary: "Пост понимают как духовную практику, а не способ заслужить спасение; единых правил для всех протестантов нет. Лютеранские и реформатские исповедания допускают пост, но отвергают обязательность монашеских обетов; у англикан есть постные дни и монашеские общины. Баптистское вероучение соединяет пост с молитвой и освобождением от неправды."
@@ -699,6 +734,11 @@ positions:
         tier: official
         excerpt: "Господь поставляет служителей через призвание и избрание церковью. Право избрания принадлежит церкви"
         accessed: "2026-09-25"
+      - url: "https://www.churchofengland.org/prayer-and-worship/worship-texts-and-resources/book-common-prayer/articles-religion"
+        title: "Тридцать девять статей (Articles of Religion), Книга общих молитв — The Church of England, статья XXXVI"
+        tier: official
+        excerpt: "The Book of Consecration of Archbishops and Bishops, and Ordering of Priests and Deacons"
+        accessed: "2026-10-14"
       - url: "https://moscowanglican.org/%D0%B0%D0%BD%D0%B3%D0%BB%D0%B8%D0%BA%D0%B0%D0%BD%D1%81%D1%82%D0%B2%D0%BE/"
         title: "Англиканство — St Andrew's Anglican Church, Moscow"
         tier: official

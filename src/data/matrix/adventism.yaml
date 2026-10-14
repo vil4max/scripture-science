@@ -89,14 +89,14 @@ positions:
           excerpt: "могут быть внесены на съезде Генеральной Конференции"
           accessed: "2026-09-26"
     quote:
-      text: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей"
+      text: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Личностей"
       source: "28 основ вероучения, п. 2 «Троица»"
       url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
     proof:
       - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
         title: "Полное изложение доктрин, п. 2 «Троица»"
         tier: official
-        excerpt: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей"
+        excerpt: "Бог един. Отец, Сын и Святой Дух — единство трёх совечных Личностей"
         accessed: "2026-09-26"
     status: verified
   - topic: name-of-god
@@ -249,14 +249,14 @@ positions:
           excerpt: "могут быть внесены на съезде Генеральной Конференции"
           accessed: "2026-09-26"
     quote:
-      text: "письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением"
+      text: "письменные труды которой продолжают оставаться авторитетным источником истины, служа для Церкви утешением, руководством, наставлением и обличением"
       source: "28 основ вероучения, п. 18 «Дар пророчества»"
       url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
     proof:
       - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
         title: "Полное изложение доктрин, п. 18 «Дар пророчества»"
         tier: official
-        excerpt: "письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством"
+        excerpt: "письменные труды которой продолжают оставаться авторитетным источником истины, служа для Церкви утешением, руководством"
         accessed: "2026-09-26"
       - url: "https://whiteestate.org/legacy/issues-scripsda-html/"
         title: "Issues: The Relationship of Ellen White's Writings to Scripture — Ellen G. White Estate"
@@ -354,6 +354,11 @@ positions:
         tier: official
         excerpt: "снизойдёт от Бога огонь, который уничтожит это воинство и очистит землю"
         accessed: "2026-09-25"
+      - url: "https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin"
+        title: "Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»"
+        tier: official
+        excerpt: "Тысячелетнее Царство — это промежуточный период между первым и вторым воскресениями, когда Христос и Его искупленные святые находятся на небе"
+        accessed: "2026-10-14"
     status: verified
   - topic: worship
     summary: "Крещение совершается через погружение в воду после наставления в вере и покаяния. Вечере Господней предшествует обряд омовения ног; сама Вечеря — совместное принятие хлеба и вина как символов Тела и Крови Христа."

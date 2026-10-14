@@ -182,7 +182,7 @@ positions:
     status: verified
 
   - topic: spirit
-    summary: "«Дух Божий» (руах Элохим) упоминается уже в рассказе о сотворении мира, но не развивается в иудаизме в отдельную ипостась, сопоставимую с христианским учением о Святом Духе."
+    summary: "«Дух Божий» (руах Элохим) упоминается уже в рассказе о сотворении мира. Еврейская энциклопедия поясняет «руах га-кодеш» (Святой Дух) как то же, что «пророческий дух, силу пророчества или Божий дух», — не как отдельное Лицо, сопоставимое с христианским учением о Святом Духе."
     unity:
       kind: shared
       note: "справочные издания говорят о настойчивом утверждении иудаизма в целом о единстве Бога; учения о Духе как отдельном Лице в нём нет."
@@ -192,6 +192,11 @@ positions:
           tier: "reference"
           excerpt: "a belief hard to reconcile with Judaism’s insistence on God’s oneness"
           accessed: "2026-09-26"
+        - url: "https://ru.wikisource.org/wiki/%D0%95%D0%AD%D0%91%D0%95/%D0%94%D1%83%D1%85_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9"
+          title: "Дух Святой — Еврейская энциклопедия Брокгауза и Ефрона (Викитека)"
+          tier: "reference"
+          excerpt: "оно обозначает приблизительно то же, что пророческий дух, силу пророчества или Божий дух"
+          accessed: "2026-10-14"
     scripture:
       ref: "Быт 1:2"
       text: "a wind from God sweeping over the water"
@@ -204,10 +209,15 @@ positions:
         tier: reference
         excerpt: "a wind from God sweeping over the water"
         accessed: "2026-09-26"
+      - url: "https://ru.wikisource.org/wiki/%D0%95%D0%AD%D0%91%D0%95/%D0%94%D1%83%D1%85_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9"
+        title: "Дух Святой — Еврейская энциклопедия Брокгауза и Ефрона (Викитека)"
+        tier: "reference"
+        excerpt: "оно обозначает приблизительно то же, что пророческий дух, силу пророчества или Божий дух"
+        accessed: "2026-10-14"
     status: verified
 
   - topic: scripture
-    summary: "Канон иудаизма — Танах: аббревиатура трёх разделов — Тора (Пятикнижие Моисея), Невиим (Пророки) и Ктувим (Писания), всего 24 книги, составляющие Письменную Тору. Все течения признают один и тот же канон Танаха; расходятся они в статусе Устной Торы (см. «Предание и толкование»)."
+    summary: "Канон иудаизма — Танах: аббревиатура трёх разделов — Тора (Пятикнижие Моисея), Невиим (Пророки) и Ктувим (Писания), всего 24 книги, составляющие Письменную Тору. Танах священен для последователей иудаизма всех течений; расходятся они в статусе Устной Торы (см. «Предание и толкование»)."
     unity:
       kind: shared
       note: "Танах — Тора, Невиим и Ктувим — общий для всех течений; расходятся они в статусе Устной Торы: реформисты говорят о постоянно развивающейся Торе."
@@ -215,8 +225,8 @@ positions:
         - url: "https://ru.wikipedia.org/wiki/%D0%A2%D0%B0%D0%BD%D0%B0%D1%85"
           title: "Танах — Википедия (русская)"
           tier: "reference"
-          excerpt: "По содержанию c Танахом совпадает Ветхий Завет христианской Библии"
-          accessed: "2026-09-26"
+          excerpt: "Последователи иудаизма считают эти книги священными"
+          accessed: "2026-10-14"
         - url: "https://urj.org/what-we-believe/what-is-reform-judaism"
           title: "What is Reform Judaism? | Union for Reform Judaism"
           tier: "official"
@@ -303,7 +313,7 @@ positions:
     status: verified
 
   - topic: afterlife
-    summary: "Классическая еврейская эсхатология включает веру в воскресение мёртвых и «олам ха-ба» (грядущий мир). Реформистское движение в 1885 году в Питтсбургской платформе официально отказалось от учений о телесном воскресении, рае и аде."
+    summary: "Классическая еврейская эсхатология включает веру в воскресение мёртвых и «олам ха-ба» (грядущий мир). Питтсбургская платформа реформистов (1885) официально отказалась от учений о телесном воскресении, рае и аде."
     unity:
       kind: divided
       note: "воскресение мёртвых — один из 13 принципов веры, но реформистская Питтсбургская платформа (1885) официально отказалась от учения о телесном воскресении, рае и аде."
@@ -318,6 +328,11 @@ positions:
           tier: "reference"
           excerpt: "formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell"
           accessed: "2026-09-26"
+        - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+          title: "Reform Judaism | My Jewish Learning"
+          tier: "reference"
+          excerpt: "the adoption in 1885 of the Pittsburgh Platform, a formal statement of the tenets of Reform Judaism"
+          accessed: "2026-10-14"
     quote:
       text: "Безоговорочно верю в то, что мёртвые вернутся к жизни"
       source: "13 принципов веры | Толдот.ру"
@@ -338,6 +353,11 @@ positions:
         tier: reference
         excerpt: "formally renounced the wish for a return to Israel and the doctrines of bodily resurrection and heaven and hell"
         accessed: "2026-09-25"
+      - url: "https://www.myjewishlearning.com/article/reform-judaism/"
+        title: "Reform Judaism | My Jewish Learning"
+        tier: reference
+        excerpt: "the adoption in 1885 of the Pittsburgh Platform, a formal statement of the tenets of Reform Judaism"
+        accessed: "2026-10-14"
     status: verified
 
   - topic: end-times

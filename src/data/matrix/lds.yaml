@@ -368,6 +368,11 @@ positions:
           excerpt: "This doctrine resides in the four “standard works” of scripture"
           accessed: "2026-09-26"
     proof:
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/scriptures?lang=eng"
+        title: "\"Scriptures,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "The official, canonized scriptures of the Church, often called the standard works, are the Bible, the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price"
+        accessed: "2026-10-14"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
         title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
           Jesus Christ of Latter-day Saints (список отсылок к Писанию)"
@@ -468,6 +473,16 @@ positions:
         Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/kingdoms-of-glory?lang=eng"
+        title: "\"Kingdoms of Glory,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "There are three kingdoms of glory: the celestial kingdom, the terrestrial kingdom, and the telestial kingdom."
+        accessed: "2026-10-01"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/kingdoms-of-glory?lang=eng"
+        title: "\"Kingdoms of Glory,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "temple marriage is a requirement for obtaining the highest degree of celestial glory"
+        accessed: "2026-10-01"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
         title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
           Jesus Christ of Latter-day Saints"
@@ -515,6 +530,16 @@ positions:
       translation: "Перевод с английского для этого сайта"
       url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
     proof:
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/kingdoms-of-glory?lang=eng"
+        title: "\"Kingdoms of Glory,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "There are three kingdoms of glory: the celestial kingdom, the terrestrial kingdom, and the telestial kingdom."
+        accessed: "2026-10-01"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/kingdoms-of-glory?lang=eng"
+        title: "\"Kingdoms of Glory,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "temple marriage is a requirement for obtaining the highest degree of celestial glory"
+        accessed: "2026-10-01"
       - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
         title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of
           Jesus Christ of Latter-day Saints"
@@ -617,6 +642,16 @@ positions:
       source: "Temple FAQ — The Church of Jesus Christ of Latter-day Saints"
       url: "https://www.churchofjesuschrist.org/temples/faq?lang=eng"
     proof:
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/sacrament?lang=eng"
+        title: "\"Sacrament,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "Today the sacrament is an ordinance in which Church members partake of bread and water in remembrance of Jesus Christ"
+        accessed: "2026-10-01"
+      - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/temples?lang=eng"
+        title: "\"Temples,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
+        tier: official
+        excerpt: "Church members certify their worthiness to enter the temple"
+        accessed: "2026-10-01"
       - url: "https://www.churchofjesuschrist.org/temples/faq?lang=eng"
         title: "Temple FAQ — The Church of Jesus Christ of Latter-day Saints"
         tier: official

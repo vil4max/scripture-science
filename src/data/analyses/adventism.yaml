@@ -41,7 +41,7 @@ groups:
               excerpt: 'Бог один по существу, но троичен в лицах: Отец, Сын и Святой Дух'
               accessed: '2026-09-27'
             - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/2_12
-              title: Свт. Филарет Московский. Пространный катехизис, §§86–90
+              title: Свт. Филарет Московский. Пространный катехизис, §90
               tier: official
               excerpt: Бог один по существу, но троичен в лицах
               accessed: '2026-09-27'
@@ -66,7 +66,7 @@ groups:
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: Полное изложение доктрин, п. 2 «Троица»
               tier: official
-              excerpt: Бог един. Отец, Сын и Святой Дух — единство трёх совечных Лич ностей
+              excerpt: Бог един. Отец, Сын и Святой Дух — единство трёх совечных Личностей
               accessed: '2026-09-26'
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/510-chto-otlichaet-adventistskoe-verouchenie
               title: «Что отличает адвентистское вероучение?» — Московское объединение Церкви ХАСД
@@ -527,7 +527,7 @@ groups:
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: Полное изложение доктрин, п. 18 «Дар пророчества»
               tier: official
-              excerpt: письменные труды которой продолжают оста ваться авторитетным источником истины, служа для Церкви утешением, руководством
+              excerpt: письменные труды которой продолжают оставаться авторитетным источником истины, служа для Церкви утешением, руководством
               accessed: '2026-09-26'
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: Полное изложение доктрин, п. 18 «Дар пророчества»
@@ -1432,6 +1432,16 @@ groups:
               tier: official
               excerpt: храм живущего в вас Святаго Духа
               accessed: '2026-10-01'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §539
+              tier: official
+              excerpt: Важнейшим постом является Великий пост, или святая Четыредесятница
+              accessed: '2026-09-26'
+            - url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
+              title: Пространный христианский катехизис Православной Кафолической Восточной Церкви, свт. Филарет (Дроздов), §543
+              tier: official
+              excerpt: Рождественский и Успенский посты учреждены для того, чтобы предварительным подвигом воздержания почтить следующие за этими постами праздники
+              accessed: '2026-09-26'
         more:
           - title: Скоромная пища — Азбука веры
             url: https://azbyka.ru/skoromnaya-pishha
@@ -1842,6 +1852,11 @@ groups:
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
               tier: official
+              excerpt: на небе начался следственный суд — первая стадия окончательного удаления всех грехов
+              accessed: '2026-10-14'
+            - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
+              title: Полное изложение доктрин, п. 24 «Служение Христа в небесном святилище»
+              tier: official
               excerpt: На этом суде также становится ясно, кто из ещё живущих на земле пребывает во Христе
               accessed: '2026-10-01'
             - url: https://whiteestate.org/about/egwbio/
@@ -2198,8 +2213,8 @@ groups:
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: Полное изложение доктрин, п. 27 «Тысячелетнее Царство и уничтожение греха»
               tier: official
-              excerpt: Тысячелетнее Царство — это промежуточный период между
-              accessed: '2026-10-01'
+              excerpt: Тысячелетнее Царство — это промежуточный период между первым и вторым воскресениями, когда Христос и Его искупленные святые находятся на небе
+              accessed: '2026-10-14'
             - url: https://www.mosadvent.ru/index.php/adout/faith/item/509-polnoe-izlozhenie-doktrin
               title: 28 основ вероучения Церкви адвентистов седьмого дня — «Полное изложение доктрин» (mosadvent.ru)
               tier: official
