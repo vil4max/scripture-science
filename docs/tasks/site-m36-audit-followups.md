@@ -70,11 +70,9 @@ Quick (S), in this order:
    (T1-4 «Таинство» in the Orthodox voice, T1-6/T4-2 Литургия, T1-10, T1-11,
    T1-8, T2-1, T2-4, T2-6, T2-8, T2-9, T2-14, T3-5, T3-6, T3-10…T3-13, T4-12),
    typos (T4-1, T4-6…T4-20), numbers with year and method (G1-3, G1-5, G1-6).
-6. Navigation: one «Далее» on basics/, an end-of-route block on worship/ and
-   reading/, contents for orthodoxy/ (S1-3, S1-4, S1-6); 404, skip link,
-   meta descriptions (S3-8, S3-10, S3-11).
-7. Split long Orthodox details on compare/ and worship/ into paragraphs
-   (S2-8, S2-9).
+6. Done (0ad993c): route end on worship/, 404 page, skip link (S1-4, S3-8,
+   S3-11). Left: contents for orthodoxy/ (S1-6), meta descriptions (S3-10).
+7. Done: long Orthodox details split into paragraphs (S2-8, S2-9).
 
 Medium (M):
 - Sources catalogue: add extra-questions, prayers and basics evidence, «Все
