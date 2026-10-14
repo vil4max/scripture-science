@@ -64,9 +64,10 @@ Quick (S), in this order:
 3. Done and published (2839971): Russian Church practice attributed and the G3
    fact fixes (G3-4…G3-9, G3-12, G3-17, G3-18). Then (676ec83): the preparation
    for Communion follows the ROC 2016 document with its exceptions (G3-1).
-4. Claims beyond their excerpts (G4-2…G4-24): narrow the wording or add the
-   excerpt.
-5. Names and capitalization per the terminology table in the report
+4. Claims beyond their excerpts: done for G4-2, G4-3, G4-4; left G4-5…G4-24
+   (narrow the wording or add the excerpt).
+5. Partly done (86c04d0: T1-10, T1-11, T3-12, T3-13, T4-1, T4-9, T4-10, T4-12,
+   T4-18, T4-19). Rest: names and capitalization per the terminology table in the report
    (T1-4 «Таинство» in the Orthodox voice, T1-6/T4-2 Литургия, T1-10, T1-11,
    T1-8, T2-1, T2-4, T2-6, T2-8, T2-9, T2-14, T3-5, T3-6, T3-10…T3-13, T4-12),
    typos (T4-1, T4-6…T4-20), numbers with year and method (G1-3, G1-5, G1-6).
