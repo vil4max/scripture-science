@@ -43,9 +43,10 @@ const pageContent = await Astro.slots.render('default');
     </script>
   </head>
   <body>
+    <a class="skip-link" href="#content">Перейти к содержанию</a>
     <div class="shell">
       <SiteHeader />
-      <div class="content">
+      <div class="content" id="content" tabindex="-1">
         <Fragment set:html={pageContent} />
       </div>
     </div>
@@ -197,6 +198,11 @@ const pageContent = await Astro.slots.render('default');
     outline: 2px solid var(--focus);
     outline-offset: 2px;
   }
+
+  /* Hidden until a keyboard user tabs to it (site audit S3-11). */
+  .skip-link { position: absolute; left: 8px; top: -60px; z-index: 100; padding: 10px 14px; border-radius: 8px; background: var(--focus); color: var(--bg); font-weight: 700; text-decoration: none; }
+  .skip-link:focus { top: 8px; }
+  .content:focus { outline: none; }
 
   @media (max-width: 760px) {
     main summary { min-height: 44px; padding-block: 10px; font-size: 16px; }

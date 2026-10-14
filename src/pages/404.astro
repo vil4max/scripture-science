@@ -1,0 +1,13 @@
+---
+// GitHub Pages serves dist/404.html for any missing address (site audit S3-8).
+import SectionPage from '../layouts/SectionPage.astro';
+import { withBase } from '../lib/paths';
+---
+<SectionPage title="Страница не найдена" lead="Такой страницы на сайте нет: возможно, адрес изменился или в нём опечатка.">
+  <ul class="ways">
+    <li><a href={withBase()}>На главную — маршрут чтения из трёх частей</a></li>
+    <li><a href={withBase('search/')}>Найти вопрос по слову</a></li>
+    <li><a href={withBase('terms/')}>Словарь</a></li>
+  </ul>
+</SectionPage>
+<style>.ways { display: grid; gap: 8px; font-size: 18px; } .ways a { display: inline-flex; min-height: 44px; align-items: center; }</style>

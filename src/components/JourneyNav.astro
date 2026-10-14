@@ -11,7 +11,10 @@ const current = ROUTE_STEPS[index];
 const next = ROUTE_STEPS[index + 1];
 ---
 {current && (Astro.props.footer
-  ? next && <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее{next.part !== current.part && <> — часть {next.part + 1}, «{ROUTE[next.part].title}»</>}: {next.label} →</a></nav>
+  ? next
+    ? <nav class="next" aria-label="Продолжить чтение"><a href={withBase(next.path)} data-carry-selection>Далее{next.part !== current.part && <> — часть {next.part + 1}, «{ROUTE[next.part].title}»</>}: {next.label} →</a></nav>
+    // The last step ends the route with ways to go on (site audit S1-4).
+    : <nav class="next route-end" aria-label="Маршрут пройден"><p>Маршрут пройден. Дальше можно прочитать подробный разбор каждой религии (в меню, под «Сравнением»), заглянуть в <a href={withBase('terms/')} data-carry-selection>словарь</a> или <a href={withBase('search/')} data-carry-selection>найти конкретный вопрос</a>. <a href={withBase()} data-carry-selection>На главную →</a></p></nav>
   : <nav class="journey" aria-label="Маршрут чтения">
       <ol class="parts">{ROUTE.map((part, partIndex) => <li><a href={withBase(part.steps[0].path)} aria-current={partIndex === current.part ? 'step' : undefined} data-carry-selection><span>{partIndex + 1}</span> {part.title}</a></li>)}</ol>
       {ROUTE[current.part].steps.length > 1 && <ol class="steps">{ROUTE[current.part].steps.map((step) => <li><a href={withBase(step.path)} aria-current={step.path === current.path ? 'page' : undefined} data-carry-selection>{step.label}</a></li>)}</ol>}
