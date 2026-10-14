@@ -48,7 +48,7 @@ test('every difference line that mentions the Church names the Orthodox Church',
   }
   // A bulk rename once dropped the space after the word.
   for (const file of ['src/data/orthodox-assessments.json', 'src/data/extra-questions.yaml']) {
-    assert.doesNotMatch(readFileSync(file, 'utf8'), /Церковь(?!ю)[а-яё]/, file);
+    assert.doesNotMatch(readFileSync(file, 'utf8'), /Церковь(?!ю)[а-яё]|Церковь—|,,/, file);
   }
 });
 // Every question: the Orthodox answer, then seven tradition pairs with only
