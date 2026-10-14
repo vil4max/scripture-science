@@ -1,0 +1,32 @@
+---
+// The Christian branches as one compact tree from lineage.json: the Church is
+// the unbroken trunk, later separations branch off it (site audit V2-3). The
+// full chronology with sources is on timeline/.
+import lineage from '../data/lineage.json';
+import { withBase } from '../lib/paths';
+import { formatYearAd } from '../lib/timeline';
+type Node = (typeof lineage.nodes)[number];
+const children = (id: string) => lineage.nodes.filter((node) => node.parent === id).sort((a, b) => a.start.year - b.start.year);
+const root = lineage.nodes.find((node) => node.id === 'early-christianity')!;
+const label = (node: Node) => node.id === 'early-christianity' ? 'Православная Церковь — Церковь Христова от Пятидесятницы' : node.label.replace(/^Начало протестантизма · /, 'Протестантизм · ');
+const year = (node: Node) => node.id === 'early-christianity' ? 'ок. 33' : node.id === 'second-great-awakening' ? '1830-е' : formatYearAd(node.start.year).replace(/ от Р\. ?Х\.$/, '');
+const color = (node: Node) => `var(--t-${node.tradition ?? 'other'})`;
+// Depth-first order with each node's depth, so the tree has no fixed depth.
+const rows: { node: Node; depth: number }[] = [];
+const walk = (node: Node, depth: number) => { rows.push({ node, depth }); children(node.id).forEach((child) => walk(child, depth + 1)); };
+walk(root, 0);
+---
+<figure class="lineage-tree" data-no-terms>
+  <figcaption>Как разделились христиане: от одной Церкви — ветви, отделившиеся позже. Годы — от Рождества Христова; подробно и с источниками — в <a href={withBase('timeline/')}>«Истории религий»</a>.</figcaption>
+  <ul class="tree">{rows.map(({ node, depth }) => <li class:list={{ trunk: depth === 0 }} style={`--c:${color(node)}; --d:${depth}`}><span class="year">{year(node)}</span> {depth === 0 ? <strong>{label(node)}</strong> : label(node)}</li>)}</ul>
+</figure>
+<style>
+  .lineage-tree { margin: 0 0 16px; max-width: var(--measure); }
+  figcaption { font-size: 15px; margin-bottom: 8px; }
+  .tree { list-style: none; margin: 0; padding: 0; }
+  .tree li { position: relative; margin-left: calc(var(--d) * 18px); padding: 3px 0 3px 4px; font-size: 15px; line-height: 1.4; }
+  .tree li:not(.trunk) { border-left: 2px solid var(--line); padding-left: 10px; }
+  .tree li::before { content: ''; display: inline-block; width: 10px; height: 10px; margin-right: 6px; border-radius: 50%; background: var(--c); vertical-align: baseline; }
+  .tree .trunk::before { width: 12px; height: 12px; }
+  .year { color: var(--muted); font-variant-numeric: tabular-nums; font-size: 14px; }
+</style>

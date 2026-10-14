@@ -1,0 +1,39 @@
+---
+// One table of the baptism question: each cell restates that tradition's
+// answer in the same question, whose sources are listed with it
+// (src/data/extra-questions.yaml, id baptism; site audit V2-9).
+import { SHORT_NAMES } from '../lib/names';
+const ROWS: [string, string, string, string][] = [
+  ['orthodoxy', 'Троекратное погружение во имя Отца и Сына и Святого Духа', 'Верующих после покаяния; младенцев — по вере родителей и восприемников', 'Таинство: возрождение Святым Духом и прощение грехов; совершается один раз'],
+  ['catholicism', 'В Латинской Церкви — троекратное возлияние, тройное погружение названо наиболее выразительным', 'Детей вскоре после рождения и взрослых', 'Таинство: освобождение от греха и возрождение'],
+  ['protestantism', 'Баптисты и пятидесятники — погружением; способ у лютеран и англикан здесь не разбирается', 'Лютеране и англикане — и младенцев; баптисты и пятидесятники — только уверовавших', 'У лютеран — дар благодати и прощения; у баптистов — свидетельство веры и символ'],
+  ['lds', 'Погружение, совершает носитель священства', 'С восьми лет; в храмах — также за умерших', 'Прощение грехов и вхождение в Церковь, затем конфирмация'],
+  ['adventism', 'Погружение', 'Уверовавших после раскаяния и изучения Писания', 'Символ единства со Христом и прощения грехов, вхождение в народ Божий'],
+  ['jw', 'Полное погружение', 'Тех, кто посвятил себя Иегове', 'Символ посвящения Иегове; спасения, по их учению, не гарантирует'],
+  ['judaism', 'Крещения нет; погружение в микву', 'Обращающихся в иудаизм; миква служит и другим очищениям', 'Ритуальное очищение; повторяется'],
+  ['islam', 'Крещения нет; в ислам входят, произнеся шахаду', '—', 'Омовение водой — очищение перед намазом'],
+];
+---
+<details class="more baptism-table">
+  <summary>Таблица: крещение у всех традиций</summary>
+  <div class="scroll">
+    <table>
+      <thead><tr><th scope="col">Традиция</th><th scope="col">Как совершается</th><th scope="col">Кого крестят</th><th scope="col">Что это по их учению</th></tr></thead>
+      <tbody>{ROWS.map(([id, how, who, meaning]) => <tr><th scope="row">{id === 'orthodoxy' ? 'Православная Церковь' : SHORT_NAMES[id]}</th><td>{how}</td><td>{who}</td><td>{meaning}</td></tr>)}</tbody>
+    </table>
+  </div>
+  <dl class="baptism-list">{ROWS.map(([id, how, who, meaning]) => <div><dt>{id === 'orthodoxy' ? 'Православная Церковь' : SHORT_NAMES[id]}</dt><dd>Как: {how}</dd><dd>Кого: {who}</dd><dd>Смысл: {meaning}</dd></div>)}</dl>
+  <p class="note">Каждая строка пересказывает ответ этой традиции ниже; источники — при её ответе.</p>
+</details>
+<style>
+  .scroll { overflow-x: auto; contain: inline-size; }
+  table { border-collapse: collapse; font-size: 15px; min-width: 640px; }
+  th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-top: 1px solid var(--line); }
+  thead th { font-size: 13px; color: var(--muted); }
+  .note { font-size: 14px; color: var(--muted); }
+  .baptism-list { display: none; margin: 8px 0 0; font-size: 15px; }
+  .baptism-list div { padding: 8px 0; border-top: 1px solid var(--line); }
+  .baptism-list dt { font-weight: 700; }
+  .baptism-list dd { margin: 2px 0 0; }
+  @media (max-width: 600px) { .scroll { display: none; } .baptism-list { display: block; } }
+</style>

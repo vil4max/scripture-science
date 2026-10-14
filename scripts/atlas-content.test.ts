@@ -30,5 +30,9 @@ test('every media asset has a caption, attribution, licence and shipped file', (
     assert.ok(!names.has(item.file)); names.add(item.file);
     assert.ok(existsSync(new URL(`../public/${item.file}`, import.meta.url)), item.id);
   }
-  for (const file of readdirSync(new URL('../public/media/', import.meta.url))) assert.ok(names.has(`media/${file}`), `Uncredited asset: ${file}`);
+  // A «-480.jpg» file is the phone-size copy of a credited image (site audit S3-14).
+  for (const file of readdirSync(new URL('../public/media/', import.meta.url))) {
+    const original = String(file).replace(/-480\.jpg$/, '');
+    assert.ok(names.has(`media/${file}`) || [...names].some((name) => name.replace(/\.(jpg|webp)$/, '') === `media/${original}`), `Uncredited asset: ${file}`);
+  }
 });

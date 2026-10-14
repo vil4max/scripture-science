@@ -233,7 +233,7 @@ const showsJwNote = tradition.id === 'jw';
   .association { font-size: 14px; }
 
   .profile-section {
-    max-width: 70ch;
+    max-width: var(--measure);
     min-width: 0;
     overflow-wrap: anywhere;
   }
@@ -257,7 +257,7 @@ const showsJwNote = tradition.id === 'jw';
     display: grid;
     grid-template-columns: minmax(0, 1fr);
     gap: 32px;
-    max-width: 70ch;
+    max-width: var(--measure);
     min-width: 0;
     overflow-wrap: anywhere;
   }
@@ -274,7 +274,7 @@ const showsJwNote = tradition.id === 'jw';
     margin: 24px 0 0;
     padding: 0 0 0 20px;
     border-left: 4px solid var(--tradition-color);
-    max-width: 70ch;
+    max-width: var(--measure);
     overflow-wrap: anywhere;
   }
 

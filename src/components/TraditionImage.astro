@@ -4,9 +4,11 @@ import { withBase } from '../lib/paths';
 interface Props { id: string; compact?: boolean; }
 const { id, compact = false } = Astro.props;
 const picture = media.find((item) => item.id === id);
+// A 480px copy for phones (public/media/*-480.jpg, site audit S3-14).
+const small = picture?.file.replace(/\.(jpg|webp)$/, '-480.jpg') ?? '';
 ---
 {picture && <figure class:list={['tradition-image', { compact, tall: picture.height > picture.width * 1.3 }]}>
-  <a href={withBase(`sources/#media-${id}`)} aria-label="Изображение: сведения об источнике и авторе"><img src={withBase(picture.file)} alt="" width={picture.width} height={picture.height} loading="lazy" decoding="async"/></a>
+  <a href={withBase(`sources/#media-${id}`)} aria-label="Изображение: сведения об источнике и авторе"><img src={withBase(picture.file)} srcset={`${withBase(small)} 480w, ${withBase(picture.file)} ${picture.width}w`} sizes={compact ? '340px' : '(max-width: 760px) 100vw, 720px'} alt="" width={picture.width} height={picture.height} loading="lazy" decoding="async"/></a>
   <figcaption>{picture.caption}</figcaption>
 </figure>}
 <style>

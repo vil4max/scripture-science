@@ -6,6 +6,7 @@ import { innerQuotes, langOf } from '../lib/typography';
 import { getCollection } from 'astro:content';
 import SectionPage from '../layouts/SectionPage.astro';
 import TraditionImage from '../components/TraditionImage.astro';
+import LineageTree from '../components/LineageTree.astro';
 import { withBase } from '../lib/paths';
 
 const sections = (await getCollection('basics')).sort((a, b) => a.data.order - b.data.order);
@@ -21,6 +22,7 @@ const SACRAMENTS = ['Крещение', 'Миропомазание', 'Прич�
     <h2 id={`${section.id}-title`}><span class="step">{section.data.order}</span> {section.data.title}</h2>
     {section.id === 'christ-and-christians' && <TraditionImage id="orthodoxy" compact />}
     {section.data.points.map((point) => <p>{point}</p>)}
+    {section.id === 'divisions' && <LineageTree />}
     {section.id === 'church-and-sacraments' && <ol class="sacraments" aria-label="Семь Таинств">{SACRAMENTS.map((name) => <li>{name}</li>)}</ol>}
     {section.data.next.length > 0 && <p class="next">{section.data.next.map((link, index) => <>{index > 0 && ' · '}<a href={withBase(link.href)} data-carry-selection>{link.label} →</a></>)}</p>}
     <details class="proof">

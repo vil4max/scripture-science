@@ -36,7 +36,7 @@ const family = getFamilyByTradition(tradition.id);
       </sup>
     )}
     <button type="button" class="add" data-add-compare={tradition.id} disabled={tradition.id === 'orthodoxy'} aria-pressed={tradition.id === 'orthodoxy'}>
-      {tradition.id === 'orthodoxy' ? 'Основание сравнения' : '+ В сравнение'}
+      {tradition.id === 'orthodoxy' ? 'Основание сравнения' : 'Выбрать для сравнения'}
     </button>
   </Heading>
   {full_name !== name && <p class="full-name" data-no-terms>{full_name}</p>}
@@ -150,7 +150,7 @@ const family = getFamilyByTradition(tradition.id);
     margin: 0 0 12px;
     color: var(--muted);
     font-size: 15px;
-    max-width: 70ch;
+    max-width: var(--measure);
   }
 
   dl {
@@ -201,7 +201,7 @@ const family = getFamilyByTradition(tradition.id);
 
   dd {
     margin: 0;
-    max-width: 70ch;
+    max-width: var(--measure);
     line-height: 1.6;
   }
 
@@ -248,10 +248,19 @@ const family = getFamilyByTradition(tradition.id);
     for (const button of buttons) {
       const on = ids.includes(button.dataset.addCompare ?? '');
       button.setAttribute('aria-pressed', String(on));
-      button.textContent = button.dataset.addCompare === 'orthodoxy' ? 'Основание сравнения' : on ? '✓ В сравнении' : '+ В сравнение';
+      button.textContent = button.dataset.addCompare === 'orthodoxy' ? 'Основание сравнения' : on ? '✓ Выбрано для сравнения' : 'Выбрать для сравнения';
     }
   });
   for (const button of buttons) {
     button.addEventListener('click', () => setSelection(toggleSelection(getSelection(), button.dataset.addCompare ?? '')));
   }
+  // The choice replaces the previous one; a status line says what is chosen
+  // and leads to the comparison (site audit S1-17).
+  const status = document.querySelector<HTMLElement>('[data-compare-status]');
+  if (status) onSelection((ids) => {
+    const chosen = buttons.find((button) => button.dataset.addCompare === ids[1]);
+    const name = chosen?.closest('article')?.querySelector('.profile-link')?.textContent?.replace(/\s*\(.*\)\s*$/, '').trim();
+    status.hidden = !name;
+    status.querySelector('[data-compare-name]')!.textContent = name ?? '';
+  });
 </script>

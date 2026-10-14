@@ -9,6 +9,8 @@ import { analysisCardsForTopic, profileHref } from '../lib/analysis';
 import { CREED_ARTICLES, CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { SHORT_NAMES } from '../lib/names';
+import BaptismTable from './BaptismTable.astro';
+import WeekStrip from './WeekStrip.astro';
 import { nbsp } from '../lib/typography';
 import { withBase } from '../lib/paths';
 import { DEFAULT_SELECTION } from '../lib/selection';
@@ -191,6 +193,8 @@ const PARTS = page === 'worship'
             </>}
             {PRAYER_LINKS[question.id] && <p class="prayer-links">Молитвы полностью: {PRAYER_LINKS[question.id]!.map((prayer, index) => <>{index > 0 && ' · '}<a href={withBase(`worship/#${prayer.id}`)}>{prayer.title}</a></>)}</p>}
             {question.foundationHref && <p class="foundation-link"><a href={question.foundationHref} data-carry-selection>Обоснование →</a></p>}
+            {question.id === 'baptism' && <BaptismTable />}
+            {question.id === 'schedule' && <WeekStrip />}
             {CROSS_LINKS[question.id] && <p class="cross-links">{CROSS_LINKS[question.id]!.map((link, index) => <>{index > 0 && ' · '}<a href={withBase(link.href)} data-carry-selection>{link.title}</a></>)}</p>}
             {question.orthodoxProofs && <details class="more">
               <summary>Источники православного учения</summary>

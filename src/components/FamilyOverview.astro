@@ -3,6 +3,7 @@ import { getOrderedMatrix } from '../lib/content';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 import overview from '../data/family-overview.json';
 import TraditionCard from './TraditionCard.astro';
+import { withBase } from '../lib/paths';
 const traditions = await getOrderedMatrix();
 const card = (id: string) => traditions.find((tradition) => tradition.id === id)!;
 const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION_COLOR_TOKEN] ?? '--t-other';
@@ -10,6 +11,7 @@ const color = (id: string) => TRADITION_COLOR_TOKEN[id as keyof typeof TRADITION
 <section id="traditions" aria-labelledby="families-title" class="families">
   <h2 id="families-title">Авраамические религии</h2>
   <p class="order-note">Основные традиции — по времени возникновения, от древних к более поздним.</p>
+  <p class="compare-status" data-compare-status hidden>Сейчас в сравнении: Православие и <strong data-compare-name></strong>. <a href={withBase('compare/')} data-carry-selection>Открыть сравнение →</a> Кнопка «Выбрать для сравнения» в карточке заменяет выбранную традицию.</p>
   <aside class="connections"><h3>Что связывает эти традиции</h3><p class="intro">{overview.introduction.text}</p></aside>
   <section class="family" aria-labelledby="judaism-title">
     <h3 id="judaism-title">Иудаизм</h3>

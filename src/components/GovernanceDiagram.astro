@@ -33,8 +33,9 @@ const LOCAL_CHURCHES = [
   </> : <>
     <div class="council plain"><strong>Руководящий совет</strong><br/>Руководство деятельностью во всём мире</div>
     <p class="connector" aria-hidden="true">↓</p>
-    <ul class="churches">{[1,2,3].map(() => <li><strong>Собрание</strong><br/>Совет старейшин</li>)}</ul>
+    <ul class="churches stacked"><li><strong>Собрания — местные общины</strong><br/>в каждом — совет старейшин</li></ul>
     <p class="note">Показаны всемирное руководство и местные собрания; промежуточные уровни опущены.</p>
+    <p class="council-sources">Источники: <a href="https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/верования-свидетелей-иеговы/" target="_blank" rel="noopener noreferrer">«Во что верят Свидетели Иеговы?»</a> («Руководство деятельностью Свидетелей Иеговы во всем мире осуществляет Руководящий совет»); <a href="https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/как-организованы-собрания-свидетелей-иеговы/" target="_blank" rel="noopener noreferrer">«Как организованы собрания Свидетелей Иеговы?»</a> («В каждом собрании есть совет старейшин»), jw.org.</p>
   </>}
 </figure>}
 <style>
@@ -56,6 +57,9 @@ const LOCAL_CHURCHES = [
 
   @media (max-width: 760px) {
     .governance { padding: 16px; }
-    .churches.numbered { grid-template-columns: minmax(0, 1fr); }
+    /* Two columns keep the sixteen Churches to about half the height (V2-22). */
+    .churches.numbered { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px; }
+    .churches.numbered li { padding: 8px; border-top-width: 1px; font-size: 14px; }
   }
+  .churches.stacked li { box-shadow: 6px 6px 0 -1px var(--surface), 6px 6px 0 0 var(--line), 12px 12px 0 -1px var(--surface), 12px 12px 0 0 var(--line); max-width: 320px; }
 </style>

@@ -133,6 +133,8 @@ const legend = atlasLegend('religions');
   .legend :global(span) { width: 10px; height: 10px; flex-shrink: 0; border-radius: 2px; }
   .legend :global(.missing) { background: repeating-linear-gradient(45deg,var(--muted) 0 1px,var(--surface) 1px 4px); }
   .country-control > label { display: block; margin: 20px 0 8px; }
+  /* On a phone the map is small to tap: the country list comes first (V2-21). */
+  @media (max-width: 760px) { .atlas { display: flex; flex-direction: column; } .atlas > h2 { order: -2; } .atlas > .country-control { order: -1; } }
   select { font: inherit; font-size: 16px; background: var(--surface); color: var(--ink); border: 1px solid var(--line); padding: 12px; width: 100%; border-radius: 6px; }
   #country-detail :global(h3) { font-size: 23px; margin: 24px 0 12px; }
   #country-detail :global(.basis) { color: var(--muted); }

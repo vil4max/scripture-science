@@ -1,0 +1,43 @@
+---
+// The week of each tradition, restated from the answers of «Когда молятся:
+// день, неделя, год» below, whose sources are listed with them (site audit
+// V2-5). Text in every cell: the strip does not rely on colour.
+import { SHORT_NAMES } from '../lib/names';
+const DAYS = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс'];
+const WEEK: [string, Partial<Record<string, string>>, string?][] = [
+  ['orthodoxy', { Ср: 'пост', Пт: 'пост', Вс: 'Литургия' }],
+  ['catholicism', { Пт: 'день покаяния', Вс: 'Месса' }],
+  ['protestantism', { Вс: 'богослужение' }, 'по церкви; у баптистов в будни — другие собрания'],
+  ['lds', { Пн: 'домашний вечер', Вс: 'причастное собрание' }],
+  ['adventism', { Пт: 'с заката — суббота', Сб: 'суббота' }],
+  ['jw', {}, 'встречи дважды в неделю: в будний день и в выходной'],
+  ['judaism', { Пт: 'с заката — Шаббат', Сб: 'Шаббат' }],
+  ['islam', { Пт: 'общая молитва в полдень' }, 'и пять намазов каждый день'],
+];
+---
+<details class="more week-strip" open>
+  <summary>Неделя у каждой традиции</summary>
+  <div class="scroll">
+    <table>
+      <thead><tr><th scope="col">Традиция</th>{DAYS.map((day) => <th scope="col">{day}</th>)}</tr></thead>
+      <tbody>{WEEK.map(([id, marks, note]) => <tr>
+        <th scope="row">{id === 'orthodoxy' ? 'Православие' : SHORT_NAMES[id]}{note && <span class="note">{note}</span>}</th>
+        {DAYS.map((day) => <td class:list={{ marked: Boolean(marks[day]) }}>{marks[day] ?? ''}</td>)}
+      </tr>)}</tbody>
+    </table>
+  </div>
+  <ul class="week-list">{WEEK.map(([id, marks, note]) => <li><strong>{id === 'orthodoxy' ? 'Православие' : SHORT_NAMES[id]}:</strong> {[...DAYS.filter((day) => marks[day]).map((day) => `${day} — ${marks[day]}`), ...(note ? [note] : [])].join('; ')}</li>)}</ul>
+</details>
+<style>
+  .scroll { overflow-x: auto; contain: inline-size; }
+  table { border-collapse: collapse; font-size: 13px; min-width: 620px; }
+  th, td { padding: 6px; border-top: 1px solid var(--line); text-align: center; vertical-align: top; }
+  tbody th { text-align: left; font-size: 14px; min-width: 120px; }
+  thead th { color: var(--muted); }
+  td.marked { background: color-mix(in srgb, var(--t-orthodoxy) 14%, var(--surface)); font-weight: 700; }
+  .note { display: block; font-weight: 400; font-size: 12px; color: var(--muted); }
+  /* A phone reads a short list instead of a seven-column table. */
+  .week-list { display: none; margin: 8px 0 0; padding-left: 18px; font-size: 15px; }
+  .week-list li { margin: 4px 0; }
+  @media (max-width: 600px) { .scroll { display: none; } .week-list { display: block; } }
+</style>
