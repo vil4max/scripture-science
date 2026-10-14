@@ -31,7 +31,7 @@ export interface CatalogEntry {
 export const EVIDENCE_ROLE_LABELS = {
   church: 'Учение Православной Церкви',
   tradition: 'Учение традиции',
-  answer: 'Православный ответ',
+  answer: 'Православный взгляд на расхождение',
 } as const;
 
 export const READING_KIND_LABELS = {

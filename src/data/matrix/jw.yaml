@@ -1,7 +1,8 @@
 id: jw
 name: "Свидетели Иеговы"
 common_name: "иеговисты"
-full_name: "Свидетели Иеговы; до 1931 года — Исследователи Библии"
+full_name: "Свидетели Иеговы"
+scope_note: "До 1931 года — Исследователи Библии"
 family: christianity
 since:
   year: 1870

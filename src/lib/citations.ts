@@ -3,7 +3,8 @@ export function citationTitle(proofs: { title: string }[]) {
   const groups = new Map<string, string[]>();
   for (const { title } of proofs) {
     const numbers = [...title.matchAll(pattern)].flatMap((match) => match[1].split(/\s*,\s*/));
-    const base = title.replace(pattern, '').replace(/[,;\s]+$/, '').trim();
+    // «…катехизис, §90: Троица» keeps its topic: «…катехизис: Троица §90».
+    const base = title.replace(pattern, '').replace(/,\s*:/, ':').replace(/[,;\s]+$/, '').trim();
     groups.set(base, [...new Set([...(groups.get(base) ?? []), ...numbers])]);
   }
   return [...groups].map(([title, numbers]) => `${title}${numbers.length ? ` §${numbers.join(', ')}` : ''}`).join(' · ');

@@ -8,6 +8,7 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 import { analysisCardsForTopic, profileHref } from '../lib/analysis';
 import { CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
+import { SHORT_NAMES } from '../lib/names';
 import { withBase } from '../lib/paths';
 import { DEFAULT_SELECTION } from '../lib/selection';
 import { WORSHIP_QUESTIONS } from '../lib/worship';
@@ -24,10 +25,6 @@ interface Props {
 }
 
 const { traditions, colorById, page = 'compare', extraToc = [] } = Astro.props;
-const SHORT_NAMES: Record<string, string> = {
-  judaism: 'Иудаизм', catholicism: 'Католичество', islam: 'Ислам', protestantism: 'Протестантизм',
-  lds: 'Святые последних дней', adventism: 'Адвентисты', jw: 'Свидетели Иеговы',
-};
 // The chosen tradition's answer to the question, labelled as its teaching
 // (owner, 2026-10-09: the answer to the question, not a self-description).
 const TEACHING_LABELS: Record<string, string> = {
@@ -119,13 +116,13 @@ const otherQuestions = await Promise.all(OTHER_TOPICS.map(topicQuestion));
 const PARTS = page === 'worship'
   ? [{ id: 'part-worship', title: 'Как служат и молятся', questions: WORSHIP_QUESTIONS.flatMap(extra) }]
   : [
-    { id: 'part-creed', title: 'Символ веры: что говорят другие религии', questions: creedQuestions },
+    { id: 'part-creed', title: 'Символ веры: что говорят другие традиции', questions: creedQuestions },
     { id: 'part-other', title: 'Другие различия', questions: otherQuestions },
   ];
 ---
 <div class="qc" data-comparison data-question-compare data-view="one" data-chosen={chosenByDefault}>
   <div class="qc-bar">
-    <div class="picker" role="group" aria-label="С какой религией сравнить">
+    <div class="picker" role="group" aria-label="С какой традицией сравнить">
       <span class="picker-label">Православие и</span>
       {others.map((tradition) => <button type="button" class="pick" data-pick={tradition.id} aria-pressed={tradition.id === chosenByDefault ? 'true' : 'false'}>
         <span class="dot" style={`background:${color(tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[tradition.id] ?? tradition.data.name}
@@ -133,7 +130,7 @@ const PARTS = page === 'worship'
     </div>
   </div>
   <div class="views" role="group" aria-label="Вид сравнения">
-    <button type="button" class="view" data-view-button="one" aria-pressed="true">Православие и одна религия</button>
+    <button type="button" class="view" data-view-button="one" aria-pressed="true">Православие и одна традиция</button>
     <button type="button" class="view" data-view-button="all" aria-pressed="false">Этот вопрос у всех</button>
   </div>
 
@@ -197,7 +194,7 @@ const PARTS = page === 'worship'
           </div>
           </div>)}
 
-          <ol class="all-list" aria-label={`${question.title} — все религии`}>
+          <ol class="all-list" aria-label={`${question.title} — все традиции`}>
             {question.sides.map((side) => <li style={`--accent:${color(side.tradition.id)}`}>
               <button type="button" class="row-pick" data-pick-row={side.tradition.id}>
                 <span class="dot" style={`background:${color(side.tradition.id)}`} aria-hidden="true"></span>{SHORT_NAMES[side.tradition.id] ?? side.tradition.data.name}

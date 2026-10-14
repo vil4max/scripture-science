@@ -22,7 +22,7 @@ const questions = [
   })))),
 ];
 ---
-<SectionPage title="Найти вопрос" lead="Православное учение, самоописание других традиций и православный ответ — по вопросам.">
+<SectionPage title="Найти вопрос" lead="Православное учение, учение других традиций и православный взгляд на расхождение — по вопросам.">
   <form role="search" class="search-form" action={withBase('search/')}>
     <label class="query">Вопрос или слово
       <input type="search" name="q" placeholder="Например: Троица, иконы, крещение" autocomplete="off" />
@@ -43,7 +43,7 @@ const questions = [
       data-search={[question.title, names.get(question.tradition), TOPIC_TITLES_RU[question.topic as TopicId], question.search].join(' ')}>
       <p class="context">{question.tradition === 'orthodoxy' ? 'Православное основание' : `Православный разбор: ${names.get(question.tradition)}`} · {TOPIC_TITLES_RU[question.topic as TopicId]}</p>
       <h2><a href={question.href} data-carry-selection>{question.title}</a></h2>
-      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Православной Церкви: ' : 'Самоописание традиции: '}</strong>{question.text}</p>
+      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Православной Церкви: ' : `Учение: ${names.get(question.tradition)}: `}</strong>{question.text}</p>
       {question.pending && <p class="pending">Есть сведения, требующие уточнения; пояснение — в разборе.</p>}
     </li>)}
   </ol>

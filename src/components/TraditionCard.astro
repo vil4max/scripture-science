@@ -22,7 +22,7 @@ interface Props {
 
 const { tradition, color, withJwFootnote = false, introduceCommonName = false, headingLevel = 3 } = Astro.props;
 const Heading = `h${headingLevel}` as 'h3' | 'h4' | 'h5';
-const { name, common_name, full_name, since, scripture, adherents, self_view } = tradition.data;
+const { name, common_name, full_name, scope_note, since, scripture, adherents, self_view } = tradition.data;
 const family = getFamilyByTradition(tradition.id);
 ---
 
@@ -40,6 +40,7 @@ const family = getFamilyByTradition(tradition.id);
     </button>
   </Heading>
   {full_name !== name && <p class="full-name">{full_name}</p>}
+  {scope_note && <p class="full-name">{scope_note}</p>}
 
   <details class="card-details">
   <summary>Познакомиться: история, Писание и самоописание</summary>

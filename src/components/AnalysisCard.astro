@@ -26,7 +26,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
     <p>{card.tradition.text}</p>
   </div>
   <div class="block answer">
-    <p class="label">Православный ответ</p>
+    <p class="label">Православный взгляд на расхождение</p>
     <ul>{card.answer.points.map((point) => <li>{point}</li>)}</ul>
   </div>
   {card.more.length > 0 && <div class="more">

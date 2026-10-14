@@ -213,7 +213,7 @@ const description = 'Значения слов, пояснения к данны
           {records.map(record => <details class="source-topic">
             <summary>{namesById.get(record.tradition)}: учение и православный ответ</summary>
             <p><strong>Отличие от православного учения:</strong> {record.difference}</p>
-            <p><strong>Православный ответ:</strong> {record.response}</p>
+            <p><strong>Православный взгляд на расхождение:</strong> {record.response}</p>
             <h4>Документы традиции</h4>
             <SourceCatalogList entries={filterSourceCatalog(entries, (usage) => usage.traditionId === record.tradition && usage.topic === topic && usage.section === 'Православная оценка' && usage.role === 'tradition')} />
             <h4>Основание ответа</h4><p>{record.authority}</p>

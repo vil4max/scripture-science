@@ -126,6 +126,8 @@ const matrix = defineCollection({
     name: z.string(),
     common_name: z.string().optional(),
     full_name: z.string(),
+    // Branches or former names shown under the name; the name itself stays short.
+    scope_note: z.string().optional(),
     family: z.enum(['judaism', 'christianity', 'islam']),
     since: z.object({
       year: z.number().int(),

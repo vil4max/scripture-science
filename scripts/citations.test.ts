@@ -10,3 +10,8 @@ test('paragraph labels sharing a title are merged without excerpts', () => {
     { title: 'Catechism §882' },
   ]), 'Catechism §880, 882');
 });
+
+test('a paragraph topic stays readable after the numbers are merged', () => {
+  assert.equal(citationTitle([{ title: 'Свт. Филарет Московский. Пространный катехизис, §90: Троица' }]),
+    'Свт. Филарет Московский. Пространный катехизис: Троица §90');
+});

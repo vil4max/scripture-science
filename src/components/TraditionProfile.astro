@@ -28,7 +28,8 @@ interface Props {
 }
 
 const { tradition, title } = Astro.props;
-const { name, full_name, since, adherents, scripture } = tradition.data;
+const { name, full_name, scope_note, since, adherents, scripture } = tradition.data;
+const lead = [full_name === name ? undefined : full_name, scope_note].filter(Boolean).join('. ') || undefined;
 // Curated analysis cards replace the topic-by-topic positions
 // (docs/tasks/site-m33-jw-analysis.md).
 const curated = (await getAnalyses()).find((entry) => entry.data.tradition === tradition.id)?.data;
@@ -55,7 +56,7 @@ const showsJwNote = tradition.id === 'jw';
 
 ---
 
-<SectionPage title={title ?? name} lead={full_name === name ? undefined : full_name} jwNote={showsJwNote}>
+<SectionPage title={title ?? name} lead={lead} jwNote={showsJwNote}>
   <dl slot="header-details" class="profile-facts" style={`--tradition-color: var(${color})`}>
     {family && (
       <div>
@@ -158,7 +159,7 @@ const showsJwNote = tradition.id === 'jw';
 
           <h4 id={`topic-${topicId}`}>{TOPIC_TITLES_RU[topicId]}</h4>
             {TOPIC_INTROS[topicId] && <p class="topic-intro">{TOPIC_INTROS[topicId]}</p>}
-          {tradition.id !== 'orthodoxy' && <><h5>Православное учение</h5><p>{traditions.find(entry => entry.id === 'orthodoxy')?.data.positions.find(item => item.topic === topicId)?.summary}</p><h5>Учение традиции</h5></>}
+          {tradition.id !== 'orthodoxy' && <><h5>Православное учение</h5><p>{traditions.find(entry => entry.id === 'orthodoxy')?.data.positions.find(item => item.topic === topicId)?.summary}</p><h5>Учение: {tradition.data.name}</h5></>}
           <MatrixPosition position={position} tradition={tradition.id} expandable />
           <OrthodoxAssessment tradition={tradition.id} topic={topicId} />
           {disputes.filter(dispute => dispute.data.topic === topicId).map(dispute => <Dispute dispute={dispute} order={tradition.id === 'orthodoxy' ? ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')] : ['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}

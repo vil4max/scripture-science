@@ -48,7 +48,10 @@ test('introduction presents the Orthodox framing and current source context', ()
   assert.match(html, /замена непрерывного церковного Предания поздней реконструкцией/);
   assert.match(html, /Святые последних дней \(мормоны\)/);
   assert.match(html, /Свидетели Иеговы \(иеговисты\)/);
-  assert.match(html, /Протестантизм \(лютеране, баптисты, пятидесятники и др\.\)/);
+  // The name stays short; the branches are a separate line (site audit 2026-10-10, T2-2).
+  assert.match(html, />Протестантизм</);
+  assert.match(html, /Лютеране, реформаты, англикане, баптисты, пятидесятники/);
+  assert.match(readFileSync('dist/traditions/protestantism/index.html', 'utf8'), /<h1[^>]*>Протестантизм<\/h1>/);
   assert.match(html, /Писание и канон/);
   assert.doesNotMatch(html, /Эльмира Кулиева|официальный API Quran/);
   assert.match(html, /дхарма, карма и сансара/);

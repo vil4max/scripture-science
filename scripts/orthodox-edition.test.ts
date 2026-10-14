@@ -51,6 +51,22 @@ test('every difference line that mentions the Church names the Orthodox Church',
     assert.doesNotMatch(readFileSync(file, 'utf8'), /Церковь(?!ю)[а-яё]|Церковь—|,,/, file);
   }
 });
+// The owner extended the rule to analysis pages on 2026-10-14: a key point or
+// card summary that speaks of the Church names the Orthodox Church first.
+test('analysis key points and card summaries that mention the Church name the Orthodox Church', () => {
+  for (const tradition of ['adventism', 'catholicism', 'islam', 'judaism', 'jw', 'lds', 'protestantism']) {
+    const analysis = yaml.load(readFileSync(`src/data/analyses/${tradition}.yaml`, 'utf8')) as {
+      keyPoints: { text: string }[]; groups: { cards: { id: string; short: string }[] }[];
+    };
+    const lines = [
+      ...analysis.keyPoints.map((point, index) => [`${tradition} key point ${index + 1}`, point.text]),
+      ...analysis.groups.flatMap((group) => group.cards.map((card) => [`${tradition}/${card.id}`, card.short])),
+    ];
+    for (const [id, line] of lines) {
+      if (/Церк|Православие/.test(line)) assert.match(line, /Православн/, `${id}: ${line}`);
+    }
+  }
+});
 // Every question: the Orthodox answer, then seven tradition pairs with only
 // the default one visible, each in three blocks, and seven lines in «Этот
 // вопрос у всех».

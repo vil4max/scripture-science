@@ -5,6 +5,7 @@
 // comparison, and the reference pages apart at the bottom.
 import ThemeSwitch from './ThemeSwitch.astro';
 import { getOrderedMatrix } from '../lib/content';
+import { SHORT_NAMES } from '../lib/names';
 import { withBase } from '../lib/paths';
 import { ROUTE } from '../lib/route';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
@@ -12,10 +13,6 @@ import { TRADITION_COLOR_TOKEN } from '../lib/rules';
 // The pages of the other traditions, by age, in short names (owner,
 // 2026-10-01: they need a way in from the menu). Each page holds that
 // tradition's detailed analysis.
-const SHORT_NAMES: Record<string, string> = {
-  judaism: 'Иудаизм', catholicism: 'Католичество', islam: 'Ислам', protestantism: 'Протестантизм',
-  lds: 'Святые последних дней', adventism: 'Адвентисты', jw: 'Свидетели Иеговы',
-};
 const religions = (await getOrderedMatrix())
   .filter((tradition) => tradition.id !== 'orthodoxy')
   .map((tradition) => ({
