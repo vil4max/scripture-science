@@ -40,7 +40,8 @@ test('source relocation preserves every image credit and new overview proof', ()
 test('introduction presents the Orthodox framing and current source context', () => {
   const html = readFileSync('dist/religions/index.html', 'utf8');
   assert.match(html, /Православная классификация/);
-  assert.match(html, />Подробнее</);
+  // The basis is shown openly beside its link, not folded (site audit G2-1).
+  assert.match(html, /Основание: [^<]+ — <a href="https:\/\/azbyka\.ru/);
   assert.doesNotMatch(html, /Основание классификации/);
   assert.doesNotMatch(html, /исходное исповедание (?:этого )?сайта/);
   assert.match(html, /Псевдохристианские реставрационистские движения/);

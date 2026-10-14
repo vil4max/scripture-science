@@ -17,7 +17,7 @@ const explained = ((entry && 'terms' in entry ? entry.terms : []) as string[]).m
   <strong>{entry.label}</strong>
   <p>{entry.text}</p>
   {explained.map((term) => <p class="term-note"><span class="term-name">Что значит «{term.term}»?</span> {term.short} <a href={withBase(`terms/#${term.slug}`)}>В словаре</a></p>)}
-  <a class="details" href={entry.url}>Подробнее</a>
+  <p class="details">Основание: {entry.authority} — <a href={entry.url}>{entry.title}</a></p>
 </div>}
 <style>
   p { margin: 8px 0; line-height: 1.6; }
