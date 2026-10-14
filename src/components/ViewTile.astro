@@ -12,6 +12,8 @@ interface Proof {
 interface Props {
   author: string;
   showContext?: boolean;
+  // Level under the section that holds the tile (S3-18).
+  headingLevel?: 3 | 4;
   doc: {
     about: string[];
     body: string;
@@ -31,7 +33,8 @@ interface Props {
   colorById: Map<string, string>;
 }
 
-const { author, doc, order, namesById, showContext = true } = Astro.props;
+const { author, doc, order, namesById, showContext = true, headingLevel = 4 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h3' | 'h4';
 const nameOf = (id: string) => namesById.get(id) ?? id;
 const rank = new Map(order.map((id, index) => [id, index]));
 const about = [...doc.about].sort((a, b) => (rank.get(a) ?? rank.size) - (rank.get(b) ?? rank.size));
@@ -53,7 +56,7 @@ const quoted = /^«[\s\S]*»$/.test(quoteText) ? quoteText : `«${quoteText}»`;
 <article class="tile">
   {showContext && <p class="meta">{nameOf(author)} · О традициях: {about.map(nameOf).join(', ')}</p>}
   <p class={`unity ${doc.unity.kind}`}><span class="unity-label">{UNITY_LABEL[doc.unity.kind]}</span></p>
-    <h4 class="title">{doc.title_ru} <span class="year">{yearLabel}</span></h4>
+    <Heading class="title">{doc.title_ru} <span class="year">{yearLabel}</span></Heading>
     <p class="meta">
       {doc.body}
       {fullDate && `, ${fullDate}`}

@@ -5,7 +5,7 @@
 // remembered in localStorage, and is carried by links marked
 // data-carry-selection.
 import { hrefWithReadingContext } from './readingContext.ts';
-import { hrefWithSelection, parseSelection, SELECTION_PARAM } from './selection.ts';
+import { DEFAULT_SELECTION, hrefWithSelection, parseSelection, SELECTION_PARAM } from './selection.ts';
 
 const STORAGE_KEY = 'traditions';
 type Listener = (ids: string[]) => void;
@@ -41,7 +41,14 @@ function restoreFragment(): void {
 function syncPage(ids: string[], initial = false): void {
   document.documentElement.dataset.selection = ids.join(' ');
   document.documentElement.dataset.selectionCount = String(ids.length);
-  const url = hrefWithSelection(location.href, ids);
+  // Only pages that show the choice keep it in the address, and only when it
+  // differs from the default (site audit S1-18, S3-9); storage and carried
+  // links remember it elsewhere.
+  const shows = Boolean(document.querySelector('[data-comparison], [data-add-compare]'));
+  const isDefault = ids.join(',') === DEFAULT_SELECTION.join(',');
+  const withoutChoice = new URL(location.href);
+  withoutChoice.searchParams.delete(SELECTION_PARAM);
+  const url = shows && !isDefault ? hrefWithSelection(location.href, ids) : withoutChoice.href;
   if (url !== location.href) {
     history.replaceState(history.state, '', url);
     if (initial) restoreFragment();

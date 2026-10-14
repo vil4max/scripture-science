@@ -5,9 +5,15 @@ import TermHints from '../components/TermHints.astro';
 interface Props {
   title: string;
   description?: string;
+  // A retired address that forwards elsewhere: not indexed, canonical is the
+  // destination (site audit S3-20).
+  canonical?: string;
+  noindex?: boolean;
 }
 
-const { title, description } = Astro.props;
+const { title, description, canonical, noindex = false } = Astro.props;
+const canonicalUrl = new URL(canonical ?? Astro.url.pathname, Astro.site).href;
+const FONTS = 'https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap';
 const pageContent = await Astro.slots.render('default');
 ---
 
@@ -18,12 +24,14 @@ const pageContent = await Astro.slots.render('default');
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title === 'Православный взгляд на религии мира' ? title : `${title} · Православный взгляд на религии мира`}</title>
     {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonicalUrl} />
+    {noindex && <meta name="robots" content="noindex" />}
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400&family=PT+Sans:wght@400;700&display=swap"
-    />
+    <!-- The web fonts load without blocking the first paint; text shows in the
+         fallback font until they arrive (site audit S3-16). -->
+    <Fragment set:html={`<link rel="preload" as="style" href="${FONTS}" onload="this.onload=null;this.rel='stylesheet'">`} />
+    <noscript><link rel="stylesheet" href={FONTS} /></noscript>
     <script is:inline>
       // Applies a stored explicit theme before first paint, so a returning
       // visitor's light/dark choice never flashes the system theme first.

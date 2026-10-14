@@ -206,6 +206,8 @@ const today = new Date();
               {row.todo && <span class="todo"> (уточняется)</span>}
               {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
               {context && <span class="context">{context.timelineText}</span>}
+              {/* Chapters name their own page (site audit S1-13). */}
+              {context?.link && <a class="chapter-link" href={withBase(context.link.startsWith('#') ? `numbers/${context.link}` : context.link)} data-carry-selection>{context.link.startsWith('#') ? 'Численность религий мира →' : 'Подробнее о традиции →'}</a>}
               {context?.milestones && <details class="milestones">
                 <summary>Дальнейшая история</summary>
                 <ul>{context.milestones.map((event) => <li><strong>{event.year}</strong> — {event.text}</li>)}</ul>
@@ -423,6 +425,7 @@ const today = new Date();
   .biblical-label { display: block; color: var(--testament-color); font-size: 13px; line-height: 18px; }
   .row.biblical .text { padding-top: 0; }
   .biblical-key { margin: 0; max-width: 85ch; font-size: 15px; }
+  .chapter-link { display: inline-block; margin-top: 4px; font-size: 15px; }
 
 
   @media (max-width: 760px) {

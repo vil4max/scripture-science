@@ -9,8 +9,11 @@ interface Props {
   namesById: Map<string, string>;
   colorById: Map<string, string>;
   comparison?: boolean;
+  // The heading level below its section, so levels do not skip (S3-18).
+  headingLevel?: 4 | 5;
 }
-const { dispute, order, namesById, colorById, comparison = false } = Astro.props;
+const { dispute, order, namesById, colorById, comparison = false, headingLevel = 5 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h4' | 'h5';
 const initial = comparisonQuestionView({ challengers: dispute.data.challenges.map(p => p.tradition), answerers: dispute.data.answers.map(p => p.tradition) }, DEFAULT_SELECTION);
 const supplied = [...dispute.data.challenges, ...dispute.data.answers];
 const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(id => {
@@ -25,7 +28,7 @@ const parts = ['orthodoxy', ...order.filter(id => id !== 'orthodoxy')].flatMap(i
   data-answerers={dispute.data.answers.map((part) => part.tradition).join(' ')}>
   <details class="discussion">
     <summary>Разбор вопроса: {dispute.data.title}</summary>
-    <div class="foundation"><h5>Православное учение</h5><p>{dispute.data.orthodoxFoundation}</p><p class="role">{dispute.data.authority}</p></div>
+    <div class="foundation"><Heading>Православное учение</Heading><p>{dispute.data.orthodoxFoundation}</p><p class="role">{dispute.data.authority}</p></div>
     <div class:list={["side", { "slot-columns": comparison }]}>
       {parts.map((part) => <article class="part" data-trad={part.id} data-foundation-column={part.id === 'orthodoxy' ? '' : undefined} hidden={comparison && !initial.shown.includes(part.id)} style={comparison ? `grid-column:${DEFAULT_SELECTION.indexOf(part.id) + 1};grid-row:1` : undefined}>
         <p class="who"><span class="chip" style={`background:var(${colorById.get(part.id) ?? '--t-other'})`} aria-hidden="true" />{namesById.get(part.id) ?? part.id}</p>

@@ -133,7 +133,7 @@ const description = 'Источники материалов сайта и по�
       })}
     </section>
     <section id="classification-sources"><h2>Православная классификация</h2>{Object.entries(classifications).map(([id, entry]) => <article><h3>{namesById.get(id)}</h3><p>{entry.label}. {entry.text}</p><p>{entry.authority}: <a href={entry.url}>{entry.title}</a>.</p></article>)}</section>
-    <section id="relations-documents"><h2>Документы об отношениях между традициями</h2><p>Ниже — датированные документы их авторов. Их исторические оценки не заменяют православного вероучения и не переносятся автоматически на всех современных последователей.</p>{[...views].sort((a,b) => Number(b.id === 'orthodoxy') - Number(a.id === 'orthodoxy')).map(view => <details class="source-topic"><summary>{namesById.get(view.id)}</summary>{view.data.documents.map(doc => <ViewTile author={view.id} doc={doc} order={traditions.map(entry => entry.id)} namesById={namesById} colorById={colorById} />)}</details>)}</section>
+    <section id="relations-documents"><h2>Документы об отношениях между традициями</h2><p>Ниже — датированные документы их авторов. Их исторические оценки не заменяют православного вероучения и не переносятся автоматически на всех современных последователей.</p>{[...views].sort((a,b) => Number(b.id === 'orthodoxy') - Number(a.id === 'orthodoxy')).map(view => <details class="source-topic"><summary>{namesById.get(view.id)}</summary>{view.data.documents.map(doc => <ViewTile author={view.id} doc={doc} order={traditions.map(entry => entry.id)} namesById={namesById} colorById={colorById} headingLevel={3} />)}</details>)}</section>
 
     <section id="adherents">
       <h2>Численность: даты и способы подсчёта</h2>

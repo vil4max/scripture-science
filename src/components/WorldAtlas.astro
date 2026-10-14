@@ -24,7 +24,7 @@ const legend = atlasLegend('religions');
       const country = byId.get(shape.id);
       const largest = country && atlasView('religions', country.id).largest;
       const label = `${shape.name}: ${largest ? legend.find((row) => row.id === largest)?.label : 'нет сопоставленных данных'}`;
-      return <path d={shape.path} fill={largest ? `var(${WORLD_COLORS[largest]})` : 'url(#no-data)'} data-country={country?.id} data-country-name={shape.name} role={country ? 'button' : undefined} tabindex={country ? 0 : undefined} aria-label={label}><title>{label}</title></path>;
+      return <path d={shape.path} fill={largest ? `var(${WORLD_COLORS[largest]})` : 'url(#no-data)'} data-country={country?.id} data-country-name={shape.name} role={country ? 'button' : undefined} tabindex={country ? -1 : undefined} aria-label={label}><title>{label}</title></path>;
     })}
   </svg>
   <ul class="legend" id="atlas-legend">{legend.map((group) => <li><span style={`background:var(${WORLD_COLORS[group.id]})`}/>{group.label}</li>)}<li><span class="missing"/>Нет данных или единственной крупнейшей группы</li></ul>

@@ -3,19 +3,10 @@
 // the first mention of a glossary term in the reading area becomes a button
 // that shows the term's plain explanation and a link to the glossary. This is
 // progressive enhancement: the HTML text, anchors and links stay unchanged.
-import { getTerms } from '../lib/content';
 import { withBase } from '../lib/paths';
-
-const hints = (await getTerms())
-  .filter((entry) => entry.data.match.length > 0)
-  .map((entry) => ({
-    term: entry.data.term,
-    short: entry.data.short,
-    href: withBase(`terms/#${entry.data.slug}`),
-    match: entry.data.match,
-  }));
 ---
-<script type="application/json" id="term-hints-data" set:html={JSON.stringify(hints).replace(/</g, '\\u003c')} />
+<link rel="prefetch" href={withBase('term-hints.json')} />
+<span id="term-hints-data" data-src={withBase('term-hints.json')} hidden></span>
 <div id="term-hint-pop" class="term-hint-pop" popover="auto" role="dialog" aria-label="Пояснение термина">
   <p class="term-hint-name"></p>
   <p class="term-hint-short"></p>
@@ -33,12 +24,13 @@ const hints = (await getTerms())
   const SKIP = 'a, button, summary, h1, h2, h3, h4, h5, h6, nav, header, script, style, svg, blockquote, q, cite, details.proof, .accessed, .term-hint, .term-hint-pop, [data-no-terms], [hidden], figcaption, select, option, label, .side.tradition';
   const LETTER = String.raw`[\p{L}\p{N}]`;
 
-  const annotate = () => {
+  const annotate = async () => {
     const root = document.querySelector<HTMLElement>('main');
     const data = document.getElementById('term-hints-data');
     const pop = document.getElementById('term-hint-pop') as HTMLElement | null;
     if (!root || !data || !pop || root.closest('[data-no-terms]') || !('showPopover' in pop)) return;
-    const hints = JSON.parse(data.textContent ?? '[]') as Hint[];
+    let hints: Hint[];
+    try { hints = await (await fetch(data.dataset.src!)).json(); } catch { return; }
 
     const textNodes = (scope: HTMLElement, includeFolded: boolean) => {
       const nodes: Text[] = [];
@@ -60,30 +52,40 @@ const hints = (await getTerms())
     };
 
     const used: Hint[] = [];
-    const pass = (scope: HTMLElement) => { for (const hint of hints) {
-      if (used.includes(hint)) continue;
-      // Display text may carry no-break spaces (src/lib/typography.ts).
-      const pattern = new RegExp(`(?<!${LETTER})(?:${hint.match.join('|').replace(/ /g, '[ \\u00a0]')})(?!${LETTER})`, 'u');
-      const found = [false, true].some((includeFolded) => {
+    // One walk per pass: each text node is scanned once for the earliest
+    // match among the hints not yet placed (site audit S3-6).
+    const pass = (scope: HTMLElement) => {
+      for (const includeFolded of [false, true]) {
+        // Display text may carry no-break spaces (src/lib/typography.ts).
+        const patterns = hints.filter((hint) => !used.includes(hint)).map((hint) => ({
+          hint, pattern: new RegExp(`(?<!${LETTER})(?:${hint.match.join('|').replace(/ /g, '[ \\u00a0]')})(?!${LETTER})`, 'u'),
+        }));
         for (const node of textNodes(scope, includeFolded)) {
-          const match = pattern.exec(node.nodeValue ?? '');
-          if (!match) continue;
-          const word = node.splitText(match.index);
-          word.splitText(match[0].length);
-          const button = document.createElement('button');
-          button.type = 'button';
-          button.className = 'term-hint';
-          button.dataset.hint = String(used.length);
-          button.setAttribute('aria-haspopup', 'dialog');
-          button.setAttribute('aria-expanded', 'false');
-          button.textContent = word.nodeValue;
-          word.replaceWith(button);
-          return true;
+          let text: Text | null = node;
+          while (text && patterns.length) {
+            let best: { entry: (typeof patterns)[number]; match: RegExpExecArray } | undefined;
+            for (const entry of patterns) {
+              const match = entry.pattern.exec(text.nodeValue ?? '');
+              if (match && (!best || match.index < best.match.index)) best = { entry, match };
+            }
+            if (!best) break;
+            const word = text.splitText(best.match.index);
+            text = word.splitText(best.match[0].length);
+            const button = document.createElement('button');
+            button.type = 'button';
+            button.className = 'term-hint';
+            button.dataset.hint = String(used.length);
+            button.setAttribute('aria-haspopup', 'dialog');
+            button.setAttribute('aria-expanded', 'false');
+            button.textContent = word.nodeValue;
+            word.replaceWith(button);
+            used.push(best.entry.hint);
+            patterns.splice(patterns.indexOf(best.entry), 1);
+          }
+          if (!patterns.length) return;
         }
-        return false;
-      });
-      if (found) used.push(hint);
-    } };
+      }
+    };
     pass(root);
     // A tradition picked on /compare/ or /worship/ reveals a hidden pair; its
     // terms not yet explained on the page get their hint there (T5-2).

@@ -11,7 +11,8 @@ test('browser state migrates legacy storage, survives reload and supports blocke
   let stored: string | null = 'jw,catholicism,jw,islam';
   let url = new URL('https://example.test/scripture-science/compare/?extra=keep#topic-god');
   const links = [{ href: '', getAttribute: () => '/scripture-science/bible/#canon-title' }];
-  const doc = { documentElement: { dataset: {} }, querySelectorAll: () => links };
+  // A comparison page: it shows the choice, so a non-default choice stays in the address.
+  const doc = { documentElement: { dataset: {} }, querySelectorAll: () => links, querySelector: () => ({}) };
   const load = async () => {
     globals.location = { get href() { return url.href; }, get search() { return url.search; }, get origin() { return url.origin; } };
     globals.history = { state: null, replaceState: (_state: unknown, _title: string, next: string) => { url = new URL(next); } };
@@ -24,6 +25,7 @@ test('browser state migrates legacy storage, survives reload and supports blocke
     assert.deepEqual(client.getSelection(), ['orthodoxy', 'jw']);
     assert.equal(stored, 'orthodoxy,jw');
     assert.equal(url.hash, '#topic-god'); assert.equal(url.searchParams.get('extra'), 'keep');
+    assert.equal(url.searchParams.has('t'), false, 'the default choice is not written into the address');
     assert.ok(links[0].href.includes('t=orthodoxy%2Cjw'));
     client.setSelection(['orthodoxy', 'islam']);
     client = await load();

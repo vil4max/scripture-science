@@ -32,7 +32,7 @@ const family = getFamilyByTradition(tradition.id);
     <a class="profile-link" href={profileHref(tradition.id)} data-carry-selection>{name}{introduceCommonName && common_name ? ` (${common_name})` : ''}</a>
     {withJwFootnote && (
       <sup>
-        <a href={`#${JW_NOTE_ID}`}>*</a>
+        <a href={`#${JW_NOTE_ID}`} aria-label="Правовая справка">*</a>
       </sup>
     )}
     <button type="button" class="add" data-add-compare={tradition.id} disabled={tradition.id === 'orthodoxy'} aria-pressed={tradition.id === 'orthodoxy'}>

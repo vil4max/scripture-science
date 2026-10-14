@@ -47,10 +47,10 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
   </details>}
   {card.topic && <p class="back"><a href={withBase(`compare/?t=orthodoxy,${tradition}#topic-${card.topic}`)} data-carry-selection>К сравнению по теме</a></p>}
   </details>
-  <nav class="adjacent" aria-label={`Соседние вопросы: ${card.title}`}>
+  <p class="adjacent">
     {previous && <a href={`#${previous.id}`} rel="prev">← {previous.title}</a>}
     {next && <a href={`#${next.id}`} rel="next">{next.title} →</a>}
-  </nav>
+  </p>
 </article>
 <style>
 .card { border-top: 1px solid var(--line); padding: 24px 0 8px; scroll-margin-top: 24px; }

@@ -306,6 +306,10 @@ const PARTS = page === 'worship'
   .all-list li + li { border-top: 1px solid var(--line); }
   .row-pick { border-radius: 4px; padding: 4px 8px; min-height: 44px; font-weight: 700; text-align: left; justify-content: flex-start; }
   .row-text { line-height: 1.55; }
+  /* Without scripts the pickers cannot work: hide them and show every
+     tradition's difference line instead (site audit S3-4). */
+  :global(html:not(.js)) .picker, :global(html:not(.js)) .views { display: none; }
+  :global(html:not(.js)) .all-list { display: block; }
   .qc[data-view='all'] .pair { display: none; }
   .qc[data-view='all'] .all-list { display: block; }
 

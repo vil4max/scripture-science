@@ -6,9 +6,13 @@ const destination = withBase('orthodoxy/');
   <head>
     <meta charset="utf-8" />
     <title>Православная вера</title>
-    <link rel="canonical" href={destination} />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="robots" content="noindex" />
+    <link rel="canonical" href={new URL(destination, Astro.site).href} />
+    <meta http-equiv="refresh" content={`0; url=${destination}`} />
     <script is:inline define:vars={{ destination }}>
       const target = new URL(destination, location.origin);
+      target.search = location.search;
       target.hash = location.hash;
       location.replace(target.href);
     </script>

@@ -5,7 +5,7 @@
 import Base from '../layouts/Base.astro';
 import { withBase } from '../lib/paths';
 ---
-<Base title="Сходства и различия"><main class="page"><h1>Раздел объединён со сравнением</h1><p>Сходства и различия теперь разбираются по Символу веры.</p><a id="moved" href={withBase('compare/')} data-carry-selection>Открыть: Символ веры и различия</a></main></Base>
+<Base title="Сходства и различия" canonical={withBase('compare/')} noindex><main class="page"><h1>Раздел объединён со сравнением</h1><p>Сходства и различия теперь разбираются по Символу веры.</p><a id="moved" href={withBase('compare/')} data-carry-selection>Открыть: Символ веры и различия</a></main></Base>
 <script>
   import { withBase } from '../lib/paths';
   import { differencesDestination } from '../lib/legacyRoutes';

@@ -95,7 +95,7 @@ const showsJwNote = tradition.id === 'jw';
   <section class="positions curated" aria-labelledby="positions-title">
     <h2 id="positions-title">Вера и практика: подробный разбор</h2>
     <p class="analysis-lead">{curated.lead} <a href={withBase('reading/')} data-carry-selection>Как различать учение, объяснение автора и оценку</a>.</p>
-    <p class="analysis-authority">{curated.authorityNote}{tradition.id === 'jw' && <sup><a href={`#${JW_NOTE_ID}`}>*</a></sup>}</p>
+    <p class="analysis-authority">{curated.authorityNote}{tradition.id === 'jw' && <sup><a href={`#${JW_NOTE_ID}`} aria-label="Правовая справка">*</a></sup>}</p>
     <section class="key-points" aria-labelledby="key-points-title">
       <h3 id="key-points-title">Главное</h3>
       <p class="key-points-lead">Основные отличия от православного учения. Каждый пункт ведёт к подробному разбору.</p>
@@ -126,7 +126,7 @@ const showsJwNote = tradition.id === 'jw';
     </section>)}
     {disputes.length > 0 && <section class="analysis-group" id="questions">
       <h3>Спорные вопросы в сопоставлении с другими традициями</h3>
-      {disputes.map((dispute) => <Dispute dispute={dispute} order={['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} />)}
+      {disputes.map((dispute) => <Dispute dispute={dispute} order={['orthodoxy', tradition.id]} namesById={namesById} colorById={colorById} headingLevel={4} />)}
     </section>}
     </div>
     </div>

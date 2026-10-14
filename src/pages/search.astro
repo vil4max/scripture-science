@@ -1,14 +1,46 @@
 ---
 import SectionPage from '../layouts/SectionPage.astro';
 import { getAnalyses, profileHref } from '../lib/analysis';
+import { getCollection } from 'astro:content';
 import { getOrderedMatrix } from '../lib/content';
-import { TOPIC_ORDER, TOPIC_TITLES_RU, type TopicId } from '../lib/rules';
+import { orthodoxAssessment } from '../lib/orthodox';
+import { SHORT_NAMES } from '../lib/names';
+import { normalizeSearch } from '../lib/search';
+import { TOPIC_ORDER, TOPIC_QUESTIONS_RU, TOPIC_TITLES_RU, TRADITION_COLOR_TOKEN, type TopicId } from '../lib/rules';
+import { WORSHIP_QUESTIONS } from '../lib/worship';
 import { withBase } from '../lib/paths';
 
 const traditions = await getOrderedMatrix();
 const names = new Map(traditions.map((entry) => [entry.id, entry.data.name]));
 const orthodox = traditions.find((entry) => entry.id === 'orthodoxy')!;
+const others = traditions.filter((entry) => entry.id !== 'orthodoxy');
+const extras = await getCollection('extraQuestions');
+// The comparison and worship questions are searchable too (site audit S1-1,
+// S2-12): each covers every tradition, so it sits under «Сравнение».
+const comparisonQuestions = [
+  ...TOPIC_ORDER.map((topic) => ({
+    title: TOPIC_QUESTIONS_RU[topic], topic, tradition: 'compare',
+    href: withBase(`compare/#topic-${topic}`),
+    text: orthodox.data.positions.find((position) => position.topic === topic)?.short ?? '',
+    search: [
+      orthodox.data.positions.find((position) => position.topic === topic)?.summary ?? '',
+      ...others.flatMap((tradition) => [tradition.data.name, tradition.data.positions.find((position) => position.topic === topic)?.summary ?? '', orthodoxAssessment(tradition.id, topic)?.difference ?? '']),
+    ].join(' '),
+    pending: false,
+  })),
+  ...extras.map((entry) => ({
+    title: entry.data.question, topic: entry.id, tradition: 'compare',
+    href: withBase(`${WORSHIP_QUESTIONS.includes(entry.id) ? 'worship' : 'compare'}/#topic-${entry.id}`),
+    text: entry.data.orthodox.short,
+    search: [entry.data.orthodox.short, entry.data.orthodox.detail ?? '', ...Object.entries(entry.data.traditions).flatMap(([id, side]) => [names.get(id) ?? '', side.teaching, side.difference])].join(' '),
+    pending: false,
+  })),
+];
+// Search reads a compact index: each distinct word once (S3-5).
+const compact = (text: string) => [...new Set(normalizeSearch(text).match(/[\p{L}\p{N}]+/gu) ?? [])].join(' ');
+const topicTitle = (topic: string | undefined) => !topic ? '' : TOPIC_TITLES_RU[topic as TopicId] ?? extras.find((entry) => entry.id === topic)?.data.question ?? '';
 const questions = [
+  ...comparisonQuestions,
   ...orthodox.data.positions.map((position) => ({
     title: TOPIC_TITLES_RU[position.topic], topic: position.topic, tradition: 'orthodoxy',
     href: profileHref('orthodoxy', `topic-${position.topic}`),
@@ -27,11 +59,11 @@ const questions = [
     <label class="query">Вопрос или слово
       <input type="search" name="q" placeholder="Например: Троица, иконы, крещение" autocomplete="off" />
     </label>
-    <label>Раздел
-      <select name="tradition"><option value="">Все разделы</option>{traditions.map((entry) => <option value={entry.id}>{entry.data.name}</option>)}</select>
+    <label>Религия
+      <select name="tradition"><option value="">Все религии</option><option value="compare">Сравнение (все традиции)</option>{traditions.map((entry) => <option value={entry.id}>{entry.id === 'orthodoxy' ? 'Православие' : SHORT_NAMES[entry.id] ?? entry.data.name}</option>)}</select>
     </label>
     <label>Тема
-      <select name="topic"><option value="">Все темы</option>{TOPIC_ORDER.map((topic) => <option value={topic}>{TOPIC_TITLES_RU[topic]}</option>)}</select>
+      <select name="topic"><option value="">Все темы</option><optgroup label="Темы сравнения">{TOPIC_ORDER.map((topic) => <option value={topic}>{TOPIC_TITLES_RU[topic]}</option>)}</optgroup><optgroup label="Другие вопросы">{extras.map((entry) => <option value={entry.id}>{entry.data.question}</option>)}</optgroup></select>
     </label>
     <button type="submit">Найти</button><button type="reset">Сбросить</button>
   </form>
@@ -40,10 +72,10 @@ const questions = [
   <noscript>Поиск требует JavaScript. Ниже доступны ссылки на все вопросы; также можно использовать поиск браузера.</noscript>
   <ol class="results">
     {questions.map((question) => <li data-question data-tradition={question.tradition} data-topic={question.topic}
-      data-search={[question.title, names.get(question.tradition), TOPIC_TITLES_RU[question.topic as TopicId], question.search].join(' ')}>
-      <p class="context">{question.tradition === 'orthodoxy' ? 'Православное основание' : `Православный разбор: ${names.get(question.tradition)}`} · {TOPIC_TITLES_RU[question.topic as TopicId]}</p>
-      <h2><a href={question.href} data-carry-selection>{question.title}</a></h2>
-      <p class="snippet"><strong>{question.tradition === 'orthodoxy' ? 'Учение Православной Церкви: ' : `Учение: ${names.get(question.tradition)}: `}</strong>{question.text}</p>
+      data-search={compact([question.title, names.get(question.tradition), topicTitle(question.topic), question.search].join(' '))}>
+      <p class="context">{question.tradition === 'compare' ? 'Сравнение по вопросам' : question.tradition === 'orthodoxy' ? 'Православное основание' : `Православный разбор: ${names.get(question.tradition)}`} · {topicTitle(question.topic)}</p>
+      <h2><a href={question.href} data-carry-selection>{question.title}</a>{question.tradition !== 'compare' && <span class="chip" style={`--accent:var(${TRADITION_COLOR_TOKEN[question.tradition as keyof typeof TRADITION_COLOR_TOKEN]})`}>{question.tradition === 'orthodoxy' ? 'Православие' : SHORT_NAMES[question.tradition]}</span>}</h2>
+      <p class="snippet"><strong>{question.tradition === 'compare' || question.tradition === 'orthodoxy' ? 'Учение Православной Церкви: ' : `Учение: ${names.get(question.tradition)}: `}</strong>{question.text}</p>
       {question.pending && <p class="pending">Есть сведения, требующие уточнения; пояснение — в разборе.</p>}
     </li>)}
   </ol>
@@ -97,6 +129,7 @@ const questions = [
   .results li { border-top: 1px solid var(--line); padding-top: 20px; }
   .results li[hidden] { display: none; }
   .results h2 { font-size: 23px; }
+  .chip { display: inline-block; margin-left: 10px; padding: 2px 10px; border: 1px solid var(--accent); border-radius: 999px; font-family: 'PT Sans', sans-serif; font-size: 14px; font-weight: 400; vertical-align: middle; }
   .context, .pending { font-size: 14px; color: var(--muted); margin: 0 0 8px; }
   .snippet { max-width: var(--measure); margin: 8px 0 0; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; }
 

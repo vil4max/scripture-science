@@ -4,7 +4,7 @@
 import Base from '../layouts/Base.astro';
 import { withBase } from '../lib/paths';
 ---
-<Base title="Молитвы"><main class="page"><h1>Молитвы перенесены</h1><p>Полные тексты молитв теперь в разделе «Богослужение и молитва».</p><a id="moved" href={withBase('worship/#prayers')} data-carry-selection>Открыть: Богослужение и молитва</a></main></Base>
+<Base title="Молитвы" canonical={withBase('worship/')} noindex><main class="page"><h1>Молитвы перенесены</h1><p>Полные тексты молитв теперь в разделе «Богослужение и молитва».</p><a id="moved" href={withBase('worship/#prayers')} data-carry-selection>Открыть: Богослужение и молитва</a></main></Base>
 <script>
   import { withBase } from '../lib/paths';
   import { prayersDestination } from '../lib/legacyRoutes';
