@@ -1,3 +1,14 @@
+---
+// Book counts as stated below; the bars draw the same numbers (site audit V2-16).
+const CANONS = [
+  { name: 'Православие', parts: [{ kind: 'ot', n: 39 }, { kind: 'extra', n: 11 }, { kind: 'nt', n: 27 }] },
+  { name: 'Католичество', parts: [{ kind: 'ot', n: 39 }, { kind: 'deutero', n: 7 }, { kind: 'nt', n: 27 }] },
+  { name: 'Протестантизм', parts: [{ kind: 'ot', n: 39 }, { kind: 'nt', n: 27 }] },
+  { name: 'Свидетели Иеговы', parts: [{ kind: 'ot', n: 39 }, { kind: 'nt', n: 27 }] },
+];
+const LABELS: Record<string, string> = { ot: 'Ветхий Завет', extra: 'неканонические книги', deutero: 'девтероканонические', nt: 'Новый Завет' };
+const MAX = 77;
+---
 <section aria-labelledby="canon-title">
   <h2 id="canon-title">Состав Библии</h2>
   <p class="intro">Библейский канон — состав книг, принятых Церковью как богодухновенные. У православных, католиков и протестантов общий Новый Завет из 27 книг; основные различия — в составе Ветхого Завета.</p>
@@ -5,6 +16,20 @@
     <h3>Какие книги вызывают различия</h3>
     <p>Товит, Иудифь, Премудрость Соломона, Сирах, Варух, 1–2 Маккавейские, а также греческие добавления к Есфири и Даниилу.</p>
   </div>
+  <figure class="canon-bars" data-no-terms>
+    <figcaption>Число книг в Библии</figcaption>
+    <ul>{CANONS.map((canon) => {
+      const total = canon.parts.reduce((sum, part) => sum + part.n, 0);
+      return <li>
+        <span class="canon-name">{canon.name}</span>
+        <span class="bar" style={`width:${(total / MAX) * 100}%`} role="img" aria-label={`${canon.name}: ${total} книг — ${canon.parts.map((part) => `${LABELS[part.kind]} ${part.n}`).join(', ')}`}>
+          {canon.parts.map((part) => <span class={`seg ${part.kind}`} style={`flex:${part.n}`}>{part.n}</span>)}
+        </span>
+        <span class="canon-total">{total}</span>
+      </li>;
+    })}</ul>
+    <p class="canon-key"><span class="seg ot">Ветхий Завет (39)</span> <span class="seg extra">неканонические</span> <span class="seg deutero">девтероканонические</span> <span class="seg nt">Новый Завет (27)</span></p>
+  </figure>
   <dl class="canon-comparison">
     <div><dt>Православие</dt><dd><b>В русской православной Библии — 77 книг.</b> Ветхий Завет: 39 канонических и 11 неканонических; Новый Завет: 27. Исторический счёт «22 книги» объединяет несколько книг под общими заглавиями и не означает, что в Ветхом Завете русской Библии только 22 книги. Неканонические книги читаются Церковью, но их статус отличается от канонических.</dd></div>
     <div><dt>Католичество</dt><dd><b>Входят в канон.</b> Их называют девтероканоническими. Католическая Библия насчитывает 46 книг Ветхого Завета и 27 Нового.</dd></div>
@@ -19,6 +44,19 @@
   .intro { max-width: 76ch; }
   .book-group { background: color-mix(in srgb, var(--focus) 6%, var(--bg)); padding: 18px 22px; border-left: 3px solid var(--focus); }
   h3 { font-size: 19px; margin: 0 0 8px; }
+  .canon-bars { margin: 0; display: grid; gap: 8px; }
+  .canon-bars figcaption { font-weight: 700; }
+  .canon-bars ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .canon-bars li { display: grid; grid-template-columns: 140px minmax(0, 1fr) 32px; gap: 8px; align-items: center; font-size: 15px; }
+  .bar { display: flex; height: 24px; border-radius: 4px; overflow: hidden; }
+  .seg { display: inline-grid; place-items: center; font-size: 12px; color: var(--ink); min-width: 0; }
+  .seg.ot { background: color-mix(in srgb, var(--testament-old) 35%, var(--surface)); }
+  .seg.extra, .seg.deutero { background: color-mix(in srgb, var(--t-other) 35%, var(--surface)); }
+  .seg.nt { background: color-mix(in srgb, var(--testament-new) 35%, var(--surface)); }
+  .canon-total { font-variant-numeric: tabular-nums; font-weight: 700; }
+  .canon-key { display: flex; flex-wrap: wrap; gap: 6px; font-size: 13px; }
+  .canon-key .seg { display: inline-block; padding: 2px 8px; border-radius: 4px; }
+  @media (max-width: 600px) { .canon-bars li { grid-template-columns: minmax(0, 1fr) 32px; } .canon-name { grid-column: 1 / -1; } }
   .canon-comparison { margin: 0; }
   .canon-comparison div { display: grid; grid-template-columns: 175px minmax(0, 1fr); gap: 20px; padding: 20px 0; border-bottom: 1px solid var(--line); }
   dt { font-weight: 700; }

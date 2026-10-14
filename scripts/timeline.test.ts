@@ -242,12 +242,14 @@ test('no text in the chronicle styles is below the minimum size', () => {
 test('the rendered chronicle keeps a strong Orthodox trunk, varied branches and the emphasized Great Schism', () => {
   const source = readFileSync(fileURLToPath(new URL('../src/components/timeline/Chronicle.astro', import.meta.url)), 'utf8');
   const html = readFileSync('dist/timeline/index.html', 'utf8');
-  assert.match(source, /const colX = \(c: number\) => BIBLICAL_X \+ c \* COL_W/);
+  assert.match(source, /const colX = \(c: number\) => BIBLICAL_X \+ c;/);
+  // Phones narrow the columns instead of squashing the graph (site audit V1-7).
+  assert.doesNotMatch(source, /scaleX/);
   assert.match(source, /n\.id === 'israelite-second-temple'\) continue/);
   assert.match(source, /\.seg\.main-trunk[\s\S]*width: 5px/);
-  assert.match(source, /node\.id === 'early-christianity'[\s\S]*'var\(--testament-new\)'/);
-  assert.match(source, /\['rabbinic-judaism', 'light-dark\(#4338ca, #818cf8\)'\]/);
-  assert.match(source, /\['pentecostalism', 'light-dark\(#0e7490, #22d3ee\)'\]/);
+  assert.match(source, /node\.id === 'early-christianity'\n  \? colorOf\('orthodoxy'\)/);
+  assert.match(source, /\['rabbinic-judaism', 'var\(--t-judaism\)'\]/);
+  assert.match(source, /\['pentecostalism', shade\('protestantism', 85\)\]/);
   assert.match(html, /row node major-schism/);
   assert.match(html, /Пятидесятница — явление Церкви и продолжение единой Священной истории/);
   assert.doesNotMatch(html, /Начало нашей эры — отсчёт от Рождества Христова/);

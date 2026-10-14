@@ -6,7 +6,7 @@
 // difference on the same question in one line each.
 import { getCollection, type CollectionEntry } from 'astro:content';
 import { analysisCardsForTopic, profileHref } from '../lib/analysis';
-import { CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
+import { CREED_ARTICLES, CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { SHORT_NAMES } from '../lib/names';
 import { nbsp } from '../lib/typography';
@@ -162,6 +162,13 @@ const PARTS = page === 'worship'
     </details>
 
     <div class="qc-body">
+      {page === 'compare' && <nav class="creed-map" aria-label="Символ веры: двенадцать членов и вопросы">
+        <p class="creed-map-title">Двенадцать членов Символа веры — и вопросы о них</p>
+        <ol>{CREED_ARTICLES.map((article) => <li>
+          <span class="creed-map-n">{article.n}</span>
+          <span>{creedQuestions.filter((question) => question.creed.some((item) => item.n === article.n)).map((question, index) => <>{index > 0 && ' · '}<a href={`#topic-${question.id}`}>{question.title}</a></>)}</span>
+        </li>)}</ol>
+      </nav>}
       {PARTS.map((part) => <>
         <h2 class="qc-group" id={part.id}>{part.title}</h2>
         {part.questions.map((question) => <section class="question" id={`topic-${question.id}`} aria-labelledby={`question-title-${question.id}`}>
@@ -240,7 +247,7 @@ const PARTS = page === 'worship'
   .qc-bar { position: sticky; top: 0; z-index: 15; margin: 0 -8px; padding: 10px 8px; background: var(--bg); border-bottom: 1px solid var(--line); }
   .picker { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; }
   .picker-label { flex: none; white-space: nowrap; font-weight: 700; margin-right: 4px; }
-  .pick, .view, .row-pick { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--line); border-radius: 999px; padding: 6px 14px; min-height: 40px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
+  .pick, .view, .row-pick { font: inherit; color: var(--ink); background: var(--surface); border: 1px solid var(--control-border); border-radius: 999px; padding: 6px 14px; min-height: 44px; cursor: pointer; display: inline-flex; align-items: center; gap: 8px; }
   .pick[aria-pressed='true'], .view[aria-pressed='true'] { border-color: var(--focus); color: var(--focus); font-weight: 700; box-shadow: inset 0 0 0 1px var(--focus); }
   .views { display: flex; flex-wrap: wrap; gap: 8px; }
   .dot { flex: none; width: 10px; height: 10px; border-radius: 50%; }
@@ -255,6 +262,12 @@ const PARTS = page === 'worship'
   .qc-toc a { text-decoration: none; }
   .qc-toc a:hover { text-decoration: underline; }
   .to-questions { margin: 12px 0 0; font-size: 15px; }
+  /* The Creed as a map of the questions below (site audit V2-2). */
+  .creed-map { margin: 0 0 24px; padding: 16px 20px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 6px; background: var(--surface); font-size: 15px; }
+  .creed-map-title { margin: 0 0 8px; font-weight: 700; }
+  .creed-map ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 6px; }
+  .creed-map li { display: grid; grid-template-columns: 28px minmax(0, 1fr); gap: 8px; align-items: baseline; }
+  .creed-map-n { display: inline-grid; place-items: center; width: 24px; height: 24px; border-radius: 50%; border: 1px solid var(--t-orthodoxy); font-size: 13px; font-variant-numeric: tabular-nums; }
   .cross-links, .analysis { font-size: 15px; }
 
   .qc-group { margin: 8px 0 0; padding-top: 12px; border-top: 2px solid var(--line); font-size: 24px; scroll-margin-top: calc(var(--bar-h, 60px) + 16px); }
@@ -272,7 +285,7 @@ const PARTS = page === 'worship'
   .creed p { margin: 0 0 4px !important; font-style: italic; line-height: 1.55; }
   .plain-label { font-weight: 700; }
   .creed-n { font-style: normal; color: var(--muted); }
-  .creed cite { display: block; font-style: normal; font-size: 13px; }
+  .creed cite { display: block; font-style: normal; font-size: 15px; line-height: 2.2; }
   .creed cite a { color: var(--muted); }
   .label { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); margin-top: 8px !important; }
   /* Three blocks per question (owner, 2026-10-09): Orthodox teaching, the
@@ -291,14 +304,16 @@ const PARTS = page === 'worship'
   .all-list { display: none; margin: 0; padding: 0; list-style: none; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); }
   .all-list li { display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 12px; align-items: start; padding: 10px 14px; border-left: 4px solid var(--accent); }
   .all-list li + li { border-top: 1px solid var(--line); }
-  .row-pick { border-radius: 4px; padding: 4px 8px; min-height: 36px; font-weight: 700; text-align: left; justify-content: flex-start; }
+  .row-pick { border-radius: 4px; padding: 4px 8px; min-height: 44px; font-weight: 700; text-align: left; justify-content: flex-start; }
   .row-text { line-height: 1.55; }
   .qc[data-view='all'] .pair { display: none; }
   .qc[data-view='all'] .all-list { display: block; }
 
-  @media (max-width: 760px) {
-    .qc-bar { margin: 0 -16px; padding: 8px 16px; }
-    .picker { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  /* Up to 1199px the picker stays one scrolling row and the question list
+     folds above the questions, so the reading column keeps its width
+     beside the sidebar (site audit V3-6). */
+  @media (max-width: 1199px) {
+    .picker { flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none; -webkit-overflow-scrolling: touch; mask-image: linear-gradient(to right, #000 calc(100% - 24px), transparent); }
     .picker::-webkit-scrollbar { display: none; }
     .pick { flex: none; }
     .qc-layout { grid-template-columns: minmax(0, 1fr); gap: 16px; }
@@ -306,7 +321,11 @@ const PARTS = page === 'worship'
     .qc-toc { grid-column: 1; grid-row: 1; position: static; max-height: none; border: 1px solid var(--line); border-radius: 6px; padding: 0 16px; background: var(--surface); }
     .qc-toc > summary { display: list-item; cursor: pointer; padding: 12px 0; min-height: 48px; font-size: 16px; font-weight: 700; color: var(--focus); }
     .qc-toc nav { padding-bottom: 12px; }
+    :global(html.js) .qc-toc:not([data-ready]) nav { display: none; }
     .qc-toc a { display: inline-block; padding: 6px 0; font-size: 16px; }
+  }
+  @media (max-width: 760px) {
+    .qc-bar { margin: 0 -16px; padding: 8px 16px; }
     .all-list li { grid-template-columns: minmax(0, 1fr); gap: 4px; }
     .more > summary { min-height: 44px; display: list-item; padding: 10px 0; font-size: 16px; }
     .sources { overflow-wrap: anywhere; }
@@ -322,11 +341,11 @@ const PARTS = page === 'worship'
     const pairs = [...root.querySelectorAll<HTMLElement>('.pair')];
     const viewButtons = [...root.querySelectorAll<HTMLButtonElement>('[data-view-button]')];
     const toc = root.querySelector<HTMLDetailsElement>('.qc-toc');
-    const narrow = matchMedia('(max-width: 760px)');
+    const narrow = matchMedia('(max-width: 1199px)');
     // The sticky chooser wraps to one or two rows; headings and contents
     // stop below its actual height.
     const bar = root.querySelector<HTMLElement>('.qc-bar');
-    if (bar) new ResizeObserver(() => root.style.setProperty('--bar-h', `${bar.offsetHeight}px`)).observe(bar);
+    if (bar) new ResizeObserver(() => { root.style.setProperty('--bar-h', `${bar.offsetHeight}px`); document.documentElement.style.setProperty('--bar-h', `${bar.offsetHeight}px`); }).observe(bar);
 
     // The view is part of the address (?view=all), so a shared link opens it.
     const setView = (view: string, record = true) => {
@@ -372,7 +391,7 @@ const PARTS = page === 'worship'
     });
 
     if (toc) {
-      const sync = () => { toc.open = !narrow.matches; };
+      const sync = () => { toc.open = !narrow.matches; toc.dataset.ready = ''; };
       narrow.addEventListener('change', sync);
       toc.addEventListener('click', (event) => { if (narrow.matches && (event.target as HTMLElement).closest('a')) toc.open = false; });
       // «К списку вопросов» at the end of each question opens the list on a phone (S1-14).

@@ -3,7 +3,6 @@
 // and prays — common worship, the daily, weekly and yearly rhythm, prayer at
 // home, example prayers, the Psalter — compared with the Orthodox practice in the same three
 // blocks as the Creed comparison, then the full Orthodox prayer texts.
-import BackToTop from '../components/BackToTop.astro';
 import PrayerTexts from '../components/PrayerTexts.astro';
 import QuestionCompare from '../components/QuestionCompare.astro';
 import SectionPage from '../layouts/SectionPage.astro';
@@ -22,14 +21,29 @@ const colorById = new Map(
   lead="Как служат и молятся в каждой традиции: общее богослужение, распорядок дня, недели и года, молитва дома, примеры молитв и Псалтирь. Полные тексты православных молитв — в конце страницы."
 >
   <p class="note">В каждом вопросе сначала — православная практика, затем — выбранная традиция и православный взгляд на расхождение. Чему традиции учат о Боге, Христе и спасении — в разделе <a href={withBase('compare/')} data-carry-selection>«Символ веры и различия»</a>.</p>
+  <figure class="liturgy-parts" aria-labelledby="liturgy-parts-title">
+    <figcaption id="liturgy-parts-title">Центр православного богослужения — Божественная Литургия. Она состоит из трёх частей (катехизис свт. Филарета, §§316–334; <a href={withBase('terms/#liturgy')}>словарь</a>):</figcaption>
+    <ol>
+      <li><strong>Проскомидия</strong><span>приготовление хлеба и вина для Евхаристии</span></li>
+      <li><strong>Литургия оглашённых</strong><span>молитвы, песнопения, чтение Апостола и Евангелия</span></li>
+      <li><strong>Литургия верных</strong><span>Евхаристия и Причащение</span></li>
+    </ol>
+  </figure>
   <section id="topics" aria-label="Богослужение и молитва">
     <QuestionCompare traditions={traditions} colorById={colorById} page="worship" extraToc={[{ href: '#prayers', title: 'Молитвы полностью' }]} />
   </section>
   <PrayerTexts />
-  <BackToTop />
 </SectionPage>
 
 <style>
+  /* The three parts of the Liturgy as a sequence (site audit V2-7). */
+  .liturgy-parts { margin: 0 0 24px; max-width: var(--measure); }
+  .liturgy-parts figcaption { font-size: 15px; margin-bottom: 8px; }
+  .liturgy-parts ol { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; counter-reset: part; }
+  .liturgy-parts li { counter-increment: part; padding: 10px 12px; border: 1px solid var(--line); border-top: 3px solid var(--t-orthodoxy); border-radius: 6px; background: var(--surface); display: grid; gap: 4px; font-size: 15px; }
+  .liturgy-parts li strong::before { content: counter(part) '. '; }
+  .liturgy-parts span { color: var(--muted); }
+  @media (max-width: 600px) { .liturgy-parts ol { grid-template-columns: minmax(0, 1fr); } }
   .note { max-width: var(--measure); margin: 0; padding-left: 14px; border-left: 4px solid var(--t-orthodoxy); color: var(--muted); font-size: 15px; line-height: 1.6; }
   .note a { color: var(--focus); }
 </style>

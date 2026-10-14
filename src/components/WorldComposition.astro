@@ -9,12 +9,12 @@ const formatCount = (count: string) => count.replace(' ', '\u00a0');
 <figure class="wc">
   <h2 id="world-composition-title">Население мира · последние сопоставимые данные</h2>
   <table aria-labelledby="world-composition-title">
-    <thead><tr><th scope="col">Группа</th><th scope="col" class="num">Доля</th><th scope="col" class="num">Численность</th></tr></thead>
+    <thead><tr><th scope="col">Группа</th><th scope="col" class="num">Численность</th><th scope="col" class="num">Доля</th></tr></thead>
     <tbody>
       {groups.map((group) => <tr>
         <th scope="row"><span class="swatch" style={`background:var(${WORLD_COLORS[group.id]})`} aria-hidden="true"/>{group.label}</th>
-        <td class="num">{formatShare(group.share)}</td>
         <td class="num">{formatCount(group.count)}</td>
+        <td class="num">{formatShare(group.share)}</td>
       </tr>)}
     </tbody>
   </table>

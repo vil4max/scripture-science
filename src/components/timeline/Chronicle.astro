@@ -23,57 +23,40 @@ const rows = buildChronicleRows(lineage, biblical).filter((row) => row.kind !== 
 const branches = assignBranchColumns(lineage, rows);
 const nodeById = new Map(lineage.nodes.map((n) => [n.id, n]));
 
-// --- Highlight sets: a tradition's own nodes plus every ancestor line ----
-const ancestorsOf = (node: LineageNode): string[] => {
-  const ids: string[] = [];
-  for (let n: LineageNode | undefined = node; n; n = n.parent ? nodeById.get(n.parent) : undefined) ids.push(n.id);
-  return ids;
-};
-const highlightOf = new Map<string, Set<string>>(); // node id -> traditions
-for (const n of lineage.nodes) {
-  if (!n.tradition) continue;
-  for (const id of ancestorsOf(n)) {
-    highlightOf.set(id, (highlightOf.get(id) ?? new Set()).add(n.tradition));
-  }
-}
-function rowHighlight(row: ChronicleRow): string {
-  if (row.kind === 'node') return [...(highlightOf.get(row.id) ?? [])].join(' ');
-  if (row.kind === 'union') {
-    const u = lineage.unions.find((x) => x.id === row.id)!;
-    return [nodeById.get(u.from)?.tradition, nodeById.get(u.to)?.tradition].filter(Boolean).join(' ');
-  }
-  return row.tradition ?? '';
-}
-
-// --- Graph geometry (CSS pixels) -------------------------------------------
-const COL_W = 12;
+// --- Graph geometry ----------------------------------------------------------
+// Positions are column numbers; CSS turns them into pixels with --col-w, so a
+// phone narrows the columns without squashing the dots (site audit V1-7).
 const GRAPH_PAD = 8;
-const GRAPH_W = GRAPH_PAD * 2 + (branches.columns + 1) * COL_W;
-const BIBLICAL_X = GRAPH_PAD + COL_W / 2;
+const GRAPH_COLUMNS = branches.columns + 1;
+const BIBLICAL_X = 0;
+const px = (column: number, delta = 0) => `calc(${GRAPH_PAD}px + ${column + 0.5} * var(--col-w) + ${delta}px)`;
 // The dot sits on the first text line's centre: row padding 6 + half of the
 // 26px line height.
 const DOT_Y = 19;
 // The first lineage column is the biblical line itself. The apostolic Church
 // continues that trunk; Judaism and later separations leave it as branches.
-const colX = (c: number) => BIBLICAL_X + c * COL_W;
+const colX = (c: number) => BIBLICAL_X + c;
 const colorOf = (tradition?: string) => `var(--t-${tradition ?? 'other'})`;
+// Sub-branches take shades of their family's site colour, so the timeline
+// matches the comparison pages (site audit V1-3, V2-12).
+const shade = (token: string, percent: number, toward = 'var(--ink)') => `color-mix(in srgb, var(--t-${token}) ${percent}%, ${toward})`;
 const branchColor = new Map<string, string>([
-  ['rabbinic-judaism', 'light-dark(#4338ca, #818cf8)'],
-  ['church-of-the-east', 'light-dark(#6d28d9, #a78bfa)'],
-  ['oriental-orthodoxy', 'light-dark(#0f766e, #2dd4bf)'],
-  ['old-believers', 'light-dark(#9a3412, #fdba74)'],
-  ['reformation', 'light-dark(#b91c1c, #fb7185)'],
-  ['lutheran', 'light-dark(#c2410c, #fb923c)'],
-  ['reformed', 'light-dark(#1d4ed8, #60a5fa)'],
-  ['anabaptist', 'light-dark(#a16207, #facc15)'],
-  ['anglican', 'light-dark(#7e22ce, #d8b4fe)'],
-  ['pentecostalism', 'light-dark(#0e7490, #22d3ee)'],
-  ['second-great-awakening', 'light-dark(#475569, #cbd5e1)'],
-  ['sunni', 'light-dark(#15803d, #4ade80)'],
-  ['shia', 'light-dark(#4d7c0f, #a3e635)'],
+  ['rabbinic-judaism', 'var(--t-judaism)'],
+  ['church-of-the-east', shade('other', 80)],
+  ['oriental-orthodoxy', shade('other', 60)],
+  ['old-believers', shade('orthodoxy', 60)],
+  ['reformation', 'var(--t-protestantism)'],
+  ['lutheran', shade('protestantism', 70)],
+  ['reformed', shade('protestantism', 70, 'var(--surface)')],
+  ['anabaptist', shade('protestantism', 50)],
+  ['anglican', shade('protestantism', 50, 'var(--surface)')],
+  ['pentecostalism', shade('protestantism', 85)],
+  ['second-great-awakening', shade('other', 70)],
+  ['sunni', 'var(--t-islam)'],
+  ['shia', shade('islam', 60)],
 ]);
 const colorOfNode = (node: LineageNode) => node.id === 'early-christianity'
-  ? 'var(--testament-new)'
+  ? colorOf('orthodoxy')
   : branchColor.get(node.id) ?? colorOf(node.tradition);
 const chipColorOfNode = (node: LineageNode) => node.id === 'early-christianity'
   ? colorOf('orthodoxy')
@@ -89,14 +72,12 @@ interface Segment {
   from: 'top' | 'dot';
   to: 'bottom' | 'dot';
   color: string;
-  hl: string;
   trunk?: boolean;
 }
 interface Connector {
   x1: number;
   x2: number;
   color: string;
-  hl: string;
   dashed?: boolean;
 }
 
@@ -105,11 +86,10 @@ function segmentsAt(r: number): Segment[] {
   const out: Segment[] = [];
   if (r <= bibleEnd) out.push({ x: BIBLICAL_X,
     from: r > 0 ? 'top' : 'dot', to: r === bibleEnd ? 'dot' : 'bottom',
-    color: testamentColor(r < nativityIndex ? 'old' : 'new'), hl: 'biblical', trunk: true });
+    color: testamentColor(r < nativityIndex ? 'old' : 'new'), trunk: true });
   for (const n of lineage.nodes) {
     const [a, b] = branches.span.get(n.id)!;
-    const hl = [...(highlightOf.get(n.id) ?? [])].join(' ');
-    const base = { x: colX(branches.column.get(n.id)!), color: colorOfNode(n), hl, trunk: n.id === 'early-christianity' };
+    const base = { x: colX(branches.column.get(n.id)!), color: colorOfNode(n), trunk: n.id === 'early-christianity' };
     if (n.id === 'israelite-second-temple') continue;
     if (r < a || r > b) continue;
     // A living line runs on through the "now" row; a structural line ends
@@ -130,7 +110,7 @@ function connectorAt(row: ChronicleRow): Connector | undefined {
     const x1 = colX(branches.column.get(n.parent)!);
     const x2 = colX(branches.column.get(n.id)!);
     if (x1 === x2) return undefined;
-    return { x1, x2, color: colorOfNode(n), hl: rowHighlight(row) };
+    return { x1, x2, color: colorOfNode(n) };
   }
   if (row.kind === 'union') {
     const u = lineage.unions.find((x) => x.id === row.id)!;
@@ -138,7 +118,6 @@ function connectorAt(row: ChronicleRow): Connector | undefined {
       x1: colX(branches.column.get(u.from)!),
       x2: colX(branches.column.get(u.to)!),
       color: 'var(--muted)',
-      hl: rowHighlight(row),
       dashed: true,
     };
   }
@@ -173,7 +152,6 @@ const nowSegments: Segment[] = lineage.nodes
     from: 'top' as const,
     to: 'dot' as const,
     color: colorOfNode(n),
-    hl: [...(highlightOf.get(n.id) ?? [])].join(' '),
     trunk: n.id === 'early-christianity',
   }));
 
@@ -187,7 +165,7 @@ const today = new Date();
     <span class="old">Ветхий Завет · от Сотворения мира</span>
     <span class="new">Новый Завет · от Рождества Христова</span>
   </div>
-  <ol class="rows" style={`--graph-w: ${GRAPH_W}px`}>
+  <ol class="rows" style={`--graph-w: calc(${GRAPH_PAD * 2}px + ${GRAPH_COLUMNS} * var(--col-w))`}>
     {
       items.map((item) => {
         const { row, index } = item;
@@ -196,7 +174,7 @@ const today = new Date();
         const connector = connectorAt(row);
         const about = row.approx ? 'ок. ' : '';
         return (
-          <li class={`row ${row.kind}${index === 0 ? ' start' : ''}${row.id === 'catholicism' ? ' major-schism' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)} data-hl={rowHighlight(row)}>
+          <li class={`row ${row.kind}${index === 0 ? ' start' : ''}${row.id === 'catholicism' ? ' major-schism' : ''}`} id={context ? `history-${context.id}` : undefined} data-row-id={row.id} data-testament={testamentOf(row)}>
             <span class="ad" id={row.id === 'early-christianity' ? 'history-orthodoxy' : undefined}>
               {about}
               {formatHistoricalYear(row.year)}
@@ -206,26 +184,25 @@ const today = new Date();
               {segmentsAt(index).map((s) => (
                 <span
                   class={`seg ${s.from}-${s.to}${s.trunk ? ' main-trunk' : ''}`}
-                  data-hl={s.hl}
-                  style={`left:${s.x - (s.trunk ? 2.5 : 1)}px; background:${s.color}; --dot-y:${DOT_Y}px`}
+                  style={`left:${px(s.x, s.trunk ? -2.5 : -1)}; background:${s.color}; --dot-y:${DOT_Y}px`}
                 />
               ))}
               {connector && (
                 <span
                   class={connector.dashed ? 'conn dashed' : 'conn'}
-                  data-hl={connector.hl}
-                  style={`left:${Math.min(connector.x1, connector.x2)}px; width:${Math.abs(connector.x2 - connector.x1)}px; top:${DOT_Y - 1}px; --c:${connector.color}`}
+                  style={`left:${px(Math.min(connector.x1, connector.x2))}; width:calc(${Math.abs(connector.x2 - connector.x1)} * var(--col-w)); top:${DOT_Y - 1}px; --c:${connector.color}`}
                 />
               )}
               {dot && (
-                <span class={`dot${dot.trunk ? ' main-trunk' : ''}`} data-hl={rowHighlight(row)} style={`left:${dot.x - (dot.trunk ? 7 : 5)}px; top:${DOT_Y - (dot.trunk ? 7 : 5)}px; background:${dot.color}`} />
+                <span class={`dot${dot.trunk ? ' main-trunk' : ''}`} style={`left:${px(dot.x, dot.trunk ? -7 : -5)}; top:${DOT_Y - (dot.trunk ? 7 : 5)}px; background:${dot.color}`} />
               )}
             </span>
             <span class="text">
               {testamentOf(row) && <span class="biblical-label">{testamentOf(row) === 'old' ? 'Ветхий Завет' : 'Новый Завет'}</span>}
               {row.kind === 'node' && <span class="chip" style={`background:${chipColorOfNode(nodeById.get(row.id)!)}`} aria-hidden="true" />}
               <b class="title">{row.title}</b>
-              {row.text && <span class="event"> — {row.text}</span>}
+              {/* A row with its own explanatory chapter text drops the parenthetical event label it repeats (site audit S2-18). */}
+              {row.text && <span class="event"> — {context ? row.text.replace(/\s*\([^()]*\)\s*$/, '') : row.text}</span>}
               {row.todo && <span class="todo"> (уточняется)</span>}
               {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
               {context && <span class="context">{context.timelineText}</span>}
@@ -243,7 +220,7 @@ const today = new Date();
       <span class="ad">{formatHistoricalYear(today.getFullYear())}</span>
       <span class="graph" aria-hidden="true">
         {nowSegments.map((s) => (
-          <span class={`seg top-dot${s.trunk ? ' main-trunk' : ''}`} data-hl={s.hl} style={`left:${s.x - (s.trunk ? 2.5 : 1)}px; background:${s.color}; --dot-y:${DOT_Y}px`} />
+          <span class={`seg top-dot${s.trunk ? ' main-trunk' : ''}`} style={`left:${px(s.x, s.trunk ? -2.5 : -1)}; background:${s.color}; --dot-y:${DOT_Y}px`} />
         ))}
       </span>
       <span class="text">Наши дни</span>
@@ -254,14 +231,13 @@ const today = new Date();
 
 <style>
   .chronicle {
-    --testament-old: var(--focus);
-    --testament-new: light-dark(#245b94, #8bbef2);
     display: flex;
     flex-direction: column;
     gap: 16px;
   }
 
   .rows {
+    --col-w: 12px;
     list-style: none;
     margin: 0;
     padding: 0;
@@ -277,7 +253,6 @@ const today = new Date();
     padding: 6px 16px 6px 12px;
     line-height: 26px;
     font-size: 17px;
-    transition: opacity 0.15s ease;
   }
 
   .rows > li + li {
@@ -392,7 +367,7 @@ const today = new Date();
   }
 
   .row.other .title {
-    font-family: Georgia, serif;
+    font-family: 'PT Serif', Georgia, serif;
     font-size: 19px;
     font-weight: 700;
     color: var(--ink);
@@ -406,7 +381,7 @@ const today = new Date();
   }
 
   .row.major-schism .title {
-    color: var(--t-catholicism);
+    color: var(--ink);
     font-size: 19px;
     letter-spacing: 0.01em;
   }
@@ -450,15 +425,10 @@ const today = new Date();
   .biblical-key { margin: 0; max-width: 85ch; font-size: 15px; }
 
 
-  @media (prefers-reduced-motion: reduce) {
-    .rows > li {
-      transition: none;
-    }
-  }
-
   @media (max-width: 760px) {
-    .rows > li { grid-template-columns: calc(var(--graph-w) * .4) minmax(0, 1fr); gap: 0 8px; padding-right: 10px; padding-left: 8px; }
-    .graph { grid-column: 1; grid-row: 1 / 3; width: var(--graph-w); transform: scaleX(.4); transform-origin: left; }
+    .rows { --col-w: 5px; }
+    .rows > li { grid-template-columns: var(--graph-w) minmax(0, 1fr); gap: 0 8px; padding-right: 10px; padding-left: 8px; }
+    .graph { grid-column: 1; grid-row: 1 / 3; width: var(--graph-w); }
     .ad { grid-column: 2; grid-row: 1; text-align: left; white-space: normal; font-size: 15px; }
     .text { grid-column: 2; grid-row: 2; }
   }

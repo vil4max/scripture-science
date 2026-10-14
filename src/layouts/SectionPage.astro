@@ -5,18 +5,21 @@
 // page, following docs/DECISIONS.md.
 import JwNote from '../components/JwNote.astro';
 import JourneyNav from '../components/JourneyNav.astro';
+import BackToTop from '../components/BackToTop.astro';
 import Base from './Base.astro';
 
 interface Props {
   title: string;
   lead?: string;
+  // The page summary for search engines when the lead is only a name (S3-10).
+  description?: string;
   jwNote?: boolean;
 }
 
-const { title, lead, jwNote = false } = Astro.props;
+const { title, lead, description, jwNote = false } = Astro.props;
 ---
 
-<Base title={title} description={lead}>
+<Base title={title} description={description ?? lead}>
   <main class="page">
     <JourneyNav />
     <header class="page-head">
@@ -27,6 +30,7 @@ const { title, lead, jwNote = false } = Astro.props;
     <slot />
     <JourneyNav footer />
     {jwNote && <JwNote />}
+    <BackToTop />
   </main>
 </Base>
 

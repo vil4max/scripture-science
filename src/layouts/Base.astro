@@ -29,6 +29,9 @@ const pageContent = await Astro.slots.render('default');
       // visitor's light/dark choice never flashes the system theme first.
       // src/components/ThemeSwitch.astro reads/writes the same key and
       // re-applies it (and its own button state) once it mounts.
+      // `js` marks a page whose scripts will run, so phone contents can start
+      // folded without flashing open (site audit V3-2, S3-15).
+      document.documentElement.classList.add('js');
       (function () {
         try {
           var theme = localStorage.getItem('theme');
@@ -62,6 +65,11 @@ const pageContent = await Astro.slots.render('default');
     --ink: #1b2230;
     --muted: #5a6272;
     --line: #dcdcd4;
+    /* Borders of controls: about 3:1 against the background (V3-10). */
+    --control-border: #8f949c;
+    /* The two Testaments on the timeline and the Bible page (V1-17). */
+    --testament-old: var(--focus);
+    --testament-new: light-dark(#245b94, #8bbef2);
     --focus: #7d5616;
     /* docs/tasks/site-m5-reading-polish.md W2: running text stays under
        about 70ch. */
@@ -77,9 +85,9 @@ const pageContent = await Astro.slots.render('default');
     --t-catholicism: #e87ba4;
     --t-islam: #008300;
     --t-protestantism: #7d3c98;
-    --t-lds: #1baf7a;
+    --t-lds: #0a8fb0;
     --t-adventism: #eb6834;
-    --t-jw: #4a3aa7;
+    --t-jw: #3d5a80;
     --t-other: #898781;
     /* One colour per religion group, used everywhere (the world table and
        bar, the map; owner, 2026-10-01): Christians a bright red (#fc0339, owner), Muslims keep
@@ -106,15 +114,17 @@ const pageContent = await Astro.slots.render('default');
       --ink: #e8e5de;
       --muted: #a3abb8;
       --line: #2c3440;
+    --control-border: #5a6472;
+      --control-border: #5a6472;
       --focus: #e0b766;
       --t-judaism: #3987e5;
       --t-orthodoxy: #c98500;
       --t-catholicism: #d55181;
       --t-islam: #008300;
       --t-protestantism: #b078cc;
-      --t-lds: #199e70;
+      --t-lds: #3cb6d4;
       --t-adventism: #d95926;
-      --t-jw: #9085e9;
+      --t-jw: #9db4cf;
       --t-other: #898781;
       --world-christians: #fc0339;
       --world-unaffiliated: #898781;
@@ -139,9 +149,9 @@ const pageContent = await Astro.slots.render('default');
     --t-catholicism: #d55181;
     --t-islam: #008300;
     --t-protestantism: #b078cc;
-    --t-lds: #199e70;
+    --t-lds: #3cb6d4;
     --t-adventism: #d95926;
-    --t-jw: #9085e9;
+    --t-jw: #9db4cf;
     --t-other: #898781;
     --world-christians: #fc0339;
     --world-unaffiliated: #898781;
@@ -184,7 +194,8 @@ const pageContent = await Astro.slots.render('default');
 
   h1,
   h2,
-  h3 {
+  h3,
+  h4 {
     font-family: 'PT Serif', Georgia, serif;
     line-height: 1.2;
     text-wrap: balance;
@@ -207,6 +218,17 @@ const pageContent = await Astro.slots.render('default');
   @media (max-width: 760px) {
     main summary { min-height: 44px; padding-block: 10px; font-size: 16px; }
     main select, main input { min-height: 44px; font-size: 16px; }
+    main button { min-height: 44px; }
+  }
+
+  /* Sticky bars never cover a focused or linked element (V3-9). */
+  html { scroll-padding-top: calc(var(--bar-h, 0px) + 16px); }
+
+  @media print {
+    .site-side, .skip-link, .qc-bar, .views, .qc-toc, .reading-toc, .back-to-top, .fold-controls, .menu-fab, .term-hint-pop { display: none !important; }
+    :root { --bg: #fff; --surface: #fff; --ink: #000; }
+    .shell { display: block; }
+    * { position: static !important; box-shadow: none !important; }
   }
 
   @media (prefers-reduced-motion: no-preference) {
