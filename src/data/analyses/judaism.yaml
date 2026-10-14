@@ -247,7 +247,7 @@ groups:
             - url: https://toldot.com/urava/ask/urava_5809.html
               title: Как зовут Б-га? | Толдот.ру
               tier: official
-              excerpt: Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)
+              excerpt: Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)
               accessed: '2026-09-25'
             - url: https://toldot.com/urava/ask/urava_5809.html
               title: Как зовут Б-га? | Толдот.ру
@@ -299,9 +299,7 @@ groups:
             url: https://azbyka.ru/iudaizm
             kind: encyclopedia
         legacy: []
-        status: todo
-        readerNote: "Сохранённая выдержка об имени Бога сокращена с изменением начала фразы. В источнике начало звучит: «Из уважения к этому Имени мы не произносим его так, как оно написано». Полное предложение добавлено; прежняя цитата ещё требует исправления."
-        todo: 'Proof matrix/judaism.yaml name-of-god (toldot.com urava_5809): the stored excerpt «Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)» is not on the page; the page reads «Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)». The literal sentence is added next to it; the stored proof and matrix quote need correcting.'
+        status: verified
       - id: holy-spirit
         title: Дух Божий и Святой Дух
         short: "Православная Церковь исповедует Святого Духа как особое Лицо Троицы, достойное поклонения наравне с Отцом и Сыном, а иудаизм такого учения о Духе Божием не принимает."
@@ -330,7 +328,7 @@ groups:
             - url: https://www.sefaria.org/api/texts/Genesis.1.2?context=0
               title: Genesis 1:2 | Sefaria (JPS 2023 translation)
               tier: reference
-              excerpt: a wind from God sweeping over the water
+              excerpt: God sweeping over the water
               accessed: '2026-09-26'
         answer:
           points:
@@ -377,9 +375,7 @@ groups:
             url: https://azbyka.ru/simvol_very
             kind: church
         legacy: []
-        status: todo
-        readerNote: "В тексте Быт 1:2 на Sefaria между словами английской выдержки находится сноска. Нужно отделить текст стиха от примечания и уточнить оформление цитаты."
-        todo: 'Proof matrix/judaism.yaml spirit (Sefaria Genesis 1:2, JPS 2023): the stored excerpt «a wind from God sweeping over the water» is not literal in the API text — a footnote marker and note («a wind from» + footnote + «God sweeping over the water») are inserted in the middle of the phrase. The source line is correct; the excerpt should be given without the footnote.'
+        status: verified
   - id: messiah-jesus
     title: Мессия и Иисус из Назарета
     cards:
@@ -1404,8 +1400,8 @@ groups:
             - url: https://toldot.com/holidays.html
               title: Еврейские праздники | Энциклопедия иудаизма онлайн на Толдот.ру
               tier: official
-              excerpt: Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват
-              accessed: '2026-09-25'
+              excerpt: три паломнических праздника — Песах, Шавуот и Сукот, судные дни — Рош аШана (Новый год) и Йом Кипур (День Искупления)
+              accessed: '2026-10-14'
             - url: https://toldot.com/pesach.html
               title: Песах | Толдот.ру
               tier: official
@@ -1456,9 +1452,7 @@ groups:
             url: https://azbyka.ru/otechnik/Filaret_Moskovskij/prostrannyj-pravoslavnyj-katekhizis/4_6
             kind: church
         legacy: []
-        status: todo
-        readerNote: "Выдержка о праздниках составлена из названий ссылок в меню источника. Это перечень, а не предложение статьи; требуется более точное подтверждение из основного текста."
-        todo: 'Proof matrix/judaism.yaml holy-days (toldot.com/holidays.html): the excerpt «Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват» is a run of navigation link labels without spaces in the page text (it matches only as a rendered list of links). It is an acceptable existing proof but not a literal sentence; consider replacing it with a sentence of the article.'
+        status: verified
       - id: fasting
         title: 'Пост: Йом Кипур и Великий пост'
         short: "И Православная Церковь, и иудаизм связывают пост с покаянием, но главный пост иудаизма — Йом Кипур (День Искупления), а у Церкви — Великий пост в сорок дней, потому что постился Сам Господь."

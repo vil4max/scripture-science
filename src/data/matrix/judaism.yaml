@@ -138,14 +138,14 @@ positions:
           excerpt: "Традиция не произносить имя Яхве вслух как при богослужении, так и в обыденной жизни появилась с периода персидского владычества над Иудеей"
           accessed: "2026-09-26"
     quote:
-      text: "Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
+      text: "Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
       source: "Как зовут Б-га? | Толдот.ру"
       url: "https://toldot.com/urava/ask/urava_5809.html"
     proof:
       - url: "https://toldot.com/urava/ask/urava_5809.html"
         title: "Как зовут Б-га? | Толдот.ру"
         tier: official
-        excerpt: "Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
+        excerpt: "Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)"
         accessed: "2026-09-25"
     status: verified
 
@@ -208,7 +208,7 @@ positions:
       - url: "https://www.sefaria.org/api/texts/Genesis.1.2?context=0"
         title: "Genesis 1:2 | Sefaria (JPS 2023 translation)"
         tier: reference
-        excerpt: "a wind from God sweeping over the water"
+        excerpt: "God sweeping over the water"
         accessed: "2026-09-26"
       - url: "https://ru.wikisource.org/wiki/%D0%95%D0%AD%D0%91%D0%95/%D0%94%D1%83%D1%85_%D0%A1%D0%B2%D1%8F%D1%82%D0%BE%D0%B9"
         title: "Дух Святой — Еврейская энциклопедия Брокгауза и Ефрона (Викитека)"
@@ -468,8 +468,8 @@ positions:
       - url: "https://toldot.com/holidays.html"
         title: "Еврейские праздники | Энциклопедия иудаизма онлайн на Толдот.ру"
         tier: official
-        excerpt: "Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват"
-        accessed: "2026-09-25"
+        excerpt: "три паломнических праздника — Песах, Шавуот и Сукот, судные дни — Рош аШана (Новый год) и Йом Кипур (День Искупления)"
+        accessed: "2026-10-14"
     status: verified
 
   - topic: fasting

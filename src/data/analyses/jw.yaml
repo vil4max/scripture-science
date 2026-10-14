@@ -4361,8 +4361,18 @@ groups:
               excerpt: Апостольское преемство иерархии от святых апостолов есть основание общности и единства благодатной жизни.
               accessed: 2026-09-27T00:00:00.000Z
         tradition:
-          text: "Свидетели Иеговы видят в проповеди по домам обязанность, вытекающую из слов Христа «подготавливайте учеников» (Мф 28:19, 20) и из примера первых христиан, учивших «всенародно и по домам» (Деян 5:42; 20:20). Каждый месяц они сдают в местное собрание отчёт о проповеди; по их словам, отчёты добровольны, а проповедью спасение не заслуживается (Еф 2:8). Они не навязывают свою весть: в вопросах веры, как они считают, каждый решает сам."
+          text: "Свидетели Иеговы видят в проповеди по домам обязанность, вытекающую из слов Христа «подготавливайте учеников» (Мф 28:19, 20) и из примера первых христиан, учивших «всенародно и по домам» (Деян 5:42; 20:20). Каждый месяц они сдают в местное собрание отчёт о проповеди; с конца 2023 года, по сообщению Associated Press, рядовые возвещатели отмечают лишь, участвовали ли они в проповеди, без подсчёта часов (часы по-прежнему считают «пионеры»). По их словам, отчёты добровольны, а проповедью спасение не заслуживается (Еф 2:8). Они не навязывают свою весть: в вопросах веры, как они считают, каждый решает сам."
           proof:
+            - url: https://www.nbcnews.com/news/religion/timekeepers-no-rank-file-jehovahs-witnesses-say-goodbye-tracking-prose-rcna126582
+              title: "Timekeepers no more, rank-and-file Jehovah’s Witnesses say goodbye to tracking proselytizing hours — Associated Press (NBC News)"
+              tier: news
+              excerpt: "For the first time since 1920, leaders of the Jehovah’s Witnesses have removed the hours-reporting requirement for rank-and-file adherents."
+              accessed: "2026-10-14"
+            - url: https://www.nbcnews.com/news/religion/timekeepers-no-rank-file-jehovahs-witnesses-say-goodbye-tracking-prose-rcna126582
+              title: "Timekeepers no more, rank-and-file Jehovah’s Witnesses say goodbye to tracking proselytizing hours — Associated Press (NBC News)"
+              tier: news
+              excerpt: "Those who sign up for more extensive service, known as “pioneers” or “missionaries,” will continue to record their hours."
+              accessed: "2026-10-14"
             - url: https://www.jw.org/ru/свидетели-иеговы/часто-задаваемые-вопросы/по-домам/
               title: «Почему Свидетели Иеговы проповедуют по домам?» — Часто задаваемые вопросы, jw.org
               tier: official
@@ -4441,9 +4451,7 @@ groups:
             url: https://azbyka.ru/otechnik/sekty/sektovedenie-totalitarnye-sekty/2#2_44
             kind: author
         legacy: []
-        status: todo
-        readerNote: "Дата и форма изменения отчётности о проповеди пока не подтверждены указанными источниками. Найденные материалы описывают прежний учёт часов или только ежемесячный добровольный отчёт; нужен документ о самом изменении."
-        todo: "Дату и форму изменения практики сдачи отчётов (замена часов служения отметкой об участии в проповеди) из источников jw.org подтвердить не удалось: найденные страницы wol.jw.org описывают старую форму отчёта с часами, FAQ jw.org говорит лишь о ежемесячном добровольном отчёте. Уточнить по актуальному «Руководству по организации» или обращению Руководящего совета."
+        status: verified
       - id: fasting
         title: Пост и аскеза
         short: "Православная Церковь учит, что пост — подвиг воздержания, помогающий покаянию и молитве, а Свидетели Иеговы считают, что для нынешних христиан Библия не требует поститься и каждый решает это сам."

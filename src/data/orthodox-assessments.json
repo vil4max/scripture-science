@@ -1069,7 +1069,7 @@
         "url": "https://azbyka.ru/biblia/?Ex.3:15&r",
         "title": "Исход 3:15 — Синодальный перевод (Азбука веры)",
         "tier": "official",
-        "excerpt": "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Моё на веки",
+        "excerpt": "Господь, Бог отцов ваших, Бог Авраама, Бог Исаака и Бог Иакова послал меня к вам. Вот имя Мое на веки",
         "accessed": "2026-09-25"
       }
     ],
@@ -2317,7 +2317,7 @@
         "url": "https://toldot.com/urava/ask/urava_5809.html",
         "title": "Как зовут Б-га? | Толдот.ру",
         "tier": "official",
-        "excerpt": "Пишется оно — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)",
+        "excerpt": "Из уважения к этому Имени мы не произносим его так, как оно написано — Йуд-Кей-Вав-Кей; мы произносим Адой-ной (Господь)",
         "accessed": "2026-09-25"
       }
     ],
@@ -2412,7 +2412,7 @@
         "url": "https://www.sefaria.org/api/texts/Genesis.1.2?context=0",
         "title": "Genesis 1:2 | Sefaria (JPS 2023 translation)",
         "tier": "reference",
-        "excerpt": "a wind from God sweeping over the water",
+        "excerpt": "God sweeping over the water",
         "accessed": "2026-09-26"
       },
       {
@@ -2890,8 +2890,8 @@
         "url": "https://toldot.com/holidays.html",
         "title": "Еврейские праздники | Энциклопедия иудаизма онлайн на Толдот.ру",
         "tier": "official",
-        "excerpt": "Ханука Суккот Рош Ашана Йом Кипур Симхат Тора Шмини Ацерет Пурим Песах Шавуот Ту биШват",
-        "accessed": "2026-09-25"
+        "excerpt": "три паломнических праздника — Песах, Шавуот и Сукот, судные дни — Рош аШана (Новый год) и Йом Кипур (День Искупления)",
+        "accessed": "2026-10-14"
       }
     ],
     "review": "editorial",
@@ -3420,7 +3420,7 @@
         "url": "https://quran.com/4/157?translations=45",
         "title": "Коран 4:157, перевод Э. Кулиева | Quran.com",
         "tier": "official",
-        "excerpt": "мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха. Однако они не убили его и не распяли",
+        "excerpt": "мы убили Мессию Ису (Иисуса), сына Марьям (Марии), посланника Аллаха». Однако они не убили его и не распяли",
         "accessed": "2026-09-25"
       },
       {
@@ -3464,7 +3464,7 @@
         "url": "https://quran.com/17/85?translations=45",
         "title": "Коран 17:85, перевод Э. Кулиева | Quran.com",
         "tier": "official",
-        "excerpt": "Они станут спрашивать тебя о духе. Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»",
+        "excerpt": "Они станут спрашивать тебя о духе (душе или Джибриле). Скажи: «Дух - от повеления моего Господа, а вам дано знать об этом очень мало»",
         "accessed": "2026-09-25"
       }
     ],
@@ -3817,7 +3817,7 @@
     "positionProof": [
       {
         "url": "https://mosmechet.ru/5stolpov",
-        "title": "5 столпов ислама | Московская Соборная мечеть",
+        "title": "5 столпов ислама | Историческая мечеть Москвы",
         "tier": "official",
         "excerpt": "Свидетельствую, что нет божества, кроме Аллаха и свидетельствую, что Мухаммад — посланник Аллаха",
         "accessed": "2026-09-26"
@@ -3940,14 +3940,14 @@
     "positionProof": [
       {
         "url": "https://web.archive.org/web/20230530185010/https://mosmechet.ru/ramadan",
-        "title": "Рамадан и Ураза-байрам | Московская Соборная мечеть",
+        "title": "Рамадан и Ураза-байрам | Историческая мечеть Москвы",
         "tier": "official",
-        "excerpt": "из двух главных исламских праздников - Ураза-байрам ( Ид аль-фитр), праздник разговения",
+        "excerpt": "из двух главных исламских праздников - Ураза-байрам (Ид аль-фитр), праздник разговения",
         "accessed": "2026-09-26"
       },
       {
         "url": "https://mosmechet.ru/fetvakurban2026",
-        "title": "Фетва по Курбану 2026 | Московская Соборная мечеть",
+        "title": "Фетва по Курбану 2026 | Историческая мечеть Москвы",
         "tier": "official",
         "excerpt": "связан с событием, произошедшим с пророком Ибрахимом (Авраамом). Божественным Откровением ему было велено принести в жертву своего сына Исмаила",
         "accessed": "2026-09-25"
@@ -4089,7 +4089,7 @@
       },
       {
         "url": "https://web.archive.org/web/20230530185010/https://mosmechet.ru/ramadan",
-        "title": "Рамадан и Ураза-байрам | Московская Соборная мечеть",
+        "title": "Рамадан и Ураза-байрам | Историческая мечеть Москвы",
         "tier": "official",
         "excerpt": "Рамадан — месяц обязательного для мусульман поста (саум), является одним из пяти столпов ислама",
         "accessed": "2026-09-26"
@@ -5577,7 +5577,7 @@
         "accessed": "2026-09-27"
       },
       {
-        "url": "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng",
+        "url": "https://www.churchofjesuschrist.org/topics/restoration?lang=eng",
         "title": "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints",
         "tier": "official",
         "excerpt": "the true Church of Jesus Christ ceased to exist",
@@ -5673,7 +5673,7 @@
         "url": "https://www.churchofjesuschrist.org/topics/salvation?lang=eng",
         "title": "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints",
         "tier": "official",
-        "excerpt": "receive the gift of the Holy Ghost through the proper priesthood authority",
+        "excerpt": "have received the Holy Ghost through the proper priesthood authority",
         "accessed": "2026-09-25"
       }
     ],
@@ -5726,13 +5726,6 @@
         "tier": "official",
         "excerpt": "The official, canonized scriptures of the Church, often called the standard works, are the Bible, the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price",
         "accessed": "2026-10-14"
-      },
-      {
-        "url": "https://www.churchofjesuschrist.org/topics/salvation?lang=eng",
-        "title": "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (список отсылок к Писанию)",
-        "tier": "official",
-        "excerpt": "Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith 1:3",
-        "accessed": "2026-09-25"
       },
       {
         "url": "https://newsroom.churchofjesuschrist.org/style-guide",

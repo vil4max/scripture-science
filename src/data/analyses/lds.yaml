@@ -512,7 +512,7 @@ groups:
             - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
               title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
               tier: official
-              excerpt: "receive the gift of the Holy Ghost through the proper priesthood authority"
+              excerpt: "have received the Holy Ghost through the proper priesthood authority"
               accessed: 2026-09-25
             - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
               title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
@@ -579,9 +579,7 @@ groups:
             url: "https://azbyka.ru/miropomazanie"
             kind: encyclopedia
         legacy: []
-        status: todo
-        readerNote: "Формулировка сохранённой английской выдержки отличается от страницы: «receive the gift» вместо «have received». Исправленный вариант добавлен к источникам; прежнюю запись ещё нужно согласовать с оригиналом."
-        todo: "Pre-existing proof in matrix/lds.yaml and orthodox-assessments.json (spirit, \"receive the gift of the Holy Ghost through the proper priesthood authority\") is not literally on the page: the page says \"have received the Holy Ghost through the proper priesthood authority\". A corrected proof is added; fix the data, then mark verified."
+        status: verified
   - id: man-and-salvation
     title: "Человек и спасение"
     cards:
@@ -1039,11 +1037,11 @@ groups:
         tradition:
           text: "Церковь Иисуса Христа Святых последних дней признаёт четыре канонические книги, стандартные труды (standard works): Библию, Книгу Мормона, Учение и Заветы и Драгоценную жемчужину. Библия, согласно восьмому Символу веры, — слово Божье в той мере, в какой она переведена правильно, а Книга Мормона — слово Божье; Церковь учит, что Книга Мормона восстанавливает простые и драгоценные истины (plain and precious), утраченные из Библии. На русском языке Церковь предпочитает Синодальный перевод издания Российского Библейского общества 1994 года."
           proof:
-            - url: "https://www.churchofjesuschrist.org/topics/salvation?lang=eng"
-              title: "\"Salvation,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints (список отсылок к Писанию)"
+            - url: "https://www.churchofjesuschrist.org/study/manual/gospel-topics/scriptures?lang=eng"
+              title: "\"Scriptures,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
               tier: official
-              excerpt: "Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith 1:3"
-              accessed: 2026-09-25
+              excerpt: "The official, canonized scriptures of the Church, often called the standard works, are the Bible, the Book of Mormon, the Doctrine and Covenants, and the Pearl of Great Price"
+              accessed: 2026-10-14
             - url: "https://newsroom.churchofjesuschrist.org/style-guide"
               title: "Style Guide — The Name of the Church, Newsroom, The Church of Jesus Christ of Latter-day Saints"
               tier: official
@@ -1120,9 +1118,7 @@ groups:
             url: "https://azbyka.ru/otechnik/sekty/sektovedenie-totalitarnye-sekty/2#2_27"
             kind: author
         legacy: []
-        status: todo
-        readerNote: "Одна из сохранённых выдержек соединяет названия нескольких библейских ссылок. Этот фрагмент не подтверждает утверждение сам по себе; требуется подходящий связный отрывок."
-        todo: "Pre-existing scripture proof (\"Mosiah 27:25–26 Doctrine and Covenants 132:21–24 Articles of Faith 1:3\", topics/salvation) is a stitched fragment of a scripture-reference list, not a contiguous passage on the page, and does not support the claim. Replace it in the data, then mark verified."
+        status: verified
       - id: great-apostasy
         title: "Церковь Христова: «Великое отступничество» и «Восстановление»"
         short: "Православная Церковь учит, что она непрерывно хранит учение и преемство от апостолов, а Святые последних дней считают, что после апостолов учение исказилось и было восстановлено через Джозефа Смита с 1820 года."
@@ -1148,7 +1144,7 @@ groups:
         tradition:
           text: "Церковь Иисуса Христа Святых последних дней учит, что после смерти Христа и апостолов люди исказили учение и устройство Церкви, и Господь отнял власть священства от земли (Великое отступничество, Great Apostasy). Явление Отца и Сына Джозефу Смиту в 1820 году, по её учению, начало Восстановление: это восстановленное, а не реформированное христианство (restored, not reformed). Церковь заявляет, что она не происходит ни от какой другой веры, и однозначно называет себя христианской."
           proof:
-            - url: "https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng"
+            - url: "https://www.churchofjesuschrist.org/topics/restoration?lang=eng"
               title: "\"Restoration of the Gospel,\" Topics and Questions — Gospel Library, The Church of Jesus Christ of Latter-day Saints"
               tier: official
               excerpt: "the true Church of Jesus Christ ceased to exist"
@@ -1262,9 +1258,7 @@ groups:
             url: "https://azbyka.ru/otechnik/sekty/opredelenie-o-psevdohristianskih-sektah-neojazychestve-i-okkultizme/"
             kind: church
         legacy: []
-        status: todo
-        readerNote: "Фраза о прекращении существования истинной Церкви была связана со страницей о Первом видении, хотя находится на общей странице о Восстановлении. Правильная ссылка добавлена; прежняя привязка ещё требует исправления."
-        todo: "Pre-existing proof \"the true Church of Jesus Christ ceased to exist\" is attached to https://www.churchofjesuschrist.org/topics/restoration/first-vision?lang=eng, but the phrase is on https://www.churchofjesuschrist.org/topics/restoration?lang=eng (a corrected proof is added). Fix the URL in matrix/lds.yaml and orthodox-assessments.json, then mark verified."
+        status: verified
       - id: priesthood
         title: "Священство: Ааронов и Мелхиседеков порядки"
         short: "Православная Церковь учит, что священство передаётся без перерыва от апостолов через рукоположение, а Святые последних дней верят, что оно было утрачено и восстановлено в 1829 году."
