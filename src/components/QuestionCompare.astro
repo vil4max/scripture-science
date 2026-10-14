@@ -9,6 +9,7 @@ import { analysisCardsForTopic, profileHref } from '../lib/analysis';
 import { CREED_EXTRAS_AFTER, CREED_SOURCE, CREED_TOPICS, OTHER_TOPICS, creedArticlesFor } from '../lib/creed';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { SHORT_NAMES } from '../lib/names';
+import { nbsp } from '../lib/typography';
 import { withBase } from '../lib/paths';
 import { DEFAULT_SELECTION } from '../lib/selection';
 import { WORSHIP_QUESTIONS } from '../lib/worship';
@@ -82,7 +83,7 @@ const topicQuestion = async (topic: TopicId): Promise<Question> => {
     if (!record) throw new Error(`Missing assessment: ${tradition.id}/${topic}`);
     return {
       tradition, assessment: record.id, teaching: positionSummaryText(position) ?? 'Источник уточняется.',
-      difference: record.difference, response: record.response,
+      difference: nbsp(record.difference), response: nbsp(record.response),
       cards: await analysisCardsForTopic(tradition.id, topic), proofs: [...position.proof, ...record.proof],
     };
   }));
@@ -93,10 +94,10 @@ const topicQuestion = async (topic: TopicId): Promise<Question> => {
 };
 // A question outside the fifteen topics (src/data/extra-questions.yaml).
 const extraQuestion = (entry: CollectionEntry<'extraQuestions'>): Question => ({
-  id: entry.id, title: entry.data.question, creed: creedArticlesFor(entry.id), short: entry.data.orthodox.short, detail: entry.data.orthodox.detail,
+  id: entry.id, title: entry.data.question, creed: creedArticlesFor(entry.id), short: nbsp(entry.data.orthodox.short), detail: entry.data.orthodox.detail && nbsp(entry.data.orthodox.detail),
   sides: others.map((tradition) => {
     const side = entry.data.traditions[tradition.id as keyof typeof entry.data.traditions];
-    return { tradition, teaching: side.teaching, difference: side.difference, response: side.response, proofs: [...entry.data.orthodox.proof, ...side.proof] };
+    return { tradition, teaching: nbsp(side.teaching), difference: nbsp(side.difference), response: nbsp(side.response), proofs: [...entry.data.orthodox.proof, ...side.proof] };
   }),
 });
 

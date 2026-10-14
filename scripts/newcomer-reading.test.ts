@@ -20,7 +20,7 @@ test('the glossary is a page with every term anchored, basic concepts first', ()
     const position = page.indexOf(`<article class="term" id="${entry.slug}"`);
     assert.ok(position > entryAt, `${entry.slug} keeps its file order`); entryAt = position;
   }
-  for (const group of ['basic', 'classification']) {
+  for (const group of ['basic', 'classification', 'names']) {
     const position = page.indexOf(`id="${group}"`);
     assert.ok(position > previous, group); previous = position;
   }

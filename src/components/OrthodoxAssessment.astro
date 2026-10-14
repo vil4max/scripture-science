@@ -1,4 +1,5 @@
 ---
+import { nbsp } from '../lib/typography';
 import { orthodoxAssessment } from '../lib/orthodox';
 import { withBase } from '../lib/paths';
 import { analysisCardsForTopic } from '../lib/analysis';
@@ -7,8 +8,8 @@ const record = orthodoxAssessment(Astro.props.tradition, Astro.props.topic);
 const analysisCards = record && Astro.props.analysisLink !== false ? await analysisCardsForTopic(Astro.props.tradition, Astro.props.topic) : [];
 ---
 {record && <div class="assessment" data-assessment={record.id}>
-  <p><strong>Отличие от православного учения</strong></p><p>{record.difference}</p>
-  <p><strong>Православный взгляд на расхождение</strong></p><p>{record.response}</p>
+  <p><strong>Отличие от православного учения</strong></p><p>{nbsp(record.difference)}</p>
+  <p><strong>Православный взгляд на расхождение</strong></p><p>{nbsp(record.response)}</p>
   {analysisCards.length > 0 && <p class="analysis">Подробный разбор: {analysisCards.map((card, index) => <>{index > 0 && ', '}<a href={card.href} data-carry-selection>{card.title}</a></>)} →</p>}
   {!Astro.props.compact && <details><summary>Основание ответа</summary>
     <p class="authority">Сопоставление редакции на основании: {record.authority}</p>

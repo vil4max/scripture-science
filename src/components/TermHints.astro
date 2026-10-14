@@ -40,9 +40,9 @@ const hints = (await getTerms())
     if (!root || !data || !pop || root.closest('[data-no-terms]') || !('showPopover' in pop)) return;
     const hints = JSON.parse(data.textContent ?? '[]') as Hint[];
 
-    const textNodes = (includeFolded: boolean) => {
+    const textNodes = (scope: HTMLElement, includeFolded: boolean) => {
       const nodes: Text[] = [];
-      const walker = document.createTreeWalker(root, NodeFilter.SHOW_TEXT, {
+      const walker = document.createTreeWalker(scope, NodeFilter.SHOW_TEXT, {
         acceptNode(node) {
           const parent = node.parentElement;
           if (!parent || !node.nodeValue?.trim() || parent.closest(SKIP)) return NodeFilter.FILTER_REJECT;
@@ -60,10 +60,12 @@ const hints = (await getTerms())
     };
 
     const used: Hint[] = [];
-    for (const hint of hints) {
-      const pattern = new RegExp(`(?<!${LETTER})(?:${hint.match.join('|')})(?!${LETTER})`, 'u');
+    const pass = (scope: HTMLElement) => { for (const hint of hints) {
+      if (used.includes(hint)) continue;
+      // Display text may carry no-break spaces (src/lib/typography.ts).
+      const pattern = new RegExp(`(?<!${LETTER})(?:${hint.match.join('|').replace(/ /g, '[ \\u00a0]')})(?!${LETTER})`, 'u');
       const found = [false, true].some((includeFolded) => {
-        for (const node of textNodes(includeFolded)) {
+        for (const node of textNodes(scope, includeFolded)) {
           const match = pattern.exec(node.nodeValue ?? '');
           if (!match) continue;
           const word = node.splitText(match.index);
@@ -81,7 +83,16 @@ const hints = (await getTerms())
         return false;
       });
       if (found) used.push(hint);
-    }
+    } };
+    pass(root);
+    // A tradition picked on /compare/ or /worship/ reveals a hidden pair; its
+    // terms not yet explained on the page get their hint there (T5-2).
+    new MutationObserver((records) => {
+      for (const record of records) {
+        const element = record.target as HTMLElement;
+        if (!element.hidden && !element.closest('[hidden]')) pass(element);
+      }
+    }).observe(root, { subtree: true, attributes: true, attributeFilter: ['hidden'] });
 
     let owner: HTMLButtonElement | null = null;
     const place = () => {

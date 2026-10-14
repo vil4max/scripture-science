@@ -3,6 +3,7 @@ import { test } from 'node:test';
 // @ts-expect-error - node types are not installed.
 import assert from 'node:assert/strict';
 import { buildSourceCatalog, collectAnalysisSources, collectProofs, filterSourceCatalog, matchesCatalogUsage, sourceAnchor, proofKey, uniqueProofs, type CatalogProof } from '../src/lib/sourceCatalog.ts';
+import { innerQuotes } from '../src/lib/typography.ts';
 // @ts-expect-error - node types are not installed.
 import { readFileSync, readdirSync } from 'node:fs';
 // @ts-expect-error - the existing YAML parser has no separately installed types.
@@ -131,7 +132,7 @@ test('each rendered card retains all distinct evidence and omits exact repeats',
       const disclosure = article.match(/<details class="proof"[\s\S]*?<\/details>/)?.[0] ?? '';
       const expected = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...card.answer.proof]);
       assert.equal((disclosure.match(/<li\b/g) ?? []).length, expected.length, card.id);
-      for (const proof of expected) assert.ok(disclosure.includes(escapeHtml(proof.excerpt)), `${card.id}: ${proof.excerpt}`);
+      for (const proof of expected) assert.ok(disclosure.includes(escapeHtml(innerQuotes(proof.excerpt))), `${card.id}: ${proof.excerpt}`);
     }
   }
 });

@@ -1,6 +1,8 @@
 ---
+import { innerQuotes } from '../lib/typography';
 // The glossary (docs/tasks/site-m34-newcomer-reading.md, outcome 2): basic
-// concepts first, then the terms the Church uses to classify other teachings.
+// concepts first, then the terms the Orthodox Church uses to assess other
+// teachings, then neutral scholarly names (site audit 2026-10-10, T5-7).
 // Each entry keeps its plain explanation, fuller definition and sources; the
 // former `sources/#terms` list remains as the reference copy.
 import SectionPage from '../layouts/SectionPage.astro';
@@ -19,9 +21,15 @@ const groups = [
   },
   {
     id: 'classification',
-    title: 'Как Церковь называет другие учения',
-    lead: 'Эти слова описывают учение, а не людей: к последователям других религий Церковь призывает относиться с христианской любовью.',
+    title: 'Как Православная Церковь оценивает другие учения',
+    lead: 'Эти слова описывают учение, а не людей: к последователям других религий Православная Церковь призывает относиться с христианской любовью.',
     entries: terms.filter((entry) => entry.data.group === 'classification'),
+  },
+  {
+    id: 'names',
+    title: 'Нейтральные и научные названия',
+    lead: 'Слова справочников и исследователей; сами по себе они не содержат оценки.',
+    entries: terms.filter((entry) => entry.data.group === 'names'),
   },
 ];
 ---
@@ -43,7 +51,7 @@ const groups = [
       <details class="proof">
         <summary>Источники</summary>
         <ul>{entry.data.proof.map((source) => <li>
-          <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+          <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{innerQuotes(source.excerpt)}» <span class="accessed">(просмотрено {source.accessed})</span>
         </li>)}</ul>
       </details>
     </article>)}

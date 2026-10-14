@@ -1,4 +1,5 @@
 ---
+import { innerQuotes, nbsp } from '../lib/typography';
 import type { CollectionEntry } from 'astro:content';
 
 import SourceLink from './SourceLink.astro';
@@ -28,7 +29,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
 
 <div class="body">
   {summary ? (
-    <p class="summary">{summary}</p>
+    <p class="summary">{nbsp(summary)}</p>
   ) : (
     <p class="todo-flag">Источник уточняется</p>
   )}
@@ -43,7 +44,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   )}
   {position.quote && !quoteInSummary && (
     <blockquote class="quote">
-      <p>«{position.quote.text_ru ?? position.quote.text}»</p>
+      <p>«{innerQuotes(position.quote.text_ru ?? position.quote.text)}»</p>
       <cite>
         —{' '}
         <SourceLink url={position.quote.url} title={position.quote.source} />
@@ -53,7 +54,7 @@ const scriptureInQuote = Boolean(scriptureText && quoteText?.includes(scriptureT
   )}
   {position.scripture && !scriptureInQuote && (
     <blockquote class="quote scripture">
-      <p>«{position.scripture.text_ru ?? position.scripture.text}»</p>
+      <p>«{innerQuotes(position.scripture.text_ru ?? position.scripture.text)}»</p>
       <cite>
         —{' '}
         <SourceLink url={position.scripture.url} title={position.scripture.ref} />

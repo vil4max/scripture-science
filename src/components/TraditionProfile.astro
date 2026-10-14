@@ -1,4 +1,5 @@
 ---
+import { nbsp } from '../lib/typography';
 import lineageData from '../data/lineage.json';
 import { profileChronology } from '../lib/profileChronology';
 import { parseLineage, validateReferences, formatHistoricalYear, formatYearAd } from '../lib/timeline';
@@ -114,7 +115,7 @@ const showsJwNote = tradition.id === 'jw';
     <section class="key-points" aria-labelledby="key-points-title">
       <h3 id="key-points-title">Главное</h3>
       <p class="key-points-lead">Основные отличия от православного учения. Каждый пункт ведёт к подробному разбору.</p>
-      <ol>{curated.keyPoints.map((point) => <li><a href={`#${point.card}`}>{point.text}</a></li>)}</ol>
+      <ol>{curated.keyPoints.map((point) => <li><a href={`#${point.card}`}>{nbsp(point.text)}</a></li>)}</ol>
     </section>
     <div class="reading-layout">
     <details class="reading-toc" open>

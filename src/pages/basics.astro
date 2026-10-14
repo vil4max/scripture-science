@@ -1,4 +1,5 @@
 ---
+import { innerQuotes } from '../lib/typography';
 // «С чего начать» (docs/tasks/site-m34-newcomer-reading.md, outcome 4): the
 // basics a reader without religious education needs before the comparison.
 import { getCollection } from 'astro:content';
@@ -18,7 +19,7 @@ const sections = (await getCollection('basics')).sort((a, b) => a.data.order - b
     <details class="proof">
       <summary>Источники</summary>
       <ul>{section.data.proof.map((source) => <li>
-        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+        <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{innerQuotes(source.excerpt)}» <span class="accessed">(просмотрено {source.accessed})</span>
       </li>)}</ul>
     </details>
   </section>)}

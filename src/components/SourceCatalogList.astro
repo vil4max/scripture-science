@@ -1,4 +1,5 @@
 ---
+import { innerQuotes } from '../lib/typography';
 import { citationTitle } from '../lib/citations';
 import { profileHref } from '../lib/analysis';
 import { EVIDENCE_ROLE_LABELS, sourceAnchor, type CatalogEntry } from '../lib/sourceCatalog';
@@ -14,7 +15,7 @@ const tierLabels = { official: 'официальный источник', refere
     {detailed && <details>
       <summary>Проверочные выдержки ({entry.references.length})</summary>
       {entry.references.map(({ proof, usages }) => <div class="evidence" data-source-reference data-tier={proof.tier}>
-        <p class="excerpt">«{proof.excerpt}»</p>
+        <p class="excerpt">«{innerQuotes(proof.excerpt)}»</p>
         <p class="meta">{proof.title} · {tierLabels[proof.tier]} · {proof.accessed}</p>
         <ul class="usages">{usages.map((usage) => <li data-source-usage data-tradition={usage.traditionId} data-topic={usage.topic} data-role={usage.role}>
           {usage.traditionName && `${usage.traditionName} — `}

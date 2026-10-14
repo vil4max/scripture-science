@@ -1,4 +1,5 @@
 ---
+import { innerQuotes, nbsp } from '../lib/typography';
 import type { CollectionEntry } from 'astro:content';
 import { withBase } from '../lib/paths';
 import { TRADITION_COLOR_TOKEN } from '../lib/rules';
@@ -13,21 +14,21 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
 ---
 <article class="card" id={card.id} data-topic={card.topic} data-legacy={card.legacy.length > 0 ? card.legacy.join(' ') : undefined}>
   <h4>{card.title}</h4>
-  <p class="short"><span class="short-label">Коротко.</span> {card.short}</p>
+  <p class="short"><span class="short-label">Коротко.</span> {nbsp(card.short)}</p>
   {card.status === 'todo' && <details class="pending"><summary>Уточняется: что требует проверки</summary><p>{card.readerNote ?? card.todo}</p></details>}
   <details class="card-body">
-  <summary>Подробно: учение Церкви, их учение и православный ответ</summary>
+  <summary>Подробно: учение Православной Церкви, их учение и православный взгляд на расхождение</summary>
   <div class="block church">
     <p class="label">Учение Православной Церкви</p>
-    <p>{card.church.text}</p>
+    <p>{nbsp(card.church.text)}</p>
   </div>
   <div class="block tradition" style={`border-left-color:var(${accent})`}>
     <p class="label">Учение: {traditionName}</p>
-    <p>{card.tradition.text}</p>
+    <p>{nbsp(card.tradition.text)}</p>
   </div>
   <div class="block answer">
     <p class="label">Православный взгляд на расхождение</p>
-    <ul>{card.answer.points.map((point) => <li>{point}</li>)}</ul>
+    <ul>{card.answer.points.map((point) => <li>{nbsp(point)}</li>)}</ul>
   </div>
   {card.more.length > 0 && <div class="more">
     <p class="label">Подробнее</p>
@@ -40,7 +41,7 @@ const proofs = uniqueProofs([...card.church.proof, ...card.tradition.proof, ...c
     <summary>Источники</summary>
     <ul>{proofs.map((source) => <li>
       <span class="source-role">{(['church', 'tradition', 'answer'] as const).filter((role) => card[role].proof.some((item) => proofKey(item) === proofKey(source))).map((role) => EVIDENCE_ROLE_LABELS[role]).join(' · ')}</span>
-      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{source.excerpt}» <span class="accessed">(просмотрено {source.accessed})</span>
+      <a href={source.url} target="_blank" rel="noopener noreferrer">{source.title}</a>: «{innerQuotes(source.excerpt)}» <span class="accessed">(просмотрено {source.accessed})</span>
     </li>)}</ul>
   </details>}
   {card.topic && <p class="back"><a href={withBase(`compare/?t=orthodoxy,${tradition}#topic-${card.topic}`)} data-carry-selection>К сравнению по теме</a></p>}

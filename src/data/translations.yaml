@@ -3,7 +3,7 @@
 # each entry's collection id.
 #
 # Wording is verbatim from source/orthodoxy-jw.html's abbreviations note
-# ("Сокращения: ПНМ — «Перевод нового мира» ...; Синод. — Синодальный
+# ("Сокращения: ПНМ — «Перевод нового мира» …; Синод. — Синодальный
 # перевод (1876)") where it exists; "csl" has no abbreviation in that note,
 # so its short code is the value given directly by docs/tasks/site-m1-migration.md.
 # `home` is intentionally omitted for all three: no source in this slice

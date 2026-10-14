@@ -39,8 +39,8 @@ const family = getFamilyByTradition(tradition.id);
       {tradition.id === 'orthodoxy' ? 'Основание сравнения' : '+ В сравнение'}
     </button>
   </Heading>
-  {full_name !== name && <p class="full-name">{full_name}</p>}
-  {scope_note && <p class="full-name">{scope_note}</p>}
+  {full_name !== name && <p class="full-name" data-no-terms>{full_name}</p>}
+  {scope_note && <p class="full-name" data-no-terms>{scope_note}</p>}
 
   <details class="card-details">
   <summary>Познакомиться: история, Писание и самоописание</summary>

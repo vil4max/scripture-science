@@ -1,7 +1,7 @@
 # Presentation-only data per tradition (docs/tasks/site-m2-main-page.md W1:
 # "traditions.yaml keeps presentation keys only (id, colour token,
 # translation reference)"). Identity and content (name, family, since,
-# positions on the fourteen topics, ...) live in the matrix file
+# positions on the fourteen topics, …) live in the matrix file
 # src/data/matrix/<id>.yaml instead - docs/tasks/site-m3-matrix-content.md.
 # Keyed by id; the file loader uses the key as each entry's collection id.
 #
