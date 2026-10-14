@@ -5,13 +5,21 @@ so any session or agent can pick up the work. Each task's detail lives in its
 brief under `docs/tasks/`. Update this file in the same commit that changes a
 task's state.
 
-## In progress
+## Frozen
+
+The project is frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
+уходит на третий план»). The live site matches `main`; nothing is in flight.
+To resume, start from `docs/tasks/site-m36-audit-followups.md` (plan, what is
+left, owner decisions needed) and `docs/research/site-history-2026-10.md`
+(what was done in this stretch).
+
+## In progress (paused by the freeze)
 
 **M36 — site audit follow-ups** (`docs/tasks/site-m36-audit-followups.md`,
 2026-10-10): 307 verified findings on terminology, visuals, navigation,
-content, sources and accessibility; a first batch of quick fixes is committed
-locally, publishing waits for the owner's word; the brief holds the plan and
-the owner decisions needed.
+content, sources and accessibility; the quick fixes of plan items 1–3, 6 and
+7 and part of 4 and 5 are published; the brief holds what is left and the
+owner decisions needed.
 
 **Three-part reading route** (`docs/DECISIONS.md`, 2026-10-09): one route —
 «Основа», «Религии мира», «Сравнение» — in the menu, on the homepage and in a

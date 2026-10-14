@@ -385,3 +385,17 @@ order of «Progressive reading and demographic grouping» stays; the shared
 features it asked for remain on the religions page («Что связывает эти
 традиции»), the reasons for differences on «Как читать сравнение» and in the
 comparison.
+
+## 2026-10-12 — Phone navigation as a drawer
+
+On the iPhone the owner found navigation inconvenient. On screens up to
+999 px the menu opens as a drawer from the left over the page, from the
+top button or a floating menu button that appears on scroll; desktop keeps
+the sidebar.
+
+## 2026-10-14 — Project frozen
+
+The owner put the project on hold («проект на фриз, хобби сейчас уходит на
+третий план»). The live site matches `main`. Open work stays in
+`docs/tasks/site-m36-audit-followups.md`; publishing still waits for the
+owner's word.

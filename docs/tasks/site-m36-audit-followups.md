@@ -1,9 +1,9 @@
 # M36 — site audit follow-ups (handoff)
 
-State: audit done and verified (2026-10-10); quick fixes so far published
-(3ef46e3, f5ffcd7, b388ec3; owner: «Да делай», «Главное все запушить»);
-work paused until the weekly limit resets (Mon 2026-10-13 07:00). The rest is
-the plan below. Publishing waits for the owner's word.
+State: frozen on 2026-10-14 (owner: «проект на фриз»). Audit done and
+verified (2026-10-10); published fixes: plan items 1–3, 6, 7 and part of 4
+and 5 (last deploy fff3d8f and the freeze record after it). The rest of the
+plan below is open; publishing still waits for the owner's word.
 
 ## Authorization and scope
 
