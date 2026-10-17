@@ -1,0 +1,39 @@
+---
+// What the book «Homo religiosus» adds to one religion, under its card or on
+// its page (docs/tasks/site-m37-korytko-book.md). Each point is the site's own
+// paraphrase; its excerpt and page are on the book page and in Sources.
+import book from '../data/book-homo-religiosus.json';
+import { BOOK_PATH, bookLocator } from '../lib/book';
+import { withBase } from '../lib/paths';
+
+interface Props { tradition: string; }
+const { tradition } = Astro.props;
+const points = book.points.filter((point) => point.tradition === tradition);
+const chapters = book.chapters.filter((chapter) => chapter.site?.some((link) => link.tradition === tradition));
+const range = chapters.length ? `гл. ${chapters[0].n}${chapters.length > 1 ? `–${chapters.at(-1)!.n}` : ''}, с. ${chapters[0].from}–${chapters.at(-1)!.to}` : '';
+// The book page lists excerpts only under chapters the site uses.
+const cited = new Set(points.flatMap((point) => point.proof.map((proof) => bookLocator(proof.title)?.chapter)));
+const anchor = chapters.find((chapter) => cited.has(chapter.n))?.n.toLowerCase();
+const source = `Прот. Олег Корытко, «Homo religiosus: на путях поиска истины» (2017), ${range}.`;
+---
+{chapters.length > 0 && (
+  <div class="book-points" id={`book-points-${tradition}`}>
+    {points.length > 0 ? (
+      <details>
+        <summary>Подробнее по книге прот. Олега Корытко</summary>
+        <ul>{points.map((point) => <li>{point.text}</li>)}</ul>
+        <p class="book-source">{source} <a href={withBase(`${BOOK_PATH}${anchor ? `#excerpts-${anchor}` : ''}`)}>Выдержки и страницы →</a></p>
+      </details>
+    ) : (
+      <p class="book-source">Для углублённого чтения: {source} <a href={withBase(BOOK_PATH)}>О книге →</a></p>
+    )}
+  </div>
+)}
+
+<style>
+  .book-points { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; scroll-margin-top: 100px; }
+  .book-points summary { cursor: pointer; color: var(--focus); font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+  .book-points ul { margin: 4px 0 8px; padding-left: 20px; display: grid; gap: 6px; }
+  .book-points li { font-size: 16px; line-height: 1.5; }
+  .book-source { color: var(--muted); font-size: 14px; margin: 0; }
+</style>

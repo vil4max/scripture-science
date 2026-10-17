@@ -2,6 +2,10 @@
 import other from '../data/other-traditions.json';
 import world from '../data/world-countries.json';
 import TraditionImage from './TraditionImage.astro';
+import BookPoints from './BookPoints.astro';
+import book from '../data/book-homo-religiosus.json';
+import { BOOK_PATH } from '../lib/book';
+import { withBase } from '../lib/paths';
 const topCountries = (group: string) => {
   const index = world.groups.indexOf(group);
   return [...world.countries].sort((a,b) => b.counts[index] - a.counts[index]).slice(0,3).map((c) => c.name).join(', ');
@@ -9,16 +13,20 @@ const topCountries = (group: string) => {
 ---
 <section id="other-traditions" aria-labelledby="other-title">
   <h2 id="other-title">Другие религии</h2>
+  {book.lead.map((paragraph) => <p class="book-lead">{paragraph.text} <a href={withBase(BOOK_PATH)}>О книге →</a></p>)}
   <div class="other-grid">{other.map((item) => <article id={`overview-${item.id}`}>
     <h3>{item.title}</h3><p class="origin">{item.origin}</p>
     <TraditionImage id={item.id} compact/>
     <p>{item.intro}</p>
     {item.geographyGroup && <p class="geography">Распространён прежде всего в странах: {topCountries(item.geographyGroup)}. Перечень дан по числу последователей.</p>}
     {item.geography && <p class="geography">{item.geography}</p>}
+    <BookPoints tradition={item.id} />
   </article>)}</div>
 </section>
 <style>
   #other-traditions { scroll-margin-top: 100px; } .other-grid { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: 24px; } article { padding: 24px; background: var(--surface); border: 1px solid var(--line); border-radius: 12px; } h3 { margin: 0; font-size: 24px; } p { font-size: 17px; } .origin,.geography { color: var(--muted); font-size: 15px; } .geography { border-top: 1px solid var(--line); padding-top: 12px; }
+
+  .book-lead { max-width: var(--measure); margin: 0 0 20px; }
 
   @media (max-width: 760px) { .other-grid { grid-template-columns: minmax(0, 1fr); } article { padding: 18px; } }
 </style>

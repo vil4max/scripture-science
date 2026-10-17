@@ -3,7 +3,8 @@
 export function catalogLabel(proofs: { title: string }[]): string {
   const counts = new Map<string, number>();
   for (const { title } of proofs) {
-    const base = title.replace(/,?\s*§{1,2}\s*\d[\s\S]*$/, '').replace(/[,;\s]+$/, '').trim() || title;
+    // A printed book's locator, «…, гл. XXIII, с. 695», goes the way of a § (M37).
+    const base = title.replace(/,?\s*§{1,2}\s*\d[\s\S]*$/, '').replace(/, (?:гл\. [IVXLC]+|от автора|заключение), с\. \d+$/, '').replace(/[,;\s]+$/, '').trim() || title;
     counts.set(base, (counts.get(base) ?? 0) + 1);
   }
   return [...counts].sort((a, b) => b[1] - a[1] || a[0].length - b[0].length)[0][0];

@@ -28,7 +28,7 @@ test('the homepage, the menu and the route bar follow one three-part route', () 
   assert.match(home, /истинности православной веры/);
   const page = read('timeline');
   const menu = page.split('id="site-menu"')[1].split('</nav>')[0];
-  inOrder(menu, [...ROUTE_PATHS, 'traditions/judaism/', 'traditions/jw/', 'reading/', 'terms/', 'sources/']);
+  inOrder(menu, [...ROUTE_PATHS, 'traditions/judaism/', 'traditions/jw/', 'reading/', 'terms/', 'sources/', 'books/homo-religiosus/']);
   assert.ok(!menu.includes('differences/') && !menu.includes('prayers/'), 'each page appears once');
   const bar = page.split('aria-label="Маршрут чтения"')[1].split('</nav>')[0];
   assert.match(bar, /aria-current="step"[^>]*>(?:(?!<\/a>)[\s\S])*Религии мира/);

@@ -421,3 +421,17 @@ The closure of all 307 findings is in
 The owner put the project on hold («проект на фриз, хобби сейчас уходит на
 третий план»). The live site matches `main` with the audit closed; nothing
 is in flight. Resume from `docs/tasks/site-m36-audit-followups.md`.
+
+## 2026-10-17 — A printed book as a source, with its own page
+
+The owner resumed the project for one book, prot. Oleg Korytko's «Homo
+religiosus: на путях поиска истины» (2017): «книгу сохранить и выделить
+отдельный таб под нее, также взять инфо из нее для дополнения разделов».
+The book is under copyright and the repository and the site are public, so
+its text stays on this machine (`private/`, ignored by git) and the site
+shows only its record, contents and short excerpts. The page
+`books/homo-religiosus/` sits in the menu's «Справка». The book is a
+`reference` source for history, texts and practice of the non-Christian
+religions; a proof's `url` is that page and its `title` names the chapter
+and page. Doctrine of each tradition still comes from its own texts. Detail:
+`docs/tasks/site-m37-korytko-book.md`.

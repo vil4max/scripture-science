@@ -12,6 +12,7 @@ import hierarchy from '../data/world-hierarchy-2026.json';
 import history from '../data/history-overview.json';
 import biblical from '../data/biblical-timeline.json';
 import otherTraditions from '../data/other-traditions.json';
+import book from '../data/book-homo-religiosus.json';
 import world from '../data/world-composition.json';
 import lineage from '../data/lineage.json';
 import bible from '../data/bible-guide.json';
@@ -80,11 +81,25 @@ async function build(): Promise<CatalogEntry[]> {
     for (const proof of entry.proof) raw.push({ proof: proof as CatalogRecord['proof'], usage: { traditionId: tradition, traditionName: namesById.get(tradition), section: 'Православная классификация' } });
   }
   for (const [section, data] of [
-    ['Библейская линия: выбранная хронология', biblical], ['Авраамические религии', overview], ['Вводная история', history], ['Другие традиции', otherTraditions],
+    ['Библейская линия: выбранная хронология', biblical], ['Авраамические религии', overview], ['Вводная история', history],
     ['Библия', bible],
     ['Население мира', world], ['Религии и конфессии, оценка 2026', hierarchy], ['Подробная хронология', lineage],
   ] as const) {
     for (const proof of collectProofs(data)) raw.push({ proof, usage: { section } });
+  }
+  // Each card of «Другие религии» by name, so a book excerpt says where it is used (M37).
+  for (const row of otherTraditions) {
+    for (const proof of collectProofs(row)) raw.push({ proof, usage: { section: `Другие традиции: ${row.title}` } });
+  }
+  // The book «Homo religiosus»: its own page, the lead of «Другие религии» and
+  // the points under each religion (docs/tasks/site-m37-korytko-book.md).
+  for (const proof of collectProofs(book.about)) raw.push({ proof, usage: { section: 'Страница книги «Homo religiosus»' } });
+  for (const proof of collectProofs(book.lead)) raw.push({ proof, usage: { section: 'Другие религии: вступление' } });
+  for (const point of book.points) {
+    const traditionName = namesById.get(point.tradition) ?? otherTraditions.find((row) => row.id === point.tradition)?.title;
+    for (const proof of collectProofs(point.proof)) {
+      raw.push({ proof, usage: { traditionId: namesById.has(point.tradition) ? point.tradition : undefined, traditionName, section: 'по книге прот. Олега Корытко' } });
+    }
   }
 
   for (const record of assessments) {

@@ -5,9 +5,19 @@ so any session or agent can pick up the work. Each task's detail lives in its
 brief under `docs/tasks/`. Update this file in the same commit that changes a
 task's state.
 
+## Done after the freeze
+
+**M37 — the book «Homo religiosus» as a source and a page**
+(`docs/tasks/site-m37-korytko-book.md`, 2026-10-17): the owner resumed the
+project for this one book («книгу сохранить и выделить отдельный таб под
+нее, также взять инфо из нее для дополнения разделов»). The book page sits
+in «Справка»; 38 sourced points extend six religions, with a lead for
+«Другие религии» and the glossary term «Религия». Published (owner:
+«Коммить и пушь»).
+
 ## Frozen
 
-The project is frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
+Otherwise the project is frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
 уходит на третий план»), after the owner asked to finish every audit fix
 first. The live site matches `main`; nothing is in flight. To resume, start
 from `docs/research/site-audit-2026-10-10-closure.md` (what was left on

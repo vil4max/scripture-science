@@ -9,3 +9,7 @@ dist/
 
 .claude/settings.local.json
 .claude/launch.json
+
+# Copyrighted source texts (books, PDFs) stay on this machine only: the
+# repository and the site are public (docs/tasks/site-m37-korytko-book.md).
+/private/

@@ -1,0 +1,118 @@
+---
+// The book «Homo religiosus» on its own page in «Справка» (owner, 2026-10-17:
+// «выделить отдельный таб под нее»; docs/tasks/site-m37-korytko-book.md).
+// The book is under copyright: the page gives its record, its contents and
+// the short excerpts the site relies on, never the text itself.
+import SectionPage from '../../layouts/SectionPage.astro';
+import book from '../../data/book-homo-religiosus.json';
+import { profileHref } from '../../lib/analysis';
+import { BOOK_URL, bookLocator } from '../../lib/book';
+import { withBase } from '../../lib/paths';
+import { getSiteSourceCatalog } from '../../lib/siteSources';
+import { innerQuotes } from '../../lib/typography';
+
+const entry = (await getSiteSourceCatalog()).find((item) => item.url === BOOK_URL);
+const used = (entry?.references ?? [])
+  .map((reference) => ({ ...reference, at: bookLocator(reference.proof.title)! }))
+  .sort((a, b) => a.at.page - b.at.page);
+const chapters = book.chapters.map((chapter) => ({
+  ...chapter,
+  heading: /^[IVXLC]+$/.test(chapter.n) ? `Глава ${chapter.n}. ${chapter.title}` : chapter.title,
+  used: used.filter((item) => item.at.chapter === chapter.n),
+}));
+const { record } = book;
+---
+<SectionPage
+  title="Книга «Homo religiosus»"
+  lead="Курс лекций протоиерея Олега Корытко о нехристианских религиях: что это за книга, как сайт ею пользуется и что из неё взято."
+>
+  <section id="record">
+    <h2>Выходные данные</h2>
+    <dl class="record">
+      <dt>Автор</dt><dd>{record.author}</dd>
+      <dt>Название</dt><dd>{record.title}. {record.subtitle}</dd>
+      <dt>Издание</dt><dd>{record.imprint}; {record.pages} с.</dd>
+      <dt>ISBN</dt><dd>{record.isbn}</dd>
+      <dt>Гриф</dt><dd>{record.approval}</dd>
+    </dl>
+  </section>
+
+  {book.about.length > 0 && (
+    <section id="about">
+      <h2>О книге</h2>
+      {book.about.map((paragraph) => <p>{paragraph.text}</p>)}
+    </section>
+  )}
+
+  <section id="use">
+    <h2>Как сайт использует книгу</h2>
+    <ul class="use">
+      <li>Как справочный источник по истории, священным текстам и практике нехристианских религий: индуизма, буддизма, даосизма, синто, ислама и иудаизма. У каждой выдержки указана страница.</li>
+      <li>Учение каждой традиции сайт по-прежнему передаёт по её собственным текстам. Изложение о. Олега — рассказ одного православного автора, а не определение Церкви.</li>
+      <li>Христианские исповедания в книге не рассматриваются: автор оставил христианство за рамками курса.</li>
+      <li>Численность последователей из книги не берётся: книга издана в 2017 году, а сайт приводит более поздние датированные оценки.</li>
+      <li>Текст книги здесь не публикуется: она защищена авторским правом. Книгу выпускает издательство Сретенского монастыря ({record.store} — адрес из выходных данных).</li>
+    </ul>
+  </section>
+
+  <section id="contents">
+    <h2>Содержание</h2>
+    <ol class="chapters">
+      {chapters.map((chapter) => (
+        <li id={`chapter-${chapter.n.toLowerCase()}`}>
+          <span class="chapter-title">{chapter.heading}</span>
+          <span class="meta"> · с. {chapter.from}–{chapter.to}</span>
+          {chapter.site && (
+            <span class="meta"> · на сайте: {chapter.site.map((link, index) => <>{index > 0 && ', '}<a href={withBase(link.path)} data-carry-selection>{link.label}</a></>)}</span>
+          )}
+          {chapter.used.length > 0 && <span class="meta"> · <a href={`#excerpts-${chapter.n.toLowerCase()}`}>выдержек: {chapter.used.length}</a></span>}
+        </li>
+      ))}
+    </ol>
+  </section>
+
+  {used.length > 0 && (
+    <section id="excerpts">
+      <h2>Что сайт берёт из книги</h2>
+      <p class="meta">Выдержки сверены со страницами книги; утверждения на сайте пересказывают их своими словами.</p>
+      {chapters.filter((chapter) => chapter.used.length > 0).map((chapter) => (
+        <section class="chapter-excerpts" id={`excerpts-${chapter.n.toLowerCase()}`}>
+          <h3>{chapter.heading}</h3>
+          <ul>
+            {chapter.used.map(({ proof, usages, at }) => (
+              <li>
+                <p class="excerpt">«{innerQuotes(proof.excerpt)}» <span class="page">с. {at.page}</span></p>
+                <p class="meta">На сайте: {usages.map((usage, index) => (
+                  <>{index > 0 && '; '}{usage.cardId && usage.traditionId
+                    ? <a href={profileHref(usage.traditionId, usage.cardId)} data-carry-selection>{usage.cardTitle}</a>
+                    : `${usage.traditionName ? `${usage.traditionName} — ` : ''}${usage.section}`}</>
+                ))}</p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ))}
+    </section>
+  )}
+</SectionPage>
+
+<style>
+  section { max-width: var(--measure); }
+  .record { display: grid; grid-template-columns: max-content minmax(0, 1fr); gap: 6px 16px; margin: 0; }
+  .record dt { color: var(--muted); }
+  .record dd { margin: 0; }
+  .use { display: grid; gap: 8px; padding-left: 22px; }
+  .chapters { display: grid; gap: 6px; padding-left: 0; list-style: none; }
+  .chapters li { scroll-margin-top: 24px; }
+  .chapter-excerpts { scroll-margin-top: 24px; }
+  .chapter-excerpts ul { list-style: none; padding: 0; display: grid; gap: 14px; }
+  .excerpt { margin: 0; font-style: italic; }
+  .page { font-style: normal; color: var(--muted); font-size: 14px; white-space: nowrap; }
+  .meta { color: var(--muted); font-size: 14px; }
+  .chapter-excerpts .meta { margin: 4px 0 0; }
+
+  @media (max-width: 760px) {
+    .record { grid-template-columns: minmax(0, 1fr); gap: 2px; }
+    .record dd { margin-bottom: 8px; }
+  }
+</style>

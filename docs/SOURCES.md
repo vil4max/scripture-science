@@ -16,6 +16,8 @@ Existing `official`, `reference` and `news` tiers remain provenance categories. 
 
 For every new assertion, open the source and check a supporting passage in context. Store its URL, title, a short exact excerpt, access date and tier. Keep document sections or catechism paragraph numbers in the reference title. Check translations and numerical scope separately. Prefer stable originals or an accessible archive; never mark an inaccessible quotation as newly verified.
 
+A printed source with no online text (owner, 2026-10-17) is verified against its pages: the `title` names the chapter and page, the `url` is the site's own page for that book, which carries the full bibliographic record, and the excerpt is exact from that page. An OCR copy may be read, but a passage with a doubtful character is not quoted until checked against the page image. The book's text stays outside the public repository.
+
 Use exact short doctrinal definitions and quotations; write explanatory paraphrases without quotation marks. Contemporary articles are not reproduced wholesale. Scripture and public-domain source texts may be quoted with their exact attribution.
 
 The correction register records the current wording, type of correction, replacement and supporting references. An assessment has separately identifiable evidence for the other tradition's statement and the Orthodox answer. Do not infer agreement on an entire doctrine from one common proposition.
