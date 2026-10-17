@@ -19,6 +19,11 @@ history rows, 18 glossary terms with inline hints. Published (owner:
 
 ## Done after the freeze
 
+**The genealogy of Jesus Christ** (`docs/tasks/site-genealogy.md`,
+2026-10-17): one tree from Adam to Christ on `bible/#genealogy`, the two
+Gospel lines after David side by side, the explanation of St John of
+Damascus; linked from the Nativity row. Published (owner: «Пуш»).
+
 **M37 — the book «Homo religiosus» as a source and a page**
 (`docs/tasks/site-m37-korytko-book.md`, 2026-10-17): the owner resumed the
 project for this one book («книгу сохранить и выделить отдельный таб под

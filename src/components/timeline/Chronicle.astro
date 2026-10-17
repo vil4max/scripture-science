@@ -206,6 +206,7 @@ const today = new Date();
               {row.text && <span class="event"> — {context ? row.text.replace(/\s*\([^()]*\)\s*$/, '') : row.text}</span>}
               {row.todo && <span class="todo"> (уточняется)</span>}
               {biblicalById.get(row.id)?.description && <span class="context">{biblicalById.get(row.id)!.description}</span>}
+              {row.id === 'biblical-nativity' && <a class="chapter-link" href={withBase('bible/#genealogy')}>Родословие Иисуса Христа →</a>}
               {context && <span class="context">{context.timelineText}</span>}
               {/* Chapters name their own page (site audit S1-13). */}
               {context?.link && <a class="chapter-link" href={withBase(context.link.startsWith('#') ? `numbers/${context.link}` : context.link)} data-carry-selection>{context.link.startsWith('#') ? 'Численность религий мира →' : 'Подробнее о традиции →'}</a>}

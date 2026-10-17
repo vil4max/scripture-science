@@ -1,0 +1,91 @@
+---
+// The genealogy of Jesus Christ as one tree from Adam (owner, 2026-10-17:
+// «Сделай», after a reel with such a scheme). The trunk follows Scripture;
+// after David the two Gospel lines run side by side and meet again at
+// Salathiel and Zerubbabel and at Joseph. Evidence is in Sources, per the
+// site's no-inline-citations rule.
+import genealogy from '../data/genealogy.json';
+
+type Person = { name: string; years?: number; septuagint?: number; note?: string; branches?: string[] };
+const years = (person: Person) => person.years && `${person.years}${person.septuagint ? ` [${person.septuagint}]` : ''} лет`;
+---
+<section id="genealogy" class="genealogy" aria-labelledby="genealogy-title" data-no-terms>
+  <h2 id="genealogy-title">Родословие Иисуса Христа</h2>
+  <p class="intro">От Адама до Христа — по книге Бытия и Евангелиям от Матфея и от Луки. Годы жизни указаны там, где их называет Писание; рядом с главной линией — братья и другие сыновья.</p>
+  <ol class="trunk">
+    {genealogy.segments.map((segment) => (
+      <li class="segment" id={`genealogy-${segment.id}`}>
+        <h3>{segment.title} <span class="ref">{segment.ref}</span></h3>
+        {segment.people && (
+          <ol class="gens">
+            {(segment.people as Person[]).map((person) => (
+              <li class="gen">
+                <span class="name">{person.name}</span>
+                {years(person) && <span class="years">{years(person)}</span>}
+                {person.note && <span class="note">{person.note}</span>}
+                {person.branches && <span class="branches">рядом: {person.branches.join(', ')}</span>}
+              </li>
+            ))}
+          </ol>
+        )}
+        {segment.lines && (
+          <div class="lines">
+            {(['matthew', 'luke'] as const).map((key) => (
+              <div class={`line ${key}`}>
+                <p class="line-label">{segment.lines[key].label}</p>
+                <ol class="gens">{segment.lines[key].people.map((name) => <li class="gen"><span class="name">{name}</span></li>)}</ol>
+                {'note' in segment.lines[key] && <p class="line-note">{segment.lines[key].note}</p>}
+              </div>
+            ))}
+          </div>
+        )}
+        {segment.join && (
+          <ol class="gens join">{segment.join.map((name) => <li class="gen"><span class="name">{name}</span><span class="note">у обоих евангелистов</span></li>)}</ol>
+        )}
+      </li>
+    ))}
+    <li class="segment christ"><p class="christ-name">Иисус Христос</p><p class="note">родился от Девы Марии</p></li>
+  </ol>
+  <div class="notes">
+    <h3>Почему у Матфея и Луки родословия различаются</h3>
+    {genealogy.explanation.map((paragraph) => <p>{paragraph.text}</p>)}
+  </div>
+</section>
+
+<style>
+  .genealogy { margin-top: 48px; scroll-margin-top: 24px; }
+  .intro, .notes { max-width: var(--measure); }
+  .trunk, .gens { list-style: none; margin: 0; padding: 0; }
+  .segment { position: relative; padding: 0 0 20px 22px; border-left: 3px solid var(--testament-old); scroll-margin-top: 24px; }
+  .segment h3 { margin: 0 0 8px; font-size: 18px; }
+  .ref { font-weight: 400; font-size: 14px; color: var(--muted); }
+  .gens { display: grid; gap: 4px; }
+  .gen { position: relative; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 10px; line-height: 1.4; }
+  /* Each generation is a dot on the trunk. */
+  .gen::before { content: ''; position: absolute; left: -29px; top: 0.45em; width: 11px; height: 11px; border-radius: 50%; background: var(--surface); border: 2px solid var(--testament-old); }
+  .name { font-weight: 700; }
+  .years { font-variant-numeric: tabular-nums; color: var(--ink); font-size: 15px; }
+  .note, .branches, .line-note { color: var(--muted); font-size: 14px; }
+  .lines { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 16px; margin: 4px 0 12px; }
+  .line { padding: 8px 12px 8px 22px; border-radius: 8px; background: var(--surface); border: 1px solid var(--line); }
+  .line .gens { gap: 2px; }
+  .line .gen::before { left: -18px; width: 8px; height: 8px; }
+  .line.luke .gen::before { border-color: var(--testament-new); }
+  .line-label { margin: 0 0 6px; font-weight: 700; font-size: 15px; }
+  .line.luke .line-label { color: var(--testament-new); }
+  .line.matthew .line-label { color: var(--testament-old); }
+  .line-note { margin: 6px 0 0; }
+  .join .name { font-size: 17px; }
+  .christ { border-left-color: transparent; padding-bottom: 0; }
+  .christ::before { content: ''; position: absolute; left: -9px; top: 4px; width: 15px; height: 15px; border-radius: 50%; background: var(--testament-new); }
+  .christ-name { margin: 0; font-size: 22px; font-weight: 700; color: var(--testament-new); }
+  .christ .note { margin: 2px 0 0; }
+  .notes { margin-top: 28px; padding: 16px 20px; border: 1px solid var(--line); border-left: 4px solid var(--t-orthodoxy); border-radius: 6px; background: var(--surface); }
+  .notes h3 { margin-top: 0; }
+
+  @media (max-width: 760px) {
+    .lines { grid-template-columns: minmax(0, 1fr); }
+    .segment { padding-left: 18px; }
+    .gen::before { left: -25px; }
+  }
+</style>

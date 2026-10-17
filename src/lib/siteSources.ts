@@ -13,6 +13,7 @@ import history from '../data/history-overview.json';
 import biblical from '../data/biblical-timeline.json';
 import otherTraditions from '../data/other-traditions.json';
 import book from '../data/book-homo-religiosus.json';
+import genealogy from '../data/genealogy.json';
 import { BOOK_POINTS } from './bookPoints';
 import world from '../data/world-composition.json';
 import lineage from '../data/lineage.json';
@@ -88,6 +89,7 @@ async function build(): Promise<CatalogEntry[]> {
   ] as const) {
     for (const proof of collectProofs(data)) raw.push({ proof, usage: { section } });
   }
+  for (const proof of collectProofs(genealogy)) raw.push({ proof, usage: { section: 'Родословие Иисуса Христа' } });
   // Each card of «Другие религии» by name, so a book excerpt says where it is used (M37).
   for (const row of otherTraditions) {
     for (const proof of collectProofs(row)) raw.push({ proof, usage: { section: `Другие традиции: ${row.title}` } });
