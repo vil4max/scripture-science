@@ -1,7 +1,8 @@
 # M37 — the book «Homo religiosus» as a source and a page
 
 State: done on 2026-10-17 and published (owner: «Коммить и пушь»). The
-project resumed from the freeze for this task only and is frozen again.
+follow-up, checking the whole site against the book, is M38
+(`docs/tasks/site-m38-korytko-integration.md`).
 
 ## Authorization and scope
 

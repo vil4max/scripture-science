@@ -183,7 +183,7 @@ const showsJwNote = tradition.id === 'jw';
   {GOVERNANCE_TRADITIONS.includes(tradition.id) && <section id="governance" class="profile-section"><h2>Церковное устройство и практика</h2><GovernanceDiagram tradition={tradition.id} /></section>}
   <section id="sources-and-relations" class="profile-section"><h2>Источники и отношения с другими</h2>{tradition.id === 'orthodoxy'
     ? <p><a href={withBase('sources/#by-topic')}>Источники православного учения по темам</a> и <a href={withBase('sources/#relations-documents')}>отношение Православной Церкви к другим исповеданиям</a> собраны в справочном разделе.</p>
-    : <p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p>}<BookPoints tradition={tradition.id} /></section>
+    : <p>Православные ответы даны рядом с соответствующими убеждениями. <a href={withBase(`sources/#${tradition.id}`)}>Документы и источники этой традиции</a> и <a href={withBase('sources/#relations-documents')}>взаимные оценки в исторических документах</a> собраны в справочном разделе.</p>}<BookPoints tradition={tradition.id} where="traditions/" /></section>
 
 </SectionPage>
 

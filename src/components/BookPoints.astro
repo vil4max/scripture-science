@@ -1,27 +1,49 @@
 ---
-// What the book «Homo religiosus» adds to one religion, under its card or on
-// its page (docs/tasks/site-m37-korytko-book.md). Each point is the site's own
-// paraphrase; its excerpt and page are on the book page and in Sources.
+// What the book «Homo religiosus» adds to one religion, under its card, on
+// its page or on its history row (docs/tasks/site-m37-korytko-book.md, M38).
+// Each point is the site's own paraphrase; its excerpt and page are on the
+// book page and in Sources.
 import book from '../data/book-homo-religiosus.json';
-import { BOOK_PATH, bookLocator } from '../lib/book';
+import { BOOK_PATH, BOOK_POINT_KINDS, bookLocator, type BookPointKind } from '../lib/book';
+import { BOOK_POINTS } from '../lib/bookPoints';
 import { withBase } from '../lib/paths';
 
-interface Props { tradition: string; }
-const { tradition } = Astro.props;
-const points = book.points.filter((point) => point.tradition === tradition);
-const chapters = book.chapters.filter((chapter) => chapter.site?.some((link) => link.tradition === tradition));
-const range = chapters.length ? `гл. ${chapters[0].n}${chapters.length > 1 ? `–${chapters.at(-1)!.n}` : ''}, с. ${chapters[0].from}–${chapters.at(-1)!.to}` : '';
+interface Props {
+  tradition: string;
+  // Only chapters linked to this page («religions/», «traditions/», «timeline/»),
+  // so the same fold does not repeat on two pages.
+  where?: string;
+}
+const { tradition, where = '' } = Astro.props;
+const points = BOOK_POINTS.filter((point) => point.tradition === tradition);
+const chapters = book.chapters.filter((chapter) => chapter.site?.some((link) => link.tradition === tradition && link.path.startsWith(where)));
+// «гл. XIX–XXI, с. 503–598» for neighbouring chapters, «гл. X, с. 219–236; гл. XI, с. 237–258» otherwise.
+const contiguous = chapters.every((chapter, index) => index === 0 || book.chapters.indexOf(chapter) === book.chapters.indexOf(chapters[index - 1]) + 1);
+const range = !chapters.length ? '' : contiguous
+  ? `гл. ${chapters[0].n}${chapters.length > 1 ? `–${chapters.at(-1)!.n}` : ''}, с. ${chapters[0].from}–${chapters.at(-1)!.to}`
+  : chapters.map((chapter) => `гл. ${chapter.n}, с. ${chapter.from}–${chapter.to}`).join('; ');
 // The book page lists excerpts only under chapters the site uses.
 const cited = new Set(points.flatMap((point) => point.proof.map((proof) => bookLocator(proof.title)?.chapter)));
 const anchor = chapters.find((chapter) => cited.has(chapter.n))?.n.toLowerCase();
 const source = `Прот. Олег Корытко, «Homo religiosus: на путях поиска истины» (2017), ${range}.`;
+// A long list reads better by theme; a short one stays a single list.
+const groups = points.length > 6
+  ? (Object.keys(BOOK_POINT_KINDS) as BookPointKind[])
+    .map((kind) => ({ title: BOOK_POINT_KINDS[kind], points: points.filter((point) => point.kind === kind) }))
+    .filter((group) => group.points.length > 0)
+  : [{ title: '', points }];
 ---
 {chapters.length > 0 && (
   <div class="book-points" id={`book-points-${tradition}`}>
     {points.length > 0 ? (
       <details>
         <summary>Подробнее по книге прот. Олега Корытко</summary>
-        <ul>{points.map((point) => <li>{point.text}</li>)}</ul>
+        {groups.map((group) => (
+          <>
+            {group.title && <p class="kind-title">{group.title}</p>}
+            <ul>{group.points.map((point) => <li>{point.text}</li>)}</ul>
+          </>
+        ))}
         <p class="book-source">{source} <a href={withBase(`${BOOK_PATH}${anchor ? `#excerpts-${anchor}` : ''}`)}>Выдержки и страницы →</a></p>
       </details>
     ) : (
@@ -33,7 +55,8 @@ const source = `Прот. Олег Корытко, «Homo religiosus: на пу�
 <style>
   .book-points { margin-top: 12px; border-top: 1px solid var(--line); padding-top: 8px; scroll-margin-top: 100px; }
   .book-points summary { cursor: pointer; color: var(--focus); font-weight: 700; min-height: 44px; display: flex; align-items: center; }
+  .kind-title { margin: 12px 0 2px; font-size: 13px; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; color: var(--muted); }
   .book-points ul { margin: 4px 0 8px; padding-left: 20px; display: grid; gap: 6px; }
   .book-points li { font-size: 16px; line-height: 1.5; }
-  .book-source { color: var(--muted); font-size: 14px; margin: 0; }
+  .book-source { color: var(--muted); font-size: 14px; margin: 8px 0 0; }
 </style>

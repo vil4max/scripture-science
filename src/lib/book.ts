@@ -7,6 +7,18 @@ export const BOOK_TITLE = 'Прот. Олег Корытко. Homo religiosus: �
 
 export interface BookLocator { chapter: string; page: number; }
 
+// The themes a religion's points are grouped under once there are many (M38).
+export const BOOK_POINT_KINDS = {
+  history: 'История',
+  texts: 'Священные книги и тексты',
+  practice: 'Обычаи и практика',
+  currents: 'Направления и школы',
+  teaching: 'Учение в изложении автора',
+  bible: 'Связи с Библией и христианской историей',
+  russia: 'В России',
+} as const;
+export type BookPointKind = keyof typeof BOOK_POINT_KINDS;
+
 // The preface and the conclusion are not numbered chapters.
 const PARTS: Record<string, string> = { 'от автора': 'preface', 'заключение': 'conclusion' };
 

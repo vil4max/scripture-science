@@ -273,7 +273,7 @@ const terms = defineCollection({
     term: z.string(),
     order: z.number().int(),
     slug: z.string().regex(/^[a-z0-9-]+$/),
-    group: z.enum(['basic', 'classification', 'names']),
+    group: z.enum(['basic', 'classification', 'names', 'other-religions']),
     short: z.string().min(10).max(220),
     match: z.array(z.string()).default([]),
     use_on_site: z.boolean(),

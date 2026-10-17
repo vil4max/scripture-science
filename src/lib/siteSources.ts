@@ -13,6 +13,7 @@ import history from '../data/history-overview.json';
 import biblical from '../data/biblical-timeline.json';
 import otherTraditions from '../data/other-traditions.json';
 import book from '../data/book-homo-religiosus.json';
+import { BOOK_POINTS } from './bookPoints';
 import world from '../data/world-composition.json';
 import lineage from '../data/lineage.json';
 import bible from '../data/bible-guide.json';
@@ -95,8 +96,9 @@ async function build(): Promise<CatalogEntry[]> {
   // the points under each religion (docs/tasks/site-m37-korytko-book.md).
   for (const proof of collectProofs(book.about)) raw.push({ proof, usage: { section: 'Страница книги «Homo religiosus»' } });
   for (const proof of collectProofs(book.lead)) raw.push({ proof, usage: { section: 'Другие религии: вступление' } });
-  for (const point of book.points) {
-    const traditionName = namesById.get(point.tradition) ?? otherTraditions.find((row) => row.id === point.tradition)?.title;
+  for (const point of BOOK_POINTS) {
+    const traditionName = namesById.get(point.tradition) ?? otherTraditions.find((row) => row.id === point.tradition)?.title
+      ?? history.find((row) => row.id === point.tradition)?.title;
     for (const proof of collectProofs(point.proof)) {
       raw.push({ proof, usage: { traditionId: namesById.has(point.tradition) ? point.tradition : undefined, traditionName, section: 'по книге прот. Олега Корытко' } });
     }

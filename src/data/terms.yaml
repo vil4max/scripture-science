@@ -1407,3 +1407,882 @@
       excerpt: providing information about minority religions and sects which is as accurate, up-to-date and as evidence-based as possible
       accessed: 2026-09-25
   status_check: verified
+- term: Коран
+  slug: quran
+  group: other-religions
+  short: "Главная священная книга ислама: записанные откровения, которые Мухаммад возвещал в 610–632 годах. Мусульмане считают Коран несотворённым словом Бога; в нём 114 глав — сур."
+  match:
+    - "Коран(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В исламе Коран — главная священная книга и главный источник вероучения, нравственных норм и права. Это запись проповедей, которые Мухаммад произносил как пророческие откровения в 610–632 годах; Коран состоит из 114 глав — сур, а суры — из стихов — аятов. Мусульмане считают Коран неизменным и несотворённым словом Аллаха."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII; учение ислама сайт излагает по мусульманским источникам. Как пишет о. Олег, несотворённым и вечным мусульманская традиция считает только арабский текст: любой перевод для неё — в каком-то смысле толкование, поэтому на мусульманском богослужении Коран читают только по-арабски."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 680"
+      tier: reference
+      excerpt: "главная священная книга мусульман. Представляет собой запись проповедей Мухаммада, произнесенных им в форме пророческих откровений между 610 и 632 гг."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 680"
+      tier: reference
+      excerpt: "Коран — главный источник мусульманского вероучения, нравственно-этических норм и права."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 748"
+      tier: reference
+      excerpt: "Коран — священная книга всех мусульман, состоит из 114 глав — сур, разбитых на стихи — аяты."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 681"
+      tier: reference
+      excerpt: "по убеждению последователей Мухаммада, Коран является неизменным и несотворенным словом Аллаха"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 681"
+      tier: reference
+      excerpt: "несотворенным и вечным для мусульманской традиции является лишь Коран на арабском языке"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 682"
+      tier: reference
+      excerpt: "любой перевод священного текста Корана является в некотором смысле его интерпретацией"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 682"
+      tier: reference
+      excerpt: "во время мусульманских богослужений Коран читается исключительно по-арабски"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: сунниты
+  slug: sunnis
+  group: other-religions
+  short: "Самое крупное направление ислама. Название значит «люди Сунны», то есть примера пророка Мухаммада. Право сунниты толкуют по одной из четырёх школ — мазхабов."
+  match:
+    - "[Сс]уннит(ы|ов|ам|ами|ах)"
+    - "[Сс]уннитск(ий|ого|ому|им|ом|ая|ой|ую|ое|ие|их|ими)"
+  use_on_site: true
+  definition: "Сунниты — наиболее крупное направление ислама; название происходит от арабского «ахль ас-сунна» — «люди Сунны». Когда после смерти Мухаммада решался вопрос о власти в общине, сунниты считали, что её главой — имамом — может стать любой мусульманин, которому окажут доверие старейшины. Исторически у суннитов сложились четыре основные правовые школы — мазхаба."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Как поясняет автор, «люди Сунны» — самоназвание, которое подчёркивает верность традиции; другие направления ислама тоже чтут Сунну как пример Мухаммада."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 740"
+      tier: reference
+      excerpt: "Сунниты — наиболее крупное, доминирующее на данный момент течение в исламе."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 740"
+      tier: reference
+      excerpt: "Название происходит от словосочетания «ахль ас-сунна», что буквально переводится как «люди Сунны»"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "Сунниты полагали, что имамом может стать любой мусульманин, которого облекут доверием старейшины, что и произошло вскоре после смерти пророка."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 726"
+      tier: reference
+      excerpt: "Исторически оформились четыре основных суннитских мазхаба"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 740"
+      tier: reference
+      excerpt: "Это отнюдь не означает, что иные исламские группы отрицают Сунну как пример Мухаммада, преподанный всем верующим"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 740"
+      tier: reference
+      excerpt: "речь идет о самоназвании, используемом для того, чтобы подчеркнуть традиционализм исповедуемого учения"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: шииты
+  slug: shias
+  group: other-religions
+  short: "Второе по численности направление ислама; название значит «партия». Шииты считают, что общину должны возглавлять имамы — потомки Али, двоюродного брата и зятя Мухаммада."
+  match:
+    - "[Шш]иит(ы|ов|ам|ами|ах)"
+    - "[Шш]иитск(ий|ого|ому|им|ом|ая|ой|ую|ое|ие|их|ими)"
+    - "[Шш]иизм(а|у|ом|е)?"
+  use_on_site: true
+  definition: "Шииты — второе по численности направление ислама. Оно возникло в VII веке, вскоре после смерти Мухаммада, в споре о том, кому принадлежит верховная власть в общине: шииты настаивали, что она должна оставаться у потомков Али — двоюродного брата и зятя пророка, женатого на его дочери Фатиме. Своим имамам шииты приписывают пророческий дар и непогрешимость в вопросах веры; большинство из них признают двенадцать имамов."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Как пишет автор, особый авторитет у шиитов имеет аятолла: его считают полномочным представителем «скрытого» имама до его возвращения в конце времён. Сегодня шиизм преобладает в Иране и Азербайджане."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 740"
+      tier: reference
+      excerpt: "Шииты — второе по численности направление ислама, возникшее в VII в."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "что в переводе значит «партия», «группа». Течение возникло в VII в. практически сразу после смерти основателя ислама."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "Его появление было связано с решением вопроса о том, кому в исламской общине (умме) должна принадлежать верховная власть"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "бразды правления при любых обстоятельствах должны находиться в руках потомков Али — двоюродного брата и зятя пророка, женатого на его дочери Фатиме"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "Шииты убеждены в профетическом даре имама, приписывая ему даже черты непогрешимости в вероучительных вопросах."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "Большинство шиитов признают историческое существование 12 имамов"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 742"
+      tier: reference
+      excerpt: "Аятолла считается полномочным представителем «скрытого» имама до момента прихода последнего в мир в конце времен."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 742"
+      tier: reference
+      excerpt: "Сегодня шиизм распространен в Иране, где его сторонники составляют большинство населения."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 742"
+      tier: reference
+      excerpt: "Шиитский ислам является доминирующим вероисповеданием на территории Азербайджана."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: имам
+  slug: imam
+  group: other-religions
+  short: "В мечети — тот, кто стоит впереди и ведёт общую молитву; священником в исламе он не считается. У шиитов имамы — ещё и духовные вожди общины из потомков Али."
+  match:
+    - "[Ии]мам(а|у|ом|е|ы|ов|ам|ами|ах)?"
+  use_on_site: true
+  definition: "В исламе имам — предстоятель на общей молитве в мечети: молящиеся следуют за его движениями. Обычно это самый уважаемый и сведущий в вере мужчина общины; в больших соборных мечетях есть и штатные имамы с религиозным образованием, и имаму принадлежит право произносить проповедь. У шиитов имамы — духовные вожди общины из потомков Али, которым приписывают пророческий дар и непогрешимость в вопросах веры."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Автор подчёркивает: священства в исламе нет, и имам не священнослужитель. В России исламских духовных лиц называют также муллами; в императорской России их назначали государственным указом и приписывали к определённой мечети."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 713"
+      tier: reference
+      excerpt: "При молитве в мечети ее ритуал синхронизируется у всех участников обряда благодаря ритму, задаваемому движениями предстоятеля — имама"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 713"
+      tier: reference
+      excerpt: "В формальном смысле имам — это не представитель священства/жречества, которого в исламе просто не существует."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "Как правило, эту роль выполняет наиболее уважаемый и образованный в вопросах веры мужчина общины"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "в больших, так называемых соборных мечетях существуют и «штатные» имамы, обладающие необходимым религиозным образованием и квалификацией"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "Имаму принадлежит право учительства, в соответствии с которым он произносит проповедь (хутба)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "В российском исламе представители исламского духовенства именуются также муллами"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "В имперской России муллы назначались особым государственным указом и приписывались к конкретной мечети"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "Шииты убеждены в профетическом даре имама, приписывая ему даже черты непогрешимости в вероучительных вопросах."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 741"
+      tier: reference
+      excerpt: "бразды правления при любых обстоятельствах должны находиться в руках потомков Али"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: намаз
+  slug: namaz
+  group: other-religions
+  short: "Обязательная ежедневная молитва мусульманина по строгому порядку, всегда на арабском языке. Сунниты совершают намаз пять раз в сутки, в установленное время."
+  match:
+    - "[Нн]амаз(а|у|ом|е|ы|ов|ам|ами|ах)?"
+    - "[Сс]алят(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В исламе намаз, или салят, — обязательное ритуальное молитвенное правило каждого мусульманина, ежедневная пятикратная молитва. Перед ним совершают омовение, молятся лицом к Мекке и всегда по-арабски, как бы ни владел языком молящийся. В суннитской традиции намаз совершают пять раз в сутки, в строго установленное время."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. О времени молитвы возвещают с минаретов особые служители — муэдзины; порядок действий намаза, как пишет автор, записал в VIII веке Мухаммад аш-Шайбани."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 712"
+      tier: reference
+      excerpt: "это обязательное ритуальное молитвенное правило каждого мусульманина"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 748"
+      tier: reference
+      excerpt: "намаз (салят) — ежедневная пятикратная молитва"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 712"
+      tier: reference
+      excerpt: "Он всегда совершается на арабском языке независимо от степени владения им молящегося."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 712"
+      tier: reference
+      excerpt: "Перед началом осуществляется обрядовое малое омовение (вуду)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "Встав на коврик лицом к Мекке, молящийся, держа руки опущенными вдоль тела"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 713"
+      tier: reference
+      excerpt: "В суннитской традиции намаз совершается пять раз в сутки в строго установленное время"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 713"
+      tier: reference
+      excerpt: "возносимыми особыми служителями — муэдзинами с минаретов"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 714"
+      tier: reference
+      excerpt: "Алгоритм намаза, существовавший дотоле в рамках бытовой практики, был зафиксирован письменно в VIII в. трудами Мухаммада аш-Шайбани"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Рамадан (ураза)
+  slug: ramadan
+  group: other-religions
+  short: "Месяц мусульманского поста — уразы, или саума: весь месяц в светлое время суток не едят и не пьют. По вере мусульман, в этот месяц был ниспослан Коран."
+  match:
+    - "Рамадан(а|у|ом|е)?"
+    - "[Уу]раз(а|ы|е|у|ой)(?!-)"
+    - "[Сс]аум(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В исламе Рамадан — лунный месяц обязательного для всех мусульман поста — уразы, или саума. Пост требует полного воздержания от пищи и питья в светлое время суток и приурочен к этому месяцу потому, что, как сказано в самом Коране, в Рамадан Коран был ниспослан. Окончание поста отмечают праздником разговения Ид аль-Фитр — Ураза-байрамом."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Лунные месяцы не совпадают с григорианскими, поэтому пост каждый год сдвигается на 11–12 дней. Во время Рамадана мусульмане собираются для молитвы и совместного чтения Корана: его делят на 30 частей, чтобы к концу поста прочитать целиком."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 748"
+      tier: reference
+      excerpt: "ураза (саум) — пост в месяц рамадан"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "Все мусульмане обязаны соблюдать пост"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "в течение 30 дней лунного месяца рамадан"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "Мусульманский пост требует полного воздержания от пищи и пития в светлое время суток"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "Календарная фиксация поста именно в рамадан связана с представлением о том, что именно в этот месяц был ниспослан Коран."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "Об этом непосредственно говорится в самом его тексте"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 718"
+      tier: reference
+      excerpt: "Завершение поста отмечено в исламском календаре особым праздником разговения — Ид аль-Фитр (тюрк. Ураза-байрам)."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 717"
+      tier: reference
+      excerpt: "Поскольку лунные месяцы не равны по продолжительности месяцам григорианского календаря, то ежегодно происходит смещение периода поста на 11-12 дней."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 718"
+      tier: reference
+      excerpt: "Существует также практика ежедневного собрания мусульман во время рамадана для молитвы и совместного чтения Корана."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 718"
+      tier: reference
+      excerpt: "С этой целью Коран членят на 30 частей, с тем чтобы до конца поста он был прочитан полностью."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: хадис
+  slug: hadith
+  group: other-religions
+  short: "Короткий рассказ о словах или поступках пророка Мухаммада. В хадисах записана Сунна — пример пророка, второй после Корана источник учения и права ислама."
+  match:
+    - "[Хх]адис(а|у|ом|е|ы|ов|ам|ами|ах)?"
+  use_on_site: true
+  definition: "В исламе хадис — краткий рассказ о случае из жизни Мухаммада, который задаёт верующим образец для подражания. Долгое время Сунна, пример пророка, передавалась устно, а затем была записана в форме хадисов; это второй по важности после Корана источник исламского вероучения и права. Хадис состоит из самого рассказа (матн) и цепочки передатчиков (иснад), по которой судят о его достоверности."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Исламские богословы делят хадисы на достоверные, хорошие и слабые; слабые не служат источником права, но их можно читать для духовной пользы. Сунниты и шииты пользуются разными сборниками хадисов, а у шиитов хадисы называют ещё хабарами."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 691"
+      tier: reference
+      excerpt: "краткий рассказ с описанием ситуации из жизни Мухаммада. Хадис задает верующим образец для подражания"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 691"
+      tier: reference
+      excerpt: "второй по важности после Корана источник исламского вероучения и правовых норм"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 691"
+      tier: reference
+      excerpt: "Существовавшая долгое время устно, Сунна зафиксирована в форме хадисов."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 748"
+      tier: reference
+      excerpt: "Каждый хадис состоит из иснада — перечисления всей цепочки передатчиков информации и самого повествования — матн."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 692"
+      tier: reference
+      excerpt: "Именно эта цепочка передатчиков хадиса — иснад — служила главным критерием достоверности рассказа."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 692"
+      tier: reference
+      excerpt: "хадисы были разделены на достоверные (сахих), хорошие (хасан) и слабые (даиф)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 692"
+      tier: reference
+      excerpt: "Слабые хадисы считаются ненадежными и не являются источником права"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 692"
+      tier: reference
+      excerpt: "Но эти хадисы могут использоваться верующими для духовной пользы и назидания."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 691"
+      tier: reference
+      excerpt: "Несмотря на то что сунниты и шииты пользуются разными сборниками преданий, Сунну одинаково почитают все направления традиционного ислама."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 691"
+      tier: reference
+      excerpt: "В шиитской среде хадисы могут еще именоваться хабарами."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: суфизм
+  slug: sufism
+  group: other-religions
+  short: "Мистическое течение в исламе, цель которого — соединение человека с Богом. По одной из главных версий, название идёт от арабского «суф» — «шерсть»: суфии носили шерстяную одежду."
+  match:
+    - "[Сс]уфизм(а|у|ом|е)?"
+    - "[Сс]уфи(й|я|ю|ем|и|ев|ям|ями|ях)"
+    - "[Сс]уфийск(ий|ого|ому|им|ом|ая|ой|ую|ое|ие|их|ими)"
+  use_on_site: true
+  definition: "В исламе суфизм — мистическое движение, которое ставит целью соединение человека с Аллахом. Суфии всегда оставались в рамках ислама, и их путь не зависел от правовой или богословской школы. До XIX века, как пишет прот. Олег Корытко, ислам и суфизм невозможно было противопоставить: для большинства мусульман суфизм был духовно-мистической сердцевиной ислама."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIII. Отношение к суфизму резко изменилось в XIX веке, когда Аравия перешла под контроль ваххабитов — сторонников буквального толкования Корана и Сунны."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 748"
+      tier: reference
+      excerpt: "Внутри ислама существует особое мистическое движение — суфизм, ставящее своей целью соединение человека с Аллахом и растворение в Нем."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "По одной из наиболее распространенных гипотез, слово происходит от арабского «суф»"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "что в переводе означает «шерсть». Суфии имели обыкновение носить одежду именно из этого материала."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 730"
+      tier: reference
+      excerpt: "суфии всегда оставались в рамках ислама, а их духовный настрой не зависел от мазхаба или теологической школы"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "Вплоть до XIX в. понятия «ислам» и «суфизм» просто невозможно было противопоставить друг другу."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "До этого времени в сознании большинства мусульман суфизм был своеобразной духовно-мистической сердцевиной ислама."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "когда Аравия — колыбель ислама — окончательно перешла под контроль ваххабитов"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIII, с. 729"
+      tier: reference
+      excerpt: "буквалистского толкования Корана и текстов Сунны, отношение к суфизму кардинально изменилось"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Тора
+  slug: torah
+  group: other-religions
+  short: "По-еврейски «Закон»: Пятикнижие Моисеево, первая часть еврейской Библии — Танаха. Её толкование, записанное в Талмуде, в иудаизме называют Устной Торой."
+  match:
+    - "Тор(а|ы|е|у|ой|ою)"
+  use_on_site: true
+  definition: "В иудаизме Тора — Пятикнижие Моисеево, первая из трёх частей Танаха; её название означает «Закон». Это Письменный Закон; его дополняет и истолковывает Устный Закон, или Устная Тора, записанный в Талмуде. На праздничном богослужении в синагоге читают отрывок из Торы."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Христианам эти книги известны как Пятикнижие Моисеево — начало Ветхого Завета. Для богослужения священные книги по традиции пишут от руки на объёмных свитках, а не печатают."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Тора (ивр. «Закон»; соответствует Пятикнижию Моисееву)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Фундаментальной книгой иудаизма является Танах — свод библейских текстов Ветхого Завета, именуемых в христианской традиции каноническими."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Название представляет собой акроним трех главных его частей"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 800"
+      tier: reference
+      excerpt: "признавая необходимыми для исполнения исключительно установления Письменного Закона (Торы)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 759"
+      tier: reference
+      excerpt: "воспринимаемая как Устный Закон, дополняющий и интерпретирующий Закон Письменный"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 801"
+      tier: reference
+      excerpt: "Несмотря на неприятие Устной Торы, караимы на протяжении веков своего существования сами создали кодекс правил"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "Праздники, как правило, предполагают совершение богослужения в синагоге с чтением определенного отрывка из Торы"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 774"
+      tier: reference
+      excerpt: "В литургическом контексте книги используются не в привычном для современного человека виде кодексов, а в соответствии с исторической традицией в форме объемных свитков"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 774"
+      tier: reference
+      excerpt: "Сам текст Танаха на иврите не печатается, а пишется вручную"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Танах
+  slug: tanakh
+  group: other-religions
+  short: "Еврейская Библия: Тора, Пророки и Писания; название сложено из начальных букв этих частей. По составу это канонические книги Ветхого Завета, без неканонических."
+  match:
+    - "Танах(а|у|ом|е)?"
+  use_on_site: true
+  definition: "Танах — основная священная книга иудаизма: свод библейских книг, которые в христианской традиции называют каноническими книгами Ветхого Завета. Название — акроним трёх его частей: Тора («Закон», Пятикнижие Моисеево), Невиим («Пророки») и Ктувим («Писания»). Неканонических книг православного Ветхого Завета в Танахе нет."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Почти весь Танах написан на иврите; по-арамейски — половина Книги пророка Даниила и часть Книги Ездры. Нынешний вид текст получил к VIII веку трудами масоретов, которые ввели в него знаки гласных."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Фундаментальной книгой иудаизма является Танах — свод библейских текстов Ветхого Завета, именуемых в христианской традиции каноническими."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Название представляет собой акроним трех главных его частей"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Тора (ивр. «Закон»; соответствует Пятикнижию Моисееву); 2. Невиим (ивр. «Пророки»);"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Ктувим (ивр. «Писания»)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 772"
+      tier: reference
+      excerpt: "Танах не имеет в себе тех книг, которые в православных изданиях Ветхого Завета именуются «неканоническими»."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 774"
+      tier: reference
+      excerpt: "Абсолютное большинство текстов Танаха написано на иврите, за исключением половины Книги пророка Даниила и части Книги Ездры"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 774"
+      tier: reference
+      excerpt: "В своем нынешнем виде Танах оформился в период раннего Средневековья (VIII в.) благодаря трудам масоретов"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 774"
+      tier: reference
+      excerpt: "Заслугой масоретов является, в частности, введение в консонантный текст Танаха огласовок (знаков диакритики)"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Талмуд
+  slug: talmud
+  group: other-religions
+  short: "Вторая по значению книга иудаизма после Танаха — Устный Закон, толкование Торы. Состоит из Мишны и комментариев к ней — Гемары."
+  match:
+    - "Талмуд(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В иудаизме Талмуд — вторая по значимости книга, воспринимаемая как Устный Закон, который дополняет и толкует Закон Письменный. Он сложился как толкование Торы применительно к жизни разных эпох и состоит из двух пластов: Мишны и Гемары — собрания комментариев к Мишне. Талмуд известен в двух редакциях: более пространной и авторитетной Вавилонской и более краткой Иерусалимской."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Слово «Талмуд» по-еврейски означает «исследование», «изучение». Караимы, по изложению о. Олега, отвергают Талмуд и признают обязательными только установления Письменного Закона — Торы."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 759"
+      tier: reference
+      excerpt: "Талмуд (ивр. «исследование», «изучение») — одна из важнейших книг иудаизма, воспринимаемая как Устный Закон, дополняющий и интерпретирующий Закон Письменный."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 775"
+      tier: reference
+      excerpt: "Второй по значимости книгой иудаизма является Талмуд"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 775"
+      tier: reference
+      excerpt: "исторически сложился как интерпретация Торы применительно к нуждам и обстоятельствам жизни разных эпох"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 775"
+      tier: reference
+      excerpt: "Композиционно Талмуд состоит из двух пластов. Первый — Мишна (с арам. — «повторение»)."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 776"
+      tier: reference
+      excerpt: "Второй пласт Талмуда — Гемара (с арам. — «завершение») — собрание комментариев к текстам Мишны"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 776"
+      tier: reference
+      excerpt: "исторически Талмуд сложился в двух редакциях: Вавилонской — более пространной и авторитетной (Талмуд Бавли) и Иерусалимской — более краткой"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 800"
+      tier: reference
+      excerpt: "Караимы отрицают все наследие раввинистического иудаизма (Талмуд), признавая необходимыми для исполнения исключительно установления Письменного Закона (Торы)."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: галаха
+  slug: halakha
+  group: other-religions
+  short: "Иудейское религиозное право: правовая часть Талмуда и составленные на её основе своды. Галаха задаёт нормы, по которым живёт соблюдающий заповеди иудей."
+  match:
+    - "[Гг]алах(а|и|е|у|ой)"
+    - "[Гг]алахическ(ий|ого|ому|им|ом|ая|ой|ую|ое|ие|их|ими)"
+  use_on_site: true
+  definition: "В иудаизме галаха — правовая часть Талмуда: тексты, которые нормируют и регламентируют жизнь верующего, в отличие от аггады — притч, поучений и рассуждений, чей авторитет ниже. Позднее все положения Закона попытались свести воедино в своде «Шулхан арух», и этим завершилась кодификация галахи."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. «Шулхан арух», по словам автора, и сегодня считается главной книгой для практических вопросов иудейского права; о нём — в блоке «Подробнее по книге» на странице иудаизма."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 776"
+      tier: reference
+      excerpt: "в составе Талмуда принято различать две содержательные части"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 776"
+      tier: reference
+      excerpt: "тексты, имеющие отношение к правовым вопросам нормирующего и регламентирующего характера"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 777"
+      tier: reference
+      excerpt: "все прочие тексты Талмуда самого разнообразного стиля и содержания (мудрые высказывания, притчи, поучения, рассуждения и пр.)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 777"
+      tier: reference
+      excerpt: "Степень авторитетности аггадических частей ниже, чем у галахических."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 777"
+      tier: reference
+      excerpt: "предпринята попытка свести воедино все положения Закона, что стало завершением кодификации Галахи"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 777"
+      tier: reference
+      excerpt: "Шулхан Арух считается главной книгой по разрешению практических вопросов в рамках иудейского права и фактически базовым учебником по Галахе"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: раввин
+  slug: rabbi
+  group: other-religions
+  short: "Учитель и знаток Закона в иудаизме: объясняет, как исполнять заповеди в жизни, и советует общине. Раввин — не священник: жреческих обязанностей у него нет."
+  match:
+    - "[Рр]аввин(а|у|ом|е|ы|ов|ам|ами|ах)?"
+  use_on_site: true
+  definition: "В иудаизме раввин — религиозный учитель, знаток священных текстов и обрядовых предписаний. Он не священнослужитель и не выполняет жреческих функций: прежде всего это специалист в применении Закона и талмудических норм к жизни, который учит других и советует единоверцам в сложных случаях. Статус подлинных духовных лидеров еврейского народа раввины получили, когда стали разрабатывать, как применять нормы Закона без Храма."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. После разрушения Иерусалимского храма библейские предписания о жертвах, в том числе очистительных, стали невыполнимы — поэтому так важна работа раввинов над тем, как применять Закон без Храма."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "религиозный учитель, знаток священных текстов и обрядовых предписаний — раввин"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "Раввин, как в те времена, так и ныне, не выполняет жреческих функций."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "Он прежде всего специалист в вопросах применения Закона и талмудических норм к практике жизни. Раввин обучает этому других и консультирует единоверцев в сложных ситуациях."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "с момента разрушения храма невозможно выполнить библейские предписания относительно совершения жертв, в том числе очистительных"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "Формирование страты раввинов, детально разрабатывающих методы применения норм Закона в условиях отсутствия храма, даровало им статус подлинных духовных лидеров еврейства."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: синагога
+  slug: synagogue
+  group: other-religions
+  short: "Дом собраний еврейской общины для молитвы и чтения Торы. Вокруг синагоги евреи на новых землях сохраняли единство; главную роль в ней играет учитель — раввин."
+  match:
+    - "[Сс]инагог(а|и|е|у|ой|ам|ами|ах)?"
+    - "[Сс]инагогальн(ый|ого|ому|ым|ом|ая|ой|ую|ое|ые|ых|ыми)"
+  use_on_site: true
+  definition: "В иудаизме синагога — дом собраний общины, где главенствует религиозный учитель — раввин. В синагоге совершают праздничные богослужения с чтением отрывков из Торы, а по субботам там проходят особые службы."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Расселяясь по новым землям, евреи, как пишет автор, селились компактно вокруг синагоги, чтобы сохранить национально-религиозное единство. В синагоге проходит и бар-мицва: мальчик тринадцати лет читает перед собранием отрывок из Торы и становится полноправным членом общины."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "Осваивая новые места, евреи стараются поддерживать национально-религиозное единство, для чего селятся компактно, консолидируясь вокруг синагоги"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 763"
+      tier: reference
+      excerpt: "дома собраний, главенствующее положение в котором занимает религиозный учитель, знаток священных текстов и обрядовых предписаний"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "Праздники, как правило, предполагают совершение богослужения в синагоге с чтением определенного отрывка из Торы"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "В субботу проводятся особые синагогальные службы"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "Начиная с возраста 13 лет и одного дня всякий иудейский подросток мужского пола признается полноценным членом религиозной общины."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "Ключевым элементом данного обряда является чтение инициантом отрывка из текста Торы посреди синагогального собрания"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Шаббат (суббота)
+  slug: shabbat
+  group: other-religions
+  short: "Суббота — в иудаизме день покоя: работать нельзя, в подражание Богу, Который в седьмой день почил от всех дел Своих. В субботу бывают особые службы и трапезы."
+  match:
+    - "Шаббат(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В иудаизме Шаббат — суббота, день, когда предписано воздерживаться от работы в подражание Богу, почившему в седьмой день от всех дел Своих, и во исполнение четвёртой заповеди Десятословия. В субботу проходят особые синагогальные службы и особые трапезы с хлебом, вином и благословениями."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. В Мишне, первом пласте Талмуда, субботе посвящена отдельная глава, которая так и называется — «Шаббат»."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "Иудейская традиция предписывает соблюдение субботы"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "В этот день необходимо воздерживаться от работы в подражание Богу, Который на седьмой день почил от всех дел Своих"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "а также во исполнение четвертой заповеди Декалога"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 781"
+      tier: reference
+      excerpt: "В субботу проводятся особые синагогальные службы, а также"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "совершаются особые трапезы с использованием хлеба и вина и произнесением особых благословений"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 775"
+      tier: reference
+      excerpt: "отдельная глава — субботе, названная, соответственно, «Шаббат»"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: кашрут
+  slug: kashrut
+  group: other-religions
+  short: "Пищевые законы иудаизма: что дозволено есть («кошерное»), а что нет. Например, корова — кошерное животное, а свинья — нет. Строгость соблюдения в общинах разная."
+  match:
+    - "[Кк]ашрут(а|у|ом|е)?"
+    - "[Кк]ошерн(ый|ого|ому|ым|ом|ая|ой|ую|ое|ые|ых|ыми)"
+  use_on_site: true
+  definition: "В иудаизме кашрут — соблюдение пищевых ограничений, одна из важных норм религиозной жизни. Ограничения касаются прежде всего продуктов животного происхождения: по указаниям Книги Левит и Второзакония животных делят на чистых, разрешённых в пищу, и нечистых. В широком смысле слово относится не только к пище, но и ко всему, что регламентирует Закон."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Правила кашрута касаются и вина: кошерным считается только вино, приготовленное евреем. Строгость требований, как отмечает автор, сильно различается в зависимости от того, насколько традиционна община."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "Другой важной нормой иудаизма является соблюдение пищевых ограничений — кашрута"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "Пищевые ограничения в основной своей массе касаются продуктов животного происхождения"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "животные и получаемые от них продукты делятся на чистых (разрешенных к употреблению) и нечистых (запрещенных к употреблению)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "На основании указаний, содержащихся в Книге Левит (Лев. 11) и Второзаконии (Втор. 14)"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "Соответственно, корова является кошерным животным, а свинья — нет."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 782"
+      tier: reference
+      excerpt: "Данный термин может употребляться и в широком смысле слова и относиться не только к продуктам питания, но и вообще ко всему, что регламентируется Законом"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 783"
+      tier: reference
+      excerpt: "Кошерным считается только вино, приготовленное евреем."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 783"
+      tier: reference
+      excerpt: "степень строгости требований кашрута серьезно различается в разных религиозных общинах в зависимости от степени их традиционности"
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Песах
+  slug: pesach
+  group: other-religions
+  short: "Иудейская Пасха — праздник в память об исходе из Египта. Начинается 15-го нисана и длится семь дней, а в странах рассеяния — восемь."
+  match:
+    - "Песах(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В иудаизме Песах — иудейская Пасха, праздник, установленный в Торе в память об исходе из Египта. Его празднуют с 15-го нисана по лунному календарю семь дней (в странах рассеяния — восемь); главные обряды описаны в 12-й главе книги Исход. В древности Песах был одним из трёх паломнических праздников, когда евреи приходили в Иерусалимский храм и приносили там жертвы."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV. Чем иудейский Песах отличается от христианской Пасхи, сказано в карточке «Песах и Пасха» на странице иудаизма."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "Песах — иудейская Пасха, установленная в память об исходе из Египта."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "К установленным в Торе относятся следующие праздники"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "Празднования начинаются 15 нисана по лунному календарю и длятся семь дней (в странах рассеяния — восемь)."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 786"
+      tier: reference
+      excerpt: "Ключевые действия этого дня описаны в 12 главе книги Исход."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 787"
+      tier: reference
+      excerpt: "Эти три праздника в древности предполагали принесение жертв в Иерусалимском храме и его посещение евреями."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 787"
+      tier: reference
+      excerpt: "Поэтому данные праздники еще именуют паломническими."
+      accessed: "2026-10-17"
+  status_check: verified
+- term: Йом Кипур
+  slug: yom-kippur
+  group: other-religions
+  short: "Судный день иудаизма — время строгого поста и покаяния, 10-й день осеннего месяца тишрей. В древности в этот день первосвященник входил во Святая Святых."
+  match:
+    - "Йом Кипур(а|у|ом|е)?"
+  use_on_site: true
+  definition: "В иудаизме Йом Кипур — Судный день, время строгого поста и покаяния; его отмечают на 10-й день месяца тишрей, который приходится на сентябрь — октябрь. Считается, что в ветхозаветное время именно в этот день первосвященник входил с жертвенной кровью во Святая Святых. Ему предшествуют десять покаянных дней, начиная с нового года — Рош ха-Шана."
+  notes: "Описание дано по курсу прот. Олега Корытко «Homo religiosus» (2017), гл. XXIV, где название пишется «Йом-Киппур». Синагогальное богослужение в эти дни, как пишет автор, очень продолжительно и проникнуто исповеданием своего несовершенства и вины перед Богом. А в дни Рош ха-Шана иудеи при встрече желают друг другу быть вписанными в Книгу жизни."
+  proof:
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 787"
+      tier: reference
+      excerpt: "Судный день (см. Лев. 16, 6-16; 32-33). Это время сугубого поста и покаяния. Отмечается на 10-й день месяца тишрей."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 787"
+      tier: reference
+      excerpt: "еврейский Новый год, совершаемый в первый и второй дни месяца тишрей и приходящийся на сентябрь-октябрь"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 788"
+      tier: reference
+      excerpt: "в ветхозаветное время первосвященник входил с жертвенной кровью в Святая Святых"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 788"
+      tier: reference
+      excerpt: "Ему предшествуют десять дней нового года, которые также носят покаянный характер."
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 788"
+      tier: reference
+      excerpt: "Синагогальное богослужение в этот период весьма продолжительно и пропитано символикой исповедания своего несовершенства, виновности перед Богом"
+      accessed: "2026-10-17"
+    - url: "https://vil4max.github.io/scripture-science/books/homo-religiosus/"
+      title: "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XXIV, с. 787"
+      tier: reference
+      excerpt: "В дни Рош ха-Шана иудеи при встрече желают друг другу быть вписанными в Книгу жизни."
+      accessed: "2026-10-17"
+  status_check: verified

@@ -5,6 +5,18 @@ so any session or agent can pick up the work. Each task's detail lives in its
 brief under `docs/tasks/`. Update this file in the same commit that changes a
 task's state.
 
+## In progress
+
+**M38 — check the site against «Homo religiosus» and enrich it**
+(`docs/tasks/site-m38-korytko-integration.md`, 2026-10-17): the owner
+lifted the freeze for this work («не замораживай пока не дополнишь
+материалами из книги мой сайт, нужно сверить каждый текст и дополнить
+интересными фактами из книги»). Implemented and verified on 2026-10-17:
+231 site claims checked (`docs/research/korytko-check-2026-10.md`), one
+chronicle date corrected, 191 sourced points under the religions and on the
+history rows, 18 glossary terms with inline hints. Published (owner:
+«Коммить и пушь»).
+
 ## Done after the freeze
 
 **M37 — the book «Homo religiosus» as a source and a page**
@@ -15,9 +27,9 @@ in «Справка»; 38 sourced points extend six religions, with a lead for
 «Другие религии» and the glossary term «Религия». Published (owner:
 «Коммить и пушь»).
 
-## Frozen
+## Frozen (lifted 2026-10-17 for M38)
 
-Otherwise the project is frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
+The project was frozen as of 2026-10-14 (owner: «проект на фриз, хобби сейчас
 уходит на третий план»), after the owner asked to finish every audit fix
 first. The live site matches `main`; nothing is in flight. To resume, start
 from `docs/research/site-audit-2026-10-10-closure.md` (what was left on

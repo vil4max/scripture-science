@@ -718,7 +718,7 @@
       "id": "mesopotamian",
       "label": "Месопотамская религия",
       "from": -4100,
-      "to": -3100,
+      "to": 651,
       "approx": true,
       "proof": [
         {
@@ -727,6 +727,20 @@
           "tier": "reference",
           "excerpt": "already firmly in place by the time of the Uruk period (circa 4100-3100 BCE)",
           "accessed": "2026-09-25"
+        },
+        {
+          "url": "https://www.worldhistory.org/Mesopotamian_Religion/",
+          "title": "Mesopotamian Religion — World History Encyclopedia",
+          "tier": "reference",
+          "excerpt": "This paradigm only changed after 651 with the invasion of the Muslim Arabs",
+          "accessed": "2026-10-17"
+        },
+        {
+          "url": "https://vil4max.github.io/scripture-science/books/homo-religiosus/",
+          "title": "Прот. Олег Корытко. Homo religiosus: на путях поиска истины (2017), гл. XI, с. 254",
+          "tier": "reference",
+          "excerpt": "Без серьезных структурных изменений эти традиции были заимствованы Вавилонским, а затем и Ассирийским царствами",
+          "accessed": "2026-10-17"
         }
       ]
     },

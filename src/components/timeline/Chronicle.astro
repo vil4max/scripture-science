@@ -1,6 +1,7 @@
 ---
 // The biblical comparison line is explicitly distinguished from historical branches.
 import { withBase } from '../../lib/paths';
+import BookPoints from '../BookPoints.astro';
 import lineageData from '../../data/lineage.json';
 import biblical from '../../data/biblical-timeline.json';
 import chapters from '../../data/history-overview.json';
@@ -213,6 +214,8 @@ const today = new Date();
                 <ul>{context.milestones.map((event) => <li><strong>{event.year}</strong> — {event.text}</li>)}</ul>
                 <a href={withBase('bible/#scripture-new-world')}>История «Перевода нового мира»</a>
               </details>}
+              {/* The rows the book «Homo religiosus» covers (M38). */}
+              {context && <BookPoints tradition={context.id} where="timeline/" />}
             </span>
           </li>
         );

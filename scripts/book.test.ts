@@ -6,7 +6,7 @@ import assert from 'node:assert/strict';
 import { existsSync, readdirSync, readFileSync } from 'node:fs';
 // @ts-expect-error - js-yaml has no separately installed TypeScript declarations.
 import * as yaml from 'js-yaml';
-import { BOOK_PATH, BOOK_URL, bookLocator, bookProofTitle } from '../src/lib/book.ts';
+import { BOOK_PATH, BOOK_POINT_KINDS, BOOK_URL, bookLocator, bookProofTitle } from '../src/lib/book.ts';
 import { catalogLabel } from '../src/lib/citations.ts';
 import { collectProofs } from '../src/lib/sourceCatalog.ts';
 
@@ -46,7 +46,20 @@ test('every book proof names a chapter and a page inside it, as a short referenc
     assert.ok(proof.excerpt.trim().split(/\s+/).length <= 25, proof.excerpt);
     assert.match(proof.accessed, /^\d{4}-\d{2}-\d{2}$/);
   }
-  for (const point of book.points) assert.ok(point.text && point.proof.length, point.text);
+});
+
+test('each book-points file holds one tradition\'s points, each with a theme and evidence', () => {
+  const dir = new URL('../src/data/book-points/', import.meta.url);
+  const linked = new Set(book.chapters.flatMap((chapter: { site?: { tradition: string }[] }) => (chapter.site ?? []).map((link) => link.tradition)));
+  for (const name of readdirSync(dir) as string[]) {
+    const tradition = name.replace(/\.json$/, '');
+    assert.ok(linked.has(tradition), `${tradition}: a chapter links it to a page`);
+    for (const point of JSON.parse(readFileSync(new URL(name, dir), 'utf8'))) {
+      assert.equal(point.tradition, tradition, point.text);
+      assert.ok(Object.hasOwn(BOOK_POINT_KINDS, point.kind), `${tradition}: kind ${point.kind}`);
+      assert.ok(point.text && point.proof.length, point.text);
+    }
+  }
 });
 
 // With no page images to check against (owner, 2026-10-17: «пользуйся

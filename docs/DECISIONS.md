@@ -435,3 +435,10 @@ shows only its record, contents and short excerpts. The page
 religions; a proof's `url` is that page and its `title` names the chapter
 and page. Doctrine of each tradition still comes from its own texts. Detail:
 `docs/tasks/site-m37-korytko-book.md`.
+
+The PDF is no longer available; the owner chose the OCR text («пдф уже не
+отдает - пользуйся текст»). After publication the owner lifted the freeze
+until the whole site is checked against the book and enriched from it
+(«не замораживай пока не дополнишь материалами из книги мой сайт, нужно
+сверить каждый текст и дополнить интересными фактами из книги»): M38,
+`docs/tasks/site-m38-korytko-integration.md`.

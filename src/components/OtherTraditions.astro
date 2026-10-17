@@ -20,7 +20,7 @@ const topCountries = (group: string) => {
     <p>{item.intro}</p>
     {item.geographyGroup && <p class="geography">Распространён прежде всего в странах: {topCountries(item.geographyGroup)}. Перечень дан по числу последователей.</p>}
     {item.geography && <p class="geography">{item.geography}</p>}
-    <BookPoints tradition={item.id} />
+    <BookPoints tradition={item.id} where="religions/" />
   </article>)}</div>
 </section>
 <style>

@@ -32,7 +32,15 @@ const groups = [
     lead: 'Слова справочников и исследователей; сами по себе они не содержат оценки.',
     entries: terms.filter((entry) => entry.data.group === 'names'),
   },
-];
+  {
+    // Explained after the book «Homo religiosus» (M38): each entry says
+    // what the word means inside its own tradition.
+    id: 'other-religions',
+    title: 'Понятия других религий',
+    lead: 'Слова ислама и иудаизма, которые часто встречаются на сайте: что они значат в своей традиции. Объяснения даны по курсу прот. Олега Корытко «Homo religiosus».',
+    entries: terms.filter((entry) => entry.data.group === 'other-religions'),
+  },
+].filter((group) => group.entries.length > 0);
 ---
 <SectionPage title="Словарь" lead="Короткие объяснения слов, которые встречаются на сайте. Сначала — простое объяснение, ниже — полное определение и источник.">
   <nav class="glossary-index" aria-label="Все термины" data-no-terms>
